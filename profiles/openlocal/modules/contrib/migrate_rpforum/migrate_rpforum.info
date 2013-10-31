@@ -1,0 +1,11 @@
+name = Migrate RPForum
+description = Migrate RPForum content to D7 Forum.
+package = Migration
+core = 7.x
+
+dependencies[] = migrate
+;dependencies[] = migrate_ui
+;dependencies[] = migrate_d2d
+
+files[] = migrate_rpforum.migrate.inc
+files[] = node.inc

@@ -1,0 +1,139 @@
+<?php
+/**
+ * @file
+ * Code for the panopoly_faq_page feature.
+ */
+
+include_once 'panopoly_faq_page.features.inc';
+
+function panopoly_faq_page_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id == 'taxonomy_form_vocabulary' && isset($form['#vocabulary'])) {
+    $form['faq_container'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('FAQ Groups'),
+    );
+
+    $enabled_vocabularies = variable_get('panopoly_faq_page_enabled_vocabularies', array());
+
+    $form['faq_container']['faq_blocks_enabled'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('This vocabulary represents FAQ Groups'),
+      '#default_value' => (boolean)$enabled_vocabularies[$form['#vocabulary']->machine_name],
+    );
+
+    array_unshift($form['#submit'], 'panopoly_faq_page_taxonomy_form_vocabulary_submit');
+  }
+}
+
+function panopoly_faq_page_taxonomy_form_vocabulary_submit($form, &$form_state) {
+  $form_data = $form_state['values'];
+
+  $enabled_vocabularies = variable_get('panopoly_faq_page_enabled_vocabularies', array());
+  $enabled_vocabularies[$form_data['machine_name']] = (boolean)$form_data['faq_blocks_enabled'];
+
+  variable_set('panopoly_faq_page_enabled_vocabularies', $enabled_vocabularies);
+}
+
+function panopoly_faq_page_block_info() {
+  $blocks = array();
+
+  $enabled_vocabularies = variable_get('panopoly_faq_page_enabled_vocabularies', array());
+  if(!empty($enabled_vocabularies) && is_array($enabled_vocabularies)) {
+    foreach($enabled_vocabularies as $machine_name => $enabled) {
+      if(!(boolean)$enabled) continue;
+
+      $vocabularies = taxonomy_vocabulary_get_names();
+      $vocabulary = $vocabularies[$machine_name];
+      if(empty($vocabulary)) continue;
+
+      $terms = taxonomy_get_tree($vocabulary->vid, 0, NULL, FALSE);
+      if(!empty($terms) && is_array($terms)) {
+        foreach($terms as $term) {
+          $blocks[$term->tid] = array(
+            'info' => t('[FAQ :: Group] - !title', array('!title' => $term->name)),
+            'cache' => DRUPAL_CACHE_GLOBAL,
+          );
+        }
+      }
+    }
+  }
+
+  return $blocks;
+}
+
+function panopoly_faq_page_block_view($delta = '') {
+  if(!is_numeric($delta)) return NULL;
+
+  $block = array();
+
+  $block['subject'] = '<none>';
+  $block['content'] = views_embed_view('faq', 'faq_group_renderer', $delta);
+
+  return $block;
+}
+
+function panopoly_faq_page_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['faq'] = array(
+    'label' => t('FAQ Group'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_link.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/faq',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+
+
+function panopoly_faq_page_menu() {
+      $items = array();
+      $items['taxonomy/term/%taxonomy_term/edit-faq'] = array(
+                'title' => 'Edit FAQ',
+                'type' => MENU_LOCAL_TASK,
+                'page callback' => 'panopoly_faq_page_menu_edit_tab_callback',
+                'page arguments' => array(2),
+                'access callback' => 'panopoly_faq_page_menu_tab_access_callback',
+                'access arguments' => array(2),
+                'weight' => 20,
+      );
+
+      $items['taxonomy/term/%taxonomy_term/add-question'] = array(
+                'title' => 'New question',
+                'type' => MENU_LOCAL_TASK,
+                'page callback' => 'panopoly_faq_page_menu_add_question_tab_callback',
+                'page arguments' => array(2),
+                'access callback' => 'panopoly_faq_page_menu_tab_access_callback',
+                'access arguments' => array(2),
+                'weight' => 20,
+      );
+
+      
+
+      return $items;
+}
+
+
+function panopoly_faq_page_menu_tab_access_callback($taxonomy_term) {
+    return $taxonomy_term->vocabulary_machine_name == 'faq_group' && user_access('administer content') &&  user_access('administer faq');
+}
+
+function panopoly_faq_page_menu_edit_tab_callback($taxonomy_term) {
+    drupal_goto('admin/structure/faq/reorder/'.$taxonomy_term->tid);
+}
+
+function panopoly_faq_page_menu_add_question_tab_callback($taxonomy_term) {
+  drupal_goto('node/add/faq',  array('query' => array ('field_faq_group' => $taxonomy_term->tid,) ));
+}
+
+function panopoly_faq_page_permission() {
+  return array(
+    'administer faq' => array(
+      'title' => t('Administer FAQ'),
+      'description' => t('Perform administration tasks for FAQ.'),
+    ),
+  );
+}

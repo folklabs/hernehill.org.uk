@@ -1,0 +1,30 @@
+name = Panopoly FAQ page
+core = 7.x
+package = Features, FAQ
+php = 5.2.4
+version = 7.x-1.0-dev
+project = panopoly_faq_page
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = block
+dependencies[] = defaultconfig
+dependencies[] = entityreference
+dependencies[] = options
+dependencies[] = panelizer
+dependencies[] = strongarm
+dependencies[] = panopoly_faq_question
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = panelizer:panelizer:1
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[defaultconfig][] = field_default_fields:fieldable_panels_pane-faq-field_faq_group
+features[defaultconfig][] = strongarm:field_bundle_settings_fieldable_panels_pane__faq
+features[defaultconfig][] = strongarm:panelizer_defaults_fieldable_panels_pane_faq
+features[page_manager_pages][] = faq
+features[panelizer_defaults][] = fieldable_panels_pane:faq:default:default
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-2.x-dev"
+core = "7.x"
+project = "panopoly_faq"
+datestamp = "1380622194"
+

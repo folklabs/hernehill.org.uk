@@ -1,0 +1,19 @@
+ul.faq-list {
+  -webkit-user-select : none;
+  -moz-user-select    : none;
+  -ms-user-select     : none;
+  -o-user-select      : none;
+  user-select         : none;
+}
+
+ul.faq-list .question:hover {
+  text-decoration : underline;
+  cursor          : pointer;
+}
+
+ul.faq-list .answer {
+  display: none;
+}
+
+
+

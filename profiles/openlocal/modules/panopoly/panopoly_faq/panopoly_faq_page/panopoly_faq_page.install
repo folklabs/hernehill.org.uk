@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Installation file for the automatic nodetitle module
+ */
+
+/**
+ * Implements hook_install().
+ */
+function panopoly_faq_page_install() {
+  
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function panopoly_faq_page_uninstall() {
+
+}
+
+/**
+ * Implementation hook_enable
+ */
+function panopoly_faq_page_enable() {
+	$item = array(
+		'link_path' => 'faq',
+		'link_title' => t("FAQ"),
+		'menu_name' => "main-menu",
+		'weight' => 2,
+		'module' => 'panopoly_faq_page',
+	);
+	// Save the item to database.
+	menu_link_save($item);
+	menu_rebuild();
+}
+
+/**
+ * Implements hook_disable()
+ */
+function panopoly_faq_page_disable() {
+	$path = 'faq';
+	menu_link_delete(NULL, $path);
+	menu_rebuild();
+}

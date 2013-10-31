@@ -1,0 +1,55 @@
+name = Panopoly FAQ question
+core = 7.x
+package = Features, FAQ
+php = 5.2.4
+version = 7.x-1.0-dev
+project = panopoly_faq_question
+
+files[] = panopoly_faq_question.features.taxonomy.inc
+
+dependencies[] = ctools
+dependencies[] = draggableviews
+dependencies[] = entityreference
+dependencies[] = entityreference_prepopulate
+dependencies[] = features
+dependencies[] = list
+dependencies[] = page_manager
+dependencies[] = panelizer
+dependencies[] = strongarm
+dependencies[] = taxonomy
+dependencies[] = views
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = panelizer:panelizer:1
+features[ctools][] = strongarm:strongarm:1
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[field][] = node-faq-field_faq_answer
+features[field][] = node-faq-field_faq_group
+features[field][] = node-faq-field_faq_question
+features[field][] = taxonomy_term-faq_group-field_show_on_faq_page
+features[node][] = faq
+features[page_manager_pages][] = manage_faq
+features[page_manager_pages][] = reorder_faq
+features[page_manager_pages][] = reorder_faq_page
+features[panelizer_defaults][] = taxonomy_term:faq_group:default
+features[panelizer_defaults][] = taxonomy_term:faq_group:default:default
+features[panelizer_defaults][] = taxonomy_term:faq_group:default:featured
+features[taxonomy][] = faq_group
+features[variable][] = ant_faq
+features[variable][] = ant_pattern_faq
+features[variable][] = field_bundle_settings_node__faq
+features[variable][] = menu_options_faq
+features[variable][] = menu_parent_faq
+features[variable][] = node_options_faq
+features[variable][] = node_preview_faq
+features[variable][] = node_submitted_faq
+features[variable][] = pathauto_node_faq_pattern
+features[variable][] = pathauto_taxonomy_term_faq_group_pattern
+features[views_view][] = faq
+
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-2.x-dev"
+core = "7.x"
+project = "panopoly_faq"
+datestamp = "1380622194"
+

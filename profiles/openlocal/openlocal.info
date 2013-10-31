@@ -1,0 +1,88 @@
+name = OpenLocal
+core = 7.x
+description = A distribution for local communities.
+distribution_name = "OpenLocal"
+
+; Panopoly Foundation
+dependencies[] = panopoly_core
+dependencies[] = panopoly_images
+dependencies[] = panopoly_theme
+dependencies[] = panopoly_magic
+dependencies[] = panopoly_widgets
+dependencies[] = panopoly_admin
+dependencies[] = panopoly_users
+
+; Panopoly Toolset
+dependencies[] = panopoly_pages
+dependencies[] = panopoly_search
+dependencies[] = panopoly_wysiwyg
+
+; Panopoly Recommended - Admin
+;dependencies[] = navbar
+dependencies[] = backports
+;dependencies[] = simplified_menu_admin
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+dependencies[] = save_draft
+dependencies[] = module_filter
+dependencies[] = date_popup_authored
+
+; Panopoly Recommended - Other
+dependencies[] = devel
+dependencies[] = uuid
+
+; Development
+dependencies[] = field_ui
+dependencies[] = masquerade
+dependencies[] = views_ui
+
+; Other modules
+dependencies[] = book
+dependencies[] = contact
+dependencies[] = honeypot
+dependencies[] = mass_contact
+dependencies[] = oauth_common
+dependencies[] = oauth2_common
+dependencies[] = connector
+dependencies[] = oauthconnector
+dependencies[] = http_client
+dependencies[] = http_client_oauth
+dependencies[] = privatemsg
+dependencies[] = site_map
+dependencies[] = workbench
+dependencies[] = workbench_moderation
+; For FAQ
+; TODO: replace with makefile from FAQ feature
+dependencies[] = draggableviews
+dependencies[] = entityreference_prepopulate
+
+; Panopoly apps
+dependencies[] = panopoly_faq_page
+dependencies[] = panopoly_faq_question
+
+; Debut apps
+;dependencies[] = debut_blog
+dependencies[] = debut_forum
+dependencies[] = debut_seo
+dependencies[] = debut_social
+
+; OpenLocal apps
+dependencies[] = openlocal_alert
+dependencies[] = openlocal_business
+dependencies[] = openlocal_contact
+dependencies[] = openlocal_core
+dependencies[] = openlocal_event
+dependencies[] = openlocal_gallery
+dependencies[] = openlocal_group
+dependencies[] = openlocal_home
+dependencies[] = openlocal_news
+
+; Optional features
+;dependencies[] = openlocal_idea
+;dependencies[] = openlocal_poll
+;dependencies[] = openlocal_survey
+
+
+files[] = "openlocal.profile"
+
+

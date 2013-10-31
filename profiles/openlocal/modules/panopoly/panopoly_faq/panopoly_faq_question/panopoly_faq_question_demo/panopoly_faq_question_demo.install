@@ -1,0 +1,40 @@
+<?php 
+
+/**
+ * Implements hook_modules_enabled()
+ */
+function panopoly_faq_question_demo_modules_enabled($modules) {
+}
+
+/**
+ * Implements hook_disable()
+ */
+function panopoly_faq_question_demo_disable() {
+
+  // Determine the vid for the taxonomy terms
+  $vid = db_select('taxonomy_vocabulary', 't')
+    ->fields('t', array('vid'))
+    ->condition('machine_name', 'faq_group', '=')
+    ->execute()
+    ->fetchField();
+
+  // Get the terms that are in code
+  module_load_include('inc', 'panopoly_faq_question_demo', 'panopoly_faq_question_demo.terms');
+  $terms = panopoly_faq_question_demo_terms();
+
+  // Load them to delete them
+  $tids = array();
+  foreach ($terms as $term) {
+    $tid= db_select('taxonomy_term_data', 't')
+      ->fields('t', array('tid'))
+      ->condition('name', $term->name, '=')
+      ->execute()
+      ->fetchField();
+
+    $term->vid = $vid;
+    taxonomy_term_delete($tid);
+  }
+
+  // Delete the variable that controls this
+  variable_del('panopoly_faq_question_demo_taxonomy');
+}
