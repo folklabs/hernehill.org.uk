@@ -1,0 +1,14 @@
+name = OpenLocal Layout
+description = Layout of sitewide blocks.
+core = 7.x
+package = OpenLocal
+version = 7.x-1.0-alpha1
+project = openlocal_layout
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = masquerade
+dependencies[] = nice_menus
+features[context][] = sitewide
+features[ctools][] = context:context:3
+features[features_api][] = api:2
+project path = profiles/openlocal/modules/openlocal
