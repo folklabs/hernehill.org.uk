@@ -103,6 +103,9 @@
       <a href="http://www.twitter.com/hernehillforum"><i class="fa fa-twitter fa-2x"></i></a>
     </div>
 
+    <?php if ($search_form): ?>
+        <?php print $search_form; ?>
+    <?php endif; ?>
 
     </div>
     <?php if ($site_logo || $site_name || $site_slogan): ?>
