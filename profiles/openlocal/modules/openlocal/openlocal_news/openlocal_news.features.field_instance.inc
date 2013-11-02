@@ -282,11 +282,34 @@ function openlocal_news_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'geofield',
+      'module' => 'openlayers',
       'settings' => array(
-        'html5_geolocation' => 0,
+        'allow_edit' => 0,
+        'data_storage' => 'collection',
+        'delta_handling' => 'default',
+        'feature_types' => array(
+          'path' => 0,
+          'point' => 'point',
+          'polygon' => 0,
+        ),
+        'geocoder_field' => 'body',
+        'geocoder_handler' => 'google',
+        'handler_settings' => array(
+          'google' => array(
+            'all_results' => 0,
+            'geometry_type' => 'point',
+            'reject_results' => array(
+              'APPROXIMATE' => 0,
+              'GEOMETRIC_CENTER' => 0,
+              'RANGE_INTERPOLATED' => 0,
+              'ROOFTOP' => 0,
+            ),
+          ),
+        ),
+        'openlayers_map' => 'geofield_widget_map',
+        'use_geocoder' => 0,
       ),
-      'type' => 'geofield_latlon',
+      'type' => 'geofield_openlayers',
       'weight' => 6,
     ),
   );

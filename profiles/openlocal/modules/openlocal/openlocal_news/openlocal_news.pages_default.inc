@@ -429,7 +429,7 @@ function openlocal_news_default_page_manager_pages() {
     $pane->pid = 'new-9';
     $pane->panel = 'sidebar';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:2ff9dc0d-91bb-4e1d-85ea-90e8114c5ac0';
+    $pane->subtype = 'fpid:2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
