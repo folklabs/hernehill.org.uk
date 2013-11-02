@@ -6,17 +6,19 @@
       $(settings.leaflet).each(function () {
         // bail if the map already exists
         // this.mapId = this.mapId + '--2';
-        console.log(this.mapId);
+        // console.log(this);
+        // console.log(this.mapId);
         var container = L.DomUtil.get(this.mapId);
         // See if panels has defined a 2nd map config
-        if (!container) {
-          this.mapId = this.mapId + '--2';
-          container = L.DomUtil.get(this.mapId);
-        }
+        // if (!container) {
+        //   this.mapId = this.mapId + '--2';
+        //   container = L.DomUtil.get(this.mapId);
+        // }
         // console.log('container: ' + container + this.mapId);
         if (!container || container._leaflet) {
           // console.log('exists' + container + this.mapId);
-          return false;
+          // return false;
+          return true;
         }
 
         // load a settings object with all of our map settings
