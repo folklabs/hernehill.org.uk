@@ -306,7 +306,7 @@ function openlocal_news_field_default_field_instances() {
             ),
           ),
         ),
-        'openlayers_map' => 'geofield_widget_map',
+        'openlayers_map' => 'openlocal_geofield_widget_map',
         'use_geocoder' => 0,
       ),
       'type' => 'geofield_openlayers',
