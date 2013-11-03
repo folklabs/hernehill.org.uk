@@ -167,12 +167,13 @@ function openlocal_event_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'column2';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:e8f537c1-76c4-48d8-9801-aef2aaaa1b6b';
+    $pane->type = 'block';
+    $pane->subtype = 'block-2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'Full',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
