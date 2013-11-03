@@ -428,12 +428,13 @@ function openlocal_news_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'sidebar';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:2';
+    $pane->type = 'block';
+    $pane->subtype = 'block-1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'Full',
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
