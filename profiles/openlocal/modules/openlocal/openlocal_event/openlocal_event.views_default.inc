@@ -745,13 +745,6 @@ function openlocal_event_views_default_views() {
     'ol_business' => 'ol_business',
     'ol_place' => 'ol_place',
   );
-  /* Filter criterion: Content: Event venue (field_ol_event_venue_ref) */
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['id'] = 'field_ol_event_venue_ref_value';
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['table'] = 'field_data_field_ol_event_venue_ref';
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['field'] = 'field_ol_event_venue_ref_value';
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['value'] = array(
-    1 => '1',
-  );
   /* Filter criterion: Content: Wheelchair accessible (field_ol_wheelchair_accessible) */
   $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['id'] = 'field_ol_wheelchair_accessible_value';
   $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['table'] = 'field_data_field_ol_wheelchair_accessible';
@@ -779,12 +772,75 @@ function openlocal_event_views_default_views() {
   /* Display: List */
   $handler = $view->new_display('panel_pane', 'List', 'panel_pane_1');
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ol_business' => 'ol_business',
+    'ol_place' => 'ol_place',
+  );
+  /* Filter criterion: Content: Wheelchair accessible (field_ol_wheelchair_accessible) */
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['id'] = 'field_ol_wheelchair_accessible_value';
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['table'] = 'field_data_field_ol_wheelchair_accessible';
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['field'] = 'field_ol_wheelchair_accessible_value';
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['value'] = array(
+    'all' => 'all',
+    0 => '0',
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['operator_id'] = 'field_ol_wheelchair_accessible_value_op';
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['label'] = 'Wheelchair accessible';
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['operator'] = 'field_ol_wheelchair_accessible_value_op';
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['identifier'] = 'field_ol_wheelchair_accessible_value';
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['reduce'] = TRUE;
   $handler->display->display_options['inherit_panels_path'] = '1';
 
-  /* Display: Map / all */
-  $handler = $view->new_display('panel_pane', 'Map / all', 'panel_pane_2');
+  /* Display: Map */
+  $handler = $view->new_display('panel_pane', 'Map', 'panel_pane_2');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'leaflet';
+  $handler->display->display_options['style_options']['data_source'] = 'field_ol_geolocation';
+  $handler->display->display_options['style_options']['name_field'] = 'title';
+  $handler->display->display_options['style_options']['description_field'] = 'title';
+  $handler->display->display_options['style_options']['map'] = 'OSM Mapnik';
+  $handler->display->display_options['style_options']['icon'] = array(
+    'iconUrl' => '',
+    'shadowUrl' => '',
+    'iconSize' => array(
+      'x' => '',
+      'y' => '',
+    ),
+    'iconAnchor' => array(
+      'x' => '',
+      'y' => '',
+    ),
+    'shadowAnchor' => array(
+      'x' => '',
+      'y' => '',
+    ),
+    'popupAnchor' => array(
+      'x' => '',
+      'y' => '',
+    ),
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
@@ -823,13 +879,6 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'ol_business' => 'ol_business',
     'ol_place' => 'ol_place',
-  );
-  /* Filter criterion: Content: Event venue (field_ol_event_venue) */
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['id'] = 'field_ol_event_venue_ref_value';
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['table'] = 'field_data_field_ol_event_venue_ref';
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['field'] = 'field_ol_event_venue_ref_value';
-  $handler->display->display_options['filters']['field_ol_event_venue_ref_value']['value'] = array(
-    1 => '1',
   );
   $export['openlocal_event_venues'] = $view;
 
