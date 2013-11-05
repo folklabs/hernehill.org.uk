@@ -154,7 +154,7 @@ function openlocal_event_field_default_field_instances() {
     'bundle' => 'ol_event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Describe all the details that people need to know about the event.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -208,7 +208,7 @@ function openlocal_event_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please choose this if the venue has a disabled toilet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -244,7 +244,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 10,
+      'weight' => 8,
     ),
   );
 
@@ -296,7 +296,7 @@ function openlocal_event_field_default_field_instances() {
     'bundle' => 'ol_event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter the email address of a contact for this event.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -340,7 +340,7 @@ function openlocal_event_field_default_field_instances() {
   $field_instances['node-ol_event-field_ol_event_date'] = array(
     'bundle' => 'ol_event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Tips - the "start date" is the day and time your event commences. The "To date" is when your first event or meeting ends, probably an hour or two after the start. N.B. If you want to create a repeating event (i.e. every week) then please use the "repeat" option under the advanced section. If it is an event on for every week on the same day then choose repeat "every" "week". Please also then enter the date that the series finishes otherwise it will be repeated until the end of the world as we know it... Please check your entry once you have done it. View the What\'s On calendar and see where your event is listed, then check that it is only repeated (if applicable) on all the correct days. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -388,7 +388,7 @@ function openlocal_event_field_default_field_instances() {
         'input_format' => 'M j Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'above',
-        'repeat_collapsed' => 0,
+        'repeat_collapsed' => 1,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -403,7 +403,7 @@ function openlocal_event_field_default_field_instances() {
     'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please search for the name of a venue for the event. Browse the <a href="/venues">list of available venues</a> if you do not know the name.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -445,10 +445,6 @@ function openlocal_event_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
@@ -465,7 +461,7 @@ function openlocal_event_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please choose this if your event is accessible to wheelchair users.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -501,7 +497,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -566,7 +562,7 @@ function openlocal_event_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -576,11 +572,17 @@ function openlocal_event_field_default_field_instances() {
   t('Comment');
   t('Contact');
   t('Date');
+  t('Describe all the details that people need to know about the event.');
   t('Description');
   t('Details');
   t('Disabled toilet');
+  t('Enter the email address of a contact for this event.');
   t('Groups audience');
   t('Image');
+  t('Please choose this if the venue has a disabled toilet.');
+  t('Please choose this if your event is accessible to wheelchair users.');
+  t('Please search for the name of a venue for the event. Browse the <a href="/venues">list of available venues</a> if you do not know the name.');
+  t('Tips - the "start date" is the day and time your event commences. The "To date" is when your first event or meeting ends, probably an hour or two after the start. N.B. If you want to create a repeating event (i.e. every week) then please use the "repeat" option under the advanced section. If it is an event on for every week on the same day then choose repeat "every" "week". Please also then enter the date that the series finishes otherwise it will be repeated until the end of the world as we know it... Please check your entry once you have done it. View the What\'s On calendar and see where your event is listed, then check that it is only repeated (if applicable) on all the correct days. ');
   t('Venue');
   t('Wheelchair accessible');
 

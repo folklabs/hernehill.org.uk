@@ -129,7 +129,7 @@ function openlocal_business_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -172,7 +172,7 @@ function openlocal_business_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 4,
     ),
   );
 
@@ -217,7 +217,7 @@ function openlocal_business_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -279,7 +279,7 @@ function openlocal_business_field_default_field_instances() {
       'module' => 'office_hours',
       'settings' => array(),
       'type' => 'office_hours',
-      'weight' => 6,
+      'weight' => 9,
     ),
   );
 
@@ -288,7 +288,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter any promotions the business is offering, either as part of a local loyalty scheme or independently.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -426,7 +426,7 @@ function openlocal_business_field_default_field_instances() {
         'size' => 12,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 5,
     ),
   );
 
@@ -490,7 +490,7 @@ function openlocal_business_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -549,7 +549,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Give a detailed description of your business or service.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -603,7 +603,7 @@ function openlocal_business_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please choose this if the business premises has a disabled toilet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -771,7 +771,7 @@ function openlocal_business_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -784,7 +784,7 @@ function openlocal_business_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please choose this if the business premises are wheelchair accessible.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -833,7 +833,7 @@ function openlocal_business_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select this if you have wi-fi available.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -881,10 +881,15 @@ function openlocal_business_field_default_field_instances() {
   t('Details');
   t('Disabled toilet');
   t('Email');
+  t('Enter any promotions the business is offering, either as part of a local loyalty scheme or independently.');
   t('Event venue');
   t('Geolocation');
+  t('Give a detailed description of your business or service.');
   t('Image');
   t('Opening hours');
+  t('Please choose this if the business premises are wheelchair accessible.');
+  t('Please choose this if the business premises has a disabled toilet.');
+  t('Please select this if you have wi-fi available.');
   t('Promotions');
   t('Select if this business can be a venue for certain types of events.');
   t('Tags');

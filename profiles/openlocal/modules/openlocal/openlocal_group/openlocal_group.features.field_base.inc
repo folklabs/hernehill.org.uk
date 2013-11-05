@@ -98,8 +98,6 @@ function openlocal_group_field_default_field_bases() {
         3 => 3,
         4 => 4,
         5 => 5,
-        6 => 6,
-        7 => 7,
       ),
       'referenceable_status' => array(
         0 => 0,

@@ -75,11 +75,13 @@ function openlocal_group_field_default_field_instances() {
         'thoroughfare' => '',
         'premise' => '',
         'locality' => '',
-        'country' => 'AF',
+        'administrative_area' => '',
+        'postal_code' => '',
+        'country' => 'GB',
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If this group has a physical base, enter the address here.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -390,7 +392,7 @@ function openlocal_group_field_default_field_instances() {
     'bundle' => 'ol_group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Search for the usernames of people who will coordinate this group.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -425,10 +427,6 @@ function openlocal_group_field_default_field_instances() {
       'settings' => array(
         'autocomplete_match' => 'contains',
         'autocomplete_path' => 'user_reference/autocomplete',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'user_reference_autocomplete',
@@ -684,7 +682,9 @@ function openlocal_group_field_default_field_instances() {
   t('Geolocation');
   t('Group');
   t('Groups audience');
+  t('If this group has a physical base, enter the address here.');
   t('Image');
+  t('Search for the usernames of people who will coordinate this group.');
   t('This group represents a campaign or other current priority activity.');
 
   return $field_instances;

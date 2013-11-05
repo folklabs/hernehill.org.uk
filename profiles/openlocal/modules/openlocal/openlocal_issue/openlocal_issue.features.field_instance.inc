@@ -15,7 +15,7 @@ function openlocal_issue_field_default_field_instances() {
     'bundle' => 'ol_issue',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Describe the issue, giving as much revelant information as possible.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -69,7 +69,7 @@ function openlocal_issue_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Leave this as Open when creating a new issue. Site managers may set it to "Need more information" if they have questions. Set it to "Closed" if your issue has been resolved.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -112,7 +112,7 @@ function openlocal_issue_field_default_field_instances() {
     'bundle' => 'ol_issue',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Choose what type of issue this is.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -152,7 +152,10 @@ function openlocal_issue_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Choose what type of issue this is.');
+  t('Describe the issue, giving as much revelant information as possible.');
   t('Details');
+  t('Leave this as Open when creating a new issue. Site managers may set it to "Need more information" if they have questions. Set it to "Closed" if your issue has been resolved.');
   t('Status');
   t('Type');
 
