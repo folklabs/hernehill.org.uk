@@ -32,6 +32,7 @@ function openlocal_issue_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
     'field_ol_issue_status' => 'field_ol_issue_status',
+    'field_ol_issue_type' => 'field_ol_issue_type',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -43,7 +44,14 @@ function openlocal_issue_views_default_views() {
       'empty_column' => 0,
     ),
     'field_ol_issue_status' => array(
-      'sortable' => 0,
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_ol_issue_type' => array(
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -61,6 +69,10 @@ function openlocal_issue_views_default_views() {
   $handler->display->display_options['fields']['field_ol_issue_status']['id'] = 'field_ol_issue_status';
   $handler->display->display_options['fields']['field_ol_issue_status']['table'] = 'field_data_field_ol_issue_status';
   $handler->display->display_options['fields']['field_ol_issue_status']['field'] = 'field_ol_issue_status';
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['field_ol_issue_type']['id'] = 'field_ol_issue_type';
+  $handler->display->display_options['fields']['field_ol_issue_type']['table'] = 'field_data_field_ol_issue_type';
+  $handler->display->display_options['fields']['field_ol_issue_type']['field'] = 'field_ol_issue_type';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -91,6 +103,16 @@ function openlocal_issue_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['openlocal_issue'] = $view;
 
   return $export;
