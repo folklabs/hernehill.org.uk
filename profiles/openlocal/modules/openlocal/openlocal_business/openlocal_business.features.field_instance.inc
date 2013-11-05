@@ -221,55 +221,6 @@ function openlocal_business_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_business-field_ol_event_venue'
-  $field_instances['node-ol_business-field_ol_event_venue'] = array(
-    'bundle' => 'ol_business',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Select if this business can be a venue for certain types of events.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 14,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_event_venue',
-    'label' => 'Event venue',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 13,
-    ),
-  );
-
   // Exported field_instance: 'node-ol_business-field_ol_business_opening_hours'
   $field_instances['node-ol_business-field_ol_business_opening_hours'] = array(
     'bundle' => 'ol_business',
@@ -689,6 +640,55 @@ function openlocal_business_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-ol_business-field_ol_event_venue'
+  $field_instances['node-ol_business-field_ol_event_venue'] = array(
+    'bundle' => 'ol_business',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Select if this business can be a venue for certain types of events.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 14,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_event_venue',
+    'label' => 'Event venue',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 13,
     ),
   );
 
