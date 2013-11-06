@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather|Lato);
 /*
  * @file
  * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
@@ -549,6 +550,11 @@ table {
   /* Add vertical rhythm margins. */
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+}
+
+/* line 3, ../sass/_base.sass */
+body {
+  background-color: #f3eee0;
 }
 
 /* Layout rules */
@@ -1635,6 +1641,23 @@ tr.selected td {
   background-image: url('../images/progress.gif?1376896851');
 }
 
+/* line 700, ../sass/components/_misc.sass */
+.nice-menu li {
+  font-family: "Lato";
+  font-size: 1.2em;
+  border: 0 none white;
+}
+/* line 704, ../sass/components/_misc.sass */
+.nice-menu li a {
+  text-decoration: none;
+}
+
+/* line 707, ../sass/components/_misc.sass */
+#site-slogan,
+#secondary-menu {
+  font-family: "Lato";
+}
+
 /*
  * @file
  * Print styling
@@ -1722,34 +1745,39 @@ tr.selected td {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
-/* line 27, ../sass/styles.sass */
+/* line 29, ../sass/styles.sass */
+h1, h2, h3 {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+}
+
+/* line 32, ../sass/styles.sass */
 .socialmedia {
   display: inline-block;
   vertical-align: top;
 }
-/* line 31, ../sass/styles.sass */
+/* line 36, ../sass/styles.sass */
 .socialmedia .fa {
   margin-left: 5px;
 }
 
-/* line 34, ../sass/styles.sass */
+/* line 39, ../sass/styles.sass */
 .top-right {
   float: right;
   margin-top: 10px;
 }
 
-/* line 38, ../sass/styles.sass */
+/* line 43, ../sass/styles.sass */
 #secondary-menu {
   display: inline-block;
   margin-top: 5px;
 }
 
-/* line 44, ../sass/styles.sass */
+/* line 49, ../sass/styles.sass */
 #search-form {
   float: right;
 }
 
-/* line 55, ../sass/styles.sass */
+/* line 61, ../sass/styles.sass */
 .ol-item-grid .views-row {
   float: left;
   width: 45%;
