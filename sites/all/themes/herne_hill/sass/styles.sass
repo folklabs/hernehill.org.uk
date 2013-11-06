@@ -1,0 +1,57 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+
+/* Import Sass mixins, variables, Compass modules, etc.
+@import init
+
+/* HTML element (SMACSS base) rules
+@import normalize
+
+/* Layout rules
+@import layouts/responsive
+
+/* Component (SMACSS module) rules
+@import components/misc
+
+// Optionally, add your own components here.
+@import print
+
+/* SMACSS theme rules
+/* @import "theme-A";
+/* @import "theme-B";
+
+.socialmedia
+  // float: right
+  display: inline-block
+  vertical-align: top
+  .fa
+    margin-left: 5px
+
+.top-right
+  float: right
+  margin-top: 10px
+
+#secondary-menu
+  // float: right
+  display: inline-block
+  // padding-top: 30px
+  margin-top: 5px
+
+#search-form
+  float: right
+
+// #block-superfish-1
+//   ul.menu
+//     list-style-type: none
+//     li
+//       // display:inline
+//       float:left
+
+.ol-item-grid
+  .views-row
+    float: left
+    width: 45%
