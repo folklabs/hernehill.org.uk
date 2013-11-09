@@ -18,8 +18,8 @@ function openlocal_issue_default_rules_configuration() {
       "ON" : { "node_update--ol_issue" : { "bundle" : "ol_issue" } },
       "DO" : [
         { "mail" : {
-            "to" : "[node:author]",
-            "subject" : "[site:name] issue update: [node:title]",
+            "to" : [ "node:author:mail" ],
+            "subject" : "[site:name]: Issue update: [node:title]",
             "message" : "See [node:url].",
             "language" : [ "" ]
           }

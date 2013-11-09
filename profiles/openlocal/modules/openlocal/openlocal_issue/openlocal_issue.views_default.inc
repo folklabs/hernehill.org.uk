@@ -13,7 +13,7 @@ function openlocal_issue_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_issue';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Issue';
   $view->core = 7;
