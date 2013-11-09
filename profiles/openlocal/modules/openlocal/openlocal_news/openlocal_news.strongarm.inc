@@ -106,7 +106,7 @@ function openlocal_news_strongarm() {
           'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
       ),
       'display' => array(),

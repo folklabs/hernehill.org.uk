@@ -135,54 +135,6 @@ function openlocal_core_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_place-field_ol_event_venue'
-  $field_instances['node-ol_place-field_ol_event_venue'] = array(
-    'bundle' => 'ol_place',
-    'default_value' => array(
-      0 => array(
-        'value' => 1,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_event_venue',
-    'label' => 'Event venue',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-ol_place-field_ol_description'
   $field_instances['node-ol_place-field_ol_description'] = array(
     'bundle' => 'ol_place',
@@ -328,6 +280,54 @@ function openlocal_core_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ol_place-field_ol_event_venue'
+  $field_instances['node-ol_place-field_ol_event_venue'] = array(
+    'bundle' => 'ol_place',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_event_venue',
+    'label' => 'Event venue',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_place-field_ol_geolocation'
   $field_instances['node-ol_place-field_ol_geolocation'] = array(
     'bundle' => 'ol_place',
@@ -385,6 +385,55 @@ function openlocal_core_field_default_field_instances() {
       ),
       'type' => 'geocoder',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-ol_place-field_ol_tags'
+  $field_instances['node-ol_place-field_ol_tags'] = array(
+    'bundle' => 'ol_place',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_tags',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 12,
     ),
   );
 
@@ -487,6 +536,7 @@ function openlocal_core_field_default_field_instances() {
   t('Event venue');
   t('Geolocation');
   t('Image');
+  t('Tags');
   t('Wheelchair accessible');
   t('Wi-fi');
 

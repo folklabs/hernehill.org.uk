@@ -110,6 +110,9 @@ projects[draggableviews][subdir] = contrib
 projects[email][version] = 1.2
 projects[email][subdir] = contrib
 
+projects[features_extra][version] = 1.0-beta1
+projects[features_extra][subdir] = contrib
+
 projects[field_collection][version] = 1.0-beta5
 projects[field_collection][subdir] = contrib
 
@@ -149,6 +152,12 @@ projects[oauthconnector][subdir] = contrib
 projects[http_client][version] = 2.4
 projects[http_client][subdir] = contrib
 
+projects[mailsystem][version] = 2.34
+projects[mailsystem][subdir] = contrib
+
+projects[mimemail][version] = 1.0-beta1
+projects[mimemail][subdir] = contrib
+
 projects[nice_menus][version] = 2.5
 projects[nice_menus][subdir] = contrib
 
@@ -157,6 +166,9 @@ projects[oauth][subdir] = contrib
 
 projects[office_hours][version] = 1.3
 projects[office_hours][subdir] = contrib
+
+projects[openlayers][version] = 2.0-beta7
+projects[openlayers][subdir] = contrib
 
 projects[entityreference_prepopulate][version] = 1.3
 projects[entityreference_prepopulate][subdir] = contrib
@@ -172,6 +184,12 @@ projects[rules][subdir] = contrib
 
 projects[privatemsg][version] = 1.4
 projects[privatemsg][subdir] = contrib
+
+projects[profile2][version] = 1.3
+projects[profile2][subdir] = contrib
+
+projects[proj4s][version] = 1.2
+projects[proj4s][subdir] = contrib
 
 projects[site_map][version] = 1.0
 projects[site_map[subdir] = contrib
@@ -217,8 +235,6 @@ libraries[colorbox][destination] = libraries
 libraries[leaflet][download][type] = get
 libraries[leaflet][download][url] = http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.6.4.zip
 libraries[leaflet][destination] = libraries
-
-
 
 
 ; Themes

@@ -76,6 +76,7 @@ features[user_permission][] = administer panelizer node ol_business defaults
 features[user_permission][] = administer panelizer node ol_business layout
 features[user_permission][] = administer panelizer node ol_business overview
 features[user_permission][] = administer panelizer node ol_business settings
+features[user_role][] = trader
 features[variable][] = field_bundle_settings_node__ol_business
 features[variable][] = menu_options_ol_business
 features[variable][] = menu_parent_ol_business

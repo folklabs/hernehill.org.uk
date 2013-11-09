@@ -22,7 +22,7 @@ function openlocal_core_field_default_field_bases() {
     'locked' => 0,
     'module' => 'addressfield',
     'settings' => array(
-      'profile2_private' => FALSE,
+      'profile2_private' => 0,
     ),
     'translatable' => 0,
     'type' => 'addressfield',
@@ -86,6 +86,58 @@ function openlocal_core_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_ol_disabled_toilet'
+  $field_bases['field_ol_disabled_toilet'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ol_disabled_toilet',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'No',
+        1 => 'Yes',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_ol_event_venue'
+  $field_bases['field_ol_event_venue'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ol_event_venue',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'No',
+        1 => 'Yes',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_ol_geolocation'
   $field_bases['field_ol_geolocation'] = array(
     'active' => 1,
@@ -138,56 +190,39 @@ function openlocal_core_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_ol_event_venue'
-  $field_bases['field_ol_event_venue'] = array(
+  // Exported field_base: 'field_ol_tags'
+  $field_bases['field_ol_tags'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ol_event_venue',
-    'foreign keys' => array(),
+    'field_name' => 'field_ol_tags',
+    'foreign keys' => array(
+      'tid' => array(
+        'columns' => array(
+          'tid' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
     'indexes' => array(
-      'value' => array(
-        0 => 'value',
+      'tid' => array(
+        0 => 'tid',
       ),
     ),
     'locked' => 0,
-    'module' => 'list',
+    'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
-        0 => 'No',
-        1 => 'Yes',
+        0 => array(
+          'vocabulary' => 'ol_tags',
+          'parent' => 0,
+        ),
       ),
-      'allowed_values_function' => '',
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
-    'type' => 'list_boolean',
-  );
-
-  // Exported field_base: 'field_ol_disabled_toilet'
-  $field_bases['field_ol_disabled_toilet'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_ol_disabled_toilet',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => 'No',
-        1 => 'Yes',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_ol_wheelchair_accessible'

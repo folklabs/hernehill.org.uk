@@ -33,12 +33,6 @@ function openlocal_news_default_fe_block_settings() {
         'theme' => 'herne_hill',
         'weight' => 0,
       ),
-      'ohm' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'ohm',
-        'weight' => 0,
-      ),
     ),
     'title' => '',
     'visibility' => 0,

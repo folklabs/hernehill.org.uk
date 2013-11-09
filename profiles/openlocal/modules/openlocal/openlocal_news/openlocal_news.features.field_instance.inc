@@ -60,7 +60,7 @@ function openlocal_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -310,7 +310,56 @@ function openlocal_news_field_default_field_instances() {
         'use_geocoder' => 0,
       ),
       'type' => 'geofield_openlayers',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-openlocal_news_article-field_ol_tags'
+  $field_instances['node-openlocal_news_article-field_ol_tags'] = array(
+    'bundle' => 'openlocal_news_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_tags',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 5,
     ),
   );
 
@@ -321,6 +370,7 @@ function openlocal_news_field_default_field_instances() {
   t('Feature content');
   t('Geolocation');
   t('Primary Image');
+  t('Tags');
 
   return $field_instances;
 }
