@@ -26,16 +26,16 @@ function openlocal_layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'nice_menus-1' => array(
+          'module' => 'nice_menus',
+          'delta' => '1',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
         'masquerade-masquerade' => array(
           'module' => 'masquerade',
           'delta' => 'masquerade',
           'region' => 'footer',
-          'weight' => '-10',
-        ),
-        'nice_menus-1' => array(
-          'module' => 'nice_menus',
-          'delta' => '1',
-          'region' => 'header',
           'weight' => '-10',
         ),
       ),
