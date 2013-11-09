@@ -85,7 +85,7 @@ function openlocal_user_field_default_field_instances() {
     'entity_type' => 'profile2',
     'field_name' => 'field_ol_personal_type_of_user',
     'label' => 'Type of user',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
