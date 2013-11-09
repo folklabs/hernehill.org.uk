@@ -3,6 +3,9 @@ core = 7.x
 description = A distribution for local communities.
 distribution_name = "OpenLocal"
 
+; Core
+dependencies[] = dblog
+
 ; Panopoly Foundation
 dependencies[] = panopoly_core
 dependencies[] = panopoly_images
