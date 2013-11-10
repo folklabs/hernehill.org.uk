@@ -62,35 +62,45 @@ function openlocal_gallery_user_default_permissions() {
   // Exported permission: create ol_gallery content.
   $permissions['create ol_gallery content'] = array(
     'name' => 'create ol_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any ol_gallery content.
   $permissions['delete any ol_gallery content'] = array(
     'name' => 'delete any ol_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own ol_gallery content.
   $permissions['delete own ol_gallery content'] = array(
     'name' => 'delete own ol_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any ol_gallery content.
   $permissions['edit any ol_gallery content'] = array(
     'name' => 'edit any ol_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own ol_gallery content.
   $permissions['edit own ol_gallery content'] = array(
     'name' => 'edit own ol_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 

@@ -13,7 +13,7 @@ function openlocal_gallery_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_gallery';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Gallery';
   $view->core = 7;
@@ -22,6 +22,7 @@ function openlocal_gallery_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Galleries';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -81,6 +82,19 @@ function openlocal_gallery_views_default_views() {
 
   /* Display: Group: Galleries */
   $handler = $view->new_display('panel_pane', 'Group: Galleries', 'panel_pane_1');
+
+  /* Display: List */
+  $handler = $view->new_display('panel_pane', 'List', 'panel_pane_2');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $export['openlocal_gallery'] = $view;
 
   return $export;
