@@ -20,6 +20,38 @@ function herne_hill_preprocess_page(&$variables) {
   }
 }
 
+function herne_hill_colorbox_imagefield($variables) {
+    $class = array('colorbox');
+
+  if ($variables['image']['style_name'] == 'hide') {
+    $image = '';
+    $class[] = 'js-hide';
+  }
+  else if (!empty($variables['image']['style_name'])) {
+    $image = theme('image_style', $variables['image']);
+  }
+  else {
+    $image = theme('image', $variables['image']);
+  }
+
+  // ##### Here are the lines I've added
+  // $my_style = 'my_style_that_should_come_with_a_caption';
+  // if ($variables['image']['style_name'] == $my_style) {
+    $image .= '<div class="img-title">' . check_plain($variables['title']) . '</div>';
+  // }
+  // ##### end of modification
+
+  $options = array(
+    'html' => TRUE,
+    'attributes' => array(
+      'title' => $variables['title'],
+      'class' => implode(' ', $class),
+      'rel' => $variables['gid'],
+    )
+  );
+
+  return l($image, $variables['path'], $options);
+}
 
 /**
  * Override or insert variables into the maintenance page template.
