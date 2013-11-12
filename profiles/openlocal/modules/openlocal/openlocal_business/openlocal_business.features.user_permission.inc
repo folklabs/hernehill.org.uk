@@ -59,5 +59,80 @@ function openlocal_business_user_default_permissions() {
     'module' => 'panelizer',
   );
 
+  // Exported permission: create ol_business content.
+  $permissions['create ol_business content'] = array(
+    'name' => 'create ol_business content',
+    'roles' => array(
+      'editor' => 'editor',
+      'trader' => 'trader',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any ol_business content.
+  $permissions['delete any ol_business content'] = array(
+    'name' => 'delete any ol_business content',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own ol_business content.
+  $permissions['delete own ol_business content'] = array(
+    'name' => 'delete own ol_business content',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete terms in 4.
+  $permissions['delete terms in 4'] = array(
+    'name' => 'delete terms in 4',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 5.
+  $permissions['delete terms in 5'] = array(
+    'name' => 'delete terms in 5',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit any ol_business content.
+  $permissions['edit any ol_business content'] = array(
+    'name' => 'edit any ol_business content',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own ol_business content.
+  $permissions['edit own ol_business content'] = array(
+    'name' => 'edit own ol_business content',
+    'roles' => array(
+      'editor' => 'editor',
+      'trader' => 'trader',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit terms in 4.
+  $permissions['edit terms in 4'] = array(
+    'name' => 'edit terms in 4',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 5.
+  $permissions['edit terms in 5'] = array(
+    'name' => 'edit terms in 5',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   return $permissions;
 }

@@ -62,21 +62,27 @@ function openlocal_event_user_default_permissions() {
   // Exported permission: create ol_event content.
   $permissions['create ol_event content'] = array(
     'name' => 'create ol_event content',
-    'roles' => array(),
+    'roles' => array(
+      'contributor' => 'contributor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any ol_event content.
   $permissions['delete any ol_event content'] = array(
     'name' => 'delete any ol_event content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own ol_event content.
   $permissions['delete own ol_event content'] = array(
     'name' => 'delete own ol_event content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
@@ -90,14 +96,18 @@ function openlocal_event_user_default_permissions() {
   // Exported permission: edit any ol_event content.
   $permissions['edit any ol_event content'] = array(
     'name' => 'edit any ol_event content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own ol_event content.
   $permissions['edit own ol_event content'] = array(
     'name' => 'edit own ol_event content',
-    'roles' => array(),
+    'roles' => array(
+      'contributor' => 'contributor',
+    ),
     'module' => 'node',
   );
 

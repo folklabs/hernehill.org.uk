@@ -62,35 +62,45 @@ function openlocal_alert_user_default_permissions() {
   // Exported permission: create ol_alert content.
   $permissions['create ol_alert content'] = array(
     'name' => 'create ol_alert content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any ol_alert content.
   $permissions['delete any ol_alert content'] = array(
     'name' => 'delete any ol_alert content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own ol_alert content.
   $permissions['delete own ol_alert content'] = array(
     'name' => 'delete own ol_alert content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any ol_alert content.
   $permissions['edit any ol_alert content'] = array(
     'name' => 'edit any ol_alert content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own ol_alert content.
   $permissions['edit own ol_alert content'] = array(
     'name' => 'edit own ol_alert content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 

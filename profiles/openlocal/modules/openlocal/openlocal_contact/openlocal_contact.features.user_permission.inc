@@ -202,6 +202,7 @@ function openlocal_contact_user_default_permissions() {
     'name' => 'read privatemsg',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'privatemsg',
   );
@@ -238,6 +239,7 @@ function openlocal_contact_user_default_permissions() {
     'name' => 'write privatemsg',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'privatemsg',
   );

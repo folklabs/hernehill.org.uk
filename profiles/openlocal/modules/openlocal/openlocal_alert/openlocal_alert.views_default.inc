@@ -13,7 +13,7 @@ function openlocal_alert_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_alert';
   $view->description = 'Alerts for urgent citizen issues.';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Alert';
   $view->core = 7;

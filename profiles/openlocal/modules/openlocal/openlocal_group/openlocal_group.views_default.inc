@@ -13,7 +13,7 @@ function openlocal_group_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_group';
   $view->description = 'Local group views.';
-  $view->tag = 'local';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Group';
   $view->core = 7;
@@ -189,7 +189,7 @@ function openlocal_group_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_group_categories';
   $view->description = 'List of categories for groups.';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'OpenLocal Group Categories';
   $view->core = 7;
@@ -243,7 +243,7 @@ function openlocal_group_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_group_content';
   $view->description = 'Views to show different types of group content.';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Group content';
   $view->core = 7;

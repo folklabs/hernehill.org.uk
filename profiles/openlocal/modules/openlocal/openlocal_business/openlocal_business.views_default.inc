@@ -13,7 +13,7 @@ function openlocal_business_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_business';
   $view->description = 'Local business views.';
-  $view->tag = 'local';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Business';
   $view->core = 7;
@@ -294,7 +294,7 @@ function openlocal_business_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_business_categories';
   $view->description = 'A list of local business categories for filtering.';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'OpenLocal Business Categories';
   $view->core = 7;

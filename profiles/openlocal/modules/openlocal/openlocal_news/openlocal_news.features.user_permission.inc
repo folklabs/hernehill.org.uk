@@ -62,35 +62,45 @@ function openlocal_news_user_default_permissions() {
   // Exported permission: create openlocal_news_article content.
   $permissions['create openlocal_news_article content'] = array(
     'name' => 'create openlocal_news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'contributor' => 'contributor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any openlocal_news_article content.
   $permissions['delete any openlocal_news_article content'] = array(
     'name' => 'delete any openlocal_news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own openlocal_news_article content.
   $permissions['delete own openlocal_news_article content'] = array(
     'name' => 'delete own openlocal_news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any openlocal_news_article content.
   $permissions['edit any openlocal_news_article content'] = array(
     'name' => 'edit any openlocal_news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own openlocal_news_article content.
   $permissions['edit own openlocal_news_article content'] = array(
     'name' => 'edit own openlocal_news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'contributor' => 'contributor',
+    ),
     'module' => 'node',
   );
 

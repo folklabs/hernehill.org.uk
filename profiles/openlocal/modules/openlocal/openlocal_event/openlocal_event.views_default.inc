@@ -362,7 +362,7 @@ function openlocal_event_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_event';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Event';
   $view->core = 7;
@@ -646,7 +646,7 @@ function openlocal_event_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_event_categories';
   $view->description = 'Categories for events.';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'OpenLocal Event Categories';
   $view->core = 7;
