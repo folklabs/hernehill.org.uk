@@ -89,7 +89,7 @@ function openlocal_home_default_page_manager_pages() {
         'sort_by' => NULL,
         'sort_order' => NULL,
       ),
-      'view_mode' => 'teaser',
+      'view_mode' => 'featured',
       'widget_title' => NULL,
       'items_per_page' => NULL,
       'use_pager' => NULL,
@@ -98,7 +98,7 @@ function openlocal_home_default_page_manager_pages() {
       'link_to_view' => NULL,
       'more_link' => NULL,
       'path' => NULL,
-      'view_settings' => 'fields',
+      'view_settings' => 'nodes',
       'header_type' => 'none',
     );
     $pane->cache = array();
