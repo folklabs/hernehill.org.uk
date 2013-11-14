@@ -30,6 +30,21 @@ function openlocal_business_views_api() {
 }
 
 /**
+ * Implements hook_eck_bundle_info().
+ */
+function openlocal_business_eck_bundle_info() {
+  $items = array(
+  'ol_promotion_ol_promotion' => array(
+  'machine_name' => 'ol_promotion_ol_promotion',
+  'entity_type' => 'ol_promotion',
+  'name' => 'ol_promotion',
+  'label' => 'Promotion',
+),
+  );
+  return $items;
+}
+
+/**
  * Implements hook_eck_entity_type_info().
  */
 function openlocal_business_eck_entity_type_info() {
@@ -63,6 +78,14 @@ function openlocal_business_node_info() {
       'name' => t('Local business'),
       'base' => 'node_content',
       'description' => t('A local business, service or trader.'),
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'help' => '',
+    ),
+    'ol_reward_scheme' => array(
+      'name' => t('Reward scheme'),
+      'base' => 'node_content',
+      'description' => t('A scheme such as a loyalty card or local currency designed to encourage local shopping.'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'help' => '',

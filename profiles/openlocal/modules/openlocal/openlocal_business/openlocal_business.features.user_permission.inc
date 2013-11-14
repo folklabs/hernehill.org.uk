@@ -94,11 +94,81 @@ function openlocal_business_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: delete terms in 5.
-  $permissions['delete terms in 5'] = array(
-    'name' => 'delete terms in 5',
+  // Exported permission: eck add ol_promotion bundles.
+  $permissions['eck add ol_promotion bundles'] = array(
+    'name' => 'eck add ol_promotion bundles',
     'roles' => array(),
-    'module' => 'taxonomy',
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck add ol_promotion ol_promotion entities.
+  $permissions['eck add ol_promotion ol_promotion entities'] = array(
+    'name' => 'eck add ol_promotion ol_promotion entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck administer ol_promotion bundles.
+  $permissions['eck administer ol_promotion bundles'] = array(
+    'name' => 'eck administer ol_promotion bundles',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck administer ol_promotion ol_promotion entities.
+  $permissions['eck administer ol_promotion ol_promotion entities'] = array(
+    'name' => 'eck administer ol_promotion ol_promotion entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck delete ol_promotion bundles.
+  $permissions['eck delete ol_promotion bundles'] = array(
+    'name' => 'eck delete ol_promotion bundles',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck delete ol_promotion ol_promotion entities.
+  $permissions['eck delete ol_promotion ol_promotion entities'] = array(
+    'name' => 'eck delete ol_promotion ol_promotion entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck edit ol_promotion bundles.
+  $permissions['eck edit ol_promotion bundles'] = array(
+    'name' => 'eck edit ol_promotion bundles',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck edit ol_promotion ol_promotion entities.
+  $permissions['eck edit ol_promotion ol_promotion entities'] = array(
+    'name' => 'eck edit ol_promotion ol_promotion entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck list ol_promotion bundles.
+  $permissions['eck list ol_promotion bundles'] = array(
+    'name' => 'eck list ol_promotion bundles',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck list ol_promotion ol_promotion entities.
+  $permissions['eck list ol_promotion ol_promotion entities'] = array(
+    'name' => 'eck list ol_promotion ol_promotion entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: eck view ol_promotion ol_promotion entities.
+  $permissions['eck view ol_promotion ol_promotion entities'] = array(
+    'name' => 'eck view ol_promotion ol_promotion entities',
+    'roles' => array(),
+    'module' => 'eck',
   );
 
   // Exported permission: edit any ol_business content.
@@ -127,11 +197,11 @@ function openlocal_business_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: edit terms in 5.
-  $permissions['edit terms in 5'] = array(
-    'name' => 'edit terms in 5',
+  // Exported permission: manage ol_promotion properties.
+  $permissions['manage ol_promotion properties'] = array(
+    'name' => 'manage ol_promotion properties',
     'roles' => array(),
-    'module' => 'taxonomy',
+    'module' => 'eck',
   );
 
   return $permissions;
