@@ -127,7 +127,7 @@ function openlocal_business_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'column2';
     $pane->type = 'block';
-    $pane->subtype = 'block-4';
+    $pane->subtype = 'block-2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
