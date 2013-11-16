@@ -168,7 +168,7 @@ function openlocal_event_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'column2';
     $pane->type = 'block';
-    $pane->subtype = 'block-4';
+    $pane->subtype = 'block-2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -237,7 +237,10 @@ function openlocal_event_default_page_manager_pages() {
   $page->admin_title = 'Events calendar';
   $page->admin_description = '';
   $page->path = 'events/calendar';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -324,7 +327,10 @@ function openlocal_event_default_page_manager_pages() {
   $page->admin_title = 'Events map';
   $page->admin_description = '';
   $page->path = 'events/map';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'tab',
     'title' => 'Map',
@@ -586,7 +592,10 @@ function openlocal_event_default_page_manager_pages() {
   $page->admin_title = 'Venues map';
   $page->admin_description = 'A map of potential event venues.';
   $page->path = 'venues/map';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'tab',
     'title' => 'Map',

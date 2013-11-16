@@ -237,7 +237,9 @@ function openlocal_event_panelizer_defaults() {
       'path' => NULL,
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 4;
@@ -274,17 +276,22 @@ function openlocal_event_panelizer_defaults() {
     $pane->pid = 'new-7';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_event_venue';
+    $pane->subtype = 'node:field_ol_event_date';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'entityreference_label',
+      'label' => 'hidden',
+      'formatter' => 'date_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'link' => 1,
+        'format_type' => 'long',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'fromto' => 'both',
+        'show_repeat_rule' => 'show',
       ),
       'context' => 'panelizer',
       'override_title' => 0,
@@ -317,24 +324,20 @@ function openlocal_event_panelizer_defaults() {
     $pane->pid = 'new-8';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_event_date';
+    $pane->subtype = 'node:field_ol_event_venue_ref';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'date_default',
+      'label' => 'above',
+      'formatter' => 'entityreference_entity_view',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'format_type' => 'long',
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'fromto' => 'both',
-        'show_repeat_rule' => 'show',
+        'view_mode' => 'teaser',
+        'links' => 0,
       ),
-      'context' => 'panelizer',
+      'context' => array(),
       'override_title' => 0,
       'override_title_text' => '',
       'view_mode' => NULL,
