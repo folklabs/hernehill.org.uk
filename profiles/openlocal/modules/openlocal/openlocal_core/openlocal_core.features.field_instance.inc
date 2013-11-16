@@ -238,7 +238,11 @@ function openlocal_core_field_default_field_instances() {
   // Exported field_instance: 'node-ol_place-field_ol_disabled_toilet'
   $field_instances['node-ol_place-field_ol_disabled_toilet'] = array(
     'bundle' => 'ol_place',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -273,7 +277,7 @@ function openlocal_core_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
       'weight' => 11,
@@ -440,7 +444,11 @@ function openlocal_core_field_default_field_instances() {
   // Exported field_instance: 'node-ol_place-field_ol_wheelchair_accessible'
   $field_instances['node-ol_place-field_ol_wheelchair_accessible'] = array(
     'bundle' => 'ol_place',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -475,7 +483,7 @@ function openlocal_core_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
       'weight' => 10,
@@ -485,7 +493,11 @@ function openlocal_core_field_default_field_instances() {
   // Exported field_instance: 'node-ol_place-field_ol_wi_fi'
   $field_instances['node-ol_place-field_ol_wi_fi'] = array(
     'bundle' => 'ol_place',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -520,7 +532,7 @@ function openlocal_core_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
       'weight' => 9,
