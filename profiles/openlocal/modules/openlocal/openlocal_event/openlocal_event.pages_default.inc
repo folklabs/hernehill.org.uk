@@ -430,9 +430,9 @@ function openlocal_event_default_page_manager_pages() {
   $page->path = 'venues/!keywords';
   $page->access = array();
   $page->menu = array(
-    'type' => 'default tab',
+    'type' => 'normal',
     'title' => 'List',
-    'name' => 'navigation',
+    'name' => 'main-menu',
     'weight' => '0',
     'parent' => array(
       'type' => 'normal',
