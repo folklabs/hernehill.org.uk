@@ -13,6 +13,13 @@ function openlocal_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_ol_place';
+  $strongarm->value = 'edit-menu';
+  $export['additional_settings__active_tab_ol_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_ol_place';
   $strongarm->value = 0;
   $export['comment_anonymous_ol_place'] = $strongarm;
@@ -58,6 +65,27 @@ function openlocal_core_strongarm() {
   $strongarm->name = 'comment_subject_field_ol_place';
   $strongarm->value = 1;
   $export['comment_subject_field_ol_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_popup_authored_enabled_ol_place';
+  $strongarm->value = 1;
+  $export['date_popup_authored_enabled_ol_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_popup_authored_format_ol_place';
+  $strongarm->value = 'm/d/Y - H:i';
+  $export['date_popup_authored_format_ol_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_popup_authored_year_range_ol_place';
+  $strongarm->value = '3';
+  $export['date_popup_authored_year_range_ol_place'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -110,6 +138,13 @@ function openlocal_core_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'forward_display_ol_place';
+  $strongarm->value = 1;
+  $export['forward_display_ol_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_ol_place';
   $strongarm->value = array();
   $export['menu_options_ol_place'] = $strongarm;
@@ -144,6 +179,51 @@ function openlocal_core_strongarm() {
   $strongarm->name = 'node_submitted_ol_place';
   $strongarm->value = 0;
   $export['node_submitted_ol_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_node_ol_place';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'featured' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_node_ol_place'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_ol_place_pattern';
+  $strongarm->value = 'places/[node:title]';
+  $export['pathauto_node_ol_place_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_ol_place';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_ol_place'] = $strongarm;
 
   return $export;
 }
