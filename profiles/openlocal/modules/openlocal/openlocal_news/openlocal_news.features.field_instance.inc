@@ -222,98 +222,6 @@ function openlocal_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-openlocal_news_article-field_ol_geolocation'
-  $field_instances['node-openlocal_news_article-field_ol_geolocation'] = array(
-    'bundle' => 'openlocal_news_article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'leaflet',
-        'settings' => array(
-          'height' => 400,
-          'icon' => array(
-            'iconAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconSize' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconUrl' => '',
-            'popupAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowUrl' => '',
-          ),
-          'leaflet_map' => 'google-roadmap',
-          'popup' => 0,
-        ),
-        'type' => 'geofield_leaflet',
-        'weight' => 4,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_geolocation',
-    'label' => 'Geolocation',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'openlayers',
-      'settings' => array(
-        'allow_edit' => 0,
-        'data_storage' => 'collection',
-        'delta_handling' => 'default',
-        'feature_types' => array(
-          'path' => 0,
-          'point' => 'point',
-          'polygon' => 0,
-        ),
-        'geocoder_field' => 'body',
-        'geocoder_handler' => 'google',
-        'handler_settings' => array(
-          'google' => array(
-            'all_results' => 0,
-            'geometry_type' => 'point',
-            'reject_results' => array(
-              'APPROXIMATE' => 0,
-              'GEOMETRIC_CENTER' => 0,
-              'RANGE_INTERPOLATED' => 0,
-              'ROOFTOP' => 0,
-            ),
-          ),
-        ),
-        'openlayers_map' => 'openlocal_geofield_widget_map',
-        'use_geocoder' => 0,
-      ),
-      'type' => 'geofield_openlayers',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-openlocal_news_article-field_ol_tags'
   $field_instances['node-openlocal_news_article-field_ol_tags'] = array(
     'bundle' => 'openlocal_news_article',
@@ -368,7 +276,6 @@ function openlocal_news_field_default_field_instances() {
   t('Body');
   t('Categories');
   t('Feature content');
-  t('Geolocation');
   t('Primary Image');
   t('Tags');
 
