@@ -32,7 +32,7 @@ function openlocal_group_panelizer_defaults() {
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Groups
 %node:title',
-    'panels_breadcrumbs_paths' => '/groups',
+    'panels_breadcrumbs_paths' => 'groups',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
