@@ -70,6 +70,6 @@ features[variable][] = panelizer_node:openlocal_news_article_allowed_layouts_def
 features[variable][] = panelizer_node:openlocal_news_article_allowed_types_default
 features[variable][] = pathauto_node_openlocal_news_article_pattern
 features[views_view][] = openlocal_news
-features_exclude[field][node-openlocal_news_article-field_ol_geolocation] = node-openlocal_news_article-field_ol_geolocation
 features_exclude[dependencies][views_content] = views_content
 features_exclude[dependencies][views] = views
+features_exclude[field][node-openlocal_news_article-field_ol_geolocation] = node-openlocal_news_article-field_ol_geolocation

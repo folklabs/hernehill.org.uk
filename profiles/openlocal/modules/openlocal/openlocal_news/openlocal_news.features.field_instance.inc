@@ -60,7 +60,7 @@ function openlocal_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -76,7 +76,7 @@ function openlocal_news_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'above',
@@ -106,7 +106,7 @@ function openlocal_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -189,7 +189,7 @@ function openlocal_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -258,7 +258,7 @@ function openlocal_news_field_default_field_instances() {
           'popup' => 0,
         ),
         'type' => 'geofield_leaflet',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'above',
@@ -326,7 +326,7 @@ function openlocal_news_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'above',
@@ -359,7 +359,7 @@ function openlocal_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
