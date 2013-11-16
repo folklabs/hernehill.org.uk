@@ -124,7 +124,7 @@ function openlocal_business_views_default_views() {
   $handler->display->display_options['style_options']['name_field'] = 'title';
   $handler->display->display_options['style_options']['description_field'] = '#rendered_entity';
   $handler->display->display_options['style_options']['view_mode'] = 'teaser';
-  $handler->display->display_options['style_options']['map'] = 'mapquest';
+  $handler->display->display_options['style_options']['map'] = 'OSM Mapnik';
   $handler->display->display_options['style_options']['height'] = '600';
   $handler->display->display_options['style_options']['icon'] = array(
     'iconUrl' => '',
