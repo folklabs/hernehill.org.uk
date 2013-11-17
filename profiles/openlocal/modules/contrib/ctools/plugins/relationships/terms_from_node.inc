@@ -31,11 +31,12 @@ function ctools_terms_from_node_context($context, $conf) {
   // Collect all terms for the chosen vocabulary and concatenate them.
   $node = $context->data;
   $terms = array();
-  
+
   $fields = field_info_instances('node', $node->type);
   foreach ($fields as $name => $info) {
     $field_info = field_info_field($name);
-    if ($field_info['type'] == 'taxonomy_term_reference' && (empty($conf['vocabulary']) || $conf['vocabulary'][$field_info['settings']['allowed_values'][0]['vocabulary']])) {
+    // if ($field_info['type'] == 'taxonomy_term_reference' && (empty($conf['vocabulary']) || $conf['vocabulary'][$field_info['settings']['allowed_values'][0]['vocabulary']])) {
+    if ($field_info['type'] == 'taxonomy_term_reference' && (empty($conf['vocabulary']) || !empty($conf['vocabulary'][$field_info['settings']['allowed_values'][0]['vocabulary']]))) {
       $items = field_get_items('node', $node, $name);
       if (is_array($items)) {
         foreach ($items as $item) {
@@ -44,7 +45,7 @@ function ctools_terms_from_node_context($context, $conf) {
       }
     }
   }
-  
+
   if (!empty($terms)) {
     $all_terms = ctools_break_phrase(implode($conf['concatenator'], $terms));
     return ctools_context_create('terms', $all_terms);

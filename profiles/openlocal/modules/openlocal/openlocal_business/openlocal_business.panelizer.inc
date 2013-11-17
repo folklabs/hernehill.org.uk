@@ -116,13 +116,28 @@ function openlocal_business_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'hidden',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -407,22 +422,18 @@ function openlocal_business_panelizer_defaults() {
     $display->panels['quarter1'][5] = 'new-11';
     $pane = new stdClass();
     $pane->pid = 'new-12';
-    $pane->panel = 'quarter2';
+    $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_geolocation';
+    $pane->subtype = 'node:field_ol_business_twitter';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'geofield_leaflet',
+      'label' => 'inline',
+      'formatter' => 'twitterfield_twitter_link',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'leaflet_map' => 'OSM Mapnik',
-        'height' => '200',
-        'popup' => 0,
-      ),
+      'formatter_settings' => array(),
       'context' => array(),
       'override_title' => 0,
       'override_title_text' => '',
@@ -446,10 +457,10 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 6;
     $pane->locks = array();
     $display->content['new-12'] = $pane;
-    $display->panels['quarter2'][0] = 'new-12';
+    $display->panels['quarter1'][6] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-5';
   $panelizer->display = $display;

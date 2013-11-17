@@ -101,7 +101,7 @@ function openlocal_business_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'featured' => array(
         'label' => 'above',
@@ -168,7 +168,7 @@ function openlocal_business_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -222,7 +222,7 @@ function openlocal_business_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'above',
@@ -265,7 +265,7 @@ function openlocal_business_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'featured' => array(
         'label' => 'above',
@@ -329,7 +329,7 @@ function openlocal_business_field_default_field_instances() {
           'timezone_field' => '',
         ),
         'type' => 'office_hours',
-        'weight' => 5,
+        'weight' => 10,
       ),
       'featured' => array(
         'label' => 'above',
@@ -356,7 +356,7 @@ function openlocal_business_field_default_field_instances() {
       'module' => 'office_hours',
       'settings' => array(),
       'type' => 'office_hours',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -405,7 +405,7 @@ function openlocal_business_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -452,7 +452,7 @@ function openlocal_business_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -468,7 +468,7 @@ function openlocal_business_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'featured' => array(
         'label' => 'above',
@@ -507,6 +507,58 @@ function openlocal_business_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ol_business-field_ol_business_twitter'
+  $field_instances['node-ol_business-field_ol_business_twitter'] = array(
+    'bundle' => 'ol_business',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_business_twitter',
+    'label' => 'Twitter',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'twitterfield',
+      'settings' => array(
+        'allowed_types' => array(
+          'hashtag' => 0,
+          'list' => 0,
+          'search' => 0,
+          'username' => 'username',
+        ),
+        'size' => 60,
+      ),
+      'type' => 'twitterfield',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_business-field_ol_business_website'
   $field_instances['node-ol_business-field_ol_business_website'] = array(
     'bundle' => 'ol_business',
@@ -519,7 +571,7 @@ function openlocal_business_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'featured' => array(
         'label' => 'above',
@@ -583,7 +635,7 @@ function openlocal_business_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'featured' => array(
         'label' => 'above',
@@ -633,7 +685,7 @@ function openlocal_business_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'above',
@@ -716,7 +768,7 @@ function openlocal_business_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -765,7 +817,7 @@ function openlocal_business_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -805,7 +857,7 @@ function openlocal_business_field_default_field_instances() {
           'popup' => 0,
         ),
         'type' => 'geofield_leaflet',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'above',
@@ -848,7 +900,7 @@ function openlocal_business_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -897,7 +949,7 @@ function openlocal_business_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -946,7 +998,7 @@ function openlocal_business_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -1223,6 +1275,7 @@ function openlocal_business_field_default_field_instances() {
   t('Select if this business can be a venue for certain types of events.');
   t('Tags');
   t('Telephone');
+  t('Twitter');
   t('Website');
   t('Wheelchair accessible');
   t('Wi-fi');

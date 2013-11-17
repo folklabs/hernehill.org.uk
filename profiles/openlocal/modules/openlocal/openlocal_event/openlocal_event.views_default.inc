@@ -565,6 +565,8 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['filter_groups']['groups'] = array(
@@ -584,33 +586,27 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['filters']['type_1']['table'] = 'node';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
   $handler->display->display_options['filters']['type_1']['value'] = array(
+    'ol_business' => 'ol_business',
     'ol_place' => 'ol_place',
   );
   $handler->display->display_options['filters']['type_1']['group'] = 1;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'ol_business' => 'ol_business',
+  /* Filter criterion: Content: Event venue (field_ol_event_venue) */
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['id'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['table'] = 'field_data_field_ol_event_venue';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['field'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['value'] = array(
+    1 => '1',
   );
-  $handler->display->display_options['filters']['type']['group'] = 2;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
-  $handler->display->display_options['filters']['status_1']['table'] = 'node';
-  $handler->display->display_options['filters']['status_1']['field'] = 'status';
-  $handler->display->display_options['filters']['status_1']['value'] = '1';
-  $handler->display->display_options['filters']['status_1']['group'] = 2;
 
-  /* Display: Map / all */
-  $handler = $view->new_display('panel_pane', 'Map / all', 'panel_pane_4');
+  /* Display: Map */
+  $handler = $view->new_display('panel_pane', 'Map', 'panel_pane_4');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'leaflet';
   $handler->display->display_options['style_options']['data_source'] = 'field_ol_geolocation';
   $handler->display->display_options['style_options']['name_field'] = 'title';
   $handler->display->display_options['style_options']['description_field'] = '#rendered_entity';
   $handler->display->display_options['style_options']['view_mode'] = 'teaser';
-  $handler->display->display_options['style_options']['map'] = 'google-high-res';
+  $handler->display->display_options['style_options']['map'] = 'OSM Mapnik';
   $handler->display->display_options['style_options']['height'] = '600';
   $handler->display->display_options['style_options']['icon'] = array(
     'iconUrl' => '',
@@ -725,6 +721,7 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -768,6 +765,13 @@ function openlocal_event_views_default_views() {
     6 => 0,
   );
   $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['reduce'] = TRUE;
+  /* Filter criterion: Content: Event venue (field_ol_event_venue) */
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['id'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['table'] = 'field_data_field_ol_event_venue';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['field'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: List */
   $handler = $view->new_display('panel_pane', 'List', 'panel_pane_1');
