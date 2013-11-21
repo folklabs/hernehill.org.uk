@@ -1,14 +1,12 @@
-/**
- * @file
- * SMACSS Modules
- *
- * Adds modular sets of styles.
- *
- * Additional useful selectors can be found in Zen's online documentation.
- * https://drupal.org/node/1707736
+// @file
+// SMACSS Modules
+//
+// Adds modular sets of styles.
+//
+// Additional useful selectors can be found in Zen's online documentation.
+// https://drupal.org/node/1707736
 
-/**
- * Wireframes.
+// Wireframes.
 .with-wireframes
   #header,
   #main,
@@ -21,19 +19,18 @@
     outline: 1px solid #ccc
     @if $legacy-support-for-ie6 or $legacy-support-for-ie7
       .lt-ie8 &
-        /* IE6/7 do not support the outline property.
+        // IE6/7 do not support the outline property.
         border: 1px solid #ccc
 
-/**
- * Accessibility features.
+// Accessibility features.
 
-/* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 
 .element-invisible,
 %element-invisible
   +element-invisible
 
-/* Turns off the element-invisible effect.
+// Turns off the element-invisible effect.
 %element-invisible-off
   +element-invisible-off
 
@@ -44,8 +41,7 @@
   &:focus
     @extend %element-invisible-off
 
-/*
- * The skip-link link will be completely hidden until a user tabs to the link.
+// The skip-link link will be completely hidden until a user tabs to the link.
 #skip-link
   margin: 0
   a,
@@ -57,30 +53,30 @@
     background-color: #666
     color: #fff
 
-/**
- * Branding header.
+//
+// Branding header.
 
-/* Wrapping link for logo.
+// Wrapping link for logo.
 .header__logo
   float: left
-  /* LTR
+  // LTR
   margin: 0
   padding: 0
 
-/* Logo image.
+// Logo image.
 .header__logo-image
   vertical-align: bottom
 
-/* Wrapper for website name and slogan.
+// Wrapper for website name and slogan.
 .header__name-and-slogan
   float: left
 
-/* The name of the website.
+// The name of the website.
 .header__site-name
   margin: 0
   +adjust-font-size-to($h1-font-size)
 
-/* The link around the name of the website.
+// The link around the name of the website.
 .header__site-link
   &:link,
   &:visited
@@ -90,62 +86,62 @@
   &:focus
     text-decoration: underline
 
-/* The slogan (or tagline) of a website.
+// The slogan (or tagline) of a website.
 .header__site-slogan
   margin: 0
 
-/* The secondary menu (login, etc.)
+// The secondary menu (login, etc.)
 // .header__secondary-menu
 //   float: right
-  /* LTR
+  // LTR
 
-/* Wrapper for any blocks placed in the header region.
+// Wrapper for any blocks placed in the header region.
 .header__region
-  /* Clear the logo.
+  // Clear the logo.
   clear: both
 
-/**
- * Navigation bar.
+//
+// Navigation bar.
 #navigation
-  /* Sometimes you want to prevent overlapping with main div.
-  /* overflow: hidden;
+  // Sometimes you want to prevent overlapping with main div.
+  // overflow: hidden;
   .block
     margin-bottom: 0
   .block-menu .block__title,
   .block-menu-block .block__title
     @extend %element-invisible
-  /* Main menu and secondary menu links and menu block links.
+  // Main menu and secondary menu links and menu block links.
   .links,
   .menu
     margin: 0
     padding: 0
     text-align: left
-    /* LTR
+    // LTR
     li
-      /* A simple method to get navigation links to appear in one line.
+      // A simple method to get navigation links to appear in one line.
       float: left
-      /* LTR
+      // LTR
       padding: 0 10px 0 0
-      /* LTR
+      // LTR
       list-style-type: none
       list-style-image: none
   li a:hover, li a:active
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.02, #20806A),color-stop(1, #144C3F))
-    background-image: -o-linear-gradient(bottom, #20806A 2%, #144C3F 100%)
-    background-image: -moz-linear-gradient(bottom, #20806A 2%, #144C3F 100%)
-    background-image: -webkit-linear-gradient(bottom, #20806A 2%, #144C3F 100%)
-    background-image: -ms-linear-gradient(bottom, #20806A 2%, #144C3F 100%)
-    background-image: linear-gradient(to bottom, #20806A 2%, #144C3F 100%)
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.02, #0d322a),color-stop(1, #144c3f))
+    background-image: -o-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
+    background-image: -moz-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
+    background-image: -webkit-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
+    background-image: -ms-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
+    background-image: linear-gradient(to bottom, #0d322a 2%, #144c3f 100%)
 
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.02, #144C3F),color-stop(1, #20806A))
-  background-image: -o-linear-gradient(bottom, #144C3F 2%, #20806A 100%)
-  background-image: -moz-linear-gradient(bottom, #144C3F 2%, #20806A 100%)
-  background-image: -webkit-linear-gradient(bottom, #144C3F 2%, #20806A 100%)
-  background-image: -ms-linear-gradient(bottom, #144C3F 2%, #20806A 100%)
-  background-image: linear-gradient(to bottom, #144C3F 2%, #20806A 100%)
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.02, #144c3f),color-stop(1, #0d322a))
+  background-image: -o-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
+  background-image: -moz-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
+  background-image: -webkit-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
+  background-image: -ms-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
+  background-image: linear-gradient(to bottom, #144c3f 2%, #0d322a 100%)
 
-/**
- * Breadcrumb navigation.
+//
+ // Breadcrumb navigation.
 .breadcrumb
   ol
     margin: 0
@@ -156,8 +152,8 @@
     margin: 0
     padding: 0
 
-/**
- * Titles.
+//
+ // Titles.
 
 .page__title,
 .node__title,
@@ -165,20 +161,20 @@
 .comments__title,
 .comments__form-title,
 .comment__title
-  /* Comment title.
+  // Comment title.
   margin: 0
 
-/**
- * Messages.
+//
+ // Messages.
 .messages
   margin: rhythm(1) 0
   padding: 10px 10px 10px 50px
-  /* LTR
+  // LTR
   background-image: inline-image("message-24-ok.png")
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7
     *background-image: image-url("message-24-ok.png")
   background-position: 8px 8px
-  /* LTR
+  // LTR
   background-repeat: no-repeat
   border: 1px solid #be7
 
@@ -208,11 +204,11 @@
 .messages__item
   list-style-image: none
 
-/* Core/module installation error messages.
+// Core/module installation error messages.
 .messages--error  p.error
   color: #333
 
-/* System status report.
+// System status report.
 
 .ok,
 %ok
@@ -229,14 +225,14 @@
   background-color: #fef5f1
   color: #8c2e0b
 
-/**
- * Tabs.
+//
+ // Tabs.
 
-/* Basic positioning styles shared by primary and secondary tabs.
+// Basic positioning styles shared by primary and secondary tabs.
 %tabs
   +clearfix
   +background-image(linear-gradient(bottom, $tabs-border 1px, transparent 1px))
-  /* IE 9 and earlier don't understand gradients.
+  // IE 9 and earlier don't understand gradients.
   list-style: none
   border-bottom: 1px solid $tabs-border \0 / ie
   margin: rhythm(1) 0
@@ -245,7 +241,7 @@
 
 %tabs__tab
   float: left
-  /* LTR
+  // LTR
   margin: 0 3px
 
 %tabs__tab-link
@@ -256,7 +252,7 @@
   +adjust-leading-to(1)
   text-decoration: none
 
-/* Primary tabs.
+// Primary tabs.
 .tabs-primary
   @extend %tabs
 
@@ -266,7 +262,7 @@
   +single-text-shadow(white, 1px, 1px, 0)
   border: 1px solid $tabs-border
   border-bottom-color: transparent
-  /* IE 9 and earlier don't understand gradients.
+  // IE 9 and earlier don't understand gradients.
   border-bottom: 0 \0/ie
 
 .tabs-primary__tab.is-active
@@ -306,11 +302,11 @@ a.tabs-primary__tab-link.is-active
   @extend %tabs-primary__tab-link
   @extend %tabs-primary__tab-link-is-active
 
-/* Secondary tabs.
+// Secondary tabs.
 .tabs-secondary
   @extend %tabs
   font-size: .9em
-  /* Collapse bottom margin of ul.primary.
+  // Collapse bottom margin of ul.primary.
   margin-top: -(rhythm(1))
 
 .tabs-secondary__tab,
@@ -351,10 +347,10 @@ a.tabs-secondary__tab-link.is-active
   @extend %tabs-secondary__tab-link
   @extend %tabs-secondary__tab-link-is-active
 
-/**
- * Inline styles.
+//
+ // Inline styles.
 
-/* List of links generated by theme_links().
+// List of links generated by theme_links().
 .inline
   display: inline
   padding: 0
@@ -362,37 +358,37 @@ a.tabs-secondary__tab-link.is-active
     display: inline
     list-style-type: none
     padding: 0 1em 0 0
-    /* LTR
+    // LTR
 
-/* The inline field label used by the Fences module.
+// The inline field label used by the Fences module.
 span.field-label
   padding: 0 1em 0 0
-  /* LTR
+  // LTR
 
-/**
- * "More" links.
+//
+ // "More" links.
 .more-link
   text-align: right
-  /* LTR
+  // LTR
 
 .more-help-link
   text-align: right
-  /* LTR
+  // LTR
 
 .more-help-link a
   background-image: inline-image("help.png")
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7
     *background-image: image-url("help.png")
   background-position: 0 50%
-  /* LTR
+  // LTR
   background-repeat: no-repeat
   padding: 1px 0 1px 20px
-  /* LTR
+  // LTR
 
-/**
- * Pager.
+//
+ // Pager.
 
-/* A list of page numbers when more than 1 page of content is available.
+// A list of page numbers when more than 1 page of content is available.
 .pager
   clear: both
   padding: 0
@@ -410,22 +406,22 @@ span.field-label
 .pager-next,
 .pager-last,
 .pager-ellipsis
-  /* A concatenation of several list items using an ellipsis.
+  // A concatenation of several list items using an ellipsis.
   @extend %pager__item
 
-/* The current page's list item.
+// The current page's list item.
 .pager-current
   @extend %pager__item
   font-weight: bold
 
-/**
- * Blocks.
+//
+ // Blocks.
 
-/* Block wrapper.
+// Block wrapper.
 .block
   margin-bottom: rhythm(1)
 
-/**
+//
  * Menus.
 .menu__item.is-leaf
   list-style-image: inline-image("menu-leaf.png")
@@ -441,35 +437,35 @@ span.field-label
 
 .menu__item.is-collapsed
   list-style-image: inline-image("menu-collapsed.png")
-  /* LTR
+  // LTR
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7
     *list-style-image: image-url("menu-collapsed.png")
-    /* LTR
+    // LTR
   list-style-type: disc
 
-/* The active item in a Drupal menu.
+// The active item in a Drupal menu.
 .menu a.active
   color: #000
 
-/**
- * Marker.
+//
+ // Marker.
 
-/* The "new" or "updated" marker.
+// The "new" or "updated" marker.
 
 .new,
 .update
   color: #c00
-  /* Remove background highlighting from <mark> in normalize.
+  // Remove background highlighting from <mark> in normalize.
   background-color: transparent
 
-/**
+//
  * Unpublished note.
 
-/* The word "Unpublished" displayed underneath the content.
+// The word "Unpublished" displayed underneath the content.
 .unpublished
   height: 0
   overflow: visible
-  /* Remove background highlighting from <mark> in normalize.
+  // Remove background highlighting from <mark> in normalize.
   background-color: transparent
   color: #d8d8d8
   font-size: 75px
@@ -478,61 +474,61 @@ span.field-label
   font-weight: bold
   text-transform: uppercase
   text-align: center
-  /* A very nice CSS3 property.
+  // A very nice CSS3 property.
   word-wrap: break-word
 
 @if $legacy-support-for-ie6 or $legacy-support-for-ie7
   .lt-ie8 .node-unpublished > *,
   .lt-ie8 .comment-unpublished > *
-    /* Otherwise these elements will appear below the "Unpublished" text.
+    // Otherwise these elements will appear below the "Unpublished" text.
     position: relative
 
-/**
+//
  * Comments.
 
-/* Wrapper for the list of comments and its title.
+// Wrapper for the list of comments and its title.
 .comments
   margin: rhythm(1) 0
 
-/* Preview of the comment before submitting new or updated comment.
+// Preview of the comment before submitting new or updated comment.
 .comment-preview
-  /* Drupal core will use a #ffffea background. See #1110842.
+  // Drupal core will use a #ffffea background. See #1110842.
   background-color: #ffffea
 
-/* Wrapper for a single comment.
+// Wrapper for a single comment.
 .comment
-  /* Comment's permalink wrapper.
+  // Comment's permalink wrapper.
   .permalink
     text-transform: uppercase
     font-size: 75%
 
-/* Nested comments are indented.
+// Nested comments are indented.
 .indented
-  /* Drupal core uses a 25px left margin.
+  // Drupal core uses a 25px left margin.
   margin-left: $indent-amount
-  /* LTR
+  // LTR
 
-/**
+//
  * Forms.
 
-/* Wrapper for a form element (or group of form elements) and its label.
+// Wrapper for a form element (or group of form elements) and its label.
 .form-item
   margin: rhythm(1) 0
-  /* Pack groups of checkboxes and radio buttons closer together.
+  // Pack groups of checkboxes and radio buttons closer together.
   .form-checkboxes &,
   .form-radios &
-    /* Drupal core uses "0.4em 0".
+    // Drupal core uses "0.4em 0".
     margin: 0
-  /* Form items in a table.
+  // Form items in a table.
   tr.odd &,
   tr.even &
     margin: 0
-  /* Highlight the form elements that caused a form submission error.
+  // Highlight the form elements that caused a form submission error.
   input.error,
   textarea.error,
   select.error
     border: 1px solid #c00
-  /* The descriptive help text (separate from the label).
+  // The descriptive help text (separate from the label).
   .description
     font-size: 0.85em
 
@@ -541,42 +537,42 @@ span.field-label
   .description
     margin-left: 2.4em
 
-/* The part of the label that indicates a required field.
+// The part of the label that indicates a required field.
 .form-required
   color: #c00
 
-/* Labels for radios and checkboxes.
+// Labels for radios and checkboxes.
 label.option
   display: inline
   font-weight: normal
 
-/* Buttons used by contrib modules like Media.
+// Buttons used by contrib modules like Media.
 a.button
   +appearance(button)
 
-/* Password confirmation.
+// Password confirmation.
 
 .password-parent,
 .confirm-parent
   margin: 0
 
-/* Drupal's default login form block.
+// Drupal's default login form block.
 #user-login-form
   text-align: left
-  /* LTR
+  // LTR
 
-/**
+//
  * OpenID
  *
  * The default styling for the OpenID login link seems to assume Garland's
  * styling of list items.
 
-/* OpenID creates a new ul above the login form's links.
+// OpenID creates a new ul above the login form's links.
 .openid-links
-  /* Position OpenID's ul next to the rest of the links.
+  // Position OpenID's ul next to the rest of the links.
   margin-bottom: 0
 
-/* The "Log in using OpenID" and "Cancel OpenID login" links.
+// The "Log in using OpenID" and "Cancel OpenID login" links.
 
 .openid-link,
 .user-link
@@ -584,21 +580,21 @@ a.button
 
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link
-  /* Un-do some of the padding on the ul list.
+  // Un-do some of the padding on the ul list.
   margin-left: -20px
-  /* LTR
+  // LTR
 
 #user-login ul
   margin: rhythm(1) 0
 
-/**
+//
  * Drupal admin tables.
 form
   th
     text-align: left
-    /* LTR
+    // LTR
     padding-right: 1em
-    /* LTR
+    // LTR
     border-bottom: 3px solid #ccc
   tbody
     border-top: 1px solid #ccc
@@ -619,34 +615,34 @@ tr.even
   .lt-ie8 tr.odd
     th,
     td
-      /* IE doesn't display borders on table rows.
+      // IE doesn't display borders on table rows.
       border-bottom: 1px solid #ccc
 
-/* Markup generated by theme_tablesort_indicator().
+// Markup generated by theme_tablesort_indicator().
 td.active
   background-color: #ddd
 
-/* Center checkboxes inside table cell.
+// Center checkboxes inside table cell.
 
 td.checkbox,
 th.checkbox
   text-align: center
 
-/* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+// Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
 td.menu-disabled
   background: #ccc
 
-/**
+//
  * Autocomplete.
  *
  * @see autocomplete.js
 
-/* Suggestion list.
+// Suggestion list.
 #autocomplete .selected
   background: #0072b9
   color: #fff
 
-/**
+//
  * Collapsible fieldsets.
  *
  * @see collapse.js
@@ -656,24 +652,24 @@ td.menu-disabled
     @if $legacy-support-for-ie6 or $legacy-support-for-ie7
       *background-image: image-url("menu-expanded.png")
     background-position: 5px 65%
-    /* LTR
+    // LTR
     background-repeat: no-repeat
     padding-left: 15px
-    /* LTR
+    // LTR
   html.js .collapsed &
     background-image: inline-image("menu-collapsed.png")
-    /* LTR
+    // LTR
     @if $legacy-support-for-ie6 or $legacy-support-for-ie7
       *background-image: image-url("menu-collapsed.png")
-      /* LTR
+      // LTR
     background-position: 5px 50%
-    /* LTR
+    // LTR
   .summary
     color: #999
     font-size: 0.9em
     margin-left: 0.5em
 
-/**
+//
  * TableDrag behavior.
  *
  * @see tabledrag.js
@@ -686,14 +682,14 @@ tr.drag-previous
 .tabledrag-toggle-weight
   font-size: 0.9em
 
-/**
+//
  * TableSelect behavior.
  *
  * @see tableselect.js
 tr.selected td
   background: #ffc
 
-/**
+//
  * Progress bar.
  *
  * @see progress.js
@@ -712,8 +708,10 @@ tr.selected td
 // Nice Menus
 .nice-menu
   li
+    color: $col-page
     font-family: $lato
     font-size: 1.25em
+    font-weight: 400
 
     border: 0 none white
     a
@@ -725,5 +723,11 @@ tr.selected td
       padding-top: 9px
 
 #site-slogan,
+  font-family: $lato
+  font-size: 1.25em
+  font-weight: 400
+  color: $col-links
+
 #secondary-menu
   font-family: $lato
+

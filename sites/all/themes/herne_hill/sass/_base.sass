@@ -1,10 +1,41 @@
 
 
 body
-  background-color: #f3eee0
+  background-color: $col-page
 
-// p
+p, ul, ol
+  color: $col-content–darkest
+  font-family: $lato
+  font-weight: 400
 
-// h1, h2, h3, h4, h5, h6
+a
+  &:link
+    color: $col-links
+    border-bottom: 1px, $col-links-lightest
+  &:visited
+    color: $col-links-darkest
+  &:hover
+    color: $col-links
+    border-bottom: 1px, $col-links
+    background-color: $col-links-lightest
+    padding-bottom: 0.25em
+  &:active
+    color: $col-page
+    background-color: $col-links
+    border-bottom: 1px, $col-links-darkest
+    padding-bottom: 0.25em
 
-// 
+h1, h2, h3, h4, h5, h6
+  color: $col-content
+  font-family: $merriweather
+  font-weight: 900
+
+#page-title
+  color: $col-content–darker
+  font-family: $merriweather
+  font-weight: 300
+
+blockquote
+  color: $col-content–lighter
+  font-family: lato
+  font-weight: 900
