@@ -431,9 +431,9 @@ function openlocal_event_default_page_manager_pages() {
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'List',
+    'title' => 'Venues',
     'name' => 'main-menu',
-    'weight' => '0',
+    'weight' => '10',
     'parent' => array(
       'type' => 'normal',
       'title' => 'Venues',
