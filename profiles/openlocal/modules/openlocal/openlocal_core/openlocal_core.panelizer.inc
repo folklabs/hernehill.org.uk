@@ -28,7 +28,13 @@ function openlocal_core_panelizer_defaults() {
   $panelizer->css_class = '';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
-  $panelizer->extra = array();
+  $panelizer->extra = array(
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Places
+%node:title',
+    'panels_breadcrumbs_paths' => 'places',
+    'panels_breadcrumbs_home' => 1,
+  );
   $display = new panels_display();
   $display->layout = 'bryant_flipped_flipped';
   $display->layout_settings = array();
