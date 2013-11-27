@@ -493,7 +493,16 @@ function openlocal_group_panelizer_defaults() {
   $panelizer->css_class = '';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
-  $panelizer->extra = array();
+  $panelizer->extra = array(
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Groups
+%node:group-group
+Posts
+%node:title',
+    'panels_breadcrumbs_paths' => 'groups
+',
+    'panels_breadcrumbs_home' => 1,
+  );
   $display = new panels_display();
   $display->layout = 'flexible';
   $display->layout_settings = array();
@@ -546,7 +555,7 @@ function openlocal_group_panelizer_defaults() {
     $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-14'] = $pane;
     $display->panels['center'][1] = 'new-14';
@@ -573,7 +582,7 @@ function openlocal_group_panelizer_defaults() {
     $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-15'] = $pane;
     $display->panels['center'][2] = 'new-15';
@@ -598,7 +607,7 @@ function openlocal_group_panelizer_defaults() {
       'css_class' => 'link-wrapper',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-16'] = $pane;
     $display->panels['center'][3] = 'new-16';
