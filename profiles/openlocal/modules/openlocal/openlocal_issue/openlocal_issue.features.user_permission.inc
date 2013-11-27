@@ -59,13 +59,6 @@ function openlocal_issue_user_default_permissions() {
     'module' => 'panelizer',
   );
 
-  // Exported permission: administer panelizer taxonomy_term ol_issue_type defaults.
-  $permissions['administer panelizer taxonomy_term ol_issue_type defaults'] = array(
-    'name' => 'administer panelizer taxonomy_term ol_issue_type defaults',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: create ol_issue content.
   $permissions['create ol_issue content'] = array(
     'name' => 'create ol_issue content',
