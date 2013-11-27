@@ -14,14 +14,23 @@ function openlocal_issue_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "openlocal" ],
-      "REQUIRES" : [ "rules" ],
-      "ON" : { "node_update--ol_issue" : { "bundle" : "ol_issue" } },
+      "REQUIRES" : [ "rules", "comment" ],
+      "ON" : {
+        "node_update--ol_issue" : { "bundle" : "ol_issue" },
+        "comment_insert--comment_node_ol_issue" : { "bundle" : "comment_node_ol_issue" }
+      },
       "DO" : [
         { "mail" : {
             "to" : [ "node:author:mail" ],
             "subject" : "[site:name]: Issue update: [node:title]",
             "message" : "See [node:url].",
             "language" : [ "" ]
+          }
+        },
+        { "mail_to_users_of_role" : {
+            "roles" : { "value" : { "4" : "4" } },
+            "subject" : "[site:name]: Issue update: [node:title]",
+            "message" : "See [node:url]."
           }
         }
       ]
