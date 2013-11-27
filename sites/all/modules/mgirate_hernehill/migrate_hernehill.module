@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * THIS FILE INTENTIONALLY LEFT BLANK.
+ *
+ * Yes, there is no code in the .module file. Migrate operates almost entirely
+ * through classes, and by adding any files containing class definitions to the
+ * .info file, those files are automatically included only when the classes they
+ * contain are referenced. The one non-class piece you need to implement is
+ * hook_migrate_api(), but because .migrate.inc is registered using
+ * hook_hook_info, by defining your implementation of that hook in
+ * example.migrate.inc, it is automatically invoked only when needed.
+ */
+
+
+/*class RPForumMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+      parent::__construct($arguments);
+      // $this->dependencies[] = 'ExCategories';
+
+
+      // We're replacing the legacy field_published, which was a text field, with a new date field
+      // $this->addFieldMapping('field_publish_date', 'field_published');
+      $this->addFieldMapping('nid', 'nid');
+    // $this->addFieldMapping('uid', 'uid');
+      // ->sourceMigration($this->getMigrationName('User'))->defaultValue(1);
+    $this->addFieldMapping('taxonomy_forums', 'tid');
+      // ->sourceMigration($this->getMigrationName('Forums'))
+      // ->arguments(array('source_type' => 'tid'));
+//    $this->addFieldMapping('hostname', 'poster_ip');
+    // $this->addFieldMapping('status', 'status');
+    // $this->addFieldMapping('title', 'title');
+    // $this->addFieldMapping('body', 'post_text');
+    // $this->addFieldMapping('created', 'created');
+    // $this->addFieldMapping('changed', 'changed');
+    // $this->addFieldMapping('language')->defaultValue($this->defaultLanguage);
+    // $this->addFieldMapping('sticky', 'sticky');
+    // $this->addFieldMapping('totalcount','topic_views');
+      // Assigned terms are represented in Drupal 6 by their vid, migrate to the new term
+      // reference field, translating the tid from the legacy value.
+      // $this->addFieldMapping('field_article_category', '2')
+      //      ->sourceMigration('ExCategories');
+  }
+}
+*/
+
+
+/**
+* Implementation of hook_flush_caches().
+*
+* There needs to be some point at which your migrations are registered, or
+* previously-registered migrations are updated with changed arguments. We choose to
+* do this on a cache clear.
+*/
+// function migrate_rpforum_flush_caches() {
+//   dpm('migrate_rpforum_flush_caches');
+//   /**
+//     * Each migration being registered takes an array of arguments, some required
+//     * and some optional. Start with the common arguments required by all - the
+//     * source_connection (connection key, set up in settings.php, pointing to
+//     * the Drupal 6 database) and source_version (major version of Drupal).
+//     */
+//   $common_arguments = array(
+//       'source_connection' => 'd6.hernehill',
+//       'group_name' => 'RP Forum',
+//       'source_version' => 6,
+//   );
+
+//   $arguments = $common_arguments + array(
+//     'description' => t('Migration of article nodes from Drupal 6'),
+//     'machine_name' => 'rpforum_migration',
+//     'source_type' => 'rp_forum_post',
+//     'destination_type' => 'forum',
+//     // 'user_migration' => 'admin',  // Machine name of our user migration above
+//   );
+
+//   Migration::registerMigration('RPForumMigration', $arguments['machine_name'],
+//    $arguments);
+// }
+
+// /**
+//  * Implements hook_migrate_api().
+//  */
+// function migrate_rpforum_migrate_api() {
+//   $api = array(
+//     'api' => 2,
+//   );
+//   return $api;
+// }

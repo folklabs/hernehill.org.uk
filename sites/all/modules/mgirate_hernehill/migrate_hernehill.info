@@ -1,0 +1,11 @@
+name = Migrate hernehill
+description = Migrate hernehill content to D7.
+package = Migration
+core = 7.x
+
+dependencies[] = migrate
+;dependencies[] = migrate_ui
+;dependencies[] = migrate_d2d
+
+files[] = migrate_hernehill.migrate.inc
+files[] = node.inc
