@@ -69,7 +69,7 @@ function openlocal_news_field_default_field_instances() {
     'bundle' => 'openlocal_news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Choose the categories your article fits into. E.g, news about an event would go into the "Events" category.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -99,12 +99,9 @@ function openlocal_news_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
+      'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 5,
     ),
@@ -114,7 +111,7 @@ function openlocal_news_field_default_field_instances() {
   $field_instances['node-openlocal_news_article-field_featured_image'] = array(
     'bundle' => 'openlocal_news_article',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add an image if you can. The "Alt text" field is for a short description that is shown if the image cannot be loaded.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -227,7 +224,7 @@ function openlocal_news_field_default_field_instances() {
     'bundle' => 'openlocal_news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add tags related to this article, e.g. "lido". If a tag exists already select it when it appears as you type.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -273,8 +270,11 @@ function openlocal_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add an image if you can. The "Alt text" field is for a short description that is shown if the image cannot be loaded.');
+  t('Add tags related to this article, e.g. "lido". If a tag exists already select it when it appears as you type.');
   t('Body');
   t('Categories');
+  t('Choose the categories your article fits into. E.g, news about an event would go into the "Events" category.');
   t('Feature content');
   t('Primary Image');
   t('Tags');

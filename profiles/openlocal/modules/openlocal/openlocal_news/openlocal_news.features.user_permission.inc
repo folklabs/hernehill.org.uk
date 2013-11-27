@@ -63,6 +63,7 @@ function openlocal_news_user_default_permissions() {
   $permissions['create openlocal_news_article content'] = array(
     'name' => 'create openlocal_news_article content',
     'roles' => array(
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
     ),
     'module' => 'node',
@@ -99,6 +100,7 @@ function openlocal_news_user_default_permissions() {
   $permissions['edit own openlocal_news_article content'] = array(
     'name' => 'edit own openlocal_news_article content',
     'roles' => array(
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
     ),
     'module' => 'node',

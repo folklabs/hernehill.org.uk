@@ -173,7 +173,9 @@ function openlocal_group_user_default_permissions() {
   // Exported permission: delete terms in 8.
   $permissions['delete terms in 8'] = array(
     'name' => 'delete terms in 8',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -217,7 +219,9 @@ function openlocal_group_user_default_permissions() {
   // Exported permission: edit terms in 8.
   $permissions['edit terms in 8'] = array(
     'name' => 'edit terms in 8',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 

@@ -47,6 +47,17 @@ function openlocal_core_user_default_permissions() {
     'module' => 'comment',
   );
 
+  // Exported permission: access content.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: access content overview.
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
@@ -89,6 +100,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'access workbench',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'workbench',
@@ -364,6 +376,15 @@ function openlocal_core_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: bypass node access.
+  $permissions['bypass node access'] = array(
+    'name' => 'bypass node access',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: bypass workbench moderation.
   $permissions['bypass workbench moderation'] = array(
     'name' => 'bypass workbench moderation',
@@ -415,6 +436,16 @@ function openlocal_core_user_default_permissions() {
     'name' => 'delete own ol_place content',
     'roles' => array(
       'contributor' => 'contributor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete revisions.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -510,6 +541,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'moderate content from draft to needs_review',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'workbench_moderation',
@@ -543,6 +575,16 @@ function openlocal_core_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
+  );
+
+  // Exported permission: revert revisions.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: save draft.
@@ -632,6 +674,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'workbench_moderation',
@@ -642,6 +685,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'workbench_moderation',
@@ -662,6 +706,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'view moderation history',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'workbench_moderation',
@@ -672,9 +717,32 @@ function openlocal_core_user_default_permissions() {
     'name' => 'view moderation messages',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'workbench_moderation',
+  );
+
+  // Exported permission: view own unpublished content.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: view revisions.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: view the administration theme.
