@@ -1,53 +1,44 @@
 <?php
 
-/**
- * Import hierarchy of forums from RPForum to core forum.
- * Core forum uses vocabulary terms, under the Forums vocabulary, to
- * create the hierarchy of forums.
- */
-// class HHCommentMigration extends Migration {
-//   public function __construct($settings_machine_name) {
-//     parent::__construct($settings_machine_name);
-//     $this->description = t('Migrate Comment nodes.');
 
-//     /**
-//      * Get the bits we need, the sort order ensures root level parents appear
-//      * first and that we get the children in the correct order.
-//      */
-//     $this->source = new MigrateSourceSQL($this->query(), array(), NULL, array('map_joinable' => FALSE));
+class NewsMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    // Add any other data we're pulling into the source row, before the parent
+    // constructor.
+    // $this->sourceFields['f.field_audio_description'] = 'field_audio_description';
+    $this->sourceFields['News'] = 'Summary string from D6';
 
-//     // Built in destination for Taxonomy Terms
-//     $this->destination = new MigrateDestinationTerm('forums');
+    parent::__construct($arguments);
 
-//     $this->map = new MigrateSQLMap($this->machineName,
-//       array(
-//         'tid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'description' => 'Source term ID')
-//       ),
-//       MigrateDestinationTerm::getKeySchema()
-//     );
-//     // Cannot import tid as it must be created new during import
-//     $this->addFieldMapping('name', 'name');
-//     $this->addFieldMapping('description', 'description');
-//     $this->addFieldMapping('weight', 'weight');
-//     $this->addUnmigratedDestinations(array('parent', 'parent_name', 'path'));
-//   }
+    $this->addUnmigratedSources(array('field_audio_description'), t('Do Not Migrate'));
 
-//   /**
-//    * Method to return the query used in the import.
-//    * Can be called by sub classes and extended if needed.
-//    */
-//   protected function query() {
-//    return Database::getConnection('default', 'd6.hernehill')
-//      ->select('term_data', 'td')
-//      ->fields('td', array('tid', 'vid', 'name', 'description', 'weight'))
-//      ->condition('td.vid', 3);
-//   }
-// }
+    // $this->addFieldMapping('body', 'body')
+    //   ->arguments(array('format' => 'panopoly_html_text'));
+
+    $this->addFieldMapping('body:format')
+      ->defaultValue('panopoly_wysiwyg_text');
+    // $this->addFieldMapping('News', 'field_ol_tags');
+    $this->addFieldMapping('field_ol_tags', 8)
+         ->sourceMigration('News_terms')
+         ->arguments(array('source_type' => 'tid'));
+
+    // $this->addFieldMapping('field_image', 'field_lead_graphic')
+    //      ->sourceMigration('Image');
+    // // Note that we map migrated terms by the vocabulary ID.
+    // $this->addFieldMapping('field_countries', '1')
+    //      ->sourceMigration('Countries')
+    //      ->arguments(array('source_type' => 'tid'));
+    // $this->addFieldMapping('field_topics', '2')
+    //      ->sourceMigration('Topics')
+    //      ->arguments(array('source_type' => 'tid'));
+  }
+}
+
 
 /**
  * Import forum topics from RP Forum to core forum nodes.
  */
-class HHCommentNodeMigration extends Migration {
+class HHCommentNodeMigrationBase extends Migration {
   public function __construct($settings_machine_name, $dest_comment_type, $node_type) {
     parent::__construct($settings_machine_name);
     $this->destNodeType = $node_type;
@@ -105,12 +96,12 @@ class HHCommentNodeMigration extends Migration {
     // $query->condition('n2.type', 'event');
     // $query->condition('n2.type', 'news');
 
-    drush_print('foo');
-    $result = $query->execute();
-    foreach($result as $r) {
-      drush_print('r');
-      drush_print_r($r);
-    }
+    // drush_print('foo');
+    // $result = $query->execute();
+    // foreach($result as $r) {
+    //   drush_print('r');
+    //   drush_print_r($r);
+    // }
     // A hack to test importing just 1 node
     // $query->condition('rp.nid', 442);
 
@@ -118,26 +109,26 @@ class HHCommentNodeMigration extends Migration {
   }
 }
 
-class HHGroupCommentNodeMigration extends HHCommentNodeMigration {
-  public function __construct($settings_machine_name, $dest_comment_type, $node_type) {
+class HHGroupCommentNodeMigration extends HHCommentNodeMigrationBase {
+  public function __construct($settings_machine_name) {
     parent::__construct($settings_machine_name, 'comment_node_group', 'group');
   }
 }
 
-class HHCampaignsCommentNodeMigration extends HHCommentNodeMigration {
-  public function __construct($settings_machine_name, $dest_comment_type, $node_type) {
+class HHCampaignsCommentNodeMigration extends HHCommentNodeMigrationBase {
+  public function __construct($settings_machine_name) {
     parent::__construct($settings_machine_name, 'comment_node_campaigns', 'campaigns');
   }
 }
 
-class HHEventCommentNodeMigration extends HHCommentNodeMigration {
-  public function __construct($settings_machine_name, $dest_comment_type, $node_type) {
+class HHEventCommentNodeMigration extends HHCommentNodeMigrationBase {
+  public function __construct($settings_machine_name) {
     parent::__construct($settings_machine_name, 'comment_node_event', 'event');
   }
 }
 
-class HHNewsCommentNodeMigration extends HHCommentNodeMigration {
-  public function __construct($settings_machine_name, $dest_comment_type, $node_type) {
+class HHNewsCommentNodeMigration extends HHCommentNodeMigrationBase {
+  public function __construct($settings_machine_name) {
     parent::__construct($settings_machine_name, 'comment_node_news', 'news');
   }
 }

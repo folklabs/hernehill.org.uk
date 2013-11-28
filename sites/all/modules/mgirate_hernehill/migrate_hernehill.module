@@ -13,6 +13,64 @@
  * example.migrate.inc, it is automatically invoked only when needed.
  */
 
+function migrate_hernehill_flush_caches() {
+  migrate_hernehill_register_migrations();
+}
+
+function migrate_hernehill_register_migrations() {
+  $common_arguments = array(
+    'source_connection' => 'd6.hernehill',
+    'source_version' => 6,
+    'group_name' => 'hernehill_nodes',
+  );
+
+  // For vocabulary migrations, source_vocabulary and destination_vocabulary are
+  // required arguments. Note that in Drupal 6 vocabularies did not have machine
+  // names, so we use the vocabulary ID to uniquely identify them.
+  $vocabulary_arguments = array(
+    array(
+      'description' => t('Migration of Countries terms from Drupal 6'),
+      'machine_name' => 'News_terms',
+      'source_vocabulary' => '8',  // D6 Vocabulary ID
+      'destination_vocabulary' => 'ol_tags',
+    ),
+  );
+
+  // Again, we're using the migrate_d2d class directly.
+  // The soft dependency says that while we don't have to run the user migration
+  // first, we want to make sure it's listed first so the vocubularies are
+  // listed right ahead of the node migrations.
+  $common_vocabulary_arguments = $common_arguments + array(
+    'class_name' => 'DrupalTerm6Migration',
+    // 'soft_dependencies' => array('User'),
+  );
+  foreach ($vocabulary_arguments as $arguments) {
+    $arguments += $common_vocabulary_arguments;
+    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'],
+                                 $arguments);
+  }
+
+  $node_arguments = array(
+    array(
+      'class_name' => 'NewsMigration',
+      'description' => t('Migration of news nodes from Drupal 6'),
+      'machine_name' => 'News',
+      'source_type' => 'news',
+      'destination_type' => 'openlocal_news_article',
+    ),
+  );
+
+  $common_node_arguments = $common_arguments + array(
+    // 'user_migration' => 'User',
+  );
+
+  foreach ($node_arguments as $arguments) {
+    $arguments = array_merge_recursive($arguments, $common_node_arguments);
+    Migration::registerMigration($arguments['class_name'], $arguments['machine_name'],
+                                 $arguments);
+  }
+}
+
 
 /*class RPForumMigration extends DrupalNode6Migration {
   public function __construct(array $arguments) {
