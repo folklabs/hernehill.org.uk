@@ -89,7 +89,9 @@ function openlocal_event_user_default_permissions() {
   // Exported permission: delete terms in 6.
   $permissions['delete terms in 6'] = array(
     'name' => 'delete terms in 6',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -114,7 +116,9 @@ function openlocal_event_user_default_permissions() {
   // Exported permission: edit terms in 6.
   $permissions['edit terms in 6'] = array(
     'name' => 'edit terms in 6',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 

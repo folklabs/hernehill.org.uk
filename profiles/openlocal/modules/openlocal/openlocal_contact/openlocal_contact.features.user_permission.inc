@@ -15,6 +15,8 @@ function openlocal_contact_user_default_permissions() {
     'name' => 'access site-wide contact form',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'contact',
   );
@@ -24,6 +26,7 @@ function openlocal_contact_user_default_permissions() {
     'name' => 'access user contact forms',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'contact',
   );
@@ -182,6 +185,33 @@ function openlocal_contact_user_default_permissions() {
   // Exported permission: mass contact send messages.
   $permissions['mass contact send messages'] = array(
     'name' => 'mass contact send messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'mass_contact',
+  );
+
+  // Exported permission: mass contact send to users in the Content authors category.
+  $permissions['mass contact send to users in the Content authors category'] = array(
+    'name' => 'mass contact send to users in the Content authors category',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'mass_contact',
+  );
+
+  // Exported permission: mass contact send to users in the Group managers category.
+  $permissions['mass contact send to users in the Group managers category'] = array(
+    'name' => 'mass contact send to users in the Group managers category',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'mass_contact',
+  );
+
+  // Exported permission: mass contact send to users in the Traders category.
+  $permissions['mass contact send to users in the Traders category'] = array(
+    'name' => 'mass contact send to users in the Traders category',
     'roles' => array(
       'administrator' => 'administrator',
     ),

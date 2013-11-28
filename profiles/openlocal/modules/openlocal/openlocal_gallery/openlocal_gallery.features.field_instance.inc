@@ -48,7 +48,7 @@ function openlocal_gallery_field_default_field_instances() {
     'bundle' => 'ol_gallery',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Short text shown in lists and teaser views.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -90,6 +90,56 @@ function openlocal_gallery_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-ol_gallery-field_ol_details'
+  $field_instances['node-ol_gallery-field_ol_details'] = array(
+    'bundle' => 'ol_gallery',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_details',
+    'label' => 'Details',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
     ),
   );
 
@@ -151,7 +201,7 @@ function openlocal_gallery_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -200,7 +250,7 @@ function openlocal_gallery_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -265,7 +315,7 @@ function openlocal_gallery_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -273,8 +323,10 @@ function openlocal_gallery_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Comment');
   t('Description');
+  t('Details');
   t('Groups audience');
   t('Images');
+  t('Short text shown in lists and teaser views.');
   t('Tags');
 
   return $field_instances;

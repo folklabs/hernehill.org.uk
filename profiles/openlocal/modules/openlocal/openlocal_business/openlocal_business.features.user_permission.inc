@@ -90,7 +90,9 @@ function openlocal_business_user_default_permissions() {
   // Exported permission: delete terms in 4.
   $permissions['delete terms in 4'] = array(
     'name' => 'delete terms in 4',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -193,7 +195,9 @@ function openlocal_business_user_default_permissions() {
   // Exported permission: edit terms in 4.
   $permissions['edit terms in 4'] = array(
     'name' => 'edit terms in 4',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 

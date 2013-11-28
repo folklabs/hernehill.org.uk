@@ -162,10 +162,10 @@ function openlocal_business_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '18',
+          'weight' => '17',
         ),
         'metatags' => array(
-          'weight' => '19',
+          'weight' => '18',
         ),
       ),
       'display' => array(),

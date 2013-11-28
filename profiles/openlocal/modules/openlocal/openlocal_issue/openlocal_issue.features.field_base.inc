@@ -44,31 +44,23 @@ function openlocal_issue_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ol_issue_type',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
+    'foreign keys' => array(),
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'ol_issue_type',
-          'parent' => 0,
-        ),
+        'website' => 'Website problem',
+        'support' => 'Support request',
       ),
+      'allowed_values_function' => '',
     ),
     'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'type' => 'list_text',
   );
 
   return $field_bases;

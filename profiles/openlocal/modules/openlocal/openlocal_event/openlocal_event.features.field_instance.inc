@@ -104,7 +104,7 @@ function openlocal_event_field_default_field_instances() {
     'bundle' => 'ol_event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A short teaser shown on event summaries or lists.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -568,6 +568,7 @@ function openlocal_event_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A short teaser shown on event summaries or lists.');
   t('Category');
   t('Comment');
   t('Contact');

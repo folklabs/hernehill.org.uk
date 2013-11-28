@@ -26,6 +26,7 @@ features[features_api][] = api:2
 features[field_base][] = field_ol_gallery_images
 features[field_instance][] = comment-comment_node_ol_gallery-comment_body
 features[field_instance][] = node-ol_gallery-field_ol_description
+features[field_instance][] = node-ol_gallery-field_ol_details
 features[field_instance][] = node-ol_gallery-field_ol_gallery_images
 features[field_instance][] = node-ol_gallery-field_ol_tags
 features[field_instance][] = node-ol_gallery-og_group_ref

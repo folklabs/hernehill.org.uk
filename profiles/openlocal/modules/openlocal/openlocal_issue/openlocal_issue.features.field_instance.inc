@@ -112,14 +112,14 @@ function openlocal_issue_field_default_field_instances() {
     'bundle' => 'ol_issue',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Choose what type of issue this is.',
+    'description' => 'Choose what type of issue this relates to.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'list_default',
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'above',
@@ -152,7 +152,7 @@ function openlocal_issue_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Choose what type of issue this is.');
+  t('Choose what type of issue this relates to.');
   t('Describe the issue, giving as much revelant information as possible.');
   t('Details');
   t('Leave this as Open when creating a new issue. Site managers may set it to "Need more information" if they have questions. Set it to "Closed" if your issue has been resolved.');
