@@ -592,6 +592,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'save draft',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
       'editor' => 'editor',
     ),

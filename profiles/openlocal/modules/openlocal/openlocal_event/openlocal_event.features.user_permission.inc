@@ -63,6 +63,7 @@ function openlocal_event_user_default_permissions() {
   $permissions['create ol_event content'] = array(
     'name' => 'create ol_event content',
     'roles' => array(
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
     ),
     'module' => 'node',
@@ -108,6 +109,7 @@ function openlocal_event_user_default_permissions() {
   $permissions['edit own ol_event content'] = array(
     'name' => 'edit own ol_event content',
     'roles' => array(
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
     ),
     'module' => 'node',
