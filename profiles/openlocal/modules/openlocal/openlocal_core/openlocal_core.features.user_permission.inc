@@ -664,6 +664,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'use text format panopoly_wysiwyg_text',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
       'contributor' => 'contributor',
       'editor' => 'editor',
     ),
