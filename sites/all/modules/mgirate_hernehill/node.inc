@@ -6,33 +6,139 @@ class NewsMigration extends DrupalNode6Migration {
     // Add any other data we're pulling into the source row, before the parent
     // constructor.
     // $this->sourceFields['f.field_audio_description'] = 'field_audio_description';
-    $this->sourceFields['News'] = 'Summary string from D6';
+    // $this->sourceFields['News'] = 'Summary string from D6';
 
     parent::__construct($arguments);
 
     $this->addUnmigratedSources(array('field_audio_description'), t('Do Not Migrate'));
 
-    // $this->addFieldMapping('body', 'body')
-    //   ->arguments(array('format' => 'panopoly_html_text'));
-
     $this->addFieldMapping('body:format')
       ->defaultValue('panopoly_wysiwyg_text');
-    // $this->addFieldMapping('News', 'field_ol_tags');
     $this->addFieldMapping('field_ol_tags', 8)
          ->sourceMigration('News_terms')
          ->arguments(array('source_type' => 'tid'));
+  }
+}
 
-    // $this->addFieldMapping('field_image', 'field_lead_graphic')
-    //      ->sourceMigration('Image');
-    // // Note that we map migrated terms by the vocabulary ID.
-    // $this->addFieldMapping('field_countries', '1')
-    //      ->sourceMigration('Countries')
-    //      ->arguments(array('source_type' => 'tid'));
-    // $this->addFieldMapping('field_topics', '2')
-    //      ->sourceMigration('Topics')
+class CampaignsMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    // $this->sourceFields['News'] = 'Summary string from D6';
+
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_ol_description', 'field_overview');
+    $this->addFieldMapping('field_ol_details', 'body');
+    $this->addFieldMapping('field_ol_details:format')
+      ->defaultValue('panopoly_wysiwyg_text');
+    $this->addFieldMapping('field_ol_group_campaign')
+      ->defaultValue('1');
+    // $this->addFieldMapping('field_ol_tags', 8)
+    //      ->sourceMigration('News_terms')
     //      ->arguments(array('source_type' => 'tid'));
   }
 }
+
+class EventMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_ol_description', 'field_eventteaser');
+    $this->addFieldMapping('field_ol_details', 'body');
+    $this->addFieldMapping('field_ol_event_date', 'field_eventdate');
+    $this->addFieldMapping('field_ol_wheelchair_accessible', 'field_wheelchair')
+      ->callbacks(array($this, 'convertBoolean'));
+    // $this->addFieldMapping('', 'field_location');
+
+    $this->addFieldMapping('field_ol_details:format')
+      ->defaultValue('panopoly_wysiwyg_text');
+    // $this->addFieldMapping('field_ol_tags', 8)
+    //      ->sourceMigration('News_terms')
+    //      ->arguments(array('source_type' => 'tid'));
+  }
+
+  protected function convertBoolean($value) {
+    // drush_print($value);
+    $value = ($value == "Yes") ? 1 : 0;
+    return $value;
+  }
+}
+
+class GalleryMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    // $this->sourceFields['News'] = 'Summary string from D6';
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_ol_details', 'body');
+    $this->addFieldMapping('field_ol_details:format')
+      ->defaultValue('panopoly_wysiwyg_text');
+    // $this->addFieldMapping('field_ol_tags', 8)
+    //      ->sourceMigration('News_terms')
+    //      ->arguments(array('source_type' => 'tid'));
+  }
+}
+
+class GroupMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    // $this->sourceFields['News'] = 'Summary string from D6';
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_ol_description', 'field_overview');
+    $this->addFieldMapping('field_ol_details', 'body');
+    $this->addFieldMapping('field_ol_details:format')
+      ->defaultValue('panopoly_wysiwyg_text');
+    // $this->addFieldMapping('field_ol_tags', 8)
+    //      ->sourceMigration('News_terms')
+    //      ->arguments(array('source_type' => 'tid'));
+  }
+}
+
+class ServiceMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    // $this->sourceFields['News'] = 'Summary string from D6';
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_ol_description', 'field_tags');
+    $this->addFieldMapping('field_ol_details', 'body')
+      ->callbacks(array($this, 'stripBlankLines'));
+    $this->addFieldMapping('field_ol_business_website', 'field_website');
+    $this->addFieldMapping('field_ol_business_email', 'field_service_email');
+    $this->addFieldMapping('field_ol_business_telephone', 'field_telephonenumber');
+    $this->addFieldMapping('field_ol_business_opening_hours', 'field_openinghours');
+    // $this->addFieldMapping('field_ol_address', 'field_address');
+    $this->addFieldMapping('field_ol_business_twitter', 'field_servicetwitter');
+
+    $this->addFieldMapping('field_ol_details:format')
+      ->defaultValue('panopoly_wysiwyg_text');
+    // $this->addFieldMapping('field_ol_local_business_category', 8)
+    //      ->sourceMigration('News_terms')
+    //      ->arguments(array('source_type' => 'tid'));
+    $this->addFieldMapping('field_ol_business_tags', 4)
+         ->sourceMigration('service_tags_terms')
+         ->arguments(array('source_type' => 'tid'));
+  }
+
+  protected function stripBlankLines($value) {
+    $value = preg_replace('#<p>\&nbsp;</p>#', '', $value);
+    return $value;
+  }
+}
+
+class GroupPostMigration extends DrupalNode6Migration {
+  public function __construct(array $arguments) {
+    // $this->sourceFields['News'] = 'Summary string from D6';
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('field_ol_details', 'body');
+    $this->addFieldMapping('body:format')
+      ->defaultValue('panopoly_wysiwyg_text');
+    // $this->addFieldMapping('field_ol_tags', 8)
+    //      ->sourceMigration('News_terms')
+    //      ->arguments(array('source_type' => 'tid'));
+  }
+}
+
+
+
 
 
 /**
@@ -57,6 +163,9 @@ class HHCommentNodeMigrationBase extends Migration {
       ),
       MigrateDestinationNode::getKeySchema()
     );
+
+    $this->addFieldMapping('nid', 'nc.nid')
+      ->sourceMigration('NewsMigration');
 
     $this->addFieldMapping('uid', 'uid');
     // $this->addFieldMapping('taxonomy_forums', 'tid') //->defaultValue(30)

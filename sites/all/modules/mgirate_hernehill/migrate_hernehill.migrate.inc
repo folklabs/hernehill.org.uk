@@ -7,6 +7,7 @@
  * loaded - thus, you don't need to implement your hook in the .module file.
  */
 
+
 /*
  * You must implement hook_migrate_api(), setting the API level to 2, if you are
  * implementing any migration classes. If your migration application is static -
@@ -41,7 +42,7 @@ function migrate_hernehill_migrate_api() {
     // common to all migrations in the group.
     'groups' => array(
       'hernehill' => array(
-        'title' => t('hernehill migration'),
+        'title' => t('hernehill Comment nodes'),
       ),
     ),
 

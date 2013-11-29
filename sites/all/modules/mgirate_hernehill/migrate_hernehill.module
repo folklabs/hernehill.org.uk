@@ -34,6 +34,12 @@ function migrate_hernehill_register_migrations() {
       'source_vocabulary' => '8',  // D6 Vocabulary ID
       'destination_vocabulary' => 'ol_tags',
     ),
+    array(
+      'description' => t('Migration of service tags terms from Drupal 6'),
+      'machine_name' => 'service_tags_terms',
+      'source_vocabulary' => '4',  // D6 Vocabulary ID
+      'destination_vocabulary' => 'ol_business_tags',
+    ),
   );
 
   // Again, we're using the migrate_d2d class directly.
@@ -57,6 +63,48 @@ function migrate_hernehill_register_migrations() {
       'machine_name' => 'News',
       'source_type' => 'news',
       'destination_type' => 'openlocal_news_article',
+    ),
+    array(
+      'class_name' => 'CampaignsMigration',
+      'description' => t('Migration of campaign nodes from Drupal 6'),
+      'machine_name' => 'Campaigns',
+      'source_type' => 'campaigns',
+      'destination_type' => 'ol_group',
+    ),
+    array(
+      'class_name' => 'EventMigration',
+      'description' => t('Migration of event nodes from Drupal 6'),
+      'machine_name' => 'Event',
+      'source_type' => 'event',
+      'destination_type' => 'ol_event',
+    ),
+    array(
+      'class_name' => 'GalleryMigration',
+      'description' => t('Migration of  nodes from Drupal 6'),
+      'machine_name' => 'Gallery',
+      'source_type' => 'gallery',
+      'destination_type' => 'ol_gallery',
+    ),
+    array(
+      'class_name' => 'GroupMigration',
+      'description' => t('Migration of  nodes from Drupal 6'),
+      'machine_name' => 'Group',
+      'source_type' => 'group',
+      'destination_type' => 'ol_group',
+    ),
+    array(
+      'class_name' => 'ServiceMigration',
+      'description' => t('Migration of  nodes from Drupal 6'),
+      'machine_name' => 'Service',
+      'source_type' => 'localservice',
+      'destination_type' => 'ol_business',
+    ),
+    array(
+      'class_name' => 'GroupPostMigration',
+      'description' => t('Migration of  nodes from Drupal 6'),
+      'machine_name' => 'GroupPost',
+      'source_type' => 'grouppost',
+      'destination_type' => 'ol_group_post',
     ),
   );
 
