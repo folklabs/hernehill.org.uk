@@ -21,8 +21,42 @@ function migrate_hernehill_register_migrations() {
   $common_arguments = array(
     'source_connection' => 'd6.hernehill',
     'source_version' => 6,
-    'group_name' => 'hernehill_nodes',
+    'group_name' => 'hernehill',
   );
+
+  // Roles
+  $role_arguments = $common_arguments + array(
+    'machine_name' => 'role',
+    'description' => t('Import Drupal 6 roles'),
+    'role_mappings' => array(
+      'Blogger' => 'authenticated user',
+      'Campaign administrator' => 'group manager',
+      'Forum Owner' => 'editor',
+      'General Administrator' => 'editor',
+      'News Administrator' => 'editor',
+      'Group Administrator' => 'group manager',
+      'Event manager' => 'contributor',
+      'Services manager' => 'trader',
+      'Website Administrator' => 'administrator',
+      'Comment' => 'authenticated user',
+      'Lido Temperature' => 'authenticated user',
+      'Mapping' => 'authenticated user',
+      'Unverified User (requires email confirmation)' => 'anonymous user',
+    ),
+  );
+  Migration::registerMigration('DrupalRole6Migration',
+    $role_arguments['machine_name'], $role_arguments);
+
+  // Users
+  $user_arguments = $common_arguments + array(
+    'description' => t('Migration of users from Drupal 6'),
+    'machine_name' => 'user',
+    'role_migration' => 'role',
+  );
+
+  // We just use the migrate_d2d D6 migration class as-is.
+  Migration::registerMigration('UserMigration', $user_arguments['machine_name'],
+                               $user_arguments);
 
   // For vocabulary migrations, source_vocabulary and destination_vocabulary are
   // required arguments. Note that in Drupal 6 vocabularies did not have machine
@@ -30,7 +64,7 @@ function migrate_hernehill_register_migrations() {
   $vocabulary_arguments = array(
     array(
       'description' => t('Migration of Countries terms from Drupal 6'),
-      'machine_name' => 'News_terms',
+      'machine_name' => 'news_terms',
       'source_vocabulary' => '8',  // D6 Vocabulary ID
       'destination_vocabulary' => 'ol_tags',
     ),
@@ -60,49 +94,49 @@ function migrate_hernehill_register_migrations() {
     array(
       'class_name' => 'NewsMigration',
       'description' => t('Migration of news nodes from Drupal 6'),
-      'machine_name' => 'News',
+      'machine_name' => 'news',
       'source_type' => 'news',
       'destination_type' => 'openlocal_news_article',
     ),
     array(
       'class_name' => 'CampaignsMigration',
       'description' => t('Migration of campaign nodes from Drupal 6'),
-      'machine_name' => 'Campaigns',
+      'machine_name' => 'campaigns',
       'source_type' => 'campaigns',
       'destination_type' => 'ol_group',
     ),
     array(
       'class_name' => 'EventMigration',
       'description' => t('Migration of event nodes from Drupal 6'),
-      'machine_name' => 'Event',
+      'machine_name' => 'event',
       'source_type' => 'event',
       'destination_type' => 'ol_event',
     ),
     array(
       'class_name' => 'GalleryMigration',
       'description' => t('Migration of  nodes from Drupal 6'),
-      'machine_name' => 'Gallery',
+      'machine_name' => 'gallery',
       'source_type' => 'gallery',
       'destination_type' => 'ol_gallery',
     ),
     array(
       'class_name' => 'GroupMigration',
       'description' => t('Migration of  nodes from Drupal 6'),
-      'machine_name' => 'Group',
+      'machine_name' => 'group',
       'source_type' => 'group',
       'destination_type' => 'ol_group',
     ),
     array(
       'class_name' => 'ServiceMigration',
       'description' => t('Migration of  nodes from Drupal 6'),
-      'machine_name' => 'Service',
+      'machine_name' => 'service',
       'source_type' => 'localservice',
       'destination_type' => 'ol_business',
     ),
     array(
       'class_name' => 'GroupPostMigration',
       'description' => t('Migration of  nodes from Drupal 6'),
-      'machine_name' => 'GroupPost',
+      'machine_name' => 'grouppost',
       'source_type' => 'grouppost',
       'destination_type' => 'ol_group_post',
     ),

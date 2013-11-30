@@ -41,7 +41,7 @@ function migrate_hernehill_migrate_api() {
     // UI. You may also have additional arguments for any other data which is
     // common to all migrations in the group.
     'groups' => array(
-      'hernehill' => array(
+      'hernehill_comments' => array(
         'title' => t('hernehill Comment nodes'),
       ),
     ),
@@ -53,19 +53,19 @@ function migrate_hernehill_migrate_api() {
     'migrations' => array(
       'HHGroupCommentNode' => array(
         'class_name' => 'HHGroupCommentNodeMigration',
-        'group_name' => 'hernehill',
+        'group_name' => 'hernehill_comments',
       ),
       'HHCampaignsCommentNode' => array(
         'class_name' => 'HHCampaignsCommentNodeMigration',
-        'group_name' => 'hernehill',
+        'group_name' => 'hernehill_comments',
       ),
       'HHEventCommentNode' => array(
         'class_name' => 'HHEventCommentNodeMigration',
-        'group_name' => 'hernehill',
+        'group_name' => 'hernehill_comments',
       ),
       'HHNewsCommentNode' => array(
         'class_name' => 'HHNewsCommentNodeMigration',
-        'group_name' => 'hernehill',
+        'group_name' => 'hernehill_comments',
       ),
     ),
   );

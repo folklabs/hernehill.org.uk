@@ -1,6 +1,16 @@
 <?php
 
 
+class UserMigration extends DrupalUser6Migration {
+  public function __construct(array $arguments) {
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('roles', 'roles')
+      ->sourceMigration('role');
+  }
+}
+
+
 class NewsMigration extends DrupalNode6Migration {
   public function __construct(array $arguments) {
     // Add any other data we're pulling into the source row, before the parent
@@ -164,22 +174,44 @@ class HHCommentNodeMigrationBase extends Migration {
       MigrateDestinationNode::getKeySchema()
     );
 
-    $this->addFieldMapping('nid', 'nc.nid')
-      ->sourceMigration('NewsMigration');
+    $this->addFieldMapping('nid', 'n2_nid')
+      ->sourceMigration($node_type);
 
+    // TODO: check for User migration mapping
     $this->addFieldMapping('uid', 'uid');
+    // $this->addFieldMapping('cid', 'cid');
     // $this->addFieldMapping('taxonomy_forums', 'tid') //->defaultValue(30)
     //   ->sourceMigration('RPForumForums')
     //   ->arguments(array('source_type' => 'tid'));
-    $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'body')
+    $this->addFieldMapping('subject', 'title')
+      ->callbacks(array($this, 'trimTitle'));
+    $this->addFieldMapping('comment_body', 'body')
+      // ->callbacks(array($this, 'checkBody'));
+      ->callbacks(array($this, 'stripBlankLines'))
       ->arguments(array('format' => 'panopoly_html_text'));
+    $this->addFieldMapping('comment_body_format')
+      ->defaultValue('panopoly_wysiwyg_text');
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'changed');
 
     // Unmapped destination fields
     $this->addUnmigratedDestinations(array('is_new', 'promote',
       'revision', 'language', 'sticky', 'revision_uid', 'path','tnid'));
+  }
+
+  protected function stripBlankLines($value) {
+    $value = preg_replace('#<p>\&nbsp;</p>#', '', $value);
+    return $value;
+  }
+
+  protected function checkBody($value) {
+    // drush_print($value);
+    return $value;
+  }
+
+  protected function trimTitle($value) {
+    $value = drupal_substr($value, 0, 64);
+    return $value;
   }
 
   /**
@@ -191,10 +223,12 @@ class HHCommentNodeMigrationBase extends Migration {
 
     $query->leftJoin('node_comments', 'nc', 'n.nid = nc.cid');
     $query->leftJoin('node', 'n2', 'nc.nid = n2.nid');
+    $query->leftJoin('node_revisions', 'nr', 'n.nid = nr.nid');
 
     $query->fields('n', array('nid', 'title', 'uid', 'type', 'created', 'changed'));
     $query->fields('n2', array('nid', 'title', 'uid', 'type', 'created', 'changed'));
     $query->fields('nc', array('nid', 'cid'));
+    $query->fields('nr', array('nid', 'body'));
     // $query->fields('tn', array('nid', 'tid'));
     // $query->fields('rp', array('vid','nid','field_body2_value','field_parent_node_value'));
     $query->condition('n.type', 'comment');
@@ -205,14 +239,12 @@ class HHCommentNodeMigrationBase extends Migration {
     // $query->condition('n2.type', 'event');
     // $query->condition('n2.type', 'news');
 
-    // drush_print('foo');
-    // $result = $query->execute();
-    // foreach($result as $r) {
-    //   drush_print('r');
-    //   drush_print_r($r);
-    // }
-    // A hack to test importing just 1 node
-    // $query->condition('rp.nid', 442);
+    drush_print('parent nid: '  );
+    $result = $query->execute();
+    foreach($result as $r) {
+      // drush_print('r');
+      // drush_print_r($r);
+    }
 
     return $query;
   }
@@ -238,13 +270,68 @@ class HHEventCommentNodeMigration extends HHCommentNodeMigrationBase {
 
 class HHNewsCommentNodeMigration extends HHCommentNodeMigrationBase {
   public function __construct($settings_machine_name) {
-    parent::__construct($settings_machine_name, 'comment_node_news', 'news');
+    parent::__construct($settings_machine_name, 'comment_node_openlocal_news_article', 'news');
   }
 }
 
 // class HHBlogCommentNodeMigration extends Migration {
 //   public function __construct($settings_machine_name, $dest_comment_type, $node_type) {
 //     parent::__construct($settings_machine_name, 'comment_node_blog', 'blog');
+//   }
+// }
+
+
+// class GalleryMigration extends Migration {
+//   public function __construct($settings_machine_name) {
+//     parent::__construct($settings_machine_name);
+//     $this->description = t('Migrate individual forum topics from RP Forum.');
+//     $this->source = new MigrateSourceSQL($this->query(), array(), NULL, array('map_joinable' => FALSE));
+
+//     $this->destination = new MigrateDestinationNode('ol_gallery');
+
+//     $this->map = new MigrateSQLMap($this->machineName,
+//       array(
+//         'nid' => array(
+//           'type' => 'int',
+//           'unsigned' => TRUE,
+//           'not null' => TRUE,
+//         )
+//       ),
+//       MigrateDestinationNode::getKeySchema()
+//     );
+
+//     $this->addFieldMapping('uid', 'uid');
+//     // $this->addFieldMapping('taxonomy_forums', 'tid') //->defaultValue(30)
+//     //   ->sourceMigration('RPForumForums')
+//     //   ->arguments(array('source_type' => 'tid'));
+//     $this->addFieldMapping('title', 'title');
+//     $this->addFieldMapping('field_ol_details', 'field_body2_value')
+//       ->arguments(array('format' => 'panopoly_html_text'));
+//     $this->addFieldMapping('created', 'created');
+//     $this->addFieldMapping('changed', 'changed');
+
+//     // Unmapped destination fields
+//     $this->addUnmigratedDestinations(array('is_new', 'promote',
+//       'revision', 'language', 'sticky', 'revision_uid', 'path','tnid'));
+//   }
+
+//   /**
+//    * Method to return the query used in the import.
+//    * Can be called by sub classes and extended if needed.
+//    */
+//   protected function query() {
+//     $query = Database::getConnection('default', 'd6.hernehill')->select('content_type_rp_forum_post', 'rp');
+//     $query->leftJoin('node', 'n', 'rp.nid = n.nid');
+//     $query->leftJoin('term_node', 'tn', 'tn.nid = n.nid');
+//     $query->fields('n', array('nid', 'title', 'uid', 'created', 'changed'));
+//     $query->fields('tn', array('nid', 'tid'));
+//     $query->fields('rp', array('vid','nid','field_body2_value','field_parent_node_value'));
+//     $query->condition('field_parent_node_value', -1);
+
+//     // A hack to test importing just 1 node
+//     // $query->condition('rp.nid', 442);
+
+//     return $query;
 //   }
 // }
 
