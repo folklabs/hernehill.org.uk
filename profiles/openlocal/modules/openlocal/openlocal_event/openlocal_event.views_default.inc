@@ -696,7 +696,7 @@ function openlocal_event_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_event_venues';
   $view->description = 'Local venues for events.';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Event venues';
   $view->core = 7;
@@ -815,6 +815,13 @@ function openlocal_event_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['reduce'] = TRUE;
+  /* Filter criterion: Content: Event venue (field_ol_event_venue) */
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['id'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['table'] = 'field_data_field_ol_event_venue';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['field'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['value'] = array(
+    1 => '1',
+  );
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: Map */
@@ -883,6 +890,13 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'ol_business' => 'ol_business',
     'ol_place' => 'ol_place',
+  );
+  /* Filter criterion: Content: Event venue (field_ol_event_venue) */
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['id'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['table'] = 'field_data_field_ol_event_venue';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['field'] = 'field_ol_event_venue_value';
+  $handler->display->display_options['filters']['field_ol_event_venue_value']['value'] = array(
+    1 => '1',
   );
   $export['openlocal_event_venues'] = $view;
 
