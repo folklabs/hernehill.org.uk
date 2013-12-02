@@ -12,9 +12,18 @@ function openlocal_news_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'OpenLocal News actions';
-  $fe_block_boxes->format = 'panopoly_wysiwyg_text';
+  $fe_block_boxes->format = 'panopoly_html_text';
   $fe_block_boxes->machine_name = 'ol_news_actions';
-  $fe_block_boxes->body = '<p><a href="node/add/openlocal-news-article">Add news article</a></p>';
+  $fe_block_boxes->body = '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<span><a href="node/add/openlocal-news-article"><i class="fa fa-plus"></i> add news article</a></span>
+</div>
+
+<div>
+<a href="" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating articles</a>
+</div>
+</div>';
 
   $export['ol_news_actions'] = $fe_block_boxes;
 
