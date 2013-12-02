@@ -10,6 +10,21 @@ class UserMigration extends DrupalUser6Migration {
   }
 }
 
+class NewsTermsMigration extends DrupalTerm6Migration {
+  public function __construct(array $arguments) {
+    parent::__construct($arguments);
+
+    $this->addFieldMapping('path', 'path')
+      ->callbacks(array($this, 'checkPath'));
+  }
+
+  protected function checkPath($value) {
+    // drush_print($value);
+    $value = preg_replace('#category/news/#', 'taxonomy/ol_tags/', $value);
+    // drush_print($value);
+    return $value;
+  }
+}
 
 class NewsMigration extends DrupalNode6Migration {
   public function __construct(array $arguments) {

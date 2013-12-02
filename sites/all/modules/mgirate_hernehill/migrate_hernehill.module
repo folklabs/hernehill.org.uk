@@ -67,12 +67,14 @@ function migrate_hernehill_register_migrations() {
       'machine_name' => 'news_terms',
       'source_vocabulary' => '8',  // D6 Vocabulary ID
       'destination_vocabulary' => 'ol_tags',
+      'class_name' => 'NewsTermsMigration',
     ),
     array(
       'description' => t('Migration of service tags terms from Drupal 6'),
       'machine_name' => 'service_tags_terms',
       'source_vocabulary' => '4',  // D6 Vocabulary ID
       'destination_vocabulary' => 'ol_business_tags',
+      'class_name' => 'DrupalTerm6Migration',
     ),
   );
 
@@ -81,7 +83,7 @@ function migrate_hernehill_register_migrations() {
   // first, we want to make sure it's listed first so the vocubularies are
   // listed right ahead of the node migrations.
   $common_vocabulary_arguments = $common_arguments + array(
-    'class_name' => 'DrupalTerm6Migration',
+    // 'class_name' => 'DrupalTerm6Migration',
     // 'soft_dependencies' => array('User'),
   );
   foreach ($vocabulary_arguments as $arguments) {
