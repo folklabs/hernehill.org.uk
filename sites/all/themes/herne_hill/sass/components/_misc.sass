@@ -143,14 +143,19 @@
 //
  // Breadcrumb navigation.
 .breadcrumb
+  background-color: $col-content–lightest
+  margin: 0px -10px
+  font-size: 0.85em
   ol
+    padding: 0 20px
     margin: 0
-    padding: 0
   li
     display: inline
     list-style-type: none
     margin: 0
     padding: 0
+    a
+      text-decoration: none
 
 //
  // Titles.
@@ -721,6 +726,25 @@ tr.selected td
       padding-left: 10px
       padding-right: 10px
       padding-top: 9px
+
+#navigation
+  .nice-menu-down
+    li
+      li
+        border: solid 1px #000
+        background-color: $col-page
+        font-size: 1em
+        margin-top: 12px
+        // padding: 3px 5px
+        a
+          color: $col-links-darkest
+          padding: 7px 7px
+        a:hover, a:active
+          background-color: $col-links-lightest
+          background-image: none
+      li:hover
+        background-color: $col-links-lightest
+
 
 #site-slogan,
   font-family: $lato
