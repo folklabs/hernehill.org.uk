@@ -1530,6 +1530,20 @@ tr.selected td {
   background-color: #e3dcd1;
 }
 
+/* line 37, ../sass/components/_actions.sass */
+.field-name-field-ol-event-category,
+.field-name-field-ol-event-date {
+  background-color: #e3dcd1;
+  padding: 3px 0 6px 2px;
+  border-bottom: solid 1px white;
+}
+/* line 43, ../sass/components/_actions.sass */
+.field-name-field-ol-event-category .field-label,
+.field-name-field-ol-event-date .field-label {
+  width: 80px;
+  font-size: 0.8em;
+}
+
 /* line 3, ../sass/components/_pane-openlocal-alert-panel-pane-1.sass */
 .pane-openlocal-alert-panel-pane-1 {
   background-color: #e3dcd1;
