@@ -13,7 +13,7 @@ function openlocal_group_user_default_roles() {
   // Exported role: group manager.
   $roles['group manager'] = array(
     'name' => 'group manager',
-    'weight' => 13,
+    'weight' => 64,
   );
 
   return $roles;

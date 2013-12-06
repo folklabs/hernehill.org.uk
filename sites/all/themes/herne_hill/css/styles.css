@@ -1544,6 +1544,26 @@ tr.selected td {
   font-size: 0.8em;
 }
 
+/* line 48, ../sass/components/_actions.sass */
+.view-ol-event-upcoming .views-field-field-ol-event-date {
+  margin: 0 5px 5px 0;
+}
+/* line 51, ../sass/components/_actions.sass */
+.view-ol-event-upcoming .views-field-field-featured-image {
+  margin: 0 5px 5px 0;
+}
+
+/* line 57, ../sass/components/_actions.sass */
+.pane-user-field-user-picture {
+  float: left;
+  margin-right: 5px;
+}
+
+/* line 61, ../sass/components/_actions.sass */
+#panels-ipe-paneid-110 {
+  float: right;
+}
+
 /* line 3, ../sass/components/_pane-openlocal-alert-panel-pane-1.sass */
 .pane-openlocal-alert-panel-pane-1 {
   background-color: #e3dcd1;

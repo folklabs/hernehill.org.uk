@@ -93,13 +93,13 @@ function openlocal_event_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
       ),
       'display' => array(),
@@ -194,17 +194,7 @@ function openlocal_event_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'featured' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'token' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,

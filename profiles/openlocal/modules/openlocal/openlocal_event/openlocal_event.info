@@ -46,6 +46,7 @@ features[field_base][] = field_ol_event_date
 features[field_base][] = field_ol_event_venue_ref
 features[field_instance][] = comment-comment_node_ol_event-comment_body
 features[field_instance][] = node-ol_event-field_featured_image
+features[field_instance][] = node-ol_event-field_featured_status
 features[field_instance][] = node-ol_event-field_ol_description
 features[field_instance][] = node-ol_event-field_ol_details
 features[field_instance][] = node-ol_event-field_ol_disabled_toilet

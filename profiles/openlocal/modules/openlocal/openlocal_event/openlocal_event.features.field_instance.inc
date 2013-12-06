@@ -81,6 +81,9 @@ function openlocal_event_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 1,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -91,11 +94,60 @@ function openlocal_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => 'openlocal_events_listing',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-ol_event-field_featured_status'
+  $field_instances['node-ol_event-field_featured_status'] = array(
+    'bundle' => 'ol_event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 11,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_featured_status',
+    'label' => 'Feature content',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 10,
     ),
   );
 
@@ -562,7 +614,7 @@ function openlocal_event_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -578,6 +630,7 @@ function openlocal_event_field_default_field_instances() {
   t('Details');
   t('Disabled toilet');
   t('Enter the email address of a contact for this event.');
+  t('Feature content');
   t('Groups audience');
   t('Image');
   t('Please choose this if the venue has a disabled toilet.');

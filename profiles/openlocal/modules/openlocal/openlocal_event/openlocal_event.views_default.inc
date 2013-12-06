@@ -372,6 +372,7 @@ function openlocal_event_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Upcoming events';
+  $handler->display->display_options['css_class'] = 'view-ol-event-upcoming-sidebar';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -434,19 +435,68 @@ function openlocal_event_views_default_views() {
 
   /* Display: Upcoming */
   $handler = $view->new_display('panel_pane', 'Upcoming', 'panel_pane_2');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view-ol-event-upcoming';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_ol_event_date',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['id'] = 'field_ol_event_venue_ref_target_id';
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['table'] = 'field_data_field_ol_event_venue_ref';
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['field'] = 'field_ol_event_venue_ref_target_id';
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['label'] = 'Venue ref';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_ol_event_date']['id'] = 'field_ol_event_date';
+  $handler->display->display_options['fields']['field_ol_event_date']['table'] = 'field_data_field_ol_event_date';
+  $handler->display->display_options['fields']['field_ol_event_date']['field'] = 'field_ol_event_date';
+  $handler->display->display_options['fields']['field_ol_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_event_date']['settings'] = array(
+    'format_type' => 'privatemsg_current_year',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_ol_event_date']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_event_date']['delta_offset'] = '0';
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => 'openlocal_events_listing',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_ol_description']['id'] = 'field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['table'] = 'field_data_field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['field'] = 'field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_description']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['relationship'] = 'field_ol_event_venue_ref_target_id';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -482,14 +532,22 @@ function openlocal_event_views_default_views() {
 
   /* Display: Upcoming sidebar */
   $handler = $view->new_display('panel_pane', 'Upcoming sidebar', 'panel_pane_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view-ol-event-upcoming-sidebar';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'title' => 'title',
     'field_ol_event_date' => 'field_ol_event_date',
+    'title' => 'title',
+    'title_1' => 'title',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_ol_event_date' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -497,7 +555,7 @@ function openlocal_event_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_ol_event_date' => array(
+    'title_1' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -508,6 +566,12 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['id'] = 'field_ol_event_venue_ref_target_id';
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['table'] = 'field_data_field_ol_event_venue_ref';
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['field'] = 'field_ol_event_venue_ref_target_id';
+  $handler->display->display_options['relationships']['field_ol_event_venue_ref_target_id']['label'] = 'ol_event_venue_ref';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_ol_event_date']['id'] = 'field_ol_event_date';
@@ -516,13 +580,14 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['field_ol_event_date']['label'] = '';
   $handler->display->display_options['fields']['field_ol_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ol_event_date']['settings'] = array(
-    'format_type' => 'panopoly_day',
+    'format_type' => 'privatemsg_current_year',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
     'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_ol_event_date']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -530,6 +595,15 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['relationship'] = 'field_ol_event_venue_ref_target_id';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
 
   /* Display: Per group */
   $handler = $view->new_display('panel_pane', 'Per group', 'panel_pane_3');
