@@ -313,6 +313,7 @@ function openlocal_group_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'fields_override' => array(
+        'field_ol_group_category' => 1,
         'field_featured_image' => 1,
         'title' => 1,
         'field_ol_description' => 1,

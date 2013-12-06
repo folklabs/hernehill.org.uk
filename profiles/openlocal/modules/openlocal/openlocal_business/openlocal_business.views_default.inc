@@ -76,6 +76,8 @@ function openlocal_business_views_default_views() {
 
   /* Display: List */
   $handler = $view->new_display('panel_pane', 'List', 'panel_pane_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'ol-item-grid';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;

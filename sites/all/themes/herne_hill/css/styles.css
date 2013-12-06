@@ -1553,15 +1553,27 @@ tr.selected td {
   margin: 0 5px 5px 0;
 }
 
-/* line 57, ../sass/components/_actions.sass */
+/* line 59, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 61, ../sass/components/_actions.sass */
+/* line 63, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
+}
+
+/* line 70, ../sass/components/_actions.sass */
+.ol-item-grid .views-row {
+  float: left;
+  width: 220px;
+}
+
+/* line 77, ../sass/components/_actions.sass */
+.view-id-openlocal_business .views-row,
+.view-id-openlocal_group .views-row {
+  margin: 5px;
 }
 
 /* line 3, ../sass/components/_pane-openlocal-alert-panel-pane-1.sass */
@@ -1614,10 +1626,4 @@ h1, h2, h3 {
 /* line 58, ../sass/styles.sass */
 #search-form {
   float: right;
-}
-
-/* line 70, ../sass/styles.sass */
-.ol-item-grid .views-row {
-  float: left;
-  width: 45%;
 }

@@ -153,9 +153,10 @@ function openlocal_business_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'fields_override' => array(
+        'field_ol_business_category' => 1,
+        'field_featured_image' => 1,
         'title' => 1,
         'field_ol_description' => 1,
-        'field_ol_business_category' => 1,
       ),
       'view_mode' => 'teaser',
       'widget_title' => NULL,
