@@ -43,8 +43,8 @@ function openlocal_alert_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_alert-field_ol_alert_image'
-  $field_instances['node-ol_alert-field_ol_alert_image'] = array(
+  // Exported field_instance: 'node-ol_alert-field_featured_image'
+  $field_instances['node-ol_alert-field_featured_image'] = array(
     'bundle' => 'ol_alert',
     'deleted' => 0,
     'description' => '',
@@ -57,7 +57,7 @@ function openlocal_alert_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'above',
@@ -73,14 +73,17 @@ function openlocal_alert_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ol_alert_image',
+    'field_name' => 'field_featured_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 1,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -89,29 +92,12 @@ function openlocal_alert_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-          'vimeo' => 0,
-          'youtube' => 0,
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
-          'upload' => 0,
-          'youtube' => 0,
-        ),
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => 2,
     ),
   );
