@@ -3,10 +3,20 @@
 body
   background-color: $col-page
 
-p, ul,
-  color: $col-content–darkest
+p, ul, ol
+  color: $col-content-darkest
   font-family: $lato
   font-weight: 400
+  
+blockquote p
+  font-family: $lato
+  font-weight: 900
+  color: $col-content-lighter
+  font-size: 1.125 * $base-font-size
+  margin-left: -1.25em
+  border-top: 1px $col-content-lighter solid
+  border-bottom: 1px $col-content-lighter solid
+  padding: 0.25em 0
 
 a
   &:link
@@ -18,12 +28,12 @@ a
     color: $col-links
     border-bottom: 1px, $col-links
     background-color: $col-links-lightest
-    padding-bottom: 0.25em
+    margin-bottom: 0.25em
   &:active
     color: $col-page
     background-color: $col-links
     border-bottom: 1px, $col-links-darkest
-    padding-bottom: 0.25em
+    margin-bottom: 0.25em
 
 h1, h2, h3, h4, h5, h6
   color: $col-content
@@ -31,11 +41,8 @@ h1, h2, h3, h4, h5, h6
   font-weight: 900
 
 #page-title
-  color: $col-content–darker
+  color: $col-content-darker
   font-family: $merriweather
   font-weight: 300
 
-blockquote
-  color: $col-content–lighter
-  font-family: lato
-  font-weight: 900
+

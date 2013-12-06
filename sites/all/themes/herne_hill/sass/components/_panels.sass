@@ -1,0 +1,87 @@
+
+// PANELS STYLES
+//
+// This file contains styles for all panels and panes
+
+// UPCOMING EVENTS MINI CALENDAR
+
+// Overrides default Drupal table background colour
+.calendar-calendar table tbody tr
+  background-color: transparent
+
+// Styles basic panel header
+.view-ol-event-calendar
+  .view-header
+  background-color: transparent
+  border-top: 1px $col-content-lighter solid
+  border-bottom: 1px solid $col-content-lightest
+
+// Styles month heading row
+.date-heading
+  border-bottom: 1px solid $col-content-lightest
+  h3
+    font-family: $lato
+    font-size: 1em
+    a
+      text-decoration: none
+
+.calendar-calendar
+  .month-view .mini
+  border: 1px solid $col-page
+
+.calendar-calendar .month-view .mini thead tr .days
+  background-color: $col-content-lightest
+  color: $col-content-lighter
+  font-family: $lato
+  font-size: 1em
+  font-weight: 900 
+  border-top: 1px solid $col-content-lighter
+  border-bottom: 1px solid $col-content-lighter
+  border-left: none
+  border-right: none
+  padding: 0.4em 0
+
+.calendar-calendar .has-no-events
+  background-color: transparent
+  border: 1px $col-page solid
+
+// Sets the style of day number text
+.calendar-calendar td
+  font-family: $lato
+  font-weight: 400
+  font-size: 0.875 * $base-font-size
+  text-align: center
+  color: $col-content-darkest
+
+// Styles date text inside day cells which have an event
+.calendar-calendar .mini-day-on
+  background-color: $col-links-lighter
+  a
+    &:link
+      font-weight: 900
+      color: white
+    text-decoration: none
+    &:hover
+      background-color: red
+  
+.calendar-calendar .mini .today
+  background-color: $col-content-strong
+  font-weight: 900
+  color: $col-page
+
+.calendar-calendar .month
+  padding: 0.4em 0
+
+.calendar-calendar .empty
+  background-color: blue
+
+.calendar-calendar .future
+  background-color: $col-content-lightest
+
+.calendar-calendar .past
+  color: $col-content-lighter
+  .has-events
+    color: $col-links
+    background-color: $col-links-lightest
+    &:hover
+      background-color: $col-links

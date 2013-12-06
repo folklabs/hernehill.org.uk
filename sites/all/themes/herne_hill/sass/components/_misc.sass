@@ -54,6 +54,18 @@
     color: #fff
 
 //
+// Content text styles
+
+.pane-node-field-ol-details blockquote
+  border-top: 2px
+  
+.field-name-field-ol-description
+  margin-top: 0.25em
+  color: $col-content-lighter
+  font-family: $lato
+  font-size: 1.5 * $base-font-size
+
+//
 // Branding header.
 
 // Wrapping link for logo.
@@ -62,10 +74,13 @@
   // LTR
   margin: 0
   padding: 0
+  &:hover
+    background-color: transparent
 
 // Logo image.
 .header__logo-image
   vertical-align: bottom
+  margin-top: 8px
 
 // Wrapper for website name and slogan.
 .header__name-and-slogan
@@ -88,7 +103,15 @@
 
 // The slogan (or tagline) of a website.
 .header__site-slogan
-  margin: 0
+  margin-top: 40px
+  margin-left: 20px
+
+//
+// Branding footer.
+
+#footer
+  background-color: $col-content-darker
+
 
 // The secondary menu (login, etc.)
 // .header__secondary-menu
@@ -126,24 +149,24 @@
       list-style-type: none
       list-style-image: none
   li a:hover, li a:active
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.02, #0d322a),color-stop(1, #144c3f))
-    background-image: -o-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
-    background-image: -moz-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
-    background-image: -webkit-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
-    background-image: -ms-linear-gradient(bottom, #0d322a 2%, #144c3f 100%)
-    background-image: linear-gradient(to bottom, #0d322a 2%, #144c3f 100%)
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darkest),color-stop(1, $col-links-darker))
+    background-image: -o-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+    background-image: -moz-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+    background-image: -webkit-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+    background-image: -ms-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+    background-image: linear-gradient(to bottom, $col-links-darkest 0%, $col-links-darker 100%)
 
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.02, #144c3f),color-stop(1, #0d322a))
-  background-image: -o-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
-  background-image: -moz-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
-  background-image: -webkit-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
-  background-image: -ms-linear-gradient(bottom, #144c3f 2%, #0d322a 100%)
-  background-image: linear-gradient(to bottom, #144c3f 2%, #0d322a 100%)
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darker),color-stop(1, $col-links-darkest))
+  background-image: -o-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: -moz-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: -webkit-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: -ms-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: linear-gradient(to bottom, $col-links-darker 0%, $col-links-darkest 100%)
 
 //
  // Breadcrumb navigation.
 .breadcrumb
-  background-color: $col-content–lightest
+  background-color: $col-content-lightest
   margin: 0px -10px
   font-size: 0.85em
   ol
@@ -231,7 +254,7 @@
   color: #8c2e0b
 
 //
- // Tabs.
+// Tabs.
 
 // Basic positioning styles shared by primary and secondary tabs.
 %tabs
@@ -273,6 +296,7 @@
 .tabs-primary__tab.is-active
   @extend .tabs-primary__tab
   border-bottom-color: $tabs-container-bg
+  background-color: $tabs-container-bg
 
 // We use 3 placeholder styles to prevent @extend from going selector crazy.
 %tabs-primary__tab-link
@@ -426,8 +450,14 @@ span.field-label
 .block
   margin-bottom: rhythm(1)
 
+.pane-node-field-ol-event-venue-ref
+  background-color: $col-content-lightest
+  h2
+    font-family: $lato
+    font-size: 1em
+
 //
- * Menus.
+// Menus
 .menu__item.is-leaf
   list-style-image: inline-image("menu-leaf.png")
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7
@@ -565,6 +595,16 @@ a.button
 #user-login-form
   text-align: left
   // LTR
+
+// Search form
+.search-query
+  font-family: $lato
+  color: red
+  font-size: 1.25 * $base-font-size
+  background-color: transparent
+
+input.search-query
+  
 
 //
  * OpenID

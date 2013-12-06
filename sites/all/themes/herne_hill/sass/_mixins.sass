@@ -30,3 +30,49 @@
   &:active,
   &:focus
     +element-invisible-off
+
+// Gradient up from $col-links-darkest to $col-links-darker
+=gradient-links-top-darkest
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-links-darkest),color-stop(1, $col-links-darker))
+  background-image: -o-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -moz-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -webkit-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -ms-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: linear-gradient(to top, $col-links-darkest 0%, $col-links-darker 100%)
+
+// Gradient up from $col-links-darker to $col-links
+=gradient-links-top-darker
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-links-darker),color-stop(1, $col-links))
+  background-image: -o-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
+  background-image: -moz-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
+  background-image: -webkit-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
+  background-image: -ms-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
+  background-image: linear-gradient(to top, $col-links-darker 0%, $col-links 100%)
+
+// Gradient up from $col-links-darker to $col-links
+=gradient-links-top-lighter
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-links),color-stop(1, $col-links-lighter))
+  background-image: -o-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
+  background-image: -moz-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
+  background-image: -webkit-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
+  background-image: -ms-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
+  background-image: linear-gradient(to top, $col-links 0%, $col-links-lighter 100%)
+
+// Gradient down from $col-links-darkest to $col-links-darker
+=gradient-links-bottom-darkest
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darkest),color-stop(1, $col-links-darker))
+  background-image: -o-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -moz-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -webkit-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -ms-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: linear-gradient(to bottom, $col-links-darkest 0%, $col-links-darker 100%)
+
+// Definition for secondary buttons
+
+// Definition for beige-background panels
+
+// Definition for promoted adverts
+
+// Definition for standard adverts
+
+// 

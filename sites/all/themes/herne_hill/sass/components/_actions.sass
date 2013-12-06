@@ -1,42 +1,51 @@
 
 .ol-action-box
-  background-color: $col-content–lightest
-  padding: 10px 10px
+  background-color: $col-content-lightest
+  padding: 0.5em 5px
+
+.ol-action-box a
+  &:hover
+    text-decoration: none
+    margin-bottom: 0
 
 .ol-action-button
-  // display: block
-  background-color: $col-links
-  // background-color: #eee
-  color: #fff
-  font-size: 1.3em
-
-  padding: 5px 20px
-  a:link,
-  a:visited,
-  a:hover
-    color: #ddd
-    background-color: none
-    text-decoration: none
-    // border: none
-  border: solid 1px #000
+  +gradient-links-top-darker
+  font-family: $lato
+  font-size: 1.25 * $base-font-size
+  border: solid 1px $col-links-darkest
+  border-radius: 0.2em
   text-align: center
+  padding: 5px 20px
+  &:hover
+    +gradient-links-top-lighter
+  &:active
+    +gradient-links-bottom-darkest
+
+.ol-action-button a
   text-decoration: none
+  &:link
+    color: $col-content-lightest
+  &:visited
+    color: $col-links-lightest
+  &:hover
+    color: $col-links-darkest
+    background-color: transparent
 
 .ol-action-help
   display: block
   // float: right
   padding: 0px 0px
-  margin-top: 14px
+  margin-top: 0.5em
   text-align: right
   text-decoration: none
 
 
 .ol-event-upcoming-sidebar
-  background-color: $col-content–lightest
+  background-color: $col-content-lightest
 
 .field-name-field-ol-event-category,
 .field-name-field-ol-event-date
-  background-color: $col-content–lightest
+  background-color: $col-content-lightest
   padding: 3px 0 6px 2px
   // padding-bottom: 6px
   border-bottom: solid 1px #FFF
