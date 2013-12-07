@@ -571,6 +571,27 @@ function openlocal_event_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-10';
     $pane->panel = 'header';
+    $pane->type = 'block';
+    $pane->subtype = 'block-6';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => ' ',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['header'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'header';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_event_venues-panel_pane_2';
     $pane->shown = TRUE;
@@ -598,10 +619,10 @@ function openlocal_event_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['header'][0] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['header'][1] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -670,7 +691,7 @@ function openlocal_event_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-12';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_event_venues-panel_pane_2';
@@ -701,10 +722,10 @@ function openlocal_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['contentmain'][0] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['contentmain'][0] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-11';
+  $display->title_pane = 'new-12';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ol_event_venues_map'] = $page;
