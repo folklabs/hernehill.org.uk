@@ -1597,6 +1597,19 @@ tr.selected td {
   margin: 5px;
 }
 
+/* line 83, ../sass/components/_actions.sass */
+.month-view div {
+  text-align: center;
+}
+/* line 85, ../sass/components/_actions.sass */
+.month-view .has-events {
+  background-color: #98b9b1;
+}
+/* line 88, ../sass/components/_actions.sass */
+.month-view .has-events a {
+  color: white;
+}
+
 /* line 3, ../sass/components/_pane-openlocal-alert-panel-pane-1.sass */
 .pane-openlocal-alert-panel-pane-1 {
   background-color: #e3dcd1;
@@ -1647,4 +1660,10 @@ h1, h2, h3 {
 /* line 58, ../sass/styles.sass */
 #search-form {
   float: right;
+}
+
+/* line 61, ../sass/styles.sass */
+#footer {
+  background-color: #aaaaaa;
+  margin-top: 30px;
 }
