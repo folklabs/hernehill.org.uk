@@ -1407,6 +1407,25 @@ tr.selected td {
   font-family: "Lato";
 }
 
+/* line 759, ../sass/components/_misc.sass */
+#search-form .form-type-textfield {
+  vertical-align: top;
+}
+/* line 761, ../sass/components/_misc.sass */
+#search-form .form-type-textfield #edit-keys {
+  vertical-align: top;
+}
+/* line 764, ../sass/components/_misc.sass */
+#search-form .form-submit {
+  margin-top: -3px;
+  background: transparent url(../images/search.png) no-repeat left top;
+  text-indent: -9999px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  border: 0;
+  vertical-align: top;
+}
+
 /*
  * @file
  * Print styling
