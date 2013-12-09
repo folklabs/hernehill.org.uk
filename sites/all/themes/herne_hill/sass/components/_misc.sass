@@ -81,6 +81,10 @@
 .header__logo-image
   vertical-align: bottom
   margin-top: 8px
+  // TODO: use image that is correct size
+  width: 150px
+  margin: 10px 20px 10px 10px
+
 
 // Wrapper for website name and slogan.
 .header__name-and-slogan
@@ -111,6 +115,9 @@
 
 #footer
   background-color: $col-content-darker
+  margin: 20px 0 0 0
+  width: 200px
+
 
 
 // The secondary menu (login, etc.)
@@ -793,11 +800,13 @@ tr.selected td
   font-size: 1.25em
   font-weight: 400
   color: $col-links
+  line-height: 1.4em
 
 #secondary-menu
   font-family: $lato
 
 
+//
 // Section-level navigation menu
 
 // Style the navigation menu block
@@ -825,3 +834,20 @@ tr.selected td
       font-size: 1em
       font-weight: 400
     
+#search-form
+  .form-type-textfield
+    vertical-align: top
+    #edit-keys
+      vertical-align: top
+
+  .form-submit
+    margin-top: -3px
+    background: transparent url(../images/search.png) no-repeat left top
+    text-indent: -9999px
+    padding-right: 25px
+    padding-bottom: 10px
+    border: 0
+    vertical-align: top
+    // margin-right: 0px
+    // font-size: 200%
+

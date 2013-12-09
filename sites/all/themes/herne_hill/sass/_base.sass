@@ -18,6 +18,8 @@ p, ul, ol
     border-bottom: 1px, $col-links
     background-color: $col-links-lightest
     margin-bottom: 0.25em
+    // TODO: this was causing the logo to jump on mouse hover
+    // padding-bottom: 0.25em
   &:active
     color: $col-page
     background-color: $col-links
@@ -33,6 +35,7 @@ blockquote p
   border-top: 1px $col-content-lighter solid
   border-bottom: 1px $col-content-lighter solid
   padding: 0.25em 0
+    // padding-bottom: 0.25em
 
 h1, h2, h3, h4, h5, h6
   color: $col-content
@@ -45,3 +48,7 @@ h1, h2, h3, h4, h5, h6
   font-weight: 300
 
 
+blockquote
+  color: $col-content-lighter
+  font-family: lato
+  font-weight: 900

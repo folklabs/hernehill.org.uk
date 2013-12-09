@@ -21,7 +21,7 @@ function debut_social_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'forward_display_teasers';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['forward_display_teasers'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -30,12 +30,12 @@ function debut_social_strongarm() {
   $strongarm->name = 'service_links_link_view_modes';
   $strongarm->value = array(
     'full' => 'full',
-    'teaser' => 'teaser',
+    'teaser' => 0,
     'rss' => 0,
     'search_index' => 0,
     'search_result' => 0,
     'print' => 0,
-    'ical' => 0,
+    'featured' => 0,
     'token' => 0,
   );
   $export['service_links_link_view_modes'] = $strongarm;
@@ -50,28 +50,26 @@ function debut_social_strongarm() {
     'stumbleupon' => 0,
     'twitter' => 1,
     'pingthis' => 0,
-    'propeller' => 0,
     'reddit' => 0,
     'slashdot' => 0,
-    'magnoliacom' => 0,
     'newsvine' => 0,
     'furl' => 0,
     'facebook' => 1,
     'myspace' => 0,
     'google' => 0,
+    'google_plus' => 1,
     'yahoo' => 0,
-    'buzz' => 0,
     'linkedin' => 0,
     'technorati' => 0,
     'technorati_favorite' => 0,
     'icerocket' => 0,
     'misterwong' => 0,
-    'google_buzz' => 0,
     'mixx' => 0,
     'box' => 0,
     'blinklist' => 0,
     'identica' => 0,
     'newskicks' => 0,
+    'diigo' => 0,
   );
   $export['service_links_show'] = $strongarm;
 
@@ -85,28 +83,26 @@ function debut_social_strongarm() {
     'stumbleupon' => '-77',
     'twitter' => '-99',
     'pingthis' => '-81',
-    'propeller' => '-80',
     'reddit' => '-79',
     'slashdot' => '-78',
-    'magnoliacom' => '-87',
     'newsvine' => '-82',
     'furl' => '-93',
     'facebook' => '-100',
     'myspace' => '-84',
     'google' => '-92',
+    'google_plus' => '0',
     'yahoo' => '-74',
-    'buzz' => '-96',
     'linkedin' => '-88',
     'technorati' => '-75',
     'technorati_favorite' => '-76',
     'icerocket' => '-90',
     'misterwong' => '-86',
-    'google_buzz' => '-91',
     'mixx' => '-85',
     'box' => '-97',
     'blinklist' => '-98',
     'identica' => '-89',
     'newskicks' => '-83',
+    'diigo' => '0',
   );
   $export['service_links_weight'] = $strongarm;
 
