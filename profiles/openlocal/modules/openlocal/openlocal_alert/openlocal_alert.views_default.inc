@@ -62,18 +62,16 @@ function openlocal_alert_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_ol_alert_image']['id'] = 'field_ol_alert_image';
-  $handler->display->display_options['fields']['field_ol_alert_image']['table'] = 'field_data_field_ol_alert_image';
-  $handler->display->display_options['fields']['field_ol_alert_image']['field'] = 'field_ol_alert_image';
-  $handler->display->display_options['fields']['field_ol_alert_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ol_alert_image']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_ol_alert_image']['alter']['path'] = '[field_ol_alert_link]';
-  $handler->display->display_options['fields']['field_ol_alert_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_alert_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ol_alert_image']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => 'openlocal_panel_deep',
+    'image_link' => 'content',
   );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

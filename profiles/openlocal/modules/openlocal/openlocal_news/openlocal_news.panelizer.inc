@@ -55,7 +55,7 @@ function openlocal_news_panelizer_defaults() {
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'bryant_flipped_flipped';
+  $display->layout = 'taylor';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -64,6 +64,9 @@ function openlocal_news_panelizer_defaults() {
       'sidebar' => NULL,
       'contentmain' => NULL,
       'footer' => NULL,
+      'half' => NULL,
+      'quarter1' => NULL,
+      'quarter2' => NULL,
     ),
   );
   $display->cache = array();
@@ -72,14 +75,60 @@ function openlocal_news_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'contentmain';
+    $pane->panel = 'half';
+    $pane->type = 'node_created';
+    $pane->subtype = 'node_created';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'format' => 'panopoly_day',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['half'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'half';
+    $pane->type = 'user_profile';
+    $pane->subtype = 'user_profile';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'featured',
+      'context' => 'relationship_entity_from_schema:uid-node-user_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['half'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'half';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'colorbox',
+      'formatter' => 'image',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -90,6 +139,8 @@ function openlocal_news_panelizer_defaults() {
         'colorbox_gallery_custom' => '',
         'colorbox_caption' => 'auto',
         'colorbox_caption_custom' => '',
+        'image_style' => 'openlocal_node_main',
+        'image_link' => '',
       ),
       'context' => array(),
       'override_title' => 0,
@@ -114,13 +165,13 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $display->content['new-3'] = $pane;
+    $display->panels['half'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-4';
+    $pane->panel = 'half';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
     $pane->shown = TRUE;
@@ -155,19 +206,19 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][1] = 'new-2';
+    $display->content['new-4'] = $pane;
+    $display->panels['half'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-5';
+    $pane->panel = 'half';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_categories';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
+      'label' => 'inline',
       'formatter' => 'taxonomy_term_reference_link',
       'delta_limit' => '0',
       'delta_offset' => '0',
@@ -196,13 +247,13 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][2] = 'new-3';
+    $display->content['new-5'] = $pane;
+    $display->panels['half'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-6';
+    $pane->panel = 'half';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_tags';
     $pane->shown = TRUE;
@@ -237,13 +288,13 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['contentmain'][3] = 'new-4';
+    $display->content['new-6'] = $pane;
+    $display->panels['half'][5] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-7';
+    $pane->panel = 'half';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
     $pane->shown = TRUE;
@@ -262,13 +313,13 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['contentmain'][4] = 'new-5';
+    $display->content['new-7'] = $pane;
+    $display->panels['half'][6] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-8';
+    $pane->panel = 'half';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
     $pane->shown = TRUE;
@@ -286,13 +337,13 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['contentmain'][5] = 'new-6';
+    $display->content['new-8'] = $pane;
+    $display->panels['half'][7] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-9';
+    $pane->panel = 'half';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
     $pane->shown = TRUE;
@@ -309,13 +360,81 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 8;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['contentmain'][6] = 'new-7';
+    $display->content['new-9'] = $pane;
+    $display->panels['half'][8] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'sidebar';
+    $pane->pid = 'new-10';
+    $pane->panel = 'quarter1';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'openlocal_news-related_news_articles';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '5',
+      'fields_override' => array(
+        'field_featured_image' => 1,
+        'title' => 1,
+        'body' => 1,
+        'created' => 1,
+      ),
+      'exposed' => array(
+        'widget_title' => 'Related news articles',
+        'sort_by' => 'created',
+        'sort_order' => 'DESC',
+      ),
+      'context' => array(
+        0 => 'panelizer',
+        1 => 'relationship_terms_from_node_1',
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
+      'view_mode' => 'teaser',
+      'widget_title' => 'Related news articles',
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['quarter1'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'quarter2';
+    $pane->type = 'block';
+    $pane->subtype = 'block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['quarter2'][0] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
+    $pane->panel = 'quarter2';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_news-articles_by_author';
     $pane->shown = TRUE;
@@ -351,13 +470,13 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['sidebar'][0] = 'new-8';
+    $display->content['new-12'] = $pane;
+    $display->panels['quarter2'][1] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'sidebar';
+    $pane->pid = 'new-13';
+    $pane->panel = 'quarter2';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_news-related_news_articles';
     $pane->shown = TRUE;
@@ -400,10 +519,10 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['sidebar'][1] = 'new-9';
+    $display->content['new-13'] = $pane;
+    $display->panels['quarter2'][2] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
@@ -458,7 +577,7 @@ function openlocal_news_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-14';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
@@ -486,10 +605,10 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['contentmain'][0] = 'new-10';
+    $display->content['new-14'] = $pane;
+    $display->panels['contentmain'][0] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-15';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -514,10 +633,10 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['contentmain'][1] = 'new-11';
+    $display->content['new-15'] = $pane;
+    $display->panels['contentmain'][1] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-16';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_categories';
@@ -542,10 +661,10 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['contentmain'][2] = 'new-12';
+    $display->content['new-16'] = $pane;
+    $display->panels['contentmain'][2] = 'new-16';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-10';
+  $display->title_pane = 'new-14';
   $panelizer->display = $display;
   $export['node:openlocal_news_article:default:default'] = $panelizer;
 
@@ -585,7 +704,7 @@ function openlocal_news_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-17';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
@@ -613,10 +732,10 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['contentmain'][0] = 'new-13';
+    $display->content['new-17'] = $pane;
+    $display->panels['contentmain'][0] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-18';
     $pane->panel = 'contentmain';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -636,8 +755,8 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['contentmain'][1] = 'new-14';
+    $display->content['new-18'] = $pane;
+    $display->panels['contentmain'][1] = 'new-18';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
@@ -676,7 +795,7 @@ function openlocal_news_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-19';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
@@ -702,10 +821,10 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['center'][0] = 'new-15';
+    $display->content['new-19'] = $pane;
+    $display->panels['center'][0] = 'new-19';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-20';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -730,10 +849,10 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['center'][1] = 'new-16';
+    $display->content['new-20'] = $pane;
+    $display->panels['center'][1] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-21';
     $pane->panel = 'center';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -757,10 +876,10 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['center'][2] = 'new-17';
+    $display->content['new-21'] = $pane;
+    $display->panels['center'][2] = 'new-21';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-17';
+  $display->title_pane = 'new-21';
   $panelizer->display = $display;
   $export['node:openlocal_news_article:default:teaser'] = $panelizer;
 

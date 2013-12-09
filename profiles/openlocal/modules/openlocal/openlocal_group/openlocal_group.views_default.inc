@@ -68,6 +68,14 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'ol-item-grid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Category */
+  $handler->display->display_options['fields']['field_ol_group_category']['id'] = 'field_ol_group_category';
+  $handler->display->display_options['fields']['field_ol_group_category']['table'] = 'field_data_field_ol_group_category';
+  $handler->display->display_options['fields']['field_ol_group_category']['field'] = 'field_ol_group_category';
+  $handler->display->display_options['fields']['field_ol_group_category']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_group_category']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_group_category']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_ol_group_category']['delta_offset'] = '0';
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
@@ -76,7 +84,7 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'thumbnail',
+    'image_style' => 'openlocal_panel_shallow',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -92,6 +100,11 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['fields']['field_ol_description']['field'] = 'field_ol_description';
   $handler->display->display_options['fields']['field_ol_description']['label'] = '';
   $handler->display->display_options['fields']['field_ol_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -184,6 +197,71 @@ function openlocal_group_views_default_views() {
     'data' => 'full',
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
+
+  /* Display: Newest groups */
+  $handler = $view->new_display('panel_pane', 'Newest groups', 'panel_pane_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Newest groups';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'ol-item-grid';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Category */
+  $handler->display->display_options['fields']['field_ol_group_category']['id'] = 'field_ol_group_category';
+  $handler->display->display_options['fields']['field_ol_group_category']['table'] = 'field_data_field_ol_group_category';
+  $handler->display->display_options['fields']['field_ol_group_category']['field'] = 'field_ol_group_category';
+  $handler->display->display_options['fields']['field_ol_group_category']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_group_category']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_group_category']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_ol_group_category']['delta_offset'] = '0';
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => 'openlocal_panel_shallow',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_ol_description']['id'] = 'field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['table'] = 'field_data_field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['field'] = 'field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
+  $handler->display->display_options['argument_input'] = array(
+    'tid' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Has taxonomy term ID',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['openlocal_group'] = $view;
 
   $view = new view();

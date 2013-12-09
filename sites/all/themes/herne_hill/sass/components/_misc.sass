@@ -715,9 +715,9 @@ td.menu-disabled
     margin-left: 0.5em
 
 //
- * TableDrag behavior.
- *
- * @see tabledrag.js
+// TableDrag behavior.
+//
+// @see tabledrag.js
 tr.drag
   background-color: #fffff0
 
@@ -728,16 +728,16 @@ tr.drag-previous
   font-size: 0.9em
 
 //
- * TableSelect behavior.
- *
- * @see tableselect.js
+// TableSelect behavior.
+//
+// @see tableselect.js
 tr.selected td
   background: #ffc
 
 //
- * Progress bar.
- *
- * @see progress.js
+// Progress bar.
+//
+// @see progress.js
 .progress
   font-weight: bold
   .bar
@@ -749,6 +749,8 @@ tr.selected td
     background-color: #0072b9
     background-image: image-url("progress.gif")
 
+//
+// NAVIGATION
 
 // Nice Menus
 .nice-menu
@@ -795,3 +797,31 @@ tr.selected td
 #secondary-menu
   font-family: $lato
 
+
+// Section-level navigation menu
+
+// Style the navigation menu block
+
+.pane-openlocal-event-categories-panel-pane-1
+  border-top: 1px $col-content-lighter solid
+  margin: 0.5em 0
+  .views-row
+    border-bottom: 1px $col-content-lightest solid
+    padding: 0.5em 0
+    &:hover
+      background-color: $col-links-lightest
+      a
+        color: $col-links-darkest
+    &:active
+      a
+        color: white
+      background-color: $col-links
+    a
+      padding-left: 10px
+      padding-right: 10px
+      color: $col-links
+      text-decoration: none
+      font-family: $lato
+      font-size: 1em
+      font-weight: 400
+    

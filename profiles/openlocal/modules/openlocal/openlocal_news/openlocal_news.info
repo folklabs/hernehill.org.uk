@@ -5,7 +5,6 @@ package = OpenLocal
 php = 5.2.4
 project = openlocal_news
 dependencies[] = fe_block
-dependencies[] = leaflet
 dependencies[] = metatag
 dependencies[] = openlayers
 dependencies[] = openlocal_core

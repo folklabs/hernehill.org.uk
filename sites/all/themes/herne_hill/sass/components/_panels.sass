@@ -3,6 +3,62 @@
 //
 // This file contains styles for all panels and panes
 
+// PANEL PANES - GLOBAL STYLES
+
+// Heading
+.panel-pane h2
+  margin: 0 0
+  color: $col-content-darker
+  font-family: $lato
+  font-weight: 900
+  font-size: 1em
+  text-decoration: none
+  &:link
+    color: $col-links
+    text-decoration: none
+  &:visited
+    color: $col-links
+  &:active
+    color: white
+  a
+    &:hover
+    color: $col-page
+
+// View content styling for Upcoming events panel
+.pane-openlocal-event-panel-pane-1
+  margin: 0.5em 0
+  background-color: $col-content-lightest
+  h2.pane-title
+    border-bottom: 1px $col-content-lighter solid
+    padding: 0 4px
+  table
+    margin: 0 0
+    width: 100%
+    tr
+      vertical-align: top
+      border-bottom: 1px $col-page solid
+      background-color: transparent
+    td.views-field-field-ol-event-date
+      padding: 0 4px
+      font-family: $lato
+      font-weight: 900
+      font-size: 1.125 * $base-font-size
+      color: $col-content
+    td.views-field-title
+      padding: 0 4px
+      font-family: $lato
+      font-weight: 900
+      font-size: 1em
+      color: $col-content
+      text-decoration: none
+      a
+        font-family: $merriweather
+        font-weight: 400
+        text-decoration: none
+        color: $col-links-darkest
+        font-size: 0.875 * $base-font-size
+
+//
 // UPCOMING EVENTS MINI CALENDAR
 
 // Overrides default Drupal table background colour
@@ -12,18 +68,19 @@
 // Styles basic panel header
 .view-ol-event-calendar
   .view-header
-  background-color: transparent
+  margin: 2em 0
   border-top: 1px $col-content-lighter solid
   border-bottom: 1px solid $col-content-lightest
 
 // Styles month heading row
-.date-heading
+.view-ol-event-calendar .date-heading
   border-bottom: 1px solid $col-content-lightest
-  h3
-    font-family: $lato
-    font-size: 1em
-    a
-      text-decoration: none
+
+.view-ol-event-calendar .date-heading h3
+  font-family: $lato
+  a
+    font-size: 1 * $base-font-size
+    text-decoration: none
 
 .calendar-calendar
   .month-view .mini
@@ -56,13 +113,14 @@
 // Styles date text inside day cells which have an event
 .calendar-calendar .mini-day-on
   background-color: $col-links-lighter
+  &:hover
+    background-color: $col-links
   a
     &:link
       font-weight: 900
       color: white
     text-decoration: none
-    &:hover
-      background-color: red
+
   
 .calendar-calendar .mini .today
   background-color: $col-content-strong
@@ -72,8 +130,8 @@
 .calendar-calendar .month
   padding: 0.4em 0
 
-.calendar-calendar .empty
-  background-color: blue
+.calendar-calendar .month-view .mini .empty
+  background-color: transparent
 
 .calendar-calendar .future
   background-color: $col-content-lightest
@@ -85,3 +143,51 @@
     background-color: $col-links-lightest
     &:hover
       background-color: $col-links
+
+
+//
+// SERVICES LISTING DISPLAY - GRID
+
+.view-openlocal-business
+  background-color: red
+  .view-content
+    .views-field
+    display: block
+    display: clear
+
+
+//
+// NEWS LISTING DISPLAY - GRID
+
+.view-display-id-list_news_articles .views-row
+  background-color: $col-content-lightest
+  width: 210px
+  padding: 0 5px
+  font-family: $lato
+
+
+// Styles the Other Articles by this Author panel
+
+.pane-openlocal-news-articles-by-author
+  background-color: red
+
+  h2.pane-title
+    padding: 4px 10px
+    font-family: $lato
+    font-size: 1em
+    color: $col-content-darker
+    &:link
+      color: $col-links
+
+// Styles the home page Alerts panel
+
+.pane-openlocal-alert-panel-pane-1
+  background-color: $col-content-lightest
+
+  h2.pane-title
+    padding: 4px 10px
+    font-family: $lato
+    font-size: 1em
+    color: $col-content-darker
+    &:link
+      color: $col-links

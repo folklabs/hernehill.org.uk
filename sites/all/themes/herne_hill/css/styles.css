@@ -368,8 +368,31 @@ p, ul, ol {
   font-family: "Lato";
   font-weight: 400;
 }
-
 /* line 11, ../sass/_base.sass */
+p:link, ul:link, ol:link {
+  color: #20806a;
+  border-bottom: 1px, #e2e3d7;
+}
+/* line 14, ../sass/_base.sass */
+p:visited, ul:visited, ol:visited {
+  color: #0d332a;
+}
+/* line 16, ../sass/_base.sass */
+p:hover, ul:hover, ol:hover {
+  color: #20806a;
+  border-bottom: 1px, #20806a;
+  background-color: #e2e3d7;
+  margin-bottom: 0.25em;
+}
+/* line 21, ../sass/_base.sass */
+p:active, ul:active, ol:active {
+  color: #f4eee0;
+  background-color: #20806a;
+  border-bottom: 1px, #0d332a;
+  margin-bottom: 0.25em;
+}
+
+/* line 27, ../sass/_base.sass */
 blockquote p {
   font-family: "Lato";
   font-weight: 900;
@@ -381,38 +404,14 @@ blockquote p {
   padding: 0.25em 0;
 }
 
-/* line 22, ../sass/_base.sass */
-a:link {
-  color: #20806a;
-  border-bottom: 1px, #e2e3d7;
-}
-/* line 25, ../sass/_base.sass */
-a:visited {
-  color: #0d332a;
-}
-/* line 27, ../sass/_base.sass */
-a:hover {
-  color: #20806a;
-  border-bottom: 1px, #20806a;
-  background-color: #e2e3d7;
-  margin-bottom: 0.25em;
-}
-/* line 32, ../sass/_base.sass */
-a:active {
-  color: #f4eee0;
-  background-color: #20806a;
-  border-bottom: 1px, #0d332a;
-  margin-bottom: 0.25em;
-}
-
-/* line 38, ../sass/_base.sass */
+/* line 37, ../sass/_base.sass */
 h1, h2, h3, h4, h5, h6 {
   color: #77666d;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 900;
 }
 
-/* line 43, ../sass/_base.sass */
+/* line 42, ../sass/_base.sass */
 #page-title {
   color: #4d3d44;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -1402,7 +1401,7 @@ tr.selected td {
   background-image: url('../images/progress.gif?1384008826');
 }
 
-/* line 755, ../sass/components/_misc.sass */
+/* line 757, ../sass/components/_misc.sass */
 .nice-menu li {
   color: #f4eee0;
   font-family: "Lato";
@@ -1410,7 +1409,7 @@ tr.selected td {
   font-weight: 400;
   border: 0 none white;
 }
-/* line 762, ../sass/components/_misc.sass */
+/* line 764, ../sass/components/_misc.sass */
 .nice-menu li a {
   text-decoration: none;
   color: white;
@@ -1420,29 +1419,29 @@ tr.selected td {
   padding-top: 9px;
 }
 
-/* line 773, ../sass/components/_misc.sass */
+/* line 775, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li {
   border: solid 1px black;
   background-color: #f4eee0;
   font-size: 1em;
   margin-top: 12px;
 }
-/* line 779, ../sass/components/_misc.sass */
+/* line 781, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li a {
   color: #0d332a;
   padding: 7px 7px;
 }
-/* line 782, ../sass/components/_misc.sass */
+/* line 784, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li a:hover, #navigation .nice-menu-down li li a:active {
   background-color: #e2e3d7;
   background-image: none;
 }
-/* line 785, ../sass/components/_misc.sass */
+/* line 787, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li:hover {
   background-color: #e2e3d7;
 }
 
-/* line 789, ../sass/components/_misc.sass */
+/* line 791, ../sass/components/_misc.sass */
 #site-slogan {
   font-family: "Lato";
   font-size: 1.25em;
@@ -1450,9 +1449,46 @@ tr.selected td {
   color: #20806a;
 }
 
-/* line 795, ../sass/components/_misc.sass */
+/* line 797, ../sass/components/_misc.sass */
 #secondary-menu {
   font-family: "Lato";
+}
+
+/* line 805, ../sass/components/_misc.sass */
+.pane-openlocal-event-categories-panel-pane-1 {
+  border-top: 1px #b19fa7 solid;
+  margin: 0.5em 0;
+}
+/* line 808, ../sass/components/_misc.sass */
+.pane-openlocal-event-categories-panel-pane-1 .views-row {
+  border-bottom: 1px #e3dcd1 solid;
+  padding: 0.5em 0;
+}
+/* line 811, ../sass/components/_misc.sass */
+.pane-openlocal-event-categories-panel-pane-1 .views-row:hover {
+  background-color: #e2e3d7;
+}
+/* line 813, ../sass/components/_misc.sass */
+.pane-openlocal-event-categories-panel-pane-1 .views-row:hover a {
+  color: #0d332a;
+}
+/* line 815, ../sass/components/_misc.sass */
+.pane-openlocal-event-categories-panel-pane-1 .views-row:active {
+  background-color: #20806a;
+}
+/* line 816, ../sass/components/_misc.sass */
+.pane-openlocal-event-categories-panel-pane-1 .views-row:active a {
+  color: white;
+}
+/* line 819, ../sass/components/_misc.sass */
+.pane-openlocal-event-categories-panel-pane-1 .views-row a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #20806a;
+  text-decoration: none;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 400;
 }
 
 /*
@@ -1631,54 +1667,145 @@ tr.selected td {
   font-size: 0.8em;
 }
 
-/* line 3, ../sass/components/_pane-openlocal-alert-panel-pane-1.sass */
-.pane-openlocal-alert-panel-pane-1 {
-  background-color: #e3dcd1;
+/* line 57, ../sass/components/_actions.sass */
+.view-ol-event-upcoming .views-field-field-ol-event-date {
+  margin: 0 5px 5px 0;
 }
-/* line 6, ../sass/components/_pane-openlocal-alert-panel-pane-1.sass */
-.pane-openlocal-alert-panel-pane-1 h2.pane-title {
-  padding: 4px 10px;
-  font-family: lato;
-  font-size: 1em;
-  color: #4d3d44;
+/* line 60, ../sass/components/_actions.sass */
+.view-ol-event-upcoming .views-field-field-featured-image {
+  margin: 0 5px 5px 0;
 }
-/* line 11, ../sass/components/_pane-openlocal-alert-panel-pane-1.sass */
-.pane-openlocal-alert-panel-pane-1 h2.pane-title:link {
-  color: #20806a;
+
+/* line 68, ../sass/components/_actions.sass */
+.pane-user-field-user-picture {
+  float: left;
+  margin-right: 5px;
+}
+
+/* line 72, ../sass/components/_actions.sass */
+#panels-ipe-paneid-110 {
+  float: right;
+}
+
+/* line 79, ../sass/components/_actions.sass */
+.ol-item-grid .views-row {
+  float: left;
+  width: 220px;
+}
+
+/* line 86, ../sass/components/_actions.sass */
+.view-id-openlocal_business .views-row,
+.view-id-openlocal_group .views-row {
+  margin: 5px;
 }
 
 /* line 9, ../sass/components/_panels.sass */
+.panel-pane h2 {
+  margin: 0 0;
+  color: #4d3d44;
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 1em;
+  text-decoration: none;
+}
+/* line 16, ../sass/components/_panels.sass */
+.panel-pane h2:link {
+  color: #20806a;
+  text-decoration: none;
+}
+/* line 19, ../sass/components/_panels.sass */
+.panel-pane h2:visited {
+  color: #20806a;
+}
+/* line 21, ../sass/components/_panels.sass */
+.panel-pane h2:active {
+  color: white;
+}
+/* line 23, ../sass/components/_panels.sass */
+.panel-pane h2 a {
+  color: #f4eee0;
+}
+
+/* line 28, ../sass/components/_panels.sass */
+.pane-openlocal-event-panel-pane-1 {
+  margin: 0.5em 0;
+  background-color: #e3dcd1;
+}
+/* line 31, ../sass/components/_panels.sass */
+.pane-openlocal-event-panel-pane-1 h2.pane-title {
+  border-bottom: 1px #b19fa7 solid;
+  padding: 0 4px;
+}
+/* line 34, ../sass/components/_panels.sass */
+.pane-openlocal-event-panel-pane-1 table {
+  margin: 0 0;
+  width: 100%;
+}
+/* line 37, ../sass/components/_panels.sass */
+.pane-openlocal-event-panel-pane-1 table tr {
+  vertical-align: top;
+  border-bottom: 1px #f4eee0 solid;
+  background-color: transparent;
+}
+/* line 41, ../sass/components/_panels.sass */
+.pane-openlocal-event-panel-pane-1 table td.views-field-field-ol-event-date {
+  padding: 0 4px;
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 18px;
+  color: #77666d;
+}
+/* line 47, ../sass/components/_panels.sass */
+.pane-openlocal-event-panel-pane-1 table td.views-field-title {
+  padding: 0 4px;
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 1em;
+  color: #77666d;
+  text-decoration: none;
+}
+/* line 54, ../sass/components/_panels.sass */
+.pane-openlocal-event-panel-pane-1 table td.views-field-title a {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: #0d332a;
+  font-size: 14px;
+}
+
+/* line 65, ../sass/components/_panels.sass */
 .calendar-calendar table tbody tr {
   background-color: transparent;
 }
 
-/* line 13, ../sass/components/_panels.sass */
+/* line 69, ../sass/components/_panels.sass */
 .view-ol-event-calendar {
-  background-color: transparent;
+  margin: 2em 0;
   border-top: 1px #b19fa7 solid;
   border-bottom: 1px solid #e3dcd1;
 }
 
-/* line 20, ../sass/components/_panels.sass */
-.date-heading {
+/* line 76, ../sass/components/_panels.sass */
+.view-ol-event-calendar .date-heading {
   border-bottom: 1px solid #e3dcd1;
 }
-/* line 22, ../sass/components/_panels.sass */
-.date-heading h3 {
+
+/* line 79, ../sass/components/_panels.sass */
+.view-ol-event-calendar .date-heading h3 {
   font-family: "Lato";
-  font-size: 1em;
 }
-/* line 25, ../sass/components/_panels.sass */
-.date-heading h3 a {
+/* line 81, ../sass/components/_panels.sass */
+.view-ol-event-calendar .date-heading h3 a {
+  font-size: 16px;
   text-decoration: none;
 }
 
-/* line 28, ../sass/components/_panels.sass */
+/* line 85, ../sass/components/_panels.sass */
 .calendar-calendar {
   border: 1px solid #f4eee0;
 }
 
-/* line 32, ../sass/components/_panels.sass */
+/* line 89, ../sass/components/_panels.sass */
 .calendar-calendar .month-view .mini thead tr .days {
   background-color: #e3dcd1;
   color: #b19fa7;
@@ -1692,13 +1819,13 @@ tr.selected td {
   padding: 0.4em 0;
 }
 
-/* line 44, ../sass/components/_panels.sass */
+/* line 101, ../sass/components/_panels.sass */
 .calendar-calendar .has-no-events {
   background-color: transparent;
   border: 1px #f4eee0 solid;
 }
 
-/* line 49, ../sass/components/_panels.sass */
+/* line 106, ../sass/components/_panels.sass */
 .calendar-calendar td {
   font-family: "Lato";
   font-weight: 400;
@@ -1707,98 +1834,137 @@ tr.selected td {
   color: #2f2127;
 }
 
-/* line 57, ../sass/components/_panels.sass */
+/* line 114, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on {
   background-color: #98b9b1;
 }
-/* line 59, ../sass/components/_panels.sass */
+/* line 116, ../sass/components/_panels.sass */
+.calendar-calendar .mini-day-on:hover {
+  background-color: #20806a;
+}
+/* line 118, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on a {
   text-decoration: none;
 }
-/* line 60, ../sass/components/_panels.sass */
+/* line 119, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on a:link {
   font-weight: 900;
   color: white;
 }
-/* line 64, ../sass/components/_panels.sass */
-.calendar-calendar .mini-day-on a:hover {
-  background-color: red;
-}
 
-/* line 67, ../sass/components/_panels.sass */
+/* line 125, ../sass/components/_panels.sass */
 .calendar-calendar .mini .today {
   background-color: #8c4965;
   font-weight: 900;
   color: #f4eee0;
 }
 
-/* line 72, ../sass/components/_panels.sass */
+/* line 130, ../sass/components/_panels.sass */
 .calendar-calendar .month {
   padding: 0.4em 0;
 }
 
-/* line 75, ../sass/components/_panels.sass */
-.calendar-calendar .empty {
-  background-color: blue;
+/* line 133, ../sass/components/_panels.sass */
+.calendar-calendar .month-view .mini .empty {
+  background-color: transparent;
 }
 
-/* line 78, ../sass/components/_panels.sass */
+/* line 136, ../sass/components/_panels.sass */
 .calendar-calendar .future {
   background-color: #e3dcd1;
 }
 
-/* line 81, ../sass/components/_panels.sass */
+/* line 139, ../sass/components/_panels.sass */
 .calendar-calendar .past {
   color: #b19fa7;
 }
-/* line 83, ../sass/components/_panels.sass */
+/* line 141, ../sass/components/_panels.sass */
 .calendar-calendar .past .has-events {
   color: #20806a;
   background-color: #e2e3d7;
 }
-/* line 86, ../sass/components/_panels.sass */
+/* line 144, ../sass/components/_panels.sass */
 .calendar-calendar .past .has-events:hover {
   background-color: #20806a;
 }
 
-/* line 37, ../sass/styles.sass */
-h1, h2, h3 {
-  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+/* line 151, ../sass/components/_panels.sass */
+.view-openlocal-business {
+  background-color: red;
+}
+/* line 153, ../sass/components/_panels.sass */
+.view-openlocal-business .view-content {
+  display: block;
+  display: clear;
 }
 
-/* line 40, ../sass/styles.sass */
+/* line 162, ../sass/components/_panels.sass */
+.view-display-id-list_news_articles .views-row {
+  background-color: #e3dcd1;
+  width: 210px;
+  padding: 0 5px;
+  font-family: "Lato";
+}
+
+/* line 171, ../sass/components/_panels.sass */
+.pane-openlocal-news-articles-by-author {
+  background-color: red;
+}
+/* line 174, ../sass/components/_panels.sass */
+.pane-openlocal-news-articles-by-author h2.pane-title {
+  padding: 4px 10px;
+  font-family: "Lato";
+  font-size: 1em;
+  color: #4d3d44;
+}
+/* line 179, ../sass/components/_panels.sass */
+.pane-openlocal-news-articles-by-author h2.pane-title:link {
+  color: #20806a;
+}
+
+/* line 184, ../sass/components/_panels.sass */
+.pane-openlocal-alert-panel-pane-1 {
+  background-color: #e3dcd1;
+}
+/* line 187, ../sass/components/_panels.sass */
+.pane-openlocal-alert-panel-pane-1 h2.pane-title {
+  padding: 4px 10px;
+  font-family: "Lato";
+  font-size: 1em;
+  color: #4d3d44;
+}
+/* line 192, ../sass/components/_panels.sass */
+.pane-openlocal-alert-panel-pane-1 h2.pane-title:link {
+  color: #20806a;
+}
+
+/* line 36, ../sass/styles.sass */
 .socialmedia {
   display: inline-block;
   vertical-align: top;
 }
-/* line 44, ../sass/styles.sass */
+/* line 40, ../sass/styles.sass */
 .socialmedia .fa {
   margin-left: 5px;
 }
 
-/* line 47, ../sass/styles.sass */
+/* line 43, ../sass/styles.sass */
 .top-right {
   float: right;
   margin-top: 10px;
 }
 
-/* line 51, ../sass/styles.sass */
+/* line 47, ../sass/styles.sass */
 #secondary-menu {
   display: inline-block;
   margin-top: 5px;
 }
-/* line 56, ../sass/styles.sass */
+/* line 52, ../sass/styles.sass */
 #secondary-menu a {
   text-decoration: none;
 }
 
-/* line 59, ../sass/styles.sass */
+/* line 55, ../sass/styles.sass */
 #search-form {
   float: right;
-}
-
-/* line 71, ../sass/styles.sass */
-.ol-item-grid .views-row {
-  float: left;
-  width: 45%;
 }

@@ -48,6 +48,9 @@ function openlocal_core_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -394,7 +397,7 @@ function openlocal_core_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_ol_geolocation',
     'label' => 'Geolocation',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
