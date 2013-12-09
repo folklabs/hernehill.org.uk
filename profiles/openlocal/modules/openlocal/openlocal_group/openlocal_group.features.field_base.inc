@@ -93,11 +93,14 @@ function openlocal_group_field_default_field_bases() {
     'locked' => 0,
     'module' => 'user_reference',
     'settings' => array(
+      'profile2_private' => FALSE,
       'referenceable_roles' => array(
         2 => 2,
         3 => 3,
         4 => 4,
         5 => 5,
+        6 => 0,
+        7 => 0,
       ),
       'referenceable_status' => array(
         0 => 0,
@@ -168,11 +171,18 @@ function openlocal_group_field_default_field_bases() {
           'og_behavior' => array(
             'status' => TRUE,
           ),
+          'views-select-list' => array(
+            'status' => 0,
+          ),
         ),
         'membership_type' => 'og_membership_type_default',
+        'sort' => array(
+          'type' => 'none',
+        ),
         'target_bundles' => array(),
       ),
       'handler_submit' => 'Change handler',
+      'profile2_private' => FALSE,
       'target_type' => 'node',
     ),
     'target_type' => 'node',

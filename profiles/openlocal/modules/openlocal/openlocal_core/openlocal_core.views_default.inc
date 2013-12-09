@@ -13,7 +13,7 @@ function openlocal_core_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_place';
   $view->description = 'Local places.';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'node';
   $view->human_name = 'OpenLocal Place';
   $view->core = 7;

@@ -48,7 +48,7 @@ function openlocal_gallery_field_default_field_instances() {
     'bundle' => 'ol_gallery',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Short text shown in lists and teaser views.',
+    'description' => 'Short text shown in lists, e.g. on a group page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -98,7 +98,7 @@ function openlocal_gallery_field_default_field_instances() {
     'bundle' => 'ol_gallery',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A longer description shown on the gallery page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -148,7 +148,7 @@ function openlocal_gallery_field_default_field_instances() {
     'bundle' => 'ol_gallery',
     'default_value' => array(),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add all the images one by one that go into this gallery.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -187,6 +187,9 @@ function openlocal_gallery_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
       'max_filesize' => '10 MB',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -210,7 +213,7 @@ function openlocal_gallery_field_default_field_instances() {
     'bundle' => 'ol_gallery',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add any tags that define this gallery in more detail. Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -258,8 +261,9 @@ function openlocal_gallery_field_default_field_instances() {
   $field_instances['node-ol_gallery-og_group_ref'] = array(
     'bundle' => 'ol_gallery',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select any groups this image gallery relates to.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -284,7 +288,7 @@ function openlocal_gallery_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
     'label' => 'Groups audience',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
@@ -295,6 +299,9 @@ function openlocal_gallery_field_default_field_instances() {
             'widget_type' => 'options_select',
           ),
           'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'status' => 0,
         ),
       ),
       'user_register_form' => FALSE,
@@ -312,6 +319,7 @@ function openlocal_gallery_field_default_field_instances() {
       ),
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
@@ -321,12 +329,16 @@ function openlocal_gallery_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A longer description shown on the gallery page.');
+  t('Add all the images one by one that go into this gallery.');
+  t('Add any tags that define this gallery in more detail. Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.');
   t('Comment');
   t('Description');
   t('Details');
   t('Groups audience');
   t('Images');
-  t('Short text shown in lists and teaser views.');
+  t('Please select any groups this image gallery relates to.');
+  t('Short text shown in lists, e.g. on a group page.');
   t('Tags');
 
   return $field_instances;

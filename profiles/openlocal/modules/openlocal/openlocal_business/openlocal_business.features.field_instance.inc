@@ -91,7 +91,7 @@ function openlocal_business_field_default_field_instances() {
   $field_instances['node-ol_business-field_featured_image'] = array(
     'bundle' => 'ol_business',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add an image of your business if possible.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -161,7 +161,7 @@ function openlocal_business_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter your business address if you have a fixed location.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -220,7 +220,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the appropriate categories for your business. These help people find your business by filtering by category.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -263,7 +263,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter your business contact email address.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -308,7 +308,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter your hours of trading, if you have a retail premises that accepts customers.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -417,9 +417,9 @@ function openlocal_business_field_default_field_instances() {
   // Exported field_instance: 'node-ol_business-field_ol_business_tags'
   $field_instances['node-ol_business-field_ol_business_tags'] = array(
     'bundle' => 'ol_business',
-    'default_value' => array(),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add any tags that define your business in more detail. Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -449,11 +449,13 @@ function openlocal_business_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'autocomplete_deluxe',
       'settings' => array(
         'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
-        'autocomplete_path' => 'taxonomy/autocomplete',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
@@ -466,7 +468,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter your business telephone number.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -517,7 +519,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter your business Twitter account, if you have one.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -569,7 +571,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter your business website address if you have one.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -633,7 +635,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This will appear on list pages, e.g. Services.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -683,7 +685,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Give a detailed description of your business or service.',
+    'description' => 'Enter a detailed description of your business, including details such as when you were established, your specialist skills and the typical sorts of work you do or what you sell.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1263,16 +1265,24 @@ function openlocal_business_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add an image of your business if possible.');
+  t('Add any tags that define your business in more detail. Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.');
   t('Address');
   t('Category');
   t('Description');
   t('Details');
   t('Disabled toilet');
   t('Email');
+  t('Enter a detailed description of your business, including details such as when you were established, your specialist skills and the typical sorts of work you do or what you sell.');
   t('Enter any promotions the business is offering, either as part of a local loyalty scheme or independently.');
+  t('Enter your business Twitter account, if you have one.');
+  t('Enter your business address if you have a fixed location.');
+  t('Enter your business contact email address.');
+  t('Enter your business telephone number.');
+  t('Enter your business website address if you have one.');
+  t('Enter your hours of trading, if you have a retail premises that accepts customers.');
   t('Event venue');
   t('Geolocation');
-  t('Give a detailed description of your business or service.');
   t('Image');
   t('Opening hours');
   t('Please choose this if the business premises are wheelchair accessible.');
@@ -1281,8 +1291,10 @@ function openlocal_business_field_default_field_instances() {
   t('Promotions');
   t('Reward scheme');
   t('Select if this business can be a venue for certain types of events.');
+  t('Select the appropriate categories for your business. These help people find your business by filtering by category.');
   t('Tags');
   t('Telephone');
+  t('This will appear on list pages, e.g. Services.');
   t('Twitter');
   t('Website');
   t('Wheelchair accessible');
