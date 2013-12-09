@@ -84,7 +84,7 @@ function openlocal_group_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'If this group has a physical base, enter the address here.',
+    'description' => 'If the group has a physical location or a regular meetup place, add the address.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -143,7 +143,7 @@ function openlocal_group_field_default_field_instances() {
     'bundle' => 'ol_group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This will appear in lists, .e.g. the Community section.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -193,7 +193,7 @@ function openlocal_group_field_default_field_instances() {
     'bundle' => 'ol_group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A longer description to describe the group.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -395,7 +395,7 @@ function openlocal_group_field_default_field_instances() {
     'bundle' => 'ol_group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Search for the usernames of people who will coordinate this group.',
+    'description' => 'Enter the names of up to three people who coordinate this group. Search for the usernames of those people.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -614,8 +614,9 @@ function openlocal_group_field_default_field_instances() {
   $field_instances['node-ol_group_post-og_group_ref'] = array(
     'bundle' => 'ol_group_post',
     'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the group this post belongs to.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -640,7 +641,7 @@ function openlocal_group_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
     'label' => 'Groups audience',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
@@ -651,6 +652,9 @@ function openlocal_group_field_default_field_instances() {
             'widget_type' => 'options_select',
           ),
           'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'status' => 0,
         ),
       ),
       'user_register_form' => FALSE,
@@ -668,6 +672,7 @@ function openlocal_group_field_default_field_instances() {
       ),
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
@@ -677,6 +682,7 @@ function openlocal_group_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A longer description to describe the group.');
   t('Address');
   t('Body');
   t('Campaign');
@@ -685,13 +691,15 @@ function openlocal_group_field_default_field_instances() {
   t('Description');
   t('Details');
   t('Determine if this is an OG group.');
+  t('Enter the names of up to three people who coordinate this group. Search for the usernames of those people.');
   t('Geolocation');
   t('Group');
   t('Groups audience');
-  t('If this group has a physical base, enter the address here.');
+  t('If the group has a physical location or a regular meetup place, add the address.');
   t('Image');
-  t('Search for the usernames of people who will coordinate this group.');
+  t('Select the group this post belongs to.');
   t('This group represents a campaign or other current priority activity.');
+  t('This will appear in lists, .e.g. the Community section.');
 
   return $field_instances;
 }

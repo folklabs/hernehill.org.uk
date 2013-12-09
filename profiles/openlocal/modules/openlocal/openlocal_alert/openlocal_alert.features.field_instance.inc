@@ -47,7 +47,7 @@ function openlocal_alert_field_default_field_instances() {
   $field_instances['node-ol_alert-field_featured_image'] = array(
     'bundle' => 'ol_alert',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add a photo of a missing pet or something relevant to this alert.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -107,7 +107,7 @@ function openlocal_alert_field_default_field_instances() {
     'bundle' => 'ol_alert',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A link to a forum post or other web page that gives more information.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -138,7 +138,7 @@ function openlocal_alert_field_default_field_instances() {
         'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -150,7 +150,7 @@ function openlocal_alert_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'rel_remove' => 'default',
-      'title' => 'value',
+      'title' => 'none',
       'title_maxlength' => 128,
       'title_value' => 'More details',
       'url' => 0,
@@ -216,7 +216,7 @@ function openlocal_alert_field_default_field_instances() {
     'bundle' => 'ol_alert',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A short summary that will be displayed in the alert.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -263,6 +263,9 @@ function openlocal_alert_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A link to a forum post or other web page that gives more information.');
+  t('A short summary that will be displayed in the alert.');
+  t('Add a photo of a missing pet or something relevant to this alert.');
   t('Comment');
   t('Description');
   t('Image');
