@@ -8,19 +8,19 @@ p, ul, ol
   font-family: $lato
   font-weight: 400
   a
-  &:link
+    &:link
     color: $col-links
     border-bottom: 1px, $col-links-lightest
-  &:visited
+    &:visited
     color: $col-links-darkest
-  &:hover
-    color: $col-links
-    border-bottom: 1px, $col-links
-    background-color: $col-links-lightest
-    margin-bottom: 0.25em
+  //&:hover
+    //color: $col-links
+    //border-bottom: 1px, $col-links
+    //background-color: $col-links-lightest
+    //margin-bottom: 0.25em
     // TODO: this was causing the logo to jump on mouse hover
     // padding-bottom: 0.25em
-  &:active
+    &:active
     color: $col-page
     background-color: $col-links
     border-bottom: 1px, $col-links-darkest
@@ -46,6 +46,8 @@ h1, h2, h3, h4, h5, h6
   color: $col-content-darker
   font-family: $merriweather
   font-weight: 300
+  line-height: 2 * $base-font-size
+  margin-top: 2 * $base-font-size
 
 
 blockquote

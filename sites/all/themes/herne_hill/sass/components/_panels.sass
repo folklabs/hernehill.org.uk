@@ -53,10 +53,55 @@
       text-decoration: none
       a
         font-family: $merriweather
-        font-weight: 400
+        font-weight: 300
         text-decoration: none
         color: $col-links-darkest
         font-size: 0.875 * $base-font-size
+
+//
+// UPCOMING EVENTS LISTING DISPLAY - LIST
+
+.pane-openlocal-event-panel-pane-2
+  border-top: 1px $col-content-lighter solid
+  margin-bottom: 0.5em
+
+.view-ol-event-upcoming table td
+  vertical-align: top
+
+.view-ol-event-upcoming table tr
+  background-color: transparent
+  border-bottom: 1px $col-content-lightest solid
+  &:hover
+    background-color: $col-links-lightest
+
+.views-field-field-ol-event-date
+  font-family: $lato
+  font-weight: 900
+  color: $col-content
+
+.views-field-field-featured-image
+  width: 120px
+  height: 80px
+
+.views-field-title
+  font-family: $lato
+  font-weight: 400
+  font-size: $base-font-size
+  color: $col-content
+  line-height: $base-font-size
+  padding: 0.25 * $base-font-size 0 0 0
+  a
+    font-family: $merriweather
+    font-size: 1.125 * $base-font-size
+    line-height: 1.5 * $base-font-size
+    font-weight: 300
+    text-decoration: none
+    &:link
+      color: $col-links
+    &:visited
+      color: $col-links
+    &:hover
+      color: $col-links
 
 //
 // UPCOMING EVENTS MINI CALENDAR
@@ -68,7 +113,6 @@
 // Styles basic panel header
 .view-ol-event-calendar
   .view-header
-  margin: 2em 0
   border-top: 1px $col-content-lighter solid
   border-bottom: 1px solid $col-content-lightest
 
@@ -81,6 +125,10 @@
   a
     font-size: 1 * $base-font-size
     text-decoration: none
+    color: $col-links
+
+.pane-ol-event-calendar-panel-pane-2
+  margin-bottom: 0.5em
 
 .calendar-calendar
   .month-view .mini
@@ -144,6 +192,17 @@
     &:hover
       background-color: $col-links
 
+// Style the month pager
+.view .date-nav-wrapper .pager li
+  background-color: transparent
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+  border-top-left-radius: 0
+  border-top-right-radius: 0
+  font-size: 1em
+  z-index: none
+  &:hover
+    background-color: $col-links-lighter
 
 //
 // SERVICES LISTING DISPLAY - GRID
@@ -161,12 +220,15 @@
 
 .view-display-id-list_news_articles .views-row
   background-color: $col-content-lightest
-  width: 210px
+  display: inline-block
+  width: 240px
+  margin: 0 20px 0.5em 0
   padding: 0 5px
   font-family: $lato
 
 
-// Styles the Other Articles by this Author panel
+//
+// OTHER ARTICLES BY THIS AUTHOR PANEL
 
 .pane-openlocal-news-articles-by-author
   background-color: red
@@ -179,13 +241,16 @@
     &:link
       color: $col-links
 
-// Styles the home page Alerts panel
+//
+// HOME PAGE ALERTS PANEL
+
+// Styles the panel heading
 
 .pane-openlocal-alert-panel-pane-1
   background-color: $col-content-lightest
 
   h2.pane-title
-    padding: 4px 10px
+    padding: 0.5em 5px
     font-family: $lato
     font-size: 1em
     color: $col-content-darker

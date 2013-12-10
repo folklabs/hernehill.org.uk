@@ -174,10 +174,10 @@
  // Breadcrumb navigation.
 .breadcrumb
   background-color: $col-content-lightest
-  margin: 0px -10px
+  margin: 0 -10px
   font-size: 0.85em
   ol
-    padding: 0 20px
+    padding: 0.25 * $base-font-size 20px
     margin: 0
   li
     display: inline
@@ -260,8 +260,16 @@
   background-color: #fef5f1
   color: #8c2e0b
 
+
+
+
+
+
+
+
+
 //
-// Tabs.
+// TABS
 
 // Basic positioning styles shared by primary and secondary tabs.
 %tabs
@@ -293,26 +301,28 @@
 
 .tabs-primary__tab
   @extend %tabs__tab
-  +border-top-radius(4px)
-  +single-text-shadow(white, 1px, 1px, 0)
+  +border-top-radius(0.1 * $base-font-size)
   border: 1px solid $tabs-border
   border-bottom-color: transparent
-  // IE 9 and earlier don't understand gradients.
+  // IE 9 and earlier don't understand gradients
   border-bottom: 0 \0/ie
 
 .tabs-primary__tab.is-active
   @extend .tabs-primary__tab
-  border-bottom-color: $tabs-container-bg
-  background-color: $tabs-container-bg
+  border-bottom-color: transparent
+  background-color: $col-page
+  font-family: $lato
+  font-weight: 900
+  color: $col-content-darkest
+  a
+    &:link
+    color: $col-links-darkest
 
 // We use 3 placeholder styles to prevent @extend from going selector crazy.
 %tabs-primary__tab-link
   @extend %tabs__tab-link
-  +border-top-radius(4px)
-  +transition(background-color 0.3s)
-  color: #333
+  +border-top-radius(0.1 * $base-font-size)
   background-color: #dedede
-  letter-spacing: 1px
   padding: 0 1em
   text-align: center
 
@@ -382,6 +392,12 @@ a.tabs-secondary__tab-link
 a.tabs-secondary__tab-link.is-active
   @extend %tabs-secondary__tab-link
   @extend %tabs-secondary__tab-link-is-active
+
+
+
+
+
+
 
 //
  // Inline styles.
@@ -813,7 +829,7 @@ tr.selected td
 
 .pane-openlocal-event-categories-panel-pane-1
   border-top: 1px $col-content-lighter solid
-  margin: 0.5em 0
+  margin-bottom: 0.5em
   .views-row
     border-bottom: 1px $col-content-lightest solid
     padding: 0.5em 0
