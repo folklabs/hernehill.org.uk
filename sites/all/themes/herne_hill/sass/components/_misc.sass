@@ -66,7 +66,7 @@
   font-size: 1.5 * $base-font-size
 
 //
-// Branding header.
+// BRANDING HEADER
 
 // Wrapping link for logo.
 .header__logo
@@ -111,12 +111,14 @@
   margin-left: 20px
 
 //
-// Branding footer.
+// BRANDING FOOTER
 
 #footer
   background-color: $col-content-darker
   margin: 20px 0 0 0
-  width: 200px
+  width: 100%
+  position: fixed
+  bottom: 0%
 
 
 
@@ -131,10 +133,14 @@
   clear: both
 
 //
-// Navigation bar.
+// NAVIGATION
+
+// Style the basic navigation bar
+
 #navigation
   // Sometimes you want to prevent overlapping with main div.
   // overflow: hidden;
+  height: 3em
   .block
     margin-bottom: 0
   .block-menu .block__title,
@@ -151,7 +157,7 @@
       // A simple method to get navigation links to appear in one line.
       float: left
       // LTR
-      padding: 0 10px 0 0
+      padding: 0
       // LTR
       list-style-type: none
       list-style-image: none
@@ -170,8 +176,64 @@
   background-image: -ms-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
   background-image: linear-gradient(to bottom, $col-links-darker 0%, $col-links-darkest 100%)
 
+
+// Nice Menus styles
+.nice-menu
+  height: 100%
+  li
+    color: $col-page
+    font-family: $lato
+    font-size: 1.25 * $base-font-size
+    font-weight: 300
+    height: 100%
+    vertical-align: center
+    padding: 0 0
+    a
+      text-decoration: none
+      letter-spacing: 0.025em
+      padding: 12px 15px
+      color: $col-page
+
+
+// Styles for sub-menu links
+#navigation
+  .nice-menu-down
+    li
+      li
+        border-left: solid 1px $col-content-lighter
+        border-right: solid 1px $col-content-lighter
+        border-bottom: solid 1px $col-content-lighter
+        background-color: $col-page
+        font-size: 1 * $base-font-size
+        font-weight: 400
+        color: $col-links
+        a
+          color: $col-links-darkest
+          padding: 0.25em 15px
+        a:link
+          color: $col-links
+        a:hover
+          background-color: $col-links-lightest
+          background-image: none
+        a:active
+          background-color: $col-links
+          color: white
+      li:hover
+        background-color: $col-links-lightest
+
+#navigation
+  .nice-menu-down
+    ul
+      margin-top: 0.6em
+      ul
+        margin-top: 0.05em
+        border-top: 1px solid $col-content-lighter
+
+
+
+
 //
- // Breadcrumb navigation.
+// BREADCRUMB NAVIGATION
 .breadcrumb
   background-color: $col-content-lightest
   margin: 0 -10px
@@ -466,18 +528,7 @@ span.field-label
   @extend %pager__item
   font-weight: bold
 
-//
- // Blocks.
 
-// Block wrapper.
-.block
-  margin-bottom: rhythm(1)
-
-.pane-node-field-ol-event-venue-ref
-  background-color: $col-content-lightest
-  h2
-    font-family: $lato
-    font-size: 1em
 
 //
 // Menus
@@ -542,7 +593,7 @@ span.field-label
     position: relative
 
 //
-// Comments.
+// COMMENTS
 
 // Wrapper for the list of comments and its title.
 .comments
@@ -567,7 +618,7 @@ span.field-label
   // LTR
 
 //
-// Forms.
+// FORMS
 
 // Wrapper for a form element (or group of form elements) and its label.
 .form-item
@@ -772,45 +823,11 @@ tr.selected td
     background-color: #0072b9
     background-image: image-url("progress.gif")
 
+
 //
-// NAVIGATION
+// BRANDING
 
-// Nice Menus
-.nice-menu
-  li
-    color: $col-page
-    font-family: $lato
-    font-size: 1.25em
-    font-weight: 400
-
-    border: 0 none white
-    a
-      text-decoration: none
-      color: #fff
-      height: 1.67em
-      padding-left: 10px
-      padding-right: 10px
-      padding-top: 9px
-
-#navigation
-  .nice-menu-down
-    li
-      li
-        border: solid 1px #000
-        background-color: $col-page
-        font-size: 1em
-        margin-top: 12px
-        // padding: 3px 5px
-        a
-          color: $col-links-darkest
-          padding: 7px 7px
-        a:hover, a:active
-          background-color: $col-links-lightest
-          background-image: none
-      li:hover
-        background-color: $col-links-lightest
-
-
+// Site slogan or strapline
 #site-slogan,
   font-family: $lato
   font-size: 1.25em
@@ -818,8 +835,14 @@ tr.selected td
   color: $col-links
   line-height: 1.4em
 
+// Secondary menu
 #secondary-menu
   font-family: $lato
+  display: block
+  a
+    background-color: transparent
+    &:hover
+      background-color: green
 
 
 //
