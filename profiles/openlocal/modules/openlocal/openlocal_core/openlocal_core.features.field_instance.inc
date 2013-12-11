@@ -84,7 +84,7 @@ function openlocal_core_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter the address of this location.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -149,7 +149,7 @@ function openlocal_core_field_default_field_instances() {
     'bundle' => 'ol_place',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This will appear in lists, .e.g. the list of venues.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -199,7 +199,7 @@ function openlocal_core_field_default_field_instances() {
     'bundle' => 'ol_place',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Give any additional info about this place.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -253,7 +253,7 @@ function openlocal_core_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please choose this if this location has a disabled toilet.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -302,7 +302,7 @@ function openlocal_core_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please choose this if this location can be used as an event venue. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -431,7 +431,7 @@ function openlocal_core_field_default_field_instances() {
     'bundle' => 'ol_place',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Add any tags that define this content in more detail, e.g. "school". Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -484,7 +484,7 @@ function openlocal_core_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please choose this if this location is accessible to wheelchair users.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -533,7 +533,7 @@ function openlocal_core_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please chose this if this location has wi-fi.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -575,14 +575,22 @@ function openlocal_core_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add any tags that define this content in more detail, e.g. "school". Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering.');
   t('Address');
   t('Description');
   t('Details');
   t('Disabled toilet');
+  t('Enter the address of this location.');
   t('Event venue');
   t('Geolocation');
+  t('Give any additional info about this place.');
   t('Image');
+  t('Please choose this if this location can be used as an event venue. ');
+  t('Please choose this if this location has a disabled toilet.');
+  t('Please choose this if this location is accessible to wheelchair users.');
+  t('Please chose this if this location has wi-fi.');
   t('Tags');
+  t('This will appear in lists, .e.g. the list of venues.');
   t('Wheelchair accessible');
   t('Wi-fi');
 
