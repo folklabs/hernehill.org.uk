@@ -681,7 +681,11 @@ a.button
   color: red
   font-size: 1.25 * $base-font-size
   background-color: transparent
-
+  border: 1px solid
+  +gradient-field-outline-inset-down
+  -moz-box-shadow:    inset 0 0 10px $col-content-lighter
+  -webkit-box-shadow: inset 0 0 10px $col-content-lighter
+  box-shadow:         inset 0 0 10px $col-content-lighter
 input.search-query
 
 
