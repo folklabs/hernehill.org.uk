@@ -94,7 +94,7 @@ function openlocal_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'preview_image_style' => 'openlocal_events_listing',
+        'preview_image_style' => 'medium',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
