@@ -127,6 +127,7 @@ function openlocal_event_field_default_field_bases() {
           'view_name' => 'openlocal_event',
         ),
       ),
+      'profile2_private' => FALSE,
       'target_type' => 'node',
     ),
     'translatable' => 0,

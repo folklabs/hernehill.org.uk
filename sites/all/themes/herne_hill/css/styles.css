@@ -1441,7 +1441,7 @@ tr.selected td {
 /* line 821, ../sass/components/_misc.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384446789');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
 /* line 830, ../sass/components/_misc.sass */
@@ -1685,61 +1685,71 @@ tr.selected td {
   background-color: #e3dcd1;
 }
 
-/* line 46, ../sass/components/_actions.sass */
+/* line 47, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-field-ol-event-date {
+  text-align: center;
+}
+/* line 48, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-field-ol-event-date span:first-child {
+  font-size: 1.8em;
+  display: block;
+}
+
+/* line 54, ../sass/components/_actions.sass */
 .field-name-field-ol-event-category,
 .field-name-field-ol-event-date {
   background-color: #e3dcd1;
   padding: 3px 0 6px 2px;
   border-bottom: solid 1px white;
 }
-/* line 52, ../sass/components/_actions.sass */
+/* line 60, ../sass/components/_actions.sass */
 .field-name-field-ol-event-category .field-label,
 .field-name-field-ol-event-date .field-label {
   width: 80px;
   font-size: 0.8em;
 }
 
-/* line 57, ../sass/components/_actions.sass */
+/* line 65, ../sass/components/_actions.sass */
 .view-ol-event-upcoming .views-field-field-ol-event-date {
   margin: 0 5px 5px 0;
 }
-/* line 60, ../sass/components/_actions.sass */
+/* line 68, ../sass/components/_actions.sass */
 .view-ol-event-upcoming .views-field-field-featured-image {
   margin: 0 5px 5px 0;
 }
 
-/* line 68, ../sass/components/_actions.sass */
+/* line 76, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 72, ../sass/components/_actions.sass */
+/* line 80, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 79, ../sass/components/_actions.sass */
+/* line 87, ../sass/components/_actions.sass */
 .ol-item-grid .views-row {
   float: left;
   width: 220px;
 }
 
-/* line 86, ../sass/components/_actions.sass */
+/* line 94, ../sass/components/_actions.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   margin: 5px;
 }
 
-/* line 92, ../sass/components/_actions.sass */
+/* line 100, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 94, ../sass/components/_actions.sass */
+/* line 102, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 97, ../sass/components/_actions.sass */
+/* line 105, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
