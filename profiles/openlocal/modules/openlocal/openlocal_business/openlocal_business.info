@@ -43,6 +43,7 @@ features[ctools][] = views:views_default:3.0
 features[eck_bundle][] = ol_promotion_ol_promotion
 features[eck_entity_type][] = ol_promotion
 features[fe_block_boxes][] = ol_business_actions
+features[fe_block_boxes][] = ol_business_your_business_here
 features[features_api][] = api:2
 features[field_base][] = field_ol_business_category
 features[field_base][] = field_ol_business_email
