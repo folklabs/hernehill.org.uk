@@ -15,6 +15,13 @@ function openlocal_user_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function openlocal_user_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_default_profile2_type().
  */
 function openlocal_user_default_profile2_type() {
