@@ -1,12 +1,12 @@
-/**
- * @file
- * Positioning for a fixed-width, desktop-centric layout.
- *
- * Define CSS classes to create a table-free, 3-column, 2-column, or single
- * column layout depending on whether blocks are enabled in the left or right
- * columns.
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+//
+// @file
+// Positioning for a fixed-width, desktop-centric layout.
+//
+// Define CSS classes to create a table-free, 3-column, 2-column, or single
+// column layout depending on whether blocks are enabled in the left or right
+// columns.
+//
+// This layout uses the Zen Grids plugin for Compass: http://zengrids.com
 
 // We are going to create a 980px wide, 5 column grid with 20px gutters between
 // columns (applied as 10px of left/right padding on each column).
@@ -27,17 +27,17 @@ $zen-auto-include-item-base: false
 
 // Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
 @if $zen-reverse-all-floats == false
-  /**
-   * Center the page.
-   *
-   * If you want to make the page a fixed width and centered in the viewport,
-   * this is the standards-compliant way to do that.
+// 
+  // Center the page.
+  // 
+  // If you want to make the page a fixed width and centered in the viewport,
+  // this is the standards-compliant way to do that.
   #page,
   .region-bottom
     margin-left: auto
     margin-right: auto
     width: $zen-grid-width
-  /* Apply the shared properties of grid items in a single, efficient ruleset.
+  // Apply the shared properties of grid items in a single, efficient ruleset.
   #header,
   #content,
   #navigation,
@@ -46,18 +46,18 @@ $zen-auto-include-item-base: false
   #footer
     // See the note about $zen-auto-include-item-base above.
     +zen-grid-item-base
-  /* Containers for grid items and flow items.
+  // Containers for grid items and flow items.
   #header,
   #main,
   #footer
     +zen-grid-container
-  /* Navigation bar
+  // Navigation bar
   #main
-    /* Move all the children of #main down to make room.
+    // Move all the children of #main down to make room.
     padding-top: $nav-height
     position: relative
   #navigation
-    /* Move the navbar up inside #main's padding.
+    // Move the navbar up inside #main's padding.
     position: absolute
     top: 0
     height: $nav-height
@@ -65,35 +65,35 @@ $zen-auto-include-item-base: false
 
 // End of @if $zen-reverse-all-floats == true
 
-/**
- * The layout when there is only one sidebar, the left one.
+// 
+ // The layout when there is only one sidebar, the left one.
 .sidebar-first
-  /* Span 4 columns, starting in 2nd column from left.
+  // Span 4 columns, starting in 2nd column from left.
   #content
     +zen-grid-item(4, 2)
-  /* Span 1 column, starting in 1st column from left.
+  // Span 1 column, starting in 1st column from left.
   .region-sidebar-first
     +zen-grid-item(1, 1)
 
-/**
- * The layout when there is only one sidebar, the right one.
+// 
+// The layout when there is only one sidebar, the right one.
 .sidebar-second
-  /* Span 4 columns, starting in 1st column from left.
+  // Span 4 columns, starting in 1st column from left.
   #content
     +zen-grid-item(4, 1)
-  /* Span 1 column, starting in 5th column from left.
+  // Span 1 column, starting in 5th column from left.
   .region-sidebar-second
     +zen-grid-item(1, 5)
 
-/**
- * The layout when there are two sidebars.
+//
+// The layout when there are two sidebars.
 .two-sidebars
-  /* Span 3 columns, starting in 2nd column from left.
+  // Span 3 columns, starting in 2nd column from left.
   #content
     +zen-grid-item(3, 2)
-  /* Span 1 column, starting in 1st column from left.
+  // Span 1 column, starting in 1st column from left.
   .region-sidebar-first
     +zen-grid-item(1, 1)
-  /* Span 1 column, starting in 5th column from left.
+  // Span 1 column, starting in 5th column from left.
   .region-sidebar-second
     +zen-grid-item(1, 5)
