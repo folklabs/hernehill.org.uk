@@ -1317,46 +1317,56 @@ a.button {
   color: red;
   font-size: 20px;
   background-color: transparent;
+  border: 1px solid;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #98b9b1), color-stop(50%, #f4eee0), color-stop(100%, white));
+  background-image: -o-linear-gradient(top, #98b9b1 0%, #f4eee0 50%, white 100%);
+  background-image: -moz-linear-gradient(top, #98b9b1 0%, #f4eee0 50%, white 100%);
+  background-image: -webkit-linear-gradient(top, #98b9b1 0%, #f4eee0 50%, white 100%);
+  background-image: -ms-linear-gradient(top, #98b9b1 0%, #f4eee0 50%, white 100%);
+  background-image: linear-gradient(to bottom, #98b9b1 0%, #f4eee0 50%, #ffffff 100%);
+  -moz-box-shadow: inset 0 0 10px #b19fa7;
+  -webkit-box-shadow: inset 0 0 10px #b19fa7;
+  box-shadow: inset 0 0 10px #b19fa7;
 }
 
-/* line 695, ../sass/components/_misc.sass */
+/* line 699, ../sass/components/_misc.sass */
 .openid-links {
   margin-bottom: 0;
 }
 
-/* line 701, ../sass/components/_misc.sass */
+/* line 705, ../sass/components/_misc.sass */
 .openid-link,
 .user-link {
   margin-top: 1.5em;
 }
 
-/* line 705, ../sass/components/_misc.sass */
+/* line 709, ../sass/components/_misc.sass */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   margin-left: -20px;
 }
 
-/* line 711, ../sass/components/_misc.sass */
+/* line 715, ../sass/components/_misc.sass */
 #user-login ul {
   margin: 1.5em 0;
 }
 
-/* line 717, ../sass/components/_misc.sass */
+/* line 721, ../sass/components/_misc.sass */
 form th {
   text-align: left;
   padding-right: 1em;
   border-bottom: 3px solid #cccccc;
 }
-/* line 723, ../sass/components/_misc.sass */
+/* line 727, ../sass/components/_misc.sass */
 form tbody {
   border-top: 1px solid #cccccc;
 }
-/* line 725, ../sass/components/_misc.sass */
+/* line 729, ../sass/components/_misc.sass */
 form table ul {
   margin: 0;
 }
 
-/* line 728, ../sass/components/_misc.sass */
+/* line 732, ../sass/components/_misc.sass */
 tr.even,
 tr.odd {
   background-color: #eeeeee;
@@ -1364,77 +1374,77 @@ tr.odd {
   padding: 0.1em 0.6em;
 }
 
-/* line 734, ../sass/components/_misc.sass */
+/* line 738, ../sass/components/_misc.sass */
 tr.even {
   background-color: white;
 }
 
-/* line 746, ../sass/components/_misc.sass */
+/* line 750, ../sass/components/_misc.sass */
 td.active {
   background-color: #dddddd;
 }
 
-/* line 751, ../sass/components/_misc.sass */
+/* line 755, ../sass/components/_misc.sass */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
-/* line 756, ../sass/components/_misc.sass */
+/* line 760, ../sass/components/_misc.sass */
 td.menu-disabled {
   background: #cccccc;
 }
 
-/* line 765, ../sass/components/_misc.sass */
+/* line 769, ../sass/components/_misc.sass */
 #autocomplete .selected {
   background: #0072b9;
   color: white;
 }
 
-/* line 774, ../sass/components/_misc.sass */
+/* line 778, ../sass/components/_misc.sass */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
   background-repeat: no-repeat;
   padding-left: 15px;
 }
-/* line 783, ../sass/components/_misc.sass */
+/* line 787, ../sass/components/_misc.sass */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   background-position: 5px 50%;
 }
-/* line 791, ../sass/components/_misc.sass */
+/* line 795, ../sass/components/_misc.sass */
 .fieldset-legend .summary {
   color: #999999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
-/* line 800, ../sass/components/_misc.sass */
+/* line 804, ../sass/components/_misc.sass */
 tr.drag {
   background-color: ivory;
 }
 
-/* line 803, ../sass/components/_misc.sass */
+/* line 807, ../sass/components/_misc.sass */
 tr.drag-previous {
   background-color: #ffffdd;
 }
 
-/* line 806, ../sass/components/_misc.sass */
+/* line 810, ../sass/components/_misc.sass */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
 
-/* line 813, ../sass/components/_misc.sass */
+/* line 817, ../sass/components/_misc.sass */
 tr.selected td {
   background: #ffffcc;
 }
 
-/* line 820, ../sass/components/_misc.sass */
+/* line 824, ../sass/components/_misc.sass */
 .progress {
   font-weight: bold;
 }
-/* line 822, ../sass/components/_misc.sass */
+/* line 826, ../sass/components/_misc.sass */
 .progress .bar {
   background: #cccccc;
   border-color: #666666;
@@ -1445,13 +1455,13 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 827, ../sass/components/_misc.sass */
+/* line 831, ../sass/components/_misc.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1376896851');
+  background-image: url('../images/progress.gif?1384008826');
 }
 
-/* line 836, ../sass/components/_misc.sass */
+/* line 840, ../sass/components/_misc.sass */
 #site-slogan {
   font-family: "Lato";
   font-size: 1.25em;
@@ -1460,47 +1470,47 @@ tr.selected td {
   line-height: 1.4em;
 }
 
-/* line 844, ../sass/components/_misc.sass */
+/* line 848, ../sass/components/_misc.sass */
 #secondary-menu {
   font-family: "Lato";
   display: block;
 }
-/* line 847, ../sass/components/_misc.sass */
+/* line 851, ../sass/components/_misc.sass */
 #secondary-menu a {
   background-color: transparent;
 }
-/* line 849, ../sass/components/_misc.sass */
+/* line 853, ../sass/components/_misc.sass */
 #secondary-menu a:hover {
   background-color: green;
 }
 
-/* line 858, ../sass/components/_misc.sass */
+/* line 862, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 {
   border-top: 1px #b19fa7 solid;
   margin-bottom: 0.5em;
 }
-/* line 861, ../sass/components/_misc.sass */
+/* line 865, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row {
   border-bottom: 1px #e3dcd1 solid;
   padding: 0.5em 0;
 }
-/* line 864, ../sass/components/_misc.sass */
+/* line 868, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:hover {
   background-color: #e2e3d7;
 }
-/* line 866, ../sass/components/_misc.sass */
+/* line 870, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:hover a {
   color: #0d332a;
 }
-/* line 868, ../sass/components/_misc.sass */
+/* line 872, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:active {
   background-color: #20806a;
 }
-/* line 869, ../sass/components/_misc.sass */
+/* line 873, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:active a {
   color: white;
 }
-/* line 872, ../sass/components/_misc.sass */
+/* line 876, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row a {
   padding-left: 10px;
   padding-right: 10px;
@@ -1511,15 +1521,15 @@ tr.selected td {
   font-weight: 400;
 }
 
-/* line 882, ../sass/components/_misc.sass */
+/* line 886, ../sass/components/_misc.sass */
 #search-form .form-type-textfield {
   vertical-align: top;
 }
-/* line 884, ../sass/components/_misc.sass */
+/* line 888, ../sass/components/_misc.sass */
 #search-form .form-type-textfield #edit-keys {
   vertical-align: top;
 }
-/* line 887, ../sass/components/_misc.sass */
+/* line 891, ../sass/components/_misc.sass */
 #search-form .form-submit {
   margin-top: -3px;
   background: transparent url(../images/search.png) no-repeat left top;
@@ -1614,19 +1624,19 @@ tr.selected td {
     display: none;
   }
 }
-/* line 2, ../sass/components/_actions.sass */
+/* line 3, ../sass/components/_actions.sass */
 .ol-action-box {
   background-color: #e3dcd1;
   padding: 0.5em 5px;
 }
 
-/* line 7, ../sass/components/_actions.sass */
+/* line 9, ../sass/components/_actions.sass */
 .ol-action-box a:hover {
   text-decoration: none;
   margin-bottom: 0;
 }
 
-/* line 11, ../sass/components/_actions.sass */
+/* line 13, ../sass/components/_actions.sass */
 .ol-action-button {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #20806a));
   background-image: -o-linear-gradient(top, #144c3f 0%, #20806a 100%);
@@ -1641,7 +1651,7 @@ tr.selected td {
   text-align: center;
   padding: 5px 20px;
 }
-/* line 19, ../sass/components/_actions.sass */
+/* line 21, ../sass/components/_actions.sass */
 .ol-action-button:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #98b9b1));
   background-image: -o-linear-gradient(top, #20806a 0%, #98b9b1 100%);
@@ -1650,7 +1660,7 @@ tr.selected td {
   background-image: -ms-linear-gradient(top, #20806a 0%, #98b9b1 100%);
   background-image: linear-gradient(to top, #20806a 0%, #98b9b1 100%);
 }
-/* line 21, ../sass/components/_actions.sass */
+/* line 23, ../sass/components/_actions.sass */
 .ol-action-button:active {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0d332a), color-stop(1, #144c3f));
   background-image: -o-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
@@ -1660,25 +1670,25 @@ tr.selected td {
   background-image: linear-gradient(to bottom, #0d332a 0%, #144c3f 100%);
 }
 
-/* line 24, ../sass/components/_actions.sass */
+/* line 26, ../sass/components/_actions.sass */
 .ol-action-button a {
   text-decoration: none;
 }
-/* line 26, ../sass/components/_actions.sass */
+/* line 28, ../sass/components/_actions.sass */
 .ol-action-button a:link {
   color: #e3dcd1;
 }
-/* line 28, ../sass/components/_actions.sass */
+/* line 30, ../sass/components/_actions.sass */
 .ol-action-button a:visited {
   color: #e2e3d7;
 }
-/* line 30, ../sass/components/_actions.sass */
+/* line 32, ../sass/components/_actions.sass */
 .ol-action-button a:hover {
   color: #0d332a;
   background-color: transparent;
 }
 
-/* line 34, ../sass/components/_actions.sass */
+/* line 36, ../sass/components/_actions.sass */
 .ol-action-help {
   display: block;
   padding: 0px 0px;
@@ -1687,76 +1697,121 @@ tr.selected td {
   text-decoration: none;
 }
 
-/* line 43, ../sass/components/_actions.sass */
+/* line 45, ../sass/components/_actions.sass */
 .ol-event-upcoming-sidebar {
   background-color: #e3dcd1;
 }
 
-/* line 47, ../sass/components/_actions.sass */
+/* line 49, ../sass/components/_actions.sass */
 .view-ol-event-upcoming-sidebar .views-field-field-ol-event-date {
   text-align: center;
 }
-/* line 48, ../sass/components/_actions.sass */
+/* line 50, ../sass/components/_actions.sass */
 .view-ol-event-upcoming-sidebar .views-field-field-ol-event-date span:first-child {
-  font-size: 1.8em;
+  margin: 0.25em 0 0 0;
+  font-size: 18px;
+  color: #2f2127;
+  display: block;
+}
+/* line 56, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-field-ol-event-date span:last-child {
+  margin: 0 0 0.5em 0;
+  font-size: 12px;
+  color: #77666d;
+  line-height: 1em;
   display: block;
 }
 
-/* line 54, ../sass/components/_actions.sass */
+/* line 66, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-title a:first-child {
+  margin: 0.75em 0 0 0;
+}
+/* line 68, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-title a:first-child:link {
+  font-size: 14px;
+  line-height: 14px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #144c3f;
+}
+/* line 75, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-title a:first-child:hover {
+  color: #0d332a;
+}
+/* line 77, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-title a:last-child {
+  margin: 0.25em 0 0.5em 0;
+}
+/* line 79, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-title a:last-child:link {
+  font-size: 12px;
+  font-family: "Lato";
+  line-height: 1em;
+  font-weight: 400;
+  display: block;
+  color: #20806a;
+}
+/* line 86, ../sass/components/_actions.sass */
+.view-ol-event-upcoming-sidebar .views-field-title a:last-child:hover {
+  color: #0d332a;
+}
+
+/* line 96, ../sass/components/_actions.sass */
 .field-name-field-ol-event-category,
 .field-name-field-ol-event-date {
   background-color: #e3dcd1;
   padding: 3px 0 6px 2px;
   border-bottom: solid 1px white;
 }
-/* line 60, ../sass/components/_actions.sass */
+/* line 102, ../sass/components/_actions.sass */
 .field-name-field-ol-event-category .field-label,
 .field-name-field-ol-event-date .field-label {
   width: 80px;
   font-size: 0.8em;
 }
 
-/* line 65, ../sass/components/_actions.sass */
+/* line 107, ../sass/components/_actions.sass */
 .view-ol-event-upcoming .views-field-field-ol-event-date {
   margin: 0 5px 5px 0;
 }
-/* line 68, ../sass/components/_actions.sass */
+/* line 110, ../sass/components/_actions.sass */
 .view-ol-event-upcoming .views-field-field-featured-image {
   margin: 0 5px 5px 0;
 }
 
-/* line 76, ../sass/components/_actions.sass */
+/* line 118, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 80, ../sass/components/_actions.sass */
+/* line 122, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 87, ../sass/components/_actions.sass */
+/* line 129, ../sass/components/_actions.sass */
 .ol-item-grid .views-row {
   float: left;
   width: 220px;
 }
 
-/* line 94, ../sass/components/_actions.sass */
+/* line 136, ../sass/components/_actions.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   margin: 5px;
 }
 
-/* line 100, ../sass/components/_actions.sass */
+/* line 142, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 102, ../sass/components/_actions.sass */
+/* line 144, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 105, ../sass/components/_actions.sass */
+/* line 147, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
@@ -2051,7 +2106,7 @@ tr.selected td {
 
 /* line 226, ../sass/components/_panels.sass */
 .view-openlocal-business {
-  background-color: red;
+  background-color: #e3dcd1;
 }
 /* line 228, ../sass/components/_panels.sass */
 .view-openlocal-business .view-content {
@@ -2071,7 +2126,7 @@ tr.selected td {
 
 /* line 249, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author {
-  background-color: red;
+  background-color: #e3dcd1;
 }
 /* line 252, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author h2.pane-title {
