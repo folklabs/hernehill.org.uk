@@ -54,6 +54,8 @@ stylesheets[all][] = css/styles.css
 
 stylesheets[all][] = libraries/font-awesome/css/font-awesome.min.css
 
+stylesheets[all][] = css/bootstrap.css
+
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
 ; element, such as .lt-ie9, .lt-ie8, .lt-ie7. More information on this
@@ -69,6 +71,9 @@ stylesheets[all][] = libraries/font-awesome/css/font-awesome.min.css
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/script.js
+scripts[] = js/bootstrap.tooltip.js
+scripts[] = js/bootstrap.popover.js
+
 
 
 
