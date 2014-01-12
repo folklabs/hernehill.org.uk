@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OpenLocal Event Help feature.
+ */
+
+include_once 'openlocal_event_help.features.inc';
