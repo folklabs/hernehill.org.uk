@@ -404,6 +404,12 @@ blockquote {
   font-weight: 900;
 }
 
+/* line 62, ../sass/_base.sass */
+::selection {
+  background-color: #8c4965;
+  color: #f4eee0;
+}
+
 /*
  * @file
  * Positioning for a responsive layout.
@@ -682,7 +688,7 @@ blockquote {
   outline: 1px solid #cccccc;
 }
 
-/* line 29, ../sass/components/_misc.sass */
+/* line 37, ../sass/components/_misc.sass */
 .element-invisible,
 .element-focusable,
 #navigation .block-menu .block__title,
@@ -694,7 +700,7 @@ blockquote {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 34, ../sass/components/_misc.sass */
+/* line 42, ../sass/components/_misc.sass */
 .element-focusable:active, .element-focusable:focus {
   position: static !important;
   clip: auto;
@@ -703,11 +709,11 @@ blockquote {
   overflow: auto;
 }
 
-/* line 45, ../sass/components/_misc.sass */
+/* line 53, ../sass/components/_misc.sass */
 #skip-link {
   margin: 0;
 }
-/* line 47, ../sass/components/_misc.sass */
+/* line 55, ../sass/components/_misc.sass */
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -718,12 +724,12 @@ blockquote {
   color: white;
 }
 
-/* line 59, ../sass/components/_misc.sass */
+/* line 74, ../sass/components/_misc.sass */
 .pane-node-field-ol-details blockquote {
   border-top: 2px;
 }
 
-/* line 62, ../sass/components/_misc.sass */
+/* line 77, ../sass/components/_misc.sass */
 .field-name-field-ol-description {
   margin-top: 0.25em;
   color: #b19fa7;
@@ -731,18 +737,18 @@ blockquote {
   font-size: 24px;
 }
 
-/* line 72, ../sass/components/_misc.sass */
+/* line 94, ../sass/components/_misc.sass */
 .header__logo {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 77, ../sass/components/_misc.sass */
+/* line 99, ../sass/components/_misc.sass */
 .header__logo:hover {
   background-color: transparent;
 }
 
-/* line 81, ../sass/components/_misc.sass */
+/* line 103, ../sass/components/_misc.sass */
 .header__logo-image {
   vertical-align: bottom;
   margin-top: 8px;
@@ -750,35 +756,35 @@ blockquote {
   margin: 10px 20px 10px 10px;
 }
 
-/* line 90, ../sass/components/_misc.sass */
+/* line 112, ../sass/components/_misc.sass */
 .header__name-and-slogan {
   float: left;
 }
 
-/* line 94, ../sass/components/_misc.sass */
+/* line 116, ../sass/components/_misc.sass */
 .header__site-name {
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
 }
 
-/* line 100, ../sass/components/_misc.sass */
+/* line 122, ../sass/components/_misc.sass */
 .header__site-link:link, .header__site-link:visited {
   color: black;
   text-decoration: none;
 }
-/* line 104, ../sass/components/_misc.sass */
+/* line 126, ../sass/components/_misc.sass */
 .header__site-link:hover, .header__site-link:focus {
   text-decoration: underline;
 }
 
-/* line 109, ../sass/components/_misc.sass */
+/* line 131, ../sass/components/_misc.sass */
 .header__site-slogan {
   margin-top: 40px;
   margin-left: 20px;
 }
 
-/* line 116, ../sass/components/_misc.sass */
+/* line 145, ../sass/components/_misc.sass */
 #footer {
   background-color: #4d3d44;
   margin: 20px 0 0 0;
@@ -786,12 +792,12 @@ blockquote {
   height: 20em;
 }
 
-/* line 130, ../sass/components/_misc.sass */
+/* line 157, ../sass/components/_misc.sass */
 .header__region {
   clear: both;
 }
 
-/* line 139, ../sass/components/_misc.sass */
+/* line 172, ../sass/components/_misc.sass */
 #navigation {
   height: 3em;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #144c3f), color-stop(1, #0d332a));
@@ -801,18 +807,18 @@ blockquote {
   background-image: -ms-linear-gradient(bottom, #144c3f 0%, #0d332a 100%);
   background-image: linear-gradient(to bottom, #144c3f 0%, #0d332a 100%);
 }
-/* line 143, ../sass/components/_misc.sass */
+/* line 176, ../sass/components/_misc.sass */
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 149, ../sass/components/_misc.sass */
+/* line 182, ../sass/components/_misc.sass */
 #navigation .links,
 #navigation .menu {
   margin: 0;
   padding: 0;
   text-align: left;
 }
-/* line 155, ../sass/components/_misc.sass */
+/* line 188, ../sass/components/_misc.sass */
 #navigation .links li,
 #navigation .menu li {
   float: left;
@@ -820,7 +826,7 @@ blockquote {
   list-style-type: none;
   list-style-image: none;
 }
-/* line 163, ../sass/components/_misc.sass */
+/* line 196, ../sass/components/_misc.sass */
 #navigation li a:hover, #navigation li a:active {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0d332a), color-stop(1, #144c3f));
   background-image: -o-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
@@ -830,11 +836,11 @@ blockquote {
   background-image: linear-gradient(to bottom, #0d332a 0%, #144c3f 100%);
 }
 
-/* line 180, ../sass/components/_misc.sass */
+/* line 213, ../sass/components/_misc.sass */
 .nice-menu {
   height: 100%;
 }
-/* line 182, ../sass/components/_misc.sass */
+/* line 215, ../sass/components/_misc.sass */
 .nice-menu li {
   color: #f4eee0;
   font-family: "Lato";
@@ -844,7 +850,7 @@ blockquote {
   vertical-align: center;
   padding: 0 0;
 }
-/* line 190, ../sass/components/_misc.sass */
+/* line 223, ../sass/components/_misc.sass */
 .nice-menu li a {
   text-decoration: none;
   letter-spacing: 0.025em;
@@ -852,7 +858,7 @@ blockquote {
   color: #f4eee0;
 }
 
-/* line 201, ../sass/components/_misc.sass */
+/* line 234, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li {
   border-left: solid 1px #b19fa7;
   border-right: solid 1px #b19fa7;
@@ -862,71 +868,122 @@ blockquote {
   font-weight: 400;
   color: #20806a;
 }
-/* line 209, ../sass/components/_misc.sass */
+/* line 242, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li a {
   color: #0d332a;
   padding: 0.25em 15px;
 }
-/* line 212, ../sass/components/_misc.sass */
+/* line 245, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li a:link {
   color: #20806a;
 }
-/* line 214, ../sass/components/_misc.sass */
+/* line 247, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li a:hover {
   background-color: #e2e3d7;
   background-image: none;
 }
-/* line 217, ../sass/components/_misc.sass */
+/* line 250, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li a:active {
   background-color: #20806a;
   color: white;
 }
-/* line 220, ../sass/components/_misc.sass */
+/* line 253, ../sass/components/_misc.sass */
 #navigation .nice-menu-down li li:hover {
   background-color: #e2e3d7;
 }
 
-/* line 225, ../sass/components/_misc.sass */
+/* line 258, ../sass/components/_misc.sass */
 #navigation .nice-menu-down ul {
   margin-top: 0.6em;
 }
-/* line 227, ../sass/components/_misc.sass */
+/* line 260, ../sass/components/_misc.sass */
 #navigation .nice-menu-down ul ul {
   margin-top: 0.05em;
   border-top: 1px solid #b19fa7;
 }
 
-/* line 234, ../sass/components/_misc.sass */
+/* line 267, ../sass/components/_misc.sass */
 .nice-menu-navigation li a {
   color: #0d332a;
   font-size: 14.4px;
   padding: 0.25em 5px;
 }
 
-/* line 242, ../sass/components/_misc.sass */
+/* line 275, ../sass/components/_misc.sass */
 .breadcrumb {
   background-color: #e3dcd1;
   margin: 0 -10px;
-  font-size: 0.85em;
+  font-size: 1.125em;
+  font-weight: 100;
 }
-/* line 246, ../sass/components/_misc.sass */
+/* line 280, ../sass/components/_misc.sass */
 .breadcrumb ol {
   padding: 4px 20px;
   margin: 0;
 }
-/* line 249, ../sass/components/_misc.sass */
+/* line 283, ../sass/components/_misc.sass */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  color: #77666d;
 }
-/* line 254, ../sass/components/_misc.sass */
+/* line 289, ../sass/components/_misc.sass */
 .breadcrumb li a {
   text-decoration: none;
+  color: #20806a;
+}
+/* line 292, ../sass/components/_misc.sass */
+.breadcrumb li a:hover {
+  color: #144c3f;
+}
+/* line 294, ../sass/components/_misc.sass */
+.breadcrumb li a:active {
+  color: white;
 }
 
-/* line 260, ../sass/components/_misc.sass */
+/* line 305, ../sass/components/_misc.sass */
+#secondary-menu {
+  font-family: "Lato";
+  display: block;
+}
+/* line 308, ../sass/components/_misc.sass */
+#secondary-menu li {
+  padding: 0 0.5em 0 0;
+}
+/* line 310, ../sass/components/_misc.sass */
+#secondary-menu li a {
+  background-color: transparent;
+  color: #20806a;
+  border-radius: 4px;
+  padding: 0.25em 4px 0.25em 4px;
+}
+/* line 315, ../sass/components/_misc.sass */
+#secondary-menu li a:hover {
+  background-color: #20806a;
+  color: #f4eee0;
+}
+/* line 318, ../sass/components/_misc.sass */
+#secondary-menu li a:active {
+  background-color: #144c3f;
+  color: white;
+}
+
+/* line 333, ../sass/components/_misc.sass */
+.socialmedia a {
+  color: #20806a;
+}
+/* line 335, ../sass/components/_misc.sass */
+.socialmedia a:hover {
+  color: #144c3f;
+}
+/* line 337, ../sass/components/_misc.sass */
+.socialmedia a:active {
+  color: white;
+}
+
+/* line 348, ../sass/components/_misc.sass */
 .page__title,
 .node__title,
 .block__title,
@@ -936,7 +993,7 @@ blockquote {
   margin: 0;
 }
 
-/* line 271, ../sass/components/_misc.sass */
+/* line 366, ../sass/components/_misc.sass */
 .messages, .messages--status, .messages--warning, .messages--error {
   margin: 1.5em 0;
   padding: 10px 10px 10px 50px;
@@ -946,55 +1003,55 @@ blockquote {
   border: 1px solid #bbee77;
 }
 
-/* line 287, ../sass/components/_misc.sass */
+/* line 382, ../sass/components/_misc.sass */
 .messages--warning {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACuElEQVRIiWP4//8/Ay0xSYqntTpnT252zqeJBf0Njhsykrz/pyd6/e9vcNpGVQv6q2wlm0qc/r0+IPD/3UG+/61l9v9mdrjIUc2C7hqHUzc3S///eZwBjO9tF/vfWe1wjioWTKixVm8otPn38wQT3IKfxxn/t5Va/utpsNSg2ILWcttrNzdJgQ3+dpQRjEHs+9tE/zeXWt+gyILOamuTqlxrsOtPLub+7+emBsSq/88v5wL7oqHQ9H9nmbkF2RbUF1rev7lJEuziuU3i/90ddcB4UZsoJC62ifyvK7R4QJYFrcUGrmUZ5v9hYb9hosh/bzcDMN42VRgeF9W5hv8bi/XdSbagKtfs2c1NEvCIPbaQ/7+/pwkYn17Ki0hR24T/l2eZPCfJgsZ83dCiNOP/yCnn7iau/8G+5mD8aBsHSoqqyNL9X5erHUm0BcVpRm9ubhZHMoTh/4eDzP/DA23+RwTZ/P96hAlF7t5Wof8FyfpvibKgNk8noyDZ4D9quofg1Bjr/1kJlhjiIF+Upmn/r83RzCJoQXaC3qcbm8SwGMLwvybP/H8jMGlik7u7VeB/Zqz2J7wWVGdr1uTG62J1PQgfWST1/+hiCaxyIF8UJqv9r8hQrcVpQVqkzrcbG0WwGvB2H/P/lnx5MAaxsam5vYn3f2KY+jesFpSlqfZnxWjidP2OGWL/g/0swBjExu4Lhv958Ur/i5KU+lEsCA1lYI4JUv95bZ0gTo2Pt3P+z0myBmMQG5e6mxu4/kf4Kf8EmQm3oCRNebKrvSawIGPBqRG9sMOp5hjjfwdrlf/58bKT4RaUpWvtcLZV/39iscD/H0AFP46jYwYiMeP/44u4/9tbKQODSXUH3II9G7v18hI0n8YGKv+IDVT6joxj/BVx4mgcOCde/SnITPRUJAHEGlTCEkQV19TAAN8FC67hZdFXAAAAAElFTkSuQmCC');
   border-color: #eedd55;
 }
 
-/* line 295, ../sass/components/_misc.sass */
+/* line 390, ../sass/components/_misc.sass */
 .messages--error {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACpElEQVR42rWWTUgbQRiGQ0Tx4MWDeFM8eBA9iKAoggiCoCiiIiL4L3oQV1CJB0UEf6iRYFpK7UniTw9VSqL2kvQsVDBpSZrtRo35czVNW3oprRf17exSl4yzu1ikAy9h59vvedhkMrMGAGoxknAk2w8MJ/WosXThiZkZt9jdLeglPjn5ATc3mhJNuNjbK0QbG3ExMICL/n6IfX0gcxB7ekDAELu6IHZ2IlJbi1hLS1BLogmPtbUhMTv7oMSamzUlqnByMxLT0/8STQkDj9TV4ZLj5OysrODl8jIu5Gs68dFR7JG6dWkJ0fFx+TpSX89IDMnwcHU1yKec12Yz3rlc4HkeLwjkXJpPip3U3+7vIx6P4ymph4eG5PlwTQ0lMdytlmBxMWKtrXLeT0zA5XTibvj9fjxfXETkb/3N/Dz2dneVuiTZtliU/rPSUsQ5ziuxZYG03IIlJdKKUPJjdRUAKMmzuTnskB/VYbdTtd9HR4g2NCi9Z2VliDY1BSnBaUEBzsrLqXyzWCiQ9HU5HA4afniIUFWV0hOqqMBpURErOM7NxWlhIZOvCwvA7S3Uxq+DA5AnZ3pO8vJYQSArC8c5Oeqx2Rj4udeLQH6+6v2B7GxW8DkjA0JmJpONwUHY7XZGIAgCzCYTeJUewmIFfqMRfEoKlQ2yJbza2oLWcLvdeDI2hk/3+iQWKzAYkJzNjg5srq9TwJ9OJ76YTNScx+ORJT66X1/grKyEbW2NgfPp6XKd/JMZySrHaQsSU1Oe+0/w3WpVgyu5HBlR6lc+H8gioevDwz6JrWwV5+3txyoSFk5DcOX1MnCyJ4Vwfb1zt1UY9SR8aioDpuppaVpwZbPTl+hHF04dOKzk8XBF8DgJC3/woU/W/EciOtELOWi8DDwp//215Q+p7kiKh2lQSAAAAABJRU5ErkJggg==');
   border-color: #ed541d;
 }
 
-/* line 303, ../sass/components/_misc.sass */
+/* line 398, ../sass/components/_misc.sass */
 .messages__list {
   margin: 0;
 }
 
-/* line 306, ../sass/components/_misc.sass */
+/* line 401, ../sass/components/_misc.sass */
 .messages__item {
   list-style-image: none;
 }
 
-/* line 310, ../sass/components/_misc.sass */
+/* line 405, ../sass/components/_misc.sass */
 .messages--error p.error {
   color: #333333;
 }
 
-/* line 315, ../sass/components/_misc.sass */
+/* line 410, ../sass/components/_misc.sass */
 .ok,
 .messages--status {
   background-color: #f8fff0;
   color: #234600;
 }
 
-/* line 320, ../sass/components/_misc.sass */
+/* line 415, ../sass/components/_misc.sass */
 .warning,
 .messages--warning {
   background-color: #fffce5;
   color: #884400;
 }
 
-/* line 325, ../sass/components/_misc.sass */
+/* line 420, ../sass/components/_misc.sass */
 .error,
 .messages--error {
   background-color: #fef5f1;
   color: #8c2e0b;
 }
 
-/* line 342, ../sass/components/_misc.sass */
+/* line 437, ../sass/components/_misc.sass */
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #b19fa7), color-stop(100%, transparent));
@@ -1009,14 +1066,14 @@ blockquote {
   white-space: nowrap;
 }
 
-/* line 352, ../sass/components/_misc.sass */
+/* line 447, ../sass/components/_misc.sass */
 .tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   float: left;
-  margin: 0 3px;
+  margin: 0 4px;
 }
 
-/* line 357, ../sass/components/_misc.sass */
+/* line 452, ../sass/components/_misc.sass */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   border: 1px solid #e9e9e9;
   border-right: 0;
@@ -1026,7 +1083,7 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   text-decoration: none;
 }
 
-/* line 369, ../sass/components/_misc.sass */
+/* line 465, ../sass/components/_misc.sass */
 .tabs-primary__tab, .tabs-primary__tab.is-active {
   -moz-border-radius-topleft: 1.6px;
   -webkit-border-top-left-radius: 1.6px;
@@ -1039,20 +1096,19 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   border-bottom: 0 \0/ie;
 }
 
-/* line 377, ../sass/components/_misc.sass */
+/* line 473, ../sass/components/_misc.sass */
 .is-active.tabs-primary__tab {
   border-bottom-color: transparent;
   background-color: #f4eee0;
   font-family: "Lato";
-  font-weight: 900;
-  color: #2f2127;
+  color: #4d3d44;
 }
-/* line 384, ../sass/components/_misc.sass */
+/* line 480, ../sass/components/_misc.sass */
 .is-active.tabs-primary__tab a {
-  color: #0d332a;
+  color: #144c3f;
 }
 
-/* line 389, ../sass/components/_misc.sass */
+/* line 486, ../sass/components/_misc.sass */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topleft: 1.6px;
   -webkit-border-top-left-radius: 1.6px;
@@ -1065,13 +1121,13 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   text-align: center;
 }
 
-/* line 396, ../sass/components/_misc.sass */
+/* line 493, ../sass/components/_misc.sass */
 a.tabs-primary__tab-link:hover, a.tabs-primary__tab-link:focus {
-  background-color: #e9e9e9;
-  border-color: #f2f2f2;
+  background-color: #e2e3d7;
+  border-color: #98b9b1;
 }
 
-/* line 400, ../sass/components/_misc.sass */
+/* line 497, ../sass/components/_misc.sass */
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-color: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
@@ -1080,22 +1136,21 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: -o-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  border-color: white;
 }
 
-/* line 419, ../sass/components/_misc.sass */
+/* line 519, ../sass/components/_misc.sass */
 .tabs-secondary {
   font-size: 0.9em;
   margin-top: -1.5em;
 }
 
-/* line 425, ../sass/components/_misc.sass */
+/* line 525, ../sass/components/_misc.sass */
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   margin: 0.75em 3px;
 }
 
-/* line 431, ../sass/components/_misc.sass */
+/* line 531, ../sass/components/_misc.sass */
 a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   -webkit-border-radius: 0.75em;
   -moz-border-radius: 0.75em;
@@ -1112,14 +1167,14 @@ a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   padding: 0 0.5em;
 }
 
-/* line 440, ../sass/components/_misc.sass */
+/* line 540, ../sass/components/_misc.sass */
 a.tabs-secondary__tab-link:hover, a.tabs-secondary__tab-link:focus {
   background-color: #dedede;
   border-color: #999999;
   color: #333333;
 }
 
-/* line 445, ../sass/components/_misc.sass */
+/* line 545, ../sass/components/_misc.sass */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   text-shadow: 1px 1px 0 #333333;
   background-color: #666666;
@@ -1127,34 +1182,34 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   color: white;
 }
 
-/* line 473, ../sass/components/_misc.sass */
+/* line 573, ../sass/components/_misc.sass */
 .inline {
   display: inline;
   padding: 0;
 }
-/* line 476, ../sass/components/_misc.sass */
+/* line 576, ../sass/components/_misc.sass */
 .inline li {
   display: inline;
   list-style-type: none;
   padding: 0 1em 0 0;
 }
 
-/* line 483, ../sass/components/_misc.sass */
+/* line 583, ../sass/components/_misc.sass */
 span.field-label {
   padding: 0 1em 0 0;
 }
 
-/* line 489, ../sass/components/_misc.sass */
+/* line 589, ../sass/components/_misc.sass */
 .more-link {
   text-align: right;
 }
 
-/* line 493, ../sass/components/_misc.sass */
+/* line 593, ../sass/components/_misc.sass */
 .more-help-link {
   text-align: right;
 }
 
-/* line 497, ../sass/components/_misc.sass */
+/* line 597, ../sass/components/_misc.sass */
 .more-help-link a {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR42qWTPQqDQBCFcwSPkCNITpAj5AjeIm1uYpkyR7Cy2Mot7OwsBAsRwUKwmOwLGRle3EIy8PyBfZ/z3J2TiPylz8VWWZZpUB40BonRKyizaxkA88MYYiqCEgv4MTvnZJom0VqWRbz3FlJZgLYtqmEY1Lg9r+sKsIXcLSC3AC019H0vqLquLeC5AfiHYSGkcdAJimKIBQiJ4+CO92OAtm0FNc8zOjkMwE5Q63FAtbeg6zpAYvG8BWR7i5qmQYwY4MIHqYhE2DOPQWcGJBQF2XU72ZzyUeZ5GCNt5/hybJgYdAXsq5sOEE/jG6dC5IOqCXTmAAAAAElFTkSuQmCC');
   background-position: 0 50%;
@@ -1162,14 +1217,14 @@ span.field-label {
   padding: 1px 0 1px 20px;
 }
 
-/* line 511, ../sass/components/_misc.sass */
+/* line 618, ../sass/components/_misc.sass */
 .pager {
   clear: both;
   padding: 0;
   text-align: center;
 }
 
-/* line 516, ../sass/components/_misc.sass */
+/* line 623, ../sass/components/_misc.sass */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -1182,42 +1237,42 @@ span.field-label {
   background-image: none;
 }
 
-/* line 532, ../sass/components/_misc.sass */
+/* line 639, ../sass/components/_misc.sass */
 .pager-current {
-  font-weight: bold;
+  font-weight: 900;
 }
 
-/* line 540, ../sass/components/_misc.sass */
+/* line 652, ../sass/components/_misc.sass */
 .menu__item.is-leaf {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHBAMAAAA2fErgAAAAD1BMVEX///+/v7+Li4sAAADAwMBFvsw8AAAAAXRSTlMAQObYZgAAAB1JREFUCFtjYAADYwMGBmYVZSDhKAwkFJWhYiAAAB2+Aa/9ugeaAAAAAElFTkSuQmCC');
   list-style-type: square;
 }
 
-/* line 546, ../sass/components/_misc.sass */
+/* line 658, ../sass/components/_misc.sass */
 .menu__item.is-expanded {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   list-style-type: circle;
 }
 
-/* line 552, ../sass/components/_misc.sass */
+/* line 664, ../sass/components/_misc.sass */
 .menu__item.is-collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   list-style-type: disc;
 }
 
-/* line 561, ../sass/components/_misc.sass */
+/* line 673, ../sass/components/_misc.sass */
 .menu a.active {
   color: black;
 }
 
-/* line 569, ../sass/components/_misc.sass */
+/* line 688, ../sass/components/_misc.sass */
 .new,
 .update {
   color: #cc0000;
   background-color: transparent;
 }
 
-/* line 579, ../sass/components/_misc.sass */
+/* line 698, ../sass/components/_misc.sass */
 .unpublished {
   height: 0;
   overflow: visible;
@@ -1232,92 +1287,93 @@ span.field-label {
   word-wrap: break-word;
 }
 
-/* line 604, ../sass/components/_misc.sass */
+/* line 730, ../sass/components/_misc.sass */
 .comments {
   margin: 1.5em 0;
 }
 
-/* line 608, ../sass/components/_misc.sass */
+/* line 734, ../sass/components/_misc.sass */
 .comment-preview {
   background-color: #ffffea;
 }
 
-/* line 615, ../sass/components/_misc.sass */
+/* line 741, ../sass/components/_misc.sass */
 .comment .permalink {
   text-transform: uppercase;
   font-size: 75%;
 }
 
-/* line 620, ../sass/components/_misc.sass */
+/* line 746, ../sass/components/_misc.sass */
 .indented {
   margin-left: 1.5em;
 }
 
-/* line 629, ../sass/components/_misc.sass */
+/* line 762, ../sass/components/_misc.sass */
 .form-item {
   margin: 1.5em 0;
 }
-/* line 632, ../sass/components/_misc.sass */
+/* line 765, ../sass/components/_misc.sass */
 .form-checkboxes .form-item, .form-radios .form-item {
   margin: 0;
 }
-/* line 637, ../sass/components/_misc.sass */
+/* line 770, ../sass/components/_misc.sass */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 641, ../sass/components/_misc.sass */
+/* line 774, ../sass/components/_misc.sass */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #cc0000;
 }
-/* line 646, ../sass/components/_misc.sass */
+/* line 779, ../sass/components/_misc.sass */
 .form-item .description {
   font-size: 0.85em;
 }
 
-/* line 651, ../sass/components/_misc.sass */
+/* line 784, ../sass/components/_misc.sass */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 2.4em;
 }
 
-/* line 655, ../sass/components/_misc.sass */
+/* line 788, ../sass/components/_misc.sass */
 .form-required {
   color: #cc0000;
 }
 
-/* line 659, ../sass/components/_misc.sass */
+/* line 792, ../sass/components/_misc.sass */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
-/* line 664, ../sass/components/_misc.sass */
+/* line 797, ../sass/components/_misc.sass */
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
 }
 
-/* line 669, ../sass/components/_misc.sass */
+/* line 802, ../sass/components/_misc.sass */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
-/* line 674, ../sass/components/_misc.sass */
+/* line 807, ../sass/components/_misc.sass */
 #user-login-form {
   text-align: left;
 }
 
-/* line 679, ../sass/components/_misc.sass */
+/* line 819, ../sass/components/_misc.sass */
 .search-query {
   font-family: "Lato";
-  color: red;
+  font-weight: 300;
+  color: #b19fa7;
   font-size: 20px;
   background-color: transparent;
-  border: 1px solid;
+  border: 1px solid white;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #98b9b1), color-stop(50%, #f4eee0), color-stop(100%, white));
   background-image: -o-linear-gradient(top, #98b9b1 0%, #f4eee0 50%, white 100%);
   background-image: -moz-linear-gradient(top, #98b9b1 0%, #f4eee0 50%, white 100%);
@@ -1329,44 +1385,50 @@ a.button {
   box-shadow: inset 0 0 10px #b19fa7;
 }
 
-/* line 699, ../sass/components/_misc.sass */
+/* line 830, ../sass/components/_misc.sass */
+input.search-query {
+  padding: 10 10 10 10;
+  margin: 10 10 10 10;
+}
+
+/* line 848, ../sass/components/_misc.sass */
 .openid-links {
   margin-bottom: 0;
 }
 
-/* line 705, ../sass/components/_misc.sass */
+/* line 854, ../sass/components/_misc.sass */
 .openid-link,
 .user-link {
   margin-top: 1.5em;
 }
 
-/* line 709, ../sass/components/_misc.sass */
+/* line 858, ../sass/components/_misc.sass */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   margin-left: -20px;
 }
 
-/* line 715, ../sass/components/_misc.sass */
+/* line 864, ../sass/components/_misc.sass */
 #user-login ul {
   margin: 1.5em 0;
 }
 
-/* line 721, ../sass/components/_misc.sass */
+/* line 877, ../sass/components/_misc.sass */
 form th {
   text-align: left;
   padding-right: 1em;
   border-bottom: 3px solid #cccccc;
 }
-/* line 727, ../sass/components/_misc.sass */
+/* line 883, ../sass/components/_misc.sass */
 form tbody {
   border-top: 1px solid #cccccc;
 }
-/* line 729, ../sass/components/_misc.sass */
+/* line 885, ../sass/components/_misc.sass */
 form table ul {
   margin: 0;
 }
 
-/* line 732, ../sass/components/_misc.sass */
+/* line 888, ../sass/components/_misc.sass */
 tr.even,
 tr.odd {
   background-color: #eeeeee;
@@ -1374,77 +1436,77 @@ tr.odd {
   padding: 0.1em 0.6em;
 }
 
-/* line 738, ../sass/components/_misc.sass */
+/* line 894, ../sass/components/_misc.sass */
 tr.even {
   background-color: white;
 }
 
-/* line 750, ../sass/components/_misc.sass */
+/* line 906, ../sass/components/_misc.sass */
 td.active {
   background-color: #dddddd;
 }
 
-/* line 755, ../sass/components/_misc.sass */
+/* line 911, ../sass/components/_misc.sass */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
-/* line 760, ../sass/components/_misc.sass */
+/* line 916, ../sass/components/_misc.sass */
 td.menu-disabled {
   background: #cccccc;
 }
 
-/* line 769, ../sass/components/_misc.sass */
+/* line 925, ../sass/components/_misc.sass */
 #autocomplete .selected {
   background: #0072b9;
   color: white;
 }
 
-/* line 778, ../sass/components/_misc.sass */
+/* line 934, ../sass/components/_misc.sass */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
   background-repeat: no-repeat;
   padding-left: 15px;
 }
-/* line 787, ../sass/components/_misc.sass */
+/* line 943, ../sass/components/_misc.sass */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   background-position: 5px 50%;
 }
-/* line 795, ../sass/components/_misc.sass */
+/* line 951, ../sass/components/_misc.sass */
 .fieldset-legend .summary {
   color: #999999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
-/* line 804, ../sass/components/_misc.sass */
+/* line 960, ../sass/components/_misc.sass */
 tr.drag {
   background-color: ivory;
 }
 
-/* line 807, ../sass/components/_misc.sass */
+/* line 963, ../sass/components/_misc.sass */
 tr.drag-previous {
   background-color: #ffffdd;
 }
 
-/* line 810, ../sass/components/_misc.sass */
+/* line 966, ../sass/components/_misc.sass */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
 
-/* line 817, ../sass/components/_misc.sass */
+/* line 973, ../sass/components/_misc.sass */
 tr.selected td {
   background: #ffffcc;
 }
 
-/* line 824, ../sass/components/_misc.sass */
+/* line 980, ../sass/components/_misc.sass */
 .progress {
   font-weight: bold;
 }
-/* line 826, ../sass/components/_misc.sass */
+/* line 982, ../sass/components/_misc.sass */
 .progress .bar {
   background: #cccccc;
   border-color: #666666;
@@ -1455,62 +1517,48 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 831, ../sass/components/_misc.sass */
+/* line 987, ../sass/components/_misc.sass */
 .progress .filled {
   background-color: #0072b9;
   background-image: url('../images/progress.gif?1384008826');
 }
 
-/* line 840, ../sass/components/_misc.sass */
+/* line 1002, ../sass/components/_misc.sass */
 #site-slogan {
   font-family: "Lato";
   font-size: 1.25em;
   font-weight: 400;
-  color: #20806a;
+  color: #144c3f;
   line-height: 1.4em;
 }
 
-/* line 848, ../sass/components/_misc.sass */
-#secondary-menu {
-  font-family: "Lato";
-  display: block;
-}
-/* line 851, ../sass/components/_misc.sass */
-#secondary-menu a {
-  background-color: transparent;
-}
-/* line 853, ../sass/components/_misc.sass */
-#secondary-menu a:hover {
-  background-color: green;
-}
-
-/* line 862, ../sass/components/_misc.sass */
+/* line 1021, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 {
   border-top: 1px #b19fa7 solid;
   margin-bottom: 0.5em;
 }
-/* line 865, ../sass/components/_misc.sass */
+/* line 1024, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row {
   border-bottom: 1px #e3dcd1 solid;
   padding: 0.5em 0;
 }
-/* line 868, ../sass/components/_misc.sass */
+/* line 1027, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:hover {
   background-color: #e2e3d7;
 }
-/* line 870, ../sass/components/_misc.sass */
+/* line 1029, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:hover a {
   color: #0d332a;
 }
-/* line 872, ../sass/components/_misc.sass */
+/* line 1031, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:active {
   background-color: #20806a;
 }
-/* line 873, ../sass/components/_misc.sass */
+/* line 1032, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row:active a {
   color: white;
 }
-/* line 876, ../sass/components/_misc.sass */
+/* line 1035, ../sass/components/_misc.sass */
 .pane-openlocal-event-categories-panel-pane-1 .views-row a {
   padding-left: 10px;
   padding-right: 10px;
@@ -1521,15 +1569,15 @@ tr.selected td {
   font-weight: 400;
 }
 
-/* line 886, ../sass/components/_misc.sass */
+/* line 1045, ../sass/components/_misc.sass */
 #search-form .form-type-textfield {
   vertical-align: top;
 }
-/* line 888, ../sass/components/_misc.sass */
+/* line 1047, ../sass/components/_misc.sass */
 #search-form .form-type-textfield #edit-keys {
   vertical-align: top;
 }
-/* line 891, ../sass/components/_misc.sass */
+/* line 1050, ../sass/components/_misc.sass */
 #search-form .form-submit {
   margin-top: -3px;
   background: transparent url(../images/search.png) no-repeat left top;
@@ -1780,58 +1828,58 @@ tr.selected td {
   margin: 0 5px 5px 0;
 }
 
-/* line 118, ../sass/components/_actions.sass */
+/* line 125, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 122, ../sass/components/_actions.sass */
+/* line 129, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 129, ../sass/components/_actions.sass */
+/* line 136, ../sass/components/_actions.sass */
 .ol-item-grid .views-row {
   float: left;
   width: 220px;
 }
 
-/* line 136, ../sass/components/_actions.sass */
+/* line 143, ../sass/components/_actions.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   margin: 5px;
 }
 
-/* line 142, ../sass/components/_actions.sass */
+/* line 149, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 144, ../sass/components/_actions.sass */
+/* line 151, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 147, ../sass/components/_actions.sass */
+/* line 154, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
 
-/* line 10, ../sass/components/_panels.sass */
+/* line 11, ../sass/components/_panels.sass */
 .block {
   margin-bottom: 1.5em;
 }
 
-/* line 17, ../sass/components/_panels.sass */
+/* line 23, ../sass/components/_panels.sass */
 .pane-node-field-ol-event-venue-ref {
   background-color: #e3dcd1;
 }
-/* line 19, ../sass/components/_panels.sass */
+/* line 25, ../sass/components/_panels.sass */
 .pane-node-field-ol-event-venue-ref h2 {
   font-family: "Lato";
   font-size: 1em;
 }
 
-/* line 25, ../sass/components/_panels.sass */
+/* line 31, ../sass/components/_panels.sass */
 .panel-pane h2 {
   margin: 0 0;
   color: #4d3d44;
@@ -1840,46 +1888,39 @@ tr.selected td {
   font-size: 1em;
   text-decoration: none;
 }
-/* line 32, ../sass/components/_panels.sass */
-.panel-pane h2:link {
+
+/* line 39, ../sass/components/_panels.sass */
+.panel-pane a {
+  display: block;
   color: #20806a;
   text-decoration: none;
-}
-/* line 35, ../sass/components/_panels.sass */
-.panel-pane h2:visited {
   color: #20806a;
-}
-/* line 37, ../sass/components/_panels.sass */
-.panel-pane h2:active {
   color: white;
-}
-/* line 39, ../sass/components/_panels.sass */
-.panel-pane h2 a {
   color: #f4eee0;
 }
 
-/* line 44, ../sass/components/_panels.sass */
+/* line 54, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 {
   margin: 0.5em 0;
   background-color: #e3dcd1;
 }
-/* line 47, ../sass/components/_panels.sass */
+/* line 57, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 h2.pane-title {
   border-bottom: 1px #b19fa7 solid;
   padding: 0 4px;
 }
-/* line 50, ../sass/components/_panels.sass */
+/* line 60, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table {
   margin: 0 0;
   width: 100%;
 }
-/* line 53, ../sass/components/_panels.sass */
+/* line 63, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table tr {
   vertical-align: top;
   border-bottom: 1px #f4eee0 solid;
   background-color: transparent;
 }
-/* line 57, ../sass/components/_panels.sass */
+/* line 67, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table td.views-field-field-ol-event-date {
   padding: 0 4px;
   font-family: "Lato";
@@ -1887,7 +1928,7 @@ tr.selected td {
   font-size: 18px;
   color: #77666d;
 }
-/* line 63, ../sass/components/_panels.sass */
+/* line 73, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table td.views-field-title {
   padding: 0 4px;
   font-family: "Lato";
@@ -1896,7 +1937,7 @@ tr.selected td {
   color: #77666d;
   text-decoration: none;
 }
-/* line 70, ../sass/components/_panels.sass */
+/* line 80, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table td.views-field-title a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 300;
@@ -1905,41 +1946,35 @@ tr.selected td {
   font-size: 14px;
 }
 
-/* line 80, ../sass/components/_panels.sass */
+/* line 97, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-2 {
   border-top: 1px #b19fa7 solid;
   margin-bottom: 0.5em;
 }
 
-/* line 84, ../sass/components/_panels.sass */
+/* line 101, ../sass/components/_panels.sass */
 .view-ol-event-upcoming table td {
   vertical-align: top;
 }
 
-/* line 87, ../sass/components/_panels.sass */
+/* line 104, ../sass/components/_panels.sass */
 .view-ol-event-upcoming table tr {
   background-color: transparent;
   border-bottom: 1px #e3dcd1 solid;
 }
-/* line 90, ../sass/components/_panels.sass */
+/* line 107, ../sass/components/_panels.sass */
 .view-ol-event-upcoming table tr:hover {
   background-color: #e2e3d7;
 }
 
-/* line 93, ../sass/components/_panels.sass */
+/* line 110, ../sass/components/_panels.sass */
 .views-field-field-ol-event-date {
   font-family: "Lato";
   font-weight: 900;
   color: #77666d;
 }
 
-/* line 98, ../sass/components/_panels.sass */
-.views-field-field-featured-image {
-  width: 120px;
-  height: 80px;
-}
-
-/* line 102, ../sass/components/_panels.sass */
+/* line 119, ../sass/components/_panels.sass */
 .views-field-title {
   font-family: "Lato";
   font-weight: 400;
@@ -1948,7 +1983,7 @@ tr.selected td {
   line-height: 16px;
   padding: 4px 0 0 0;
 }
-/* line 109, ../sass/components/_panels.sass */
+/* line 126, ../sass/components/_panels.sass */
 .views-field-title a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 18px;
@@ -1956,57 +1991,57 @@ tr.selected td {
   font-weight: 300;
   text-decoration: none;
 }
-/* line 115, ../sass/components/_panels.sass */
+/* line 132, ../sass/components/_panels.sass */
 .views-field-title a:link {
   color: #20806a;
 }
-/* line 117, ../sass/components/_panels.sass */
+/* line 134, ../sass/components/_panels.sass */
 .views-field-title a:visited {
   color: #20806a;
 }
-/* line 119, ../sass/components/_panels.sass */
+/* line 136, ../sass/components/_panels.sass */
 .views-field-title a:hover {
   color: #20806a;
 }
 
-/* line 126, ../sass/components/_panels.sass */
+/* line 150, ../sass/components/_panels.sass */
 .calendar-calendar table tbody tr {
   background-color: transparent;
 }
 
-/* line 130, ../sass/components/_panels.sass */
+/* line 154, ../sass/components/_panels.sass */
 .view-ol-event-calendar {
   border-top: 1px #b19fa7 solid;
   border-bottom: 1px solid #e3dcd1;
 }
 
-/* line 136, ../sass/components/_panels.sass */
+/* line 160, ../sass/components/_panels.sass */
 .view-ol-event-calendar .date-heading {
   border-bottom: 1px solid #e3dcd1;
 }
 
-/* line 139, ../sass/components/_panels.sass */
+/* line 163, ../sass/components/_panels.sass */
 .view-ol-event-calendar .date-heading h3 {
   font-family: "Lato";
 }
-/* line 141, ../sass/components/_panels.sass */
+/* line 165, ../sass/components/_panels.sass */
 .view-ol-event-calendar .date-heading h3 a {
   font-size: 16px;
   text-decoration: none;
   color: #20806a;
 }
 
-/* line 146, ../sass/components/_panels.sass */
+/* line 170, ../sass/components/_panels.sass */
 .pane-ol-event-calendar-panel-pane-2 {
   margin-bottom: 0.5em;
 }
 
-/* line 149, ../sass/components/_panels.sass */
+/* line 173, ../sass/components/_panels.sass */
 .calendar-calendar {
   border: 1px solid #f4eee0;
 }
 
-/* line 153, ../sass/components/_panels.sass */
+/* line 177, ../sass/components/_panels.sass */
 .calendar-calendar .month-view .mini thead tr .days {
   background-color: #e3dcd1;
   color: #b19fa7;
@@ -2020,13 +2055,13 @@ tr.selected td {
   padding: 0.4em 0;
 }
 
-/* line 165, ../sass/components/_panels.sass */
+/* line 189, ../sass/components/_panels.sass */
 .calendar-calendar .has-no-events {
   background-color: transparent;
   border: 1px #f4eee0 solid;
 }
 
-/* line 170, ../sass/components/_panels.sass */
+/* line 194, ../sass/components/_panels.sass */
 .calendar-calendar td {
   font-family: "Lato";
   font-weight: 400;
@@ -2035,61 +2070,61 @@ tr.selected td {
   color: #2f2127;
 }
 
-/* line 178, ../sass/components/_panels.sass */
+/* line 202, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on {
   background-color: #98b9b1;
 }
-/* line 180, ../sass/components/_panels.sass */
+/* line 204, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on:hover {
   background-color: #20806a;
 }
-/* line 182, ../sass/components/_panels.sass */
+/* line 206, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on a {
   text-decoration: none;
 }
-/* line 183, ../sass/components/_panels.sass */
+/* line 207, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on a:link {
   font-weight: 900;
   color: white;
 }
 
-/* line 189, ../sass/components/_panels.sass */
+/* line 213, ../sass/components/_panels.sass */
 .calendar-calendar .mini .today {
   background-color: #8c4965;
   font-weight: 900;
   color: #f4eee0;
 }
 
-/* line 194, ../sass/components/_panels.sass */
+/* line 218, ../sass/components/_panels.sass */
 .calendar-calendar .month {
   padding: 0.4em 0;
 }
 
-/* line 197, ../sass/components/_panels.sass */
+/* line 221, ../sass/components/_panels.sass */
 .calendar-calendar .month-view .mini .empty {
   background-color: transparent;
 }
 
-/* line 200, ../sass/components/_panels.sass */
+/* line 224, ../sass/components/_panels.sass */
 .calendar-calendar .future {
   background-color: #e3dcd1;
 }
 
-/* line 203, ../sass/components/_panels.sass */
+/* line 227, ../sass/components/_panels.sass */
 .calendar-calendar .past {
   color: #b19fa7;
 }
-/* line 205, ../sass/components/_panels.sass */
+/* line 229, ../sass/components/_panels.sass */
 .calendar-calendar .past .has-events {
   color: #20806a;
   background-color: #e2e3d7;
 }
-/* line 208, ../sass/components/_panels.sass */
+/* line 232, ../sass/components/_panels.sass */
 .calendar-calendar .past .has-events:hover {
   background-color: #20806a;
 }
 
-/* line 212, ../sass/components/_panels.sass */
+/* line 236, ../sass/components/_panels.sass */
 .view .date-nav-wrapper .pager li {
   background-color: transparent;
   border-bottom-left-radius: 0;
@@ -2099,59 +2134,67 @@ tr.selected td {
   font-size: 1em;
   z-index: none;
 }
-/* line 220, ../sass/components/_panels.sass */
+/* line 244, ../sass/components/_panels.sass */
 .view .date-nav-wrapper .pager li:hover {
   background-color: #98b9b1;
 }
 
-/* line 226, ../sass/components/_panels.sass */
+/* line 257, ../sass/components/_panels.sass */
 .view-openlocal-business {
   background-color: #e3dcd1;
 }
-/* line 228, ../sass/components/_panels.sass */
+/* line 259, ../sass/components/_panels.sass */
 .view-openlocal-business .view-content {
   display: block;
   display: clear;
 }
 
-/* line 237, ../sass/components/_panels.sass */
+/* line 274, ../sass/components/_panels.sass */
 .view-display-id-list_news_articles .views-row {
   background-color: #e3dcd1;
   display: inline-block;
-  width: 240px;
   margin: 0 20px 0.5em 0;
   padding: 0 5px;
   font-family: "Lato";
 }
 
-/* line 249, ../sass/components/_panels.sass */
+/* line 292, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author {
   background-color: #e3dcd1;
 }
-/* line 252, ../sass/components/_panels.sass */
+/* line 295, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author h2.pane-title {
-  padding: 4px 10px;
+  padding: 0.25em 10px;
   font-family: "Lato";
   font-size: 1em;
   color: #4d3d44;
 }
-/* line 257, ../sass/components/_panels.sass */
+/* line 300, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author h2.pane-title:link {
   color: #20806a;
 }
 
-/* line 265, ../sass/components/_panels.sass */
+/* line 315, ../sass/components/_panels.sass */
 .pane-openlocal-alert-panel-pane-1 {
   background-color: #e3dcd1;
 }
-/* line 268, ../sass/components/_panels.sass */
+/* line 317, ../sass/components/_panels.sass */
+.pane-openlocal-alert-panel-pane-1 .view-empty p {
+  color: #144c3f;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0.5em 4px 0.5em 4px;
+}
+/* line 323, ../sass/components/_panels.sass */
 .pane-openlocal-alert-panel-pane-1 h2.pane-title {
   padding: 0.5em 5px;
   font-family: "Lato";
   font-size: 1em;
   color: #4d3d44;
+  border-bottom: 1px solid #77666d;
 }
-/* line 273, ../sass/components/_panels.sass */
+/* line 329, ../sass/components/_panels.sass */
 .pane-openlocal-alert-panel-pane-1 h2.pane-title:link {
   color: #20806a;
 }
