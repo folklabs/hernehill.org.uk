@@ -3,7 +3,7 @@
 //
 // This file contains styles for all panels and panes
 
-//
+// ---------------------------------------------------------------------------- 
 // BLOCKS
 
 // Block wrapper
@@ -17,10 +17,8 @@
 
 
 
-
+// ---------------------------------------------------------------------------- 
 // PANEL PANES - GLOBAL STYLES
-
-// 
 
 .pane-node-field-ol-event-venue-ref
   background-color: $col-content-lightest
@@ -40,8 +38,8 @@
   
 .panel-pane a
   display: block
-  width: 100%
-  height: 100%
+  // width: 100%
+  // height: 100%
   &:link
   color: $col-links
   text-decoration: none
@@ -93,7 +91,7 @@
 
 
 
-//
+// ----------------------------------------------------------------------------
 // UPCOMING EVENTS LISTING DISPLAY - LIST
 
 .pane-openlocal-event-panel-pane-2
@@ -115,8 +113,8 @@
   color: $col-content
 
 .views-field-field-featured-image
-  width: 120px
-  height: 80px
+//  width: 120px
+//  height: 80px
 
 .views-field-title
   font-family: $lato
@@ -145,7 +143,7 @@
 
 
 
-//
+// ----------------------------------------------------------------------------
 // UPCOMING EVENTS MINI CALENDAR
 
 // Overrides default Drupal table background colour
@@ -253,11 +251,11 @@
 
 
 
-//
+// ----------------------------------------------------------------------------
 // SERVICES LISTING DISPLAY - GRID
 
 .view-openlocal-business
-  background-color: red
+  background-color: $col-content-lightest
   .view-content
     .views-field
     display: block
@@ -270,13 +268,13 @@
 
 
 
-//
+// ----------------------------------------------------------------------------
 // NEWS LISTING DISPLAY - GRID
 
 .view-display-id-list_news_articles .views-row
   background-color: $col-content-lightest
   display: inline-block
-  width: 240px
+  // width: 240px
   margin: 0 20px 0.5em 0
   padding: 0 5px
   font-family: $lato
@@ -288,14 +286,14 @@
 
 
 
-//
+// ----------------------------------------------------------------------------
 // OTHER ARTICLES BY THIS AUTHOR PANEL
 
 .pane-openlocal-news-articles-by-author
-  background-color: red
+  background-color: $col-content-lightest
 
   h2.pane-title
-    padding: 4px 10px
+    padding: 0.25em 10px
     font-family: $lato
     font-size: 1em
     color: $col-content-darker
@@ -309,19 +307,25 @@
 
 
 
-//
+// ----------------------------------------------------------------------------
 // HOME PAGE ALERTS PANEL
 
 // Styles the panel heading
 
 .pane-openlocal-alert-panel-pane-1
   background-color: $col-content-lightest
-
+  .view-empty p
+    color: $col-links-darker
+    font-family: $merriweather
+    font-size: 1 * $base-font-size
+    font-weight: 300
+    margin: 0.5em 4px 0.5em 4px
   h2.pane-title
     padding: 0.5em 5px
     font-family: $lato
     font-size: 1em
     color: $col-content-darker
+    border-bottom: 1px solid $col-content
     &:link
       color: $col-links
 
