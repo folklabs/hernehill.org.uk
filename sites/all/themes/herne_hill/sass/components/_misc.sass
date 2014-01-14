@@ -22,7 +22,15 @@
         // IE6/7 do not support the outline property.
         border: 1px solid #ccc
 
-// Accessibility features.
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// ACCESSIBILITY FEATURES
 
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 
@@ -53,9 +61,16 @@
     background-color: #666
     color: #fff
 
-//
-// Content text styles
 
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// CONTENT TEXT STYLES
+
+// Styles blockquotes within a node's text content
 .pane-node-field-ol-details blockquote
   border-top: 2px
 
@@ -65,10 +80,17 @@
   font-family: $lato
   font-size: 1.5 * $base-font-size
 
-//
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // BRANDING HEADER
 
-// Wrapping link for logo.
+// Wrapping link for logo
 .header__logo
   float: left
   // LTR
@@ -77,7 +99,7 @@
   &:hover
     background-color: transparent
 
-// Logo image.
+// Logo image
 .header__logo-image
   vertical-align: bottom
   margin-top: 8px
@@ -86,16 +108,16 @@
   margin: 10px 20px 10px 10px
 
 
-// Wrapper for website name and slogan.
+// Wrapper for website name and slogan
 .header__name-and-slogan
   float: left
 
-// The name of the website.
+// The name of the website
 .header__site-name
   margin: 0
   +adjust-font-size-to($h1-font-size)
 
-// The link around the name of the website.
+// The link around the name of the website
 .header__site-link
   &:link,
   &:visited
@@ -105,12 +127,19 @@
   &:focus
     text-decoration: underline
 
-// The slogan (or tagline) of a website.
+// The slogan (or tagline) of a website
 .header__site-slogan
   margin-top: 40px
   margin-left: 20px
 
-//
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // BRANDING FOOTER
 
 #footer
@@ -118,8 +147,6 @@
   margin: 20px 0 0 0
   width: 100%
   height: 20em
-
-
 
 // The secondary menu (login, etc.)
 // .header__secondary-menu
@@ -131,11 +158,17 @@
   // Clear the logo.
   clear: both
 
-//
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // NAVIGATION
 
 // Style the basic navigation bar
-
 #navigation
   // Sometimes you want to prevent overlapping with main div.
   // overflow: hidden;
@@ -238,11 +271,12 @@
 
 
 //
-// BREADCRUMB NAVIGATION
+// Breadcrumb navigation
 .breadcrumb
   background-color: $col-content-lightest
   margin: 0 -10px
-  font-size: 0.85em
+  font-size: 1.125em
+  font-weight: 100
   ol
     padding: 0.25 * $base-font-size 20px
     margin: 0
@@ -251,11 +285,65 @@
     list-style-type: none
     margin: 0
     padding: 0
+    color: $col-content
     a
       text-decoration: none
+      color: $col-links
+      &:hover
+        color: $col-links-darker
+      &:active
+        color: white
 
-//
- // Titles.
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// SECONDARY MENU
+#secondary-menu
+  font-family: $lato
+  display: block
+  li
+    padding: 0 0.5em 0 0
+    a
+      background-color: transparent
+      color: $col-links
+      border-radius: 0.25 * $base-font-size
+      padding: 0.25em 4px 0.25em 4px
+      &:hover
+        background-color: $col-links
+        color: $col-page
+      &:active
+        background-color: $col-links-darker
+        color: white
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// SOCIAL MEDIA ICONS
+
+.socialmedia
+  a
+    color: $col-links
+    &:hover
+      color: $col-links-darker
+    &:active
+      color: white
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// TITLES
 
 .page__title,
 .node__title,
@@ -266,8 +354,15 @@
   // Comment title.
   margin: 0
 
-//
- // Messages.
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// MESSAGES
 .messages
   margin: rhythm(1) 0
   padding: 10px 10px 10px 50px
@@ -310,7 +405,7 @@
 .messages--error  p.error
   color: #333
 
-// System status report.
+// System status report
 
 .ok,
 %ok
@@ -335,7 +430,7 @@
 
 
 
-//
+// ---------------------------------------------------------------------------- 
 // TABS
 
 // Basic positioning styles shared by primary and secondary tabs.
@@ -352,7 +447,7 @@
 %tabs__tab
   float: left
   // LTR
-  margin: 0 3px
+  margin: 0 4px
 
 %tabs__tab-link
   border: 1px solid #e9e9e9
@@ -362,7 +457,8 @@
   +adjust-leading-to(1)
   text-decoration: none
 
-// Primary tabs.
+
+// Primary tabs
 .tabs-primary
   @extend %tabs
 
@@ -379,13 +475,14 @@
   border-bottom-color: transparent
   background-color: $col-page
   font-family: $lato
-  font-weight: 900
-  color: $col-content-darkest
+  // font-weight: 900
+  color: $col-content-darker
   a
     &:link
-    color: $col-links-darkest
+    color: $col-links-darker
 
-// We use 3 placeholder styles to prevent @extend from going selector crazy.
+
+// We use 3 placeholder styles to prevent @extend from going selector crazy
 %tabs-primary__tab-link
   @extend %tabs__tab-link
   +border-top-radius(0.1 * $base-font-size)
@@ -394,14 +491,14 @@
   text-align: center
 
 %tabs-primary__tab-link-is-hover
-  background-color: #e9e9e9
-  border-color: #f2f2f2
+  background-color: $col-links-lightest
+  border-color: $col-links-lighter
 
 %tabs-primary__tab-link-is-active
   background-color: transparent
   +filter-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0))
   +background-image(linear-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0)))
-  border-color: #fff
+  //border-color: #fff
 
 a.tabs-primary__tab-link
   @extend %tabs-primary__tab-link
@@ -415,7 +512,10 @@ a.tabs-primary__tab-link.is-active
   @extend %tabs-primary__tab-link
   @extend %tabs-primary__tab-link-is-active
 
-// Secondary tabs.
+
+
+
+// Secondary tabs
 .tabs-secondary
   @extend %tabs
   font-size: .9em
@@ -427,7 +527,7 @@ a.tabs-primary__tab-link.is-active
   @extend %tabs__tab
   margin: rhythm(1) / 2 3px
 
-// We use 3 placeholder styles to prevent @extend from going selector crazy.
+// We use 3 placeholder styles to prevent @extend from going selector crazy
 %tabs-secondary__tab-link
   @extend %tabs__tab-link
   +border-radius(0.75em)
@@ -466,8 +566,8 @@ a.tabs-secondary__tab-link.is-active
 
 
 
-//
- // Inline styles.
+// ---------------------------------------------------------------------------- 
+// INLINE STYLES
 
 // List of links generated by theme_links().
 .inline
@@ -504,8 +604,15 @@ span.field-label
   padding: 1px 0 1px 20px
   // LTR
 
-//
- // Pager.
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// PAGER
 
 // A list of page numbers when more than 1 page of content is available.
 .pager
@@ -528,15 +635,20 @@ span.field-label
   // A concatenation of several list items using an ellipsis.
   @extend %pager__item
 
-// The current page's list item.
+// The current page's list item
 .pager-current
   @extend %pager__item
-  font-weight: bold
+  font-weight: 900
 
 
 
-//
-// Menus
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// MENUS
 .menu__item.is-leaf
   list-style-image: inline-image("menu-leaf.png")
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7
@@ -557,12 +669,19 @@ span.field-label
     // LTR
   list-style-type: disc
 
-// The active item in a Drupal menu.
+// The active item in a Drupal menu
 .menu a.active
   color: #000
 
-//
- // Marker.
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// MARKER
 
 // The "new" or "updated" marker.
 
@@ -597,7 +716,14 @@ span.field-label
     // Otherwise these elements will appear below the "Unpublished" text.
     position: relative
 
-//
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // COMMENTS
 
 // Wrapper for the list of comments and its title.
@@ -622,7 +748,14 @@ span.field-label
   margin-left: $indent-amount
   // LTR
 
-//
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // FORMS
 
 // Wrapper for a form element (or group of form elements) and its label.
@@ -655,7 +788,7 @@ span.field-label
 .form-required
   color: #c00
 
-// Labels for radios and checkboxes.
+// Labels for radios and checkboxes
 label.option
   display: inline
   font-weight: normal
@@ -664,7 +797,7 @@ label.option
 a.button
   +appearance(button)
 
-// Password confirmation.
+// Password confirmation   
 
 .password-parent,
 .confirm-parent
@@ -675,21 +808,37 @@ a.button
   text-align: left
   // LTR
 
-// Search form
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// SEARCH FORM
 .search-query
   font-family: $lato
-  color: red
+  font-weight: 300
+  color: $col-content-lighter
   font-size: 1.25 * $base-font-size
   background-color: transparent
-  border: 1px solid
+  border: 1px solid white
   +gradient-field-outline-inset-down
   -moz-box-shadow:    inset 0 0 10px $col-content-lighter
   -webkit-box-shadow: inset 0 0 10px $col-content-lighter
   box-shadow:         inset 0 0 10px $col-content-lighter
 input.search-query
+  padding: 10 10 10 10
+  margin: 10 10 10 10
+  
 
 
-//
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // OpenID
 //
 // The default styling for the OpenID login link seems to assume Garland's
@@ -715,8 +864,15 @@ html.js #user-login-form li.openid-link,
 #user-login ul
   margin: rhythm(1) 0
 
-//
-// Drupal admin tables.
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
+// Drupal admin tables
 form
   th
     text-align: left
@@ -750,7 +906,7 @@ tr.even
 td.active
   background-color: #ddd
 
-// Center checkboxes inside table cell.
+// Center checkboxes inside table cell
 
 td.checkbox,
 th.checkbox
@@ -761,17 +917,17 @@ td.menu-disabled
   background: #ccc
 
 //
-// Autocomplete.
+// Autocomplete
 //
 // @see autocomplete.js
 
-// Suggestion list.
+// Suggestion list
 #autocomplete .selected
   background: #0072b9
   color: #fff
 
 //
-// Collapsible fieldsets.
+// Collapsible fieldsets
 //
 // @see collapse.js
 .fieldset-legend
@@ -798,7 +954,7 @@ td.menu-disabled
     margin-left: 0.5em
 
 //
-// TableDrag behavior.
+// TableDrag behavior
 //
 // @see tabledrag.js
 tr.drag
@@ -818,7 +974,7 @@ tr.selected td
   background: #ffc
 
 //
-// Progress bar.
+// Progress bar
 //
 // @see progress.js
 .progress
@@ -833,7 +989,13 @@ tr.selected td
     background-image: image-url("progress.gif")
 
 
-//
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // BRANDING
 
 // Site slogan or strapline
@@ -841,24 +1003,21 @@ tr.selected td
   font-family: $lato
   font-size: 1.25em
   font-weight: 400
-  color: $col-links
+  color: $col-links-darker
   line-height: 1.4em
 
-// Secondary menu
-#secondary-menu
-  font-family: $lato
-  display: block
-  a
-    background-color: transparent
-    &:hover
-      background-color: green
 
 
-//
+
+
+
+
+
+
+// ---------------------------------------------------------------------------- 
 // SECTION-LEVEL NAVIGATION MENU
 
 // Style the navigation menu block
-
 .pane-openlocal-event-categories-panel-pane-1
   border-top: 1px $col-content-lighter solid
   margin-bottom: 0.5em
