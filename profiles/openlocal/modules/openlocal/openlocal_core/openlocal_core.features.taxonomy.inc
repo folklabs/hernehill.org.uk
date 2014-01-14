@@ -9,6 +9,14 @@
  */
 function openlocal_core_taxonomy_default_vocabularies() {
   return array(
+    'ol_places' => array(
+      'name' => 'Places',
+      'machine_name' => 'ol_places',
+      'description' => 'Categories of places',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'ol_tags' => array(
       'name' => 'Tags',
       'machine_name' => 'ol_tags',

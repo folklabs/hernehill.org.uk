@@ -426,6 +426,51 @@ function openlocal_core_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ol_place-field_ol_place_category'
+  $field_instances['node-ol_place-field_ol_place_category'] = array(
+    'bundle' => 'ol_place',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_place_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_place-field_ol_tags'
   $field_instances['node-ol_place-field_ol_tags'] = array(
     'bundle' => 'ol_place',
@@ -471,7 +516,7 @@ function openlocal_core_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -577,6 +622,7 @@ function openlocal_core_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Add any tags that define this content in more detail, e.g. "school". Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering.');
   t('Address');
+  t('Category');
   t('Description');
   t('Details');
   t('Disabled toilet');
