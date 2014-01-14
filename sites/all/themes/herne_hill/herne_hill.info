@@ -54,7 +54,7 @@ stylesheets[all][] = css/styles.css
 
 stylesheets[all][] = libraries/font-awesome/css/font-awesome.min.css
 
-stylesheets[all][] = css/bootstrap.css
+;stylesheets[all][] = css/bootstrap.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
