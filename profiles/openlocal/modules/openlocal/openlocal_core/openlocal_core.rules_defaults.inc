@@ -19,7 +19,7 @@ function openlocal_core_default_rules_configuration() {
       "DO" : [
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "4" : "4" } },
-            "subject" : "Item needing moderation: [node:title]",
+            "subject" : "[[site:name]] Item needing moderation: [node:title]",
             "message" : "State changed from [previous-state:value] to [new-state:value].\\r\\n\\r\\n[node:url]"
           }
         }
