@@ -32,7 +32,12 @@ function openlocal_alert_panelizer_defaults() {
   $display = new panels_display();
   $display->layout = 'flexible';
   $display->layout_settings = array();
-  $display->panel_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
   $display->cache = array();
   $display->title = '%node:title';
   $display->content = array();
@@ -41,20 +46,40 @@ function openlocal_alert_panelizer_defaults() {
     $pane->pid = 'new-1';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_description';
+    $pane->subtype = 'node:field_featured_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'text_default',
+      'label' => 'hidden',
+      'formatter' => 'image',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'panelizer',
+      'formatter_settings' => array(
+        'image_style' => 'openlocal_panel_deep',
+        'image_link' => '',
+      ),
+      'context' => array(),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
@@ -65,26 +90,40 @@ function openlocal_alert_panelizer_defaults() {
     $pane->pid = 'new-2';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_alert_image';
+    $pane->subtype = 'node:field_ol_description';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'image',
+      'label' => 'hidden',
+      'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => '',
-        'image_link' => '',
-      ),
+      'formatter_settings' => array(),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['center'][1] = 'new-2';
@@ -96,19 +135,36 @@ function openlocal_alert_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'hidden',
       'formatter' => 'link_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['center'][2] = 'new-3';
@@ -129,10 +185,12 @@ function openlocal_alert_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['center'][3] = 'new-4';
@@ -152,12 +210,14 @@ function openlocal_alert_panelizer_defaults() {
       'context' => 'panelizer',
     );
     $pane->cache = array();
-    $pane->style = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array(
       'css_class' => 'link-wrapper',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 4;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['center'][4] = 'new-5';
