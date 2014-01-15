@@ -357,19 +357,42 @@ table {
   margin-bottom: 1.5em;
 }
 
-/* line 6, ../sass/_base.sass */
+/* line 8, ../sass/_base.sass */
 body {
   background-color: #f4eee0;
 }
 
-/* line 9, ../sass/_base.sass */
+/* line 14, ../sass/_base.sass */
 p, ul, ol {
   color: #2f2127;
   font-family: "Lato";
   font-weight: 400;
 }
 
-/* line 33, ../sass/_base.sass */
+/* line 22, ../sass/_base.sass */
+a {
+  text-decoration: none;
+}
+/* line 24, ../sass/_base.sass */
+a:link {
+  color: #20806a;
+}
+/* line 26, ../sass/_base.sass */
+a:visited {
+  color: #144c3f;
+}
+/* line 28, ../sass/_base.sass */
+a:hover {
+  color: #144c3f;
+  background-color: #e2e3d7;
+}
+/* line 31, ../sass/_base.sass */
+a:active {
+  color: white;
+  background-color: #20806a;
+}
+
+/* line 38, ../sass/_base.sass */
 blockquote p {
   font-family: "Lato";
   font-weight: 900;
@@ -381,14 +404,14 @@ blockquote p {
   padding: 0.25em 0;
 }
 
-/* line 44, ../sass/_base.sass */
+/* line 52, ../sass/_base.sass */
 h1, h2, h3, h4, h5, h6 {
   color: #77666d;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 900;
 }
 
-/* line 49, ../sass/_base.sass */
+/* line 60, ../sass/_base.sass */
 #page-title {
   color: #4d3d44;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -397,14 +420,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 32px;
 }
 
-/* line 57, ../sass/_base.sass */
-blockquote {
-  color: #b19fa7;
-  font-family: lato;
-  font-weight: 900;
-}
-
-/* line 62, ../sass/_base.sass */
+/* line 70, ../sass/_base.sass */
 ::selection {
   background-color: #8c4965;
   color: #f4eee0;
@@ -1869,58 +1885,109 @@ tr.selected td {
   margin-bottom: 1.5em;
 }
 
-/* line 23, ../sass/components/_panels.sass */
-.pane-node-field-ol-event-venue-ref {
+/* line 25, ../sass/components/_panels.sass */
+.views-row {
   background-color: #e3dcd1;
 }
-/* line 25, ../sass/components/_panels.sass */
-.pane-node-field-ol-event-venue-ref h2 {
-  font-family: "Lato";
-  font-size: 1em;
-}
 
-/* line 31, ../sass/components/_panels.sass */
+/* line 30, ../sass/components/_panels.sass */
 .panel-pane h2 {
-  margin: 0 0;
-  color: #4d3d44;
-  font-family: "Lato";
+  padding: 0.75em 5px 0.25em 5px;
+  margin: 0;
+  color: #77666d;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 900;
   font-size: 1em;
+  line-height: 1em;
+  text-decoration: none;
+  border-bottom: solid 1px #b19fa7;
+}
+/* line 41, ../sass/components/_panels.sass */
+.panel-pane h2 a:link {
+  color: #20806a;
   text-decoration: none;
 }
-
-/* line 39, ../sass/components/_panels.sass */
-.panel-pane a {
-  display: block;
+/* line 44, ../sass/components/_panels.sass */
+.panel-pane h2 a:visited {
   color: #20806a;
-  text-decoration: none;
-  color: #20806a;
-  color: white;
+}
+/* line 46, ../sass/components/_panels.sass */
+.panel-pane h2 a:hover {
   color: #f4eee0;
 }
+/* line 48, ../sass/components/_panels.sass */
+.panel-pane h2 a:active {
+  color: white;
+}
 
-/* line 54, ../sass/components/_panels.sass */
+/* line 53, ../sass/components/_panels.sass */
+.panel-pane .pane-node-body p {
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1em;
+  color: #77666d;
+  padding: 0.25em 5px;
+}
+
+/* line 63, ../sass/components/_panels.sass */
+.views-field-title {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  color: #77666d;
+  line-height: 16px;
+  padding: 4px 0 0 0;
+  height: 5em;
+}
+/* line 71, ../sass/components/_panels.sass */
+.views-field-title a {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0.75em 5px 0.25em 5px;
+}
+/* line 81, ../sass/components/_panels.sass */
+.views-field-title a:link {
+  color: #20806a;
+}
+/* line 83, ../sass/components/_panels.sass */
+.views-field-title a:visited {
+  color: #20806a;
+}
+/* line 85, ../sass/components/_panels.sass */
+.views-field-title a:hover {
+  color: #144c3f;
+  background-color: #e2e3d7;
+}
+/* line 88, ../sass/components/_panels.sass */
+.views-field-title a:active {
+  color: white;
+  background-color: #20806a;
+}
+
+/* line 99, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 {
   margin: 0.5em 0;
   background-color: #e3dcd1;
 }
-/* line 57, ../sass/components/_panels.sass */
-.pane-openlocal-event-panel-pane-1 h2.pane-title {
-  border-bottom: 1px #b19fa7 solid;
-  padding: 0 4px;
-}
-/* line 60, ../sass/components/_panels.sass */
+/* line 102, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table {
   margin: 0 0;
   width: 100%;
 }
-/* line 63, ../sass/components/_panels.sass */
+/* line 105, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table tr {
   vertical-align: top;
   border-bottom: 1px #f4eee0 solid;
   background-color: transparent;
 }
-/* line 67, ../sass/components/_panels.sass */
+/* line 109, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table td.views-field-field-ol-event-date {
   padding: 0 4px;
   font-family: "Lato";
@@ -1928,7 +1995,7 @@ tr.selected td {
   font-size: 18px;
   color: #77666d;
 }
-/* line 73, ../sass/components/_panels.sass */
+/* line 115, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table td.views-field-title {
   padding: 0 4px;
   font-family: "Lato";
@@ -1937,7 +2004,7 @@ tr.selected td {
   color: #77666d;
   text-decoration: none;
 }
-/* line 80, ../sass/components/_panels.sass */
+/* line 122, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-1 table td.views-field-title a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 300;
@@ -1946,102 +2013,72 @@ tr.selected td {
   font-size: 14px;
 }
 
-/* line 97, ../sass/components/_panels.sass */
+/* line 139, ../sass/components/_panels.sass */
 .pane-openlocal-event-panel-pane-2 {
   border-top: 1px #b19fa7 solid;
   margin-bottom: 0.5em;
 }
 
-/* line 101, ../sass/components/_panels.sass */
+/* line 143, ../sass/components/_panels.sass */
 .view-ol-event-upcoming table td {
   vertical-align: top;
 }
 
-/* line 104, ../sass/components/_panels.sass */
+/* line 146, ../sass/components/_panels.sass */
 .view-ol-event-upcoming table tr {
   background-color: transparent;
   border-bottom: 1px #e3dcd1 solid;
 }
-/* line 107, ../sass/components/_panels.sass */
+/* line 149, ../sass/components/_panels.sass */
 .view-ol-event-upcoming table tr:hover {
   background-color: #e2e3d7;
 }
 
-/* line 110, ../sass/components/_panels.sass */
+/* line 152, ../sass/components/_panels.sass */
 .views-field-field-ol-event-date {
   font-family: "Lato";
   font-weight: 900;
   color: #77666d;
 }
 
-/* line 119, ../sass/components/_panels.sass */
-.views-field-title {
-  font-family: "Lato";
-  font-weight: 400;
-  font-size: 16px;
-  color: #77666d;
-  line-height: 16px;
-  padding: 4px 0 0 0;
-}
-/* line 126, ../sass/components/_panels.sass */
-.views-field-title a {
-  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 300;
-  text-decoration: none;
-}
-/* line 132, ../sass/components/_panels.sass */
-.views-field-title a:link {
-  color: #20806a;
-}
-/* line 134, ../sass/components/_panels.sass */
-.views-field-title a:visited {
-  color: #20806a;
-}
-/* line 136, ../sass/components/_panels.sass */
-.views-field-title a:hover {
-  color: #20806a;
-}
-
-/* line 150, ../sass/components/_panels.sass */
+/* line 174, ../sass/components/_panels.sass */
 .calendar-calendar table tbody tr {
   background-color: transparent;
 }
 
-/* line 154, ../sass/components/_panels.sass */
+/* line 178, ../sass/components/_panels.sass */
 .view-ol-event-calendar {
   border-top: 1px #b19fa7 solid;
   border-bottom: 1px solid #e3dcd1;
 }
 
-/* line 160, ../sass/components/_panels.sass */
+/* line 184, ../sass/components/_panels.sass */
 .view-ol-event-calendar .date-heading {
   border-bottom: 1px solid #e3dcd1;
 }
 
-/* line 163, ../sass/components/_panels.sass */
+/* line 187, ../sass/components/_panels.sass */
 .view-ol-event-calendar .date-heading h3 {
   font-family: "Lato";
 }
-/* line 165, ../sass/components/_panels.sass */
+/* line 189, ../sass/components/_panels.sass */
 .view-ol-event-calendar .date-heading h3 a {
   font-size: 16px;
   text-decoration: none;
   color: #20806a;
 }
 
-/* line 170, ../sass/components/_panels.sass */
+/* line 194, ../sass/components/_panels.sass */
 .pane-ol-event-calendar-panel-pane-2 {
   margin-bottom: 0.5em;
 }
 
-/* line 173, ../sass/components/_panels.sass */
+/* line 197, ../sass/components/_panels.sass */
 .calendar-calendar {
   border: 1px solid #f4eee0;
 }
 
-/* line 177, ../sass/components/_panels.sass */
+/* line 201, ../sass/components/_panels.sass */
 .calendar-calendar .month-view .mini thead tr .days {
   background-color: #e3dcd1;
   color: #b19fa7;
@@ -2055,13 +2092,13 @@ tr.selected td {
   padding: 0.4em 0;
 }
 
-/* line 189, ../sass/components/_panels.sass */
+/* line 213, ../sass/components/_panels.sass */
 .calendar-calendar .has-no-events {
   background-color: transparent;
   border: 1px #f4eee0 solid;
 }
 
-/* line 194, ../sass/components/_panels.sass */
+/* line 218, ../sass/components/_panels.sass */
 .calendar-calendar td {
   font-family: "Lato";
   font-weight: 400;
@@ -2070,61 +2107,61 @@ tr.selected td {
   color: #2f2127;
 }
 
-/* line 202, ../sass/components/_panels.sass */
+/* line 226, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on {
   background-color: #98b9b1;
 }
-/* line 204, ../sass/components/_panels.sass */
+/* line 228, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on:hover {
   background-color: #20806a;
 }
-/* line 206, ../sass/components/_panels.sass */
+/* line 230, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on a {
   text-decoration: none;
 }
-/* line 207, ../sass/components/_panels.sass */
+/* line 231, ../sass/components/_panels.sass */
 .calendar-calendar .mini-day-on a:link {
   font-weight: 900;
   color: white;
 }
 
-/* line 213, ../sass/components/_panels.sass */
+/* line 237, ../sass/components/_panels.sass */
 .calendar-calendar .mini .today {
   background-color: #8c4965;
   font-weight: 900;
   color: #f4eee0;
 }
 
-/* line 218, ../sass/components/_panels.sass */
+/* line 242, ../sass/components/_panels.sass */
 .calendar-calendar .month {
   padding: 0.4em 0;
 }
 
-/* line 221, ../sass/components/_panels.sass */
+/* line 245, ../sass/components/_panels.sass */
 .calendar-calendar .month-view .mini .empty {
   background-color: transparent;
 }
 
-/* line 224, ../sass/components/_panels.sass */
+/* line 248, ../sass/components/_panels.sass */
 .calendar-calendar .future {
   background-color: #e3dcd1;
 }
 
-/* line 227, ../sass/components/_panels.sass */
+/* line 251, ../sass/components/_panels.sass */
 .calendar-calendar .past {
   color: #b19fa7;
 }
-/* line 229, ../sass/components/_panels.sass */
+/* line 253, ../sass/components/_panels.sass */
 .calendar-calendar .past .has-events {
   color: #20806a;
   background-color: #e2e3d7;
 }
-/* line 232, ../sass/components/_panels.sass */
+/* line 256, ../sass/components/_panels.sass */
 .calendar-calendar .past .has-events:hover {
   background-color: #20806a;
 }
 
-/* line 236, ../sass/components/_panels.sass */
+/* line 260, ../sass/components/_panels.sass */
 .view .date-nav-wrapper .pager li {
   background-color: transparent;
   border-bottom-left-radius: 0;
@@ -2134,69 +2171,69 @@ tr.selected td {
   font-size: 1em;
   z-index: none;
 }
-/* line 244, ../sass/components/_panels.sass */
+/* line 268, ../sass/components/_panels.sass */
 .view .date-nav-wrapper .pager li:hover {
   background-color: #98b9b1;
 }
 
-/* line 257, ../sass/components/_panels.sass */
+/* line 281, ../sass/components/_panels.sass */
 .view-openlocal-business {
   background-color: #e3dcd1;
 }
-/* line 259, ../sass/components/_panels.sass */
+/* line 283, ../sass/components/_panels.sass */
 .view-openlocal-business .view-content {
   display: block;
   display: clear;
 }
 
-/* line 274, ../sass/components/_panels.sass */
-.view-display-id-list_news_articles .views-row {
+/* line 290, ../sass/components/_panels.sass */
+.views-field-field-ol-description {
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1em;
+  color: #77666d;
+  padding: 0.25em 5px;
+}
+
+/* line 306, ../sass/components/_panels.sass */
+.view-display-id-list_news_articles {
   background-color: #e3dcd1;
   display: inline-block;
-  margin: 0 20px 0.5em 0;
-  padding: 0 5px;
+  vertical-align: top;
+  width: 31%;
+  margin: 0 20px 1em 0;
+  padding: 0 0;
   font-family: "Lato";
 }
 
-/* line 292, ../sass/components/_panels.sass */
+/* line 325, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author {
   background-color: #e3dcd1;
 }
-/* line 295, ../sass/components/_panels.sass */
+/* line 328, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author h2.pane-title {
   padding: 0.25em 10px;
   font-family: "Lato";
   font-size: 1em;
   color: #4d3d44;
 }
-/* line 300, ../sass/components/_panels.sass */
+/* line 333, ../sass/components/_panels.sass */
 .pane-openlocal-news-articles-by-author h2.pane-title:link {
   color: #20806a;
 }
 
-/* line 315, ../sass/components/_panels.sass */
+/* line 348, ../sass/components/_panels.sass */
 .pane-openlocal-alert-panel-pane-1 {
   background-color: #e3dcd1;
 }
-/* line 317, ../sass/components/_panels.sass */
+/* line 350, ../sass/components/_panels.sass */
 .pane-openlocal-alert-panel-pane-1 .view-empty p {
   color: #144c3f;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 16px;
   font-weight: 300;
   margin: 0.5em 4px 0.5em 4px;
-}
-/* line 323, ../sass/components/_panels.sass */
-.pane-openlocal-alert-panel-pane-1 h2.pane-title {
-  padding: 0.5em 5px;
-  font-family: "Lato";
-  font-size: 1em;
-  color: #4d3d44;
-  border-bottom: 1px solid #77666d;
-}
-/* line 329, ../sass/components/_panels.sass */
-.pane-openlocal-alert-panel-pane-1 h2.pane-title:link {
-  color: #20806a;
 }
 
 /* line 33, ../sass/styles.sass */
