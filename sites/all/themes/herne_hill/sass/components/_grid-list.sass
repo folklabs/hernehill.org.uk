@@ -1,0 +1,43 @@
+
+// .ol-item-grid
+
+//   .views-row
+//     float: left
+//     width: 220px
+
+@mixin grid-list()
+  // background-color: #aaa
+  .views-row
+    float: left
+    background-color: $col-content-lightest
+    // padding: 5px
+    width: 220px
+    height: 230px
+    margin: 11px
+    .views-field-title
+      a:hover
+        color: $col-links
+        background-color: transparent
+
+
+    .views-field-field-ol-business-category,
+    .views-field-field-ol-group-category
+      font-weight: bold
+      height: 30px
+      // padding-top: 2px
+      padding-left: 5px
+      // .field-content
+      a
+        vertical-align: bottom
+
+    // TODO: overrides needed? Check base versions.
+    .views-field-title
+      a
+        padding: 3px
+        width: 95%
+
+
+.view-id-openlocal_business,
+.view-id-openlocal_group
+  @include grid-list()
+
