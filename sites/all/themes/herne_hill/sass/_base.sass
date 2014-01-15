@@ -1,34 +1,39 @@
+
 //
 // BASE STYLES
+
 
 // Style background of page
 
 body
   background-color: $col-page
 
+
+// Basic body text
+
 p, ul, ol
   color: $col-content-darkest
   font-family: $lato
   font-weight: 400
 
-//p a
+
+// Global style for links
+
+a
+  text-decoration: none
   &:link
-  color: $col-links
-  border-bottom: 1px, $col-links-lightest
+    color: $col-links
   &:visited
-  color: $col-links-darkest
-//&:hover
-  //color: $col-links
-  //border-bottom: 1px, $col-links
-  //background-color: $col-links-lightest
-  //margin-bottom: 0.25em
-  // TODO: this was causing the logo to jump on mouse hover
-  // padding-bottom: 0.25em
+    color: $col-links-darker
+  &:hover
+    color: $col-links-darker
+    background-color: $col-links-lightest
   &:active
-  color: $col-page
-  background-color: $col-links
-  border-bottom: 1px, $col-links-darkest
-  margin-bottom: 0.25em
+    color: white
+    background-color: $col-links
+
+
+// Styles blockquotes in body area
 
 blockquote p
   font-family: $lato
@@ -41,10 +46,16 @@ blockquote p
   padding: 0.25em 0
     // padding-bottom: 0.25em
 
+
+// Headings
+
 h1, h2, h3, h4, h5, h6
   color: $col-content
   font-family: $merriweather
   font-weight: 900
+
+
+// Large page title
 
 #page-title
   color: $col-content-darker
@@ -54,10 +65,7 @@ h1, h2, h3, h4, h5, h6
   margin-top: 2 * $base-font-size
 
 
-blockquote
-  color: $col-content-lighter
-  font-family: lato
-  font-weight: 900
+// Text selection highlight colour
 
 ::selection
   background-color: $col-content-strong
