@@ -1,0 +1,123 @@
+
+// ----------------------------------------------------------------------------
+// FORMS
+
+
+
+
+// ol-forms
+// form
+// input
+// textarea
+// label
+// fieldset
+// legend
+// select
+// optgroup
+// option
+// button
+// datalist
+// output
+
+
+
+
+// Wrapper for a form element (or group of form elements) and its label
+.form-item
+  margin: rhythm(1) 0
+  // Pack groups of checkboxes and radio buttons closer together
+  .form-checkboxes &,
+  .form-radios &
+    // Drupal core uses "0.4em 0".
+    margin: 0
+  // Form items in a table
+  tr.odd &,
+  tr.even &
+    margin: 0
+  // Highlight the form elements that caused a form submission error
+  input.error,
+  textarea.error,
+  select.error
+    border: 1px solid #c00
+  // The descriptive help text (separate from the label)
+  .description
+    font-size: 0.85em
+
+.form-type-radio,
+.form-type-checkbox
+  .description
+    margin-left: 2.4em
+
+// The part of the label that indicates a required field
+.form-required
+  color: #c00
+
+// Labels for radios and checkboxes
+label.option
+  display: inline
+  font-weight: normal
+
+// Buttons used by contrib modules like Media
+a.button
+  +appearance(button)
+
+// Password confirmation
+
+.password-parent,
+.confirm-parent
+  margin: 0
+
+// Drupal's default login form block
+#user-login-form
+  text-align: left
+  // LTR
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// SEARCH FORM
+
+.search-query
+  font-family: $lato
+  font-weight: 300
+  color: $col-content-darker
+  font-size: 1.25 * $base-font-size
+  //background-color: transparent
+  border: 1px solid white
+  +gradient-search-form
+  +glow-inner-search-form
+
+input.search-query
+  vertical-align: top
+  padding: 0.25em 0.5em 0.25em 0.5em
+
+
+#search-form
+  .form-type-textfield
+    vertical-align: top
+    #edit-keys
+      vertical-align: top
+
+  .form-submit
+    vertical-align: top
+    margin-top: 1px
+    background: transparent url(../images/search.png) no-repeat left top
+    padding-right: 25px
+    padding-bottom: 10px
+    text-indent: -9999px
+    border: 1px solid $col-links-darker
+    border-radius: 0.2em
+    a
+    &:hover
+      +glow-inner-search-submit
+    &:active
+      // possibly add style here for activated button
+
+
+
+
+

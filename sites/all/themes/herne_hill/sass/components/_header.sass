@@ -1,0 +1,50 @@
+
+// ----------------------------------------------------------------------------
+// BRANDING HEADER
+
+// Wrapping link for logo
+.header__logo
+  float: left
+  // LTR
+  margin: 0
+  padding: 0
+  &:hover
+    background-color: transparent
+
+// Logo image
+.header__logo-image
+  vertical-align: bottom
+  margin-top: 8px
+  // TODO: use image that is correct size
+  width: 150px
+  margin: 10px 20px 10px 10px
+
+
+// Wrapper for website name and slogan
+.header__name-and-slogan
+  float: left
+
+// The name of the website
+.header__site-name
+  margin: 0
+  +adjust-font-size-to($h1-font-size)
+
+// The link around the name of the website
+.header__site-link
+  &:link,
+  &:visited
+    color: #000
+    text-decoration: none
+  &:hover,
+  &:focus
+    text-decoration: underline
+
+// The slogan (or tagline) of a website
+.header__site-slogan
+  margin-top: 40px
+  margin-left: 20px
+
+// Wrapper for any blocks placed in the header region.
+.header__region
+  // Clear the logo.
+  clear: both

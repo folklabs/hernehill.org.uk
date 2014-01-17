@@ -1,13 +1,35 @@
 
-//
+// ----------------------------------------------------------------------------
 // BASE STYLES
 
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// PAGE
 
 // Style background of page
 
 body
   background-color: $col-page
 
+
+// Text selection highlight colour
+
+::selection
+  background-color: $col-content-strong
+  color: $col-page
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// TYPOGRAPHY
 
 // Basic body text
 
@@ -65,8 +87,15 @@ h1, h2, h3, h4, h5, h6
   margin-top: 2 * $base-font-size
 
 
-// Text selection highlight colour
 
-::selection
-  background-color: $col-content-strong
-  color: $col-page
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// TABLES
+
+//table
+  //background-color: transparent
+

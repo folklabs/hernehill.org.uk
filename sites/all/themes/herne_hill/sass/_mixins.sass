@@ -85,12 +85,71 @@
   background-image: -ms-linear-gradient(top, $col-links-lighter 0%,$col-page 50%,white 100%)
   background-image: linear-gradient(to bottom, $col-links-lighter 0%,$col-page 50%,white 100%)
 
-// Definition for secondary buttons
+// Gradient for secondary buttons
 
-// Definition for beige-background panels
+// Gradient for beige-background panels
 
-// Definition for promoted adverts
+// Gradient for promoted adverts
 
-// Definition for standard adverts
+// Gradient for standard adverts
+
+// Gradient for search form
+=gradient-search-form
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $col-content-lightest), color-stop(100%, $col-page))
+  background-image: -o-linear-gradient(top, $col-content-lightest 0%,$col-page 100%)
+  background-image: -moz-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
+  background-image: -webkit-linear-gradient(top, $col-content-lightest 0%,$col-page 100%)
+  background-image: -ms-linear-gradient(top, $col-content-lightest 0%,$col-page 100%)
+  background-image: linear-gradient(to bottom, $col-content-lightest 0%,$col-page 100%)
+
+// Nice menus background
+=gradient-nice-menus-block
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darkest),color-stop(1, $col-links-darker))
+  background-image: -o-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -moz-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -webkit-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: -ms-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
+  background-image: linear-gradient(to bottom, $col-links-darkest 0%, $col-links-darker 100%)
+
+// Nice menus link
+=gradient-nice-menus-link
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darker),color-stop(1, $col-links-darkest))
+  background-image: -o-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: -moz-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: -webkit-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: -ms-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
+  background-image: linear-gradient(to bottom, $col-links-darker 0%, $col-links-darkest 100%)
+
+
+
+
+// ----------------------------------------------------------------------------
+// GLOWS
+
+// Inner glow on search form
+=glow-inner-search-form
+  -moz-box-shadow:    inset 0 0 5px $col-content-lighter
+  -webkit-box-shadow: inset 0 0 5px $col-content-lighter
+  box-shadow:         inset 0 0 5px $col-content-lighter
+
+// Inner glow on search form submit button hover
+=glow-inner-search-submit
+  -moz-box-shadow:    inset 0 0 10px $col-links-darker
+  -webkit-box-shadow: inset 0 0 10px $col-links-darker
+  box-shadow:         inset 0 0 10px $col-links-darker
+
+// Inner glow on search form submit button hover
+=glow-inner-nice-menus-current
+  -moz-box-shadow:    inset 0 0 10px $col-links-darkest
+  -webkit-box-shadow: inset 0 0 10px $col-links-darkest
+  box-shadow:         inset 0 0 10px $col-links-darkest
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// TYPOGRAPHY
 
 // 

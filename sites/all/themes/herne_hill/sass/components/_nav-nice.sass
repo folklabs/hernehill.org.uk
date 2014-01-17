@@ -1,0 +1,63 @@
+
+// ----------------------------------------------------------------------------
+// NICE MENU STYLES
+
+// Nice Menus styles
+.nice-menu
+  height: 100%
+  li
+    color: $col-page
+    font-family: $lato
+    font-size: 1.25 * $base-font-size
+    font-weight: 300
+    height: 100%
+    vertical-align: center
+    padding: 0 0
+    a
+      text-decoration: none
+      letter-spacing: 0.025em
+      padding: 12px 15px
+      color: $col-page
+
+
+// Styles for sub-menu links
+#navigation
+  .nice-menu-down
+    li
+      li
+        border-left: solid 1px $col-content-lighter
+        border-right: solid 1px $col-content-lighter
+        border-bottom: solid 1px $col-content-lighter
+        background-color: $col-page
+        font-size: 1 * $base-font-size
+        font-weight: 400
+        color: $col-links
+        a
+          color: $col-links-darkest
+          padding: 0.25em 15px
+        a:link
+          color: $col-links
+        a:hover
+          background-color: $col-links-lightest
+          background-image: none
+        a:active
+          background-color: $col-links
+          color: white
+      li:hover
+        background-color: $col-links-lightest
+
+#navigation
+  .nice-menu-down
+    ul
+      margin-top: 0.6em
+      ul
+        margin-top: 0.05em
+        border-top: 1px solid $col-content-lighter
+
+.nice-menu-navigation
+  // .nice-menu-down
+  li
+    a
+      color: $col-links-darkest
+      font-size: 0.9 * $base-font-size
+      padding: 0.25em 5px

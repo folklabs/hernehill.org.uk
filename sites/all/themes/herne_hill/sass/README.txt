@@ -72,3 +72,44 @@ styles.sass –
 
 All Style groups (modules) must be divided with 8 characters of space between them to assist readability of files
 All Style group titles must be preceded with a 
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// IDIOMATIC PROPERTY ORDERING
+
+We use Nicholas Gallagher's Idiomatic CSS approach to ordering properties: https://github.com/necolas/idiomatic-css
+  
+Positioning
+  position:
+  z-index:
+  top:
+  right:
+
+Display & Box Model
+  display:
+  overflow:
+  box-sizing:
+  width:
+  height:
+  padding:
+  border:
+  margin:
+
+Color
+  background:
+  color:
+
+Text
+  font-family:
+  font-size:
+  line-height:
+  text-align:
+
+Other
+  cursor:

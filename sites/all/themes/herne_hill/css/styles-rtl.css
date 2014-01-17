@@ -26,24 +26,7 @@ ul {
 /*
  * @file
  * RTL companion for the layout-responsive.css file. */
-/*
- * @file
- * Positioning for a responsive layout.
- *
- * Define CSS classes to create a fluid grid layout with optional sidebars
- * depending on whether blocks are placed in the left or right sidebars.
- *
- * This layout uses the Zen Grids plugin for Compass: http://zengrids.com */
-/*
- * Use 3 grid columns for smaller screens. */
 @media all and (min-width: 480px) and (max-width: 959px) {
-  /*
-   * The layout when there is only one sidebar, the left one. */
-  /* line 71, ../sass/layouts/_responsive.sass */
-  .sidebar-first {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
   /* line 73, ../sass/layouts/_responsive.sass */
   .sidebar-first #content {
     float: right;
@@ -59,13 +42,6 @@ ul {
     margin-left: -33.33333%;
   }
 
-  /*
-   * The layout when there is only one sidebar, the right one. */
-  /* line 80, ../sass/layouts/_responsive.sass */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 3rd column from left. */
-  }
   /* line 82, ../sass/layouts/_responsive.sass */
   .sidebar-second #content {
     float: right;
@@ -81,14 +57,6 @@ ul {
     margin-left: -100%;
   }
 
-  /*
-   * The layout when there are two sidebars. */
-  /* line 89, ../sass/layouts/_responsive.sass */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Start a new row and span all 3 columns. */
-  }
   /* line 91, ../sass/layouts/_responsive.sass */
   .two-sidebars #content {
     float: right;
@@ -112,10 +80,6 @@ ul {
     padding-left: 0;
     padding-right: 0;
     clear: right;
-    /* Apply the shared properties of grid items in a single, efficient ruleset. */
-    /* Span 1 column, starting in the 1st column from left. */
-    /* Span 1 column, starting in the 2nd column from left. */
-    /* Span 1 column, starting in the 3rd column from left. */
   }
   /* line 103, ../sass/layouts/_responsive.sass */
   .two-sidebars .region-sidebar-second .block {
@@ -150,16 +114,7 @@ ul {
     margin-left: -100%;
   }
 }
-/*
- * Use 5 grid columns for larger screens. */
 @media all and (min-width: 960px) {
-  /*
-   * The layout when there is only one sidebar, the left one. */
-  /* line 122, ../sass/layouts/_responsive.sass */
-  .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
   /* line 124, ../sass/layouts/_responsive.sass */
   .sidebar-first #content {
     float: right;
@@ -175,13 +130,6 @@ ul {
     margin-left: -20%;
   }
 
-  /*
-   * The layout when there is only one sidebar, the right one. */
-  /* line 131, ../sass/layouts/_responsive.sass */
-  .sidebar-second {
-    /* Span 4 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
-  }
   /* line 133, ../sass/layouts/_responsive.sass */
   .sidebar-second #content {
     float: right;
@@ -197,14 +145,6 @@ ul {
     margin-left: -100%;
   }
 
-  /*
-   * The layout when there are two sidebars. */
-  /* line 140, ../sass/layouts/_responsive.sass */
-  .two-sidebars {
-    /* Span 3 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Span 1 column, starting in 5th column from left. */
-  }
   /* line 142, ../sass/layouts/_responsive.sass */
   .two-sidebars #content {
     float: right;
