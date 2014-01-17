@@ -463,5 +463,83 @@ function openlocal_business_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $export['openlocal_business_categories'] = $view;
 
+  $view = new view();
+  $view->name = 'openlocal_business_promotions';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'field_collection_item';
+  $view->human_name = 'OpenLocal Business Promotions';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Rewards';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_ol_promotion_description' => 'field_ol_promotion_description',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_ol_promotion_description' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Relationship: Field collection item: Entity with the Promotions (field_ol_business_promotions) */
+  $handler->display->display_options['relationships']['field_ol_business_promotions_node']['id'] = 'field_ol_business_promotions_node';
+  $handler->display->display_options['relationships']['field_ol_business_promotions_node']['table'] = 'field_collection_item';
+  $handler->display->display_options['relationships']['field_ol_business_promotions_node']['field'] = 'field_ol_business_promotions_node';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_ol_business_promotions_node';
+  /* Field: Field: Description */
+  $handler->display->display_options['fields']['field_ol_promotion_description']['id'] = 'field_ol_promotion_description';
+  $handler->display->display_options['fields']['field_ol_promotion_description']['table'] = 'field_data_field_ol_promotion_description';
+  $handler->display->display_options['fields']['field_ol_promotion_description']['field'] = 'field_ol_promotion_description';
+  /* Contextual filter: Field: Reward scheme (field_ol_promotion_reward_scheme) */
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['id'] = 'field_ol_promotion_reward_scheme_target_id';
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['table'] = 'field_data_field_ol_promotion_reward_scheme';
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['field'] = 'field_ol_promotion_reward_scheme_target_id';
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_ol_promotion_reward_scheme_target_id']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['argument_input'] = array(
+    'field_ol_promotion_reward_scheme_target_id' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Field: Reward scheme (field_ol_promotion_reward_scheme)',
+    ),
+  );
+  $export['openlocal_business_promotions'] = $view;
+
   return $export;
 }
