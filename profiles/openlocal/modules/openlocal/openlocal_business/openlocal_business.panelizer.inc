@@ -582,10 +582,10 @@ function openlocal_business_panelizer_defaults() {
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
   $panelizer->panelizer_key = 'ol_reward_scheme';
-  $panelizer->no_blocks = FALSE;
+  $panelizer->no_blocks = TRUE;
   $panelizer->css_id = '';
   $panelizer->css = '';
-  $panelizer->pipeline = 'standard';
+  $panelizer->pipeline = 'ipe';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
   $panelizer->access = array();
