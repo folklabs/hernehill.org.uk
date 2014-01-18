@@ -17,7 +17,7 @@ function openlocal_news_default_fe_block_boxes() {
   $fe_block_boxes->body = '<div class="ol-action-box">
 
 <div class="ol-action-button">
-<span><a href="node/add/openlocal-news-article"><i class="fa fa-plus"></i> add news article</a></span>
+<a href="node/add/openlocal-news-article"><span class="ol-action-span"><i class="fa fa-plus"></i> add news article</span></a>
 </div>
 
 <div>
