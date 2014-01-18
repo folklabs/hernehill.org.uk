@@ -1125,7 +1125,7 @@ tr.selected td {
 /* line 581, ../sass/components/_misc.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384008826');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
 /* line 596, ../sass/components/_misc.sass */
@@ -1219,26 +1219,36 @@ tr.selected td {
   background-image: -ms-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
   background-image: linear-gradient(to bottom, #0d332a 0%, #144c3f 100%);
 }
-
 /* line 26, ../sass/components/_actions.sass */
+.ol-action-button .ol-action-span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* edit: added z-index */
+  z-index: 1;
+}
+
+/* line 36, ../sass/components/_actions.sass */
 .ol-action-button a {
   text-decoration: none;
 }
-/* line 28, ../sass/components/_actions.sass */
+/* line 38, ../sass/components/_actions.sass */
 .ol-action-button a:link {
   color: #e3dcd1;
 }
-/* line 30, ../sass/components/_actions.sass */
+/* line 40, ../sass/components/_actions.sass */
 .ol-action-button a:visited {
   color: #e2e3d7;
 }
-/* line 32, ../sass/components/_actions.sass */
+/* line 42, ../sass/components/_actions.sass */
 .ol-action-button a:hover {
   color: #0d332a;
   background-color: transparent;
 }
 
-/* line 36, ../sass/components/_actions.sass */
+/* line 46, ../sass/components/_actions.sass */
 .ol-action-help {
   display: block;
   padding: 0px 0px;
@@ -1247,26 +1257,26 @@ tr.selected td {
   text-decoration: none;
 }
 
-/* line 58, ../sass/components/_actions.sass */
+/* line 68, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 62, ../sass/components/_actions.sass */
+/* line 72, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 69, ../sass/components/_actions.sass */
+/* line 79, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 71, ../sass/components/_actions.sass */
+/* line 81, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 74, ../sass/components/_actions.sass */
+/* line 84, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
@@ -2064,7 +2074,7 @@ tr.selected td {
 /* line 581, ../sass/components/_misc.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384008826');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
 /* line 596, ../sass/components/_misc.sass */
