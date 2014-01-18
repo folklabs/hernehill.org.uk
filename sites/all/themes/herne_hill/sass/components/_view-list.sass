@@ -25,24 +25,51 @@
 
 
 
+// Add line to top of table
 
 .pane-openlocal-event-panel-pane-2
   border-top: 1px $col-content-lighter solid
   margin-bottom: 0.5em
 
-.view-ol-event-upcoming table td
-  vertical-align: top
 
-.view-ol-event-upcoming table tr
-  border-bottom: 1px $col-content-lightest solid
-  background-color: transparent
-  &:hover
-    background-color: $col-links-lightest
+// Style event listing table
+
+.view-ol-event-upcoming
+  table
+    td
+      // Align text to top of table cells
+      vertical-align: top
+
+      // Add line to bottom and a hover style to each table row
+    tr
+      border-bottom: 1px $col-content-lightest solid
+      background-color: transparent
+      &:hover
+        background-color: $col-links-lightest
+    // Event heading text
+    .views-field-title a
+      font-family: $merriweather
+      font-size: 1.125 * $base-font-size
+      line-height: 1.5 * $base-font-size
+      color: $col-links
+    // Event body text
+
+    // Event venue link
+
+
+
+// Style date text
 
 .views-field-field-ol-event-date
   color: $col-content
   font-family: $lato
   font-weight: 900
+
+
+
+
+
+
 
 .views-field-field-featured-image
 //  width: 120px

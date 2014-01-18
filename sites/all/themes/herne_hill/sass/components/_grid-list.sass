@@ -5,15 +5,26 @@
 //     float: left
 //     width: 220px
 
+
+// When using the Harris Panopoly layout (middle two columns hold grid lists)
+// remove 20px right-hand margin on middle column
+
+.page-services .harris-column-content-region-inner,
+.page-groups .harris-column-content-region-inner,
+.page-frontpage .harris-column-content-region-inner
+  margin-right: 0px
+
+
+
 @mixin grid-list()
-  // background-color: #aaa
+  // background-color: red
   .views-row
     float: left
     background-color: $col-content-lightest
     // padding: 5px
-    width: 220px
+    width: 46.667%
     height: 230px
-    margin: 11px
+    margin: 0 10px 1em 10px
     .views-field-title
       a:hover
         color: $col-links
@@ -38,6 +49,7 @@
 
 
 .view-id-openlocal_business,
-.view-id-openlocal_group
+.view-id-openlocal_group,
+.view-id-openlocal_news
   @include grid-list()
 

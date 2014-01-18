@@ -52,7 +52,6 @@
 
 // Style summary text in standard panel pane
 .panel-pane .pane-node-body p
-  font-family: $lato
   font-size: 1em
   font-weight: 300
   line-height: 1em
@@ -62,15 +61,8 @@
 
 
 // Styles the main heading text for generic panels
-.views-field-title
-  font-family: $lato
-  font-weight: 400
-  font-size: $base-font-size
-  color: $col-content
-  line-height: $base-font-size
-  display: block
-  padding: 0.25 * $base-font-size 0 0 0
-  height: 5em
+view-display-id-list_news_articles .views-field-title
+  +typography-grid-list-heading
   a
     font-family: $merriweather
     font-size: 1.125 * $base-font-size
@@ -78,8 +70,6 @@
     font-weight: 300
     text-decoration: none
     display: block
-    height: 100%
-    width: 100%
     padding: 0.75em 5px 0.25em 5px
     &:link
       color: $col-links
