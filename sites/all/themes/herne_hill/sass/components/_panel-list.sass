@@ -1,6 +1,35 @@
 
 // ----------------------------------------------------------------------------
-// PANELS CONTAINING CONTENT LISTINGS
+// ALL PANELS CONTAINING CONTENT LISTINGS
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// GENERIC LISTING PANEL HEADING
+
+h2.pane-title,
+h2.node-title
+  padding: 0.5em 5px
+  font-family: $lato
+  font-weight: 900
+  font-size: 1em
+  color: $col-content-darker
+  a
+    display: block
+    width: 100%
+    height: 100%
+    &:link
+      color: $col-links
+    &:visited
+      color: $col-links
+    &:hover
+      color: $col-links
+    &:active
+      color: $col-links-darker
 
 
 
@@ -14,11 +43,7 @@
 
 // ----------------------------------------------------------------------------
 // UPCOMING EVENTS LISTING DISPLAY - PANEL
-
-
-
-
-// .ol-panel-list-events
+// Try to use .ol-panel-list-events to style this panel
 
 
 
@@ -28,25 +53,16 @@
   margin: 0.5em 0
   background-color: $col-content-lightest
   table
-    margin: 0 0
     width: 100%
+    margin: 0 0
     tr
       vertical-align: top
-      border-bottom: 1px $col-page solid
+      border-bottom: solid 1px $col-page
       background-color: transparent
     td.views-field-field-ol-event-date
-      padding: 0 4px
-      font-family: $lato
-      font-weight: 900
-      font-size: 1.125 * $base-font-size
-      color: $col-content
+      padding: 0 5px 0.5em 5px
     td.views-field-title
-      padding: 0 4px
-      font-family: $lato
-      font-weight: 900
-      font-size: 1em
-      color: $col-content
-      text-decoration: none
+      padding: 0 0px 0.5em 5px
       a
         font-family: $merriweather
         font-weight: 300
@@ -55,6 +71,81 @@
         font-size: 0.875 * $base-font-size
 
 
+// Dates column text (day and month)
+.view-ol-event-upcoming-sidebar
+  .views-field-field-ol-event-date
+    span:first-child
+      margin: 0.25em 0 0 0
+      font-size: 1.125 * $base-font-size
+      color: $col-content-darkest
+      display: block
+    // span
+    span:last-child
+      margin: 0 0 0.5em 0
+      font-size: 0.75 * $base-font-size
+      color: $col-content
+      line-height: 1em
+      display: block
+    text-align: center
+
+
+// Event title and location
+.view-ol-event-upcoming-sidebar
+  .views-field-title
+    div:first-child
+      padding: 0.25em 0 0 0
+      a
+        font-family: $merriweather
+        font-weight: 400
+        font-size: 1 * $base-font-size
+        line-height: 1 * $base-font-size
+        background-color: transparent
+        &:link
+          color: $col-links
+        &:visited
+          color: $col-links
+        &:hover
+          color: $col-links-darkest
+        &:active
+          color: white
+    &:last-child
+      a
+        font-family: $lato
+        font-weight: 500
+        font-size: 0.875 * $base-font-size
+        line-height: 0.875 * $base-font-size
+        background-color: transparent
+        &:link
+          color: $col-links-darker
+        &:visited
+          color: $col-links-darker
+        &:hover
+          color: $col-links-darker
+        &:active
+          color: white
+
+// What is this? Comment needed!
+
+.field-name-field-ol-event-category,
+.field-name-field-ol-event-date
+  background-color: $col-content-lightest
+  padding: 3px 0 6px 2px
+  // padding-bottom: 6px
+  border-bottom: solid 1px #FFF
+  .field-label
+    width: 80px
+    // font-size: 0.8em
+
+
+// What is this? Comment needed!
+
+.view-ol-event-upcoming
+  .views-field-field-ol-event-date
+    // float: left
+    margin: 0 5px 5px 0
+  .views-field-field-featured-image
+    // float: left
+    margin: 0 5px 5px 0
 
 
 
