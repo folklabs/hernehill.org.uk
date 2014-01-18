@@ -14,8 +14,19 @@ function openlocal_event_default_fe_block_boxes() {
   $fe_block_boxes->info = 'OpenLocal Event actions';
   $fe_block_boxes->format = 'panopoly_html_text';
   $fe_block_boxes->machine_name = 'ol_event_actions';
-  $fe_block_boxes->body = '<p><a href="node/add/ol-event">Add event</a></p>
-<p><a href="node/add/ol-place">Add place</a></p>';
+  $fe_block_boxes->body = '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="node/add/ol-event"><span class="ol-action-span"><i class="fa fa-plus"></i> add event</span></a>
+</div>
+<div class="ol-action-button">
+<a href="node/add/ol-place"><span class="ol-action-span"><i class="fa fa-plus"></i> add place</span></a>
+</div>
+
+<div>
+<a href="" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating articles</a>
+</div>
+</div>';
 
   $export['ol_event_actions'] = $fe_block_boxes;
 

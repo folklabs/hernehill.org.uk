@@ -12,9 +12,18 @@ function openlocal_group_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'OpenLocal Group actions';
-  $fe_block_boxes->format = 'panopoly_wysiwyg_text';
+  $fe_block_boxes->format = 'panopoly_html_text';
   $fe_block_boxes->machine_name = 'ol_group_actions';
-  $fe_block_boxes->body = '<p><a href="node/add/ol-group">Add group</a></p>';
+  $fe_block_boxes->body = '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="node/add/ol-group"><span class="ol-action-span"><i class="fa fa-plus"></i> add group</span></a>
+</div>
+
+<div>
+<a href="" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating groups</a>
+</div>
+</div>';
 
   $export['ol_group_actions'] = $fe_block_boxes;
 

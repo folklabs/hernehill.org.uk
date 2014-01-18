@@ -74,7 +74,6 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['fields']['field_ol_group_category']['field'] = 'field_ol_group_category';
   $handler->display->display_options['fields']['field_ol_group_category']['label'] = '';
   $handler->display->display_options['fields']['field_ol_group_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_group_category']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_ol_group_category']['delta_offset'] = '0';
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
