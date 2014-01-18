@@ -210,47 +210,47 @@
  *   );
  * @endcode
  */
-// $databases = array (
-//   'default' =>
-//   array (
-//     'default' =>
-//     array (
-//       'database' => 'dev.hernehill.pantheon',
-//       'username' => 'root',
-//       'password' => 'root2day',
-//       'host' => 'localhost',
-//       'port' => '8888',
-//       'driver' => 'mysql',
-//       'prefix' => '',
-//     ),
-//   ),
-//   'd6.hernehill' =>
-//   array (
-//     'default' =>
-//     array (
-//       'database' => 'd6.hernehill',
-//       'username' => 'root',
-//       'password' => 'root2day',
-//       'host' => 'localhost',
-//       'port' => '8888',
-//       'driver' => 'mysql',
-//       'prefix' => '',
-//     ),
-//   ),
-//   'HerneHillForum_legacy' =>
-//   array (
-//     'default' =>
-//     array (
-//       'database' => 'd6.hernehill',
-//       'username' => 'root',
-//       'password' => 'root2day',
-//       'host' => 'localhost',
-//       'port' => '8888',
-//       'driver' => 'mysql',
-//       'prefix' => '',
-//     ),
-//   ),
-// );
+$databases = array (
+  'default' =>
+  array (
+    'default' =>
+    array (
+      'database' => 'dev.hernehill.pantheon',
+      'username' => 'root',
+      'password' => 'root2day',
+      'host' => 'localhost',
+      'port' => '8888',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+  'd6.hernehill' =>
+  array (
+    'default' =>
+    array (
+      'database' => 'd6.hernehill',
+      'username' => 'root',
+      'password' => 'root2day',
+      'host' => 'localhost',
+      'port' => '8888',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+  'HerneHillForum_legacy' =>
+  array (
+    'default' =>
+    array (
+      'database' => 'd6.hernehill',
+      'username' => 'root',
+      'password' => 'root2day',
+      'host' => 'localhost',
+      'port' => '8888',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+);
 
 /**
  * Access control for update.php script.
