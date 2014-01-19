@@ -26,6 +26,7 @@ features[field_instance][] = node-ol_resource-field_featured_image
 features[field_instance][] = node-ol_resource-field_ol_resource_category
 features[field_instance][] = node-ol_resource-field_ol_resource_link
 features[node][] = ol_resource
+features[page_manager_pages][] = ol_discover
 features[page_manager_pages][] = ol_resources
 features[rules_config][] = rules_ol_resource_notify_new
 features[taxonomy][] = ol_resources
