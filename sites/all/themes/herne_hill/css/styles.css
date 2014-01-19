@@ -629,20 +629,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 0px;
 }
 
+/* line 51, ../sass/components/_grid-list.sass */
+.view-id-openlocal_business,
+.view-id-openlocal_group {
+  height: 230px;
+}
 /* line 21, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row,
-.view-id-openlocal_group .views-row,
-.view-id-openlocal_news .views-row {
+.view-id-openlocal_group .views-row {
   float: left;
   background-color: #e3dcd1;
-  width: 46.667%;
-  height: 230px;
+  width: 45.667%;
   margin: 0 10px 1em 10px;
 }
 /* line 29, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-title a:hover,
-.view-id-openlocal_group .views-row .views-field-title a:hover,
-.view-id-openlocal_news .views-row .views-field-title a:hover {
+.view-id-openlocal_group .views-row .views-field-title a:hover {
   color: #20806a;
   background-color: transparent;
 }
@@ -650,9 +652,7 @@ h1, h2, h3, h4, h5, h6 {
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category,
-.view-id-openlocal_group .views-row .views-field-field-ol-group-category,
-.view-id-openlocal_news .views-row .views-field-field-ol-business-category,
-.view-id-openlocal_news .views-row .views-field-field-ol-group-category {
+.view-id-openlocal_group .views-row .views-field-field-ol-group-category {
   font-weight: bold;
   height: 30px;
   padding-left: 5px;
@@ -661,19 +661,59 @@ h1, h2, h3, h4, h5, h6 {
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category a,
-.view-id-openlocal_group .views-row .views-field-field-ol-group-category a,
-.view-id-openlocal_news .views-row .views-field-field-ol-business-category a,
-.view-id-openlocal_news .views-row .views-field-field-ol-group-category a {
+.view-id-openlocal_group .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
 /* line 46, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-title a,
-.view-id-openlocal_group .views-row .views-field-title a,
-.view-id-openlocal_news .views-row .views-field-title a {
+.view-id-openlocal_group .views-row .views-field-title a {
   padding: 3px;
   width: 95%;
 }
 
+/* line 21, ../sass/components/_grid-list.sass */
+.view-display-id-list_news_articles .views-row {
+  float: left;
+  background-color: #e3dcd1;
+  width: 45.667%;
+  margin: 0 10px 1em 10px;
+}
+/* line 29, ../sass/components/_grid-list.sass */
+.view-display-id-list_news_articles .views-row .views-field-title a:hover {
+  color: #20806a;
+  background-color: transparent;
+}
+/* line 34, ../sass/components/_grid-list.sass */
+.view-display-id-list_news_articles .views-row .views-field-field-ol-business-category,
+.view-display-id-list_news_articles .views-row .views-field-field-ol-group-category {
+  font-weight: bold;
+  height: 30px;
+  padding-left: 5px;
+}
+/* line 41, ../sass/components/_grid-list.sass */
+.view-display-id-list_news_articles .views-row .views-field-field-ol-business-category a,
+.view-display-id-list_news_articles .views-row .views-field-field-ol-group-category a {
+  vertical-align: bottom;
+}
+/* line 46, ../sass/components/_grid-list.sass */
+.view-display-id-list_news_articles .views-row .views-field-title a {
+  padding: 3px;
+  width: 95%;
+}
+/* line 59, ../sass/components/_grid-list.sass */
+.view-display-id-list_news_articles .links {
+  float: right;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 68, ../sass/components/_grid-list.sass */
+  .view-id-openlocal_business .views-row,
+  .view-id-openlocal_group .views-row,
+  .view-display-id-list_news_articles .views-row {
+    width: 100%;
+    float: none;
+  }
+}
 /* line 11, ../sass/components/_misc.sass */
 .with-wireframes #header,
 .with-wireframes #main,
@@ -1178,6 +1218,7 @@ tr.selected td {
 .ol-action-box {
   background-color: #e3dcd1;
   padding: 0.5em 5px;
+  margin-bottom: 20px;
 }
 
 /* line 9, ../sass/components/_actions.sass */
@@ -1200,8 +1241,9 @@ tr.selected td {
   border-radius: 0.2em;
   text-align: center;
   padding: 5px 20px;
+  margin-bottom: 5px;
 }
-/* line 21, ../sass/components/_actions.sass */
+/* line 22, ../sass/components/_actions.sass */
 .ol-action-button:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #98b9b1));
   background-image: -o-linear-gradient(top, #20806a 0%, #98b9b1 100%);
@@ -1210,7 +1252,7 @@ tr.selected td {
   background-image: -ms-linear-gradient(top, #20806a 0%, #98b9b1 100%);
   background-image: linear-gradient(to top, #20806a 0%, #98b9b1 100%);
 }
-/* line 23, ../sass/components/_actions.sass */
+/* line 24, ../sass/components/_actions.sass */
 .ol-action-button:active {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0d332a), color-stop(1, #144c3f));
   background-image: -o-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
@@ -1219,7 +1261,7 @@ tr.selected td {
   background-image: -ms-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
   background-image: linear-gradient(to bottom, #0d332a 0%, #144c3f 100%);
 }
-/* line 26, ../sass/components/_actions.sass */
+/* line 27, ../sass/components/_actions.sass */
 .ol-action-button .ol-action-span {
   display: block;
   width: 100%;
@@ -1230,25 +1272,25 @@ tr.selected td {
   z-index: 1;
 }
 
-/* line 36, ../sass/components/_actions.sass */
+/* line 37, ../sass/components/_actions.sass */
 .ol-action-button a {
   text-decoration: none;
 }
-/* line 38, ../sass/components/_actions.sass */
+/* line 39, ../sass/components/_actions.sass */
 .ol-action-button a:link {
   color: #e3dcd1;
 }
-/* line 40, ../sass/components/_actions.sass */
+/* line 41, ../sass/components/_actions.sass */
 .ol-action-button a:visited {
   color: #e2e3d7;
 }
-/* line 42, ../sass/components/_actions.sass */
+/* line 43, ../sass/components/_actions.sass */
 .ol-action-button a:hover {
   color: #0d332a;
   background-color: transparent;
 }
 
-/* line 46, ../sass/components/_actions.sass */
+/* line 47, ../sass/components/_actions.sass */
 .ol-action-help {
   display: block;
   padding: 0px 0px;
@@ -1257,26 +1299,26 @@ tr.selected td {
   text-decoration: none;
 }
 
-/* line 68, ../sass/components/_actions.sass */
+/* line 69, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 72, ../sass/components/_actions.sass */
+/* line 73, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 79, ../sass/components/_actions.sass */
+/* line 80, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 81, ../sass/components/_actions.sass */
+/* line 82, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 84, ../sass/components/_actions.sass */
+/* line 85, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
@@ -2459,32 +2501,56 @@ h2.node-title a:active {
   color: #144c3f;
 }
 
-/* line 52, ../sass/components/_panel-list.sass */
-.pane-openlocal-event-panel-pane-1 {
+/* line 67, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming {
   margin: 0.5em 0;
-  background-color: #e3dcd1;
 }
-/* line 55, ../sass/components/_panel-list.sass */
-.pane-openlocal-event-panel-pane-1 table {
+/* line 50, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming .ol-date-only {
+  text-align: center;
+}
+/* line 51, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming .ol-date-only span:first-child {
+  margin: 0.25em 0 0 0;
+  font-size: 20.8px;
+  color: #2f2127;
+  display: block;
+  font-weight: bold;
+}
+/* line 58, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming .ol-date-only span:last-child {
+  margin: 0 0 0.5em 0;
+  font-size: 16px;
+  color: #77666d;
+  line-height: 1em;
+  display: block;
+}
+/* line 71, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming table {
   width: 100%;
   margin: 0 0;
 }
-/* line 58, ../sass/components/_panel-list.sass */
-.pane-openlocal-event-panel-pane-1 table tr {
+/* line 74, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming table tr {
   vertical-align: top;
   border-bottom: solid 1px #f4eee0;
   background-color: transparent;
 }
-/* line 62, ../sass/components/_panel-list.sass */
-.pane-openlocal-event-panel-pane-1 table td.views-field-field-ol-event-date {
+/* line 78, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming table td.views-field-field-ol-event-date {
   padding: 0 5px 0.5em 5px;
 }
-/* line 64, ../sass/components/_panel-list.sass */
-.pane-openlocal-event-panel-pane-1 table td.views-field-title {
-  padding: 0 0px 0.5em 5px;
+/* line 80, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming table td.views-field-field-featured-image {
+  padding: 0 5px 0.5em 5px;
+  width: 130px;
 }
-/* line 66, ../sass/components/_panel-list.sass */
-.pane-openlocal-event-panel-pane-1 table td.views-field-title a {
+/* line 83, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming table td.views-field-title {
+  padding: 0px 5px 0.5em 5px;
+}
+/* line 85, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming table td.views-field-title a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 300;
   text-decoration: none;
@@ -2492,19 +2558,20 @@ h2.node-title a:active {
   font-size: 14px;
 }
 
-/* line 76, ../sass/components/_panel-list.sass */
-.view-ol-event-upcoming-sidebar .views-field-field-ol-event-date {
+/* line 50, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming-sidebar .ol-date-only {
   text-align: center;
 }
-/* line 77, ../sass/components/_panel-list.sass */
-.view-ol-event-upcoming-sidebar .views-field-field-ol-event-date span:first-child {
+/* line 51, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming-sidebar .ol-date-only span:first-child {
   margin: 0.25em 0 0 0;
   font-size: 18px;
   color: #2f2127;
   display: block;
+  font-weight: bold;
 }
-/* line 83, ../sass/components/_panel-list.sass */
-.view-ol-event-upcoming-sidebar .views-field-field-ol-event-date span:last-child {
+/* line 58, ../sass/components/_panel-list.sass */
+.view-ol-event-upcoming-sidebar .ol-date-only span:last-child {
   margin: 0 0 0.5em 0;
   font-size: 12px;
   color: #77666d;
@@ -2512,11 +2579,11 @@ h2.node-title a:active {
   display: block;
 }
 
-/* line 95, ../sass/components/_panel-list.sass */
+/* line 101, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title div:first-child {
   padding: 0.25em 0 0 0;
 }
-/* line 97, ../sass/components/_panel-list.sass */
+/* line 103, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title div:first-child a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 400;
@@ -2524,23 +2591,23 @@ h2.node-title a:active {
   line-height: 16px;
   background-color: transparent;
 }
-/* line 103, ../sass/components/_panel-list.sass */
+/* line 109, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title div:first-child a:link {
   color: #20806a;
 }
-/* line 105, ../sass/components/_panel-list.sass */
+/* line 111, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title div:first-child a:visited {
   color: #20806a;
 }
-/* line 107, ../sass/components/_panel-list.sass */
+/* line 113, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title div:first-child a:hover {
   color: #0d332a;
 }
-/* line 109, ../sass/components/_panel-list.sass */
+/* line 115, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title div:first-child a:active {
   color: white;
 }
-/* line 112, ../sass/components/_panel-list.sass */
+/* line 118, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title:last-child a {
   font-family: "Lato";
   font-weight: 500;
@@ -2548,72 +2615,72 @@ h2.node-title a:active {
   line-height: 14px;
   background-color: transparent;
 }
-/* line 118, ../sass/components/_panel-list.sass */
+/* line 124, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title:last-child a:link {
   color: #144c3f;
 }
-/* line 120, ../sass/components/_panel-list.sass */
+/* line 126, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title:last-child a:visited {
   color: #144c3f;
 }
-/* line 122, ../sass/components/_panel-list.sass */
+/* line 128, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title:last-child a:hover {
   color: #144c3f;
 }
-/* line 124, ../sass/components/_panel-list.sass */
+/* line 130, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming-sidebar .views-field-title:last-child a:active {
   color: white;
 }
 
-/* line 129, ../sass/components/_panel-list.sass */
+/* line 135, ../sass/components/_panel-list.sass */
 .field-name-field-ol-event-category,
 .field-name-field-ol-event-date {
   background-color: #e3dcd1;
   padding: 3px 0 6px 2px;
   border-bottom: solid 1px white;
 }
-/* line 135, ../sass/components/_panel-list.sass */
+/* line 141, ../sass/components/_panel-list.sass */
 .field-name-field-ol-event-category .field-label,
 .field-name-field-ol-event-date .field-label {
   width: 80px;
 }
 
-/* line 143, ../sass/components/_panel-list.sass */
+/* line 149, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming .views-field-field-ol-event-date {
   margin: 0 5px 5px 0;
 }
-/* line 146, ../sass/components/_panel-list.sass */
+/* line 152, ../sass/components/_panel-list.sass */
 .view-ol-event-upcoming .views-field-field-featured-image {
   margin: 0 5px 5px 0;
 }
 
-/* line 163, ../sass/components/_panel-list.sass */
+/* line 169, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-articles-by-author {
   background-color: #e3dcd1;
 }
-/* line 166, ../sass/components/_panel-list.sass */
+/* line 172, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-articles-by-author h2.pane-title {
   padding: 0.25em 10px;
   font-family: "Lato";
   font-size: 1em;
   color: #4d3d44;
 }
-/* line 171, ../sass/components/_panel-list.sass */
+/* line 177, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-articles-by-author h2.pane-title:link {
   color: #20806a;
 }
 
-/* line 188, ../sass/components/_panel-list.sass */
+/* line 194, ../sass/components/_panel-list.sass */
 .view-openlocal-business {
   background-color: #e3dcd1;
 }
-/* line 190, ../sass/components/_panel-list.sass */
+/* line 196, ../sass/components/_panel-list.sass */
 .view-openlocal-business .view-content {
   display: block;
   display: clear;
 }
 
-/* line 197, ../sass/components/_panel-list.sass */
+/* line 203, ../sass/components/_panel-list.sass */
 .views-field-field-ol-description {
   font-family: "Lato";
   font-size: 1em;
@@ -2621,6 +2688,11 @@ h2.node-title a:active {
   line-height: 1em;
   color: #77666d;
   padding: 0.25em 5px;
+}
+
+/* line 34, ../sass/components/_panel-node.sass */
+.node-featured .panel-display {
+  margin: 0 20px 20px 10px;
 }
 
 /*

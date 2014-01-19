@@ -22,8 +22,8 @@
     float: left
     background-color: $col-content-lightest
     // padding: 5px
-    width: 46.667%
-    height: 230px
+    width: 45.667%
+
     margin: 0 10px 1em 10px
     .views-field-title
       a:hover
@@ -49,7 +49,24 @@
 
 
 .view-id-openlocal_business,
-.view-id-openlocal_group,
-.view-id-openlocal_news
+.view-id-openlocal_group
   @include grid-list()
+  height: 230px
+
+
+.view-display-id-list_news_articles
+  @include grid-list()
+  .links
+    float: right
+
+// @media only screen and (max-width: 768px)
+
+@media only screen and (max-width: 768px)
+  .view-id-openlocal_business,
+  .view-id-openlocal_group,
+  .view-display-id-list_news_articles
+    .views-row
+      width: 100%
+      float: none
+
 
