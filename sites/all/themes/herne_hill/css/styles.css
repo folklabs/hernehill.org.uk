@@ -1411,7 +1411,12 @@ div.workbench-info-block {
   background-color: #20806a;
 }
 
-/* line 92, ../sass/components/_calendar.sass */
+/* line 93, ../sass/components/_calendar.sass */
+.view .date-nav-wrapper .date-nav {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+/* line 96, ../sass/components/_calendar.sass */
 .view .date-nav-wrapper .pager li {
   background-color: transparent;
   border-bottom-left-radius: 0;
@@ -1420,10 +1425,16 @@ div.workbench-info-block {
   border-top-right-radius: 0;
   font-size: 1em;
   z-index: none;
+  list-style-type: none;
 }
-/* line 100, ../sass/components/_calendar.sass */
+/* line 105, ../sass/components/_calendar.sass */
 .view .date-nav-wrapper .pager li:hover {
   background-color: #98b9b1;
+}
+/* line 107, ../sass/components/_calendar.sass */
+.view .date-nav-wrapper .pager li.date-prev {
+  text-align: left;
+  right: auto;
 }
 
 /* line 15, ../sass/components/_comments.sass */

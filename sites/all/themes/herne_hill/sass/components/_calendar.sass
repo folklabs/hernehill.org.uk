@@ -89,13 +89,26 @@
       background-color: $col-links
 
 // Style the month pager
-.view .date-nav-wrapper .pager li
-  background-color: transparent
-  border-bottom-left-radius: 0
-  border-bottom-right-radius: 0
-  border-top-left-radius: 0
-  border-top-right-radius: 0
-  font-size: 1em
-  z-index: none
-  &:hover
-    background-color: $col-links-lighter
+.view .date-nav-wrapper
+  .date-nav
+    padding-bottom: 0px
+    margin-bottom: 0px
+  .pager li
+    background-color: transparent
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    font-size: 1em
+    z-index: none
+    list-style-type: none
+    &:hover
+      background-color: $col-links-lighter
+  .pager li.date-prev
+    text-align: left
+    right: auto
+    // float: left
+    // position: relative
+    // left:
+
+
