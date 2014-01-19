@@ -128,7 +128,7 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $handler->display->display_options['argument_input'] = array(
     'tid' => array(
-      'type' => 'context',
+      'type' => 'panel',
       'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 1,
       'panel' => '0',
@@ -291,6 +291,7 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';

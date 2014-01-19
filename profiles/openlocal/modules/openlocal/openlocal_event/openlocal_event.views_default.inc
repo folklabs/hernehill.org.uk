@@ -560,20 +560,12 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['argument_input'] = array(
     'tid' => array(
-      'type' => 'context',
+      'type' => 'panel',
       'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: Has taxonomy term ID',
-    ),
-    'field_ol_event_date_value' => array(
-      'type' => 'context',
-      'context' => 'entity:node.field_ol_event_date',
-      'context_optional' => 1,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Content: Date -  start date (field_ol_event_date)',
     ),
   );
   $handler->display->display_options['inherit_panels_path'] = '1';
@@ -811,13 +803,14 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'events/list/[tid]/';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'events/list/[tid]';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;

@@ -127,6 +127,10 @@ function openlocal_business_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'ol_business_category' => 'ol_business_category',
+  );
   $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
@@ -139,8 +143,8 @@ function openlocal_business_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $handler->display->display_options['argument_input'] = array(
     'tid' => array(
-      'type' => 'context',
-      'context' => 'entity:taxonomy_term.tid',
+      'type' => 'panel',
+      'context' => 'token.current-page:url',
       'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
@@ -437,6 +441,7 @@ function openlocal_business_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
