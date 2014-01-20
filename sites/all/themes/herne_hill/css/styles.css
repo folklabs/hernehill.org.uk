@@ -1165,7 +1165,7 @@ tr.selected td {
 /* line 581, ../sass/components/_misc.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1376896851');
+  background-image: url('../images/progress.gif?1384008826');
 }
 
 /* line 596, ../sass/components/_misc.sass */
@@ -1596,6 +1596,7 @@ a.button {
 input.search-query {
   vertical-align: top;
   padding: 0.25em 0.5em 0.25em 0.5em;
+  border-radius: 0.2em;
 }
 
 /* line 100, ../sass/components/_forms.sass */
@@ -2127,7 +2128,7 @@ tr.selected td {
 /* line 581, ../sass/components/_misc.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1376896851');
+  background-image: url('../images/progress.gif?1384008826');
 }
 
 /* line 596, ../sass/components/_misc.sass */
