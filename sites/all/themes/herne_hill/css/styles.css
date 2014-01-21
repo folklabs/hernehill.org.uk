@@ -1311,38 +1311,38 @@ tr.selected td {
   z-index: 1;
 }
 
-/* line 37, ../sass/components/_actions.sass */
+/* line 38, ../sass/components/_actions.sass */
 .ol-action-button a {
   text-decoration: none;
 }
-/* line 39, ../sass/components/_actions.sass */
+/* line 40, ../sass/components/_actions.sass */
 .ol-action-button a:link {
   color: #e3dcd1;
 }
-/* line 41, ../sass/components/_actions.sass */
+/* line 42, ../sass/components/_actions.sass */
 .ol-action-button a:visited {
   color: #e2e3d7;
 }
-/* line 43, ../sass/components/_actions.sass */
+/* line 44, ../sass/components/_actions.sass */
 .ol-action-button a:hover {
   color: #0d332a;
   background-color: transparent;
 }
 
-/* line 47, ../sass/components/_actions.sass */
+/* line 48, ../sass/components/_actions.sass */
 .ol-action-help {
   font-family: "Lato";
   font-weight: 400;
   font-size: 1em;
   display: block;
-  padding: 0px 0px;
+  padding: 0 0;
   margin-top: 0.5em;
   text-align: right;
   text-decoration: none;
 }
 /* line 57, ../sass/components/_actions.sass */
 .ol-action-help:link {
-  color: red;
+  color: #20806a;
 }
 /* line 59, ../sass/components/_actions.sass */
 .ol-action-help:hover {
@@ -1353,27 +1353,31 @@ tr.selected td {
 .ol-action-help:active {
   color: #98b9b1;
 }
+/* line 64, ../sass/components/_actions.sass */
+.ol-action-help:visited {
+  color: #20806a;
+}
 
-/* line 79, ../sass/components/_actions.sass */
+/* line 95, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 83, ../sass/components/_actions.sass */
+/* line 99, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 90, ../sass/components/_actions.sass */
+/* line 106, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 92, ../sass/components/_actions.sass */
+/* line 108, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 95, ../sass/components/_actions.sass */
+/* line 111, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
