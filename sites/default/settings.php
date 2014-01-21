@@ -211,41 +211,15 @@
  * @endcode
  */
 $databases = array (
-  'default' =>
+  'default' => 
   array (
-    'default' =>
+    'default' => 
     array (
-      'database' => 'dev.hernehill.pantheon',
-      'username' => 'root',
-      'password' => 'root2day',
+      'database' => 'dev-hernehill',
+      'username' => 'dev-hernehill',
+      'password' => 'admin',
       'host' => 'localhost',
-      'port' => '8888',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-  'd6.hernehill' =>
-  array (
-    'default' =>
-    array (
-      'database' => 'd6.hernehill',
-      'username' => 'root',
-      'password' => 'root2day',
-      'host' => 'localhost',
-      'port' => '8888',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-  'HerneHillForum_legacy' =>
-  array (
-    'default' =>
-    array (
-      'database' => 'd6.hernehill',
-      'username' => 'root',
-      'password' => 'root2day',
-      'host' => 'localhost',
-      'port' => '8888',
+      'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
     ),
@@ -282,7 +256,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '8a5i_SK6OcjZ6St3ImVDx_NW7pAUPCFkVMYsGS1zsvU';
+$drupal_hash_salt = 'iyZ5h8ZQEjFfe7lWgVbN6W2Q2XWfJjQ2M_iegYl0jbo';
 
 /**
  * Base URL (optional).
@@ -591,5 +565,3 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
-
-ini_set('memory_limit', '500M');

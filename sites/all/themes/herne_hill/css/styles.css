@@ -1177,33 +1177,33 @@ tr.selected td {
   line-height: 1.4em;
 }
 
-/* line 8, ../sass/components/_nav-menu.sass */
+/* line 10, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu {
   border-top: 1px #b19fa7 solid;
   margin-bottom: 0.5em;
 }
-/* line 11, ../sass/components/_nav-menu.sass */
+/* line 13, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row {
   border-bottom: 1px #e3dcd1 solid;
   padding: 0.5em 0;
 }
-/* line 15, ../sass/components/_nav-menu.sass */
+/* line 17, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row:hover {
   background-color: #e2e3d7;
 }
-/* line 17, ../sass/components/_nav-menu.sass */
+/* line 19, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row:hover a {
   color: #0d332a;
 }
-/* line 19, ../sass/components/_nav-menu.sass */
+/* line 21, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row:active {
   background-color: #20806a;
 }
-/* line 20, ../sass/components/_nav-menu.sass */
+/* line 22, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row:active a {
   color: white;
 }
-/* line 23, ../sass/components/_nav-menu.sass */
+/* line 25, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row a {
   padding-left: 10px;
   padding-right: 10px;
@@ -1212,6 +1212,35 @@ tr.selected td {
   font-family: "Lato";
   font-size: 1em;
   font-weight: 400;
+}
+
+/* line 46, ../sass/components/_nav-menu.sass */
+.view-display-id-popular_news_topics ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 50, ../sass/components/_nav-menu.sass */
+.view-display-id-popular_news_topics ul li {
+  padding: 0.5em 10px 0.5em 10px;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 400;
+  color: #b19fa7;
+  border-bottom: 1px #e3dcd1 solid;
+}
+/* line 57, ../sass/components/_nav-menu.sass */
+.view-display-id-popular_news_topics ul li a {
+  color: #20806a;
+  background-color: transparent;
+}
+/* line 60, ../sass/components/_nav-menu.sass */
+.view-display-id-popular_news_topics ul li a:hover {
+  color: #144c3f;
+}
+/* line 62, ../sass/components/_nav-menu.sass */
+.view-display-id-popular_news_topics ul li a:active {
+  color: #98b9b1;
 }
 
 /* line 3, ../sass/components/_actions.sass */
