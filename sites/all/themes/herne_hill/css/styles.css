@@ -1275,14 +1275,15 @@ tr.selected td {
   background-image: -ms-linear-gradient(top, #144c3f 0%, #20806a 100%);
   background-image: linear-gradient(to top, #144c3f 0%, #20806a 100%);
   font-family: "Lato";
+  font-weight: 300;
   font-size: 20px;
   border: solid 1px #0d332a;
   border-radius: 0.2em;
   text-align: center;
-  padding: 5px 20px;
-  margin-bottom: 5px;
+  padding: 0.5em 5px;
+  margin: 0.5em 5px;
 }
-/* line 22, ../sass/components/_actions.sass */
+/* line 26, ../sass/components/_actions.sass */
 .ol-action-button:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #98b9b1));
   background-image: -o-linear-gradient(top, #20806a 0%, #98b9b1 100%);
@@ -1290,8 +1291,9 @@ tr.selected td {
   background-image: -webkit-linear-gradient(top, #20806a 0%, #98b9b1 100%);
   background-image: -ms-linear-gradient(top, #20806a 0%, #98b9b1 100%);
   background-image: linear-gradient(to top, #20806a 0%, #98b9b1 100%);
+  border: solid 1px #20806a;
 }
-/* line 24, ../sass/components/_actions.sass */
+/* line 30, ../sass/components/_actions.sass */
 .ol-action-button:active {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0d332a), color-stop(1, #144c3f));
   background-image: -o-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
@@ -1299,37 +1301,35 @@ tr.selected td {
   background-image: -webkit-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
   background-image: -ms-linear-gradient(bottom, #0d332a 0%, #144c3f 100%);
   background-image: linear-gradient(to bottom, #0d332a 0%, #144c3f 100%);
+  border: solid 1px #98b9b1;
 }
-/* line 27, ../sass/components/_actions.sass */
+/* line 34, ../sass/components/_actions.sass */
 .ol-action-button .ol-action-span {
   display: block;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  color: #e2e3d7;
+  text-decoration: none;
+  background-color: none;
   /* edit: added z-index */
   z-index: 1;
 }
-
-/* line 38, ../sass/components/_actions.sass */
-.ol-action-button a {
-  text-decoration: none;
-}
-/* line 40, ../sass/components/_actions.sass */
-.ol-action-button a:link {
-  color: #e3dcd1;
-}
-/* line 42, ../sass/components/_actions.sass */
-.ol-action-button a:visited {
+/* line 44, ../sass/components/_actions.sass */
+.ol-action-button .ol-action-span:visited {
   color: #e2e3d7;
 }
-/* line 44, ../sass/components/_actions.sass */
-.ol-action-button a:hover {
-  color: #0d332a;
-  background-color: transparent;
+/* line 46, ../sass/components/_actions.sass */
+.ol-action-button .ol-action-span:hover {
+  color: white;
+}
+/* line 48, ../sass/components/_actions.sass */
+.ol-action-button .ol-action-span:active {
+  color: #20806a;
 }
 
-/* line 48, ../sass/components/_actions.sass */
+/* line 57, ../sass/components/_actions.sass */
 .ol-action-help {
   font-family: "Lato";
   font-weight: 400;
@@ -1340,44 +1340,44 @@ tr.selected td {
   text-align: right;
   text-decoration: none;
 }
-/* line 57, ../sass/components/_actions.sass */
+/* line 66, ../sass/components/_actions.sass */
 .ol-action-help:link {
   color: #20806a;
 }
-/* line 59, ../sass/components/_actions.sass */
+/* line 68, ../sass/components/_actions.sass */
 .ol-action-help:hover {
   color: #144c3f;
   background-color: transparent;
 }
-/* line 62, ../sass/components/_actions.sass */
+/* line 71, ../sass/components/_actions.sass */
 .ol-action-help:active {
   color: #98b9b1;
 }
-/* line 64, ../sass/components/_actions.sass */
+/* line 73, ../sass/components/_actions.sass */
 .ol-action-help:visited {
   color: #20806a;
 }
 
-/* line 95, ../sass/components/_actions.sass */
+/* line 104, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 99, ../sass/components/_actions.sass */
+/* line 108, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 106, ../sass/components/_actions.sass */
+/* line 115, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 108, ../sass/components/_actions.sass */
+/* line 117, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 111, ../sass/components/_actions.sass */
+/* line 120, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
