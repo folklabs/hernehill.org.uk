@@ -2691,6 +2691,61 @@ h2.node-title a:active {
   padding: 0.25em 5px;
 }
 
+/* line 225, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive {
+  background-color: #e3dcd1;
+}
+/* line 228, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list h3 {
+  color: #77666d;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1em;
+  padding: 1.25em 5px 0.25em 5px;
+  margin: 0;
+}
+/* line 236, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: 300;
+}
+/* line 244, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row {
+  padding: 0.5em 5px 0.5em 5px;
+  border-bottom: solid 1px #f4eee0;
+}
+/* line 247, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a {
+  background-color: transparent;
+}
+/* line 249, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:link {
+  color: #20806a;
+  text-decoration: none;
+}
+/* line 252, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:visited {
+  color: #144c3f;
+}
+/* line 254, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:hover {
+  color: #144c3f;
+}
+/* line 256, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:active {
+  color: #98b9b1;
+}
+/* line 258, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row-last {
+  border-bottom: none;
+}
+
 /* line 34, ../sass/components/_panel-node.sass */
 .node-featured .panel-display {
   margin: 0 20px 20px 10px;
