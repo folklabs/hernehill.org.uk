@@ -79,7 +79,7 @@
 
 // Definition for button outlines (with CSS transparent gradient in them)
 =gradient-field-outline-inset-down
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $col-links-lighter), color-stop(50%, $col-page), color-stop(100%, white))
+  background-image: -webkit-gradient(linear, left top, left bottom,color-stop(0%, $col-links-lighter), color-stop(50%, $col-page), color-stop(100%, white))
   background-image: -o-linear-gradient(top, $col-links-lighter 0%,$col-page 50%,white 100%)
   background-image: -moz-linear-gradient(top, $col-links-lighter 0%, $col-page 50%, white 100%)
   background-image: -webkit-linear-gradient(top, $col-links-lighter 0%,$col-page 50%,white 100%)
@@ -87,14 +87,34 @@
   background-image: linear-gradient(to bottom, $col-links-lighter 0%,$col-page 50%,white 100%)
 
 // Gradient for secondary buttons
+=gradient-content-bottom-lighter
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-content-lightest),color-stop(1, $col-page))
+  background-image: -o-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
+  background-image: -moz-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
+  background-image: -webkit-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
+  background-image: -ms-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
+  background-image: linear-gradient(to top, $col-content-lightest 0%, $col-page 100%)
 
-// Gradient for beige-background panels
+// Gradient for secondary button - hover state
+=gradient-content-top-white
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-page),color-stop(1, white))
+  background-image: -o-linear-gradient(top, $col-page 0%, white 100%)
+  background-image: -moz-linear-gradient(top, $col-page 0%, white 100%)
+  background-image: -webkit-linear-gradient(top, $col-page 0%, white 100%)
+  background-image: -ms-linear-gradient(top, $col-page 0%, white 100%)
+  background-image: linear-gradient(to top, $col-page 0%, white 100%)
 
-// Gradient for promoted adverts
+// Gradient for secondary button - active state
+=gradient-content-top-lighter
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-page),color-stop(1, $col-content-lightest))
+  background-image: -o-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
+  background-image: -moz-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
+  background-image: -webkit-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
+  background-image: -ms-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
+  background-image: linear-gradient(to top, $col-page 0%, $col-content-lightest 100%)
 
-// Gradient for standard adverts
 
-// Gradient for search form
+// Gradient for search form field
 =gradient-search-form
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $col-content-lightest), color-stop(100%, $col-page))
   background-image: -o-linear-gradient(top, $col-content-lightest 0%,$col-page 100%)

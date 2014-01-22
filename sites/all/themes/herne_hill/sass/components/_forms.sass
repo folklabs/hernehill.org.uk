@@ -48,15 +48,25 @@ form
 
   // Input buttons
   input[type="submit"],
-  #node-edit .form-actions,
+  #node-edit .form-actions input,
   #node-edit .image-widget .form-submit,
+    line-height: 1.25em
+    +gradient-content-bottom-lighter
+    border-radius: 0.25em
+    border: solid 1px $col-content-lighter
+    box-shadow: none
     font-family: $lato
     font-weight: 400
     font-size: 1em
-    line-height: 1.25em
-    background-color: $col-content-lightest
-    border-radius: 0.25em
-    border: solid 1px red
+    &:hover
+      +gradient-content-top-white
+      border: solid 1px $col-content
+      color: $col-content
+    &:active
+      +glow-inner-search-form
+      +gradient-content-top-lighter
+      border: solid 1px white
+      color: $col-content-darkest
 
   // Text areas
   textarea
@@ -98,7 +108,7 @@ form
   #node-edit .form-item-machine-name,
   #node-edit .form-item-date,
     label
-      color: red
+      color: $col-content-darker
       width: 5em
       margin: 0.5em 0
       padding: 0
@@ -177,7 +187,7 @@ a.button
 
 .search-query
   height: 2.2 * $base-font-size
-  max-width: 30px
+  width: 20em
   //background-color: transparent
   border: 1px solid white
   +gradient-search-form
