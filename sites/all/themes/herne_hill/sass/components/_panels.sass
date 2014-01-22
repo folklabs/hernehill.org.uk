@@ -51,13 +51,9 @@
 
 
 // Style summary text in standard panel pane
-.panel-pane .pane-node-body p
-  font-size: 1em
-  font-weight: 300
-  line-height: 1em
-  color: $col-content
-  display: block
-  padding: 0.25em 5px
+.panel-pane .pane-node-body p,
+.views-field-body .field-content p
+  +typography-grid-list-body
 
 
 // Styles the main heading text for generic panels
