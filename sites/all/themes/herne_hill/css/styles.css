@@ -378,7 +378,7 @@ body {
 p, ul, ol {
   color: #2f2127;
   font-family: "Lato";
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* line 55, ../sass/_base.sass */
@@ -424,7 +424,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 93, ../sass/_base.sass */
-#page-title {
+#page-title,
+#login-message {
   color: #4d3d44;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 300;
@@ -635,7 +636,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 0px;
 }
 
-/* line 51, ../sass/components/_grid-list.sass */
+/* line 59, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business,
 .view-id-openlocal_group {
   height: 230px;
@@ -649,12 +650,19 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 10px 1em 10px;
 }
 /* line 29, ../sass/components/_grid-list.sass */
+.view-id-openlocal_business .views-row .views-field-title,
+.view-id-openlocal_group .views-row .views-field-title {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 1.125em;
+  font-weight: 300;
+}
+/* line 36, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-title a:hover,
 .view-id-openlocal_group .views-row .views-field-title a:hover {
   color: #20806a;
   background-color: transparent;
 }
-/* line 34, ../sass/components/_grid-list.sass */
+/* line 42, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category,
@@ -663,18 +671,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 30px;
   padding-left: 5px;
 }
-/* line 41, ../sass/components/_grid-list.sass */
+/* line 49, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
-}
-/* line 46, ../sass/components/_grid-list.sass */
-.view-id-openlocal_business .views-row .views-field-title a,
-.view-id-openlocal_group .views-row .views-field-title a {
-  padding: 3px;
-  width: 95%;
 }
 
 /* line 21, ../sass/components/_grid-list.sass */
@@ -685,34 +687,35 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 10px 1em 10px;
 }
 /* line 29, ../sass/components/_grid-list.sass */
+.view-display-id-list_news_articles .views-row .views-field-title {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 1.125em;
+  font-weight: 300;
+}
+/* line 36, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-title a:hover {
   color: #20806a;
   background-color: transparent;
 }
-/* line 34, ../sass/components/_grid-list.sass */
+/* line 42, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category {
   font-weight: bold;
   height: 30px;
   padding-left: 5px;
 }
-/* line 41, ../sass/components/_grid-list.sass */
+/* line 49, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category a,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
-/* line 46, ../sass/components/_grid-list.sass */
-.view-display-id-list_news_articles .views-row .views-field-title a {
-  padding: 3px;
-  width: 95%;
-}
-/* line 59, ../sass/components/_grid-list.sass */
+/* line 67, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .links {
   float: right;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 68, ../sass/components/_grid-list.sass */
+  /* line 76, ../sass/components/_grid-list.sass */
   .view-id-openlocal_business .views-row,
   .view-id-openlocal_group .views-row,
   .view-display-id-list_news_articles .views-row {
@@ -720,6 +723,13 @@ h1, h2, h3, h4, h5, h6 {
     float: none;
   }
 }
+/* line 82, ../sass/components/_grid-list.sass */
+.views-field-field-featured-image img .panopoly-image-quarter {
+  float: right;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* line 11, ../sass/components/_misc.sass */
 .with-wireframes #header,
 .with-wireframes #main,
@@ -1567,6 +1577,22 @@ div.workbench-info-block {
   line-height: 2em;
 }
 
+/* line 7, ../sass/components/_controls.sass */
+.pane-node-field-featured-image,
+.pane-node-form-publishing,
+.pane-node-form-author {
+  background-color: #e3dcd1;
+  font-family: "Lato";
+  color: #4d3d44;
+  margin: 0 0 2em 0;
+}
+/* line 14, ../sass/components/_controls.sass */
+.pane-node-field-featured-image div,
+.pane-node-form-publishing div,
+.pane-node-form-author div {
+  margin: 0.25em 5px;
+}
+
 /* line 7, ../sass/components/_footer.sass */
 #footer {
   width: 100%;
@@ -1576,70 +1602,24 @@ div.workbench-info-block {
 }
 
 /* line 26, ../sass/components/_forms.sass */
-.form-item {
-  margin: 1.5em 0;
-}
-/* line 29, ../sass/components/_forms.sass */
-.form-checkboxes .form-item, .form-radios .form-item {
-  margin: 0;
+form label {
+  color: #77666d;
+  font-family: "Lato";
+  font-size: 1em;
+  line-height: 1em;
+  padding: 0.5em 0;
 }
 /* line 34, ../sass/components/_forms.sass */
-tr.odd .form-item, tr.even .form-item {
-  margin: 0;
-}
-/* line 38, ../sass/components/_forms.sass */
-.form-item input.error,
-.form-item textarea.error,
-.form-item select.error {
-  border: 1px solid #cc0000;
-}
-/* line 43, ../sass/components/_forms.sass */
-.form-item .description {
-  font-size: 0.85em;
-}
-
-/* line 48, ../sass/components/_forms.sass */
-.form-type-radio .description,
-.form-type-checkbox .description {
-  margin-left: 2.4em;
-}
-
-/* line 52, ../sass/components/_forms.sass */
-.form-required {
-  color: #cc0000;
-}
-
-/* line 56, ../sass/components/_forms.sass */
-label.option {
-  display: inline;
-  font-weight: normal;
-}
-
-/* line 61, ../sass/components/_forms.sass */
-a.button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-}
-
-/* line 66, ../sass/components/_forms.sass */
-.password-parent,
-.confirm-parent {
-  margin: 0;
-}
-
-/* line 71, ../sass/components/_forms.sass */
-#user-login-form {
-  text-align: left;
-}
-
-/* line 84, ../sass/components/_forms.sass */
-.search-query {
+form input[type="text"],
+form input[type="password"] {
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  border-radius: 3px;
+  border: solid 1px white;
   font-family: "Lato";
   font-weight: 300;
-  color: #4d3d44;
-  font-size: 20px;
-  border: 1px solid white;
+  font-size: 16px;
+  color: #2f2127;
+  box-shadow: none;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3dcd1), color-stop(100%, #f4eee0));
   background-image: -o-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
   background-image: -moz-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
@@ -1650,34 +1630,193 @@ a.button {
   -webkit-box-shadow: inset 0 0 5px #b19fa7;
   box-shadow: inset 0 0 5px #b19fa7;
 }
+/* line 46, ../sass/components/_forms.sass */
+form #edit-title {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+}
+/* line 50, ../sass/components/_forms.sass */
+form input[type="submit"],
+form #node-edit .form-actions,
+form #node-edit .image-widget .form-submit {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25em;
+  background-color: #e3dcd1;
+  border-radius: 0.25em;
+  border: solid 1px red;
+}
+/* line 62, ../sass/components/_forms.sass */
+form textarea {
+  font-family: "Lato";
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: 300;
+  padding: 0.5em 5px;
+}
+/* line 70, ../sass/components/_forms.sass */
+form fieldset {
+  background-color: #e3dcd1;
+  border: none;
+}
+/* line 73, ../sass/components/_forms.sass */
+form fieldset legend {
+  font-family: "Lato";
+  font-size: 1.25em;
+  padding: 1em 0;
+  line-height: 1em;
+  padding: 0;
+  color: #4d3d44;
+  font-weight: 400;
+}
+/* line 83, ../sass/components/_forms.sass */
+form .fieldset-description,
+form .description {
+  font-family: "Lato";
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: 300;
+  padding: 0.5em 0;
+  margin: 0;
+  color: #77666d;
+}
+/* line 92, ../sass/components/_forms.sass */
+form .form-type-radio .description,
+form .form-type-checkbox .description {
+  margin-left: 1.5em;
+}
+/* line 100, ../sass/components/_forms.sass */
+form #node-edit .form-item-date-time label,
+form #node-edit .form-item-name label,
+form #node-edit .form-item-machine-name label,
+form #node-edit .form-item-date label {
+  color: red;
+  width: 5em;
+  margin: 0.5em 0;
+  padding: 0;
+}
+/* line 105, ../sass/components/_forms.sass */
+form .container-inline-date {
+  margin: 0.5em 0;
+}
+/* line 109, ../sass/components/_forms.sass */
+form table {
+  width: 100%;
+}
+/* line 111, ../sass/components/_forms.sass */
+form table tr {
+  background-color: transparent;
+}
+/* line 113, ../sass/components/_forms.sass */
+form table td {
+  border-bottom: solid 1px red;
+  background-color: transparent;
+}
 
-/* line 94, ../sass/components/_forms.sass */
-input.search-query {
+/* line 120, ../sass/components/_forms.sass */
+.form-item {
+  margin: 1.5em 0;
+}
+/* line 123, ../sass/components/_forms.sass */
+.form-checkboxes .form-item, .form-radios .form-item {
+  margin: 0;
+}
+/* line 128, ../sass/components/_forms.sass */
+tr.odd .form-item, tr.even .form-item {
+  margin: 0;
+}
+/* line 132, ../sass/components/_forms.sass */
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 1px solid #cc0000;
+}
+/* line 137, ../sass/components/_forms.sass */
+.form-item .description {
+  font-size: 0.85em;
+}
+
+/* line 142, ../sass/components/_forms.sass */
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: 2.4em;
+}
+
+/* line 146, ../sass/components/_forms.sass */
+.form-required {
+  color: #cc0000;
+}
+
+/* line 150, ../sass/components/_forms.sass */
+label.option {
+  display: inline;
+  font-weight: normal;
+}
+
+/* line 155, ../sass/components/_forms.sass */
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/* line 160, ../sass/components/_forms.sass */
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/* line 165, ../sass/components/_forms.sass */
+#user-login-form {
+  text-align: left;
+}
+
+/* line 178, ../sass/components/_forms.sass */
+.search-query {
+  height: 35.2px;
+  max-width: 30px;
+  border: 1px solid white;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3dcd1), color-stop(100%, #f4eee0));
+  background-image: -o-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -moz-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: linear-gradient(to bottom, #e3dcd1 0%, #f4eee0 100%);
+  -moz-box-shadow: inset 0 0 5px #b19fa7;
+  -webkit-box-shadow: inset 0 0 5px #b19fa7;
+  box-shadow: inset 0 0 5px #b19fa7;
   vertical-align: top;
   padding: 0.25em 0.5em 0.25em 0.5em;
   border-radius: 0.2em;
+  font-family: "Lato";
+  font-weight: 300;
+  color: red;
+  font-size: 20px;
 }
 
-/* line 100, ../sass/components/_forms.sass */
+/* line 194, ../sass/components/_forms.sass */
 #search-form .form-type-textfield {
   vertical-align: top;
 }
-/* line 102, ../sass/components/_forms.sass */
+/* line 196, ../sass/components/_forms.sass */
 #search-form .form-type-textfield #edit-keys {
   vertical-align: top;
 }
-/* line 105, ../sass/components/_forms.sass */
+/* line 199, ../sass/components/_forms.sass */
 #search-form .form-submit {
   vertical-align: top;
+  height: 32px;
+  width: 32px;
   margin-top: 1px;
   background: transparent url(../images/search.png) no-repeat left top;
+  background-color: #20806a;
   padding-right: 25px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   text-indent: -9999px;
   border: 1px solid #144c3f;
   border-radius: 0.2em;
 }
-/* line 115, ../sass/components/_forms.sass */
+/* line 212, ../sass/components/_forms.sass */
 #search-form .form-submit:hover {
   -moz-box-shadow: inset 0 0 10px #144c3f;
   -webkit-box-shadow: inset 0 0 10px #144c3f;
@@ -2464,7 +2603,8 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
 }
 
 /* line 54, ../sass/components/_panels.sass */
-.panel-pane .pane-node-body p {
+.panel-pane .pane-node-body p,
+.views-field-body .field-content p {
   font-size: 1em;
   font-weight: 300;
   line-height: 1em;
@@ -2473,7 +2613,7 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   padding: 0.25em 5px;
 }
 
-/* line 64, ../sass/components/_panels.sass */
+/* line 60, ../sass/components/_panels.sass */
 view-display-id-list_news_articles .views-field-title {
   font-family: "Lato";
   font-weight: 400;
@@ -2482,7 +2622,7 @@ view-display-id-list_news_articles .views-field-title {
   line-height: 16px;
   padding: 0.25em 0 0 0;
 }
-/* line 66, ../sass/components/_panels.sass */
+/* line 62, ../sass/components/_panels.sass */
 view-display-id-list_news_articles .views-field-title a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 18px;
@@ -2492,20 +2632,20 @@ view-display-id-list_news_articles .views-field-title a {
   display: block;
   padding: 0.75em 5px 0.25em 5px;
 }
-/* line 74, ../sass/components/_panels.sass */
+/* line 70, ../sass/components/_panels.sass */
 view-display-id-list_news_articles .views-field-title a:link {
   color: #20806a;
 }
-/* line 76, ../sass/components/_panels.sass */
+/* line 72, ../sass/components/_panels.sass */
 view-display-id-list_news_articles .views-field-title a:visited {
   color: #20806a;
 }
-/* line 78, ../sass/components/_panels.sass */
+/* line 74, ../sass/components/_panels.sass */
 view-display-id-list_news_articles .views-field-title a:hover {
   color: #144c3f;
   background-color: #e2e3d7;
 }
-/* line 81, ../sass/components/_panels.sass */
+/* line 77, ../sass/components/_panels.sass */
 view-display-id-list_news_articles .views-field-title a:active {
   color: white;
   background-color: #20806a;
@@ -2751,12 +2891,14 @@ h2.node-title a:active {
 }
 
 /* line 225, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive {
+.pane-openlocal-news-article-archive,
+.pane-openlocal-news-articles-by-author {
   background-color: #e3dcd1;
   margin: 1em 0;
 }
-/* line 229, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list h3 {
+/* line 230, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list h3,
+.pane-openlocal-news-articles-by-author .item-list h3 {
   color: #77666d;
   font-family: "Lato";
   font-weight: 400;
@@ -2765,8 +2907,9 @@ h2.node-title a:active {
   padding: 1.25em 5px 0.25em 5px;
   margin: 0;
 }
-/* line 237, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul {
+/* line 238, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul,
+.pane-openlocal-news-articles-by-author .item-list ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2775,34 +2918,41 @@ h2.node-title a:active {
   line-height: 1.25em;
   font-weight: 300;
 }
-/* line 245, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul li.views-row {
+/* line 246, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row,
+.pane-openlocal-news-articles-by-author .item-list ul li.views-row {
   padding: 0.5em 5px 0.5em 5px;
   border-bottom: solid 1px #f4eee0;
 }
-/* line 248, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul li.views-row a {
+/* line 249, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a,
+.pane-openlocal-news-articles-by-author .item-list ul li.views-row a {
   background-color: transparent;
 }
-/* line 250, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul li.views-row a:link {
+/* line 251, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:link,
+.pane-openlocal-news-articles-by-author .item-list ul li.views-row a:link {
   color: #20806a;
   text-decoration: none;
 }
-/* line 253, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul li.views-row a:visited {
+/* line 254, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:visited,
+.pane-openlocal-news-articles-by-author .item-list ul li.views-row a:visited {
   color: #144c3f;
 }
-/* line 255, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul li.views-row a:hover {
+/* line 256, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:hover,
+.pane-openlocal-news-articles-by-author .item-list ul li.views-row a:hover {
   color: #144c3f;
 }
-/* line 257, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul li.views-row a:active {
+/* line 258, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row a:active,
+.pane-openlocal-news-articles-by-author .item-list ul li.views-row a:active {
   color: #98b9b1;
 }
-/* line 259, ../sass/components/_panel-list.sass */
-.pane-openlocal-news-article-archive .item-list ul li.views-row-last {
+/* line 260, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-article-archive .item-list ul li.views-row-last,
+.pane-openlocal-news-articles-by-author .item-list ul li.views-row-last {
   border-bottom: none;
 }
 
@@ -2819,6 +2969,11 @@ h2.node-title a:active {
   line-height: 32px;
   font-weight: 300;
   color: #144c3f;
+}
+
+/* line 65, ../sass/components/_panel-node.sass */
+.pane-openlocal-news-related-news-articles {
+  background-color: #e3dcd1;
 }
 
 /*
