@@ -4,14 +4,7 @@
 
 
 
-
-// ol-forms
-// form
-// input
 // textarea
-// label
-// fieldset
-// legend
 // select
 // optgroup
 // option
@@ -19,6 +12,107 @@
 // datalist
 // output
 
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// NODE EDITING FORMS
+
+form
+  // Style form labels
+  label
+    color: $col-content
+    font-family: $lato
+    font-size: 1em
+    line-height: 1em
+    padding: 0.5em 0
+
+  // Style text input fields
+  input[type="text"],
+  input[type="password"],
+    padding: 0.25em 0.5em 0.25em 0.5em
+    border-radius: 3px
+    border: solid 1px white
+    font-family: $lato
+    font-weight: 300
+    font-size: 1 * $base-font-size
+    color: $col-content-darkest
+    box-shadow: none
+    +gradient-search-form
+    +glow-inner-search-form
+  #edit-title
+    font-family: $merriweather
+
+  // Input buttons
+  input[type="submit"],
+  #node-edit .form-actions,
+  #node-edit .image-widget .form-submit,
+    font-family: $lato
+    font-weight: 400
+    font-size: 1em
+    line-height: 1.25em
+    background-color: $col-content-lightest
+    border-radius: 0.25em
+    border: solid 1px red
+
+  // Text areas
+  textarea
+    font-family: $lato
+    font-size: 1em
+    line-height: 1.25em
+    font-weight: 300
+    padding: 0.5em 5px
+
+  // Style field sets
+  fieldset
+    background-color: $col-content-lightest
+    border: none
+    legend
+      font-family: $lato
+      font-size: 1.25em
+      padding: 1em 0
+      line-height: 1em
+      padding: 0 // 0.25em 10px
+      color: $col-content-darker
+      font-weight: 400
+
+  // Style field descriptions
+  .fieldset-description,
+  .description
+    font-family: $lato
+    font-size: 1em
+    line-height: 1.25em
+    font-weight: 300
+    padding: 0.5em 0
+    margin: 0
+    color: $col-content
+  .form-type-radio .description,
+  .form-type-checkbox .description
+    margin-left: 1.5em
+
+  #node-edit .form-item-date-time,
+  #node-edit .form-item-name,
+  #node-edit .form-item-machine-name,
+  #node-edit .form-item-date,
+    label
+      color: red
+      width: 5em
+      margin: 0.5em 0
+      padding: 0
+  .container-inline-date
+    margin: 0.5em 0
+
+  // Style tables within forms
+  table
+    width: 100%
+    tr
+      background-color: transparent
+    td
+      border-bottom: solid 1px red
+      background-color: transparent
 
 
 
@@ -82,32 +176,35 @@ a.button
 // SEARCH FORM
 
 .search-query
-  font-family: $lato
-  font-weight: 300
-  color: $col-content-darker
-  font-size: 1.25 * $base-font-size
+  height: 2.2 * $base-font-size
+  max-width: 30px
   //background-color: transparent
   border: 1px solid white
   +gradient-search-form
   +glow-inner-search-form
-
-input.search-query
   vertical-align: top
   padding: 0.25em 0.5em 0.25em 0.5em
   border-radius: 0.2em
-
+  font-family: $lato
+  font-weight: 300
+  color: red // $col-content-darker  
+  font-size: 1.25 * $base-font-size
+// 
 #search-form
   .form-type-textfield
     vertical-align: top
     #edit-keys
       vertical-align: top
-
+  // The submit button on the search form
   .form-submit
     vertical-align: top
+    height: 2 * $base-font-size
+    width: 2 * $base-font-size
     margin-top: 1px
     background: transparent url(../images/search.png) no-repeat left top
+    background-color: $col-links
     padding-right: 25px
-    padding-bottom: 10px
+    padding-bottom: 0.5 * $base-font-size
     text-indent: -9999px
     border: 1px solid $col-links-darker
     border-radius: 0.2em
