@@ -10,55 +10,55 @@
   padding: 0.5em 5px
   margin-bottom: 20px
 
-.ol-action-box a
-  &:hover
-    text-decoration: none
-    margin-bottom: 0
+  a
+    &:hover
+      text-decoration: none
+      margin-bottom: 0
 
 
 // The Action Button itself
 
-.ol-action-button
-  +gradient-links-top-darker
-  font-family: $lato
-  font-weight: 300
-  font-size: 1.25 * $base-font-size
-  border: solid 1px $col-links-darkest
-  border-radius: 0.2em
-  text-align: center
-  padding: 0.5em 5px
-  margin: 0.5em 5px
-  &:link
-  &:visited
+  .ol-action-button
+    +gradient-links-top-darker
+    font-family: $lato
+    font-weight: 300
+    font-size: 1.25 * $base-font-size
+    border: solid 1px $col-links-darkest
+    border-radius: 0.2em
+    text-align: center
+    //padding: 0.5em 5px
+    //margin: 0.5em 5px
+    a:link
+    a:visited
+ 
+    a:hover
+      +gradient-links-top-lighter
+      border: solid 1px $col-links
+      //color: white
+    a:active
+      +gradient-links-bottom-darkest
+      border: solid 1px $col-links-lighter
 
-  &:hover
-    +gradient-links-top-lighter
-    border: solid 1px $col-links
-    //color: white
-  &:active
-    +gradient-links-bottom-darkest
-    border: solid 1px $col-links-lighter
-
-  .ol-action-span
-    // position: absolute
-    display: block
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    color: $col-links-lightest
-    text-decoration: none
-    background-color: none
-    &:visited
+    .ol-action-span
+      // position: absolute
+      display: block
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
       color: $col-links-lightest
-    &:hover
-      color: white
-    &:active
-      color: $col-links
+      text-decoration: none
+      background-color: none
+      &:visited
+        color: $col-links-lightest
+      &:hover
+        color: white
+      &:active
+        color: $col-links
 
 
-    /* edit: added z-index */
-    z-index: 1
+      /* edit: added z-index */
+      z-index: 1
 
  
 // The Help link underneath each Action Button

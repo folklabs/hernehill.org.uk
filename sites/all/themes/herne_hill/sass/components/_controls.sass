@@ -7,6 +7,7 @@
 .pane-node-field-featured-image,
 .pane-node-form-publishing,
 .pane-node-form-author,
+.pane-node-field-featured-categories
   background-color: $col-content-lightest
   font-family: $lato
   color: $col-content-darker
@@ -39,3 +40,56 @@
 
 
 // 
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// ALL STANDARD FORM BUTTONS
+
+// The Button itself
+
+.ol-action-button
+  +gradient-links-top-darker
+  font-family: $lato
+  font-weight: 300
+  font-size: 1.25 * $base-font-size
+  border: solid 1px $col-links-darkest
+  border-radius: 0.2em
+  text-align: center
+  padding: 0.5em 5px
+  margin: 0.5em 5px
+  &:link
+  &:visited
+
+  &:hover
+    +gradient-links-top-lighter
+    border: solid 1px $col-links
+    //color: white
+  &:active
+    +gradient-links-bottom-darkest
+    border: solid 1px $col-links-lighter
+
+  .ol-action-span
+    // position: absolute
+    display: block
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    color: $col-links-lightest
+    text-decoration: none
+    background-color: none
+    &:visited
+      color: $col-links-lightest
+    &:hover
+      color: white
+    &:active
+      color: $col-links
+
+
+    /* edit: added z-index */
+    z-index: 1

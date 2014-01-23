@@ -4,16 +4,6 @@
 
 
 
-// textarea
-// select
-// optgroup
-// option
-// button
-// datalist
-// output
-
-
-
 
 
 
@@ -76,6 +66,16 @@ form
     font-weight: 300
     padding: 0.5em 5px
 
+  // Multi-select
+  select[multiple="multiple"]
+    background-color: $col-page
+    border: solid 1px $col-content
+    font-family: $lato
+    font-size: 1em
+    line-height: 1.25em
+    color: $col-content
+    padding: 0.25em 10px
+    
   // Style field sets
   fieldset
     background-color: $col-content-lightest
@@ -131,11 +131,19 @@ form
   // Style tables within forms
   table
     width: 100%
+    font-family: $lato
+    color: $col-content
+    th
+      border-bottom: solid 1px $col-content-lighter
     tr
       background-color: transparent
     td
-      border-bottom: solid 1px red
-      background-color: transparent
+      border-bottom: solid 1px $col-page
+      background-color: $col-content-lightest
+      padding: 0.5em 1.5em
+  
+
+  // All generic links in a form get set to Lato
   div
     a:link
       font-family: $lato
@@ -201,7 +209,9 @@ a.button
 // ----------------------------------------------------------------------------
 // SEARCH FORM
 
-.search-query
+
+// The search field itself
+input.search-query
   height: 2.2 * $base-font-size
   width: 20em
   //background-color: transparent
@@ -213,12 +223,14 @@ a.button
   border-radius: 0.2em
   font-family: $lato
   font-weight: 300
-  color: red // $col-content-darker  
+
   font-size: 1.25 * $base-font-size
 // 
 #search-form
+  float: right
   .form-type-textfield
     vertical-align: top
+    color: red // $col-content-darker  
     #edit-keys
       vertical-align: top
   // The submit button on the search form
