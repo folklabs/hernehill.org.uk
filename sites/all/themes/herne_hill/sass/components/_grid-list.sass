@@ -15,7 +15,7 @@
 .page-services .harris-column-content-region-inner,
 .page-groups .harris-column-content-region-inner,
 .page-frontpage .harris-column-content-region-inner
-  margin-right: 0px
+  // margin-right: 0px
 
 
 
@@ -26,12 +26,13 @@
     float: left
 
     // padding: 5px
-    width: 45.667%
+    width: 48.276%
 
 @mixin grid-list()
   .views-row
     background-color: $col-content-lightest
-    margin: 0 10px 1em 10px
+    margin: 0 0 1em 0
+    height: 300px
 
     .views-field-title
       font-family: $merriweather
@@ -44,7 +45,11 @@
         color: $col-links
         background-color: transparent
       a:active
-
+    
+  .views-row-odd
+    margin-right: 10px
+  .views-row-even
+    margin-left: 10px
 
     .views-field-field-ol-business-category,
     .views-field-field-ol-group-category
