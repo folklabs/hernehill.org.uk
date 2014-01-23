@@ -330,7 +330,6 @@ function openlocal_business_views_default_views() {
   /* Display: Random promotions */
   $handler = $view->new_display('panel_pane', 'Random promotions', 'panel_pane_4');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'ol-item-grid';
   $handler->display->display_options['display_description'] = 'Two services shown randomly in sidebars.';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
