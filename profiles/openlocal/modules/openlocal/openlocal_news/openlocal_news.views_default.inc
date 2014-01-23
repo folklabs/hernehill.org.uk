@@ -78,10 +78,13 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['ui_name'] = 'Teaser';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '105';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Read more';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
+    'trim_length' => '105',
   );
   /* Field: Date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -137,6 +140,8 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler = $view->new_display('panel_pane', 'List of News Articles', 'list_news_articles');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'New Articles';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'ol-item-grid';
   $handler->display->display_options['display_description'] = 'This is a customizable list of news articles!';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;

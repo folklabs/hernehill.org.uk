@@ -2,13 +2,6 @@
 // ----------------------------------------------------------------------------
 // GRID LISTS - LISTS WHICH DISPLAY AS A GRID OF PANELS
 
-// .ol-item-grid
-
-//   .views-row
-//     float: left
-//     width: 220px
-
-
 // When using the Harris Panopoly layout (middle two columns hold grid lists)
 // remove 20px right-hand margin on middle column
 
@@ -19,8 +12,6 @@
 
 
 
-// @mixin grid-list()
-  // background-color: red
 .ol-item-grid
   .views-row
     float: left
@@ -28,11 +19,15 @@
     // padding: 5px
     width: 48.276%
 
+  .views-row-odd
+    margin-right: 10px
+  .views-row-even
+    margin-left: 10px
+
 @mixin grid-list()
   .views-row
     background-color: $col-content-lightest
-    margin: 0 0 1em 0
-    height: 300px
+    margin-bottom: 1em
 
     .views-field-title
       font-family: $merriweather
@@ -45,11 +40,6 @@
         color: $col-links
         background-color: transparent
       a:active
-    
-  .views-row-odd
-    margin-right: 10px
-  .views-row-even
-    margin-left: 10px
 
     .views-field-field-ol-business-category,
     .views-field-field-ol-group-category
@@ -71,11 +61,14 @@
 .view-id-openlocal_business,
 .view-id-openlocal_group
   @include grid-list()
-  height: 230px
+  .views-row
+    height: 230px
 
 
 .view-display-id-list_news_articles
-  // @include grid-list()
+  @include grid-list()
+  .views-row
+    height: 300px
   .links
     float: right
 
