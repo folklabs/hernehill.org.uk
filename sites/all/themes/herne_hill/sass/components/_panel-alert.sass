@@ -5,7 +5,13 @@
 // Styles the panel heading
 
 .pane-openlocal-alert-panel-pane-1
-  background-color: $col-content-lightest
+  background-color: $col-links-lightest
+  .views-row
+    border-bottom: solid 1px $col-page
+    // padding: 0.5em 5px
+  .views-field-title
+    @include list-item-title()
+    padding: 0.5em 5px
   .view-empty p
     color: $col-links-darker
     font-family: $merriweather

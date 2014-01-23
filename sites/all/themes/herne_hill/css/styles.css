@@ -473,20 +473,21 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-/* line 52, ../sass/layouts/_responsive.sass */
-#main {
-  padding-top: 3em;
-  position: relative;
-}
+@media all and (min-width: 480px) {
+  /* line 52, ../sass/layouts/_responsive.sass */
+  #main {
+    padding-top: 3em;
+    position: relative;
+  }
 
-/* line 56, ../sass/layouts/_responsive.sass */
-#navigation {
-  position: absolute;
-  top: 0;
-  height: 3em;
-  width: 100%;
+  /* line 56, ../sass/layouts/_responsive.sass */
+  #navigation {
+    position: absolute;
+    top: 0;
+    height: 3em;
+    width: 100%;
+  }
 }
-
 @media all and (min-width: 480px) and (max-width: 959px) {
   /* line 73, ../sass/layouts/_responsive.sass */
   .sidebar-first #content {
@@ -655,13 +656,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125em;
   font-weight: 300;
 }
-/* line 39, ../sass/components/_grid-list.sass */
+/* line 192, ../sass/_mixins.sass */
 .view-id-openlocal_business .views-row .views-field-title a:hover,
 .view-id-openlocal_group .views-row .views-field-title a:hover {
   color: #20806a;
   background-color: transparent;
 }
-/* line 44, ../sass/components/_grid-list.sass */
+/* line 45, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category,
@@ -670,14 +671,14 @@ h1, h2, h3, h4, h5, h6 {
   height: 30px;
   padding-left: 5px;
 }
-/* line 51, ../sass/components/_grid-list.sass */
+/* line 52, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
-/* line 64, ../sass/components/_grid-list.sass */
+/* line 65, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   height: 230px;
@@ -694,34 +695,34 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125em;
   font-weight: 300;
 }
-/* line 39, ../sass/components/_grid-list.sass */
+/* line 192, ../sass/_mixins.sass */
 .view-display-id-list_news_articles .views-row .views-field-title a:hover {
   color: #20806a;
   background-color: transparent;
 }
-/* line 44, ../sass/components/_grid-list.sass */
+/* line 45, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category {
   font-weight: bold;
   height: 30px;
   padding-left: 5px;
 }
-/* line 51, ../sass/components/_grid-list.sass */
+/* line 52, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category a,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
-/* line 70, ../sass/components/_grid-list.sass */
+/* line 71, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row {
   height: 300px;
 }
-/* line 72, ../sass/components/_grid-list.sass */
+/* line 73, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .links {
   float: right;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 81, ../sass/components/_grid-list.sass */
+  /* line 82, ../sass/components/_grid-list.sass */
   .view-id-openlocal_business .views-row,
   .view-id-openlocal_group .views-row,
   .view-display-id-list_news_articles .views-row {
@@ -729,7 +730,7 @@ h1, h2, h3, h4, h5, h6 {
     float: none;
   }
 }
-/* line 87, ../sass/components/_grid-list.sass */
+/* line 88, ../sass/components/_grid-list.sass */
 .views-field-field-featured-image img .panopoly-image-quarter {
   float: right;
   max-width: 100%;
@@ -2710,9 +2711,25 @@ view-display-id-list_news_articles .views-field-title a:active {
 
 /* line 7, ../sass/components/_panel-alert.sass */
 .pane-openlocal-alert-panel-pane-1 {
-  background-color: #e3dcd1;
+  background-color: #e2e3d7;
 }
 /* line 9, ../sass/components/_panel-alert.sass */
+.pane-openlocal-alert-panel-pane-1 .views-row {
+  border-bottom: solid 1px #f4eee0;
+}
+/* line 12, ../sass/components/_panel-alert.sass */
+.pane-openlocal-alert-panel-pane-1 .views-field-title {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 1.125em;
+  font-weight: 300;
+  padding: 0.5em 5px;
+}
+/* line 192, ../sass/_mixins.sass */
+.pane-openlocal-alert-panel-pane-1 .views-field-title a:hover {
+  color: #20806a;
+  background-color: transparent;
+}
+/* line 15, ../sass/components/_panel-alert.sass */
 .pane-openlocal-alert-panel-pane-1 .view-empty p {
   color: #144c3f;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -3009,7 +3026,13 @@ h2.node-title a:active {
   border-bottom: none;
 }
 
-/* line 46, ../sass/components/_panel-node.sass */
+/* line 39, ../sass/components/_panel-node.sass */
+.node-ol-reward-scheme {
+  margin-bottom: 1em;
+  background-color: #e2e3d7;
+}
+
+/* line 48, ../sass/components/_panel-node.sass */
 .panopoly-news-featured .pane-node-title {
   padding: 0 0;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -3019,7 +3042,7 @@ h2.node-title a:active {
   color: #144c3f;
 }
 
-/* line 65, ../sass/components/_panel-node.sass */
+/* line 67, ../sass/components/_panel-node.sass */
 .pane-openlocal-news-related-news-articles {
   background-color: #e3dcd1;
 }
