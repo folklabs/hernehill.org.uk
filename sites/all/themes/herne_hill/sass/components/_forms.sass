@@ -11,6 +11,26 @@
 // ----------------------------------------------------------------------------
 // NODE EDITING FORMS
 
+=input-button-style
+  line-height: 1.25em
+  +gradient-content-bottom-lighter
+  border-radius: 0.25em
+  border: solid 1px $col-content-lighter
+  box-shadow: none
+  font-family: $lato
+  font-weight: 400
+  font-size: 1em
+  &:hover
+    +gradient-content-top-white
+    border: solid 1px $col-content
+    color: $col-content
+  &:active
+    +glow-inner-search-form
+    +gradient-content-top-lighter
+    border: solid 1px white
+    color: $col-content-darkest
+
+
 form
   // Style form labels
   label
@@ -36,27 +56,12 @@ form
   #edit-title
     font-family: $merriweather
 
+
   // Input buttons
   input[type="submit"],
   #node-edit .form-actions input,
   #node-edit .image-widget .form-submit,
-    line-height: 1.25em
-    +gradient-content-bottom-lighter
-    border-radius: 0.25em
-    border: solid 1px $col-content-lighter
-    box-shadow: none
-    font-family: $lato
-    font-weight: 400
-    font-size: 1em
-    &:hover
-      +gradient-content-top-white
-      border: solid 1px $col-content
-      color: $col-content
-    &:active
-      +glow-inner-search-form
-      +gradient-content-top-lighter
-      border: solid 1px white
-      color: $col-content-darkest
+    +input-button-style
 
   // Text areas
   textarea
@@ -75,7 +80,7 @@ form
     line-height: 1.25em
     color: $col-content
     padding: 0.25em 10px
-    
+
   // Style field sets
   fieldset
     background-color: $col-content-lightest
@@ -141,7 +146,7 @@ form
       border-bottom: solid 1px $col-page
       background-color: $col-content-lightest
       padding: 0.5em 1.5em
-  
+
 
   // All generic links in a form get set to Lato
   div
@@ -225,12 +230,12 @@ input.search-query
   font-weight: 300
 
   font-size: 1.25 * $base-font-size
-// 
+//
 #search-form
   float: right
   .form-type-textfield
     vertical-align: top
-    color: red // $col-content-darker  
+    color: red // $col-content-darker
     #edit-keys
       vertical-align: top
   // The submit button on the search form
