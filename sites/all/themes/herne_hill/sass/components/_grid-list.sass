@@ -19,14 +19,18 @@
 
 
 
-@mixin grid-list()
+// @mixin grid-list()
   // background-color: red
+.ol-item-grid
   .views-row
     float: left
-    background-color: $col-content-lightest
+
     // padding: 5px
     width: 45.667%
 
+@mixin grid-list()
+  .views-row
+    background-color: $col-content-lightest
     margin: 0 10px 1em 10px
 
     .views-field-title
@@ -66,7 +70,7 @@
 
 
 .view-display-id-list_news_articles
-  @include grid-list()
+  // @include grid-list()
   .links
     float: right
 
