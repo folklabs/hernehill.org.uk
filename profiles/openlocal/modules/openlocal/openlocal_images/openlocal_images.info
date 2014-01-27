@@ -12,6 +12,7 @@ features[image][] = openlocal_avatar_large
 features[image][] = openlocal_avatar_micro
 features[image][] = openlocal_avatar_small
 features[image][] = openlocal_events_listing
+features[image][] = openlocal_news_main
 features[image][] = openlocal_node_main
 features[image][] = openlocal_panel_deep
 features[image][] = openlocal_panel_shallow

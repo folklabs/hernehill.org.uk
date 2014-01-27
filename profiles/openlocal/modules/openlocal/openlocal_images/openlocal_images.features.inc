@@ -15,7 +15,7 @@ function openlocal_images_image_default_styles() {
     'name' => 'openlocal_avatar_large',
     'label' => 'openlocal_avatar_large',
     'effects' => array(
-      11 => array(
+      2 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -25,8 +25,8 @@ function openlocal_images_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 220,
-          'height' => 216,
+          'width' => 280,
+          'height' => 272,
         ),
         'weight' => 1,
       ),
@@ -61,7 +61,7 @@ function openlocal_images_image_default_styles() {
     'name' => 'openlocal_avatar_small',
     'label' => 'openlocal_avatar_small',
     'effects' => array(
-      12 => array(
+      1 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -71,8 +71,8 @@ function openlocal_images_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 60,
-          'height' => 60,
+          'width' => 64,
+          'height' => 64,
         ),
         'weight' => 1,
       ),
@@ -84,7 +84,7 @@ function openlocal_images_image_default_styles() {
     'name' => 'openlocal_events_listing',
     'label' => 'openlocal_events_listing',
     'effects' => array(
-      8 => array(
+      16 => array(
         'label' => 'Focus Scale And Crop',
         'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
         'effect callback' => 'imagefield_focus_scale_and_crop_effect',
@@ -93,12 +93,35 @@ function openlocal_images_image_default_styles() {
         'module' => 'imagefield_focus',
         'name' => 'imagefield_focus_scale_and_crop',
         'data' => array(
-          'width' => 120,
-          'height' => 80,
+          'width' => 130,
+          'height' => 128,
           'strength' => 'high',
-          'fallback' => 'image',
         ),
-        'weight' => 2,
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: openlocal_news_main.
+  $styles['openlocal_news_main'] = array(
+    'name' => 'openlocal_news_main',
+    'label' => 'openlocal_news_main',
+    'effects' => array(
+      7 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 580,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
       ),
     ),
   );
@@ -108,7 +131,7 @@ function openlocal_images_image_default_styles() {
     'name' => 'openlocal_node_main',
     'label' => 'openlocal_node_main',
     'effects' => array(
-      9 => array(
+      5 => array(
         'label' => 'Focus Scale And Crop',
         'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
         'effect callback' => 'imagefield_focus_scale_and_crop_effect',
@@ -117,10 +140,9 @@ function openlocal_images_image_default_styles() {
         'module' => 'imagefield_focus',
         'name' => 'imagefield_focus_scale_and_crop',
         'data' => array(
-          'width' => 460,
-          'height' => 264,
+          'width' => 580,
+          'height' => 336,
           'strength' => 'low',
-          'fallback' => 'image',
         ),
         'weight' => 1,
       ),
@@ -132,7 +154,7 @@ function openlocal_images_image_default_styles() {
     'name' => 'openlocal_panel_deep',
     'label' => 'openlocal_panel_deep',
     'effects' => array(
-      10 => array(
+      3 => array(
         'label' => 'Focus Scale And Crop',
         'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
         'effect callback' => 'imagefield_focus_scale_and_crop_effect',
@@ -141,10 +163,9 @@ function openlocal_images_image_default_styles() {
         'module' => 'imagefield_focus',
         'name' => 'imagefield_focus_scale_and_crop',
         'data' => array(
-          'width' => 220,
-          'height' => 128,
-          'strength' => 'high',
-          'fallback' => 'image',
+          'width' => 280,
+          'height' => 192,
+          'strength' => 'low',
         ),
         'weight' => 1,
       ),
@@ -156,7 +177,7 @@ function openlocal_images_image_default_styles() {
     'name' => 'openlocal_panel_shallow',
     'label' => 'openlocal_panel_shallow',
     'effects' => array(
-      7 => array(
+      17 => array(
         'label' => 'Focus Scale And Crop',
         'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
         'effect callback' => 'imagefield_focus_scale_and_crop_effect',
@@ -165,10 +186,9 @@ function openlocal_images_image_default_styles() {
         'module' => 'imagefield_focus',
         'name' => 'imagefield_focus_scale_and_crop',
         'data' => array(
-          'width' => 220,
-          'height' => 72,
-          'strength' => 'medium',
-          'fallback' => 'image',
+          'width' => 280,
+          'height' => 128,
+          'strength' => 'low',
         ),
         'weight' => 2,
       ),
