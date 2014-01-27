@@ -78,7 +78,7 @@ function openlocal_alert_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
-      'default_image' => 0,
+      'default_image' => 103,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 1,
@@ -94,7 +94,8 @@ function openlocal_alert_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'preview_image_style' => 'thumbnail',
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'preview_image_style' => 'openlocal_panel_deep',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
