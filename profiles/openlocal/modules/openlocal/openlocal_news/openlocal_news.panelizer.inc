@@ -93,7 +93,7 @@ function openlocal_news_panelizer_defaults() {
         'colorbox_gallery_custom' => '',
         'colorbox_caption' => 'auto',
         'colorbox_caption_custom' => '',
-        'image_style' => 'openlocal_node_main',
+        'image_style' => 'openlocal_news_main',
         'image_link' => '',
       ),
       'context' => array(),
@@ -214,7 +214,7 @@ function openlocal_news_panelizer_defaults() {
     $pane->pid = 'new-5';
     $pane->panel = 'half';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_tags';
+    $pane->subtype = 'node:field_featured_categories';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -254,80 +254,8 @@ function openlocal_news_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'half';
-    $pane->type = 'node_links';
-    $pane->subtype = 'node_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'build_mode' => 'full',
-      'identifier' => '',
-      'link' => 1,
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['half'][5] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'half';
-    $pane->type = 'node_comments';
-    $pane->subtype = 'node_comments';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'mode' => '1',
-      'comments_per_page' => '50',
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 6;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['half'][6] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'half';
-    $pane->type = 'node_comment_form';
-    $pane->subtype = 'node_comment_form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'anon_links' => 0,
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['half'][7] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_featured_categories';
+    $pane->subtype = 'node:field_ol_tags';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -360,10 +288,82 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['half'][5] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'half';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 1,
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['half'][6] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'half';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '1',
+      'comments_per_page' => '50',
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 7;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['half'][7] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'half';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'anon_links' => 0,
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 8;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['quarter1'][0] = 'new-9';
+    $display->panels['half'][8] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
     $pane->panel = 'quarter1';
@@ -407,10 +407,10 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
-    $display->panels['quarter1'][1] = 'new-10';
+    $display->panels['quarter1'][0] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
     $pane->panel = 'quarter2';
@@ -809,9 +809,24 @@ function openlocal_news_panelizer_defaults() {
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'image_link' => 'content',
-        'image_style' => 'panopoly_image_quarter',
+        'image_style' => 'openlocal_panel_deep',
       ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
     );
     $pane->cache = array();
     $pane->style = array(

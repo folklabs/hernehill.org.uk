@@ -114,11 +114,11 @@ function openlocal_news_field_default_field_instances() {
     'description' => 'Add an image if you have one. The "Alt text" field is for a short description that is shown if the image cannot be loaded.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'panopoly_image_quarter',
+          'image_style' => 'openlocal_news_main',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -166,7 +166,8 @@ function openlocal_news_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'preview_image_style' => 'panopoly_image_featured',
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'preview_image_style' => 'openlocal_panel_deep',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',

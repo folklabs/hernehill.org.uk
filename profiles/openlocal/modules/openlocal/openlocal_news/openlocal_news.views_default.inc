@@ -62,7 +62,7 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'panopoly_image_quarter',
+    'image_style' => 'openlocal_panel_deep',
     'image_link' => 'content',
   );
   /* Field: Title */
@@ -148,7 +148,7 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'mini';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -345,7 +345,7 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'panopoly_image_quarter',
+    'image_style' => 'openlocal_panel_deep',
     'image_link' => 'content',
   );
   /* Field: Title */
