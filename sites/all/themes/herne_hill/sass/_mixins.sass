@@ -173,8 +173,8 @@
 // ----------------------------------------------------------------------------
 // TYPOGRAPHY
 
-// Font definitions for all grid list headings
-=typography-grid-list-heading
+// All grid list headings
+@mixin typography-grid-list-heading
   font-family: $lato
   font-weight: 400
   font-size: $base-font-size
@@ -182,33 +182,90 @@
   line-height: $base-font-size
   padding: 0.25em 0 0 0
 
+// All list item titles
 @mixin list-item-title
   font-family: $merriweather
   font-size: 1.125em
   font-weight: 300
+  a
+    &:link
+      color: $col-links
+    &:visited
+      color: $col-links
+    &:hover
+      color: $col-links-darker
+      background-color: transparent
+    &:active
+      color: $col-links-lighter
+
+@mixin grid-list-panel-title
+  font-family: $lato
+  font-weight: 900
+  font-size: 1 * $base-font-size
+  line-height: 1 * $base-font-size
+  padding: 0.75em 5px 0.25em 5px
+  color: $col-content-darker
+  background-color: transparent
   a:link
-
-  a:visited
-  a:hover
     color: $col-links
-    background-color: transparent
+  a:visited
+    color: $col-links
+  a:hover
+    color: $col-links-darker
   a:active
+    color: $col-links-lighter
+    background-color: transparent
 
-=typography-grid-list-body
+@mixin typography-grid-list-body
+  display: block
+  font-family: $lato
   font-size: 1em
   font-weight: 300
   line-height: 1em
   color: $col-content
   display: block
-  padding: 0.25em 5px
 
 
+// Font definition for all 14px caption text
 
+@mixin typography-grid-list-date
+  font-family: $lato
+  font-size: 0.875 * $base-font-size
+  font-weight: regular
+  line-height: 1 * $base-font-size
+  color: $col-content
 
+@mixin typography-panel-list-title
+  font-family: $merriweather
+  font-weight: 400
+  font-size: 1 * $base-font-size
+  line-height: 1 * $base-font-size
+  a
+    background-color: transparent
+    &:link
+      color: red //$col-links
+    &:visited
+      color: $col-links
+    &:hover
+      color: $col-links-darkest
+    &:active
+      color: $col-links-lightest
 
-
-
-
+@mixin typography-panel-list-venue
+  font-family: $lato
+  font-weight: 500
+  font-size: 0.875 * $base-font-size
+  line-height: 0.875 * $base-font-size
+  a
+    background-color: transparent
+    &:link
+      color: $col-links-darker
+    &:visited
+      color: $col-links-darker
+    &:hover
+      color: $col-links-darker
+    &:active
+      color: white
 
 
 
