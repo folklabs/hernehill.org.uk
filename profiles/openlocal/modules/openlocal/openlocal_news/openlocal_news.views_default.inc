@@ -29,7 +29,7 @@ function openlocal_news_views_default_views() {
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'clearfix';
@@ -726,6 +726,31 @@ Add some news content or enable the OpenLocal News Demo module. ';
     'popular_news_topics' => 0,
   );
   $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Related Articles List (attachment) */
+  $handler = $view->new_display('attachment', 'Related Articles List (attachment)', 'attachment_1');
+  $handler->display->display_options['display_description'] = 'A listing of related news articles without images or teaser text';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '1';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['ui_name'] = 'Title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['displays'] = array(
+    'related_news_articles' => 'related_news_articles',
+    'default' => 0,
+    'list_news_articles' => 0,
+    'single_news_article' => 0,
+    'article_archive' => 0,
+    'articles_by_author' => 0,
+    'popular_news_topics' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
   $export['openlocal_news'] = $view;
 
   $view = new view();
