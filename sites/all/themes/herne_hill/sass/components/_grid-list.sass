@@ -14,16 +14,16 @@
 
 .ol-item-grid
   .views-row
-    float: left
+    // float: left
 
     // padding: 5px
-    width: 48.276%
-    max-width: 280px
+    width: 100%
+    max-width: 580px
 
-  .views-row-odd
-    margin-right: 10px
-  .views-row-even
-    margin-left: 10px
+  // .views-row-oddred
+  //   margin-right: 10px
+  // .views-row-even
+  //   margin-left: 10px
 
 @mixin grid-list()
   .views-row
@@ -32,10 +32,30 @@
 
     .views-field-title
       @include list-item-title()
+      // background-color: yellow
+      height: 2.5em
+      padding: 0.5em 0
       // font-family: $merriweather
       // font-size: 1.125em
       // font-weight: 300
       // a:link
+
+    // Grid list item body text
+    .views-field-body
+      // background-color: green
+      height: 5.5em
+      .field-content
+        @include typography-grid-list-body
+        padding: 0.5em 5px
+
+    // Grid list date field
+    .views-field-created
+      border-top: solid 1px $col-page
+      height: 2em
+      // background-color: red
+      .field-content
+        @include typography-grid-list-date
+        padding: 0.5em 0
 
       // a:visited
       // a:hover
@@ -45,10 +65,10 @@
 
     .views-field-field-ol-business-category,
     .views-field-field-ol-group-category
-      font-weight: bold
-      height: 30px
+      font-weight: 900
+      height: 32px
       // padding-top: 2px
-      padding-left: 5px
+      padding: 5px
       // .field-content
       a
         vertical-align: bottom
@@ -70,9 +90,12 @@
 .view-display-id-list_news_articles
   @include grid-list()
   .views-row
-    height: 300px
+    height: auto
   .links
     float: right
+  .listing-image
+    float: left
+    margin-right: 20px
 
 // @media only screen and (max-width: 768px)
 

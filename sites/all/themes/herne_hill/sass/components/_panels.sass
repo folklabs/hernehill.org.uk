@@ -29,7 +29,7 @@
 
 // Style heading text and heading as a link
 .panel-pane h2
-  padding: 0.75em 5px 0.25em 5px
+  // padding: 0.75em 5px 0.25em 5px
   margin: 0
   color: $col-content
   font-family: $merriweather
@@ -53,12 +53,12 @@
 // Style summary text in standard panel pane
 .panel-pane .pane-node-body p,
 .views-field-body .field-content p
-  +typography-grid-list-body
+  @include typography-grid-list-body
 
 
 // Styles the main heading text for generic panels
 view-display-id-list_news_articles .views-field-title
-  +typography-grid-list-heading
+  @include typography-grid-list-heading
   a
     font-family: $merriweather
     font-size: 1.125 * $base-font-size

@@ -1,7 +1,7 @@
 
 // ----------------------------------------------------------------------------
 // VIEWS LISTINGS
-
+// All views which expose a listing
 
 
 
@@ -12,19 +12,6 @@
 // UPCOMING EVENTS LISTING DISPLAY - LIST
 
 
-// ----------------------------------------------------------------------------
-// View listing of upcoming events
-
-
-
-
-
-//.ol-view-list-events
-
-
-
-
-
 // Add line to top of table
 
 .pane-openlocal-event-panel-pane-2
@@ -32,146 +19,37 @@
   margin-bottom: 0.5em
 
 
-// Style event listing table
+// ----------------------------------------------------------------------------
+// Upcoming Events list table view
 
 .view-ol-event-upcoming
+  @include event-date(1.125, 1)
+  margin: 0.5em 0
   table
+    width: 100%
+    margin: 0 0
     td
       // Align text to top of table cells
       vertical-align: top
-
-      // Add line to bottom and a hover style to each table row
     tr
-      border-bottom: 1px $col-content-lightest solid
+      border-bottom: solid 1px $col-content-lightest
       background-color: transparent
-      &:hover
-        background-color: $col-links-lightest
+    td.ol-date-only
+      padding: 0.5em 5px
+    td.views-field-field-featured-image
+      padding: 0.5em 0
+      width: 130px
+    td.views-field-title
+      padding: 0.5em 10px
+
     // Event heading text
-    .views-field-title a
-      font-family: $merriweather
-      font-size: 1.125 * $base-font-size
-      line-height: 1.5 * $base-font-size
-      color: $col-links
+    .ol-event-list-view-title span a
+      @include list-item-title
+
     // Event body text
+    .ol-event-list-view-title div
+      @include typography-grid-list-body
 
     // Event venue link
-
-
-
-// Style date text
-
-.views-field-field-ol-event-date
-  color: $col-content
-  font-family: $lato
-  font-weight: 900
-
-
-
-
-
-
-
-.views-field-field-featured-image
-//  width: 120px
-//  height: 80px
-
-
-
-
-// ----------------------------------------------------------------------------
-// VIEW LISTING OF EVENT VENUES
-.ol-view-list-places
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
-
-
-
-
-
-
-
-
-// ----------------------------------------------------------------------------
-// VIEW LISTING OF MESSAGES - INBOX
-.ol-view-list-messages
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
-
-
-
-
-
-
-
-
-// ----------------------------------------------------------------------------
-// VIEW LISTING OF RESOURCES
-.ol-view-list-resources
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
+    .ol-event-list-view-title div a
+      @include typography-panel-list-venue

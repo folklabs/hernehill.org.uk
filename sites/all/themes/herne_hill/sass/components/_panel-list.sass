@@ -13,23 +13,8 @@
 
 h2.pane-title,
 h2.node-title
-  padding: 0.5em 5px
-  font-family: $lato
-  font-weight: 900
-  font-size: 1em
-  color: $col-content-darker
-  a
-    display: block
-    width: 100%
-    height: 100%
-    &:link
-      color: $col-links
-    &:visited
-      color: $col-links
-    &:hover
-      color: $col-links
-    &:active
-      color: $col-links-darker
+  @include grid-list-panel-title
+
 
 
 
@@ -43,31 +28,35 @@ h2.node-title
 
 // ----------------------------------------------------------------------------
 // UPCOMING EVENTS LISTING DISPLAY - PANEL
-// Try to use .ol-panel-list-events to style this panel
 
-
+// Mixin to consistently style event dates in events listings
 @mixin event-date($date-size, $month-size)
   .ol-date-only
+    font-family: $lato
     span:first-child
-      margin: 0.25em 0 0 0
-      font-size: $date-size * $base-font-size
-      color: $col-content-darkest
       display: block
-      font-weight: bold
+      color: $col-content-darkest
+      font-size: $date-size * $base-font-size
+      font-weight: 900
     // span
     span:last-child
-      margin: 0 0 0.5em 0
-      font-size: $month-size * $base-font-size
-      color: $col-content
-      line-height: 1em
       display: block
+      color: $col-content
+      font-size: $month-size * $base-font-size
+      line-height: 1em
     text-align: center
 
-// View content styling for Upcoming events panel
-.view-ol-event-upcoming
-  @include event-date(1.3, 1)
-  margin: 0.5em 0
-  // background-color: $col-content-lightest
+
+
+// Upcoming events sidebar panel
+.pane-openlocal-event-panel-pane-1
+  background-color: $col-content-lightest
+
+// Upcoming events sidebar panel - view content styling
+.view-ol-event-upcoming-sidebar
+
+  // Dates column text (day and month)
+  @include event-date(1.125, 0.75)
   table
     width: 100%
     margin: 0 0
@@ -76,59 +65,33 @@ h2.node-title
       border-bottom: solid 1px $col-page
       background-color: transparent
     td.views-field-field-ol-event-date
-      padding: 0 5px 0.5em 5px
+      padding: 0.5em 5px 0.5em 5px
     td.views-field-field-featured-image
-      padding: 0 5px 0.5em 5px
+      padding: 0.5em 5px 0.5em 5px
       width: 130px
-    td.views-field-title
+    .views-field-title
       padding: 0px 5px 0.5em 5px
-      a
-        font-family: $merriweather
-        font-weight: 300
-        text-decoration: none
-        color: $col-links-darkest
-        font-size: 0.875 * $base-font-size
+      // a
+      //   font-family: $merriweather
+      //   font-weight: 300
+      //   text-decoration: none
+      //   color: $col-links-darkest
+      //   font-size: 0.875 * $base-font-size
+
+    // Event title and location
+      a:first-child
+        // padding: 0.25em 0 0 0
+        @include typography-panel-list-title
+
+      a:last-child
+        @include typography-panel-list-venue
 
 
-// Dates column text (day and month)
-.view-ol-event-upcoming-sidebar
-  @include event-date(1.125, 0.75)
 
 
-// Event title and location
-.view-ol-event-upcoming-sidebar
-  .views-field-title
-    div:first-child
-      padding: 0.25em 0 0 0
-      a
-        font-family: $merriweather
-        font-weight: 400
-        font-size: 1 * $base-font-size
-        line-height: 1 * $base-font-size
-        background-color: transparent
-        &:link
-          color: $col-links
-        &:visited
-          color: $col-links
-        &:hover
-          color: $col-links-darkest
-        &:active
-          color: white
-    &:last-child
-      a
-        font-family: $lato
-        font-weight: 500
-        font-size: 0.875 * $base-font-size
-        line-height: 0.875 * $base-font-size
-        background-color: transparent
-        &:link
-          color: $col-links-darker
-        &:visited
-          color: $col-links-darker
-        &:hover
-          color: $col-links-darker
-        &:active
-          color: white
+
+
+
 
 // What is this? Comment needed!
 
@@ -159,6 +122,11 @@ h2.node-title
 
 // ol-panel-list-myevents,
 // ol-panel-list-articles-related,
+
+
+
+
+
 
 
 
@@ -259,33 +227,3 @@ h2.node-title
             color: $col-links-lighter
       li.views-row-last
         border-bottom: none
-
-
-
-
-// Component description
-// .declaration
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
