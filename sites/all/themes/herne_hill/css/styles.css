@@ -635,13 +635,13 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 580px;
 }
 
-/* line 29, ../sass/components/_grid-list.sass */
+/* line 37, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   background-color: #e3dcd1;
   margin-bottom: 1em;
 }
-/* line 33, ../sass/components/_grid-list.sass */
+/* line 41, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-title,
 .view-id-openlocal_group .views-row .views-field-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -671,12 +671,12 @@ h1, h2, h3, h4, h5, h6 {
 .view-id-openlocal_group .views-row .views-field-title a:active {
   color: #98b9b1;
 }
-/* line 44, ../sass/components/_grid-list.sass */
+/* line 52, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-body,
 .view-id-openlocal_group .views-row .views-field-body {
   height: 5.5em;
 }
-/* line 47, ../sass/components/_grid-list.sass */
+/* line 55, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-body .field-content,
 .view-id-openlocal_group .views-row .views-field-body .field-content {
   display: block;
@@ -688,13 +688,13 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   padding: 0.5em 5px;
 }
-/* line 52, ../sass/components/_grid-list.sass */
+/* line 60, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-created,
 .view-id-openlocal_group .views-row .views-field-created {
   border-top: solid 1px #f4eee0;
   height: 2em;
 }
-/* line 56, ../sass/components/_grid-list.sass */
+/* line 64, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-created .field-content,
 .view-id-openlocal_group .views-row .views-field-created .field-content {
   font-family: "Lato";
@@ -704,7 +704,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 66, ../sass/components/_grid-list.sass */
+/* line 74, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category,
@@ -713,25 +713,25 @@ h1, h2, h3, h4, h5, h6 {
   height: 32px;
   padding: 5px;
 }
-/* line 73, ../sass/components/_grid-list.sass */
+/* line 81, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
-/* line 86, ../sass/components/_grid-list.sass */
+/* line 94, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   height: 230px;
 }
 
-/* line 29, ../sass/components/_grid-list.sass */
+/* line 37, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row {
   background-color: #e3dcd1;
   margin-bottom: 1em;
 }
-/* line 33, ../sass/components/_grid-list.sass */
+/* line 41, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 1.125em;
@@ -756,11 +756,11 @@ h1, h2, h3, h4, h5, h6 {
 .view-display-id-list_news_articles .views-row .views-field-title a:active {
   color: #98b9b1;
 }
-/* line 44, ../sass/components/_grid-list.sass */
+/* line 52, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-body {
   height: 5.5em;
 }
-/* line 47, ../sass/components/_grid-list.sass */
+/* line 55, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-body .field-content {
   display: block;
   font-family: "Lato";
@@ -771,12 +771,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   padding: 0.5em 5px;
 }
-/* line 52, ../sass/components/_grid-list.sass */
+/* line 60, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-created {
   border-top: solid 1px #f4eee0;
   height: 2em;
 }
-/* line 56, ../sass/components/_grid-list.sass */
+/* line 64, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-created .field-content {
   font-family: "Lato";
   font-size: 14px;
@@ -785,34 +785,34 @@ h1, h2, h3, h4, h5, h6 {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 66, ../sass/components/_grid-list.sass */
+/* line 74, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category {
   font-weight: 900;
   height: 32px;
   padding: 5px;
 }
-/* line 73, ../sass/components/_grid-list.sass */
+/* line 81, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category a,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
-/* line 92, ../sass/components/_grid-list.sass */
+/* line 100, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row {
   height: auto;
 }
-/* line 94, ../sass/components/_grid-list.sass */
+/* line 102, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .links {
   float: right;
 }
-/* line 96, ../sass/components/_grid-list.sass */
+/* line 104, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .listing-image {
   float: left;
   margin-right: 20px;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 106, ../sass/components/_grid-list.sass */
+  /* line 114, ../sass/components/_grid-list.sass */
   .view-id-openlocal_business .views-row,
   .view-id-openlocal_group .views-row,
   .view-display-id-list_news_articles .views-row {
@@ -820,7 +820,7 @@ h1, h2, h3, h4, h5, h6 {
     float: none;
   }
 }
-/* line 112, ../sass/components/_grid-list.sass */
+/* line 120, ../sass/components/_grid-list.sass */
 .views-field-field-featured-image img .panopoly-image-quarter {
   float: right;
   max-width: 100%;
@@ -2025,6 +2025,81 @@ input.search-query {
   -moz-box-shadow: inset 0 0 10px #144c3f;
   -webkit-box-shadow: inset 0 0 10px #144c3f;
   box-shadow: inset 0 0 10px #144c3f;
+}
+
+/* line 6, ../sass/components/_forum.sass */
+.forum-table-wrap {
+  font-family: "Lato";
+}
+/* line 8, ../sass/components/_forum.sass */
+.forum-table-wrap table, .forum-table-wrap td, .forum-table-wrap tr {
+  border: solid 1px #e3dcd1;
+}
+/* line 12, ../sass/components/_forum.sass */
+.forum-table-wrap .forum-table-superheader {
+  background: none;
+  background-color: #e3dcd1;
+  border: none;
+}
+/* line 20, ../sass/components/_forum.sass */
+.forum-table-wrap table.forum-table {
+  background: none;
+}
+/* line 24, ../sass/components/_forum.sass */
+.forum-table-wrap table.forum-table .forum-table-wrap thead tr {
+  background-color: red;
+  border: solid 1px green;
+}
+/* line 29, ../sass/components/_forum.sass */
+.forum-table-wrap table.forum-table tr.even {
+  background: transparent;
+  background-color: rgba(227, 220, 209, 0.75);
+}
+/* line 34, ../sass/components/_forum.sass */
+.forum-table-wrap table.forum-table tr.odd {
+  background: transparent;
+  background-color: rgba(227, 220, 209, 0.25);
+}
+/* line 39, ../sass/components/_forum.sass */
+.forum-table-wrap table.forum-table td {
+  padding: 0.5em 5px;
+}
+/* line 46, ../sass/components/_forum.sass */
+.forum-table-wrap table.forum-table td.forum-details .forum-name {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+/* line 243, ../sass/_mixins.sass */
+.forum-table-wrap table.forum-table td.forum-details .forum-name a {
+  background-color: transparent;
+}
+/* line 245, ../sass/_mixins.sass */
+.forum-table-wrap table.forum-table td.forum-details .forum-name a:link {
+  color: #20806a;
+}
+/* line 247, ../sass/_mixins.sass */
+.forum-table-wrap table.forum-table td.forum-details .forum-name a:visited {
+  color: #20806a;
+}
+/* line 249, ../sass/_mixins.sass */
+.forum-table-wrap table.forum-table td.forum-details .forum-name a:hover {
+  color: #0d332a;
+}
+/* line 251, ../sass/_mixins.sass */
+.forum-table-wrap table.forum-table td.forum-details .forum-name a:active {
+  color: #e2e3d7;
+}
+/* line 50, ../sass/components/_forum.sass */
+.forum-table-wrap table.forum-table td.forum-details .forum-description {
+  display: block;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1em;
+  color: #77666d;
+  display: block;
 }
 
 /* line 6, ../sass/components/_header.sass */
