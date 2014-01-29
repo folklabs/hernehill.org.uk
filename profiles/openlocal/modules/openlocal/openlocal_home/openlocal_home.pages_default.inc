@@ -233,8 +233,8 @@ function openlocal_home_default_page_manager_pages() {
       'exposed' => array(
         'Is Featured' => 'All',
         'widget_title' => '',
-        'use_pager' => 1,
-        'pager_id' => '0',
+        'use_pager' => 0,
+        'pager_id' => '',
         'sort_by' => 'created',
         'sort_order' => 'DESC',
       ),
@@ -257,6 +257,7 @@ function openlocal_home_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'default',
     );
     $pane->css = array();
     $pane->extras = array();
