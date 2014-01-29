@@ -400,30 +400,11 @@ function openlocal_news_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'column2';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'openlocal_news-popular_news_topics';
+    $pane->type = 'openlocal_news_rss';
+    $pane->subtype = 'openlocal_news_rss';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'exposed' => array(
-        'widget_title' => 'Topics',
-        'use_pager' => 0,
-        'pager_id' => '',
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'view_mode' => 'teaser',
-      'widget_title' => 'Topics',
-      'items_per_page' => '10',
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -436,24 +417,6 @@ function openlocal_news_default_page_manager_pages() {
     $display->panels['column2'][2] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'column2';
-    $pane->type = 'openlocal_news_rss';
-    $pane->subtype = 'openlocal_news_rss';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['column2'][3] = 'new-10';
-    $pane = new stdClass();
-    $pane->pid = 'new-11';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_news-single_news_article';
@@ -491,10 +454,10 @@ function openlocal_news_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['contentmain'][0] = 'new-11';
+    $display->content['new-10'] = $pane;
+    $display->panels['contentmain'][0] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-11';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_news-list_news_articles';
@@ -510,7 +473,7 @@ function openlocal_news_default_page_manager_pages() {
       'exposed' => array(
         'Is Featured' => 'All',
         'widget_title' => '',
-        'use_pager' => 1,
+        'use_pager' => 0,
         'pager_id' => '',
         'sort_by' => 'created',
         'sort_order' => 'DESC',
@@ -523,7 +486,7 @@ function openlocal_news_default_page_manager_pages() {
       'view_mode' => 'teaser',
       'widget_title' => '',
       'items_per_page' => '3',
-      'view_settings' => 'nodes',
+      'view_settings' => 'fields',
       'use_pager' => NULL,
       'pager_id' => NULL,
       'offset' => NULL,
@@ -535,13 +498,14 @@ function openlocal_news_default_page_manager_pages() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'default',
     );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['contentmain'][1] = 'new-12';
+    $display->content['new-11'] = $pane;
+    $display->panels['contentmain'][1] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
