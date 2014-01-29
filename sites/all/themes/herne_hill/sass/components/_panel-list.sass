@@ -8,16 +8,13 @@
 
 
 
+
 // ----------------------------------------------------------------------------
 // GENERIC LISTING PANEL HEADING
 
 h2.pane-title,
 h2.node-title
   @include grid-list-panel-title
-
-
-
-
 
 
 
@@ -48,7 +45,15 @@ h2.node-title
 
 
 
-// Upcoming events sidebar panel
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// UPCOMING EVENTS LISTING DISPLAY - SIDEBAR PANEL
+
+
 .pane-openlocal-event-panel-pane-1
   background-color: $col-content-lightest
 
@@ -64,28 +69,23 @@ h2.node-title
       vertical-align: top
       border-bottom: solid 1px $col-page
       background-color: transparent
-    td.views-field-field-ol-event-date
-      padding: 0.5em 5px 0.5em 5px
-    td.views-field-field-featured-image
-      padding: 0.5em 5px 0.5em 5px
-      width: 130px
-    .views-field-title
-      padding: 0px 5px 0.5em 5px
-      // a
-      //   font-family: $merriweather
-      //   font-weight: 300
-      //   text-decoration: none
-      //   color: $col-links-darkest
-      //   font-size: 0.875 * $base-font-size
+      td.views-field-field-ol-event-date
+        padding: 0.25em 5px 0.5em 5px
 
-    // Event title and location
-      a:first-child
-        // padding: 0.25em 0 0 0
-        @include typography-panel-list-title
 
-      a:last-child
-        @include typography-panel-list-venue
+      td.views-field-title
+        min-height: 5em
+        padding: 0.5em 5px
+        // Event title and location
+        h1
+          // padding: 0.25em 0 0 0
+          @include typography-panel-list-title
+          margin: 0
 
+        h2
+          @include typography-panel-list-venue
+          border-bottom: none
+          padding: 0.25em 0
 
 
 
@@ -133,17 +133,10 @@ h2.node-title
 // ----------------------------------------------------------------------------
 // OTHER ARTICLES BY THIS AUTHOR - PANEL
 
-// .ol-panel-list-author-related
+// Set background colour
 .pane-openlocal-news-articles-by-author
   background-color: $col-content-lightest
 
-  h2.pane-title
-    padding: 0.25em 10px
-    font-family: $lato
-    font-size: 1em
-    color: $col-content-darker
-    &:link
-      color: $col-links
 
 
 
