@@ -30,12 +30,17 @@ function openlocal_alert_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'taylor';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
+      'header' => NULL,
+      'half' => NULL,
+      'quarter1' => NULL,
+      'quarter2' => NULL,
+      'footer' => NULL,
     ),
   );
   $display->cache = array();
@@ -44,7 +49,7 @@ function openlocal_alert_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
+    $pane->panel = 'half';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
     $pane->shown = TRUE;
@@ -85,10 +90,10 @@ function openlocal_alert_panelizer_defaults() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+    $display->panels['half'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'center';
+    $pane->panel = 'half';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_description';
     $pane->shown = TRUE;
@@ -126,10 +131,10 @@ function openlocal_alert_panelizer_defaults() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
+    $display->panels['half'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'center';
+    $pane->panel = 'half';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_alert_link';
     $pane->shown = TRUE;
@@ -167,10 +172,10 @@ function openlocal_alert_panelizer_defaults() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
+    $display->panels['half'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'center';
+    $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_alert_resolved';
     $pane->shown = TRUE;
@@ -190,13 +195,13 @@ function openlocal_alert_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['center'][3] = 'new-4';
+    $display->panels['quarter1'][0] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'center';
+    $pane->panel = 'quarter1';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
     $pane->shown = TRUE;
@@ -217,10 +222,10 @@ function openlocal_alert_panelizer_defaults() {
       'css_class' => 'link-wrapper',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['center'][4] = 'new-5';
+    $display->panels['quarter1'][1] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-5';
   $panelizer->display = $display;
