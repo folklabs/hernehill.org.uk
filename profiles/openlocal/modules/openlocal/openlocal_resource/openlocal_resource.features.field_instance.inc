@@ -17,11 +17,11 @@ function openlocal_resource_field_default_field_instances() {
     'description' => 'An image that relates to this resource.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'openlocal_panel_deep',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -45,7 +45,7 @@ function openlocal_resource_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 0,
+      'default_image' => 112,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -62,7 +62,7 @@ function openlocal_resource_field_default_field_instances() {
       'module' => 'image',
       'settings' => array(
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => 'openlocal_panel_deep',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
