@@ -11,7 +11,7 @@
 // ----------------------------------------------------------------------------
 // NODE EDITING FORMS
 
-=input-button-style
+@mixin input-button-style
   line-height: 1.25em
   +gradient-content-bottom-lighter
   border-radius: 0.25em
@@ -30,9 +30,45 @@
     border: solid 1px white
     color: $col-content-darkest
 
+@mixin input-button-style-strong
+  line-height: 1.25em
+  // +gradient-content-bottom-lighter
+  background-color: red
+  border-radius: 0.25em
+  border: solid 1px red //$col-content-lighter
+  box-shadow: none
+  font-family: $lato
+  font-weight: 400
+  font-size: 1em
+  &:hover
+    // +gradient-content-top-white
+    border: solid 1px $col-content
+    color: $col-content
+  &:active
+    // +glow-inner-search-form
+    // +gradient-content-top-lighter
+    border: solid 1px white
+    color: $col-content-darkest
+
 
 form
   // Style form labels
+  .pane-node-form-title
+    background-color: $col-content-lightest
+    padding: 0.25em 5px 0.5em 5px
+    .counter
+      margin: 0.75em 0 0 0
+      color: $col-content
+      font-family: $lato
+      font-size: 1em
+      line-height: 1em
+      // padding: 0.5em 0
+      color: $col-content
+      strong
+        color: $col-content-strong
+    .messages, .warning
+      // border: solid 1px red
+
   label
     color: $col-content
     font-family: $lato
@@ -43,7 +79,7 @@ form
   // Style text input fields
   input[type="text"],
   input[type="password"],
-    padding: 0.25em 0.5em 0.25em 0.5em
+    padding: 0.2em 5px 0.25em 5px
     border-radius: 3px
     border: solid 1px white
     font-family: $lato
@@ -58,10 +94,15 @@ form
 
 
   // Input buttons
-  input[type="submit"],
+  // input[type="submit"],
   #node-edit .form-actions input,
   #node-edit .image-widget .form-submit,
-    +input-button-style
+    @include input-button-style
+
+  // Publish or save buttons
+  #node-edit .form-actions input #edit-submit
+    @include input-button-style-strong
+
 
   // Text areas
   textarea
@@ -205,7 +246,11 @@ a.button
   text-align: left
   // LTR
 
-
+#node-edit .form-item-path-alias
+  float: right
+  margin: 1em 0
+  input
+    width: 50%
 
 
 
