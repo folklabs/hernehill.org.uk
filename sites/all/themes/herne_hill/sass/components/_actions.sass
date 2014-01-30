@@ -6,7 +6,7 @@
 // The box in which all Action Buttons sit
 
 .ol-action-box
-  background-color: $col-content-lightest
+  background-color: $col-links-lightest
   padding: 0.5em 5px
   margin-bottom: 20px
 
@@ -19,11 +19,11 @@
 // The Action Button itself
 
   .ol-action-button
-    +gradient-links-top-darker
+    @include gradient-vertical($col-links, lighten($col-links, 25%))
     font-family: $lato
     font-weight: 300
     font-size: 1.25 * $base-font-size
-    border: solid 1px $col-links-darkest
+    border: solid 1px red //$col-links-darkest
     border-radius: 0.2em
     text-align: center
     //padding: 0.5em 5px
@@ -32,10 +32,11 @@
     a:visited
 
     a:hover
-      +gradient-links-top-lighter
+      @include gradient-vertical($col-links, $col-links-lighter)
       border: solid 1px $col-links
       //color: white
     a:active
+      @include gradient-vertical()
       +gradient-links-bottom-darkest
       border: solid 1px $col-links-lighter
 
@@ -73,7 +74,7 @@
   text-align: right
   text-decoration: none
   &:link
-    color: $col-links
+    color: red //$col-links
   &:hover
     color: $col-links-darker
     background-color: transparent
@@ -83,21 +84,7 @@
     color: $col-links
 
 
-// text-align: right
-  // a:link
-    // font-family: $lato
-    // font-weight: 400
-    // font-size: 1em
-    // padding: 0
-    // margin-top: 0.5em
-    // text-decoration: none
-    // color: $col-links
 
-  // a:hover
-    // color: $col-links-darker
-    // background-color: transparent
-  // a:active
-    // color: $col-links-lighter
 
 
 

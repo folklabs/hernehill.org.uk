@@ -8,54 +8,50 @@
 
 
 
+
+// ----------------------------------------------------------------------------
+// NODE CREATION AND EDITING FORM GROUPING PANELS
+
+
+// Node edit page - field groups
+.page-node-add .pane-node-field-featured-image,
+.page-node-add .pane-node-form-publishing,
+.page-node-add .pane-node-form-author,
+.page-node-add .pane-node-field-featured-categories,
+.page-node-add .pane-node-form-menu,
+.page-node-edit .pane-node-field-featured-image,
+.page-node-edit .pane-node-form-publishing,
+.page-node-edit .pane-node-form-author,
+.page-node-edit .pane-node-field-featured-categories,
+.page-node-edit .pane-node-form-menu
+
+  background-color: $col-content-lightest
+  font-family: $lato
+  color: $col-content-darker
+  margin: 0 0 1em 0
+  padding: 0 0 0.5em 0
+  .form-item
+    margin: 0.5em 10px 0.5em 10px
+  .form-item > .form-item
+    margin: 0
+
+  // Override Panopoly spacing on the h2 tag
+#node-edit .pane-node-field-featured-image h2
+  margin-top: 0
+
+
+
+
+
+
 // ----------------------------------------------------------------------------
 // NODE EDITING FORMS
-
-@mixin input-button-style
-  line-height: 1.25em
-  +gradient-content-bottom-lighter
-  border-radius: 0.25em
-  border: solid 1px $col-content-lighter
-  box-shadow: none
-  font-family: $lato
-  font-weight: 400
-  font-size: 1em
-  &:hover
-    +gradient-content-top-white
-    border: solid 1px $col-content
-    color: $col-content
-  &:active
-    +glow-inner-search-form
-    +gradient-content-top-lighter
-    border: solid 1px white
-    color: $col-content-darkest
-
-@mixin input-button-style-strong
-  line-height: 1.25em
-  // +gradient-content-bottom-lighter
-  background-color: red
-  border-radius: 0.25em
-  border: solid 1px red //$col-content-lighter
-  box-shadow: none
-  font-family: $lato
-  font-weight: 400
-  font-size: 1em
-  &:hover
-    // +gradient-content-top-white
-    border: solid 1px $col-content
-    color: $col-content
-  &:active
-    // +glow-inner-search-form
-    // +gradient-content-top-lighter
-    border: solid 1px white
-    color: $col-content-darkest
-
 
 form
   // Style form labels
   .pane-node-form-title
     background-color: $col-content-lightest
-    padding: 0.25em 5px 0.5em 5px
+    padding: 0.25em 10px 0.5em 10px
     .counter
       margin: 0.75em 0 0 0
       color: $col-content
@@ -79,6 +75,8 @@ form
   // Style text input fields
   input[type="text"],
   input[type="password"],
+  textarea,
+  #tinymce
     padding: 0.2em 5px 0.25em 5px
     border-radius: 3px
     border: solid 1px white
@@ -87,20 +85,20 @@ form
     font-size: 1 * $base-font-size
     color: $col-content-darkest
     box-shadow: none
-    +gradient-search-form
-    +glow-inner-search-form
+    @include gradient-vertical(lighten($col-page, 50%), $col-page)
+    @include glow-inner($col-content-lighter, 5)
   #edit-title
     font-family: $merriweather
 
 
   // Input buttons
-  // input[type="submit"],
+  input[type="submit"],
   #node-edit .form-actions input,
   #node-edit .image-widget .form-submit,
     @include input-button-style
 
   // Publish or save buttons
-  #node-edit .form-actions input #edit-submit
+  #node-edit .form-actions input[id="edit-submit"]
     @include input-button-style-strong
 
 
@@ -195,36 +193,54 @@ form
       font-family: $lato
 
 
+  // The image editor widget
+  .imagefield-focus.focus-box
+    // min-width: auto
+    width: auto !important
+    width: 100%
+    max-width: 100%
+    clear: both
+
+
+// Still needs fixing because now it doesn't move when you click and type in a field
+// Form field
+html.js input.form-autocomplete
+  background-position: 95% -50%
 
 // Wrapper for a form element (or group of form elements) and its label
 .form-item
   margin: rhythm(1) 0
+
   // Pack groups of checkboxes and radio buttons closer together
   .form-checkboxes &,
   .form-radios &
+
     // Drupal core uses "0.4em 0".
     margin: 0
+
   // Form items in a table
   tr.odd &,
   tr.even &
     margin: 0
+
   // Highlight the form elements that caused a form submission error
   input.error,
   textarea.error,
   select.error
-    border: 1px solid #c00
+    border: 1px solid $col-content-strong
+
   // The descriptive help text (separate from the label)
   .description
-    font-size: 0.85em
+    font-size: 0.875em
 
 .form-type-radio,
 .form-type-checkbox
   .description
-    margin-left: 2.4em
+    margin-left: 2.5em
 
 // The part of the label that indicates a required field
 .form-required
-  color: #c00
+  color: $col-content-strong
 
 // Labels for radios and checkboxes
 label.option
@@ -256,26 +272,14 @@ a.button
 
 
 
+
+
+
 // ----------------------------------------------------------------------------
 // SEARCH FORM
 
 
 // The search field itself
-input.search-query
-  height: 2.2 * $base-font-size
-  width: 20em
-  //background-color: transparent
-  border: 1px solid white
-  +gradient-search-form
-  +glow-inner-search-form
-  vertical-align: top
-  padding: 0.25em 0.5em 0.25em 0.5em
-  border-radius: 0.2em
-  font-family: $lato
-  font-weight: 300
-
-  font-size: 1.25 * $base-font-size
-//
 #search-form
   float: right
   .form-type-textfield
@@ -283,6 +287,15 @@ input.search-query
     color: red // $col-content-darker
     #edit-keys
       vertical-align: top
+      height: 2.2 * $base-font-size
+      width: 12em
+      padding: 0.25em 0.5em 0.25em 0.5em
+      vertical-align: top
+      font-family: $lato
+      font-weight: 300
+      border-radius: 0.2em
+      @include glow-inner($col-content-lighter, 5)
+      font-size: 1.25 * $base-font-size
   // The submit button on the search form
   .form-submit
     vertical-align: top
@@ -298,11 +311,12 @@ input.search-query
     border-radius: 0.2em
     a
     &:hover
-      +glow-inner-search-submit
+      @include glow-inner($col-links-darker, 10)
     &:active
       // possibly add style here for activated button
 
 
+  // @include gradient-vertical(red, mix(red, $col-page, $weight:50%))
 
 
 

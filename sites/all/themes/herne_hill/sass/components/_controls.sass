@@ -3,32 +3,6 @@
 // CONTROLS AND BUTTONS
 
 
-// Node edit page - field groups
-.page-node-edit .pane-node-field-featured-image,
-.page-node-edit .pane-node-form-publishing,
-.page-node-edit .pane-node-form-author,
-.page-node-edit .pane-node-field-featured-categories
-  background-color: $col-content-lightest
-  font-family: $lato
-  color: $col-content-darker
-  margin: 0 0 2em 0
-  div
-    margin: 0.25em 5px
-  // padding:
-  // border:
-  // margin:
-// Color
-
-  // color:
-// Text
-  // font-family:
-  // font-size:
-  // line-height:
-  // text-align:
-// Other
-  // cursor:
-
-
 
 
 
@@ -53,7 +27,7 @@
 // The Button itself
 
 .ol-action-button
-  +gradient-links-top-darker
+  @include gradient-vertical($col-links-darker, $col-links)
   font-family: $lato
   font-weight: 300
   font-size: 1.25 * $base-font-size
@@ -66,11 +40,12 @@
   &:visited
 
   &:hover
-    +gradient-links-top-lighter
+    @include gradient-vertical($col-links, $col-links-lighter)
     border: solid 1px $col-links
     //color: white
   &:active
-    +gradient-links-bottom-darkest
+
+    @include gradient-vertical($col-links-darkest, $col-links-darker)
     border: solid 1px $col-links-lighter
 
   .ol-action-span

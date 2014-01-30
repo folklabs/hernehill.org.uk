@@ -41,105 +41,18 @@
 // ----------------------------------------------------------------------------
 // GRADIENTS
 
-// Gradient up from $col-links-darkest to $col-links-darker
-=gradient-links-top-darkest
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-links-darkest),color-stop(1, $col-links-darker))
-  background-image: -o-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -moz-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -webkit-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -ms-linear-gradient(top, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: linear-gradient(to top, $col-links-darkest 0%, $col-links-darker 100%)
+// Blends two colours from $col-top at the top, thru to $col-bottom at the bottom
+// Simple really
 
-// Gradient up from $col-links-darker to $col-links
-=gradient-links-top-darker
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-links-darker),color-stop(1, $col-links))
-  background-image: -o-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
-  background-image: -moz-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
-  background-image: -webkit-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
-  background-image: -ms-linear-gradient(top, $col-links-darker 0%, $col-links 100%)
-  background-image: linear-gradient(to top, $col-links-darker 0%, $col-links 100%)
-
-// Gradient up from $col-links-darker to $col-links
-=gradient-links-top-lighter
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-links),color-stop(1, $col-links-lighter))
-  background-image: -o-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
-  background-image: -moz-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
-  background-image: -webkit-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
-  background-image: -ms-linear-gradient(top, $col-links 0%, $col-links-lighter 100%)
-  background-image: linear-gradient(to top, $col-links 0%, $col-links-lighter 100%)
-
-// Gradient down from $col-links-darkest to $col-links-darker
-=gradient-links-bottom-darkest
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darkest),color-stop(1, $col-links-darker))
-  background-image: -o-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -moz-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -webkit-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -ms-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: linear-gradient(to bottom, $col-links-darkest 0%, $col-links-darker 100%)
-
-// Definition for button outlines (with CSS transparent gradient in them)
-=gradient-field-outline-inset-down
-  background-image: -webkit-gradient(linear, left top, left bottom,color-stop(0%, $col-links-lighter), color-stop(50%, $col-page), color-stop(100%, white))
-  background-image: -o-linear-gradient(top, $col-links-lighter 0%,$col-page 50%,white 100%)
-  background-image: -moz-linear-gradient(top, $col-links-lighter 0%, $col-page 50%, white 100%)
-  background-image: -webkit-linear-gradient(top, $col-links-lighter 0%,$col-page 50%,white 100%)
-  background-image: -ms-linear-gradient(top, $col-links-lighter 0%,$col-page 50%,white 100%)
-  background-image: linear-gradient(to bottom, $col-links-lighter 0%,$col-page 50%,white 100%)
-
-// Gradient for secondary buttons
-=gradient-content-bottom-lighter
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-content-lightest),color-stop(1, $col-page))
-  background-image: -o-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
-  background-image: -moz-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
-  background-image: -webkit-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
-  background-image: -ms-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
-  background-image: linear-gradient(to top, $col-content-lightest 0%, $col-page 100%)
-
-// Gradient for secondary button - hover state
-=gradient-content-top-white
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-page),color-stop(1, white))
-  background-image: -o-linear-gradient(top, $col-page 0%, white 100%)
-  background-image: -moz-linear-gradient(top, $col-page 0%, white 100%)
-  background-image: -webkit-linear-gradient(top, $col-page 0%, white 100%)
-  background-image: -ms-linear-gradient(top, $col-page 0%, white 100%)
-  background-image: linear-gradient(to top, $col-page 0%, white 100%)
-
-// Gradient for secondary button - active state
-=gradient-content-top-lighter
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-page),color-stop(1, $col-content-lightest))
-  background-image: -o-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
-  background-image: -moz-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
-  background-image: -webkit-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
-  background-image: -ms-linear-gradient(top, $col-page 0%, $col-content-lightest 100%)
-  background-image: linear-gradient(to top, $col-page 0%, $col-content-lightest 100%)
+@mixin gradient-vertical($col-top, $col-bottom)
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $col-top),color-stop(1, $col-bottom))
+  background-image: -o-linear-gradient(top, $col-top 0%, $col-bottom 100%)
+  background-image: -moz-linear-gradient(top, $col-top 0%, $col-bottom 100%)
+  background-image: -webkit-linear-gradient(top, $col-top 0%, $col-bottom 100%)
+  background-image: -ms-linear-gradient(top, $col-top 0%, $col-bottom 100%)
+  background-image: linear-gradient(to top, $col-top 0%, $col-bottom 100%)
 
 
-// Gradient for search form field
-=gradient-search-form
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $col-content-lightest), color-stop(100%, $col-page))
-  background-image: -o-linear-gradient(top, $col-content-lightest 0%,$col-page 100%)
-  background-image: -moz-linear-gradient(top, $col-content-lightest 0%, $col-page 100%)
-  background-image: -webkit-linear-gradient(top, $col-content-lightest 0%,$col-page 100%)
-  background-image: -ms-linear-gradient(top, $col-content-lightest 0%,$col-page 100%)
-  background-image: linear-gradient(to bottom, $col-content-lightest 0%,$col-page 100%)
-
-// Nice menus background
-=gradient-nice-menus-block
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darkest),color-stop(1, $col-links-darker))
-  background-image: -o-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -moz-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -webkit-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: -ms-linear-gradient(bottom, $col-links-darkest 0%, $col-links-darker 100%)
-  background-image: linear-gradient(to bottom, $col-links-darkest 0%, $col-links-darker 100%)
-
-// Nice menus link
-=gradient-nice-menus-link
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $col-links-darker),color-stop(1, $col-links-darkest))
-  background-image: -o-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
-  background-image: -moz-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
-  background-image: -webkit-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
-  background-image: -ms-linear-gradient(bottom, $col-links-darker 0%, $col-links-darkest 100%)
-  background-image: linear-gradient(to bottom, $col-links-darker 0%, $col-links-darkest 100%)
 
 
 
@@ -147,23 +60,14 @@
 // ----------------------------------------------------------------------------
 // GLOWS
 
-// Inner glow on search form
-=glow-inner-search-form
-  -moz-box-shadow:    inset 0 0 5px $col-content-lighter
-  -webkit-box-shadow: inset 0 0 5px $col-content-lighter
-  box-shadow:         inset 0 0 5px $col-content-lighter
 
-// Inner glow on search form submit button hover
-=glow-inner-search-submit
-  -moz-box-shadow:    inset 0 0 10px $col-links-darker
-  -webkit-box-shadow: inset 0 0 10px $col-links-darker
-  box-shadow:         inset 0 0 10px $col-links-darker
+// Adds a glow coloured using $col-glow, with a size of $glow-size
+@mixin glow-inner($col-glow, $glow-size)
+  -moz-box-shadow:    inset 0 0 $glow-size * 1px $col-glow
+  -webkit-box-shadow: inset 0 0 $glow-size * 1px $col-glow
+  box-shadow:         inset 0 0 $glow-size * 1px $col-glow
 
-// Inner glow on search form submit button hover
-=glow-inner-nice-menus-current
-  -moz-box-shadow:    inset 0 0 10px $col-links-darkest
-  -webkit-box-shadow: inset 0 0 10px $col-links-darkest
-  box-shadow:         inset 0 0 10px $col-links-darkest
+
 
 
 
@@ -274,9 +178,49 @@
 
 
 
+// ----------------------------------------------------------------------------
+// CONTROL BUTTONS
 
 
+@mixin input-button-style
+  line-height: 1.25em
+  @include gradient-vertical($col-content-lightest, $col-page)
+  border-radius: 0.25em
+  border: solid 1px $col-content-lighter
+  box-shadow: none
+  font-family: $lato
+  font-weight: 400
+  font-size: 1em
+  &:hover
+    @include gradient-vertical($col-page, white)
+    border: solid 1px $col-content
+    color: $col-content
+  &:active
+    @include glow-inner($col-content-lighter, 10)
+    @include gradient-vertical($col-page, $col-content-lightest)
+    border: solid 1px white
+    color: $col-content-darkest
 
+@mixin input-button-style-strong
+  line-height: 1.25em
+  @include gradient-vertical($col-links-darker, $col-links)
+  background-color: $col-links
+  border-radius: 0.25em
+  border: solid 1px $col-links-darker
+  box-shadow: none
+  font-family: $lato
+  font-weight: 400
+  font-size: 1em
+  color: $col-page
+  &:hover
+    @include gradient-vertical($col-links, $col-links-lighter)
+    border: solid 1px $col-links-darker
+    color: white
+  &:active
+    @include glow-inner($col-links-darker, 10)
+    @include gradient-vertical($col-links, $col-links-darker)
+    border: solid 1px $col-links-lighter
+    color: $col-links-lighter
 
 
 
