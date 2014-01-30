@@ -1758,12 +1758,12 @@ form #tinymce {
   font-size: 16px;
   color: #2f2127;
   box-shadow: none;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #f4eee0));
-  background-image: -o-linear-gradient(top, white 0%, #f4eee0 100%);
-  background-image: -moz-linear-gradient(top, white 0%, #f4eee0 100%);
-  background-image: -webkit-linear-gradient(top, white 0%, #f4eee0 100%);
-  background-image: -ms-linear-gradient(top, white 0%, #f4eee0 100%);
-  background-image: linear-gradient(to top, #ffffff 0%, #f4eee0 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fdfcfa), color-stop(1, #f8f4eb));
+  background-image: -o-linear-gradient(top, #fdfcfa 0%, #f8f4eb 100%);
+  background-image: -moz-linear-gradient(top, #fdfcfa 0%, #f8f4eb 100%);
+  background-image: -webkit-linear-gradient(top, #fdfcfa 0%, #f8f4eb 100%);
+  background-image: -ms-linear-gradient(top, #fdfcfa 0%, #f8f4eb 100%);
+  background-image: linear-gradient(to top, #fdfcfa 0%, #f8f4eb 100%);
   -moz-box-shadow: inset 0 0 5px #b19fa7;
   -webkit-box-shadow: inset 0 0 5px #b19fa7;
   box-shadow: inset 0 0 5px #b19fa7;
@@ -2507,20 +2507,32 @@ html.js #user-login-form li.openid-link,
   list-style-image: none;
 }
 /* line 30, ../sass/components/_nav-nice.sass */
-#navigation li a:hover, #navigation li a:active {
+#navigation li a:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #20806a));
+  background-image: -o-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -moz-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -webkit-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -ms-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: linear-gradient(to top, #144c3f 0%, #20806a 100%);
+}
+/* line 32, ../sass/components/_nav-nice.sass */
+#navigation li a:active {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #0d332a));
   background-image: -o-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: -moz-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: -webkit-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: -ms-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: linear-gradient(to top, #144c3f 0%, #0d332a 100%);
+  -moz-box-shadow: inset 0 0 10px #0d332a;
+  -webkit-box-shadow: inset 0 0 10px #0d332a;
+  box-shadow: inset 0 0 10px #0d332a;
 }
 
-/* line 43, ../sass/components/_nav-nice.sass */
+/* line 45, ../sass/components/_nav-nice.sass */
 .nice-menu {
   height: 100%;
 }
-/* line 45, ../sass/components/_nav-nice.sass */
+/* line 47, ../sass/components/_nav-nice.sass */
 .nice-menu li {
   color: #f4eee0;
   font-family: "Lato";
@@ -2530,7 +2542,7 @@ html.js #user-login-form li.openid-link,
   vertical-align: center;
   padding: 0 0;
 }
-/* line 53, ../sass/components/_nav-nice.sass */
+/* line 55, ../sass/components/_nav-nice.sass */
 .nice-menu li a {
   text-decoration: none;
   letter-spacing: 0.025em;
@@ -2538,7 +2550,7 @@ html.js #user-login-form li.openid-link,
   color: #f4eee0;
 }
 
-/* line 64, ../sass/components/_nav-nice.sass */
+/* line 66, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li {
   border-left: solid 1px #b19fa7;
   border-right: solid 1px #b19fa7;
@@ -2548,41 +2560,41 @@ html.js #user-login-form li.openid-link,
   font-weight: 400;
   color: #20806a;
 }
-/* line 72, ../sass/components/_nav-nice.sass */
+/* line 74, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a {
   color: #0d332a;
   padding: 0.25em 15px;
 }
-/* line 75, ../sass/components/_nav-nice.sass */
+/* line 77, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a:link {
   color: #20806a;
 }
-/* line 77, ../sass/components/_nav-nice.sass */
+/* line 79, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a:hover {
   background-color: #e2e3d7;
   background-image: none;
 }
-/* line 80, ../sass/components/_nav-nice.sass */
+/* line 82, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a:active {
   background-color: #20806a;
   color: white;
 }
-/* line 83, ../sass/components/_nav-nice.sass */
+/* line 85, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li:hover {
   background-color: #e2e3d7;
 }
 
-/* line 88, ../sass/components/_nav-nice.sass */
+/* line 90, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down ul {
   margin-top: 0.6em;
 }
-/* line 90, ../sass/components/_nav-nice.sass */
+/* line 92, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down ul ul {
   margin-top: 0.05em;
   border-top: 1px solid #b19fa7;
 }
 
-/* line 97, ../sass/components/_nav-nice.sass */
+/* line 99, ../sass/components/_nav-nice.sass */
 .nice-menu-navigation li a {
   color: #0d332a;
   font-size: 14.4px;

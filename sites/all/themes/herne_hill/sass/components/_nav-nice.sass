@@ -27,9 +27,11 @@
       // LTR
       list-style-type: none
       list-style-image: none
-  li a:hover, li a:active
+  li a:hover
+    @include gradient-vertical($col-links-darker, $col-links)
+  li a:active
     @include gradient-vertical($col-links-darker, $col-links-darkest)
-    // +gradient-nice-menus-block
+    @include glow-inner($col-links-darkest, 10)
   // add currently-active menu style to indicate currently-active link
   // use +glow-inner-nice-menus-current and +gradient-nice-menus-link to highlight reverse color and text white
 
