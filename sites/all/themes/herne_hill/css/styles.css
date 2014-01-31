@@ -1095,46 +1095,49 @@ html.js #user-login-form li.openid-link,
 /* line 13, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row {
   border-bottom: 1px #e3dcd1 solid;
-  padding: 0.5em 0;
 }
 /* line 17, ../sass/components/_nav-menu.sass */
-.ol-2nd-nav-menu .views-row:hover {
+.ol-2nd-nav-menu .views-row .views-field a.active {
   background-color: #e2e3d7;
-}
-/* line 19, ../sass/components/_nav-menu.sass */
-.ol-2nd-nav-menu .views-row:hover a {
-  color: #0d332a;
+  color: #144c3f;
 }
 /* line 21, ../sass/components/_nav-menu.sass */
-.ol-2nd-nav-menu .views-row:active {
-  background-color: #20806a;
-}
-/* line 22, ../sass/components/_nav-menu.sass */
-.ol-2nd-nav-menu .views-row:active a {
-  color: white;
-}
-/* line 25, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row a {
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #20806a;
-  text-decoration: none;
+  padding: 3.5% 5% 1.5% 5%;
+}
+/* line 23, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .views-row a:link, .ol-2nd-nav-menu .views-row a:visited {
+  display: block;
+  height: 2em;
+  width: 90%;
   font-family: "Lato";
   font-size: 1em;
   font-weight: 400;
+  text-decoration: none;
+  color: #20806a;
+}
+/* line 33, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .views-row a:hover {
+  background-color: #e2e3d7;
+  color: #0d332a;
+}
+/* line 36, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .views-row a:active {
+  color: white;
+  background-color: #20806a;
 }
 
-/* line 45, ../sass/components/_nav-menu.sass */
+/* line 50, ../sass/components/_nav-menu.sass */
 .pane-openlocal-news-popular-news-topics {
   margin: 1em 0;
 }
-/* line 47, ../sass/components/_nav-menu.sass */
+/* line 52, ../sass/components/_nav-menu.sass */
 .pane-openlocal-news-popular-news-topics ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 51, ../sass/components/_nav-menu.sass */
+/* line 56, ../sass/components/_nav-menu.sass */
 .pane-openlocal-news-popular-news-topics ul li {
   padding: 0.5em 10px 0.5em 10px;
   font-family: "Lato";
@@ -1143,16 +1146,16 @@ html.js #user-login-form li.openid-link,
   color: #b19fa7;
   border-bottom: 1px #e3dcd1 solid;
 }
-/* line 58, ../sass/components/_nav-menu.sass */
+/* line 63, ../sass/components/_nav-menu.sass */
 .pane-openlocal-news-popular-news-topics ul li a {
   color: #20806a;
   background-color: transparent;
 }
-/* line 61, ../sass/components/_nav-menu.sass */
+/* line 66, ../sass/components/_nav-menu.sass */
 .pane-openlocal-news-popular-news-topics ul li a:hover {
   color: #144c3f;
 }
-/* line 63, ../sass/components/_nav-menu.sass */
+/* line 68, ../sass/components/_nav-menu.sass */
 .pane-openlocal-news-popular-news-topics ul li a:active {
   color: #98b9b1;
 }
@@ -1161,12 +1164,7 @@ html.js #user-login-form li.openid-link,
 .ol-action-box {
   background-color: #e2e3d7;
   padding: 0.5em 5px;
-  margin-bottom: 20px;
-}
-/* line 14, ../sass/components/_actions.sass */
-.ol-action-box a:hover {
-  text-decoration: none;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 
 /* line 67, ../sass/components/_actions.sass */

@@ -11,26 +11,31 @@
   border-top: 1px $col-content-lighter solid
   margin-bottom: 0.5em
   .views-row
-    // background-color: #F4EEE0 //TODO
     border-bottom: 1px $col-content-lightest solid
-    padding: 0.5em 0
-    &:hover
-      background-color: $col-links-lightest
-      a
-        color: $col-links-darkest
-    &:active
-      a
-        color: white
-      background-color: $col-links
-    a
-      padding-left: 10px
-      padding-right: 10px
-      color: $col-links
-      text-decoration: none
-      font-family: $lato
-      font-size: 1em
-      font-weight: 400
 
+    // The active link in the menu
+    .views-field a.active
+      background-color: $col-links-lightest
+      // font-weight: 900
+      color: $col-links-darker
+    a
+      padding: 3.5% 5% 1.5% 5%
+      &:link,
+      &:visited
+        display: block
+        height: 2em
+        width: 90%
+        font-family: $lato
+        font-size: 1em
+        font-weight: 400
+        text-decoration: none
+        color: $col-links
+      &:hover
+        background-color: $col-links-lightest
+        color: $col-links-darkest
+      &:active
+        color: white
+        background-color: $col-links
 
 
 
