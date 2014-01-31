@@ -433,6 +433,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 32px;
 }
 
+/* line 125, ../sass/_base.sass */
+div#panels-ipe-control-container {
+  z-index: 500;
+}
+
 /* line 31, ../sass/layouts/_responsive.sass */
 #page,
 .region-bottom {
