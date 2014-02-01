@@ -456,7 +456,7 @@ function openlocal_event_field_default_field_instances() {
     'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
-    'description' => 'Please search for the name of a venue for the event. Browse the <a href="/venues" target="_blank">list of available venues</a> if you do not know the name.',
+    'description' => 'Please search for the name of a venue for the event. Browse the <b><a href="/venues" target="_blank">list of available venues</a></b> if you do not know the name.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -497,6 +497,7 @@ function openlocal_event_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'match_operator' => 'CONTAINS',
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'path' => '',
         'size' => 60,
       ),
@@ -635,7 +636,7 @@ function openlocal_event_field_default_field_instances() {
   t('Image');
   t('Please choose this if the venue has a disabled toilet.');
   t('Please choose this if your event is accessible to wheelchair users.');
-  t('Please search for the name of a venue for the event. Browse the <a href="/venues" target="_blank">list of available venues</a> if you do not know the name.');
+  t('Please search for the name of a venue for the event. Browse the <b><a href="/venues" target="_blank">list of available venues</a></b> if you do not know the name.');
   t('This will appear on list pages, e.g. Services.');
   t('Tips - the "start date" is the day and time your event commences. The "To date" is when your first event or meeting ends, probably an hour or two after the start. N.B. If you want to create a repeating event (i.e. every week) then please use the "repeat" option under the advanced section. If it is an event on for every week on the same day then choose repeat "every" "week". Please also then enter the date that the series finishes otherwise it will be repeated until the end of the world as we know it... Please check your entry once you have done it. View the What\'s On calendar and see where your event is listed, then check that it is only repeated (if applicable) on all the correct days. ');
   t('Venue');

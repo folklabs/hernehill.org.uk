@@ -16,7 +16,10 @@ function openlocal_event_default_page_manager_pages() {
   $page->admin_title = 'Events';
   $page->admin_description = '';
   $page->path = 'events/list/!term/!date';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'default tab',
     'title' => 'List',
@@ -478,7 +481,7 @@ function openlocal_event_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'harris';
+  $display->layout = 'webb_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -488,6 +491,9 @@ function openlocal_event_default_page_manager_pages() {
       'header' => NULL,
       'column1' => NULL,
       'column2' => NULL,
+      'contentheader' => NULL,
+      'contentcolumn1' => NULL,
+      'contentcolumn2' => NULL,
     ),
   );
   $display->cache = array();
@@ -496,7 +502,7 @@ function openlocal_event_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'column1';
+    $pane->panel = 'contentcolumn1';
     $pane->type = 'block';
     $pane->subtype = 'views-160a843794911f6ad4ddb6ec52b766fa';
     $pane->shown = TRUE;
@@ -515,31 +521,10 @@ function openlocal_event_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['column1'][0] = 'new-7';
+    $display->panels['contentcolumn1'][0] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'column2';
-    $pane->type = 'block';
-    $pane->subtype = 'block-4';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['column2'][0] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'contentmain';
+    $pane->panel = 'contentcolumn2';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_event_venues-panel_pane_1';
     $pane->shown = TRUE;
@@ -569,32 +554,11 @@ function openlocal_event_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['contentmain'][0] = 'new-9';
+    $display->content['new-8'] = $pane;
+    $display->panels['contentcolumn2'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
-    $pane->panel = 'header';
-    $pane->type = 'block';
-    $pane->subtype = 'block-6';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => ' ',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['header'][0] = 'new-10';
-    $pane = new stdClass();
-    $pane->pid = 'new-11';
-    $pane->panel = 'header';
+    $pane->pid = 'new-9';
+    $pane->panel = 'contentheader';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_event_venues-panel_pane_2';
     $pane->shown = TRUE;
@@ -622,10 +586,52 @@ function openlocal_event_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['contentheader'][0] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'block-6';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => ' ',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['sidebar'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'block-4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-11'] = $pane;
-    $display->panels['header'][1] = 'new-11';
+    $display->panels['sidebar'][1] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
