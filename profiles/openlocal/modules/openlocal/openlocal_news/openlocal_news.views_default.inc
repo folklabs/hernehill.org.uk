@@ -158,6 +158,7 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
@@ -207,6 +208,22 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'F Y';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['term_page'] = FALSE;
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'panopoly_categories' => 'panopoly_categories',
+  );
+  $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'ignore';
   /* Contextual filter: Exclude Current News Article */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -260,22 +277,23 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
-      'type' => 'context',
+      'type' => 'none',
       'context' => 'entity:node.nid',
       'context_optional' => 1,
       'panel' => '0',
       'fixed' => '',
       'label' => 'Exclude Current Article',
     ),
-    'field_openlocal_news_tags_tid' => array(
-      'type' => 'user',
-      'context' => 'entity:fieldable_panels_pane.vuuid',
+    'tid' => array(
+      'type' => 'panel',
+      'context' => 'entity:comment.author',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Filter List by Topic',
+      'label' => 'Content: Has taxonomy term ID',
     ),
   );
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: Single News Article */
   $handler = $view->new_display('panel_pane', 'Single News Article', 'single_news_article');
@@ -871,7 +889,7 @@ Add some news content or enable the OpenLocal News Demo module. ';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'news/list/[tid]/';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'news/[tid]';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;

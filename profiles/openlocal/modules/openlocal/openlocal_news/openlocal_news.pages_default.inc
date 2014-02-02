@@ -229,7 +229,7 @@ function openlocal_news_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'News Home Page';
   $page->admin_description = 'The primary disambiguation page for all things news-related. Think of as the primary page of a blog or news section of your site.';
-  $page->path = 'news';
+  $page->path = 'news/!term';
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
@@ -246,7 +246,31 @@ function openlocal_news_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'term' => array(
+      'id' => 1,
+      'identifier' => 'Taxonomy term: ID',
+      'name' => 'term',
+      'settings' => array(
+        'input_form' => 'tid',
+        'vids' => array(
+          2 => '2',
+          1 => 0,
+          7 => 0,
+          3 => 0,
+          6 => 0,
+          8 => 0,
+          4 => 0,
+          5 => 0,
+          10 => 0,
+          11 => 0,
+          9 => 0,
+        ),
+        'breadcrumb' => 0,
+        'transform' => 0,
+      ),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -465,6 +489,7 @@ function openlocal_news_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'fields_override' => array(
+        'nid' => 0,
         'field_featured_image' => 1,
         'title' => 1,
         'body' => 1,
@@ -485,7 +510,7 @@ function openlocal_news_default_page_manager_pages() {
       'override_title_text' => '',
       'view_mode' => 'teaser',
       'widget_title' => '',
-      'items_per_page' => '3',
+      'items_per_page' => '10',
       'view_settings' => 'fields',
       'use_pager' => NULL,
       'pager_id' => NULL,
