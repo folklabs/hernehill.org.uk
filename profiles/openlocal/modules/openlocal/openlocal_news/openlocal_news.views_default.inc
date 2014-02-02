@@ -866,6 +866,7 @@ Add some news content or enable the OpenLocal News Demo module. ';
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'News categories';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -901,8 +902,8 @@ Add some news content or enable the OpenLocal News Demo module. ';
     'panopoly_categories' => 'panopoly_categories',
   );
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: List */
+  $handler = $view->new_display('panel_pane', 'List', 'panel_pane_1');
   $export['openlocal_news_categories'] = $view;
 
   return $export;
