@@ -103,6 +103,51 @@ function openlocal_alert_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ol_alert-field_ol_alert_category'
+  $field_instances['node-ol_alert-field_ol_alert_category'] = array(
+    'bundle' => 'ol_alert',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select what type of alert or issue this relates to.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_alert_category',
+    'label' => 'Category',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_alert-field_ol_alert_link'
   $field_instances['node-ol_alert-field_ol_alert_link'] = array(
     'bundle' => 'ol_alert',
@@ -163,7 +208,7 @@ function openlocal_alert_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -208,7 +253,7 @@ function openlocal_alert_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -269,12 +314,14 @@ function openlocal_alert_field_default_field_instances() {
   t('A link to a forum post or other web page that gives more information.');
   t('A short summary that will be displayed in the alert.');
   t('Add a photo of a missing pet or something relevant to this alert.');
+  t('Category');
   t('Comment');
   t('Description');
   t('Image');
   t('Link');
   t('Mark this alert as resolved when it is sorted.');
   t('Resolved');
+  t('Select what type of alert or issue this relates to.');
 
   return $field_instances;
 }

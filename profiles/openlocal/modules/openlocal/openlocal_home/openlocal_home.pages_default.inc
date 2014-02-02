@@ -153,11 +153,11 @@ function openlocal_home_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '3',
+      'items_per_page' => '1',
       'override_title' => '',
       'override_title_text' => '',
       'view_mode' => 'teaser',
-      'widget_title' => 'Missing Moggies',
+      'widget_title' => '',
       'exposed' => array(
         'sort_by' => NULL,
         'sort_order' => NULL,

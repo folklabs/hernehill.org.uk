@@ -22,14 +22,15 @@ function openlocal_alert_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Community alerts';
+  $handler->display->display_options['title'] = 'Community Alerts';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'mini';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -74,11 +75,10 @@ function openlocal_alert_views_default_views() {
     'image_style' => 'openlocal_panel_deep',
     'image_link' => 'content',
   );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -126,6 +126,13 @@ function openlocal_alert_views_default_views() {
     'image_style' => 'openlocal_panel_deep',
     'image_link' => '',
   );
+  /* Field: Content: Category */
+  $handler->display->display_options['fields']['field_ol_alert_category']['id'] = 'field_ol_alert_category';
+  $handler->display->display_options['fields']['field_ol_alert_category']['table'] = 'field_data_field_ol_alert_category';
+  $handler->display->display_options['fields']['field_ol_alert_category']['field'] = 'field_ol_alert_category';
+  $handler->display->display_options['fields']['field_ol_alert_category']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_alert_category']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_alert_category']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
