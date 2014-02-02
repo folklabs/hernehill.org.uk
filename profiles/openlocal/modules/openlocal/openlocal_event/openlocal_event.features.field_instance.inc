@@ -148,7 +148,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -297,7 +297,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -386,6 +386,58 @@ function openlocal_event_field_default_field_instances() {
       ),
       'type' => 'email_textfield',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-ol_event-field_ol_event_contact_telephone'
+  $field_instances['node-ol_event-field_ol_event_contact_telephone'] = array(
+    'bundle' => 'ol_event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter a contact telephone number for the event.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_event_contact_telephone',
+    'label' => 'Contact telephone',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
     ),
   );
 
@@ -502,7 +554,7 @@ function openlocal_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -551,7 +603,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -616,7 +668,7 @@ function openlocal_event_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -625,11 +677,13 @@ function openlocal_event_field_default_field_instances() {
   t('Category');
   t('Comment');
   t('Contact');
+  t('Contact telephone');
   t('Date');
   t('Describe all the details that people need to know about the event.');
   t('Description');
   t('Details');
   t('Disabled toilet');
+  t('Enter a contact telephone number for the event.');
   t('Enter the email address of a contact for this event.');
   t('Feature content');
   t('Groups audience');
