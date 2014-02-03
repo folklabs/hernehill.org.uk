@@ -53,3 +53,67 @@
     // Event venue link
     .ol-event-list-view-title div a
       @include typography-panel-list-venue
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// Event Venue list table views
+
+.view-openlocal-event-venues
+  margin: 0.5em 0
+  table
+    width: 100%
+    margin: 0 0
+    td
+      // Align text to top of table cells
+      vertical-align: top
+    tr
+      border-bottom: solid 1px $col-content-lightest
+      background-color: transparent
+    td.ol-date-only
+      padding: 0.5em 5px
+    td.views-field-field-featured-image
+      padding: 0.5em 0
+      width: 130px
+    td.views-field-title
+      padding: 0.5em 10px
+
+    // Event heading text
+    .views-field-title div a
+      @include list-item-title
+
+    // Event body text
+    .views-field-title span
+      @include typography-grid-list-body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

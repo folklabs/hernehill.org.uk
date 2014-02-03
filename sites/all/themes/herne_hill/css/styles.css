@@ -2185,39 +2185,38 @@ a.button {
 .header__logo-image {
   vertical-align: bottom;
   margin-top: 8px;
-  width: 150px;
-  margin: 10px 20px 10px 10px;
+  margin: 0.5em 10px;
 }
 
-/* line 24, ../sass/components/_header.sass */
+/* line 23, ../sass/components/_header.sass */
 .header__name-and-slogan {
   float: left;
 }
 
-/* line 28, ../sass/components/_header.sass */
+/* line 27, ../sass/components/_header.sass */
 .header__site-name {
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
 }
 
-/* line 34, ../sass/components/_header.sass */
+/* line 33, ../sass/components/_header.sass */
 .header__site-link:link, .header__site-link:visited {
   color: black;
   text-decoration: none;
 }
-/* line 38, ../sass/components/_header.sass */
+/* line 37, ../sass/components/_header.sass */
 .header__site-link:hover, .header__site-link:focus {
   text-decoration: underline;
 }
 
-/* line 43, ../sass/components/_header.sass */
+/* line 42, ../sass/components/_header.sass */
 .header__site-slogan {
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
-/* line 48, ../sass/components/_header.sass */
+/* line 47, ../sass/components/_header.sass */
 .header__region {
   clear: both;
 }
@@ -2495,13 +2494,25 @@ html.js #user-login-form li.openid-link,
   margin-bottom: 0;
 }
 /* line 16, ../sass/components/_nav-nice.sass */
+#navigation .active {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #144c3f));
+  background-image: -o-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: -moz-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: -webkit-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: -ms-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: linear-gradient(to top, #20806a 0%, #144c3f 100%);
+  -moz-box-shadow: inset 0 0 10px #144c3f;
+  -webkit-box-shadow: inset 0 0 10px #144c3f;
+  box-shadow: inset 0 0 10px #144c3f;
+}
+/* line 19, ../sass/components/_nav-nice.sass */
 #navigation .links,
 #navigation .menu {
   margin: 0;
   padding: 0;
   text-align: left;
 }
-/* line 22, ../sass/components/_nav-nice.sass */
+/* line 25, ../sass/components/_nav-nice.sass */
 #navigation .links li,
 #navigation .menu li {
   float: left;
@@ -2509,33 +2520,33 @@ html.js #user-login-form li.openid-link,
   list-style-type: none;
   list-style-image: none;
 }
-/* line 30, ../sass/components/_nav-nice.sass */
+/* line 33, ../sass/components/_nav-nice.sass */
 #navigation li a:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #20806a));
-  background-image: -o-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: -moz-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: -webkit-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: -ms-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: linear-gradient(to top, #144c3f 0%, #20806a 100%);
-}
-/* line 32, ../sass/components/_nav-nice.sass */
-#navigation li a:active {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #0d332a));
   background-image: -o-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: -moz-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: -webkit-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: -ms-linear-gradient(top, #144c3f 0%, #0d332a 100%);
   background-image: linear-gradient(to top, #144c3f 0%, #0d332a 100%);
+}
+/* line 35, ../sass/components/_nav-nice.sass */
+#navigation li a:active {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #20806a));
+  background-image: -o-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -moz-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -webkit-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -ms-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: linear-gradient(to top, #144c3f 0%, #20806a 100%);
   -moz-box-shadow: inset 0 0 10px #0d332a;
   -webkit-box-shadow: inset 0 0 10px #0d332a;
   box-shadow: inset 0 0 10px #0d332a;
 }
 
-/* line 45, ../sass/components/_nav-nice.sass */
+/* line 48, ../sass/components/_nav-nice.sass */
 .nice-menu {
   height: 100%;
 }
-/* line 47, ../sass/components/_nav-nice.sass */
+/* line 50, ../sass/components/_nav-nice.sass */
 .nice-menu li {
   color: #f4eee0;
   font-family: "Lato";
@@ -2545,7 +2556,7 @@ html.js #user-login-form li.openid-link,
   vertical-align: center;
   padding: 0 0;
 }
-/* line 55, ../sass/components/_nav-nice.sass */
+/* line 58, ../sass/components/_nav-nice.sass */
 .nice-menu li a {
   text-decoration: none;
   letter-spacing: 0.025em;
@@ -2553,7 +2564,7 @@ html.js #user-login-form li.openid-link,
   color: #f4eee0;
 }
 
-/* line 66, ../sass/components/_nav-nice.sass */
+/* line 69, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li {
   border-left: solid 1px #b19fa7;
   border-right: solid 1px #b19fa7;
@@ -2563,41 +2574,41 @@ html.js #user-login-form li.openid-link,
   font-weight: 400;
   color: #20806a;
 }
-/* line 74, ../sass/components/_nav-nice.sass */
+/* line 77, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a {
   color: #0d332a;
   padding: 0.25em 15px;
 }
-/* line 77, ../sass/components/_nav-nice.sass */
+/* line 80, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a:link {
   color: #20806a;
 }
-/* line 79, ../sass/components/_nav-nice.sass */
+/* line 82, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a:hover {
   background-color: #e2e3d7;
   background-image: none;
 }
-/* line 82, ../sass/components/_nav-nice.sass */
+/* line 85, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li a:active {
   background-color: #20806a;
   color: white;
 }
-/* line 85, ../sass/components/_nav-nice.sass */
+/* line 88, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down li li:hover {
   background-color: #e2e3d7;
 }
 
-/* line 90, ../sass/components/_nav-nice.sass */
+/* line 93, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down ul {
   margin-top: 0.6em;
 }
-/* line 92, ../sass/components/_nav-nice.sass */
+/* line 95, ../sass/components/_nav-nice.sass */
 #navigation .nice-menu-down ul ul {
   margin-top: 0.05em;
   border-top: 1px solid #b19fa7;
 }
 
-/* line 99, ../sass/components/_nav-nice.sass */
+/* line 102, ../sass/components/_nav-nice.sass */
 .nice-menu-navigation li a {
   color: #0d332a;
   font-size: 14.4px;
@@ -3493,6 +3504,72 @@ h2.node-title a:active {
 /* line 172, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title div a a:active {
   color: white;
+}
+
+/* line 67, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues {
+  margin: 0.5em 0;
+}
+/* line 69, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table {
+  width: 100%;
+  margin: 0 0;
+}
+/* line 72, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table td {
+  vertical-align: top;
+}
+/* line 75, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table tr {
+  border-bottom: solid 1px #e3dcd1;
+  background-color: transparent;
+}
+/* line 78, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table td.ol-date-only {
+  padding: 0.5em 5px;
+}
+/* line 80, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table td.views-field-field-featured-image {
+  padding: 0.5em 0;
+  width: 130px;
+}
+/* line 83, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table td.views-field-title {
+  padding: 0.5em 10px;
+}
+/* line 87, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table .views-field-title div a {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: 300;
+}
+/* line 96, ../sass/_mixins.sass */
+.view-openlocal-event-venues table .views-field-title div a a:link {
+  color: #20806a;
+}
+/* line 98, ../sass/_mixins.sass */
+.view-openlocal-event-venues table .views-field-title div a a:visited {
+  color: #20806a;
+}
+/* line 100, ../sass/_mixins.sass */
+.view-openlocal-event-venues table .views-field-title div a a:hover {
+  color: #144c3f;
+  background-color: transparent;
+}
+/* line 103, ../sass/_mixins.sass */
+.view-openlocal-event-venues table .views-field-title div a a:active {
+  color: #98b9b1;
+}
+/* line 91, ../sass/components/_view-list.sass */
+.view-openlocal-event-venues table .views-field-title span {
+  display: block;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1em;
+  color: #77666d;
+  display: block;
 }
 
 /* line 59, ../sass/styles.sass */

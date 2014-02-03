@@ -13,6 +13,9 @@
   .block-menu-block .block__title
     @extend %element-invisible
   // Main menu and secondary menu links and menu block links.
+  .active
+    @include gradient-vertical($col-links, $col-links-darker)
+    @include glow-inner($col-links-darker, 10)
   .links,
   .menu
     margin: 0
@@ -28,9 +31,9 @@
       list-style-type: none
       list-style-image: none
   li a:hover
-    @include gradient-vertical($col-links-darker, $col-links)
-  li a:active
     @include gradient-vertical($col-links-darker, $col-links-darkest)
+  li a:active
+    @include gradient-vertical($col-links-darker, $col-links)
     @include glow-inner($col-links-darkest, 10)
   // add currently-active menu style to indicate currently-active link
   // use +glow-inner-nice-menus-current and +gradient-nice-menus-link to highlight reverse color and text white

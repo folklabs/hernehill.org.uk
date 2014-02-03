@@ -78,242 +78,232 @@
 // ===============================================================================
 // REFERENCE
 
+//
+ //This file contains colors, graphics, and text effects.
+ //
+ // Colors used:
+ //   #C1C1C1 Borders, post seperator, avatar frame, statistics subheader.
+ //   #333333 Table header font color.
+ //   #F5F5F5 to #DDDDDD Gradient on table headers, post info, stats header, top
+ //                      post footer, topic navigation.
+ //   #F5F5F5 to #EFEFEF Gradient on topic list background.
+ //   #F5F5F5 Stats section background.
+ //   #FAFAFA Text area on posts.
 
-// /*
-// This file contains colors, graphics, and text effects.
+// PAGER ******************************************************************
 
-// Colors used:
-//   #C1C1C1 Borders, post seperator, avatar frame, statistics subheader.
-//   #333333 Table header font color.
-//   #F5F5F5 to #DDDDDD Gradient on table headers, post info, stats header, top
-//                      post footer, topic navigation.
-//   #F5F5F5 to #EFEFEF Gradient on topic list background.
-//   #F5F5F5 Stats section background.
-//   #FAFAFA Text area on posts.
-// */
+// This is the pager on the topics in the list
 
-// /*** PAGER *******************************************************************/
+// .topic-pager
+//   font-style: italic
 
-// /* This is the pager on the topics in the list */
-// .topic-pager {
-//   font-style: italic;
-// }
+// .forum-pager .pager a, #forum-comments .pager a
+//   font-weight: bold
 
-// .forum-pager .pager a,
-// #forum-comments .pager a {
-//   font-weight: bold;
-// }
+// .forum-pager .pager a
+//   &:link, &:visited
+//     text-decoration: none
+//     border: 1px solid #C1C1C1
+//     background: #EFEFEF
+//     background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#efefef))
+//     background: -moz-linear-gradient(top, whitesmoke, #efefef)
 
-// .forum-pager .pager a:link,
-// .forum-pager .pager a:visited,
-// #forum-comments .pager a:link,
-// #forum-comments .pager a:visited {
-//   text-decoration: none;
-//   border: 1px solid #C1C1C1;
-//   background: #EFEFEF;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#EFEFEF));
-//   background: -moz-linear-gradient(top, #F5F5F5, #EFEFEF);
-// }
+// #forum-comments .pager a
+//   &:link, &:visited
+//     text-decoration: none
+//     border: 1px solid #C1C1C1
+//     background: #EFEFEF
+//     background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#efefef))
+//     background: -moz-linear-gradient(top, whitesmoke, #efefef)
 
-// .forum-pager .pager-current,
-// .forum-pager .pager a:hover,
-// #forum-comments .pager-current,
-// #forum-comments .pager a:hover {
-//   background: #333333;
-//   color: #FFFFFF !important;
-// }
+// .forum-pager
+//   .pager-current, .pager a:hover
+//     background: #333333
+//     color: #FFFFFF !important
 
-// .forum-pager .pager a.active,
-// #forum-comments .pager a.active {
-//   color: #333333;
-// }
+// #forum-comments
+//   .pager-current, .pager a:hover
+//     background: #333333
+//     color: #FFFFFF !important
 
-// /*** FORUM & TOPIC LISTS ******************************************************/
+// .forum-pager .pager a.active, #forum-comments .pager a.active
+//   color: #333333
 
-// /* Forum list and topic list tables */
-// .forum-table {
-//   border: 1px solid #C1C1C1;
-// }
+// // FORUM & TOPIC LISTS *****************************************************
 
-// /* Table name and description on forum list and table header on topic list */
-// .forum-table-wrap .forum-table-superheader,
-// .forum-table-topics thead tr  {
-//   border: 1px solid #C1C1C1;
-//   background: #DDDDDD;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#DDDDDD));
-//   background: -moz-linear-gradient(top, #F5F5F5, #DDDDDD);
-//   color: #333333;
-// }
+// // Forum list and topic list tables
 
-// /* Table name on forum list */
-// .forum-table-superheader .forum-table-name,
-// .forum-table-superheader .forum-table-name a {
-//   color: #333333;
-//   font-weight: bold;
-//   color: #333333;
-//   font-weight: bold;
-//   border-bottom: none;
-// }
+// .forum-table
+//   border: 1px solid #C1C1C1
 
-// /* Table header on forum list */
-// .forum-table-wrap thead tr {
-//   background-color: #F5F5F5;
-//   border: 1px solid #C1C1C1;
-// }
+// // Table name and description on forum list and table header on topic list
 
-// /* Table header on forum list and topic list */
-// .forum-table thead tr a,
-// .forum-table thead tr a:visited,
-// .forum-table thead tr a:link {
-//   color: #333333;
-//   font-weight: bold;
-// }
+// .forum-table-wrap .forum-table-superheader, .forum-table-topics thead tr
+//   border: 1px solid #C1C1C1
+//   background: #DDDDDD
+//   background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#dddddd))
+//   background: -moz-linear-gradient(top, whitesmoke, #dddddd)
+//   color: #333333
 
-// /* Reset to avoid bleed-thru from theme */
-// .forum-table thead th {
-//   border-bottom: none;
-// }
+// // Table name on forum list
 
-// /* Rows on both tables */
-// .forum-table tr.even,
-// .forum-table tr.odd {
-//   border-top: 1px solid #C1C1C1;
-//   background: #EFEFEF;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#DDDDDD));
-//   background: -moz-linear-gradient(top, #F5F5F5, #DDDDDD);
-// }
+// .forum-table-superheader .forum-table-name
+//   color: #333333
+//   font-weight: bold
+//   color: #333333
+//   font-weight: bold
+//   border-bottom: none
+//   a
+//     color: #333333
+//     font-weight: bold
+//     color: #333333
+//     font-weight: bold
+//     border-bottom: none
 
-// /* Active column on both tables - reset to prevent bleed thru from theme */
-// .forum-table tr.even td.active,
-// .forum-table tr.odd td.active{
-//   background-color: transparent;
-// }
+// // Table header on forum list
 
-// /* Individual cells on both tables */
-// .forum-table td {
-//   border: 1px solid #C1C1C1;
-// }
+// .forum-table-wrap thead tr
+//   background-color: #F5F5F5
+//   border: 1px solid #C1C1C1
 
-// /* Placeholder when there are no topics in the list */
-// .view-advanced-forum-topic-list .view-empty {
-//   border: 3px solid #C1C1C1;
-// }
+// // Table header on forum list and topic list
 
-// /*** Sticky topics ***/
-// .forum-table tr.forum-last-sticky {
-//   border-bottom: 10px solid #C1C1C1;
-// }
+// .forum-table
+//   thead
+//     tr a
+//       color: #333333
+//       font-weight: bold
+//       &:visited, &:link
+//         color: #333333
+//         font-weight: bold
+//     th
+//       border-bottom: none
+//   tr
+//     &.even, &.odd
+//       border-top: 1px solid #C1C1C1
+//       background: #EFEFEF
+//       background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#dddddd))
+//       background: -moz-linear-gradient(top, whitesmoke, #dddddd)
+//     &.even td.active, &.odd td.active
+//       background-color: transparent
+//   td
+//     border: 1px solid #C1C1C1
 
-// .forum-table .sticky-label {
-//   font-weight: bold;
-// }
+// // Reset to avoid bleed-thru from theme
 
-// /*** FORUM STATISTICS *********************************************************/
+// // Rows on both tables
 
-// #forum-statistics {
-//   border: 1px solid #C1C1C1;
-// }
+// // Active column on both tables - reset to prevent bleed thru from theme
 
-// #forum-statistics-header {
-//   border-top: 1px solid #C1C1C1;
-//   background: #DDDDDD;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#DDDDDD));
-//   background: -moz-linear-gradient(top, #EFEFEF, #DDDDDD);
-//   color: #333333;
-//   font-weight: bold;
-// }
+// // Individual cells on both tables
 
-// .forum-statistics-sub-header {
-//   border-top: 1px solid #C1C1C1;
-//   border-bottom: 1px solid #C1C1C1;
-//   font-weight: bold;
-// }
+// // Placeholder when there are no topics in the list
 
-// .forum-statistics-sub-body {
-//   background-color: #F5F5F5;
-// }
+// .view-advanced-forum-topic-list .view-empty
+//   border: 3px solid #C1C1C1
 
-// /*** FORUM TOPICS **********************************************************/
+// // Sticky topics **
 
-// div.forum-post {
-//   border: 1px solid #C1C1C1;
-// }
+// .forum-table
+//   tr.forum-last-sticky
+//     border-bottom: 10px solid #C1C1C1
+//   .sticky-label
+//     font-weight: bold
 
-// /* Header at the top of each post */
-// .forum-post-info {
-//   border-top: 1px solid #FAFAFA;
-//   background: #DDDDDD;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#DDDDDD));
-//   background: -moz-linear-gradient(top, #EFEFEF, #DDDDDD);
-//   color: #333333;
-//   font-weight: bold;
-//   border-bottom: 1px solid #C1C1C1;
-// }
+// // FORUM STATISTICS ********************************************************
 
-// .forum-posted-on {
-//   font-weight: bold;
-// }
+// #forum-statistics
+//   border: 1px solid #C1C1C1
 
-// .forum-post-number a {
-//   color: #333333 !important;
-// }
+// #forum-statistics-header
+//   border-top: 1px solid #C1C1C1
+//   background: #DDDDDD
+//   background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dddddd))
+//   background: -moz-linear-gradient(top, #efefef, #dddddd)
+//   color: #333333
+//   font-weight: bold
 
-// /* Wrapper around author pane and content */
-// .forum-post-wrapper {
-//   background-color: #F5F5F5;
-// }
+// .forum-statistics-sub-header
+//   border-top: 1px solid #C1C1C1
+//   border-bottom: 1px solid #C1C1C1
+//   font-weight: bold
 
-// /* Author information pane */
-// .forum-post-panel-sub .author-pane .author-name {
-//   font-weight: bold;
-// }
+// .forum-statistics-sub-body
+//   background-color: #F5F5F5
 
-// .forum-post-panel-sub .author-pane .picture img {
-//   border: 1px solid #C1C1C1;
-//   background-color: #FFFFFF;
-// }
+// // FORUM TOPICS *********************************************************
 
-// .forum-post-panel-sub .author-pane .author-pane-label {
-//   font-weight: bold;
-// }
+// div.forum-post
+//   border: 1px solid #C1C1C1
 
-// /* Post text area */
-// .forum-post-panel-main {
-//   border-left: 1px solid #C1C1C1;
-//   background-color: #FAFAFA;
-// }
+// // Header at the top of each post
 
-// .forum-post-title {
-//   font-weight: bold;
-//   border-bottom: 1px solid #C1C1C1;
-// }
+// .forum-post-info
+//   border-top: 1px solid #FAFAFA
+//   background: #DDDDDD
+//   background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dddddd))
+//   background: -moz-linear-gradient(top, #efefef, #dddddd)
+//   color: #333333
+//   font-weight: bold
+//   border-bottom: 1px solid #C1C1C1
 
-// /* Signature */
-// .author-signature {
-//   font-size: .8em;
-// }
+// .forum-posted-on
+//   font-weight: bold
 
-// /* Post footer */
-// .forum-post-footer {
-//   border-top: 1px solid #C1C1C1;
-// }
+// .forum-post-number a
+//   color: #333333 !important
 
-// .forum-jump-links {
-//   border-right: none;
-// }
+// // Wrapper around author pane and content
 
-// /* Box under top post before first reply */
-// .forum-top-post-footer {
-//   border: 1px solid #C1C1C1;
-//   background: #DDDDDD;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#DDDDDD));
-//   background: -moz-linear-gradient(top, #F5F5F5, #DDDDDD);
-// }
+// .forum-post-wrapper
+//   background-color: #F5F5F5
 
-// /* Topic navigation */
-// .forum-topic-navigation {
-//   border: 1px solid #C1C1C1;
-//   background: #DDDDDD;
-//   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#DDDDDD));
-//   background: -moz-linear-gradient(top, #F5F5F5, #DDDDDD);
-// }
+// // Author information pane
+
+// .forum-post-panel-sub .author-pane
+//   .author-name
+//     font-weight: bold
+//   .picture img
+//     border: 1px solid #C1C1C1
+//     background-color: #FFFFFF
+//   .author-pane-label
+//     font-weight: bold
+
+// // Post text area
+
+// .forum-post-panel-main
+//   border-left: 1px solid #C1C1C1
+//   background-color: #FAFAFA
+
+// .forum-post-title
+//   font-weight: bold
+//   border-bottom: 1px solid #C1C1C1
+
+// // Signature
+
+// .author-signature
+//   font-size: .8em
+
+// // Post footer
+
+// .forum-post-footer
+//   border-top: 1px solid #C1C1C1
+
+// .forum-jump-links
+//   border-right: none
+
+// // Box under top post before first reply
+
+// .forum-top-post-footer
+//   border: 1px solid #C1C1C1
+//   background: #DDDDDD
+//   background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#dddddd))
+//   background: -moz-linear-gradient(top, whitesmoke, #dddddd)
+
+// // Topic navigation
+
+// .forum-topic-navigation
+//   border: 1px solid #C1C1C1
+//   background: #DDDDDD
+//   background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#dddddd))
+//   background: -moz-linear-gradient(top, whitesmoke, #dddddd)
