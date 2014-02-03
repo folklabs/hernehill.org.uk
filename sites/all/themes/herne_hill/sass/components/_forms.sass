@@ -77,12 +77,13 @@ form
   input[type="password"],
   textarea,
   #tinymce
-    padding: 0.2em 5px 0.25em 5px
+    padding-left: 5px
+    padding-right: 5px
     border-radius: 3px
     border: solid 1px white
     font-family: $lato
     font-weight: 300
-    font-size: 1 * $base-font-size
+    // font-size: 1 * $base-font-size
     color: $col-content-darkest
     box-shadow: none
     @include gradient-vertical(lighten($col-page, 7%), lighten($col-page, 3%))
@@ -200,12 +201,9 @@ form
     width: 100%
     max-width: 100%
     clear: both
+    min-width: 280px
 
 
-// Still needs fixing because now it doesn't move when you click and type in a field
-// Form field
-html.js input.form-autocomplete
-  background-position: 95% -50%
 
 // Wrapper for a form element (or group of form elements) and its label
 .form-item
