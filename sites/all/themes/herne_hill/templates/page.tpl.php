@@ -50,7 +50,7 @@
 
       <div class="socialmedia">
         <a href="https://www.facebook.com/pages/Herne-Hill-Forum/455633790432"><i class="fa fa-facebook-square fa-2x"></i></a>
-        <a href="http://www.twitter.com/hernehillforum"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="http://www.twitter.com/hernehillforum"><i class="fa fa-twitter-square fa-2x"></i></a>
       </div>
     </div>
       <?php if ($search_form): ?>
