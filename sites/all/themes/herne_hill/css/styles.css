@@ -1653,16 +1653,132 @@ tr.selected td {
 #panels-ipe-regionid-sidebar .field-name-group-group .field-label,
 #panels-ipe-regionid-sidebar .pane-node-field-ol-group-coordinators .field-label,
 #panels-ipe-regionid-sidebar .pane-node-field-ol-address .field-label {
-  color: #77666d;
   font-family: "Lato";
-  font-size: 1em;
-  line-height: 1em;
-  padding: 0.5em 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #77666d;
+  line-height: 16px;
+  padding: 0.25em 0 0 0;
 }
-/* line 19, ../sass/components/_details.sass */
+/* line 15, ../sass/components/_details.sass */
 #panels-ipe-regionid-sidebar .pane-og-members-panel-pane-1 {
   background: #e3dcd1;
   margin: 2.5em 0 1em 0;
+}
+
+/* line 29, ../sass/components/_details.sass */
+.pane-node-field-ol-address,
+.pane-node-field-ol-business-telephone,
+.pane-node-field-ol-business-email,
+.pane-node-field-ol-business-website,
+.pane-node-field-ol-business-twitter,
+.pane-node-field-ol-business-opening-hours {
+  background-color: #e3dcd1;
+  border-bottom: solid 1px #f4eee0;
+  border-bottom: solid 1px #f4eee0;
+}
+/* line 38, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-label,
+.pane-node-field-ol-business-telephone .field-label,
+.pane-node-field-ol-business-email .field-label,
+.pane-node-field-ol-business-website .field-label,
+.pane-node-field-ol-business-twitter .field-label,
+.pane-node-field-ol-business-opening-hours .field-label {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  color: #77666d;
+  line-height: 16px;
+  padding: 0.25em 0 0 0;
+  padding: 0.75em 5px 0.25em 5px;
+}
+/* line 42, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-label-inline .field-item,
+.pane-node-field-ol-address .field-label-inline .field-item a,
+.pane-node-field-ol-business-telephone .field-label-inline .field-item,
+.pane-node-field-ol-business-telephone .field-label-inline .field-item a,
+.pane-node-field-ol-business-email .field-label-inline .field-item,
+.pane-node-field-ol-business-email .field-label-inline .field-item a,
+.pane-node-field-ol-business-website .field-label-inline .field-item,
+.pane-node-field-ol-business-website .field-label-inline .field-item a,
+.pane-node-field-ol-business-twitter .field-label-inline .field-item,
+.pane-node-field-ol-business-twitter .field-label-inline .field-item a,
+.pane-node-field-ol-business-opening-hours .field-label-inline .field-item,
+.pane-node-field-ol-business-opening-hours .field-label-inline .field-item a {
+  padding-top: 0.5em;
+}
+/* line 46, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-item,
+.pane-node-field-ol-business-telephone .field-item,
+.pane-node-field-ol-business-email .field-item,
+.pane-node-field-ol-business-website .field-item,
+.pane-node-field-ol-business-twitter .field-item,
+.pane-node-field-ol-business-opening-hours .field-item {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  color: #77666d;
+  line-height: 16px;
+  padding: 0.25em 0 0 0;
+  color: #4d3d44;
+  padding: 0em 5px 1em 5px;
+  line-height: 24px;
+}
+/* line 51, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-item a,
+.pane-node-field-ol-business-telephone .field-item a,
+.pane-node-field-ol-business-email .field-item a,
+.pane-node-field-ol-business-website .field-item a,
+.pane-node-field-ol-business-twitter .field-item a,
+.pane-node-field-ol-business-opening-hours .field-item a {
+  background-color: transparent;
+}
+/* line 53, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-item a:link, .pane-node-field-ol-address .field-item a:visited,
+.pane-node-field-ol-business-telephone .field-item a:link,
+.pane-node-field-ol-business-telephone .field-item a:visited,
+.pane-node-field-ol-business-email .field-item a:link,
+.pane-node-field-ol-business-email .field-item a:visited,
+.pane-node-field-ol-business-website .field-item a:link,
+.pane-node-field-ol-business-website .field-item a:visited,
+.pane-node-field-ol-business-twitter .field-item a:link,
+.pane-node-field-ol-business-twitter .field-item a:visited,
+.pane-node-field-ol-business-opening-hours .field-item a:link,
+.pane-node-field-ol-business-opening-hours .field-item a:visited {
+  color: #20806a;
+}
+/* line 56, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-item a:hover,
+.pane-node-field-ol-business-telephone .field-item a:hover,
+.pane-node-field-ol-business-email .field-item a:hover,
+.pane-node-field-ol-business-website .field-item a:hover,
+.pane-node-field-ol-business-twitter .field-item a:hover,
+.pane-node-field-ol-business-opening-hours .field-item a:hover {
+  color: #144c3f;
+}
+/* line 58, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-item a:active,
+.pane-node-field-ol-business-telephone .field-item a:active,
+.pane-node-field-ol-business-email .field-item a:active,
+.pane-node-field-ol-business-website .field-item a:active,
+.pane-node-field-ol-business-twitter .field-item a:active,
+.pane-node-field-ol-business-opening-hours .field-item a:active {
+  color: #e2e3d7;
+}
+/* line 60, ../sass/components/_details.sass */
+.pane-node-field-ol-address .field-item .field-label,
+.pane-node-field-ol-address .field-item .field-item,
+.pane-node-field-ol-business-telephone .field-item .field-label,
+.pane-node-field-ol-business-telephone .field-item .field-item,
+.pane-node-field-ol-business-email .field-item .field-label,
+.pane-node-field-ol-business-email .field-item .field-item,
+.pane-node-field-ol-business-website .field-item .field-label,
+.pane-node-field-ol-business-website .field-item .field-item,
+.pane-node-field-ol-business-twitter .field-item .field-label,
+.pane-node-field-ol-business-twitter .field-item .field-item,
+.pane-node-field-ol-business-opening-hours .field-item .field-label,
+.pane-node-field-ol-business-opening-hours .field-item .field-item {
+  padding: 1em 0 0 0;
 }
 
 /* line 7, ../sass/components/_footer.sass */
@@ -2768,16 +2884,19 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
 }
 
 /* line 32, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags,
 .field-name-field-ol-tags {
   margin-bottom: 1em;
   font-size: 0.9em;
 }
-/* line 35, ../sass/components/_nav-tags.sass */
+/* line 36, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags .field-item,
 .field-name-field-ol-tags .field-item {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 38, ../sass/components/_nav-tags.sass */
+/* line 39, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags .field-item a,
 .field-name-field-ol-tags .field-item a {
   background-color: #e2e3d7;
   color: #20806a;
@@ -2785,13 +2904,13 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   padding: 0.25em 4px 0.25em 4px;
 }
 
-/* line 44, ../sass/components/_nav-tags.sass */
+/* line 45, ../sass/components/_nav-tags.sass */
 .pane-node-links {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
 
-/* line 53, ../sass/components/_nav-tags.sass */
+/* line 54, ../sass/components/_nav-tags.sass */
 .service-links-facebook a,
 .service-links-twitter a,
 .service-links-google-plus a,
@@ -3384,6 +3503,37 @@ h2.node-title a:active {
     display: none;
   }
 }
+/* line 6, ../sass/components/_promo.sass */
+.pane-node-field-ol-business-promotions {
+  background-color: #c09ba2;
+}
+/* line 8, ../sass/components/_promo.sass */
+.pane-node-field-ol-business-promotions .field-label {
+  padding: 0.5em 5px;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  font-style: normal;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #f4eee0;
+}
+/* line 18, ../sass/components/_promo.sass */
+.pane-node-field-ol-business-promotions .field-item {
+  padding: 0em 5px 1em 5px;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 18px;
+  color: #f4eee0;
+}
+/* line 26, ../sass/components/_promo.sass */
+.pane-node-field-ol-business-promotions h2 {
+  color: #f4eee0;
+}
+
 /* line 17, ../sass/components/_view-list.sass */
 .pane-openlocal-event-panel-pane-2 {
   border-top: 1px #b19fa7 solid;
