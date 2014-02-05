@@ -11,255 +11,52 @@
     margin: 0 0 1px 0
     padding: 0.5 * $base-font-size 5px
     .field-label
-      color: $col-content
-      font-family: $lato
-      font-size: 1em
-      line-height: 1em
-      padding: 0.5em 0
+      @include typography-grid-list-heading
   .pane-og-members-panel-pane-1
     background: $col-content-lightest
     margin: 2.5em 0 1em 0
-  
 
-// Component description
-//.ol-panel-details-venue,
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
 
-// Component description
-//.ol-panel-details-group,
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
 
-// Component description
-//.ol-panel-details-event
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
 
-// Component description
-//.ol-panel-details-event-map,
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
 
-// Component description
-//.ol-panel-details-event-invites,
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
 
-// Component description
-//.ol-panel-details-event-venue,
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
 
-// Component description
-//.ol-panel-details-services,
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
 
-// Component description
-//.ol-panel-details-services-map,
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
+// SERVICE NODE PAGE SIDE BAR DETAILS REGION
 
-// Component description
-//.ol-panel-details-services-times
-  // Positioning
-    // position:
-    // z-index:
-    // top:
-    // right:
-    // Display & Box Model
-  // display:
-    // overflow:
-    // box-sizing:
-    // width:
-    // height:
-    // padding:
-    // border:
-    // margin:
-  // Color
-    // background:
-    // color:
-  // Text
-    // font-family:
-    // font-size:
-    // line-height:
-    // text-align:
-  // Other
-    // cursor:
+// Field labels for all except map panel
+.pane-node-field-ol-address,
+.pane-node-field-ol-business-telephone,
+.pane-node-field-ol-business-email,
+.pane-node-field-ol-business-website,
+.pane-node-field-ol-business-twitter,
+.pane-node-field-ol-business-opening-hours,
+  background-color: $col-content-lightest
+  border-bottom: solid 1px $col-page
+  border-bottom: solid 1px $col-page
+  .field-label
+    @include typography-grid-list-heading
+    padding: 0.75em 5px 0.25em 5px
+
+  .field-label-inline .field-item,
+  .field-label-inline .field-item a
+    padding-top: 0.5em
+
+  .field-item
+    @include typography-grid-list-heading
+    color: $col-content-darker
+    padding: 0em 5px 1em 5px
+    line-height: 1.5 * $base-font-size
+    a
+      background-color: transparent
+      &:link,
+      &:visited
+        color: $col-links
+      &:hover
+        color: $col-links-darker
+      &:active
+        color: $col-links-lightest
+    .field-label,
+    .field-item
+      padding: 1em 0 0 0
