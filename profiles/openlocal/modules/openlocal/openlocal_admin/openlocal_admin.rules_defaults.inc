@@ -9,6 +9,23 @@
  */
 function openlocal_admin_default_rules_configuration() {
   $items = array();
+  $items['rules_ol_admin_email_reported_abuse'] = entity_import('rules_config', '{ "rules_ol_admin_email_reported_abuse" : {
+      "LABEL" : "OL Admin: Email reported abuse",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "openlocal" ],
+      "REQUIRES" : [ "rules", "flag" ],
+      "ON" : { "flag_flagged_ol_report_abuse" : [] },
+      "DO" : [
+        { "mail_to_users_of_role" : {
+            "roles" : { "value" : { "4" : "4" } },
+            "subject" : "[[site:name]]: Abusive content reported: [flagged-node:title]",
+            "message" : "See [flagged-node:url]."
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_ol_email_admin_for_user_registration'] = entity_import('rules_config', '{ "rules_ol_email_admin_for_user_registration" : {
       "LABEL" : "Email admin for user registration",
       "PLUGIN" : "reaction rule",
