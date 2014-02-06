@@ -112,6 +112,7 @@ function openlocal_event_field_default_field_bases() {
         'second' => 0,
         'year' => 'year',
       ),
+      'profile2_private' => FALSE,
       'repeat' => 1,
       'timezone_db' => 'UTC',
       'todate' => 'optional',

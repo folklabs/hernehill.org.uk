@@ -2,60 +2,34 @@
 // ----------------------------------------------------------------------------
 // TAGS
 
-// Tags
-//.ol-nav-tags
-  // Positioning
-  // position:
-  // z-index:
-  // top:
-  // right:
-  // Display & Box Model
-// display:
-  // overflow:
-  // box-sizing:
-  // width:
-  // height:
-  // padding:
-  // border:
-  // margin:
-// Color
-  // background:
-  // color:
-// Text
-  // font-family:
-  // font-size:
-  // line-height:
-  // text-align:
-// Other
-  // cursor:
 
+// All instances of tags
 .pane-node-field-ol-business-tags,
 .field-name-field-ol-tags
   margin-bottom: 1em
-  font-size: 0.9em
+  .field-label
+    @include typography-grid-list-heading
   .field-item
     display: inline-block
-    margin-right: 10px
+    margin: 0.5em 10px 0.5em 0
     a
+      font-family: $lato
+      font-size: 1em
       &:link,
       &:visited
-      background-color: $col-links-lightest
-      color: $col-links
-      border-radius: 0.25 * $base-font-size
-      padding: 0.25em 4px 0.25em 4px
+        padding: 0.25em 10px
+        background-color: $col-links-lightest
+        border: solid 1px $col-links-lighter
+        border-radius: 9999px
+        color: $col-links
       &:hover
+        @include glow-inner($col-links-lighter, 10)
+        color: $col-links-darker
+        border: solid 1px $col-links
       &:active
+        @include glow-inner($col-links-darker, 10)
+        border: solid 1px $col-links-lighter
+        background-color: $col-links
+        color: $col-page
 
-.pane-node-links
-  margin-top: 1.5em
-  margin-bottom: 1em
-
-.service-links-facebook,
-.service-links-twitter,
-.service-links-google-plus,
-.forward_link
-
-  a
-    +input-button-style
-    padding: 5px 10px
 

@@ -634,19 +634,42 @@ div#panels-ipe-control-container {
     margin-right: -100%;
   }
 }
-/* line 16, ../sass/components/_grid-list.sass */
-.ol-item-grid .views-row {
+/* line 17, ../sass/components/_grid-list.sass */
+.page-frontpage .ol-item-grid .views-row,
+.page-news .ol-item-grid .views-row {
   width: 100%;
   max-width: 580px;
 }
 
-/* line 37, ../sass/components/_grid-list.sass */
+/* line 25, ../sass/components/_grid-list.sass */
+.page-groups .ol-item-grid .views-row,
+.page-services .ol-item-grid .views-row,
+.section-groups .ol-item-grid .views-row {
+  height: auto;
+  float: left;
+  width: 100%;
+  max-width: 280px;
+}
+/* line 33, ../sass/components/_grid-list.sass */
+.page-groups .ol-item-grid .views-row-odd,
+.page-services .ol-item-grid .views-row-odd,
+.section-groups .ol-item-grid .views-row-odd {
+  margin-right: 10px;
+}
+/* line 35, ../sass/components/_grid-list.sass */
+.page-groups .ol-item-grid .views-row-even,
+.page-services .ol-item-grid .views-row-even,
+.section-groups .ol-item-grid .views-row-even {
+  margin-left: 10px;
+}
+
+/* line 47, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   background-color: #e3dcd1;
   margin-bottom: 1em;
 }
-/* line 41, ../sass/components/_grid-list.sass */
+/* line 51, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-title,
 .view-id-openlocal_group .views-row .views-field-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -656,33 +679,33 @@ div#panels-ipe-control-container {
   height: 2.5em;
   padding: 1.5em 0 0.5em 0;
 }
-/* line 96, ../sass/_mixins.sass */
+/* line 97, ../sass/_mixins.sass */
 .view-id-openlocal_business .views-row .views-field-title a:link,
 .view-id-openlocal_group .views-row .views-field-title a:link {
   color: #20806a;
 }
-/* line 98, ../sass/_mixins.sass */
+/* line 99, ../sass/_mixins.sass */
 .view-id-openlocal_business .views-row .views-field-title a:visited,
 .view-id-openlocal_group .views-row .views-field-title a:visited {
   color: #20806a;
 }
-/* line 100, ../sass/_mixins.sass */
+/* line 101, ../sass/_mixins.sass */
 .view-id-openlocal_business .views-row .views-field-title a:hover,
 .view-id-openlocal_group .views-row .views-field-title a:hover {
   color: #144c3f;
   background-color: transparent;
 }
-/* line 103, ../sass/_mixins.sass */
+/* line 104, ../sass/_mixins.sass */
 .view-id-openlocal_business .views-row .views-field-title a:active,
 .view-id-openlocal_group .views-row .views-field-title a:active {
   color: #98b9b1;
 }
-/* line 52, ../sass/components/_grid-list.sass */
+/* line 62, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-body,
 .view-id-openlocal_group .views-row .views-field-body {
   height: 5.5em;
 }
-/* line 55, ../sass/components/_grid-list.sass */
+/* line 65, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-body .field-content,
 .view-id-openlocal_group .views-row .views-field-body .field-content {
   display: block;
@@ -694,13 +717,13 @@ div#panels-ipe-control-container {
   display: block;
   padding: 0.5em 5px;
 }
-/* line 60, ../sass/components/_grid-list.sass */
+/* line 70, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-created,
 .view-id-openlocal_group .views-row .views-field-created {
   border-top: solid 1px #f4eee0;
   height: 2em;
 }
-/* line 64, ../sass/components/_grid-list.sass */
+/* line 74, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-created .field-content,
 .view-id-openlocal_group .views-row .views-field-created .field-content {
   font-family: "Lato";
@@ -710,7 +733,7 @@ div#panels-ipe-control-container {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 74, ../sass/components/_grid-list.sass */
+/* line 84, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category,
@@ -719,25 +742,25 @@ div#panels-ipe-control-container {
   height: 32px;
   padding: 5px;
 }
-/* line 81, ../sass/components/_grid-list.sass */
+/* line 91, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_business .views-row .views-field-field-ol-group-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-business-category a,
 .view-id-openlocal_group .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
-/* line 94, ../sass/components/_grid-list.sass */
+/* line 104, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business .views-row,
 .view-id-openlocal_group .views-row {
   height: 230px;
 }
 
-/* line 37, ../sass/components/_grid-list.sass */
+/* line 47, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row {
   background-color: #e3dcd1;
   margin-bottom: 1em;
 }
-/* line 41, ../sass/components/_grid-list.sass */
+/* line 51, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 1em;
@@ -746,28 +769,28 @@ div#panels-ipe-control-container {
   height: 2.5em;
   padding: 1.5em 0 0.5em 0;
 }
-/* line 96, ../sass/_mixins.sass */
+/* line 97, ../sass/_mixins.sass */
 .view-display-id-list_news_articles .views-row .views-field-title a:link {
   color: #20806a;
 }
-/* line 98, ../sass/_mixins.sass */
+/* line 99, ../sass/_mixins.sass */
 .view-display-id-list_news_articles .views-row .views-field-title a:visited {
   color: #20806a;
 }
-/* line 100, ../sass/_mixins.sass */
+/* line 101, ../sass/_mixins.sass */
 .view-display-id-list_news_articles .views-row .views-field-title a:hover {
   color: #144c3f;
   background-color: transparent;
 }
-/* line 103, ../sass/_mixins.sass */
+/* line 104, ../sass/_mixins.sass */
 .view-display-id-list_news_articles .views-row .views-field-title a:active {
   color: #98b9b1;
 }
-/* line 52, ../sass/components/_grid-list.sass */
+/* line 62, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-body {
   height: 5.5em;
 }
-/* line 55, ../sass/components/_grid-list.sass */
+/* line 65, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-body .field-content {
   display: block;
   font-family: "Lato";
@@ -778,12 +801,12 @@ div#panels-ipe-control-container {
   display: block;
   padding: 0.5em 5px;
 }
-/* line 60, ../sass/components/_grid-list.sass */
+/* line 70, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-created {
   border-top: solid 1px #f4eee0;
   height: 2em;
 }
-/* line 64, ../sass/components/_grid-list.sass */
+/* line 74, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-created .field-content {
   font-family: "Lato";
   font-size: 14px;
@@ -792,34 +815,34 @@ div#panels-ipe-control-container {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 74, ../sass/components/_grid-list.sass */
+/* line 84, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category {
   font-weight: 900;
   height: 32px;
   padding: 5px;
 }
-/* line 81, ../sass/components/_grid-list.sass */
+/* line 91, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row .views-field-field-ol-business-category a,
 .view-display-id-list_news_articles .views-row .views-field-field-ol-group-category a {
   vertical-align: bottom;
 }
-/* line 100, ../sass/components/_grid-list.sass */
+/* line 110, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-row {
   height: auto;
 }
-/* line 102, ../sass/components/_grid-list.sass */
+/* line 112, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .links {
   float: right;
 }
-/* line 104, ../sass/components/_grid-list.sass */
+/* line 114, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .listing-image {
   float: left;
   margin-right: 10px;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 114, ../sass/components/_grid-list.sass */
+  /* line 124, ../sass/components/_grid-list.sass */
   .view-id-openlocal_business .views-row,
   .view-id-openlocal_group .views-row,
   .view-display-id-list_news_articles .views-row {
@@ -827,7 +850,7 @@ div#panels-ipe-control-container {
     float: none;
   }
 }
-/* line 120, ../sass/components/_grid-list.sass */
+/* line 130, ../sass/components/_grid-list.sass */
 .views-field-field-featured-image img .panopoly-image-quarter {
   float: right;
   max-width: 100%;
@@ -955,19 +978,6 @@ div#panels-ipe-control-container {
 /* line 167, ../sass/components/_misc.sass */
 #secondary-menu li a:active {
   background-color: #144c3f;
-  color: white;
-}
-
-/* line 182, ../sass/components/_misc.sass */
-.socialmedia a {
-  color: #20806a;
-}
-/* line 184, ../sass/components/_misc.sass */
-.socialmedia a:hover {
-  color: #144c3f;
-}
-/* line 186, ../sass/components/_misc.sass */
-.socialmedia a:active {
   color: white;
 }
 
@@ -1158,6 +1168,45 @@ html.js #user-login-form li.openid-link,
 }
 /* line 64, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row a:active {
+  color: white;
+  background-color: #20806a;
+}
+
+/* line 79, ../sass/components/_nav-menu.sass */
+ul.menu {
+  margin-bottom: 0.5em;
+}
+/* line 81, ../sass/components/_nav-menu.sass */
+ul.menu .menu__item li {
+  border-bottom: 1px #e3dcd1 solid;
+}
+/* line 84, ../sass/components/_nav-menu.sass */
+ul.menu .menu__item li .views-field a.is-active-trail {
+  background-color: #e2e3d7;
+  color: #144c3f;
+}
+/* line 88, ../sass/components/_nav-menu.sass */
+ul.menu .menu__item li a {
+  padding: 3.5% 5% 1.5% 5%;
+}
+/* line 90, ../sass/components/_nav-menu.sass */
+ul.menu .menu__item li a:link, ul.menu .menu__item li a:visited {
+  display: block;
+  height: 2em;
+  width: 90%;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 400;
+  text-decoration: none;
+  color: #20806a;
+}
+/* line 100, ../sass/components/_nav-menu.sass */
+ul.menu .menu__item li a:hover {
+  background-color: #e2e3d7;
+  color: #0d332a;
+}
+/* line 103, ../sass/components/_nav-menu.sass */
+ul.menu .menu__item li a:active {
   color: white;
   background-color: #20806a;
 }
@@ -1655,39 +1704,190 @@ tr.selected td {
 
 /* line 7, ../sass/components/_carousel.sass */
 .pane-openlocal-highlight-panel-pane-1 {
-  background-color: red;
-  height: 27em;
+  position: relative;
+  height: auto;
+  background-color: #e3dcd1;
   max-width: 580px;
   margin-bottom: 1em;
 }
+/* line 10, ../sass/components/_carousel.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-field-featured-image {
+  height: 21em;
+}
+/* line 15, ../sass/components/_carousel.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title {
+  padding: 0.25em 5px 0.75em 5px;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 32px;
+  color: #144c3f;
+  clear: both;
+}
+/* line 181, ../sass/_mixins.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title a {
+  background-color: transparent;
+}
+/* line 183, ../sass/_mixins.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title a:link, .pane-openlocal-highlight-panel-pane-1 .views-field-title a:visited {
+  color: #20806a;
+}
+/* line 186, ../sass/_mixins.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title a:hover {
+  color: #144c3f;
+}
+/* line 188, ../sass/_mixins.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title a:active {
+  color: #98b9b1;
+}
+/* line 20, ../sass/components/_carousel.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title a:link {
+  background: transparent;
+}
+/* line 22, ../sass/components/_carousel.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title a:visited {
+  color: #20806a;
+}
+/* line 24, ../sass/components/_carousel.sass */
+.pane-openlocal-highlight-panel-pane-1 .views-field-title a:hover {
+  color: #144c3f;
+}
+/* line 28, ../sass/components/_carousel.sass */
+.pane-openlocal-highlight-panel-pane-1 .views_slideshow_slide_counter {
+  display: block;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1em;
+  color: #77666d;
+  display: block;
+  display: block;
+  padding: 0.25em 5px;
+  background-color: rgba(177, 159, 167, 0.5);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+}
 
-/* line 15, ../sass/components/_comments.sass */
+/* line 6, ../sass/components/_comments.sass */
+.pane-node-comment-form {
+  background-color: #e3dcd1;
+}
+/* line 8, ../sass/components/_comments.sass */
+.pane-node-comment-form .comment-form {
+  padding: 0 5px 0.5em 5px;
+}
+/* line 10, ../sass/components/_comments.sass */
+.pane-node-comment-form .comment-form .format-toggle {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 23, ../sass/components/_comments.sass */
 .comments {
   margin: 1.5em 0;
 }
 
-/* line 19, ../sass/components/_comments.sass */
+/* line 27, ../sass/components/_comments.sass */
 .comment-preview {
   background-color: #ffffea;
 }
 
-/* line 26, ../sass/components/_comments.sass */
+/* line 34, ../sass/components/_comments.sass */
 .comment .permalink {
-  text-transform: uppercase;
-  font-size: 75%;
+  font-size: 1em;
 }
 
-/* line 31, ../sass/components/_comments.sass */
+/* line 39, ../sass/components/_comments.sass */
 .indented {
   margin-left: 1.5em;
 }
 
-/* line 48, ../sass/components/_comments.sass */
+/* line 56, ../sass/components/_comments.sass */
 .comment-form div {
   color: #77666d;
   font-family: "Lato";
   font-size: 1em;
   line-height: 2em;
+}
+
+/* line 74, ../sass/components/_comments.sass */
+div.form-item-notify {
+  margin: 0;
+}
+
+/* line 76, ../sass/components/_comments.sass */
+.form-radios {
+  margin: 1em 0 1em 1em;
+}
+
+/* line 15, ../sass/components/_controls.sass */
+.pane-node-links {
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+}
+
+/* line 19, ../sass/components/_controls.sass */
+.service-links-facebook,
+.service-links-twitter,
+.service-links-google-plus,
+.forward_link {
+  padding-right: 0;
+}
+/* line 26, ../sass/components/_controls.sass */
+.service-links-facebook a,
+.service-links-twitter a,
+.service-links-google-plus a,
+.forward_link a {
+  display: inline-block;
+  line-height: 1.25em;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e3dcd1), color-stop(1, #f4eee0));
+  background-image: -o-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -moz-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: linear-gradient(to top, #e3dcd1 0%, #f4eee0 100%);
+  border-radius: 0.25em;
+  border: solid 1px #b19fa7;
+  box-shadow: none;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 1em;
+  margin-right: 10px;
+  padding: 5px 10px;
+  margin: 0.5em 0;
+}
+/* line 208, ../sass/_mixins.sass */
+.service-links-facebook a:hover,
+.service-links-twitter a:hover,
+.service-links-google-plus a:hover,
+.forward_link a:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, white));
+  background-image: -o-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: -moz-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: -webkit-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: -ms-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: linear-gradient(to top, #f4eee0 0%, #ffffff 100%);
+  border: solid 1px #77666d;
+  color: #77666d;
+}
+/* line 212, ../sass/_mixins.sass */
+.service-links-facebook a:active,
+.service-links-twitter a:active,
+.service-links-google-plus a:active,
+.forward_link a:active {
+  -moz-box-shadow: inset 0 0 10px #b19fa7;
+  -webkit-box-shadow: inset 0 0 10px #b19fa7;
+  box-shadow: inset 0 0 10px #b19fa7;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, #e3dcd1));
+  background-image: -o-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: -moz-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: -webkit-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: -ms-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: linear-gradient(to top, #f4eee0 0%, #e3dcd1 100%);
+  border: solid 1px white;
+  color: #2f2127;
 }
 
 /* line 7, ../sass/components/_details.sass */
@@ -1957,8 +2157,9 @@ form #node-edit .image-widget .form-submit {
   font-family: "Lato";
   font-weight: 400;
   font-size: 1em;
+  margin-right: 10px;
 }
-/* line 194, ../sass/_mixins.sass */
+/* line 208, ../sass/_mixins.sass */
 form input[type="submit"]:hover,
 form #node-edit .form-actions input:hover,
 form #node-edit .image-widget .form-submit:hover {
@@ -1971,7 +2172,7 @@ form #node-edit .image-widget .form-submit:hover {
   border: solid 1px #77666d;
   color: #77666d;
 }
-/* line 198, ../sass/_mixins.sass */
+/* line 212, ../sass/_mixins.sass */
 form input[type="submit"]:active,
 form #node-edit .form-actions input:active,
 form #node-edit .image-widget .form-submit:active {
@@ -2005,7 +2206,7 @@ form #node-edit .form-actions input[id="edit-submit"] {
   font-size: 1em;
   color: #f4eee0;
 }
-/* line 215, ../sass/_mixins.sass */
+/* line 229, ../sass/_mixins.sass */
 form #node-edit .form-actions input[id="edit-submit"]:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #8ab7a5));
   background-image: -o-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
@@ -2016,7 +2217,7 @@ form #node-edit .form-actions input[id="edit-submit"]:hover {
   border: solid 1px #144c3f;
   color: white;
 }
-/* line 219, ../sass/_mixins.sass */
+/* line 233, ../sass/_mixins.sass */
 form #node-edit .form-actions input[id="edit-submit"]:active {
   -moz-box-shadow: inset 0 0 10px #144c3f;
   -webkit-box-shadow: inset 0 0 10px #144c3f;
@@ -2300,23 +2501,23 @@ a.button {
   font-size: 16px;
   line-height: 16px;
 }
-/* line 148, ../sass/_mixins.sass */
+/* line 149, ../sass/_mixins.sass */
 .forum-table-wrap table.forum-table td.forum-details .forum-name a {
   background-color: transparent;
 }
-/* line 150, ../sass/_mixins.sass */
+/* line 151, ../sass/_mixins.sass */
 .forum-table-wrap table.forum-table td.forum-details .forum-name a:link {
   color: #20806a;
 }
-/* line 152, ../sass/_mixins.sass */
+/* line 153, ../sass/_mixins.sass */
 .forum-table-wrap table.forum-table td.forum-details .forum-name a:visited {
   color: #20806a;
 }
-/* line 154, ../sass/_mixins.sass */
+/* line 155, ../sass/_mixins.sass */
 .forum-table-wrap table.forum-table td.forum-details .forum-name a:hover {
   color: #0d332a;
 }
-/* line 156, ../sass/_mixins.sass */
+/* line 157, ../sass/_mixins.sass */
 .forum-table-wrap table.forum-table td.forum-details .forum-name a:active {
   color: #e2e3d7;
 }
@@ -2503,19 +2704,6 @@ a.button {
 /* line 167, ../sass/components/_misc.sass */
 #secondary-menu li a:active {
   background-color: #144c3f;
-  color: white;
-}
-
-/* line 182, ../sass/components/_misc.sass */
-.socialmedia a {
-  color: #20806a;
-}
-/* line 184, ../sass/components/_misc.sass */
-.socialmedia a:hover {
-  color: #144c3f;
-}
-/* line 186, ../sass/components/_misc.sass */
-.socialmedia a:active {
   color: white;
 }
 
@@ -2932,83 +3120,61 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   color: white;
 }
 
-/* line 32, ../sass/components/_nav-tags.sass */
+/* line 7, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags,
 .field-name-field-ol-tags {
   margin-bottom: 1em;
-  font-size: 0.9em;
 }
-/* line 36, ../sass/components/_nav-tags.sass */
+/* line 10, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags .field-label,
+.field-name-field-ol-tags .field-label {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  color: #77666d;
+  line-height: 16px;
+  padding: 0.25em 0 0 0;
+}
+/* line 12, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags .field-item,
 .field-name-field-ol-tags .field-item {
   display: inline-block;
-  margin-right: 10px;
+  margin: 0.5em 10px 0.5em 0;
 }
-/* line 39, ../sass/components/_nav-tags.sass */
+/* line 15, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags .field-item a,
 .field-name-field-ol-tags .field-item a {
-  background-color: #e2e3d7;
-  color: #20806a;
-  border-radius: 4px;
-  padding: 0.25em 4px 0.25em 4px;
-}
-
-/* line 49, ../sass/components/_nav-tags.sass */
-.pane-node-links {
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-}
-
-/* line 58, ../sass/components/_nav-tags.sass */
-.service-links-facebook a,
-.service-links-twitter a,
-.service-links-google-plus a,
-.forward_link a {
-  line-height: 1.25em;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e3dcd1), color-stop(1, #f4eee0));
-  background-image: -o-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: -moz-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: linear-gradient(to top, #e3dcd1 0%, #f4eee0 100%);
-  border-radius: 0.25em;
-  border: solid 1px #b19fa7;
-  box-shadow: none;
   font-family: "Lato";
-  font-weight: 400;
   font-size: 1em;
-  padding: 5px 10px;
 }
-/* line 194, ../sass/_mixins.sass */
-.service-links-facebook a:hover,
-.service-links-twitter a:hover,
-.service-links-google-plus a:hover,
-.forward_link a:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, white));
-  background-image: -o-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: -moz-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: -webkit-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: -ms-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: linear-gradient(to top, #f4eee0 0%, #ffffff 100%);
-  border: solid 1px #77666d;
-  color: #77666d;
+/* line 18, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags .field-item a:link, .pane-node-field-ol-business-tags .field-item a:visited,
+.field-name-field-ol-tags .field-item a:link,
+.field-name-field-ol-tags .field-item a:visited {
+  padding: 0.25em 10px;
+  background-color: #e2e3d7;
+  border: solid 1px #98b9b1;
+  border-radius: 9999px;
+  color: #20806a;
 }
-/* line 198, ../sass/_mixins.sass */
-.service-links-facebook a:active,
-.service-links-twitter a:active,
-.service-links-google-plus a:active,
-.forward_link a:active {
-  -moz-box-shadow: inset 0 0 10px #b19fa7;
-  -webkit-box-shadow: inset 0 0 10px #b19fa7;
-  box-shadow: inset 0 0 10px #b19fa7;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, #e3dcd1));
-  background-image: -o-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: -moz-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: -webkit-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: -ms-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: linear-gradient(to top, #f4eee0 0%, #e3dcd1 100%);
-  border: solid 1px white;
-  color: #2f2127;
+/* line 25, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags .field-item a:hover,
+.field-name-field-ol-tags .field-item a:hover {
+  -moz-box-shadow: inset 0 0 10px #98b9b1;
+  -webkit-box-shadow: inset 0 0 10px #98b9b1;
+  box-shadow: inset 0 0 10px #98b9b1;
+  color: #144c3f;
+  border: solid 1px #20806a;
+}
+/* line 29, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags .field-item a:active,
+.field-name-field-ol-tags .field-item a:active {
+  -moz-box-shadow: inset 0 0 10px #144c3f;
+  -webkit-box-shadow: inset 0 0 10px #144c3f;
+  box-shadow: inset 0 0 10px #144c3f;
+  border: solid 1px #98b9b1;
+  background-color: #20806a;
+  color: #f4eee0;
 }
 
 /* line 17, ../sass/components/_panels.sass */
@@ -3111,20 +3277,20 @@ view-display-id-list_news_articles .views-field-title a:active {
   font-weight: 300;
   padding: 0.5em 5px;
 }
-/* line 96, ../sass/_mixins.sass */
+/* line 97, ../sass/_mixins.sass */
 .pane-openlocal-alert-panel-pane-1 .views-field-title a:link {
   color: #20806a;
 }
-/* line 98, ../sass/_mixins.sass */
+/* line 99, ../sass/_mixins.sass */
 .pane-openlocal-alert-panel-pane-1 .views-field-title a:visited {
   color: #20806a;
 }
-/* line 100, ../sass/_mixins.sass */
+/* line 101, ../sass/_mixins.sass */
 .pane-openlocal-alert-panel-pane-1 .views-field-title a:hover {
   color: #144c3f;
   background-color: transparent;
 }
-/* line 103, ../sass/_mixins.sass */
+/* line 104, ../sass/_mixins.sass */
 .pane-openlocal-alert-panel-pane-1 .views-field-title a:active {
   color: #98b9b1;
 }
@@ -3148,22 +3314,22 @@ h2.node-title {
   color: #4d3d44;
   background-color: transparent;
 }
-/* line 114, ../sass/_mixins.sass */
+/* line 116, ../sass/_mixins.sass */
 h2.pane-title a:link,
 h2.node-title a:link {
   color: #20806a;
 }
-/* line 116, ../sass/_mixins.sass */
+/* line 118, ../sass/_mixins.sass */
 h2.pane-title a:visited,
 h2.node-title a:visited {
   color: #20806a;
 }
-/* line 118, ../sass/_mixins.sass */
+/* line 120, ../sass/_mixins.sass */
 h2.pane-title a:hover,
 h2.node-title a:hover {
   color: #144c3f;
 }
-/* line 120, ../sass/_mixins.sass */
+/* line 122, ../sass/_mixins.sass */
 h2.pane-title a:active,
 h2.node-title a:active {
   color: #98b9b1;
@@ -3222,23 +3388,23 @@ h2.node-title a:active {
   line-height: 16px;
   margin: 0;
 }
-/* line 148, ../sass/_mixins.sass */
+/* line 149, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h1 a {
   background-color: transparent;
 }
-/* line 150, ../sass/_mixins.sass */
+/* line 151, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h1 a:link {
   color: #20806a;
 }
-/* line 152, ../sass/_mixins.sass */
+/* line 153, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h1 a:visited {
   color: #20806a;
 }
-/* line 154, ../sass/_mixins.sass */
+/* line 155, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h1 a:hover {
   color: #0d332a;
 }
-/* line 156, ../sass/_mixins.sass */
+/* line 157, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h1 a:active {
   color: #e2e3d7;
 }
@@ -3251,23 +3417,23 @@ h2.node-title a:active {
   border-bottom: none;
   padding: 0.25em 0;
 }
-/* line 164, ../sass/_mixins.sass */
+/* line 165, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h2 a {
   background-color: transparent;
 }
-/* line 166, ../sass/_mixins.sass */
+/* line 167, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h2 a:link {
   color: #144c3f;
 }
-/* line 168, ../sass/_mixins.sass */
+/* line 169, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h2 a:visited {
   color: #144c3f;
 }
-/* line 170, ../sass/_mixins.sass */
+/* line 171, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h2 a:hover {
   color: #144c3f;
 }
-/* line 172, ../sass/_mixins.sass */
+/* line 173, ../sass/_mixins.sass */
 .view-ol-event-upcoming-sidebar table tr td.views-field-title h2 a:active {
   color: white;
 }
@@ -3394,27 +3560,30 @@ h2.node-title a:active {
   font-size: 32px;
   font-weight: 300;
   line-height: 32px;
-  color: #144c3f;
 }
-/* line 29, ../sass/components/_panel-node.sass */
-.panopoly-news-featured .pane-node-title a:link {
-  background: transparent;
+/* line 181, ../sass/_mixins.sass */
+.panopoly-news-featured .pane-node-title a {
+  background-color: transparent;
 }
-/* line 31, ../sass/components/_panel-node.sass */
-.panopoly-news-featured .pane-node-title a:visited {
+/* line 183, ../sass/_mixins.sass */
+.panopoly-news-featured .pane-node-title a:link, .panopoly-news-featured .pane-node-title a:visited {
   color: #20806a;
 }
-/* line 33, ../sass/components/_panel-node.sass */
+/* line 186, ../sass/_mixins.sass */
 .panopoly-news-featured .pane-node-title a:hover {
   color: #144c3f;
 }
+/* line 188, ../sass/_mixins.sass */
+.panopoly-news-featured .pane-node-title a:active {
+  color: #98b9b1;
+}
 
-/* line 44, ../sass/components/_panel-node.sass */
+/* line 31, ../sass/components/_panel-node.sass */
 .pane-openlocal-news-related-news-articles,
 .view-display-id-related_news_articles {
   background-color: #e3dcd1;
 }
-/* line 48, ../sass/components/_panel-node.sass */
+/* line 35, ../sass/components/_panel-node.sass */
 .pane-openlocal-news-related-news-articles .views-field-title,
 .view-display-id-related_news_articles .views-field-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -3423,28 +3592,28 @@ h2.node-title a:active {
   font-weight: 300;
   padding: 0.5em 5px;
 }
-/* line 96, ../sass/_mixins.sass */
+/* line 97, ../sass/_mixins.sass */
 .pane-openlocal-news-related-news-articles .views-field-title a:link,
 .view-display-id-related_news_articles .views-field-title a:link {
   color: #20806a;
 }
-/* line 98, ../sass/_mixins.sass */
+/* line 99, ../sass/_mixins.sass */
 .pane-openlocal-news-related-news-articles .views-field-title a:visited,
 .view-display-id-related_news_articles .views-field-title a:visited {
   color: #20806a;
 }
-/* line 100, ../sass/_mixins.sass */
+/* line 101, ../sass/_mixins.sass */
 .pane-openlocal-news-related-news-articles .views-field-title a:hover,
 .view-display-id-related_news_articles .views-field-title a:hover {
   color: #144c3f;
   background-color: transparent;
 }
-/* line 103, ../sass/_mixins.sass */
+/* line 104, ../sass/_mixins.sass */
 .pane-openlocal-news-related-news-articles .views-field-title a:active,
 .view-display-id-related_news_articles .views-field-title a:active {
   color: #98b9b1;
 }
-/* line 51, ../sass/components/_panel-node.sass */
+/* line 38, ../sass/components/_panel-node.sass */
 .pane-openlocal-news-related-news-articles .views-field-body .field-content,
 .view-display-id-related_news_articles .views-field-body .field-content {
   display: block;
@@ -3456,7 +3625,7 @@ h2.node-title a:active {
   display: block;
   padding: 0.5em 5px;
 }
-/* line 54, ../sass/components/_panel-node.sass */
+/* line 41, ../sass/components/_panel-node.sass */
 .pane-openlocal-news-related-news-articles .ol-article-related-list-date,
 .view-display-id-related_news_articles .ol-article-related-list-date {
   font-family: "Lato";
@@ -3646,20 +3815,20 @@ h2.node-title a:active {
   line-height: 1.25em;
   font-weight: 300;
 }
-/* line 96, ../sass/_mixins.sass */
+/* line 97, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title span a a:link {
   color: #20806a;
 }
-/* line 98, ../sass/_mixins.sass */
+/* line 99, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title span a a:visited {
   color: #20806a;
 }
-/* line 100, ../sass/_mixins.sass */
+/* line 101, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title span a a:hover {
   color: #144c3f;
   background-color: transparent;
 }
-/* line 103, ../sass/_mixins.sass */
+/* line 104, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title span a a:active {
   color: #98b9b1;
 }
@@ -3680,23 +3849,23 @@ h2.node-title a:active {
   font-size: 14px;
   line-height: 14px;
 }
-/* line 164, ../sass/_mixins.sass */
+/* line 165, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title div a a {
   background-color: transparent;
 }
-/* line 166, ../sass/_mixins.sass */
+/* line 167, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title div a a:link {
   color: #144c3f;
 }
-/* line 168, ../sass/_mixins.sass */
+/* line 169, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title div a a:visited {
   color: #144c3f;
 }
-/* line 170, ../sass/_mixins.sass */
+/* line 171, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title div a a:hover {
   color: #144c3f;
 }
-/* line 172, ../sass/_mixins.sass */
+/* line 173, ../sass/_mixins.sass */
 .view-ol-event-upcoming table .ol-event-list-view-title div a a:active {
   color: white;
 }
@@ -3739,20 +3908,20 @@ h2.node-title a:active {
   line-height: 1.25em;
   font-weight: 300;
 }
-/* line 96, ../sass/_mixins.sass */
+/* line 97, ../sass/_mixins.sass */
 .view-openlocal-event-venues table .views-field-title div a a:link {
   color: #20806a;
 }
-/* line 98, ../sass/_mixins.sass */
+/* line 99, ../sass/_mixins.sass */
 .view-openlocal-event-venues table .views-field-title div a a:visited {
   color: #20806a;
 }
-/* line 100, ../sass/_mixins.sass */
+/* line 101, ../sass/_mixins.sass */
 .view-openlocal-event-venues table .views-field-title div a a:hover {
   color: #144c3f;
   background-color: transparent;
 }
-/* line 103, ../sass/_mixins.sass */
+/* line 104, ../sass/_mixins.sass */
 .view-openlocal-event-venues table .views-field-title div a a:active {
   color: #98b9b1;
 }

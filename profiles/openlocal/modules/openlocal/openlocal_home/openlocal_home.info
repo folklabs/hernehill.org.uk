@@ -19,8 +19,11 @@ features[fe_block_boxes][] = ol_home_actions
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_links][] = main-menu:frontpage
+<<<<<<< HEAD
 features[page_manager_pages][] = home
 features[variable][] = site_frontpage
 features[views_view][] = openlocal_what_s_hot
+=======
+>>>>>>> Site-wide changes to styles and Features
 features_exclude[dependencies][defaultconfig] = defaultconfig
 project path = profiles/openlocal/modules/openlocal

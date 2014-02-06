@@ -72,27 +72,34 @@
 
 
 // ----------------------------------------------------------------------------
-// NEWS ARTCILE TOPICS MENU PANEL
+// BOOK MENU
 
 
-// .pane-openlocal-news-popular-news-topics
-//   margin: 1em 0
-//   ul
-//     list-style: none
-//     margin: 0
-//     padding: 0
-//     li
-//       padding: 0.5em 10px 0.5em 10px
-//       font-family: $lato
-//       font-size: 1em
-//       font-weight: 400
-//       color: $col-content-lighter
-//       border-bottom: 1px $col-content-lightest solid
-//       a
-//         color: $col-links
-//         background-color: transparent
-//         &:hover
-//           color: $col-links-darker
-//         &:active
-//           color: $col-links-lighter
 
+ul.menu
+  margin-bottom: 0.5em
+  .menu__item li
+    border-bottom: 1px $col-content-lightest solid
+    // The active link in the menu
+    .views-field a.is-active-trail
+      background-color: $col-links-lightest
+      // font-weight: 900
+      color: $col-links-darker
+    a
+      padding: 3.5% 5% 1.5% 5%
+      &:link,
+      &:visited
+        display: block
+        height: 2em
+        width: 90%
+        font-family: $lato
+        font-size: 1em
+        font-weight: 400
+        text-decoration: none
+        color: $col-links
+      &:hover
+        background-color: $col-links-lightest
+        color: $col-links-darkest
+      &:active
+        color: white
+        background-color: $col-links
