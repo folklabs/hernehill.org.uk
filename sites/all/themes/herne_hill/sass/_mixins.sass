@@ -213,7 +213,7 @@
   font-size: 1em
   color: $col-page
   &:hover
-    @include gradient-vertical($col-links, $col-links-lighter)
+    @include gradient-vertical($col-links, mix($col-links, $col-page, $weight:50%))
     border: solid 1px $col-links-darker
     color: white
   &:active

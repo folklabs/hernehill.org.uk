@@ -2,6 +2,7 @@ name = OpenLocal Highlight
 description = Highlights for the homepage.
 core = 7.x
 package = OpenLocal
+php = 5.2.4
 version = 7.x-1.0-alpha1
 project = openlocal_highlight
 dependencies[] = fe_nodequeue

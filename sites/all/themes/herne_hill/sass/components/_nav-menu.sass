@@ -10,6 +10,34 @@
 .ol-2nd-nav-menu
   border-top: 1px $col-content-lighter solid
   margin-bottom: 0.5em
+
+  // The "View all" option
+  .view-header
+    // background-color: blue
+    p
+      margin: 0
+    a
+      border-bottom: 1px solid $col-content-lighter
+      padding: 3.5% 5% 1.5% 5%
+      &:link,
+      &:visited
+        display: block
+        height: 2em
+        width: 90%
+        font-family: $lato
+        font-size: 1em
+        font-weight: 900
+        text-decoration: none
+        color: $col-links
+      &:hover
+        background-color: $col-links-lightest
+        color: $col-links-darkest
+      &:active
+        color: white
+        background-color: $col-links
+
+
+  // The normal menu items
   .views-row
     border-bottom: 1px $col-content-lightest solid
 
@@ -47,24 +75,24 @@
 // NEWS ARTCILE TOPICS MENU PANEL
 
 
-.pane-openlocal-news-popular-news-topics
-  margin: 1em 0
-  ul
-    list-style: none
-    margin: 0
-    padding: 0
-    li
-      padding: 0.5em 10px 0.5em 10px
-      font-family: $lato
-      font-size: 1em
-      font-weight: 400
-      color: $col-content-lighter
-      border-bottom: 1px $col-content-lightest solid
-      a
-        color: $col-links
-        background-color: transparent
-        &:hover
-          color: $col-links-darker
-        &:active
-          color: $col-links-lighter
+// .pane-openlocal-news-popular-news-topics
+//   margin: 1em 0
+//   ul
+//     list-style: none
+//     margin: 0
+//     padding: 0
+//     li
+//       padding: 0.5em 10px 0.5em 10px
+//       font-family: $lato
+//       font-size: 1em
+//       font-weight: 400
+//       color: $col-content-lighter
+//       border-bottom: 1px $col-content-lightest solid
+//       a
+//         color: $col-links
+//         background-color: transparent
+//         &:hover
+//           color: $col-links-darker
+//         &:active
+//           color: $col-links-lighter
 

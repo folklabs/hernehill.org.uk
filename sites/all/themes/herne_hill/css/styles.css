@@ -1097,20 +1097,50 @@ html.js #user-login-form li.openid-link,
   border-top: 1px #b19fa7 solid;
   margin-bottom: 0.5em;
 }
-/* line 13, ../sass/components/_nav-menu.sass */
+/* line 17, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .view-header p {
+  margin: 0;
+}
+/* line 19, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .view-header a {
+  border-bottom: 1px solid #b19fa7;
+  padding: 3.5% 5% 1.5% 5%;
+}
+/* line 22, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .view-header a:link, .ol-2nd-nav-menu .view-header a:visited {
+  display: block;
+  height: 2em;
+  width: 90%;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 900;
+  text-decoration: none;
+  color: #20806a;
+}
+/* line 32, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .view-header a:hover {
+  background-color: #e2e3d7;
+  color: #0d332a;
+}
+/* line 35, ../sass/components/_nav-menu.sass */
+.ol-2nd-nav-menu .view-header a:active {
+  color: white;
+  background-color: #20806a;
+}
+/* line 41, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row {
   border-bottom: 1px #e3dcd1 solid;
 }
-/* line 17, ../sass/components/_nav-menu.sass */
+/* line 45, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row .views-field a.active {
   background-color: #e2e3d7;
   color: #144c3f;
 }
-/* line 21, ../sass/components/_nav-menu.sass */
+/* line 49, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row a {
   padding: 3.5% 5% 1.5% 5%;
 }
-/* line 23, ../sass/components/_nav-menu.sass */
+/* line 51, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row a:link, .ol-2nd-nav-menu .views-row a:visited {
   display: block;
   height: 2em;
@@ -1121,106 +1151,180 @@ html.js #user-login-form li.openid-link,
   text-decoration: none;
   color: #20806a;
 }
-/* line 33, ../sass/components/_nav-menu.sass */
+/* line 61, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row a:hover {
   background-color: #e2e3d7;
   color: #0d332a;
 }
-/* line 36, ../sass/components/_nav-menu.sass */
+/* line 64, ../sass/components/_nav-menu.sass */
 .ol-2nd-nav-menu .views-row a:active {
   color: white;
   background-color: #20806a;
 }
 
-/* line 50, ../sass/components/_nav-menu.sass */
-.pane-openlocal-news-popular-news-topics {
-  margin: 1em 0;
-}
-/* line 52, ../sass/components/_nav-menu.sass */
-.pane-openlocal-news-popular-news-topics ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-/* line 56, ../sass/components/_nav-menu.sass */
-.pane-openlocal-news-popular-news-topics ul li {
-  padding: 0.5em 10px 0.5em 10px;
-  font-family: "Lato";
-  font-size: 1em;
-  font-weight: 400;
-  color: #b19fa7;
-  border-bottom: 1px #e3dcd1 solid;
-}
-/* line 63, ../sass/components/_nav-menu.sass */
-.pane-openlocal-news-popular-news-topics ul li a {
-  color: #20806a;
-  background-color: transparent;
-}
-/* line 66, ../sass/components/_nav-menu.sass */
-.pane-openlocal-news-popular-news-topics ul li a:hover {
-  color: #144c3f;
-}
-/* line 68, ../sass/components/_nav-menu.sass */
-.pane-openlocal-news-popular-news-topics ul li a:active {
-  color: #98b9b1;
-}
-
 /* line 8, ../sass/components/_actions.sass */
 .ol-action-box {
-  background-color: #e2e3d7;
-  padding: 0.5em 5px;
+  background-color: #e3dcd1;
+  padding: 0.5em 10px;
   margin-bottom: 1em;
 }
-
-/* line 67, ../sass/components/_actions.sass */
-.ol-action-help {
+/* line 15, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button:first-of-type {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+/* line 21, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button:first-of-type a {
+  padding: 0.5em 10px;
+  display: block;
+  border-radius: 0.25em;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  /* edit: added z-index */
+  z-index: 1;
+}
+/* line 30, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button:first-of-type a:link, .ol-action-box .ol-action-button:first-of-type a:visited {
+  color: #f4eee0;
+  border: solid 1px #0d332a;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #20806a));
+  background-image: -o-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -moz-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -webkit-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: -ms-linear-gradient(top, #144c3f 0%, #20806a 100%);
+  background-image: linear-gradient(to top, #144c3f 0%, #20806a 100%);
+}
+/* line 35, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button:first-of-type a:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #8ab7a5));
+  background-image: -o-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: -moz-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: -webkit-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: -ms-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: linear-gradient(to top, #20806a 0%, #8ab7a5 100%);
+  border: solid 1px #144c3f;
+  color: white;
+}
+/* line 39, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button:first-of-type a:active {
+  -moz-box-shadow: inset 0 0 10px #144c3f;
+  -webkit-box-shadow: inset 0 0 10px #144c3f;
+  box-shadow: inset 0 0 10px #144c3f;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #144c3f));
+  background-image: -o-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: -moz-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: -webkit-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: -ms-linear-gradient(top, #20806a 0%, #144c3f 100%);
+  background-image: linear-gradient(to top, #20806a 0%, #144c3f 100%);
+  border: solid 1px #98b9b1;
+  color: #98b9b1;
+}
+/* line 49, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+/* line 55, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button a {
+  padding: 0.5em 10px;
+  display: block;
+  border-radius: 0.25em;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  /* edit: added z-index */
+  z-index: 1;
+}
+/* line 64, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button a:link, .ol-action-box .ol-action-button a:visited {
+  color: #4d3d44;
+  border: solid 1px #77666d;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e3dcd1), color-stop(1, #f4eee0));
+  background-image: -o-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -moz-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
+  background-image: linear-gradient(to top, #e3dcd1 0%, #f4eee0 100%);
+}
+/* line 69, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button a:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, white));
+  background-image: -o-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: -moz-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: -webkit-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: -ms-linear-gradient(top, #f4eee0 0%, white 100%);
+  background-image: linear-gradient(to top, #f4eee0 0%, #ffffff 100%);
+  border: solid 1px #77666d;
+  color: #77666d;
+}
+/* line 73, ../sass/components/_actions.sass */
+.ol-action-box .ol-action-button a:active {
+  -moz-box-shadow: inset 0 0 10px #b19fa7;
+  -webkit-box-shadow: inset 0 0 10px #b19fa7;
+  box-shadow: inset 0 0 10px #b19fa7;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, #e3dcd1));
+  background-image: -o-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: -moz-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: -webkit-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: -ms-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
+  background-image: linear-gradient(to top, #f4eee0 0%, #e3dcd1 100%);
+  border: solid 1px white;
+  color: #2f2127;
+}
+/* line 84, ../sass/components/_actions.sass */
+.ol-action-box a.ol-action-help {
+  display: block;
+  width: 100%;
+  padding: 0.5em 0;
+  text-align: right;
   font-family: "Lato";
   font-weight: 400;
   font-size: 1em;
-  display: block;
-  padding: 0 0;
-  margin: 0.5em 10px;
-  text-align: right;
   text-decoration: none;
-}
-/* line 76, ../sass/components/_actions.sass */
-.ol-action-help:link {
-  color: red;
-}
-/* line 78, ../sass/components/_actions.sass */
-.ol-action-help:hover {
-  color: #144c3f;
   background-color: transparent;
 }
-/* line 81, ../sass/components/_actions.sass */
-.ol-action-help:active {
-  color: #98b9b1;
-}
-/* line 83, ../sass/components/_actions.sass */
-.ol-action-help:visited {
+/* line 94, ../sass/components/_actions.sass */
+.ol-action-box a.ol-action-help:link, .ol-action-box a.ol-action-help:visited {
   color: #20806a;
 }
+/* line 97, ../sass/components/_actions.sass */
+.ol-action-box a.ol-action-help:hover {
+  color: #144c3f;
+}
+/* line 99, ../sass/components/_actions.sass */
+.ol-action-box a.ol-action-help:active {
+  color: #98b9b1;
+}
 
-/* line 98, ../sass/components/_actions.sass */
+/* line 114, ../sass/components/_actions.sass */
 .pane-user-field-user-picture {
   float: left;
   margin-right: 5px;
 }
 
-/* line 102, ../sass/components/_actions.sass */
+/* line 118, ../sass/components/_actions.sass */
 #panels-ipe-paneid-110 {
   float: right;
 }
 
-/* line 112, ../sass/components/_actions.sass */
+/* line 128, ../sass/components/_actions.sass */
 .month-view div {
   text-align: center;
 }
-/* line 114, ../sass/components/_actions.sass */
+/* line 130, ../sass/components/_actions.sass */
 .month-view .has-events {
   background-color: #98b9b1;
 }
-/* line 117, ../sass/components/_actions.sass */
+/* line 133, ../sass/components/_actions.sass */
 .month-view .has-events a {
   color: white;
 }
@@ -1549,6 +1653,14 @@ tr.selected td {
   right: auto;
 }
 
+/* line 7, ../sass/components/_carousel.sass */
+.pane-openlocal-highlight-panel-pane-1 {
+  background-color: red;
+  height: 27em;
+  max-width: 580px;
+  margin-bottom: 1em;
+}
+
 /* line 15, ../sass/components/_comments.sass */
 .comments {
   margin: 1.5em 0;
@@ -1576,69 +1688,6 @@ tr.selected td {
   font-family: "Lato";
   font-size: 1em;
   line-height: 2em;
-}
-
-/* line 29, ../sass/components/_controls.sass */
-.ol-action-button {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #20806a));
-  background-image: -o-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: -moz-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: -webkit-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: -ms-linear-gradient(top, #144c3f 0%, #20806a 100%);
-  background-image: linear-gradient(to top, #144c3f 0%, #20806a 100%);
-  font-family: "Lato";
-  font-weight: 300;
-  font-size: 20px;
-  border: solid 1px #0d332a;
-  border-radius: 0.2em;
-  text-align: center;
-  padding: 0.5em 5px;
-  margin: 0.5em 5px;
-}
-/* line 42, ../sass/components/_controls.sass */
-.ol-action-button:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #98b9b1));
-  background-image: -o-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: -moz-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: -webkit-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: -ms-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: linear-gradient(to top, #20806a 0%, #98b9b1 100%);
-  border: solid 1px #20806a;
-}
-/* line 46, ../sass/components/_controls.sass */
-.ol-action-button:active {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #0d332a), color-stop(1, #144c3f));
-  background-image: -o-linear-gradient(top, #0d332a 0%, #144c3f 100%);
-  background-image: -moz-linear-gradient(top, #0d332a 0%, #144c3f 100%);
-  background-image: -webkit-linear-gradient(top, #0d332a 0%, #144c3f 100%);
-  background-image: -ms-linear-gradient(top, #0d332a 0%, #144c3f 100%);
-  background-image: linear-gradient(to top, #0d332a 0%, #144c3f 100%);
-  border: solid 1px #98b9b1;
-}
-/* line 51, ../sass/components/_controls.sass */
-.ol-action-button .ol-action-span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: #e2e3d7;
-  text-decoration: none;
-  background-color: none;
-  /* edit: added z-index */
-  z-index: 1;
-}
-/* line 61, ../sass/components/_controls.sass */
-.ol-action-button .ol-action-span:visited {
-  color: #e2e3d7;
-}
-/* line 63, ../sass/components/_controls.sass */
-.ol-action-button .ol-action-span:hover {
-  color: white;
-}
-/* line 65, ../sass/components/_controls.sass */
-.ol-action-button .ol-action-span:active {
-  color: #20806a;
 }
 
 /* line 7, ../sass/components/_details.sass */
@@ -1958,12 +2007,12 @@ form #node-edit .form-actions input[id="edit-submit"] {
 }
 /* line 215, ../sass/_mixins.sass */
 form #node-edit .form-actions input[id="edit-submit"]:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #98b9b1));
-  background-image: -o-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: -moz-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: -webkit-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: -ms-linear-gradient(top, #20806a 0%, #98b9b1 100%);
-  background-image: linear-gradient(to top, #20806a 0%, #98b9b1 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #8ab7a5));
+  background-image: -o-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: -moz-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: -webkit-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: -ms-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
+  background-image: linear-gradient(to top, #20806a 0%, #8ab7a5 100%);
   border: solid 1px #144c3f;
   color: white;
 }
@@ -2904,13 +2953,13 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   padding: 0.25em 4px 0.25em 4px;
 }
 
-/* line 45, ../sass/components/_nav-tags.sass */
+/* line 49, ../sass/components/_nav-tags.sass */
 .pane-node-links {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
 
-/* line 54, ../sass/components/_nav-tags.sass */
+/* line 58, ../sass/components/_nav-tags.sass */
 .service-links-facebook a,
 .service-links-twitter a,
 .service-links-google-plus a,
@@ -3081,7 +3130,7 @@ view-display-id-list_news_articles .views-field-title a:active {
 }
 /* line 15, ../sass/components/_panel-alert.sass */
 .pane-openlocal-alert-panel-pane-1 .view-empty p {
-  color: #144c3f;
+  color: #4d3d44;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 16px;
   font-weight: 300;
@@ -3718,28 +3767,28 @@ h2.node-title a:active {
   display: block;
 }
 
-/* line 59, ../sass/styles.sass */
+/* line 60, ../sass/styles.sass */
 .socialmedia {
   display: inline-block;
   vertical-align: top;
 }
-/* line 63, ../sass/styles.sass */
+/* line 64, ../sass/styles.sass */
 .socialmedia .fa {
   margin-left: 5px;
 }
 
-/* line 66, ../sass/styles.sass */
+/* line 67, ../sass/styles.sass */
 .top-right {
   float: right;
   margin-top: 10px;
 }
 
-/* line 70, ../sass/styles.sass */
+/* line 71, ../sass/styles.sass */
 #secondary-menu {
   display: inline-block;
   margin-top: 5px;
 }
-/* line 75, ../sass/styles.sass */
+/* line 76, ../sass/styles.sass */
 #secondary-menu a {
   text-decoration: none;
 }
