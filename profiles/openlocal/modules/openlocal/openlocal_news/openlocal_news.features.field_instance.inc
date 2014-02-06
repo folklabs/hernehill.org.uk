@@ -194,7 +194,7 @@ function openlocal_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'above',
@@ -224,6 +224,56 @@ function openlocal_news_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-openlocal_news_article-field_ol_radioactivity'
+  $field_instances['node-openlocal_news_article-field_ol_radioactivity'] = array(
+    'bundle' => 'openlocal_news_article',
+    'default_value' => array(
+      0 => array(
+        'radioactivity_energy' => 0,
+        'radioactivity_timestamp' => 1391674675,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_radioactivity',
+    'label' => 'Radioactivity',
+    'required' => FALSE,
+    'settings' => array(
+      'profile' => 'openlocal_profile',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'radioactivity',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'radioactivity_basic_widget',
+      'weight' => 9,
     ),
   );
 
@@ -286,6 +336,7 @@ function openlocal_news_field_default_field_instances() {
   t('Enter the content of the news article.');
   t('Feature content');
   t('Primary Image');
+  t('Radioactivity');
   t('Tags');
 
   return $field_instances;

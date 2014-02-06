@@ -184,6 +184,40 @@ function openlocal_home_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'column2';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'openlocal_what_s_hot-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '6',
+      'view_mode' => 'teaser',
+      'widget_title' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['column2'][1] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'column2';
     $pane->type = 'block';
     $pane->subtype = 'forum-active';
     $pane->shown = TRUE;
@@ -198,12 +232,12 @@ function openlocal_home_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['column2'][1] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['column2'][2] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'ol_forum_recent_comments-panel_pane_1';
@@ -232,12 +266,12 @@ function openlocal_home_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['column2'][2] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['column2'][3] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'column2';
     $pane->type = 'block';
     $pane->subtype = 'block-8';
@@ -253,12 +287,12 @@ function openlocal_home_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['column2'][3] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['column2'][4] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_highlight-panel_pane_1';
@@ -289,10 +323,10 @@ function openlocal_home_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['contentmain'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['contentmain'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_news-list_news_articles';
@@ -339,8 +373,8 @@ function openlocal_home_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['contentmain'][1] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['contentmain'][1] = 'new-9';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

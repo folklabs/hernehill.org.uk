@@ -145,6 +145,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
   );
