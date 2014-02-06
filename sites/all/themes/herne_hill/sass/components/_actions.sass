@@ -6,82 +6,98 @@
 // The box in which all Action Buttons sit
 
 .ol-action-box
-  background-color: $col-links-lightest
-  padding: 0.5em 5px
+  background-color: $col-content-lightest
+  padding: 0.5em 10px
   margin-bottom: 1em
 
-  // a
-  //   &:hover
-  //     text-decoration: none
-  //     margin-bottom: 0
 
-
-// The Action Button itself
-
-  .ol-action-button
-    @include gradient-vertical($col-links, lighten($col-links, 25%))
-    font-family: $lato
-    font-weight: 300
-    font-size: 1.25 * $base-font-size
-    border: solid 1px red //$col-links-darkest
-    border-radius: 0.2em
-    text-align: center
-    //padding: 0.5em 5px
-    //margin: 0.5em 5px
-    a:link
-    a:visited
-
-    a:hover
-      @include gradient-vertical($col-links, $col-links-lighter)
-      border: solid 1px $col-links
-      //color: white
-    a:active
-      @include gradient-vertical()
-      +gradient-links-bottom-darkest
-      border: solid 1px $col-links-lighter
-
-    .ol-action-span
-      // position: absolute
+  // The first Action Button in the Action Box panel
+  .ol-action-button:first-of-type
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+    a
+      // height: 2em
+      padding: 0.5em 10px
       display: block
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      color: $col-links-lightest
-      text-decoration: none
-      background-color: none
+      border-radius: 0.25em
+      font-family: $lato
+      font-weight: 400
+      font-size: 1.25 * $base-font-size
+      text-align: center
+      &:link,
       &:visited
-        color: $col-links-lightest
+        color: $col-page
+        border: solid 1px $col-links-darkest
+        @include gradient-vertical($col-links-darker, $col-links)
       &:hover
+        @include gradient-vertical($col-links, mix($col-links, $col-page, $weight:50%))
+        border: solid 1px $col-links-darker
         color: white
       &:active
-        color: $col-links
+        @include glow-inner($col-links-darker, 10)
+        @include gradient-vertical($col-links, $col-links-darker)
+        border: solid 1px $col-links-lighter
+        color: $col-links-lighter
 
+      /* edit: added z-index */
+      z-index: 1
+
+  // The first Action Button in the Action Box panel
+  .ol-action-button
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+    a
+      // height: 2em
+      padding: 0.5em 10px
+      display: block
+      border-radius: 0.25em
+      font-family: $lato
+      font-weight: 400
+      font-size: 1.25 * $base-font-size
+      text-align: center
+      &:link,
+      &:visited
+        color: $col-content-darker
+        border: solid 1px $col-content
+        @include gradient-vertical($col-content-lightest, $col-page)
+      &:hover
+        @include gradient-vertical($col-page, white)
+        border: solid 1px $col-content
+        color: $col-content
+      &:active
+        @include glow-inner($col-content-lighter, 10)
+        @include gradient-vertical($col-page, $col-content-lightest)
+        border: solid 1px white
+        color: $col-content-darkest
 
       /* edit: added z-index */
       z-index: 1
 
 
-// The Help link underneath each Action Button
-
-.ol-action-help
-  font-family: $lato
-  font-weight: 400
-  font-size: 1em
-  display: block
-  padding: 0 0
-  margin: 0.5em 10px
-  text-align: right
-  text-decoration: none
-  &:link
-    color: red //$col-links
-  &:hover
-    color: $col-links-darker
+  // The Help link underneath each Action Button
+  a.ol-action-help
+    display: block
+    width: 100%
+    padding: 0.5em 0
+    text-align: right
+    font-family: $lato
+    font-weight: 400
+    font-size: 1em
+    text-decoration: none
     background-color: transparent
-  &:active
-    color: $col-links-lighter
-  &:visited
-    color: $col-links
+    &:link,
+    &:visited
+      color: $col-links
+    &:hover
+      color: $col-links-darker
+    &:active
+      color: $col-links-lighter
 
 
 
