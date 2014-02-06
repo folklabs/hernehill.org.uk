@@ -37,10 +37,14 @@
     display: inline-block
     margin-right: 10px
     a
+      &:link,
+      &:visited
       background-color: $col-links-lightest
       color: $col-links
       border-radius: 0.25 * $base-font-size
       padding: 0.25em 4px 0.25em 4px
+      &:hover
+      &:active
 
 .pane-node-links
   margin-top: 1.5em

@@ -2904,13 +2904,13 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   padding: 0.25em 4px 0.25em 4px;
 }
 
-/* line 45, ../sass/components/_nav-tags.sass */
+/* line 49, ../sass/components/_nav-tags.sass */
 .pane-node-links {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
 
-/* line 54, ../sass/components/_nav-tags.sass */
+/* line 58, ../sass/components/_nav-tags.sass */
 .service-links-facebook a,
 .service-links-twitter a,
 .service-links-google-plus a,
