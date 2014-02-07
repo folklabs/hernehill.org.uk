@@ -1,5 +1,77 @@
 
 // ----------------------------------------------------------------------------
+// CONTEXTUAL HELP MODULE BLOCK STYLES
+
+
+// The ID for Contextual Help module block on node edit or node add pages
+.page-node-add,
+.page-node-edit
+  // Set the page title to a block and float left
+  .page__title
+    display: block
+    float: left
+    width: 68.085%
+    max-width: 780px
+    margin-right: 20px
+
+  // Target only contextual help block
+  #block-views-70482c69a64d1e0693c0f9809d0fce34
+    margin-top: 2 * $base-font-size
+    display: block
+    width: 31.915%
+    float: right
+    background: transparentize($col-page-strong, 0.25)
+    border: solid 1px $col-page-strong
+    border-radius: 3px
+    h2.block-title,
+      display: block
+      padding: 0.5em 10px
+      font-family: $lato
+      font-weight: 400
+      font-size: 1.25em
+      line-height: 1.5em
+      color: $col-content-darkest
+
+    div.view-display-id-modal_links_block
+      padding: 0 10px 0.5em 10px
+
+    .view-content
+      background-color: yellow
+      // width: 50px
+
+      .views-row
+        float: left
+
+        a
+          display: inline-block
+          background-color: orange
+          @include input-button-style
+          padding: 0.25em 10px
+
+    .add-contextual-help-link a
+      display: inline-block
+      @include input-button-style
+      padding: 0.25em 10px
+
+  // Styles for empty notices
+  .view-empty
+    @include list-item-title
+    margin: 0.5em 0
+    color: $col-content-darker
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
 // ADMIN MESSAGES
 
 
@@ -70,6 +142,7 @@
 
 
 div.workbench-info-block
+  clear: both
   margin: 2em 0
   padding: 1em 1em
   font-family: $lato
