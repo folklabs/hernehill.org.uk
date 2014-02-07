@@ -115,7 +115,7 @@ function openlocal_news_field_default_field_instances() {
   $field_instances['node-openlocal_news_article-field_featured_image'] = array(
     'bundle' => 'openlocal_news_article',
     'deleted' => 0,
-    'description' => 'Add an image if you have one. The "Alt text" field is for a short description that is shown if the image cannot be loaded.',
+    'description' => 'Add an image if you have one. Make sure you add an "alt tag" after you\'ve uploaded an image. Adding alternative text to images is really important to help many of our visitors with poor eyesight. Without an alt tag, they won\'t be able to know what is in the image and will not benefit from it.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -328,7 +328,7 @@ function openlocal_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Add an image if you have one. The "Alt text" field is for a short description that is shown if the image cannot be loaded.');
+  t('Add an image if you have one. Make sure you add an "alt tag" after you\'ve uploaded an image. Adding alternative text to images is really important to help many of our visitors with poor eyesight. Without an alt tag, they won\'t be able to know what is in the image and will not benefit from it.');
   t('Add any tags that define this content in more detail, e.g. "lido". Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.');
   t('Body');
   t('Categories');
