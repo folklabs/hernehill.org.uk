@@ -1002,7 +1002,7 @@ function openlocal_event_views_default_views() {
     'ol_business' => 'ol_business',
     'ol_place' => 'ol_place',
   );
-  /* Filter criterion: Content: Wheelchair accessible (field_ol_wheelchair_accessible) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['id'] = 'field_ol_wheelchair_accessible_value';
   $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['table'] = 'field_data_field_ol_wheelchair_accessible';
   $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['field'] = 'field_ol_wheelchair_accessible_value';
@@ -1024,7 +1024,6 @@ function openlocal_event_views_default_views() {
     5 => 0,
     6 => 0,
   );
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['reduce'] = TRUE;
   /* Filter criterion: Content: Event venue (field_ol_event_venue) */
   $handler->display->display_options['filters']['field_ol_event_venue_value']['id'] = 'field_ol_event_venue_value';
   $handler->display->display_options['filters']['field_ol_event_venue_value']['table'] = 'field_data_field_ol_event_venue';

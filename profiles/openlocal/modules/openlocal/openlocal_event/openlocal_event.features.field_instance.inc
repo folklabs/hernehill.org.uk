@@ -148,7 +148,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -249,55 +249,6 @@ function openlocal_event_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-ol_event-field_ol_disabled_toilet'
-  $field_instances['node-ol_event-field_ol_disabled_toilet'] = array(
-    'bundle' => 'ol_event',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Please choose this if the venue has a disabled toilet.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 7,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_disabled_toilet',
-    'label' => 'Disabled toilet',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 9,
     ),
   );
 
@@ -558,23 +509,19 @@ function openlocal_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_event-field_ol_wheelchair_accessible'
-  $field_instances['node-ol_event-field_ol_wheelchair_accessible'] = array(
+  // Exported field_instance: 'node-ol_event-field_ol_location_properties'
+  $field_instances['node-ol_event-field_ol_location_properties'] = array(
     'bundle' => 'ol_event',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please choose this if your event is accessible to wheelchair users.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 8,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 13,
       ),
       'featured' => array(
         'label' => 'above',
@@ -590,8 +537,8 @@ function openlocal_event_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ol_wheelchair_accessible',
-    'label' => 'Wheelchair accessible',
+    'field_name' => 'field_ol_location_properties',
+    'label' => 'Available facilities',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -600,10 +547,10 @@ function openlocal_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 1,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
-      'type' => 'options_onoff',
-      'weight' => 10,
+      'type' => 'options_buttons',
+      'weight' => 9,
     ),
   );
 
@@ -668,12 +615,13 @@ function openlocal_event_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Available facilities');
   t('Category');
   t('Comment');
   t('Contact');
@@ -682,19 +630,15 @@ function openlocal_event_field_default_field_instances() {
   t('Describe all the details that people need to know about the event.');
   t('Description');
   t('Details');
-  t('Disabled toilet');
   t('Enter the email address of a contact for this event.');
   t('Feature content');
   t('Groups audience');
   t('Image');
-  t('Please choose this if the venue has a disabled toilet.');
-  t('Please choose this if your event is accessible to wheelchair users.');
   t('Please search for the name of a venue for the event. Browse the <b><a href="/venues" target="_blank">list of available venues</a></b> if you do not know the name.');
   t('The contact number will be for people to call in relation to the event, it will be visible on the page with the event information. If there is no contact number for people to call regarding this event then please leave blank.');
   t('This will appear on list pages, e.g. Services.');
   t('Tips - the "start date" is the day and time your event commences. The "To date" is when your first event or meeting ends, probably an hour or two after the start. N.B. If you want to create a repeating event (i.e. every week) then please use the "repeat" option under the advanced section. If it is an event on for every week on the same day then choose repeat "every" "week". Please also then enter the date that the series finishes otherwise it will be repeated until the end of the world as we know it... Please check your entry once you have done it. View the What\'s On calendar and see where your event is listed, then check that it is only repeated (if applicable) on all the correct days. ');
   t('Venue');
-  t('Wheelchair accessible');
 
   return $field_instances;
 }
