@@ -496,6 +496,7 @@ function openlocal_news_default_page_manager_pages() {
         'created' => 1,
         'name' => 1,
         'field_user_picture' => 1,
+        'comment_count' => 1,
       ),
       'exposed' => array(
         'Is Featured' => 'All',
