@@ -2025,6 +2025,75 @@ div.form-item-notify {
   padding: 1em 0 0 0;
 }
 
+/* line 73, ../sass/components/_details.sass */
+.pane-node-field-featured-categories {
+  margin-bottom: 1em;
+  border-top: solid 1px #b19fa7;
+}
+/* line 79, ../sass/components/_details.sass */
+.pane-node-field-featured-categories div .field-label {
+  display: block;
+  width: 100%;
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 0.75em 5px 0.25em 5px;
+  color: #4d3d44;
+  background-color: transparent;
+}
+/* line 116, ../sass/_mixins.sass */
+.pane-node-field-featured-categories div .field-label a:link {
+  color: #20806a;
+}
+/* line 118, ../sass/_mixins.sass */
+.pane-node-field-featured-categories div .field-label a:visited {
+  color: #20806a;
+}
+/* line 120, ../sass/_mixins.sass */
+.pane-node-field-featured-categories div .field-label a:hover {
+  color: #144c3f;
+}
+/* line 122, ../sass/_mixins.sass */
+.pane-node-field-featured-categories div .field-label a:active {
+  color: #98b9b1;
+  background-color: transparent;
+}
+/* line 85, ../sass/components/_details.sass */
+.pane-node-field-featured-categories div .field-items {
+  width: 100%;
+}
+/* line 88, ../sass/components/_details.sass */
+.pane-node-field-featured-categories div .field-items .field-item {
+  display: block;
+  clear: both;
+  border-bottom: 1px #e3dcd1 solid;
+}
+/* line 94, ../sass/components/_details.sass */
+.pane-node-field-featured-categories div .field-items .field-item a {
+  padding: 3.5% 5px 1.5% 5px;
+}
+/* line 96, ../sass/components/_details.sass */
+.pane-node-field-featured-categories div .field-items .field-item a:link, .pane-node-field-featured-categories div .field-items .field-item a:visited {
+  display: block;
+  height: 2em;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 400;
+  text-decoration: none;
+  color: #20806a;
+}
+/* line 106, ../sass/components/_details.sass */
+.pane-node-field-featured-categories div .field-items .field-item a:hover {
+  background-color: #e2e3d7;
+  color: #0d332a;
+}
+/* line 109, ../sass/components/_details.sass */
+.pane-node-field-featured-categories div .field-items .field-item a:active {
+  color: white;
+  background-color: #20806a;
+}
+
 /* line 7, ../sass/components/_footer.sass */
 #footer {
   width: 100%;
@@ -3459,14 +3528,26 @@ h2.node-title a:active {
 .pane-openlocal-news-articles-by-author {
   background-color: #e3dcd1;
 }
+/* line 139, ../sass/components/_panel-list.sass */
+.pane-openlocal-news-articles-by-author .view-empty p {
+  display: block;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1em;
+  color: #77666d;
+  display: block;
+  padding: 0.5em 5px;
+  margin-top: 0;
+}
 
-/* line 157, ../sass/components/_panel-list.sass */
+/* line 160, ../sass/components/_panel-list.sass */
 .view-openlocal-business .view-content {
   display: block;
   display: clear;
 }
 
-/* line 164, ../sass/components/_panel-list.sass */
+/* line 167, ../sass/components/_panel-list.sass */
 .views-field-field-ol-description {
   font-family: "Lato";
   font-size: 1em;
@@ -3476,13 +3557,13 @@ h2.node-title a:active {
   padding: 0.25em 5px;
 }
 
-/* line 186, ../sass/components/_panel-list.sass */
+/* line 189, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive,
 .pane-openlocal-news-articles-by-author {
   background-color: #e3dcd1;
   margin: 1em 0;
 }
-/* line 191, ../sass/components/_panel-list.sass */
+/* line 194, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list h3,
 .pane-openlocal-news-articles-by-author .item-list h3 {
   color: #77666d;
@@ -3493,7 +3574,7 @@ h2.node-title a:active {
   padding: 1.25em 5px 0.25em 5px;
   margin: 0;
 }
-/* line 199, ../sass/components/_panel-list.sass */
+/* line 202, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul,
 .pane-openlocal-news-articles-by-author .item-list ul {
   margin: 0;
@@ -3504,39 +3585,39 @@ h2.node-title a:active {
   line-height: 1.25em;
   font-weight: 300;
 }
-/* line 207, ../sass/components/_panel-list.sass */
+/* line 210, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul li.views-row,
 .pane-openlocal-news-articles-by-author .item-list ul li.views-row {
   padding: 0.5em 5px;
   border-bottom: solid 1px #f4eee0;
 }
-/* line 210, ../sass/components/_panel-list.sass */
+/* line 213, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul li.views-row a,
 .pane-openlocal-news-articles-by-author .item-list ul li.views-row a {
   background-color: transparent;
 }
-/* line 212, ../sass/components/_panel-list.sass */
+/* line 215, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul li.views-row a:link,
 .pane-openlocal-news-articles-by-author .item-list ul li.views-row a:link {
   color: #20806a;
   text-decoration: none;
 }
-/* line 215, ../sass/components/_panel-list.sass */
+/* line 218, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul li.views-row a:visited,
 .pane-openlocal-news-articles-by-author .item-list ul li.views-row a:visited {
   color: #144c3f;
 }
-/* line 217, ../sass/components/_panel-list.sass */
+/* line 220, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul li.views-row a:hover,
 .pane-openlocal-news-articles-by-author .item-list ul li.views-row a:hover {
   color: #144c3f;
 }
-/* line 219, ../sass/components/_panel-list.sass */
+/* line 222, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul li.views-row a:active,
 .pane-openlocal-news-articles-by-author .item-list ul li.views-row a:active {
   color: #98b9b1;
 }
-/* line 221, ../sass/components/_panel-list.sass */
+/* line 224, ../sass/components/_panel-list.sass */
 .pane-openlocal-news-article-archive .item-list ul li.views-row-last,
 .pane-openlocal-news-articles-by-author .item-list ul li.views-row-last {
   border-bottom: none;
@@ -3929,6 +4010,11 @@ h2.node-title a:active {
   line-height: 1em;
   color: #77666d;
   display: block;
+}
+
+/* line 7, ../sass/components/_user.sass */
+.page-user .view-openlocal-user table {
+  color: red;
 }
 
 /* line 60, ../sass/styles.sass */

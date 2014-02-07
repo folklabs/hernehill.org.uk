@@ -60,3 +60,75 @@
     .field-label,
     .field-item
       padding: 1em 0 0 0
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// ARTICLE CATEGORY DETAIL PANEL
+
+.pane-node-field-featured-categories
+  margin-bottom: 1em
+  border-top: solid 1px $col-content-lighter
+  div
+
+    // The label for the categories listing
+    .field-label
+      display: block
+      width: 100%
+      @include grid-list-panel-title
+
+    // Each category item
+    .field-items
+      width: 100%
+
+      .field-item
+        display: block
+        // width: 100%
+        clear: both
+        border-bottom: 1px $col-content-lightest solid
+
+        a
+          padding: 3.5% 5px 1.5% 5px
+          &:link,
+          &:visited
+            display: block
+            height: 2em
+            // width: 100%
+            font-family: $lato
+            font-size: 1em
+            font-weight: 400
+            text-decoration: none
+            color: $col-links
+          &:hover
+            background-color: $col-links-lightest
+            color: $col-links-darkest
+          &:active
+            color: white
+            background-color: $col-links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
