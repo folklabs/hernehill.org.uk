@@ -120,33 +120,6 @@ h2.node-title
 
 
 
-// ol-panel-list-myevents,
-// ol-panel-list-articles-related,
-
-
-
-
-
-
-
-
-// ----------------------------------------------------------------------------
-// OTHER ARTICLES BY THIS AUTHOR - PANEL
-
-// Set background colour
-.pane-openlocal-news-articles-by-author
-  background-color: $col-content-lightest
-  .view-empty p
-    @include typography-grid-list-body
-    padding: 0.5em 5px
-    margin-top: 0
-
-
-
-
-
-// ol-panel-list-pages-related,
-
 
 
 
@@ -183,11 +156,11 @@ h2.node-title
 
 
 // ----------------------------------------------------------------------------
-// ARCHIVE DISPLAY - PANEL
+// LISTING DISPLAY - PANEL
 
 
 .pane-openlocal-news-article-archive,
-.pane-openlocal-news-articles-by-author
+.pane-openlocal-news-articles-by-author,
   background-color: $col-content-lightest
   margin: 1em 0
   .item-list
@@ -223,3 +196,136 @@ h2.node-title
             color: $col-links-lighter
       li.views-row-last
         border-bottom: none
+
+  // Styles for empty notices
+  .view-empty p
+    @include list-item-title
+    padding: 0.5em 5px
+    margin-top: 0
+    color: $col-content-darker
+
+
+
+
+
+
+
+// ----------------------------------------------------
+
+.pane-openlocal-what-s-hot-panel-pane-1
+  background-color: $col-content-lightest
+
+  // View inside panel
+  .view-openlocal-what-s-hot
+    // Each row of listing
+    .views-row
+      padding: 0.5em 5px
+      border-bottom: solid 1px $col-page
+      // Title of each hot item
+      .views-field-title
+        margin: 0.5em 0
+        display: inline
+        width: 80%
+        float: left
+        @include list-item-title
+        line-height: 1.25em
+
+      // Radioactivity ranking
+      .views-field-field-ol-radioactivity
+        text-align: right
+        padding: 0
+        line-height: 1.25em
+        margin: 0.5em 0
+        .field-content
+          display: inline
+          width: 20%
+          @include grid-list-panel-title
+          color: $col-content-strong
+          letter-spacing: 1px
+
+
+
+
+
+
+
+// ----------------------------------------------------
+// RECENT DISCUSSIONS PANEL
+
+.pane-ol-forum-recent-comments-panel-pane-1,
+  background-color: $col-content-lightest
+  margin-bottom: 1em
+
+  // Wrapper around Comment post title
+  .views-field-subject
+    padding: 0.5em 5px 0 5px
+    a
+      @include list-item-title
+      background: transparent
+      &:link,
+      &:visited
+        color: $col-links
+      &:hover
+        color: $col-links-darker
+      &:active
+        color: $col-links-lighter
+
+
+  // Wrapper around comment post details
+  .views-field-created
+    padding: 0 5px
+
+    // "Posted on:" label
+    .views-label
+      @include typography-grid-list-body
+    // Time and date of post
+    .field-content
+      @include typography-grid-list-body
+      font-weight: 400
+
+
+  // Wrapper around name of comment post author
+  .views-field-name
+    border-bottom: solid 1px $col-page
+    padding: 0 5px 0 5px
+    // Name label
+    .views-label
+      @include typography-grid-list-body
+      padding: 0
+
+    // Username link
+    a.username
+      @include typography-grid-list-body
+      padding: 0
+      &:link,
+      &:visited
+        color: $col-links
+      &:hover
+        color: $col-links-darker
+      &:active
+        color: $col-links-lighter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
