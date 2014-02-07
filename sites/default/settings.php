@@ -565,3 +565,10 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+ini_set('memory_limit', '500M');
+
+if (file_exists(dirname(__FILE__) . '/settings.local.php')) {
+  include dirname(__FILE__) . '/settings.local.php';
+}
+
