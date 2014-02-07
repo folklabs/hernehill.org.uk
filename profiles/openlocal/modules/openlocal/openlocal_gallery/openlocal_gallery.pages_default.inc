@@ -16,7 +16,10 @@ function openlocal_gallery_default_page_manager_pages() {
   $page->admin_title = 'Galleries';
   $page->admin_description = 'A list of all galleries.';
   $page->path = 'galleries';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(

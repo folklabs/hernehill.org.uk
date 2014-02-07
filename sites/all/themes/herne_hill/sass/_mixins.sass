@@ -86,6 +86,7 @@
   line-height: $base-font-size
   padding: 0.25em 0 0 0
 
+
 // All list item titles
 @mixin list-item-title
   font-family: $merriweather
@@ -102,6 +103,7 @@
       background-color: transparent
     &:active
       color: $col-links-lighter
+
 
 @mixin grid-list-panel-title
   font-family: $lato
@@ -121,6 +123,7 @@
     color: $col-links-lighter
     background-color: transparent
 
+
 @mixin typography-grid-list-body
   display: block
   font-family: $lato
@@ -130,8 +133,6 @@
   color: $col-content
   display: block
 
-
-// Font definition for all 14px caption text
 
 @mixin typography-grid-list-date
   font-family: $lato
@@ -172,8 +173,20 @@
     &:active
       color: white
 
-
-
+@mixin typography-highlight-heading
+  font-family: $merriweather
+  font-size: 2 * $base-font-size
+  font-weight: 300
+  line-height: 2 * $base-font-size
+  a
+    background-color: transparent
+    &:link,
+    &:visited
+      color: $col-links
+    &:hover
+      color: $col-links-darker
+    &:active
+      color: $col-links-lighter
 
 
 
@@ -191,6 +204,7 @@
   font-family: $lato
   font-weight: 400
   font-size: 1em
+  margin-right: 10px
   &:hover
     @include gradient-vertical($col-page, white)
     border: solid 1px $col-content

@@ -16,7 +16,10 @@ function openlocal_resource_default_page_manager_pages() {
   $page->admin_title = 'Discover';
   $page->admin_description = 'Discover relevant information to the local area.';
   $page->path = 'discover';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Discover',
@@ -151,7 +154,10 @@ function openlocal_resource_default_page_manager_pages() {
   $page->admin_title = 'Resources';
   $page->admin_description = '';
   $page->path = 'resources';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Resources',

@@ -434,7 +434,10 @@ function openlocal_event_default_page_manager_pages() {
   $page->admin_title = 'Venues';
   $page->admin_description = 'A listing of venues for events.';
   $page->path = 'venues/!keywords';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Venues',

@@ -182,51 +182,6 @@ function openlocal_business_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'half';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_opening_hours';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'office_hours',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'daysformat' => 'long',
-        'hoursformat' => 0,
-        'compress' => FALSE,
-        'grouped' => FALSE,
-        'showclosed' => 'all',
-        'closedformat' => 'Closed',
-        'separator_days' => '<br />',
-        'separator_grouped_days' => ' - ',
-        'separator_day_hours' => ': ',
-        'separator_hours_hours' => '-',
-        'separator_more_hours' => ', ',
-        'current_status' => array(
-          'position' => 'hide',
-          'open_text' => 'Currently open!',
-          'closed_text' => 'Currently closed',
-        ),
-        'timezone_field' => '',
-        'date_first_day' => '0',
-      ),
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['half'][3] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'half';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
     $pane->shown = TRUE;
@@ -247,30 +202,24 @@ function openlocal_business_panelizer_defaults() {
       'css_class' => 'link-wrapper',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['half'][4] = 'new-5';
+    $display->content['new-4'] = $pane;
+    $display->panels['half'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-5';
     $pane->panel = 'half';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_promotions';
+    $pane->subtype = 'node:field_ol_business_tags';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'field_collection_fields',
+      'label' => 'inline',
+      'formatter' => 'taxonomy_term_reference_link',
       'delta_limit' => '0',
       'delta_offset' => '0',
       'delta_reversed' => 0,
-      'formatter_settings' => array(
-        'edit' => 'Edit',
-        'delete' => 'Delete',
-        'add' => 'Add',
-        'description' => 1,
-        'view_mode' => 'full',
-      ),
+      'formatter_settings' => array(),
       'context' => array(),
       'override_title' => 0,
       'override_title_text' => '',
@@ -294,12 +243,12 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['half'][5] = 'new-6';
+    $display->content['new-5'] = $pane;
+    $display->panels['half'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-6';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_geolocation';
@@ -342,8 +291,39 @@ function openlocal_business_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['quarter1'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'quarter1';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ol_address';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'addressfield_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'use_widget_handlers' => 1,
+        'format_handlers' => array(
+          0 => 'address',
+        ),
+      ),
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['quarter1'][0] = 'new-7';
+    $display->panels['quarter1'][1] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'quarter1';
@@ -366,53 +346,12 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['quarter1'][1] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'quarter1';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_tags';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'inline',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(),
-      'context' => array(),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'view_mode' => NULL,
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['quarter1'][2] = 'new-9';
+    $display->content['new-8'] = $pane;
+    $display->panels['quarter1'][2] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-9';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_business_telephone';
@@ -453,41 +392,10 @@ function openlocal_business_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['quarter1'][3] = 'new-10';
+    $display->content['new-9'] = $pane;
+    $display->panels['quarter1'][3] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
-    $pane->panel = 'quarter1';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_address';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'addressfield_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'use_widget_handlers' => 1,
-        'format_handlers' => array(
-          0 => 'address',
-        ),
-      ),
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['quarter1'][4] = 'new-11';
-    $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-10';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_business_email';
@@ -508,12 +416,12 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['quarter1'][5] = 'new-12';
+    $display->content['new-10'] = $pane;
+    $display->panels['quarter1'][4] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-11';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_business_website';
@@ -534,12 +442,12 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['quarter1'][6] = 'new-13';
+    $display->content['new-11'] = $pane;
+    $display->panels['quarter1'][5] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-12';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_business_twitter';
@@ -575,12 +483,57 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['quarter1'][6] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'quarter1';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ol_business_opening_hours';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'office_hours',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'daysformat' => 'long',
+        'hoursformat' => 0,
+        'compress' => FALSE,
+        'grouped' => FALSE,
+        'showclosed' => 'all',
+        'closedformat' => 'Closed',
+        'separator_days' => '<br />',
+        'separator_grouped_days' => ' - ',
+        'separator_day_hours' => ': ',
+        'separator_hours_hours' => '-',
+        'separator_more_hours' => ', ',
+        'current_status' => array(
+          'position' => 'hide',
+          'open_text' => 'Currently open!',
+          'closed_text' => 'Currently closed',
+        ),
+        'timezone_field' => '',
+        'date_first_day' => '0',
+      ),
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['quarter1'][7] = 'new-14';
+    $display->content['new-13'] = $pane;
+    $display->panels['quarter1'][7] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-14';
     $pane->panel = 'quarter2';
     $pane->type = 'block';
     $pane->subtype = 'block-2';
@@ -598,10 +551,57 @@ function openlocal_business_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['quarter2'][0] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
+    $pane->panel = 'quarter2';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ol_business_promotions';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'field_collection_fields',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'edit' => 'Edit',
+        'delete' => 'Delete',
+        'add' => 'Add',
+        'description' => 1,
+        'view_mode' => 'full',
+      ),
+      'context' => array(),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
     $display->content['new-15'] = $pane;
-    $display->panels['quarter2'][0] = 'new-15';
+    $display->panels['quarter2'][1] = 'new-15';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-5';
+  $display->title_pane = 'new-4';
   $panelizer->display = $display;
   $export['node:ol_business:default'] = $panelizer;
 

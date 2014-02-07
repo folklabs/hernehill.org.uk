@@ -47,7 +47,7 @@ function openlocal_alert_field_default_field_instances() {
   $field_instances['node-ol_alert-field_featured_image'] = array(
     'bundle' => 'ol_alert',
     'deleted' => 0,
-    'description' => 'Add a photo of a missing pet or something relevant to this alert.',
+    'description' => 'Add a photo of your missing pet, person or property that this alert relates to.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -86,7 +86,7 @@ function openlocal_alert_field_default_field_instances() {
       'focus_min_size' => '',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '300x300',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -313,7 +313,7 @@ function openlocal_alert_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('A link to a forum post or other web page that gives more information.');
   t('A short summary that will be displayed in the alert.');
-  t('Add a photo of a missing pet or something relevant to this alert.');
+  t('Add a photo of your missing pet, person or property that this alert relates to.');
   t('Category');
   t('Comment');
   t('Description');
