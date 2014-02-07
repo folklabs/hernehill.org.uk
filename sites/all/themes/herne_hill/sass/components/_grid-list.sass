@@ -23,7 +23,6 @@
 .section-groups
   .ol-item-grid
     .views-row
-      height: auto
       float: left
 
       // padding: 5px
@@ -41,55 +40,50 @@
 
 
 
-// Defines generic styling for Grid Lists
+// Mixin defining generic styling for Grid Lists
 
 @mixin grid-list()
   .views-row
     background-color: $col-content-lightest
     margin-bottom: 1em
 
+    // Grid list item title text
     .views-field-title
       @include list-item-title()
-      // background-color: yellow
-      height: 2.5em
-      padding: 1.5em 0 0.5em 0
-      // font-family: $merriweather
-      // font-size: 1.125em
-      // font-weight: 300
-      // a:link
+      padding: 0.5em 5px
+
 
     // Grid list item body text
     .views-field-body
-      // background-color: green
-      height: 5.5em
       .field-content
-        @include typography-grid-list-body
-        padding: 0.5em 5px
+
 
     // Grid list date field
     .views-field-created
-      border-top: solid 1px $col-page
-      height: 2em
-      // background-color: red
       .field-content
         @include typography-grid-list-date
         padding: 0.5em 0
 
-      // a:visited
-      // a:hover
-      //   color: $col-links
-      //   background-color: transparent
-      // a:active
 
-    .views-field-field-ol-business-category,
-    .views-field-field-ol-group-category
-      font-weight: 900
-      height: 32px
-      // padding-top: 2px
-      padding: 5px
-      // .field-content
-      a
-        vertical-align: bottom
+    // .views-field-field-ol-business-category,
+    // .views-field-field-ol-group-category
+
+
+    .views-field-name
+      display: inline-block
+      position: absolute
+      bottom: 0
+      right: 0
+      @include typography-grid-list-body
+
+    .views-field-field-user-picture
+      display: inline
+      position: absolute
+      bottom: 0
+      right: 0
+      float: left
+      max-width: 24px
+      margin-right: 5px
 
     // TODO: overrides needed? Check base versions.
     // .views-field-title
@@ -98,24 +92,98 @@
         // width: 95%
 
 
+
+
+
+
+
+
+//-----------------------------------------------------------------------------
+// GRID LIST STYLES FOR SERVICES AND COMMUNITY SECTION
+
+
 .view-id-openlocal_business,
 .view-id-openlocal_group
   @include grid-list()
   .views-row
-    height: 230px
+    height: 18em
+  .views-field-field-ol-group-category
+    @include typography-grid-list-heading
+    padding: 0.75em 5px 0.25em 5px
+    height: 1.5em
+    a
+      background-color: transparent
+      &:link,
+      &:visited
+        color: $col-links
+      &:hover
+        color: $col-links-darker
+      &:active
+        color: $col-links-lighter
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------------
+// GRID LIST STYLES FOR NEWS ARTICLES LISTING ON HOME & NEWS
 
 
 .view-display-id-list_news_articles
   @include grid-list()
   .views-row
+    position: relative
     height: auto
+    .views-field-title
+      width: 50%
+      max-width: 290px
+      float: right
+      height: 2em
+      padding: 0.5em 0 0.5em 0
+    .views-field-body
+      height: auto
+      width: 50%
+      max-width: 290px
+      float: right
+      display: block
+      @include typography-grid-list-body
+      padding: 0.5em 0
+    .views-field-created
+      display: block
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 50%
+      max-width: 290px
+      border-top: solid 1px $col-page
+
+
   .links
     float: right
-  .listing-image
+  .views-field-field-featured-image
+    background-color: purple
+    width: 50%
+    max-width: 280px
+    height: auto
     float: left
     margin-right: 10px
 
-// @media only screen and (max-width: 768px)
+    // .listing-image
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------------
+// MEDIA QUERIES FOR GRID LISTS
+
+// 768px Break point for tablets
 
 @media only screen and (max-width: 768px)
   .view-id-openlocal_business,
@@ -125,9 +193,9 @@
       width: 100%
       float: none
 
-.views-field-field-featured-image
-  img
-    .panopoly-image-quarter
-      float: right
-      max-width: 100%
-      max-height: 100%
+  .views-field-field-featured-image
+    img
+      .panopoly-image-quarter
+        float: right
+        max-width: 100%
+        max-height: 100%
