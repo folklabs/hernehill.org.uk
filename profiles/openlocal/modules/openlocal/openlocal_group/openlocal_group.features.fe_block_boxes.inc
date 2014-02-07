@@ -17,11 +17,11 @@ function openlocal_group_default_fe_block_boxes() {
   $fe_block_boxes->body = '<div class="ol-action-box">
 
 <div class="ol-action-button">
-<a href="node/add/ol-group"><span class="ol-action-span"><i class="fa fa-plus"></i> add group</span></a>
+<a href="/node/add/ol-group"><span class="ol-action-span"><i class="fa fa-plus"></i> add group</span></a>
 </div>
 
 <div>
-<a href="" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating groups</a>
+<a href="/contextual_help/how-create-group" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating groups</a>
 </div>
 </div>';
 

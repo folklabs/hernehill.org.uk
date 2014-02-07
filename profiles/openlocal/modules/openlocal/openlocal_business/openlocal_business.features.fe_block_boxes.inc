@@ -17,11 +17,11 @@ function openlocal_business_default_fe_block_boxes() {
   $fe_block_boxes->body = '<div class="ol-action-box">
 
 <div class="ol-action-button">
-<a href="node/add/ol-business"><span class="ol-action-span"><i class="fa fa-plus"></i> add business listing</span></a>
+<a href="/node/add/ol-business"><span class="ol-action-span"><i class="fa fa-plus"></i> add business listing</span></a>
 </div>
 
 <div>
-<a href="" class="ol-action-help"><i class="fa fa-question-circle"></i> About business listings</a>
+<a href="/contextual_help/how-add-business" class="ol-action-help"><i class="fa fa-question-circle"></i> About business listings</a>
 </div>
 </div>';
 
