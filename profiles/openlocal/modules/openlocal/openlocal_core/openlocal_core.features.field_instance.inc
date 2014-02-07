@@ -245,55 +245,6 @@ function openlocal_core_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_place-field_ol_disabled_toilet'
-  $field_instances['node-ol_place-field_ol_disabled_toilet'] = array(
-    'bundle' => 'ol_place',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Please choose this if this location has a disabled toilet.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 7,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_disabled_toilet',
-    'label' => 'Disabled toilet',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 11,
-    ),
-  );
-
   // Exported field_instance: 'node-ol_place-field_ol_event_venue'
   $field_instances['node-ol_place-field_ol_event_venue'] = array(
     'bundle' => 'ol_place',
@@ -309,7 +260,7 @@ function openlocal_core_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'featured' => array(
         'label' => 'above',
@@ -427,6 +378,51 @@ function openlocal_core_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ol_place-field_ol_location_properties'
+  $field_instances['node-ol_place-field_ol_location_properties'] = array(
+    'bundle' => 'ol_place',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Please select which facilities are available at this location.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_location_properties',
+    'label' => 'Available facilities',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_place-field_ol_place_category'
   $field_instances['node-ol_place-field_ol_place_category'] = array(
     'bundle' => 'ol_place',
@@ -439,7 +435,7 @@ function openlocal_core_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 11,
+        'weight' => 6,
       ),
       'featured' => array(
         'label' => 'above',
@@ -468,7 +464,7 @@ function openlocal_core_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -484,7 +480,7 @@ function openlocal_core_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -517,105 +513,7 @@ function openlocal_core_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 13,
-    ),
-  );
-
-  // Exported field_instance: 'node-ol_place-field_ol_wheelchair_accessible'
-  $field_instances['node-ol_place-field_ol_wheelchair_accessible'] = array(
-    'bundle' => 'ol_place',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Please choose this if this location is accessible to wheelchair users.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 6,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_wheelchair_accessible',
-    'label' => 'Wheelchair accessible',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-ol_place-field_ol_wi_fi'
-  $field_instances['node-ol_place-field_ol_wi_fi'] = array(
-    'bundle' => 'ol_place',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Please chose this if this location has wi-fi.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_wi_fi',
-    'label' => 'Wi-fi',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 14,
     ),
   );
 
@@ -623,23 +521,19 @@ function openlocal_core_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Add any tags that define this content in more detail, e.g. "school". Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering.');
   t('Address');
+  t('Available facilities');
   t('Category');
   t('Description');
   t('Details');
-  t('Disabled toilet');
   t('Enter the address of this location.');
   t('Event venue');
   t('Geolocation');
   t('Give any additional info about this place.');
   t('Image');
   t('Please choose this if this location can be used as an event venue. ');
-  t('Please choose this if this location has a disabled toilet.');
-  t('Please choose this if this location is accessible to wheelchair users.');
-  t('Please chose this if this location has wi-fi.');
+  t('Please select which facilities are available at this location.');
   t('Tags');
   t('This will appear in lists, .e.g. the list of venues.');
-  t('Wheelchair accessible');
-  t('Wi-fi');
 
   return $field_instances;
 }

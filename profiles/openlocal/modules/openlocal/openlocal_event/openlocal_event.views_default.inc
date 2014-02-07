@@ -983,11 +983,10 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -1116,28 +1115,6 @@ function openlocal_event_views_default_views() {
     'ol_business' => 'ol_business',
     'ol_place' => 'ol_place',
   );
-  /* Filter criterion: Content: Wheelchair accessible (field_ol_wheelchair_accessible) */
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['id'] = 'field_ol_wheelchair_accessible_value';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['table'] = 'field_data_field_ol_wheelchair_accessible';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['field'] = 'field_ol_wheelchair_accessible_value';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['value'] = array(
-    'all' => 'all',
-    0 => '0',
-    1 => '1',
-  );
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['operator_id'] = 'field_ol_wheelchair_accessible_value_op';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['label'] = 'Wheelchair accessible';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['operator'] = 'field_ol_wheelchair_accessible_value_op';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['identifier'] = 'field_ol_wheelchair_accessible_value';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['reduce'] = TRUE;
   /* Filter criterion: Content: Event venue (field_ol_event_venue) */
   $handler->display->display_options['filters']['field_ol_event_venue_value']['id'] = 'field_ol_event_venue_value';
   $handler->display->display_options['filters']['field_ol_event_venue_value']['table'] = 'field_data_field_ol_event_venue';
