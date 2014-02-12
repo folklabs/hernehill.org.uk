@@ -87,6 +87,7 @@ features[field_instance][] = ol_promotion-ol_promotion-field_ol_promotion_descri
 features[field_instance][] = ol_promotion-ol_promotion-field_ol_promotion_reward_scheme
 features[node][] = ol_business
 features[node][] = ol_reward_scheme
+features[page_manager_pages][] = services
 features[panelizer_defaults][] = node:ol_business:default
 features[panelizer_defaults][] = node:ol_reward_scheme:default
 features[panelizer_defaults][] = taxonomy_term:ol_business_category:default
