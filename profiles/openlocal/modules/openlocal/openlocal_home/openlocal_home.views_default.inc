@@ -48,15 +48,15 @@ function openlocal_home_views_default_views() {
   $handler->display->display_options['fields']['field_ol_radioactivity']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ol_radioactivity']['click_sort_column'] = 'radioactivity_energy';
   $handler->display->display_options['fields']['field_ol_radioactivity']['settings'] = array(
-    'energy' => '10',
+    'energy' => '0',
     'type' => 'popularity',
     'accuracy' => '100',
   );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Radioactivity (field_ol_radioactivity:radioactivity_energy) */
+  $handler->display->display_options['sorts']['field_ol_radioactivity_radioactivity_energy']['id'] = 'field_ol_radioactivity_radioactivity_energy';
+  $handler->display->display_options['sorts']['field_ol_radioactivity_radioactivity_energy']['table'] = 'field_data_field_ol_radioactivity';
+  $handler->display->display_options['sorts']['field_ol_radioactivity_radioactivity_energy']['field'] = 'field_ol_radioactivity_radioactivity_energy';
+  $handler->display->display_options['sorts']['field_ol_radioactivity_radioactivity_energy']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

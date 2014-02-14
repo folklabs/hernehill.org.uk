@@ -5,12 +5,18 @@ package = OpenLocal
 php = 5.2.4
 version = 7.x-1.0-alpha1
 project = openlocal_home
+dependencies[] = ctools
 dependencies[] = defaultcontent
 dependencies[] = fe_block
+dependencies[] = features
+dependencies[] = menu
+dependencies[] = page_manager
 dependencies[] = panelizer
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_content
+features[page_manager_pages][] = home
+features_exclude[dependencies][defaultconfig] = defaultconfig
 features[content_menu_links][] = main-menu:frontpage
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
@@ -19,11 +25,7 @@ features[fe_block_boxes][] = ol_home_actions
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
 features[menu_links][] = main-menu:frontpage
-<<<<<<< HEAD
 features[page_manager_pages][] = home
 features[variable][] = site_frontpage
 features[views_view][] = openlocal_what_s_hot
-=======
->>>>>>> Site-wide changes to styles and Features
-features_exclude[dependencies][defaultconfig] = defaultconfig
 project path = profiles/openlocal/modules/openlocal
