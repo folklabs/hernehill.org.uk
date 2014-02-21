@@ -876,7 +876,6 @@ div#panels-ipe-control-container {
 }
 /* line 166, ../sass/components/_grid-list.sass */
 .view-display-id-list_news_articles .views-field-field-featured-image {
-  background-color: purple;
   width: 50%;
   max-width: 280px;
   height: auto;
@@ -885,7 +884,7 @@ div#panels-ipe-control-container {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 192, ../sass/components/_grid-list.sass */
+  /* line 191, ../sass/components/_grid-list.sass */
   .view-id-openlocal_business .views-row,
   .view-id-openlocal_group .views-row,
   .view-display-id-list_news_articles .views-row {
@@ -893,7 +892,7 @@ div#panels-ipe-control-container {
     float: none;
   }
 
-  /* line 198, ../sass/components/_grid-list.sass */
+  /* line 197, ../sass/components/_grid-list.sass */
   .views-field-field-featured-image img .panopoly-image-quarter {
     float: right;
     max-width: 100%;
@@ -2131,18 +2130,24 @@ div.form-item-notify {
 .pane-node-field-ol-business-email,
 .pane-node-field-ol-business-website,
 .pane-node-field-ol-business-twitter,
-.pane-node-field-ol-business-opening-hours {
+.pane-node-field-ol-business-opening-hours,
+.pane-node-field-ol-event-category,
+.pane-node-field-ol-event-date,
+.pane-node-field-ol-event-date {
   background-color: #e3dcd1;
   border-bottom: solid 1px #f4eee0;
   border-bottom: solid 1px #f4eee0;
 }
-/* line 38, ../sass/components/_details.sass */
+/* line 41, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-label,
 .pane-node-field-ol-business-telephone .field-label,
 .pane-node-field-ol-business-email .field-label,
 .pane-node-field-ol-business-website .field-label,
 .pane-node-field-ol-business-twitter .field-label,
-.pane-node-field-ol-business-opening-hours .field-label {
+.pane-node-field-ol-business-opening-hours .field-label,
+.pane-node-field-ol-event-category .field-label,
+.pane-node-field-ol-event-date .field-label,
+.pane-node-field-ol-event-date .field-label {
   font-family: "Lato";
   font-weight: 900;
   font-size: 16px;
@@ -2151,7 +2156,7 @@ div.form-item-notify {
   padding: 0.25em 0 0 0;
   padding: 0.75em 5px 0.25em 5px;
 }
-/* line 42, ../sass/components/_details.sass */
+/* line 45, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-label-inline .field-item,
 .pane-node-field-ol-address .field-label-inline .field-item a,
 .pane-node-field-ol-business-telephone .field-label-inline .field-item,
@@ -2163,16 +2168,25 @@ div.form-item-notify {
 .pane-node-field-ol-business-twitter .field-label-inline .field-item,
 .pane-node-field-ol-business-twitter .field-label-inline .field-item a,
 .pane-node-field-ol-business-opening-hours .field-label-inline .field-item,
-.pane-node-field-ol-business-opening-hours .field-label-inline .field-item a {
+.pane-node-field-ol-business-opening-hours .field-label-inline .field-item a,
+.pane-node-field-ol-event-category .field-label-inline .field-item,
+.pane-node-field-ol-event-category .field-label-inline .field-item a,
+.pane-node-field-ol-event-date .field-label-inline .field-item,
+.pane-node-field-ol-event-date .field-label-inline .field-item a,
+.pane-node-field-ol-event-date .field-label-inline .field-item,
+.pane-node-field-ol-event-date .field-label-inline .field-item a {
   padding-top: 0.5em;
 }
-/* line 46, ../sass/components/_details.sass */
+/* line 49, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item,
 .pane-node-field-ol-business-telephone .field-item,
 .pane-node-field-ol-business-email .field-item,
 .pane-node-field-ol-business-website .field-item,
 .pane-node-field-ol-business-twitter .field-item,
-.pane-node-field-ol-business-opening-hours .field-item {
+.pane-node-field-ol-business-opening-hours .field-item,
+.pane-node-field-ol-event-category .field-item,
+.pane-node-field-ol-event-date .field-item,
+.pane-node-field-ol-event-date .field-item {
   font-family: "Lato";
   font-weight: 400;
   font-size: 16px;
@@ -2183,16 +2197,19 @@ div.form-item-notify {
   padding: 0em 5px 1em 5px;
   line-height: 24px;
 }
-/* line 51, ../sass/components/_details.sass */
+/* line 54, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a,
 .pane-node-field-ol-business-telephone .field-item a,
 .pane-node-field-ol-business-email .field-item a,
 .pane-node-field-ol-business-website .field-item a,
 .pane-node-field-ol-business-twitter .field-item a,
-.pane-node-field-ol-business-opening-hours .field-item a {
+.pane-node-field-ol-business-opening-hours .field-item a,
+.pane-node-field-ol-event-category .field-item a,
+.pane-node-field-ol-event-date .field-item a,
+.pane-node-field-ol-event-date .field-item a {
   background-color: transparent;
 }
-/* line 53, ../sass/components/_details.sass */
+/* line 56, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a:link, .pane-node-field-ol-address .field-item a:visited,
 .pane-node-field-ol-business-telephone .field-item a:link,
 .pane-node-field-ol-business-telephone .field-item a:visited,
@@ -2203,28 +2220,40 @@ div.form-item-notify {
 .pane-node-field-ol-business-twitter .field-item a:link,
 .pane-node-field-ol-business-twitter .field-item a:visited,
 .pane-node-field-ol-business-opening-hours .field-item a:link,
-.pane-node-field-ol-business-opening-hours .field-item a:visited {
+.pane-node-field-ol-business-opening-hours .field-item a:visited,
+.pane-node-field-ol-event-category .field-item a:link,
+.pane-node-field-ol-event-category .field-item a:visited,
+.pane-node-field-ol-event-date .field-item a:link,
+.pane-node-field-ol-event-date .field-item a:visited,
+.pane-node-field-ol-event-date .field-item a:link,
+.pane-node-field-ol-event-date .field-item a:visited {
   color: #20806a;
 }
-/* line 56, ../sass/components/_details.sass */
+/* line 59, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a:hover,
 .pane-node-field-ol-business-telephone .field-item a:hover,
 .pane-node-field-ol-business-email .field-item a:hover,
 .pane-node-field-ol-business-website .field-item a:hover,
 .pane-node-field-ol-business-twitter .field-item a:hover,
-.pane-node-field-ol-business-opening-hours .field-item a:hover {
+.pane-node-field-ol-business-opening-hours .field-item a:hover,
+.pane-node-field-ol-event-category .field-item a:hover,
+.pane-node-field-ol-event-date .field-item a:hover,
+.pane-node-field-ol-event-date .field-item a:hover {
   color: #144c3f;
 }
-/* line 58, ../sass/components/_details.sass */
+/* line 61, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a:active,
 .pane-node-field-ol-business-telephone .field-item a:active,
 .pane-node-field-ol-business-email .field-item a:active,
 .pane-node-field-ol-business-website .field-item a:active,
 .pane-node-field-ol-business-twitter .field-item a:active,
-.pane-node-field-ol-business-opening-hours .field-item a:active {
+.pane-node-field-ol-business-opening-hours .field-item a:active,
+.pane-node-field-ol-event-category .field-item a:active,
+.pane-node-field-ol-event-date .field-item a:active,
+.pane-node-field-ol-event-date .field-item a:active {
   color: #e2e3d7;
 }
-/* line 60, ../sass/components/_details.sass */
+/* line 63, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item .field-label,
 .pane-node-field-ol-address .field-item .field-item,
 .pane-node-field-ol-business-telephone .field-item .field-label,
@@ -2236,16 +2265,22 @@ div.form-item-notify {
 .pane-node-field-ol-business-twitter .field-item .field-label,
 .pane-node-field-ol-business-twitter .field-item .field-item,
 .pane-node-field-ol-business-opening-hours .field-item .field-label,
-.pane-node-field-ol-business-opening-hours .field-item .field-item {
+.pane-node-field-ol-business-opening-hours .field-item .field-item,
+.pane-node-field-ol-event-category .field-item .field-label,
+.pane-node-field-ol-event-category .field-item .field-item,
+.pane-node-field-ol-event-date .field-item .field-label,
+.pane-node-field-ol-event-date .field-item .field-item,
+.pane-node-field-ol-event-date .field-item .field-label,
+.pane-node-field-ol-event-date .field-item .field-item {
   padding: 1em 0 0 0;
 }
 
-/* line 73, ../sass/components/_details.sass */
+/* line 76, ../sass/components/_details.sass */
 .pane-node-field-featured-categories {
   margin-bottom: 1em;
   border-top: solid 1px #b19fa7;
 }
-/* line 79, ../sass/components/_details.sass */
+/* line 82, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-label {
   display: block;
   width: 100%;
@@ -2274,21 +2309,21 @@ div.form-item-notify {
   color: #98b9b1;
   background-color: transparent;
 }
-/* line 85, ../sass/components/_details.sass */
+/* line 88, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items {
   width: 100%;
 }
-/* line 88, ../sass/components/_details.sass */
+/* line 91, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item {
   display: block;
   clear: both;
   border-bottom: 1px #e3dcd1 solid;
 }
-/* line 94, ../sass/components/_details.sass */
+/* line 97, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a {
   padding: 3.5% 5px 1.5% 5px;
 }
-/* line 96, ../sass/components/_details.sass */
+/* line 99, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a:link, .pane-node-field-featured-categories div .field-items .field-item a:visited {
   display: block;
   height: 2em;
@@ -2298,12 +2333,12 @@ div.form-item-notify {
   text-decoration: none;
   color: #20806a;
 }
-/* line 106, ../sass/components/_details.sass */
+/* line 109, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a:hover {
   background-color: #e2e3d7;
   color: #0d332a;
 }
-/* line 109, ../sass/components/_details.sass */
+/* line 112, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a:active {
   color: white;
   background-color: #20806a;
