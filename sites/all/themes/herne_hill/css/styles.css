@@ -1756,7 +1756,12 @@ tr.selected td {
 /* line 278, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384008826');
+  background-image: url('../images/progress.gif?1376896851');
+}
+
+/* line 282, ../sass/components/_admin.sass */
+body#tinymce p, pre {
+  font-size: 19.2px;
 }
 
 /* line 6, ../sass/components/_calendar.sass */
