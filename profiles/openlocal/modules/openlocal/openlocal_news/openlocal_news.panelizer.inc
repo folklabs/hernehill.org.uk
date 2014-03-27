@@ -150,21 +150,25 @@ function openlocal_news_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'half';
-    $pane->type = 'node_created';
-    $pane->subtype = 'node_created';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'format' => 'panopoly_day',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'Meta data',
+      'title' => '',
+      'body' => '<div class="ol-name-date"><p>%user:name</p><p>%node:created</p></div><div class="ol-comments"><span class="ol-comment-count">%node:comment-count</span> Comments</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'ol-meta-data',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();

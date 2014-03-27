@@ -4429,6 +4429,53 @@ h2.node-title a:active {
   color: red;
 }
 
+/* line 11, ../sass/components/_user.sass */
+.panel-panel-inner .pane-user-profile {
+  width: 15%;
+  display: inline-block;
+  float: left;
+}
+/* line 15, ../sass/components/_user.sass */
+.panel-panel-inner .pane-user-profile .pane-user-name {
+  margin-top: 5px;
+}
+/* line 20, ../sass/components/_user.sass */
+.panel-panel-inner .pane-node-created {
+  float: right;
+  display: inline-block;
+}
+/* line 24, ../sass/components/_user.sass */
+.panel-panel-inner .pane-custom {
+  display: inline-block;
+  height: 20px;
+  margin-bottom: 50px;
+}
+/* line 28, ../sass/components/_user.sass */
+.panel-panel-inner .pane-custom .ol-comment-count {
+  color: green;
+  font-size: 1.3em;
+  display: block;
+}
+/* line 32, ../sass/components/_user.sass */
+.panel-panel-inner .pane-custom p {
+  height: 20px;
+  margin: 0;
+}
+
+/* line 37, ../sass/components/_user.sass */
+.ol-meta-data {
+  display: inline-block;
+  width: 80%;
+}
+/* line 40, ../sass/components/_user.sass */
+.ol-meta-data div {
+  display: inline-block;
+}
+/* line 43, ../sass/components/_user.sass */
+.ol-meta-data .ol-comments {
+  float: right;
+}
+
 /* line 60, ../sass/styles.sass */
 .socialmedia {
   display: inline-block;
