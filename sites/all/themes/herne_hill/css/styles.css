@@ -4439,41 +4439,42 @@ h2.node-title a:active {
 .panel-panel-inner .pane-user-profile .pane-user-name {
   margin-top: 5px;
 }
-/* line 20, ../sass/components/_user.sass */
-.panel-panel-inner .pane-node-created {
-  float: right;
-  display: inline-block;
-}
-/* line 24, ../sass/components/_user.sass */
-.panel-panel-inner .pane-custom {
-  display: inline-block;
-  height: 20px;
-  margin-bottom: 50px;
-}
 /* line 28, ../sass/components/_user.sass */
 .panel-panel-inner .pane-custom .ol-comment-count {
-  color: green;
-  font-size: 1.3em;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-weight: bold;
   display: block;
 }
-/* line 32, ../sass/components/_user.sass */
+/* line 34, ../sass/components/_user.sass */
 .panel-panel-inner .pane-custom p {
   height: 20px;
   margin: 0;
 }
 
-/* line 37, ../sass/components/_user.sass */
+/* line 39, ../sass/components/_user.sass */
 .ol-meta-data {
+  font-family: "Lato";
   display: inline-block;
   width: 80%;
 }
-/* line 40, ../sass/components/_user.sass */
+/* line 43, ../sass/components/_user.sass */
 .ol-meta-data div {
   display: inline-block;
 }
-/* line 43, ../sass/components/_user.sass */
+/* line 45, ../sass/components/_user.sass */
+.ol-meta-data .ol-username {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-weight: bold;
+  color: #20806a;
+}
+/* line 50, ../sass/components/_user.sass */
 .ol-meta-data .ol-comments {
   float: right;
+}
+/* line 52, ../sass/components/_user.sass */
+.ol-meta-data .ol-comments .ol-comment-count {
+  font-size: 1.6em;
+  color: #20806a;
 }
 
 /* line 60, ../sass/styles.sass */

@@ -157,7 +157,7 @@ function openlocal_news_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => 'Meta data',
       'title' => '',
-      'body' => '<div class="ol-name-date"><p>%user:name</p><p>%node:created</p></div><div class="ol-comments"><span class="ol-comment-count">%node:comment-count</span> Comments</div>',
+      'body' => '<div class="ol-name-date"><p class="ol-username">%user:name</p><p>%node:created</p></div><div class="ol-comments"><span class="ol-comment-count">%node:comment-count</span> Comments</div>',
       'format' => 'panopoly_html_text',
       'substitute' => 1,
     );
