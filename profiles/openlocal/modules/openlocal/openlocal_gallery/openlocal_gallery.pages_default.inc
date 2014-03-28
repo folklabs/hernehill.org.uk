@@ -20,7 +20,18 @@ function openlocal_gallery_default_page_manager_pages() {
     'type' => 'none',
     'settings' => NULL,
   );
-  $page->menu = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Galleries',
+    'name' => 'main-menu',
+    'weight' => '0',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array();
   $page->conf = array(
     'admin_paths' => FALSE,
@@ -44,6 +55,10 @@ function openlocal_gallery_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Galleries',
+    'panels_breadcrumbs_paths' => '',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'bryant_flipped_flipped';
@@ -95,6 +110,27 @@ function openlocal_gallery_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-1'] = $pane;
     $display->panels['contentmain'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'block-9';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['sidebar'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;

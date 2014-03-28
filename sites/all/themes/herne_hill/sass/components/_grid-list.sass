@@ -20,24 +20,23 @@
 
 .page-groups,
 .page-services,
+
 .section-groups
-  .ol-item-grid
-    .views-row
-      float: left
-
-      // padding: 5px
-      width: 100%
-      max-width: 280px
-
-    .views-row-odd
-      margin-right: 10px
-    .views-row-even
-      margin-left: 10px
 
 
+  .views-row-odd
+    margin-right: 10px
+  // .views-row-even
+  //   margin-left: 0px
 
 
+.ol-item-grid
+  .views-row
+    display: inline-block
 
+    // padding: 5px
+    width: 100%
+    max-width: 280px
 
 
 // Mixin defining generic styling for Grid Lists
@@ -46,17 +45,16 @@
   .views-row
     background-color: $col-content-lightest
     margin-bottom: 1em
+    vertical-align: top
 
     // Grid list item title text
     .views-field-title
       @include list-item-title()
       padding: 0.5em 5px
 
-
     // Grid list item body text
     .views-field-body
       .field-content
-
 
     // Grid list date field
     .views-field-created
@@ -64,10 +62,8 @@
         @include typography-grid-list-date
         padding: 0.5em 0
 
-
     // .views-field-field-ol-business-category,
     // .views-field-field-ol-group-category
-
 
     .views-field-name
       display: inline-block
@@ -92,24 +88,24 @@
         // width: 95%
 
 
-
-
-
-
-
-
 //-----------------------------------------------------------------------------
 // GRID LIST STYLES FOR SERVICES AND COMMUNITY SECTION
 
+.page-galleries
+  @include grid-list()
+  .views-row
+    margin-right: 10px
 
-.view-id-openlocal_business,
-.view-id-openlocal_group
+
+.view-id-openlocal_business_facet_search,
+.view-id-openlocal_group,
+.view-id-openlocal_gallery
   @include grid-list()
   .views-row
     height: 18em
   .views-field-field-ol-group-category
     @include typography-grid-list-heading
-    padding: 0.75em 5px 0.25em 5px
+    // padding: 0.75em 5px 0.25em 5px
     height: 1.5em
     a
       background-color: transparent
@@ -120,12 +116,6 @@
         color: $col-links-darker
       &:active
         color: $col-links-lighter
-
-
-
-
-
-
 
 
 //-----------------------------------------------------------------------------
@@ -171,12 +161,6 @@
     margin-right: 10px
 
     // .listing-image
-
-
-
-
-
-
 
 
 //-----------------------------------------------------------------------------

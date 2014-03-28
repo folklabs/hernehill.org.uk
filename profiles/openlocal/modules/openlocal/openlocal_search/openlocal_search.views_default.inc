@@ -13,7 +13,7 @@ function openlocal_search_views_default_views() {
   $view = new view();
   $view->name = 'openlocal_business_facet_search';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'openlocal';
   $view->base_table = 'search_api_index_openlocal_index';
   $view->human_name = 'OpenLocal Business Facet Search';
   $view->core = 7;
@@ -22,6 +22,7 @@ function openlocal_search_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'ol-item-grid';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
