@@ -214,6 +214,7 @@ h2.node-title
 
 .pane-openlocal-what-s-hot-panel-pane-1
   background-color: $col-content-lightest
+  margin-bottom: $panel-bottom-margin
 
   // View inside panel
   .view-openlocal-what-s-hot
@@ -223,10 +224,9 @@ h2.node-title
       border-bottom: solid 1px $col-page
       // Title of each hot item
       .views-field-title
-        margin: 0.5em 0
-        display: inline
+        // margin: 0.5em 0
+        // display: inline
         width: 80%
-        float: left
         @include list-item-title
         line-height: 1.25em
 
@@ -236,6 +236,7 @@ h2.node-title
         padding: 0
         line-height: 1.25em
         margin: 0.5em 0
+        float: right
         .field-content
           display: inline
           width: 20%
@@ -254,7 +255,7 @@ h2.node-title
 
 .pane-ol-forum-recent-comments-panel-pane-1,
   background-color: $col-content-lightest
-  margin-bottom: 1em
+  margin-bottom: $panel-bottom-margin
 
   // Wrapper around Comment post title
   .views-field-subject

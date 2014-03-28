@@ -3944,18 +3944,16 @@ h2.node-title a:active {
 /* line 215, ../sass/components/_panel-list.sass */
 .pane-openlocal-what-s-hot-panel-pane-1 {
   background-color: #e3dcd1;
+  margin-bottom: 1em;
 }
-/* line 221, ../sass/components/_panel-list.sass */
+/* line 222, ../sass/components/_panel-list.sass */
 .pane-openlocal-what-s-hot-panel-pane-1 .view-openlocal-what-s-hot .views-row {
   padding: 0.5em 5px;
   border-bottom: solid 1px #f4eee0;
 }
-/* line 225, ../sass/components/_panel-list.sass */
+/* line 226, ../sass/components/_panel-list.sass */
 .pane-openlocal-what-s-hot-panel-pane-1 .view-openlocal-what-s-hot .views-row .views-field-title {
-  margin: 0.5em 0;
-  display: inline;
   width: 80%;
-  float: left;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 1em;
   line-height: 1.25em;
@@ -3985,8 +3983,9 @@ h2.node-title a:active {
   padding: 0;
   line-height: 1.25em;
   margin: 0.5em 0;
+  float: right;
 }
-/* line 239, ../sass/components/_panel-list.sass */
+/* line 240, ../sass/components/_panel-list.sass */
 .pane-openlocal-what-s-hot-panel-pane-1 .view-openlocal-what-s-hot .views-row .views-field-field-ol-radioactivity .field-content {
   display: inline;
   width: 20%;
@@ -4018,16 +4017,16 @@ h2.node-title a:active {
   background-color: transparent;
 }
 
-/* line 255, ../sass/components/_panel-list.sass */
+/* line 256, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 {
   background-color: #e3dcd1;
   margin-bottom: 1em;
 }
-/* line 260, ../sass/components/_panel-list.sass */
+/* line 261, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject {
   padding: 0.5em 5px 0 5px;
 }
-/* line 262, ../sass/components/_panel-list.sass */
+/* line 263, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 1em;
@@ -4052,23 +4051,23 @@ h2.node-title a:active {
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a a:active {
   color: #98b9b1;
 }
-/* line 265, ../sass/components/_panel-list.sass */
+/* line 266, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a:link, .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a:visited {
   color: #20806a;
 }
-/* line 268, ../sass/components/_panel-list.sass */
+/* line 269, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a:hover {
   color: #144c3f;
 }
-/* line 270, ../sass/components/_panel-list.sass */
+/* line 271, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a:active {
   color: #98b9b1;
 }
-/* line 275, ../sass/components/_panel-list.sass */
+/* line 276, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-created {
   padding: 0 5px;
 }
-/* line 279, ../sass/components/_panel-list.sass */
+/* line 280, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-created .views-label {
   font-family: "Lato";
   font-size: 1em;
@@ -4076,7 +4075,7 @@ h2.node-title a:active {
   line-height: 1em;
   color: #77666d;
 }
-/* line 282, ../sass/components/_panel-list.sass */
+/* line 283, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-created .field-content {
   font-family: "Lato";
   font-size: 1em;
@@ -4085,12 +4084,12 @@ h2.node-title a:active {
   color: #77666d;
   font-weight: 400;
 }
-/* line 288, ../sass/components/_panel-list.sass */
+/* line 289, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name {
   border-bottom: solid 1px #f4eee0;
   padding: 0 5px 0 5px;
 }
-/* line 292, ../sass/components/_panel-list.sass */
+/* line 293, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name .views-label {
   font-family: "Lato";
   font-size: 1em;
@@ -4099,7 +4098,7 @@ h2.node-title a:active {
   color: #77666d;
   padding: 0;
 }
-/* line 297, ../sass/components/_panel-list.sass */
+/* line 298, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name a.username {
   font-family: "Lato";
   font-size: 1em;
@@ -4108,15 +4107,15 @@ h2.node-title a:active {
   color: #77666d;
   padding: 0;
 }
-/* line 300, ../sass/components/_panel-list.sass */
+/* line 301, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name a.username:link, .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name a.username:visited {
   color: #20806a;
 }
-/* line 303, ../sass/components/_panel-list.sass */
+/* line 304, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name a.username:hover {
   color: #144c3f;
 }
-/* line 305, ../sass/components/_panel-list.sass */
+/* line 306, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name a.username:active {
   color: #98b9b1;
 }
