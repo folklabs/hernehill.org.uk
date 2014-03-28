@@ -115,7 +115,7 @@ function openlocal_news_field_default_field_instances() {
   $field_instances['node-openlocal_news_article-field_featured_image'] = array(
     'bundle' => 'openlocal_news_article',
     'deleted' => 0,
-    'description' => 'Add an image if you have one. Make sure you add an "alt tag" after you\'ve uploaded an image. Adding alternative text to images is really important to help many of our visitors with poor eyesight. Without an alt tag, they won\'t be able to know what is in the image and will not benefit from it.',
+    'description' => 'Please add an image to this post to promote it on our homepage and news listings. Don\'t forget to add some "alt tag" text to help those understand what your picture shows as this text is what can be read out automatically by screen readers for those with visual impairment.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -328,13 +328,13 @@ function openlocal_news_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Add an image if you have one. Make sure you add an "alt tag" after you\'ve uploaded an image. Adding alternative text to images is really important to help many of our visitors with poor eyesight. Without an alt tag, they won\'t be able to know what is in the image and will not benefit from it.');
   t('Add any tags that define this content in more detail, e.g. "lido". Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.');
   t('Body');
   t('Categories');
   t('Choose the categories your article fits into. E.g, news about an event would go into the "Events" category.');
   t('Enter the content of the news article.');
   t('Feature content');
+  t('Please add an image to this post to promote it on our homepage and news listings. Don\'t forget to add some "alt tag" text to help those understand what your picture shows as this text is what can be read out automatically by screen readers for those with visual impairment.');
   t('Primary Image');
   t('Radioactivity');
   t('Tags');
