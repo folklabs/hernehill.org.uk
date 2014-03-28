@@ -2927,6 +2927,12 @@ a.button {
   display: block;
 }
 
+/* line 33, ../sass/components/_gallery.sass */
+.field-name-field-ol-gallery-images .field-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 /* line 6, ../sass/components/_header.sass */
 .header__logo {
   float: left;
