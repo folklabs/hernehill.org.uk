@@ -4559,6 +4559,15 @@ h2.node-title a:active {
   color: #20806a;
 }
 
+/* line 58, ../sass/components/_user.sass */
+.view-og-extras-members .views-field-picture {
+  margin: 0 10px 0px 10px;
+}
+/* line 60, ../sass/components/_user.sass */
+.view-og-extras-members .views-field-name {
+  margin: 0 10px 0px 10px;
+}
+
 /* line 60, ../sass/styles.sass */
 .socialmedia {
   display: inline-block;
