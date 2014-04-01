@@ -171,9 +171,9 @@ function panopoly_admin_form_alter(&$form, &$form_state, $form_id) {
   }
 
   // Remove the description from the featured image
-  if (!empty($form['field_featured_image'])) {
-    $form['field_featured_image']['und'][0]['#description'] = '';
-  }
+  // if (!empty($form['field_featured_image'])) {
+  //   $form['field_featured_image']['und'][0]['#description'] = '';
+  // }
 
   // Hide the featured category field if there are no featured category options
   if (!empty($form['field_featured_categories']) && $form['field_featured_categories']['und']['#type'] != 'textfield') {
