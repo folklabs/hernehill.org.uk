@@ -184,6 +184,27 @@ function openlocal_home_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'column2';
+    $pane->type = 'block';
+    $pane->subtype = 'block-8';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['column2'][1] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_what_s_hot-panel_pane_1';
     $pane->shown = TRUE;
@@ -209,14 +230,17 @@ function openlocal_home_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'ol-whats-hot-panel',
+    );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['column2'][1] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['column2'][2] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'ol_forum_recent_comments-panel_pane_1';
@@ -238,27 +262,6 @@ function openlocal_home_default_page_manager_pages() {
       'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['column2'][2] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'column2';
-    $pane->type = 'block';
-    $pane->subtype = 'block-8';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
