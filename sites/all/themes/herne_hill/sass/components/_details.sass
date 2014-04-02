@@ -34,6 +34,7 @@
 .pane-node-field-ol-business-opening-hours,
 .pane-node-field-ol-event-category,
 .pane-node-field-ol-event-date,
+.pane-node-og-group-ref
   background-color: $col-content-lightest
   border-bottom: solid 1px $col-page
   .field-label
@@ -61,9 +62,15 @@
     .field-label,
     .field-item
       padding: 1em 0 0 0
+    h2
+      border-bottom: none
 
-
-
+// Remove bottom padding from category list items
+.field-name-field-ol-event-category
+  .field-item
+    padding-bottom: 0
+  a
+    padding-top: 0
 
 
 
