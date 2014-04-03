@@ -4441,38 +4441,81 @@ h2.node-title a:active {
   color: white;
 }
 
-/* line 68, ../sass/components/_view-list.sass */
+/* line 62, ../sass/components/_view-list.sass */
+.view-display-id-panel_pane_4 .views-field-title {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+/* line 97, ../sass/_mixins.sass */
+.view-display-id-panel_pane_4 .views-field-title a:link {
+  color: #20806a;
+}
+/* line 99, ../sass/_mixins.sass */
+.view-display-id-panel_pane_4 .views-field-title a:visited {
+  color: #20806a;
+}
+/* line 101, ../sass/_mixins.sass */
+.view-display-id-panel_pane_4 .views-field-title a:hover {
+  color: #144c3f;
+  background-color: transparent;
+}
+/* line 104, ../sass/_mixins.sass */
+.view-display-id-panel_pane_4 .views-field-title a:active {
+  color: #98b9b1;
+}
+/* line 65, ../sass/components/_view-list.sass */
+.view-display-id-panel_pane_4 .date-display-single {
+  display: block;
+}
+/* line 67, ../sass/components/_view-list.sass */
+.view-display-id-panel_pane_4 .views-field-field-featured-image {
+  padding: 0 10px 10px 0;
+  vertical-align: top;
+}
+/* line 71, ../sass/components/_view-list.sass */
+.view-display-id-panel_pane_4 table tr {
+  border-bottom: solid 1px #e3dcd1;
+}
+/* line 74, ../sass/components/_view-list.sass */
+.view-display-id-panel_pane_4 .views-field {
+  vertical-align: top;
+}
+
+/* line 83, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues {
   margin: 0.5em 0;
 }
-/* line 70, ../sass/components/_view-list.sass */
+/* line 85, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table {
   width: 100%;
   margin: 0 0;
 }
-/* line 73, ../sass/components/_view-list.sass */
+/* line 88, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table td {
   vertical-align: top;
 }
-/* line 76, ../sass/components/_view-list.sass */
+/* line 91, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table tr {
   border-bottom: solid 1px #e3dcd1;
   background-color: transparent;
 }
-/* line 79, ../sass/components/_view-list.sass */
+/* line 94, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table td.ol-date-only {
   padding: 0.5em 5px;
 }
-/* line 81, ../sass/components/_view-list.sass */
+/* line 96, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table td.views-field-field-featured-image {
   padding: 0.5em 0;
   width: 130px;
 }
-/* line 84, ../sass/components/_view-list.sass */
+/* line 99, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table td.views-field-title {
   padding: 0.5em 10px;
 }
-/* line 88, ../sass/components/_view-list.sass */
+/* line 103, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table .views-field-title div a {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 1em;
@@ -4496,7 +4539,7 @@ h2.node-title a:active {
 .view-openlocal-event-venues table .views-field-title div a a:active {
   color: #98b9b1;
 }
-/* line 92, ../sass/components/_view-list.sass */
+/* line 107, ../sass/components/_view-list.sass */
 .view-openlocal-event-venues table .views-field-title span {
   font-family: "Lato";
   font-size: 1em;

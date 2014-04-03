@@ -528,6 +528,176 @@ function openlocal_group_views_default_views() {
       'label' => 'OG membership: Group ID',
     ),
   );
+
+  /* Display: All */
+  $handler = $view->new_display('panel_pane', 'All', 'panel_pane_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Updates';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_featured_image' => 'field_featured_image',
+    'title' => 'title',
+    'field_ol_event_date' => 'title',
+    'field_ol_details' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_featured_image' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_ol_event_date' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_ol_details' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => 'openlocal_events_listing',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_ol_event_date']['id'] = 'field_ol_event_date';
+  $handler->display->display_options['fields']['field_ol_event_date']['table'] = 'field_data_field_ol_event_date';
+  $handler->display->display_options['fields']['field_ol_event_date']['field'] = 'field_ol_event_date';
+  $handler->display->display_options['fields']['field_ol_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_event_date']['settings'] = array(
+    'format_type' => 'panopoly_day',
+    'fromto' => 'value',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'hide',
+  );
+  $handler->display->display_options['fields']['field_ol_event_date']['delta_offset'] = '0';
+  /* Field: Content: Details */
+  $handler->display->display_options['fields']['field_ol_details']['id'] = 'field_ol_details';
+  $handler->display->display_options['fields']['field_ol_details']['table'] = 'field_data_field_ol_details';
+  $handler->display->display_options['fields']['field_ol_details']['field'] = 'field_ol_details';
+  $handler->display->display_options['fields']['field_ol_details']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_details']['alter']['max_length'] = '200';
+  $handler->display->display_options['fields']['field_ol_details']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_ol_details']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: OG membership: Group_type */
+  $handler->display->display_options['filters']['group_type']['id'] = 'group_type';
+  $handler->display->display_options['filters']['group_type']['table'] = 'og_membership';
+  $handler->display->display_options['filters']['group_type']['field'] = 'group_type';
+  $handler->display->display_options['filters']['group_type']['relationship'] = 'og_membership_rel';
+  $handler->display->display_options['filters']['group_type']['value'] = array(
+    'node' => 'node',
+  );
+  $handler->display->display_options['filters']['group_type']['group'] = 1;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ol_gallery' => 'ol_gallery',
+    'ol_group_post' => 'ol_group_post',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
+  $handler->display->display_options['filters']['status_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_1']['field'] = 'status';
+  $handler->display->display_options['filters']['status_1']['value'] = '1';
+  $handler->display->display_options['filters']['status_1']['group'] = 2;
+  /* Filter criterion: OG membership: Group_type */
+  $handler->display->display_options['filters']['group_type_1']['id'] = 'group_type_1';
+  $handler->display->display_options['filters']['group_type_1']['table'] = 'og_membership';
+  $handler->display->display_options['filters']['group_type_1']['field'] = 'group_type';
+  $handler->display->display_options['filters']['group_type_1']['relationship'] = 'og_membership_rel';
+  $handler->display->display_options['filters']['group_type_1']['value'] = array(
+    'node' => 'node',
+  );
+  $handler->display->display_options['filters']['group_type_1']['group'] = 2;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'ol_event' => 'ol_event',
+  );
+  $handler->display->display_options['filters']['type_1']['group'] = 2;
+  /* Filter criterion: Content: Date -  start date (field_ol_event_date) */
+  $handler->display->display_options['filters']['field_ol_event_date_value']['id'] = 'field_ol_event_date_value';
+  $handler->display->display_options['filters']['field_ol_event_date_value']['table'] = 'field_data_field_ol_event_date';
+  $handler->display->display_options['filters']['field_ol_event_date_value']['field'] = 'field_ol_event_date_value';
+  $handler->display->display_options['filters']['field_ol_event_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_ol_event_date_value']['group'] = 2;
+  $handler->display->display_options['filters']['field_ol_event_date_value']['default_date'] = 'now';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'gid_1' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'OG membership: Group ID',
+    ),
+  );
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['openlocal_group_content'] = $view;
 
   return $export;

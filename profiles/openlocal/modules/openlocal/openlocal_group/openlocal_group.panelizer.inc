@@ -184,6 +184,33 @@ function openlocal_group_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'column1';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => FALSE,
+      'override_title_text' => '',
+      'build_mode' => 'page_manager',
+      'identifier' => '',
+      'link' => TRUE,
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_class' => 'link-wrapper',
+    );
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['column1'][3] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'column1';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
     $pane->shown = TRUE;
@@ -201,12 +228,12 @@ function openlocal_group_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['column1'][3] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['column1'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'column1';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
@@ -224,12 +251,12 @@ function openlocal_group_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['column1'][4] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['column1'][5] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'column2';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:group_group';
@@ -269,10 +296,10 @@ function openlocal_group_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['column2'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['column2'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'column2';
     $pane->type = 'node_create_links';
     $pane->subtype = 'node_create_links';
@@ -293,10 +320,10 @@ function openlocal_group_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['column2'][1] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['column2'][1] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'column2';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_group_coordinators';
@@ -319,10 +346,10 @@ function openlocal_group_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['column2'][2] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['column2'][2] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'og_members-panel_pane_1';
@@ -358,10 +385,10 @@ function openlocal_group_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['column2'][3] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['column2'][3] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_group_content-panel_pane_2';
@@ -395,10 +422,10 @@ function openlocal_group_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['column2'][4] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['column2'][4] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-12';
     $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_group_content-panel_pane_3';
@@ -432,14 +459,80 @@ function openlocal_group_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['column2'][5] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['column2'][5] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
+    $pane->panel = 'contentmain';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'openlocal_group_content-panel_pane_4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '20',
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+      'view_mode' => 'teaser',
+      'widget_title' => 'Updates',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['contentmain'][0] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
+    $pane->panel = 'contentmain';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'og_nodes-panel_pane_1';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'view_mode' => 'teaser',
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['contentmain'][1] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_group_content-panel_pane_1';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'items_per_page' => '10',
@@ -470,76 +563,12 @@ function openlocal_group_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['contentmain'][0] = 'new-12';
-    $pane = new stdClass();
-    $pane->pid = 'new-13';
-    $pane->panel = 'contentmain';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'og_nodes-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'panelizer',
-      ),
-      'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['contentmain'][1] = 'new-13';
-    $pane = new stdClass();
-    $pane->pid = 'new-14';
-    $pane->panel = 'contentmain';
-    $pane->type = 'node_links';
-    $pane->subtype = 'node_links';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => FALSE,
-      'override_title_text' => '',
-      'build_mode' => 'page_manager',
-      'identifier' => '',
-      'link' => TRUE,
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_class' => 'link-wrapper',
-    );
-    $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['contentmain'][2] = 'new-14';
+    $display->content['new-15'] = $pane;
+    $display->panels['contentmain'][2] = 'new-15';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-14';
+  $display->title_pane = 'new-4';
   $panelizer->display = $display;
   $export['node:ol_group:default'] = $panelizer;
 
@@ -580,7 +609,7 @@ Posts
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-16';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:og_group_ref';
@@ -601,10 +630,10 @@ Posts
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['center'][0] = 'new-15';
+    $display->content['new-16'] = $pane;
+    $display->panels['center'][0] = 'new-16';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-17';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -625,10 +654,10 @@ Posts
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['center'][1] = 'new-16';
+    $display->content['new-17'] = $pane;
+    $display->panels['center'][1] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-18';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
@@ -652,10 +681,10 @@ Posts
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['center'][2] = 'new-17';
+    $display->content['new-18'] = $pane;
+    $display->panels['center'][2] = 'new-18';
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-19';
     $pane->panel = 'center';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -677,10 +706,10 @@ Posts
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['center'][3] = 'new-18';
+    $display->content['new-19'] = $pane;
+    $display->panels['center'][3] = 'new-19';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-18';
+  $display->title_pane = 'new-19';
   $panelizer->display = $display;
   $export['node:ol_group_post:default'] = $panelizer;
 
