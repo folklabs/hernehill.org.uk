@@ -4633,64 +4633,67 @@ h2.node-title a:active {
   display: block;
 }
 
-/* line 7, ../sass/components/_user.sass */
+/* line 10, ../sass/components/_user.sass */
 .page-user .view-openlocal-user table {
   color: red;
 }
 
-/* line 11, ../sass/components/_user.sass */
+/* line 14, ../sass/components/_user.sass */
 .panel-panel-inner .pane-user-profile {
   width: 15%;
   display: inline-block;
   float: left;
+  margin: 1em 0 1em 0;
 }
-/* line 15, ../sass/components/_user.sass */
+/* line 19, ../sass/components/_user.sass */
 .panel-panel-inner .pane-user-profile .pane-user-name {
   margin-top: 5px;
 }
-/* line 28, ../sass/components/_user.sass */
+/* line 32, ../sass/components/_user.sass */
 .panel-panel-inner .pane-custom .ol-comment-count {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: bold;
   display: block;
 }
-/* line 34, ../sass/components/_user.sass */
+/* line 38, ../sass/components/_user.sass */
 .panel-panel-inner .pane-custom p {
   height: 20px;
   margin: 0;
 }
 
-/* line 39, ../sass/components/_user.sass */
+/* line 43, ../sass/components/_user.sass */
 .ol-meta-data {
   font-family: "Lato";
   display: inline-block;
   width: 80%;
+  margin: 2.5em 0 0 0;
 }
-/* line 43, ../sass/components/_user.sass */
+/* line 49, ../sass/components/_user.sass */
 .ol-meta-data div {
   display: inline-block;
+  vertical-align: bottom;
 }
-/* line 45, ../sass/components/_user.sass */
+/* line 52, ../sass/components/_user.sass */
 .ol-meta-data .ol-username {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: bold;
   color: #20806a;
 }
-/* line 50, ../sass/components/_user.sass */
+/* line 57, ../sass/components/_user.sass */
 .ol-meta-data .ol-comments {
   float: right;
 }
-/* line 52, ../sass/components/_user.sass */
+/* line 59, ../sass/components/_user.sass */
 .ol-meta-data .ol-comments .ol-comment-count {
   font-size: 1.6em;
   color: #20806a;
 }
 
-/* line 58, ../sass/components/_user.sass */
+/* line 65, ../sass/components/_user.sass */
 .view-og-extras-members .views-field-picture {
   margin: 0 10px 0px 10px;
 }
-/* line 60, ../sass/components/_user.sass */
+/* line 67, ../sass/components/_user.sass */
 .view-og-extras-members .views-field-name {
   margin: 0 10px 0px 10px;
 }

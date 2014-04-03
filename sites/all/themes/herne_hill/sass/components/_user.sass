@@ -2,6 +2,9 @@
 //-----------------------------------------------------------------------------
 // STYLES FOR USER PAGE
 
+$user-info-margin: 1em 0 1em 0
+
+
 .page-user
   .view-openlocal-user
     table
@@ -12,6 +15,7 @@
     width: 15%
     display: inline-block
     float: left
+    margin: $user-info-margin
     .pane-user-name
       // vertical-align: bottom
       margin-top: 5px
@@ -40,8 +44,11 @@
   font-family: $lato
   display: inline-block
   width: 80%
+  margin: 2.5em 0 0 0 //$user-info-margin
+  // vertical-align: bottom
   div
     display: inline-block
+    // vertical-align: bottom
   .ol-username
     font-family: $merriweather
     font-weight: bold
