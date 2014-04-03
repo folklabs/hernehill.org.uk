@@ -34,7 +34,7 @@ function openlocal_business_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-basic-info field-group-htab',
         'required_fields' => 1,
       ),
     ),
@@ -63,7 +63,7 @@ function openlocal_business_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-internet field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -93,7 +93,7 @@ function openlocal_business_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-location-details field-group-htab',
         'required_fields' => 1,
       ),
     ),
@@ -123,7 +123,7 @@ function openlocal_business_field_group_info() {
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => ' group-main field-group-htabs',
       ),
     ),
   );
@@ -149,7 +149,7 @@ function openlocal_business_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-opening-hours field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -176,7 +176,7 @@ function openlocal_business_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-promotions field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
