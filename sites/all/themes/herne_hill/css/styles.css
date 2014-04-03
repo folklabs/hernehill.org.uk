@@ -2511,6 +2511,39 @@ div.form-item-notify {
   margin: 20px 0 0 0;
   background-color: #4d3d44;
 }
+/* line 13, ../sass/components/_footer.sass */
+#footer p {
+  color: #b19fa7;
+}
+/* line 15, ../sass/components/_footer.sass */
+#footer a {
+  color: #e3dcd1;
+}
+/* line 17, ../sass/components/_footer.sass */
+#footer a:hover {
+  background-color: transparent;
+}
+
+/* line 26, ../sass/components/_footer.sass */
+.menu-name-menu-ol-footer-menu li.menu__item {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px 0 0;
+  font-size: 1.2em;
+}
+/* line 31, ../sass/components/_footer.sass */
+.menu-name-menu-ol-footer-menu li.menu__item a {
+  color: #e3dcd1;
+}
+/* line 33, ../sass/components/_footer.sass */
+.menu-name-menu-ol-footer-menu li.menu__item a:hover {
+  background-color: transparent;
+}
+
+/* line 40, ../sass/components/_footer.sass */
+#block-block-10 {
+  padding: 0 0 0 20px;
+}
 
 /* line 17, ../sass/components/_forms.sass */
 .page-node-add .pane-node-field-featured-image,
@@ -4671,7 +4704,6 @@ h2.node-title a:active {
 /* line 49, ../sass/components/_user.sass */
 .ol-meta-data div {
   display: inline-block;
-  vertical-align: bottom;
 }
 /* line 52, ../sass/components/_user.sass */
 .ol-meta-data .ol-username {
