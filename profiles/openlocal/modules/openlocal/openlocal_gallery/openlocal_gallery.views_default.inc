@@ -43,8 +43,9 @@ function openlocal_gallery_views_default_views() {
     'image_style' => 'openlocal_panel_deep',
     'image_link' => 'content',
   );
-  $handler->display->display_options['fields']['field_ol_gallery_images']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_gallery_images']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_ol_gallery_images']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['separator'] = '';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -83,6 +84,15 @@ function openlocal_gallery_views_default_views() {
 
   /* Display: Group: Galleries */
   $handler = $view->new_display('panel_pane', 'Group: Galleries', 'panel_pane_1');
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
 
   /* Display: List */
   $handler = $view->new_display('panel_pane', 'List', 'panel_pane_2');

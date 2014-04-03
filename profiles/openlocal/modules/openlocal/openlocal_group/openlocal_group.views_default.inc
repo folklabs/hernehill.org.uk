@@ -540,6 +540,7 @@ function openlocal_group_views_default_views() {
     'title' => 'title',
     'field_ol_event_date' => 'title',
     'field_ol_details' => 'title',
+    'field_ol_gallery_images' => 'field_featured_image',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -565,6 +566,11 @@ function openlocal_group_views_default_views() {
     'field_ol_details' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_ol_gallery_images' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -616,6 +622,20 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['fields']['field_ol_details']['alter']['max_length'] = '200';
   $handler->display->display_options['fields']['field_ol_details']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_ol_details']['element_label_colon'] = FALSE;
+  /* Field: Content: Images */
+  $handler->display->display_options['fields']['field_ol_gallery_images']['id'] = 'field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['table'] = 'field_data_field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['field'] = 'field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_gallery_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['settings'] = array(
+    'image_style' => 'openlocal_events_listing',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ol_gallery_images']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['separator'] = '';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['filter_groups']['groups'] = array(
