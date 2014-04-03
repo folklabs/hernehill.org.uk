@@ -5,6 +5,40 @@
 
 // The box in which all Action Buttons sit
 
+// The first Action Button in the Action Box panel
+@mixin m-ol-action-button
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+  a
+    // height: 2em
+    padding: 0.5em 10px
+    display: block
+    border-radius: 0.25em
+    font-family: $lato
+    font-weight: 400
+    font-size: 1.25 * $base-font-size
+    text-align: center
+    &:link,
+    &:visited
+      color: $col-content-darker
+      border: solid 1px $col-content
+      @include gradient-vertical($col-content-lightest, $col-page)
+    &:hover
+      @include gradient-vertical($col-page, white)
+      border: solid 1px $col-content
+      color: $col-content
+    &:active
+      @include glow-inner($col-content-lighter, 10)
+      @include gradient-vertical($col-page, $col-content-lightest)
+      border: solid 1px white
+      color: $col-content-darkest
+
+    /* edit: added z-index */
+    z-index: 1
+
 .ol-action-box
   background-color: $col-content-lightest
   padding: 0.5em 10px
@@ -45,40 +79,10 @@
       /* edit: added z-index */
       z-index: 1
 
-  // The first Action Button in the Action Box panel
-  .ol-action-button
-    margin-left: auto
-    margin-right: auto
-    width: 100%
-    padding-top: 0.5em
-    padding-bottom: 0.5em
-    a
-      // height: 2em
-      padding: 0.5em 10px
-      display: block
-      border-radius: 0.25em
-      font-family: $lato
-      font-weight: 400
-      font-size: 1.25 * $base-font-size
-      text-align: center
-      &:link,
-      &:visited
-        color: $col-content-darker
-        border: solid 1px $col-content
-        @include gradient-vertical($col-content-lightest, $col-page)
-      &:hover
-        @include gradient-vertical($col-page, white)
-        border: solid 1px $col-content
-        color: $col-content
-      &:active
-        @include glow-inner($col-content-lighter, 10)
-        @include gradient-vertical($col-page, $col-content-lightest)
-        border: solid 1px white
-        color: $col-content-darkest
 
-      /* edit: added z-index */
-      z-index: 1
 
+.ol-action-button
+  @include m-ol-action-button()
 
   // The Help link underneath each Action Button
   a.ol-action-help
@@ -99,6 +103,13 @@
     &:active
       color: $col-links-lighter
 
+
+
+// ----------------------------------------------------------------------------
+// Group page actions
+
+.pane-node-group-group
+  @include m-ol-action-button()
 
 
 // COMMENTED OUT UNTIL WE KNOW WHAT THIS DOES
