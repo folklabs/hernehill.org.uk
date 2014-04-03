@@ -36,14 +36,12 @@ function openlocal_gallery_panelizer_defaults() {
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'bryant_flipped_flipped';
+  $display->layout = 'flexible';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
-      'sidebar' => NULL,
-      'contentmain' => NULL,
     ),
   );
   $display->cache = array();
@@ -52,7 +50,33 @@ function openlocal_gallery_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'contentmain';
+    $pane->panel = 'center';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:og_group_ref';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'og_list_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['center'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_details';
     $pane->shown = TRUE;
@@ -87,13 +111,13 @@ function openlocal_gallery_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-3';
+    $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_gallery_images';
     $pane->shown = TRUE;
@@ -105,7 +129,7 @@ function openlocal_gallery_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'colorbox_node_style' => 'openlocal_panel_deep',
+        'colorbox_node_style' => 'media_thumbnail',
         'colorbox_image_style' => '',
         'colorbox_gallery' => 'page',
         'colorbox_gallery_custom' => '',
@@ -136,13 +160,13 @@ function openlocal_gallery_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'contentmain';
+    $pane->pid = 'new-4';
+    $pane->panel = 'center';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
     $pane->shown = TRUE;
@@ -163,59 +187,12 @@ function openlocal_gallery_panelizer_defaults() {
       'css_class' => 'link-wrapper',
     );
     $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][2] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'sidebar';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:og_group_ref';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'og_list_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][0] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'block-9';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar'][1] = 'new-5';
+    $display->panels['center'][3] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-4';
   $panelizer->display = $display;
   $export['node:ol_gallery:default'] = $panelizer;
 
