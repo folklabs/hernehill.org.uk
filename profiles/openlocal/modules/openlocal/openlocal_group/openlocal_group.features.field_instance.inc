@@ -10,6 +10,51 @@
 function openlocal_group_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-ol_group-field_featured_categories'
+  $field_instances['node-ol_group-field_featured_categories'] = array(
+    'bundle' => 'ol_group',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_featured_categories',
+    'label' => 'Categories',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_group-field_featured_image'
   $field_instances['node-ol_group-field_featured_image'] = array(
     'bundle' => 'ol_group',
@@ -135,7 +180,7 @@ function openlocal_group_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -295,7 +340,7 @@ function openlocal_group_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -344,50 +389,7 @@ function openlocal_group_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-ol_group-field_ol_group_category'
-  $field_instances['node-ol_group-field_ol_group_category'] = array(
-    'bundle' => 'ol_group',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_group_category',
-    'label' => 'Category',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 9,
     ),
   );
 
@@ -434,7 +436,7 @@ function openlocal_group_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'user_reference_autocomplete',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -498,7 +500,7 @@ function openlocal_group_field_default_field_instances() {
         'og_hide' => TRUE,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -691,7 +693,7 @@ function openlocal_group_field_default_field_instances() {
   t('Address');
   t('Body');
   t('Campaign');
-  t('Category');
+  t('Categories');
   t('Coordinators');
   t('Description');
   t('Details');

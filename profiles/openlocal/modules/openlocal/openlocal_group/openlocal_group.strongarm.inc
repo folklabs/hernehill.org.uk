@@ -120,10 +120,10 @@ function openlocal_group_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'metatags' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
       ),
       'display' => array(),

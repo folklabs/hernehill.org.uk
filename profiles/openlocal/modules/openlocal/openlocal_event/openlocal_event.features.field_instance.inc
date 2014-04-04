@@ -43,6 +43,51 @@ function openlocal_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ol_event-field_featured_categories'
+  $field_instances['node-ol_event-field_featured_categories'] = array(
+    'bundle' => 'ol_event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_featured_categories',
+    'label' => 'Categories',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_event-field_featured_image'
   $field_instances['node-ol_event-field_featured_image'] = array(
     'bundle' => 'ol_event',
@@ -148,7 +193,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -252,49 +297,6 @@ function openlocal_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_event-field_ol_event_category'
-  $field_instances['node-ol_event-field_ol_event_category'] = array(
-    'bundle' => 'ol_event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_event_category',
-    'label' => 'Category',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-ol_event-field_ol_event_contact'
   $field_instances['node-ol_event-field_ol_event_contact'] = array(
     'bundle' => 'ol_event',
@@ -336,7 +338,7 @@ function openlocal_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -388,7 +390,7 @@ function openlocal_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -505,7 +507,7 @@ function openlocal_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -550,7 +552,7 @@ function openlocal_event_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -615,14 +617,14 @@ function openlocal_event_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Available facilities');
-  t('Category');
+  t('Categories');
   t('Comment');
   t('Contact');
   t('Contact telephone');

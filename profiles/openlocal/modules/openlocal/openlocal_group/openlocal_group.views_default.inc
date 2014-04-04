@@ -68,13 +68,13 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'ol-item-grid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Category */
-  $handler->display->display_options['fields']['field_ol_group_category']['id'] = 'field_ol_group_category';
-  $handler->display->display_options['fields']['field_ol_group_category']['table'] = 'field_data_field_ol_group_category';
-  $handler->display->display_options['fields']['field_ol_group_category']['field'] = 'field_ol_group_category';
-  $handler->display->display_options['fields']['field_ol_group_category']['label'] = '';
-  $handler->display->display_options['fields']['field_ol_group_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_group_category']['delta_offset'] = '0';
+  /* Field: Content: Categories */
+  $handler->display->display_options['fields']['field_featured_categories']['id'] = 'field_featured_categories';
+  $handler->display->display_options['fields']['field_featured_categories']['table'] = 'field_data_field_featured_categories';
+  $handler->display->display_options['fields']['field_featured_categories']['field'] = 'field_featured_categories';
+  $handler->display->display_options['fields']['field_featured_categories']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_categories']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_categories']['delta_offset'] = '0';
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
@@ -207,13 +207,13 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Category */
-  $handler->display->display_options['fields']['field_ol_group_category']['id'] = 'field_ol_group_category';
-  $handler->display->display_options['fields']['field_ol_group_category']['table'] = 'field_data_field_ol_group_category';
-  $handler->display->display_options['fields']['field_ol_group_category']['field'] = 'field_ol_group_category';
-  $handler->display->display_options['fields']['field_ol_group_category']['label'] = '';
-  $handler->display->display_options['fields']['field_ol_group_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_group_category']['delta_offset'] = '0';
+  /* Field: Content: Categories */
+  $handler->display->display_options['fields']['field_featured_categories']['id'] = 'field_featured_categories';
+  $handler->display->display_options['fields']['field_featured_categories']['table'] = 'field_data_field_featured_categories';
+  $handler->display->display_options['fields']['field_featured_categories']['field'] = 'field_featured_categories';
+  $handler->display->display_options['fields']['field_featured_categories']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_categories']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_categories']['delta_offset'] = '0';
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
@@ -273,7 +273,7 @@ function openlocal_group_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Group categories';
+  $handler->display->display_options['title'] = 'Categories';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -316,7 +316,7 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'ol_groups' => 'ol_groups',
+    'panopoly_categories' => 'panopoly_categories',
   );
 
   /* Display: Content pane */
