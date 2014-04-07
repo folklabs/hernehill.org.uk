@@ -42,6 +42,7 @@ features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[fe_block_boxes][] = ol_group_actions
+features[fe_block_boxes][] = ol_group_content_actions
 features[fe_block_settings][] = block-ol_group_actions
 features[features_api][] = api:2
 features[field_base][] = field_ol_group_campaign

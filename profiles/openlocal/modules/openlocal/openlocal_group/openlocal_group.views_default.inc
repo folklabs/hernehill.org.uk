@@ -540,6 +540,7 @@ function openlocal_group_views_default_views() {
     'title' => 'title',
     'field_ol_event_date' => 'title',
     'field_ol_details' => 'title',
+    'body' => 'title',
     'field_ol_gallery_images' => 'field_featured_image',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
@@ -564,6 +565,13 @@ function openlocal_group_views_default_views() {
       'empty_column' => 0,
     ),
     'field_ol_details' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'body' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -622,6 +630,15 @@ function openlocal_group_views_default_views() {
   $handler->display->display_options['fields']['field_ol_details']['alter']['max_length'] = '200';
   $handler->display->display_options['fields']['field_ol_details']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_ol_details']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '200';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Content: Images */
   $handler->display->display_options['fields']['field_ol_gallery_images']['id'] = 'field_ol_gallery_images';
   $handler->display->display_options['fields']['field_ol_gallery_images']['table'] = 'field_data_field_ol_gallery_images';
