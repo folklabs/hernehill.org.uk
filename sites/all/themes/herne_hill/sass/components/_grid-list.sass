@@ -56,6 +56,9 @@
     .views-field-body
       .field-content
 
+    .views-field-comment-count
+      @include typography-grid-list-date
+
     // Grid list date field
     .views-field-created
       .field-content
@@ -68,8 +71,8 @@
     .views-field-name
       display: inline-block
       position: absolute
-      bottom: 0
-      right: 0
+      bottom: 3px
+      right: 30px
       @include typography-grid-list-body
 
     .views-field-field-user-picture
@@ -77,9 +80,9 @@
       position: absolute
       bottom: 0
       right: 0
-      float: left
+      // float: left
       max-width: 24px
-      margin-right: 5px
+      // margin-right: 5px
 
     // TODO: overrides needed? Check base versions.
     // .views-field-title
@@ -120,26 +123,28 @@
 
 
 //-----------------------------------------------------------------------------
-// GRID LIST STYLES FOR NEWS ARTICLES LISTING ON HOME & NEWS
-
+// Grid list styles for news articles listing on home & news
 
 .view-display-id-list_news_articles
   @include grid-list()
   .views-row
     position: relative
     height: auto
+    min-height: 100px
     .views-field-title
-      width: 50%
+      width: 48%
       max-width: 290px
-      float: right
+      display: inline-block
+      // float: right
       // height: 2em
       padding: 0.5em 0 0.5em 0
+      vertical-align: top
     .views-field-body
       height: auto
-      width: 50%
+      width: 48%
       max-width: 290px
-      float: right
-      display: block
+      // float: right
+      display: inline-block
       @include typography-grid-list-body
       padding: 0.5em 0
     .views-field-created
@@ -150,7 +155,6 @@
       width: 50%
       max-width: 290px
       border-top: solid 1px $col-page
-
 
   .links
     float: right
@@ -165,7 +169,7 @@
 
 
 //-----------------------------------------------------------------------------
-// MEDIA QUERIES FOR GRID LISTS
+// media queries for grid lists
 
 // 768px Break point for tablets
 
