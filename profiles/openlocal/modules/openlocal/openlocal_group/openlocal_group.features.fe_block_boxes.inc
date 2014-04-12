@@ -44,7 +44,7 @@ function openlocal_group_default_fe_block_boxes() {
 </div>
 
 <div>
-<a href="/contextual_help/about groups" class="ol-action-help"><i class="fa fa-question-circle"></i> About groups</a>
+<a href="/contextual_help/about-groups" class="ol-action-help"><i class="fa fa-question-circle"></i> About groups</a>
 </div>
 </div>';
 
