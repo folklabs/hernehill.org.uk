@@ -712,7 +712,7 @@ function openlocal_business_panelizer_defaults() {
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'image_link' => '',
-        'image_style' => '',
+        'image_style' => 'openlocal_panel_deep',
       ),
       'context' => 'panelizer',
       'override_title' => 0,

@@ -921,14 +921,14 @@ function openlocal_business_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'featured' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => 'openlocal_panel_deep',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -986,9 +986,8 @@ function openlocal_business_field_default_field_instances() {
       ),
       'featured' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_plain',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -1033,7 +1032,7 @@ function openlocal_business_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'above',
