@@ -22,7 +22,7 @@ function openlocal_group_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 7,
       ),
       'featured' => array(
         'label' => 'above',
@@ -69,7 +69,7 @@ function openlocal_group_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'above',
@@ -142,7 +142,7 @@ function openlocal_group_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'featured' => array(
         'label' => 'above',
@@ -196,7 +196,7 @@ function openlocal_group_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'featured' => array(
         'label' => 'above',
@@ -246,7 +246,7 @@ function openlocal_group_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'featured' => array(
         'label' => 'above',
@@ -297,7 +297,7 @@ function openlocal_group_field_default_field_instances() {
           'data' => 'full',
         ),
         'type' => 'geofield_wkt',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'featured' => array(
         'label' => 'above',
@@ -360,7 +360,7 @@ function openlocal_group_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'featured' => array(
         'label' => 'above',
@@ -393,53 +393,6 @@ function openlocal_group_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_group-field_ol_group_coordinators'
-  $field_instances['node-ol_group-field_ol_group_coordinators'] = array(
-    'bundle' => 'ol_group',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Enter the names of up to three people who coordinate this group. Search for the usernames of those people.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'user_reference',
-        'settings' => array(),
-        'type' => 'user_reference_default',
-        'weight' => 4,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_group_coordinators',
-    'label' => 'Coordinators',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'user_reference',
-      'settings' => array(
-        'autocomplete_match' => 'contains',
-        'autocomplete_path' => 'user_reference/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'user_reference_autocomplete',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-ol_group-group_group'
   $field_instances['node-ol_group-group_group'] = array(
     'bundle' => 'ol_group',
@@ -458,7 +411,7 @@ function openlocal_group_field_default_field_instances() {
           'field_name' => FALSE,
         ),
         'type' => 'og_group_subscribe',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'featured' => array(
         'label' => 'above',
@@ -694,11 +647,9 @@ function openlocal_group_field_default_field_instances() {
   t('Body');
   t('Campaign');
   t('Categories');
-  t('Coordinators');
   t('Description');
   t('Details');
   t('Determine if this is an OG group.');
-  t('Enter the names of up to three people who coordinate this group. Search for the usernames of those people.');
   t('Geolocation');
   t('Group');
   t('Groups audience');

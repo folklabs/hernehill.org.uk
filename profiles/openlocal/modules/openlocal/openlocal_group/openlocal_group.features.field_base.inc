@@ -36,52 +36,6 @@ function openlocal_group_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_ol_group_coordinators'
-  $field_bases['field_ol_group_coordinators'] = array(
-    'active' => 1,
-    'cardinality' => 3,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_ol_group_coordinators',
-    'foreign keys' => array(
-      'uid' => array(
-        'columns' => array(
-          'uid' => 'uid',
-        ),
-        'table' => 'users',
-      ),
-    ),
-    'indexes' => array(
-      'uid' => array(
-        0 => 'uid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'user_reference',
-    'settings' => array(
-      'profile2_private' => FALSE,
-      'referenceable_roles' => array(
-        2 => 2,
-        3 => 3,
-        4 => 4,
-        5 => 5,
-        6 => 0,
-        7 => 0,
-      ),
-      'referenceable_status' => array(
-        0 => 0,
-        1 => 1,
-      ),
-      'view' => array(
-        'args' => array(),
-        'display_name' => '',
-        'view_name' => '',
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'user_reference',
-  );
-
   // Exported field_base: 'group_group'
   $field_bases['group_group'] = array(
     'active' => 1,
