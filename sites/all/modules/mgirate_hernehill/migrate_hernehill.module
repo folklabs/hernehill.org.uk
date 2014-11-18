@@ -2,15 +2,6 @@
 
 /**
  * @file
- * THIS FILE INTENTIONALLY LEFT BLANK.
- *
- * Yes, there is no code in the .module file. Migrate operates almost entirely
- * through classes, and by adding any files containing class definitions to the
- * .info file, those files are automatically included only when the classes they
- * contain are referenced. The one non-class piece you need to implement is
- * hook_migrate_api(), but because .migrate.inc is registered using
- * hook_hook_info, by defining your implementation of that hook in
- * example.migrate.inc, it is automatically invoked only when needed.
  */
 
 function migrate_hernehill_flush_caches() {
@@ -57,6 +48,17 @@ function migrate_hernehill_register_migrations() {
   // We just use the migrate_d2d D6 migration class as-is.
   Migration::registerMigration('UserMigration', $user_arguments['machine_name'],
                                $user_arguments);
+
+  $file_arguments = $common_arguments + array(
+    'machine_name' => 'Files',
+    'description' => t('Import Drupal 6 files'),
+    // 'user_migration' => 'UserMigration',
+    'default_uid' => 1,
+    'source_dir' => '/Users/pmackay/dev/herne-hill/d6.hernehillforum/sites/default/files',
+    'destination_dir' => 'public://legacy_files',
+  );
+  Migration::registerMigration('DrupalFile6Migration',
+              $file_arguments['machine_name'], $file_arguments);
 
   // For vocabulary migrations, source_vocabulary and destination_vocabulary are
   // required arguments. Note that in Drupal 6 vocabularies did not have machine

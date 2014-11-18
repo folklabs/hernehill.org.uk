@@ -93,9 +93,13 @@ class GalleryMigration extends DrupalNode6Migration {
     // $this->sourceFields['News'] = 'Summary string from D6';
     parent::__construct($arguments);
 
+    $this->addFieldMapping('field_ol_description', 'field_overview');
     $this->addFieldMapping('field_ol_details', 'body');
     $this->addFieldMapping('field_ol_details:format')
       ->defaultValue('panopoly_wysiwyg_text');
+
+    $this->addFieldMapping('field_ol_gallery_images', 'body');
+
     // $this->addFieldMapping('field_ol_tags', 8)
     //      ->sourceMigration('News_terms')
     //      ->arguments(array('source_type' => 'tid'));
@@ -163,8 +167,59 @@ class GroupPostMigration extends DrupalNode6Migration {
 }
 
 
+class Drupal6GalleryImageMigration extends Migration {
+  public function __construct($arguments) {
+    parent::__construct($arguments);
+    $this->description = 'Image table data';
+    // $this->softDependencies = array('WineComment');
+    $table_name = 'field_data_field_ol_gallery_images';
+    $this->map = new MigrateSQLMap($this->machineName,
+      array('nid' => array(
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+             )
+           ),
+        MigrateDestinationTable::getKeySchema($table_name)
+      );
+    // $query = db_select('content_type_gallery_image', 't', array('target' => 'd6.hernehill'))
+    //          ->fields('t', array('nid', 'field_gallery_image_fid', 'field_gallery_nid', 'field_gallerypicdescription_value'));
+    $query = Database::getConnection('default', 'd6.hernehill')->select('content_type_gallery_image', 't')
+             ->fields('t', array('nid', 'field_gallery_image_fid', 'field_gallery_nid', 'field_gallerypicdescription_value'));
+    $this->source = new MigrateSourceSQL($query, array(), NULL, array('map_joinable' => FALSE));
+    $this->destination = new MigrateDestinationTable($table_name);
+    // Mapped fields
+    $this->removeFieldMapping('nid');
+    $this->addFieldMapping('entity_type')
+      ->defaultValue('node');
+    $this->addFieldMapping('bundle')
+      ->defaultValue('ol_gallery');
+    $this->addFieldMapping('deleted')
+      ->defaultValue('0');
+    $this->addFieldMapping('entity_id', 'field_gallery_nid');
+    $this->addFieldMapping('revision_id')
+      ->defaultValue('0');
+    $this->addFieldMapping('language')
+      ->defaultValue('und');
+    // Needs improving
+    $this->addFieldMapping('delta', 'nid');
+      // ->callbacks(array($this, 'calcDelta'));
+    $this->addFieldMapping('field_ol_gallery_images_fid', 'field_gallery_image_fid');
+    $this->addFieldMapping('field_ol_gallery_images_alt')
+      ->defaultValue('');
+    $this->addFieldMapping('field_ol_gallery_images_title', 'field_gallerypicdescription_value');
+    $this->addFieldMapping('field_ol_gallery_images_width')
+      ->defaultValue('100');
+    $this->addFieldMapping('field_ol_gallery_images_height')
+      ->defaultValue('100');
+  }
 
-
+  protected function calcDelta($value) {
+    // $value = preg_replace('#<p>\&nbsp;</p>#', '', $value);
+    drush_print_r('calcDelta');
+    return rand();
+  }
+}
 
 /**
  * Import forum topics from RP Forum to core forum nodes.
@@ -254,7 +309,7 @@ class HHCommentNodeMigrationBase extends Migration {
     // $query->condition('n2.type', 'event');
     // $query->condition('n2.type', 'news');
 
-    drush_print('parent nid: '  );
+    // drush_print('parent nid: '  );
     $result = $query->execute();
     foreach($result as $r) {
       // drush_print('r');

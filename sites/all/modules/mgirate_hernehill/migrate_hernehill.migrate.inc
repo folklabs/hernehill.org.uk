@@ -44,6 +44,9 @@ function migrate_hernehill_migrate_api() {
       'hernehill_comments' => array(
         'title' => t('hernehill Comment nodes'),
       ),
+      'hernehill_images' => array(
+        'title' => t('hernehill Gallery Image nodes'),
+      ),
     ),
 
     // Here we register the individual migrations. The keys (BeerTerm, BeerUser,
@@ -66,6 +69,10 @@ function migrate_hernehill_migrate_api() {
       'HHNewsCommentNode' => array(
         'class_name' => 'HHNewsCommentNodeMigration',
         'group_name' => 'hernehill_comments',
+      ),
+      'HHGalleryImageNode' => array(
+        'class_name' => 'Drupal6GalleryImageMigration',
+        'group_name' => 'hernehill_images',
       ),
     ),
   );
