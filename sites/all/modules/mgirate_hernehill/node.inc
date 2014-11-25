@@ -196,28 +196,49 @@ class Drupal6GalleryImageMigration extends Migration {
       ->defaultValue('ol_gallery');
     $this->addFieldMapping('deleted')
       ->defaultValue('0');
-    $this->addFieldMapping('entity_id', 'field_gallery_nid');
+    $this->addFieldMapping('entity_id', 'field_gallery_nid')
+      ->sourceMigration('Gallery');
     $this->addFieldMapping('revision_id')
       ->defaultValue('0');
     $this->addFieldMapping('language')
       ->defaultValue('und');
-    // Needs improving
-    $this->addFieldMapping('delta', 'nid');
-      // ->callbacks(array($this, 'calcDelta'));
-    $this->addFieldMapping('field_ol_gallery_images_fid', 'field_gallery_image_fid');
+    // TODO: Needs improving
+    $this->addFieldMapping('delta', 'field_gallery_nid')
+      ->callbacks(array($this, 'calcDelta'));
+    $this->addFieldMapping('field_ol_gallery_images_fid', 'field_gallery_image_fid')
+      ->sourceMigration('Files');
     $this->addFieldMapping('field_ol_gallery_images_alt')
       ->defaultValue('');
-    $this->addFieldMapping('field_ol_gallery_images_title', 'field_gallerypicdescription_value');
+    // TODO: what should description be mapped to if not title?
+    $this->addFieldMapping('field_ol_gallery_images_title', 'field_gallerypicdescription_value')
+      ->callbacks(array($this, 'trimTitle'));
     $this->addFieldMapping('field_ol_gallery_images_width')
       ->defaultValue('100');
     $this->addFieldMapping('field_ol_gallery_images_height')
       ->defaultValue('100');
+
+    $this->deltas = array();
   }
 
   protected function calcDelta($value) {
-    // $value = preg_replace('#<p>\&nbsp;</p>#', '', $value);
     drush_print_r('calcDelta');
-    return rand();
+    drush_print_r($value);
+    // Start delta at 0 or increment
+    if ($this->deltas[$value] == nil) {
+      drush_print_r('init delta');
+      $this->deltas[$value] = 0;
+    }
+    else {
+      drush_print_r('increment delta');
+      $this->deltas[$value] = $this->deltas[$value] + 1;
+    }
+    drush_print_r($this->deltas[$value]);
+    return $this->deltas[$value];
+  }
+
+  protected function trimTitle($value) {
+    $value = drupal_substr($value, 0, 1024);
+    return $value;
   }
 }
 
