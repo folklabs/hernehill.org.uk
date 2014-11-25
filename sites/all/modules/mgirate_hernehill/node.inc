@@ -47,8 +47,6 @@ class NewsMigration extends DrupalNode6Migration {
 
 class CampaignsMigration extends DrupalNode6Migration {
   public function __construct(array $arguments) {
-    // $this->sourceFields['News'] = 'Summary string from D6';
-
     parent::__construct($arguments);
 
     $this->addFieldMapping('field_ol_description', 'field_overview');
