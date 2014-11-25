@@ -3,20 +3,6 @@
 include_once('panopoly_pages.features.inc');
 
 /**
- * Implements hook_menu_block_tree_alter().
- *
- * Updates menu block settings in case of IPE callback magic. This will only
- * work in limited cases but will be fixed when the page refreshes.
- */
-function panopoly_pages_menu_block_tree_alter($tree, $config) {
-  if (arg(0) == 'panels' && arg(1) == 'ajax') {
-    foreach ($tree as $key => $value) {
-      $tree[$key]['link']['in_active_trail'] = TRUE;
-    }
-  }
-}
-
-/**
  * Implements hook_menu().
  */
 function panopoly_pages_menu() {
@@ -87,7 +73,7 @@ function panopoly_pages_form_alter(&$form, &$form_state, $form_id) {
     // Remove the layout choice. Let's just get them to the mall!
     $form['categories']['#access'] = FALSE;
     $form['layout']['#prefix'] = '<div class="panels-choose-layout panels-layouts-checkboxes clearfix" style="display: none">';
-    $form['layout']['Panopoly']['boxton']['#default_value'] = TRUE;
+    $form['layout']['Radix']['radix_boxton']['#default_value'] = TRUE;
 
     // Set the Button and Redirect State.
     $form['buttons']['next']['#value'] = t('Create Page');

@@ -10,16 +10,18 @@ projects[wysiwyg][version] = 2.2
 projects[wysiwyg][patch][1489096] = http://drupal.org/files/wysiwyg-table-format.patch
 projects[wysiwyg][patch][1786732] = http://drupal.org/files/wysiwyg-arbitrary_image_paths_markitup-1786732-3.patch
 projects[wysiwyg][patch][1802394] = http://drupal.org/files/wysiwyg-1802394-4.patch
+projects[wysiwyg][patch][934976] = https://drupal.org/files/wysiwyg-one-format.934976.23-alt.patch
 
 projects[wysiwyg_filter][version] = 1.6-rc2
 projects[wysiwyg_filter][subdir] = contrib
 
 ; The WYSIWYG Helpers
 
-projects[linkit][version] = 2.6
+projects[linkit][version] = 3.2
 projects[linkit][subdir] = contrib
+projects[linkit][patch][2091789] = https://www.drupal.org/files/issues/linkit_upgrade_path-2091789-13.patch
 
-projects[image_resize_filter][version] = 1.13
+projects[image_resize_filter][version] = 1.14
 projects[image_resize_filter][subdir] = contrib
 
 projects[caption_filter][version] = 1.x-dev
@@ -31,7 +33,7 @@ projects[caption_filter][download][branch] = 7.x-1.x
 ; Include our Editors
 
 libraries[tinymce][download][type] = get
-libraries[tinymce][download][url] = https://github.com/downloads/tinymce/tinymce/tinymce_3.5.8.zip
+libraries[tinymce][download][url] = http://download.moxiecode.com/tinymce/tinymce_3.5.8.zip
 libraries[tinymce][patch][1561882] = http://drupal.org/files/1561882-cirkuit-theme-tinymce-3.5.8.patch
 
 libraries[markitup][download][type] = get

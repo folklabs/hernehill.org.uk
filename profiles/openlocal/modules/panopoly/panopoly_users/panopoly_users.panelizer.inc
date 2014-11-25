@@ -30,7 +30,7 @@ function panopoly_users_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = '';
   $display = new panels_display();
-  $display->layout = 'phelan';
+  $display->layout = 'radix_phelan';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -44,10 +44,11 @@ function panopoly_users_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = '51ca002d-c24e-4ba7-b2dd-d966ff32e4a3';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-d76e85cd-4625-4a52-a17b-e5c65e1a0247';
     $pane->panel = 'column1';
     $pane->type = 'user_profile';
     $pane->subtype = 'user_profile';
@@ -67,10 +68,11 @@ function panopoly_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['column1'][0] = 'new-1';
+    $pane->uuid = 'd76e85cd-4625-4a52-a17b-e5c65e1a0247';
+    $display->content['new-d76e85cd-4625-4a52-a17b-e5c65e1a0247'] = $pane;
+    $display->panels['column1'][0] = 'new-d76e85cd-4625-4a52-a17b-e5c65e1a0247';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-23b1f4f1-cda8-42ca-880a-afc2ae92f3e9';
     $pane->panel = 'column2';
     $pane->type = 'entity_field';
     $pane->subtype = 'user:field_user_picture';
@@ -111,8 +113,9 @@ function panopoly_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['column2'][0] = 'new-2';
+    $pane->uuid = '23b1f4f1-cda8-42ca-880a-afc2ae92f3e9';
+    $display->content['new-23b1f4f1-cda8-42ca-880a-afc2ae92f3e9'] = $pane;
+    $display->panels['column2'][0] = 'new-23b1f4f1-cda8-42ca-880a-afc2ae92f3e9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
@@ -138,7 +141,7 @@ function panopoly_users_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = '';
   $display = new panels_display();
-  $display->layout = 'boxton';
+  $display->layout = 'radix_boxton';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -148,41 +151,11 @@ function panopoly_users_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = '7e27b449-64aa-41ce-86bd-4267def0c988';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'contentmain';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'user:field_user_picture';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'panopoly_image_half',
-        'image_link' => '',
-      ),
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-7b58bea7-aa6f-4daa-9180-9eedc586bde2';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'user:field_user_about';
@@ -205,12 +178,13 @@ function panopoly_users_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['contentmain'][1] = 'new-4';
+    $pane->uuid = '7b58bea7-aa6f-4daa-9180-9eedc586bde2';
+    $display->content['new-7b58bea7-aa6f-4daa-9180-9eedc586bde2'] = $pane;
+    $display->panels['contentmain'][0] = 'new-7b58bea7-aa6f-4daa-9180-9eedc586bde2';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-a48325fb-5137-4640-8fe6-9228d15745b4';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field_extra';
     $pane->subtype = 'user:summary';
@@ -228,10 +202,11 @@ function panopoly_users_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['contentmain'][2] = 'new-5';
+    $pane->uuid = 'a48325fb-5137-4640-8fe6-9228d15745b4';
+    $display->content['new-a48325fb-5137-4640-8fe6-9228d15745b4'] = $pane;
+    $display->panels['contentmain'][1] = 'new-a48325fb-5137-4640-8fe6-9228d15745b4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
@@ -257,7 +232,7 @@ function panopoly_users_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = '';
   $display = new panels_display();
-  $display->layout = 'phelan';
+  $display->layout = 'radix_phelan';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -268,41 +243,11 @@ function panopoly_users_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = '693a059f-078d-41ef-8c11-053b70a597d2';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'column1';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'user:field_user_picture';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'panopoly_image_half',
-        'image_link' => 'content',
-      ),
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['column1'][0] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-e8b46596-4bed-47f1-a75c-06bc20485822';
     $pane->panel = 'column2';
     $pane->type = 'token';
     $pane->subtype = 'user:name';
@@ -322,10 +267,11 @@ function panopoly_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['column2'][0] = 'new-7';
+    $pane->uuid = 'e8b46596-4bed-47f1-a75c-06bc20485822';
+    $display->content['new-e8b46596-4bed-47f1-a75c-06bc20485822'] = $pane;
+    $display->panels['column2'][0] = 'new-e8b46596-4bed-47f1-a75c-06bc20485822';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-2c851d0b-7ef1-4d7e-abd9-651846a2081b';
     $pane->panel = 'column2';
     $pane->type = 'entity_field';
     $pane->subtype = 'user:field_user_about';
@@ -352,8 +298,9 @@ function panopoly_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['column2'][1] = 'new-8';
+    $pane->uuid = '2c851d0b-7ef1-4d7e-abd9-651846a2081b';
+    $display->content['new-2c851d0b-7ef1-4d7e-abd9-651846a2081b'] = $pane;
+    $display->panels['column2'][1] = 'new-2c851d0b-7ef1-4d7e-abd9-651846a2081b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

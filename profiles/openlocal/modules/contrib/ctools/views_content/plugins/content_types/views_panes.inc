@@ -83,7 +83,7 @@ function views_content_views_panes_content_type_content_type($subtype, $plugin) 
 function _views_content_panes_content_type($view, $display) {
   // Ensure the handler is the right type, as Views will fall back to
   // the default display if something is broken:
-  if (get_class($display->handler) != 'views_content_plugin_display_panel_pane') {
+  if (!is_a($display->handler, 'views_content_plugin_display_panel_pane')) {
     return;
   }
 
@@ -139,7 +139,7 @@ function views_content_views_panes_content_type_render($subtype, $conf, $panel_a
   $view->set_display($display);
   views_content_views_panes_add_defaults($conf, $view);
 
-  if (!$view->display_handler->access($GLOBALS['user']) || !$view->display_handler->panel_pane_display) {
+  if (!$view->display_handler->access($GLOBALS['user']) || empty($view->display_handler->panel_pane_display)) {
     return;
   }
 
@@ -161,6 +161,9 @@ function views_content_views_panes_content_type_render($subtype, $conf, $panel_a
           else {
             $args[] = $contexts[$key]->argument;
           }
+        }
+        else {
+          $args[] = isset($arguments[$id]['exception']['value']) ? $arguments[$id]['exception']['value'] : 'all';
         }
         break;
 
@@ -252,7 +255,7 @@ function views_content_views_panes_content_type_render($subtype, $conf, $panel_a
 
     if ($conf['use_pager']) {
       if (!isset($pager['options']['id']) || (isset($conf['pager_id']) && $pager['options']['id'] != $conf['pager_id'])) {
-        $pager['options']['id'] = $conf['pager_id'];
+        $pager['options']['id'] = (int) $conf['pager_id'];
       }
     }
 
@@ -310,7 +313,7 @@ function views_content_views_panes_add_defaults(&$conf, $view) {
 
   $conf += array(
     'link_to_view' => $view->display_handler->get_option('link_to_view'),
-    'more_link' => $view->display_handler->get_option('more_link'),
+    'more_link' => $view->display_handler->get_option('use_more'),
     'feed_icons' => FALSE,
     'use_pager' => $pager['type'] != 'none' && $pager['type'] != 'some',
     'pager_id' => isset($pager['options']['id']) ? $pager['options']['id'] : 0,
@@ -405,7 +408,7 @@ function views_content_views_panes_content_type_edit_form($form, &$form_state) {
       $form['fields_override'][$field] = array(
         '#type' => 'checkbox',
         '#title' => $title,
-        '#default_value' => isset($conf['fields_override'][$field]) ? $conf['fields_override'][$field] : TRUE,
+        '#default_value' => isset($conf['fields_override'][$field]) ? $conf['fields_override'][$field] : !$handler->options['exclude'],
       );
     }
   }
@@ -530,9 +533,6 @@ function views_content_views_panes_content_type_edit_form($form, &$form_state) {
   // have to handle it separately.
   if (isset($exposed_form['sort_by'])) {
     $form['exposed']['sort_by'] = $exposed_form['sort_by'];
-    if (isset($conf['exposed']['sort_by'])) {
-      $form['exposed']['sort_by']['#default_value'] = $conf['exposed']['sort_by'];
-    }
   }
 
   if (isset($exposed_form['sort_order'])) {

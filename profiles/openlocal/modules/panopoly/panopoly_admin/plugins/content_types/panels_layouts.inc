@@ -21,7 +21,7 @@ function panopoly_admin_panels_layouts_content_type_render($subtype, $conf, $pan
 
   // Find all the Panels layouts
   $layout_options = array();
-  $panels_page_allowed_layouts = unserialize(variable_get('panels_page_allowed_layouts'));
+  $panels_page_allowed_layouts = unserialize(variable_get('panels_page_allowed_layouts', serialize('')));
   foreach (panels_get_layouts() as $layout_option) {
     if (empty($layout_option['builder']) || $layout_option['builder'] == FALSE) {
 
@@ -37,8 +37,12 @@ function panopoly_admin_panels_layouts_content_type_render($subtype, $conf, $pan
           $layout_type = t('Custom (Responsive)');
         }
       }
+      else if ($layout_option['category'] == 'Radix') {
+        $layout_type = t('Default (Radix)');
+      }
       else if ($layout_option['category'] == 'Panopoly') {
-        $layout_type = t('Default (Panopoly)');
+        // These layouts are deprecated in favor of Radix. So skip them!
+        continue;
       }
       else {
         $layout_type = 'Custom (Code)';

@@ -152,6 +152,20 @@ function panopoly_widgets_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 1,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(
+          'panopoly_image_full' => 'panopoly_image_full',
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -175,6 +189,7 @@ function panopoly_widgets_field_default_field_instances() {
           'iframe_width' => 600,
           'include_link' => 0,
           'include_map' => 1,
+          'include_static_map' => 0,
           'include_text' => 0,
           'information_bubble' => 0,
           'langcode' => 'en',
@@ -259,6 +274,7 @@ function panopoly_widgets_field_default_field_instances() {
     'label' => 'Links',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -271,6 +287,7 @@ function panopoly_widgets_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -283,6 +300,40 @@ function panopoly_widgets_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => -4,
+    ),
+  );
+
+  // Exported field_instance: 'fieldable_panels_pane-spotlight-field_basic_spotlight_duration'
+  $field_instances['fieldable_panels_pane-spotlight-field_basic_spotlight_duration'] = array(
+    'bundle' => 'spotlight',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_basic_spotlight_duration',
+    'label' => 'Slide Duration',
+    'required' => 0,
+    'settings' => array(
+      'max' => 60,
+      'min' => 1,
+      'prefix' => '',
+      'suffix' => 'seconds',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 1,
     ),
   );
 
@@ -323,7 +374,7 @@ function panopoly_widgets_field_default_field_instances() {
       'module' => 'panopoly_widgets',
       'settings' => array(),
       'type' => 'panopoly_spotlight_form',
-      'weight' => -4,
+      'weight' => 2,
     ),
   );
 
@@ -461,6 +512,18 @@ function panopoly_widgets_field_default_field_instances() {
           'media_internet' => 'media_internet',
           'upload' => 0,
         ),
+        'manualcrop_crop_info' => TRUE,
+        'manualcrop_default_crop_area' => TRUE,
+        'manualcrop_enable' => FALSE,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => TRUE,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => TRUE,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => FALSE,
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
@@ -477,6 +540,7 @@ function panopoly_widgets_field_default_field_instances() {
   t('Information');
   t('Items');
   t('Links');
+  t('Slide Duration');
   t('Table');
   t('Text');
   t('The street address of the location you wish to map. This widget will contact Google and try to do its best to create a map!');

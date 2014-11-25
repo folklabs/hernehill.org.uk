@@ -212,16 +212,16 @@
 						for (j = levels.length -1; j >= 0; j--) {
 							t += levels[j]+"-";
 						}
-						li = $('<li class="markItUpButton markItUpButton'+t+(i)+' '+(button.className||'')+'"><a href="" '+key+' title="'+title+'">'+(button.name||'')+'</a></li>')
+						li = $('<li class="markItUpButton markItUpButton'+t+(i)+' '+(button.className||'')+'"><a href="#" '+key+' title="'+title+'">'+(button.name||'')+'</a></li>')
 						.bind("contextmenu.markItUp", function() { // prevent contextmenu on mac and allow ctrl+click
 							return false;
 						}).bind('click.markItUp', function(e) {
 							e.preventDefault();
 						}).bind("focusin.markItUp", function(){
                             $$.focus();
-						}).bind('mouseup', function() {
+						}).bind('mouseup', function(e) {
 							if (button.call) {
-								eval(button.call)();
+								eval(button.call)(e); // Pass the mouseup event to custom delegate
 							}
 							setTimeout(function() { markup(button) },1);
 							return false;
