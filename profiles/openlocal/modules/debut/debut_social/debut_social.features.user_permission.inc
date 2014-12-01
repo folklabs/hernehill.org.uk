@@ -14,9 +14,9 @@ function debut_social_user_default_permissions() {
   $permissions['access forward'] = array(
     'name' => 'access forward',
     'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
+      0 => 'administrator',
+      1 => 'anonymous user',
+      2 => 'authenticated user',
     ),
     'module' => 'forward',
   );
@@ -25,9 +25,9 @@ function debut_social_user_default_permissions() {
   $permissions['access service links'] = array(
     'name' => 'access service links',
     'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
+      0 => 'administrator',
+      1 => 'anonymous user',
+      2 => 'authenticated user',
     ),
     'module' => 'service_links',
   );
@@ -36,7 +36,7 @@ function debut_social_user_default_permissions() {
   $permissions['administer follow'] = array(
     'name' => 'administer follow',
     'roles' => array(
-      'administrator' => 'administrator',
+      0 => 'administrator',
     ),
     'module' => 'follow',
   );
@@ -45,7 +45,7 @@ function debut_social_user_default_permissions() {
   $permissions['administer forward'] = array(
     'name' => 'administer forward',
     'roles' => array(
-      'administrator' => 'administrator',
+      0 => 'administrator',
     ),
     'module' => 'forward',
   );
@@ -54,7 +54,7 @@ function debut_social_user_default_permissions() {
   $permissions['change follow link titles'] = array(
     'name' => 'change follow link titles',
     'roles' => array(
-      'administrator' => 'administrator',
+      0 => 'administrator',
     ),
     'module' => 'follow',
   );
@@ -63,8 +63,8 @@ function debut_social_user_default_permissions() {
   $permissions['edit any user follow links'] = array(
     'name' => 'edit any user follow links',
     'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'follow',
   );
@@ -73,8 +73,8 @@ function debut_social_user_default_permissions() {
   $permissions['edit own follow links'] = array(
     'name' => 'edit own follow links',
     'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
+      0 => 'administrator',
+      1 => 'authenticated user',
     ),
     'module' => 'follow',
   );
@@ -83,7 +83,7 @@ function debut_social_user_default_permissions() {
   $permissions['edit site follow links'] = array(
     'name' => 'edit site follow links',
     'roles' => array(
-      'administrator' => 'administrator',
+      0 => 'administrator',
     ),
     'module' => 'follow',
   );
@@ -92,7 +92,7 @@ function debut_social_user_default_permissions() {
   $permissions['override email address'] = array(
     'name' => 'override email address',
     'roles' => array(
-      'administrator' => 'administrator',
+      0 => 'administrator',
     ),
     'module' => 'forward',
   );
@@ -101,8 +101,8 @@ function debut_social_user_default_permissions() {
   $permissions['override flood control'] = array(
     'name' => 'override flood control',
     'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'forward',
   );

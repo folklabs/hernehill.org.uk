@@ -1,25 +1,24 @@
 name = Debut Social
 description = Social media integration including share and follow links.
 core = 7.x
-package = Debut
+package = Features
 php = 5.2.4
-version = 7.x-1.0-alpha1
-project = debut_social
+author = Chocolate Lily
+author_url = http://chocolatelilyweb.ca
 dependencies[] = apps_compatible
 dependencies[] = captcha
-dependencies[] = ctools
+dependencies[] = context
 dependencies[] = features
 dependencies[] = follow
 dependencies[] = forward
 dependencies[] = general_services
 dependencies[] = service_links
 dependencies[] = strongarm
-author = Chocolate Lily
-author_url = http://chocolatelilyweb.ca
-datestamp = 1380569037
+features[context][] = social-follow-site
+features[context][] = social-follow-user
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
-features[features_api][] = api:2
+features[features_api][] = api:1
 features[user_permission][] = access forward
 features[user_permission][] = access service links
 features[user_permission][] = administer follow
@@ -35,3 +34,10 @@ features[variable][] = forward_display_teasers
 features[variable][] = service_links_link_view_modes
 features[variable][] = service_links_show
 features[variable][] = service_links_weight
+
+; Information added by drupal.org packaging script on 2013-06-13
+version = "7.x-1.1"
+core = "7.x"
+project = "debut_social"
+datestamp = "1371158456"
+

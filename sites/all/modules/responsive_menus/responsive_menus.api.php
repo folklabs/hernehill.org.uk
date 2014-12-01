@@ -79,7 +79,7 @@ function example_style_settings() {
     '#type' => 'textarea',
     '#title' => t('CSS selectors for which menus to responsify'),
     '#default_value' => variable_get('responsive_menus_css_selectors', '.main-menu'),
-    '#description' => 'Enter CSS selectors of menus to responsify.  Comma separated or 1 per line',
+    '#description' => t('Enter CSS selectors of menus to responsify.  Comma separated or 1 per line'),
   );
   $form['responsive_menus_simple_text'] = array(
     '#type' => 'textfield',
@@ -91,7 +91,7 @@ function example_style_settings() {
     '#title' => t('Screen width to respond to'),
     '#size' => 10,
     '#default_value' => variable_get('responsive_menus_media_size', 768),
-    '#description' => 'Width in pixels when we swap out responsive menu e.g. 768',
+    '#description' => t('Width in pixels when we swap out responsive menu e.g. 768'),
   );
 
   return $form;

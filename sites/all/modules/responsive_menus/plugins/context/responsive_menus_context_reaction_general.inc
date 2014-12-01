@@ -13,6 +13,7 @@ class responsive_menus_context_reaction_general extends context_reaction {
    */
   function options_form($context) {
     $values = $this->fetch_from_context($context);
+    $form_state = (empty($form_state) ? array() : $form_state);
     if (empty($form_state['build_info']['args'])) {
       $form_state['build_info']['args'] = array();
     }
@@ -30,7 +31,7 @@ class responsive_menus_context_reaction_general extends context_reaction {
    */
   function execute() {
     $contexts = context_active_contexts();
-    foreach ($contexts as $name => $value) {
+    foreach ($contexts as $value) {
       if (!empty($value->reactions[$this->plugin])) {
         $style = $value->reactions[$this->plugin]['responsive_menus_style'];
         $js_defaults = $value->reactions[$this->plugin]['responsive_menus_style_settings'];

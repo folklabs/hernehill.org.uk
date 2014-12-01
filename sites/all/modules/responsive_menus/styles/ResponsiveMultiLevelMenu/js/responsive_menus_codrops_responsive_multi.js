@@ -16,7 +16,7 @@
         }
         // Only apply if window size is correct.  Runs once on page load.
         var $media_size = iteration.media_size || 768;
-        if ($windowWidth < $media_size) {
+        if ($windowWidth <= $media_size) {
           // Call codrops ResponsiveMultiLevelMenu with our settings.
           $(iteration.selectors).once('responsive-menus-codrops-multi-menu', function() {
             $(this).prepend('<button class="dl-trigger">Open Menu</button>');

@@ -25,15 +25,18 @@ These options vary depending on the style chosen, but may include:
 
 GOOD TO KNOW
 ------------
-The 'Simple' and 'MeanMenu' styles are included with this module, the others 
+The 'Simple' and 'MeanMenu' styles are included with this module, the others
 must be downloaded.  The URL to download a library will be presented to you if
 you try to choose any other style.
 
 MeanMenu & codrops' Multi styles require jQuery 1.7+
 
 Sidr & codrops integrate with the Libraries 2.x module in order to work.
--This can be bypassed using hook_responsive_menus_styles_alter. 
+-This can be bypassed using hook_responsive_menus_styles_alter.
 -See API & HOOKS below.
+
+Google Nexus style takes over all the time (not just small screen).
+-May be updated later to have a mobile only option.
 
 
 API & HOOKS
