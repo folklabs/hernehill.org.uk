@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,900,400italic|Merriweather:300,900,300italic);
 /*
  * @file
  * RTL companion for the styles.scss file. */
 /* Import Sass mixins, variables, Compass modules, etc. */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900,400italic|Merriweather:300,900,300italic);
 /* HTML element (SMACSS base) rules */
 /*
  * @file

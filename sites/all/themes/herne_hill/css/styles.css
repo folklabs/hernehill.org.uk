@@ -2546,22 +2546,26 @@ div.form-item-notify {
 }
 
 /* line 26, ../sass/components/_footer.sass */
-.menu-name-menu-ol-footer-menu li.menu__item {
+#block-menu-menu-ol-footer-menu .block-title {
+  display: none;
+}
+/* line 28, ../sass/components/_footer.sass */
+#block-menu-menu-ol-footer-menu li.menu__item {
   list-style: none;
   display: inline-block;
   padding: 0 20px 0 0;
   font-size: 1.2em;
 }
-/* line 31, ../sass/components/_footer.sass */
-.menu-name-menu-ol-footer-menu li.menu__item a {
+/* line 33, ../sass/components/_footer.sass */
+#block-menu-menu-ol-footer-menu li.menu__item a {
   color: #e3dcd1;
 }
-/* line 33, ../sass/components/_footer.sass */
-.menu-name-menu-ol-footer-menu li.menu__item a:hover {
+/* line 35, ../sass/components/_footer.sass */
+#block-menu-menu-ol-footer-menu li.menu__item a:hover {
   background-color: transparent;
 }
 
-/* line 40, ../sass/components/_footer.sass */
+/* line 42, ../sass/components/_footer.sass */
 #block-block-10 {
   padding: 0 0 0 20px;
 }

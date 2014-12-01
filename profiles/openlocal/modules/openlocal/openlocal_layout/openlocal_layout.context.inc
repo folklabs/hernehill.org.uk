@@ -32,21 +32,21 @@ function openlocal_layout_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
-        'block-10' => array(
-          'module' => 'block',
-          'delta' => '10',
+        'masquerade-masquerade' => array(
+          'module' => 'masquerade',
+          'delta' => 'masquerade',
           'region' => 'footer',
-          'weight' => '-9',
+          'weight' => '-38',
         ),
         'menu-menu-ol-footer-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-ol-footer-menu',
           'region' => 'footer',
-          'weight' => '-8',
+          'weight' => '-37',
         ),
-        'masquerade-masquerade' => array(
-          'module' => 'masquerade',
-          'delta' => 'masquerade',
+        'block-10' => array(
+          'module' => 'block',
+          'delta' => '10',
           'region' => 'footer',
           'weight' => '-36',
         ),
