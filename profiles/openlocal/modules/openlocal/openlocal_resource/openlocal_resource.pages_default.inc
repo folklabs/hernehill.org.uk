@@ -57,7 +57,7 @@ function openlocal_resource_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'phelan';
+  $display->layout = 'radix_boxton';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -68,11 +68,12 @@ function openlocal_resource_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Discover';
+  $display->uuid = '882341ed-03b8-4095-a4f8-155864de8b55';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'column1';
+    $pane->pid = 'new-f24261a0-cfff-4c3b-a122-92e3cb463a74';
+    $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_resource-panel_pane_1';
     $pane->shown = TRUE;
@@ -102,46 +103,11 @@ function openlocal_resource_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['column1'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'column2';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'openlocal_gallery-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'use_pager' => 1,
-      'pager_id' => '0',
-      'items_per_page' => '10',
-      'override_title' => '',
-      'override_title_text' => '',
-      'view_mode' => 'teaser',
-      'widget_title' => '',
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['column2'][0] = 'new-2';
+    $pane->uuid = 'f24261a0-cfff-4c3b-a122-92e3cb463a74';
+    $display->content['new-f24261a0-cfff-4c3b-a122-92e3cb463a74'] = $pane;
+    $display->panels['contentmain'][0] = 'new-f24261a0-cfff-4c3b-a122-92e3cb463a74';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-f24261a0-cfff-4c3b-a122-92e3cb463a74';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ol_discover'] = $page;
@@ -211,10 +177,11 @@ function openlocal_resource_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Resources';
+  $display->uuid = 'b861bbda-1bb1-4f36-a8de-ee52f2fdcf27';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-75e02472-45ec-4bb7-a737-77a93b6fae4a';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_resource-panel_pane_1';
@@ -243,10 +210,11 @@ function openlocal_resource_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][0] = 'new-3';
+    $pane->uuid = '75e02472-45ec-4bb7-a737-77a93b6fae4a';
+    $display->content['new-75e02472-45ec-4bb7-a737-77a93b6fae4a'] = $pane;
+    $display->panels['contentmain'][0] = 'new-75e02472-45ec-4bb7-a737-77a93b6fae4a';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-75e02472-45ec-4bb7-a737-77a93b6fae4a';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ol_resources'] = $page;
