@@ -77,7 +77,7 @@ function openlocal_group_default_page_manager_pages() {
     'panels_breadcrumbs_titles' => 'Groups
 %node:title
 Events',
-    'panels_breadcrumbs_paths' => '/groups
+    'panels_breadcrumbs_paths' => 'groups
 %node:url',
     'panels_breadcrumbs_home' => 1,
   );
