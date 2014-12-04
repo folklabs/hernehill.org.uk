@@ -59,7 +59,7 @@ function openlocal_core_default_page_manager_pages() {
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'boxton';
+  $display->layout = 'radix_boxton';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -69,10 +69,11 @@ function openlocal_core_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Places';
+  $display->uuid = '3ab9500f-5f44-4070-a321-a8011dd52cac';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-fc55280d-4209-495b-a129-5448d9b185e7';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_place-panel_pane_2';
@@ -103,10 +104,11 @@ function openlocal_core_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $pane->uuid = 'fc55280d-4209-495b-a129-5448d9b185e7';
+    $display->content['new-fc55280d-4209-495b-a129-5448d9b185e7'] = $pane;
+    $display->panels['contentmain'][0] = 'new-fc55280d-4209-495b-a129-5448d9b185e7';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-59f72be6-75bb-4ceb-90c1-e99552a3b950';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_place-panel_pane_1';
@@ -137,10 +139,11 @@ function openlocal_core_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][1] = 'new-2';
+    $pane->uuid = '59f72be6-75bb-4ceb-90c1-e99552a3b950';
+    $display->content['new-59f72be6-75bb-4ceb-90c1-e99552a3b950'] = $pane;
+    $display->panels['contentmain'][1] = 'new-59f72be6-75bb-4ceb-90c1-e99552a3b950';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-fc55280d-4209-495b-a129-5448d9b185e7';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ol_places'] = $page;

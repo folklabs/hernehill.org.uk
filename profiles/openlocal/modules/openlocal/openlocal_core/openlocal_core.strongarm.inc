@@ -14,7 +14,7 @@ function openlocal_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ol_place';
-  $strongarm->value = 'edit-menu';
+  $strongarm->value = 'edit-submission';
   $export['additional_settings__active_tab_ol_place'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -153,7 +153,7 @@ function openlocal_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'forward_display_ol_place';
-  $strongarm->value = TRUE;
+  $strongarm->value = 1;
   $export['forward_display_ol_place'] = $strongarm;
 
   $strongarm = new stdClass();
