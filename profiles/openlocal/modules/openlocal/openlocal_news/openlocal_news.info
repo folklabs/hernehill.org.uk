@@ -84,3 +84,5 @@ features[views_view][] = openlocal_news
 features[views_view][] = openlocal_news_categories
 features_exclude[field][node-openlocal_news_article-field_ol_geolocation] = node-openlocal_news_article-field_ol_geolocation
 features_exclude[field_base][field_ol_radioactivity] = field_ol_radioactivity
+mtime = 1396017714
+project path = profiles/openlocal/modules/openlocal
