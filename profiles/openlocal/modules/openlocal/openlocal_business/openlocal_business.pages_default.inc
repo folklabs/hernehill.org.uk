@@ -50,7 +50,7 @@ function openlocal_business_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'services';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'Filter',
     'no_blocks' => 1,
@@ -261,7 +261,7 @@ function openlocal_business_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'services';
   $handler->handler = 'panel_context';
-  $handler->weight = 1;
+  $handler->weight = -30;
   $handler->conf = array(
     'title' => 'Facet search',
     'no_blocks' => 1,
