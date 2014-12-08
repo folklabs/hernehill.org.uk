@@ -36,7 +36,7 @@ function openlocal_gallery_panelizer_defaults() {
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'bryant_flipped_flipped';
+  $display->layout = 'radix_bryant_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -48,10 +48,11 @@ function openlocal_gallery_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->uuid = '7b3c3b9f-db1b-4d21-95e2-e44b83a34c4a';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-812e47ed-ff5d-4f46-a1bd-1bb7aeb44a03';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_details';
@@ -89,10 +90,11 @@ function openlocal_gallery_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $pane->uuid = '812e47ed-ff5d-4f46-a1bd-1bb7aeb44a03';
+    $display->content['new-812e47ed-ff5d-4f46-a1bd-1bb7aeb44a03'] = $pane;
+    $display->panels['contentmain'][0] = 'new-812e47ed-ff5d-4f46-a1bd-1bb7aeb44a03';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-8aea17eb-75aa-4b64-a762-eb1c1581379e';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ol_gallery_images';
@@ -138,10 +140,11 @@ function openlocal_gallery_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][1] = 'new-2';
+    $pane->uuid = '8aea17eb-75aa-4b64-a762-eb1c1581379e';
+    $display->content['new-8aea17eb-75aa-4b64-a762-eb1c1581379e'] = $pane;
+    $display->panels['contentmain'][1] = 'new-8aea17eb-75aa-4b64-a762-eb1c1581379e';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-ddb96cbc-f2e9-4654-9f22-c94f4905126f';
     $pane->panel = 'contentmain';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -165,10 +168,11 @@ function openlocal_gallery_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][2] = 'new-3';
+    $pane->uuid = 'ddb96cbc-f2e9-4654-9f22-c94f4905126f';
+    $display->content['new-ddb96cbc-f2e9-4654-9f22-c94f4905126f'] = $pane;
+    $display->panels['contentmain'][2] = 'new-ddb96cbc-f2e9-4654-9f22-c94f4905126f';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-f96c6517-cae7-471c-9736-478c180a8a90';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:og_group_ref';
@@ -191,10 +195,11 @@ function openlocal_gallery_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][0] = 'new-4';
+    $pane->uuid = 'f96c6517-cae7-471c-9736-478c180a8a90';
+    $display->content['new-f96c6517-cae7-471c-9736-478c180a8a90'] = $pane;
+    $display->panels['sidebar'][0] = 'new-f96c6517-cae7-471c-9736-478c180a8a90';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-80eab4c4-73b8-442f-a6b8-695bbff4f9cc';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
     $pane->subtype = 'block-9';
@@ -212,10 +217,11 @@ function openlocal_gallery_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar'][1] = 'new-5';
+    $pane->uuid = '80eab4c4-73b8-442f-a6b8-695bbff4f9cc';
+    $display->content['new-80eab4c4-73b8-442f-a6b8-695bbff4f9cc'] = $pane;
+    $display->panels['sidebar'][1] = 'new-80eab4c4-73b8-442f-a6b8-695bbff4f9cc';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-ddb96cbc-f2e9-4654-9f22-c94f4905126f';
   $panelizer->display = $display;
   $export['node:ol_gallery:default'] = $panelizer;
 

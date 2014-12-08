@@ -61,7 +61,7 @@ function openlocal_gallery_default_page_manager_pages() {
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'bryant_flipped_flipped';
+  $display->layout = 'radix_bryant_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -72,10 +72,11 @@ function openlocal_gallery_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Galleries';
+  $display->uuid = 'e02724e8-2617-4181-994e-245271707b53';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-ba735952-fa79-4d9d-85a9-429e8eccdf4b';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_gallery-panel_pane_2';
@@ -108,10 +109,11 @@ function openlocal_gallery_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $pane->uuid = 'ba735952-fa79-4d9d-85a9-429e8eccdf4b';
+    $display->content['new-ba735952-fa79-4d9d-85a9-429e8eccdf4b'] = $pane;
+    $display->panels['contentmain'][0] = 'new-ba735952-fa79-4d9d-85a9-429e8eccdf4b';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-1b83dd13-6398-49bb-92d0-c46fc2cbddf5';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
     $pane->subtype = 'block-9';
@@ -129,10 +131,11 @@ function openlocal_gallery_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['sidebar'][0] = 'new-2';
+    $pane->uuid = '1b83dd13-6398-49bb-92d0-c46fc2cbddf5';
+    $display->content['new-1b83dd13-6398-49bb-92d0-c46fc2cbddf5'] = $pane;
+    $display->panels['sidebar'][0] = 'new-1b83dd13-6398-49bb-92d0-c46fc2cbddf5';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-ba735952-fa79-4d9d-85a9-429e8eccdf4b';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ol_galleries'] = $page;

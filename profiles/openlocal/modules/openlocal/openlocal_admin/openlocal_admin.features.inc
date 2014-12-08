@@ -7,8 +7,7 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function openlocal_admin_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function openlocal_admin_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
@@ -17,7 +16,7 @@ function openlocal_admin_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function openlocal_admin_views_api() {
+function openlocal_admin_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
@@ -62,11 +61,11 @@ function openlocal_admin_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => FALSE,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'openlocal_admin',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
