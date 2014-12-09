@@ -57,6 +57,7 @@ function openlocal_business_field_group_info() {
       0 => 'field_ol_business_email',
       1 => 'field_ol_business_website',
       2 => 'field_ol_business_twitter',
+      3 => 'field_ol_business_facebook',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -114,8 +115,8 @@ function openlocal_business_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'group_basic_info',
-      1 => 'group_location_details',
-      2 => 'group_internet',
+      1 => 'group_internet',
+      2 => 'group_location_details',
       3 => 'group_opening_hours',
       4 => 'group_promotions',
     ),

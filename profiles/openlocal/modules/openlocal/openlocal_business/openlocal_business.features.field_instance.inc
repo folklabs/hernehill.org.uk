@@ -316,6 +316,74 @@ function openlocal_business_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ol_business-field_ol_business_facebook'
+  $field_instances['node-ol_business-field_ol_business_facebook'] = array(
+    'bundle' => 'ol_business',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 18,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_business_facebook',
+    'label' => 'Facebook',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 0,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => 'Facebook page',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-ol_business-field_ol_business_opening_hours'
   $field_instances['node-ol_business-field_ol_business_opening_hours'] = array(
     'bundle' => 'ol_business',
@@ -794,7 +862,7 @@ function openlocal_business_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -894,7 +962,7 @@ function openlocal_business_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -939,7 +1007,7 @@ function openlocal_business_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -1230,6 +1298,7 @@ function openlocal_business_field_default_field_instances() {
   t('Enter your business website address if you have one.');
   t('Enter your hours of trading, if you have a retail premises that accepts customers.');
   t('Event venue');
+  t('Facebook');
   t('Geolocation');
   t('Image');
   t('Opening hours');

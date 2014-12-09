@@ -524,6 +524,35 @@ function openlocal_business_panelizer_defaults() {
     $display->content['new-2cd59e12-abc7-4249-a295-eb79fe373ce1'] = $pane;
     $display->panels['quarter1'][7] = 'new-2cd59e12-abc7-4249-a295-eb79fe373ce1';
     $pane = new stdClass();
+    $pane->pid = 'new-6cf20e51-be2a-4e4e-b91b-93f3a6b0e3ef';
+    $pane->panel = 'quarter1';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ol_business_facebook';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'inline',
+      'formatter' => 'link_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => array(),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 8;
+    $pane->locks = array();
+    $pane->uuid = '6cf20e51-be2a-4e4e-b91b-93f3a6b0e3ef';
+    $display->content['new-6cf20e51-be2a-4e4e-b91b-93f3a6b0e3ef'] = $pane;
+    $display->panels['quarter1'][8] = 'new-6cf20e51-be2a-4e4e-b91b-93f3a6b0e3ef';
+    $pane = new stdClass();
     $pane->pid = 'new-0dd6e0cf-a1d0-4de1-b120-e3b1008c29da';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
@@ -560,11 +589,11 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 9;
     $pane->locks = array();
     $pane->uuid = '0dd6e0cf-a1d0-4de1-b120-e3b1008c29da';
     $display->content['new-0dd6e0cf-a1d0-4de1-b120-e3b1008c29da'] = $pane;
-    $display->panels['quarter1'][8] = 'new-0dd6e0cf-a1d0-4de1-b120-e3b1008c29da';
+    $display->panels['quarter1'][9] = 'new-0dd6e0cf-a1d0-4de1-b120-e3b1008c29da';
     $pane = new stdClass();
     $pane->pid = 'new-0958fde4-02eb-43e2-9293-0d3a2bd2f705';
     $pane->panel = 'quarter1';
@@ -606,11 +635,11 @@ function openlocal_business_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 10;
     $pane->locks = array();
     $pane->uuid = '0958fde4-02eb-43e2-9293-0d3a2bd2f705';
     $display->content['new-0958fde4-02eb-43e2-9293-0d3a2bd2f705'] = $pane;
-    $display->panels['quarter1'][9] = 'new-0958fde4-02eb-43e2-9293-0d3a2bd2f705';
+    $display->panels['quarter1'][10] = 'new-0958fde4-02eb-43e2-9293-0d3a2bd2f705';
     $pane = new stdClass();
     $pane->pid = 'new-dc0fb144-690b-4599-b08f-e302d2d5b3eb';
     $pane->panel = 'quarter2';
