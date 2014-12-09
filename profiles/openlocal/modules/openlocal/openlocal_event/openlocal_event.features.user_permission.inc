@@ -124,5 +124,17 @@ function openlocal_event_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'view date repeats'.
+  $permissions['view date repeats'] = array(
+    'name' => 'view date repeats',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'contributor' => 'contributor',
+    ),
+    'module' => 'date_repeat_field',
+  );
+
   return $permissions;
 }

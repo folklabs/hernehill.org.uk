@@ -547,31 +547,15 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['field_ol_event_date_1']['element_class'] = 'ol-date-only';
   $handler->display->display_options['fields']['field_ol_event_date_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ol_event_date_1']['settings'] = array(
-    'format_type' => 'ol_date_only',
+    'format_type' => 'ol_simple_date',
     'fromto' => 'value',
-    'multiple_number' => '',
+    'multiple_number' => '1',
     'multiple_from' => '',
     'multiple_to' => '',
     'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_ol_event_date_1']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ol_event_date_1']['delta_offset'] = '0';
-  /* Field: Content: Date */
-  $handler->display->display_options['fields']['field_ol_event_date']['id'] = 'field_ol_event_date';
-  $handler->display->display_options['fields']['field_ol_event_date']['table'] = 'field_data_field_ol_event_date';
-  $handler->display->display_options['fields']['field_ol_event_date']['field'] = 'field_ol_event_date';
-  $handler->display->display_options['fields']['field_ol_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_ol_event_date']['element_class'] = 'ol-month-only';
-  $handler->display->display_options['fields']['field_ol_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_event_date']['settings'] = array(
-    'format_type' => 'ol_month_only',
-    'fromto' => 'value',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'hide',
-  );
-  $handler->display->display_options['fields']['field_ol_event_date']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_event_date']['delta_offset'] = '0';
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
@@ -666,6 +650,10 @@ function openlocal_event_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Upcoming sidebar', 'panel_pane_1');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'view-ol-event-upcoming-sidebar';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -719,31 +707,15 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['field_ol_event_date']['element_class'] = 'ol-date-only';
   $handler->display->display_options['fields']['field_ol_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ol_event_date']['settings'] = array(
-    'format_type' => 'ol_date_only',
+    'format_type' => 'ol_simple_date',
     'fromto' => 'value',
-    'multiple_number' => '',
+    'multiple_number' => '1',
     'multiple_from' => '',
     'multiple_to' => '',
     'show_repeat_rule' => 'hide',
   );
+  $handler->display->display_options['fields']['field_ol_event_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ol_event_date']['delta_offset'] = '0';
-  /* Field: Content: Date */
-  $handler->display->display_options['fields']['field_ol_event_date_1']['id'] = 'field_ol_event_date_1';
-  $handler->display->display_options['fields']['field_ol_event_date_1']['table'] = 'field_data_field_ol_event_date';
-  $handler->display->display_options['fields']['field_ol_event_date_1']['field'] = 'field_ol_event_date';
-  $handler->display->display_options['fields']['field_ol_event_date_1']['label'] = '';
-  $handler->display->display_options['fields']['field_ol_event_date_1']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_ol_event_date_1']['element_class'] = 'ol-month-only';
-  $handler->display->display_options['fields']['field_ol_event_date_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_event_date_1']['settings'] = array(
-    'format_type' => 'ol_month_only',
-    'fromto' => 'value',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'hide',
-  );
-  $handler->display->display_options['fields']['field_ol_event_date_1']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';

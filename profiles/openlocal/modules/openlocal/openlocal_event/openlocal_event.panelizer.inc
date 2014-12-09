@@ -402,12 +402,12 @@ function openlocal_event_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'format_type' => 'panopoly_day',
-        'multiple_number' => '',
+        'format_type' => 'short',
+        'multiple_number' => '1',
         'multiple_from' => '',
         'multiple_to' => '',
-        'fromto' => 'value',
-        'show_repeat_rule' => 'show',
+        'fromto' => 'both',
+        'show_repeat_rule' => 'hide',
       ),
       'context' => array(),
       'override_title' => 0,
@@ -437,55 +437,6 @@ function openlocal_event_panelizer_defaults() {
     $pane->uuid = '8cf90e7a-7f2e-4391-9586-e009b9e834cf';
     $display->content['new-8cf90e7a-7f2e-4391-9586-e009b9e834cf'] = $pane;
     $display->panels['quarter1'][1] = 'new-8cf90e7a-7f2e-4391-9586-e009b9e834cf';
-    $pane = new stdClass();
-    $pane->pid = 'new-9ee901b0-9a5a-4821-86a3-ad6f0be89340';
-    $pane->panel = 'quarter1';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_event_date';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'inline',
-      'formatter' => 'date_default',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(
-        'format_type' => 'panopoly_time',
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'fromto' => 'value',
-        'show_repeat_rule' => 'show',
-      ),
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'view_mode' => NULL,
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '9ee901b0-9a5a-4821-86a3-ad6f0be89340';
-    $display->content['new-9ee901b0-9a5a-4821-86a3-ad6f0be89340'] = $pane;
-    $display->panels['quarter1'][2] = 'new-9ee901b0-9a5a-4821-86a3-ad6f0be89340';
     $pane = new stdClass();
     $pane->pid = 'new-a6bf1dff-96c1-4567-aba2-f47e8f22ff31';
     $pane->panel = 'quarter1';
@@ -526,11 +477,11 @@ function openlocal_event_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'a6bf1dff-96c1-4567-aba2-f47e8f22ff31';
     $display->content['new-a6bf1dff-96c1-4567-aba2-f47e8f22ff31'] = $pane;
-    $display->panels['quarter1'][3] = 'new-a6bf1dff-96c1-4567-aba2-f47e8f22ff31';
+    $display->panels['quarter1'][2] = 'new-a6bf1dff-96c1-4567-aba2-f47e8f22ff31';
     $pane = new stdClass();
     $pane->pid = 'new-7c35bdb8-2bf3-4aa3-b659-c88105e3b999';
     $pane->panel = 'quarter1';
@@ -555,11 +506,11 @@ function openlocal_event_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '7c35bdb8-2bf3-4aa3-b659-c88105e3b999';
     $display->content['new-7c35bdb8-2bf3-4aa3-b659-c88105e3b999'] = $pane;
-    $display->panels['quarter1'][4] = 'new-7c35bdb8-2bf3-4aa3-b659-c88105e3b999';
+    $display->panels['quarter1'][3] = 'new-7c35bdb8-2bf3-4aa3-b659-c88105e3b999';
     $pane = new stdClass();
     $pane->pid = 'new-7a142de8-fd9d-4cfe-9d87-e229907a924b';
     $pane->panel = 'quarter1';
@@ -597,11 +548,11 @@ function openlocal_event_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '7a142de8-fd9d-4cfe-9d87-e229907a924b';
     $display->content['new-7a142de8-fd9d-4cfe-9d87-e229907a924b'] = $pane;
-    $display->panels['quarter1'][5] = 'new-7a142de8-fd9d-4cfe-9d87-e229907a924b';
+    $display->panels['quarter1'][4] = 'new-7a142de8-fd9d-4cfe-9d87-e229907a924b';
     $pane = new stdClass();
     $pane->pid = 'new-f6d2c926-9bdc-4d8b-a992-e60f96d012eb';
     $pane->panel = 'quarter2';
@@ -624,44 +575,6 @@ function openlocal_event_panelizer_defaults() {
     $pane->uuid = 'f6d2c926-9bdc-4d8b-a992-e60f96d012eb';
     $display->content['new-f6d2c926-9bdc-4d8b-a992-e60f96d012eb'] = $pane;
     $display->panels['quarter2'][0] = 'new-f6d2c926-9bdc-4d8b-a992-e60f96d012eb';
-    $pane = new stdClass();
-    $pane->pid = 'new-a852e8e4-6209-4d5b-b5fc-faaa9675e599';
-    $pane->panel = 'quarter2';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'openlocal_event-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'ol-event-upcoming-sidebar',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = 'a852e8e4-6209-4d5b-b5fc-faaa9675e599';
-    $display->content['new-a852e8e4-6209-4d5b-b5fc-faaa9675e599'] = $pane;
-    $display->panels['quarter2'][1] = 'new-a852e8e4-6209-4d5b-b5fc-faaa9675e599';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1b4a6144-b4b9-4cc5-9f09-5a5f2a91e26a';
   $panelizer->display = $display;
