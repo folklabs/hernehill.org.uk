@@ -50,7 +50,8 @@ function eu_cookie_compliance_page_build(&$page) {
   }
 
   if (isset($popup_settings['eu_only']) && $popup_settings['eu_only']) {
-    $country_code = '';
+    //use the geoip function if exists
+    $country_code = function_exists('geoip_country_code_by_name') ? geoip_country_code_by_name(ip_address()) : '';
     if(module_exists('geoip')) {
       $country_code = geoip_country_code();
     } elseif(module_exists('smart_ip')) {
@@ -58,7 +59,7 @@ function eu_cookie_compliance_page_build(&$page) {
        $country_code = isset($smart_ip_session['location']['country_code']) ? $smart_ip_session['location']['country_code'] : NULL;
     }
     $geoip_match = false;
-    if ( in_array($country_code, array(NULL, 'BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'GB', 'IE', 'EL', 'ES', 'FR', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO', 'SI', 'SK', 'FI', 'SE', 'UK'))) {
+    if ( in_array($country_code, array(NULL, 'BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'GB', 'IE', 'EL', 'ES', 'FR', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'NO', 'AT', 'PL', 'PT', 'RO', 'SI', 'SK', 'FI', 'SE', 'UK'))) {
       $geoip_match = true;
     }
     if ($country_code == '')
@@ -77,7 +78,20 @@ function eu_cookie_compliance_page_build(&$page) {
       $data = $cache->data;
     }
     else {
+      // Initialize some needed popup settings messages.
+      $popup_settings_messages = array(
+        'popup_agree_button_message',
+        'popup_disagree_button_message',
+        'popup_hide_button_message',
+        'popup_find_more_button_message'
+      );
+      foreach ($popup_settings_messages as $key) {
+        if (!isset($popup_settings[$key])) {
+          $popup_settings[$key] = '';
+        }
+      }
       // color overrides
+      $data['css'] = '';
       if ($popup_settings['popup_bg_hex'] != '' and $popup_settings['popup_text_hex'] != '') {
         $position = $popup_settings['popup_position'] ? 'top' : 'bottom';
         $data['css'] = '#sliding-popup.sliding-popup-' . $position . ' {background:#'. check_plain($popup_settings["popup_bg_hex"]) . ';}'
@@ -87,8 +101,6 @@ function eu_cookie_compliance_page_build(&$page) {
       $popup_text_agreed = str_replace(array("\r", "\n"), '', $popup_settings['popup_agreed']['value']);
       $html_info = theme('eu_cookie_compliance_popup_info', array('message' => check_markup($popup_text_info, $popup_settings['popup_info']['format'], FALSE), 'agree_button'=> $popup_settings['popup_agree_button_message'], 'disagree_button' => $popup_settings['popup_disagree_button_message']));
       $html_agreed = theme('eu_cookie_compliance_popup_agreed', array('message' => check_markup($popup_text_agreed, $popup_settings['popup_agreed']['format'], FALSE),'hide_button'=>$popup_settings['popup_hide_button_message'],'find_more_button'=>$popup_settings['popup_find_more_button_message']));
-      $popup_text_info = str_replace(array("\r", "\n"), '', $popup_settings['popup_info']['value']);
-      $popup_text_agreed = str_replace(array("\r", "\n"), '', $popup_settings['popup_agreed']['value']);
       $clicking_confirmation = (isset($popup_settings['popup_clicking_confirmation']))? $popup_settings['popup_clicking_confirmation'] : TRUE ;
       $data['variables'] = array(
         'popup_enabled' => $popup_settings['popup_enabled'],
@@ -97,7 +109,7 @@ function eu_cookie_compliance_page_build(&$page) {
         'popup_clicking_confirmation' => $clicking_confirmation,
         'popup_html_info' => empty($html_info) ? FALSE : $html_info,
         'popup_html_agreed' => empty($html_agreed) ? FALSE : $html_agreed,
-        'popup_height' => ($popup_settings['popup_height']) ? (int) $popup_settings['popup_height'] : 'auto',
+        'popup_height' => ($popup_settings['popup_height'] !== '') ? (int) $popup_settings['popup_height'] : 'auto',
         'popup_width' => (drupal_substr($popup_settings['popup_width'], -1) == '%') ? $popup_settings['popup_width'] : (int) $popup_settings['popup_width'],
         'popup_delay' => (int) ($popup_settings['popup_delay'] * 1000),
         'popup_link' => url($popup_settings['popup_link']),
@@ -105,6 +117,7 @@ function eu_cookie_compliance_page_build(&$page) {
         'popup_position' => empty($popup_settings['popup_position']) ? NULL : $popup_settings['popup_position'],
         'popup_language' => $language->language,
         'domain' => variable_get('eu_cookie_compliance_domain', ''),
+        'cookie_lifetime' => variable_get('eu_cookie_compliance_cookie_lifetime', 100),
       );
       cache_set('eu_cookie_compliance_client_settings_' . $language->language, $data, 'cache', CACHE_TEMPORARY);
      }

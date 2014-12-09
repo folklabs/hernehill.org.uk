@@ -66,7 +66,7 @@
       popup.prependTo("body");
       var height = popup.height();
       popup.show()
-        .attr({"class": "sliding-popup-top"})
+        .attr({"class": "sliding-popup-top clearfix"})
         .css({"top": -1 * height})
         .animate({top: 0}, Drupal.settings.eu_cookie_compliance.popup_delay);
     } else {
@@ -142,7 +142,7 @@
 
   Drupal.eu_cookie_compliance.setStatus = function(status) {
     var date = new Date();
-    date.setDate(date.getDate() + 100);
+    date.setDate(date.getDate() + parseInt(Drupal.settings.eu_cookie_compliance.cookie_lifetime));
     var cookie = "cookie-agreed=" + status + ";expires=" + date.toUTCString() + ";path=" + Drupal.settings.basePath;
     if(Drupal.settings.eu_cookie_compliance.domain) {
       cookie += ";domain="+Drupal.settings.eu_cookie_compliance.domain;
