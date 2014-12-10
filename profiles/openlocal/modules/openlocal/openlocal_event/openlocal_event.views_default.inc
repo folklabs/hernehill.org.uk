@@ -734,11 +734,6 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['fields']['title_1']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Sort criterion: Content: Date -  start date (field_ol_event_date) */
   $handler->display->display_options['sorts']['field_ol_event_date_value']['id'] = 'field_ol_event_date_value';
   $handler->display->display_options['sorts']['field_ol_event_date_value']['table'] = 'field_data_field_ol_event_date';
