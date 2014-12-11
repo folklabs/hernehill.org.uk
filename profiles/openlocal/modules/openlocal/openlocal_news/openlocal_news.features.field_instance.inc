@@ -191,54 +191,6 @@ function openlocal_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-openlocal_news_article-field_featured_status'
-  $field_instances['node-openlocal_news_article-field_featured_status'] = array(
-    'bundle' => 'openlocal_news_article',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_featured_status',
-    'label' => 'Feature content',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-openlocal_news_article-field_ol_radioactivity'
   $field_instances['node-openlocal_news_article-field_ol_radioactivity'] = array(
     'bundle' => 'openlocal_news_article',
@@ -347,7 +299,6 @@ function openlocal_news_field_default_field_instances() {
   t('Categories');
   t('Choose the categories your article fits into. E.g, news about an event would go into the "Events" category.');
   t('Enter the content of the news article.');
-  t('Feature content');
   t('Please add an image to this post to promote it on our homepage and news listings. Don\'t forget to add some "alt tag" text to help those understand what your picture shows as this text is what can be read out automatically by screen readers for those with visual impairment.');
   t('Primary Image');
   t('Radioactivity');
