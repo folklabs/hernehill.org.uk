@@ -24,7 +24,7 @@ function openlocal_highlight_fe_nodequeue_export_fields() {
     'subqueue_title' => '',
     'size' => 0,
     'link' => 'Add to highlights',
-    'link_remove' => '',
+    'link_remove' => 'Remove from highlights',
     'owner' => 'nodequeue',
     'show_in_ui' => 1,
     'show_in_tab' => 1,
