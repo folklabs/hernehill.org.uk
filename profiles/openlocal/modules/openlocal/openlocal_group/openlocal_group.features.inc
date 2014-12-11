@@ -42,7 +42,7 @@ function openlocal_group_node_info() {
     'ol_group_post' => array(
       'name' => t('Group post'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Content to post into a group.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

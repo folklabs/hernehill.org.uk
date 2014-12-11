@@ -10,13 +10,6 @@
 function openlocal_group_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'administer panelizer fieldable_panels_pane faq breadcrumbs'.
-  $permissions['administer panelizer fieldable_panels_pane faq breadcrumbs'] = array(
-    'name' => 'administer panelizer fieldable_panels_pane faq breadcrumbs',
-    'roles' => array(),
-    'module' => 'panelizer',
-  );
-
   // Exported permission: 'administer panelizer node ol_group breadcrumbs'.
   $permissions['administer panelizer node ol_group breadcrumbs'] = array(
     'name' => 'administer panelizer node ol_group breadcrumbs',
