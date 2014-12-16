@@ -154,7 +154,7 @@ function panopoly_admin_form_alter(&$form, &$form_state, $form_id) {
   // Improve the URL selection form
   if (isset($form['#entity_type']) && $form['#entity_type'] == 'node' && isset($form['path']) && isset($form['path']['alias'])) {
     unset($form['path']['#type']); // remove the fieldset
-    unset($form['path']['alias']['#description']); 
+    unset($form['path']['alias']['#description']);
     $form['path']['alias']['#title'] = '<strong>' . t('Permalink') . ':</strong> ';
     $form['path']['alias']['#field_prefix'] = (isset($_SERVER['HTTPS'])) ? 'https://' . $_SERVER['HTTP_HOST'] . '/' : 'http://' . $_SERVER['HTTP_HOST'] . '/';
 
@@ -166,7 +166,7 @@ function panopoly_admin_form_alter(&$form, &$form_state, $form_id) {
       $form['#submit'][] = 'panopoly_admin_pathauto_submit';
     }
   }
-  
+
   // Add clearfix to node body container to prevent clearing issue with
   // vertical tabs - @see https://drupal.org/node/1686500
   if (isset($form['#entity_type']) && $form['#entity_type'] == 'node' && isset($form['body']['#type']) && $form['body']['#type'] == 'container') {
@@ -197,7 +197,7 @@ function panopoly_admin_form_alter(&$form, &$form_state, $form_id) {
 
   // Remove the description from the featured image
   if (!empty($form['field_featured_image'])) {
-    $form['field_featured_image']['und'][0]['#description'] = '';
+    // $form['field_featured_image']['und'][0]['#description'] = '';
   }
 
   // Hide the featured category field if there are no featured category options
@@ -245,7 +245,7 @@ function panopoly_admin_form_alter(&$form, &$form_state, $form_id) {
     $form['menu']['link']['weight']['#access'] = FALSE;
     $form['menu']['link']['link_title']['#title'] = t('Link title');
     $form['menu']['link']['parent']['#title'] = t('Parent');
-    $form['menu']['link']['description']['#access'] = variable_get('panopoly_admin_link_description', FALSE); 
+    $form['menu']['link']['description']['#access'] = variable_get('panopoly_admin_link_description', FALSE);
     $form['#validate'][] = 'panopoly_admin_menu_validate';
   }
 }
@@ -372,7 +372,7 @@ function panopoly_admin_menu() {
           'page arguments' => array($app_info['configure form']),
           'access arguments' => array('administer site configuration'),
         );
-      } 
+      }
       elseif (!empty($module_info['package']) && $module_info['package'] == 'Panopoly Apps') {
         $items['admin/panopoly/settings/' . $module] = array(
           'title' => $module_info['name'],
@@ -454,7 +454,7 @@ function panopoly_admin_menu_alter(&$items) {
 function panopoly_admin_menu_link_alter(&$item) {
 
   // Automatically set all of the settings elements to be children of the main parent element
-  // Not entirely sure why the menu system doesn't do this for us. 
+  // Not entirely sure why the menu system doesn't do this for us.
   if (!empty($item['path']) && strpos($item['path'], 'panopoly/settings/')) {
     $parent_mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_path = :path", array(':path' => 'admin/panopoly/settings'))->fetchField();
     $item['plid'] = $parent_mlid;
@@ -598,8 +598,8 @@ function panopoly_admin_is_advanced_plugin($pane_label, $category_label) {
     'Devel', // devel option for advanced users
     'Switch user',  // devel option for advanced users
     'Theme switcher', // devel option for advanced users
-    'User menu', // user menu 
-    'Development', // development menu 
+    'User menu', // user menu
+    'Development', // development menu
     'Management', // management menu
     'Navigation', // navigation menu
     '<em class="placeholder">User menu</em> menu tree', // user menu men tree
@@ -623,18 +623,18 @@ function panopoly_admin_is_advanced_plugin($pane_label, $category_label) {
  * Helper function to enable or disable layouts
  */
 function panopoly_admin_switch_layout_action($status, $layout_name, $token) {
-  
+
   $commands = array();
   $panels_page_allowed_layouts = unserialize(variable_get('panels_page_allowed_layouts', serialize('')));
-  
+
   if ($token == drupal_get_token($layout_name) && $status == 'enable') {
     $panels_page_allowed_layouts->allowed_layout_settings[$layout_name] = TRUE;
     $commands[] = ajax_command_replace('#panopoly-admin-layout-response-' . $layout_name, _panopoly_admin_general_layout_get_status($layout_name, $status));
-  } 
+  }
   elseif ($token == drupal_get_token($layout_name) && $status == 'disable') {
     $panels_page_allowed_layouts->allowed_layout_settings[$layout_name] = FALSE;
     $commands[] = ajax_command_replace('#panopoly-admin-layout-response-' . $layout_name, _panopoly_admin_general_layout_get_status($layout_name, $status));
-  } 
+  }
   else {
     $commands[] = ajax_command_replace('#panopoly-admin-layout-response-' . $layout_name, 'Trouble!');
   }
@@ -655,11 +655,11 @@ function panopoly_admin_switch_pane_action($status, $category_name, $plugin_name
   if ($token == drupal_get_token($plugin_name) && $status == 'enable') {
     $panels_page_allowed_types[$category_name . '-' . $plugin_name] = $category_name . '-' . $plugin_name;
     $commands[] = ajax_command_replace('#panopoly-admin-pane-response-' . $category_name . '-' . str_replace(':', '_', $plugin_name), _panopoly_admin_general_panes_get_status($plugin_name, $category_name, $status));
-  } 
+  }
   elseif ($token == drupal_get_token($plugin_name) && $status == 'disable') {
     $panels_page_allowed_types[$category_name . '-' . $plugin_name] = 0;
     $commands[] = ajax_command_replace('#panopoly-admin-pane-response-' . $category_name . '-' . str_replace(':', '_', $plugin_name), _panopoly_admin_general_panes_get_status($plugin_name, $category_name, $status));
-  } 
+  }
   else {
     $commands[] = ajax_command_replace('#panopoly-admin-pane-response-' . $category_name . '-' . str_replace(':', '_', $plugin_name), 'Trouble!');
   }
@@ -723,8 +723,8 @@ function _panopoly_admin_general_panes_get_status($plugin_name, $category_name, 
       '#ajax' => array(
         'wrapper' => 'panopoly-admin-pane-response-' . $category_name . '-' . str_replace(':', '_', $plugin_name),
         'method' => 'replace',
-        'effect' => 'fade',     
-      ),                          
+        'effect' => 'fade',
+      ),
     );
     return '<div id="panopoly-admin-pane-response-' . $category_name . '-' . str_replace(':', '_', $plugin_name) . '">Enabled (' . drupal_render($link) . ')</div>';
   }
