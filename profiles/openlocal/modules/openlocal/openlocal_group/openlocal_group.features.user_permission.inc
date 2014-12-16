@@ -112,7 +112,6 @@ function openlocal_group_user_default_permissions() {
   $permissions['create ol_group content'] = array(
     'name' => 'create ol_group content',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'node',
