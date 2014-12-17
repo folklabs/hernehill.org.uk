@@ -126,59 +126,6 @@ function openlocal_news_panelizer_defaults() {
     $display->content['new-bdcfbcc0-f349-45c3-b5f9-8a2ae2f77e79'] = $pane;
     $display->panels['half'][0] = 'new-bdcfbcc0-f349-45c3-b5f9-8a2ae2f77e79';
     $pane = new stdClass();
-    $pane->pid = 'new-7c1d57f7-e644-4612-bd46-1c3a8f67928e';
-    $pane->panel = 'half';
-    $pane->type = 'user_profile';
-    $pane->subtype = 'user_profile';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'featured',
-      'context' => 'relationship_entity_from_schema:uid-node-user_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'default',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '7c1d57f7-e644-4612-bd46-1c3a8f67928e';
-    $display->content['new-7c1d57f7-e644-4612-bd46-1c3a8f67928e'] = $pane;
-    $display->panels['half'][1] = 'new-7c1d57f7-e644-4612-bd46-1c3a8f67928e';
-    $pane = new stdClass();
-    $pane->pid = 'new-0051cfdc-85e1-47d1-8566-73bbf991e3ce';
-    $pane->panel = 'half';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Meta data',
-      'title' => '',
-      'body' => '<div class="ol-name-date"><p class="ol-username">%user:name</p><p>%node:created</p></div><div class="ol-comments"><span class="ol-comment-count">%node:comment-count</span> Comments</div>',
-      'format' => 'panopoly_html_text',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'ol-meta-data',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '0051cfdc-85e1-47d1-8566-73bbf991e3ce';
-    $display->content['new-0051cfdc-85e1-47d1-8566-73bbf991e3ce'] = $pane;
-    $display->panels['half'][2] = 'new-0051cfdc-85e1-47d1-8566-73bbf991e3ce';
-    $pane = new stdClass();
     $pane->pid = 'new-75eebaf2-5a53-4255-af8a-814d46e9bf49';
     $pane->panel = 'half';
     $pane->type = 'entity_field';
@@ -215,53 +162,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '75eebaf2-5a53-4255-af8a-814d46e9bf49';
     $display->content['new-75eebaf2-5a53-4255-af8a-814d46e9bf49'] = $pane;
-    $display->panels['half'][3] = 'new-75eebaf2-5a53-4255-af8a-814d46e9bf49';
-    $pane = new stdClass();
-    $pane->pid = 'new-f723f105-4352-4dea-a0bf-016e82cc02bb';
-    $pane->panel = 'half';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_tags';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'inline',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(),
-      'context' => array(),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'view_mode' => NULL,
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $pane->uuid = 'f723f105-4352-4dea-a0bf-016e82cc02bb';
-    $display->content['new-f723f105-4352-4dea-a0bf-016e82cc02bb'] = $pane;
-    $display->panels['half'][4] = 'new-f723f105-4352-4dea-a0bf-016e82cc02bb';
+    $display->panels['half'][1] = 'new-75eebaf2-5a53-4255-af8a-814d46e9bf49';
     $pane = new stdClass();
     $pane->pid = 'new-f738fccc-0612-47ad-8174-d3a45c7a36ce';
     $pane->panel = 'half';
@@ -283,11 +188,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'f738fccc-0612-47ad-8174-d3a45c7a36ce';
     $display->content['new-f738fccc-0612-47ad-8174-d3a45c7a36ce'] = $pane;
-    $display->panels['half'][5] = 'new-f738fccc-0612-47ad-8174-d3a45c7a36ce';
+    $display->panels['half'][2] = 'new-f738fccc-0612-47ad-8174-d3a45c7a36ce';
     $pane = new stdClass();
     $pane->pid = 'new-e5d26a28-1bda-4d75-9838-1320f6941f14';
     $pane->panel = 'half';
@@ -308,11 +213,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'e5d26a28-1bda-4d75-9838-1320f6941f14';
     $display->content['new-e5d26a28-1bda-4d75-9838-1320f6941f14'] = $pane;
-    $display->panels['half'][6] = 'new-e5d26a28-1bda-4d75-9838-1320f6941f14';
+    $display->panels['half'][3] = 'new-e5d26a28-1bda-4d75-9838-1320f6941f14';
     $pane = new stdClass();
     $pane->pid = 'new-9d8d6158-c30d-485c-b518-087ead0c2d96';
     $pane->panel = 'half';
@@ -332,11 +237,64 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '9d8d6158-c30d-485c-b518-087ead0c2d96';
     $display->content['new-9d8d6158-c30d-485c-b518-087ead0c2d96'] = $pane;
-    $display->panels['half'][7] = 'new-9d8d6158-c30d-485c-b518-087ead0c2d96';
+    $display->panels['half'][4] = 'new-9d8d6158-c30d-485c-b518-087ead0c2d96';
+    $pane = new stdClass();
+    $pane->pid = 'new-7c1d57f7-e644-4612-bd46-1c3a8f67928e';
+    $pane->panel = 'quarter1';
+    $pane->type = 'user_profile';
+    $pane->subtype = 'user_profile';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'featured',
+      'context' => 'relationship_entity_from_schema:uid-node-user_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'default',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7c1d57f7-e644-4612-bd46-1c3a8f67928e';
+    $display->content['new-7c1d57f7-e644-4612-bd46-1c3a8f67928e'] = $pane;
+    $display->panels['quarter1'][0] = 'new-7c1d57f7-e644-4612-bd46-1c3a8f67928e';
+    $pane = new stdClass();
+    $pane->pid = 'new-0051cfdc-85e1-47d1-8566-73bbf991e3ce';
+    $pane->panel = 'quarter1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Meta data',
+      'title' => '',
+      'body' => '<div class="ol-name-date"><p class="ol-username">%user:name</p><p>%node:created</p></div><div class="ol-comments"><span class="ol-comment-count">%node:comment-count</span> Comments</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'ol-meta-data',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '0051cfdc-85e1-47d1-8566-73bbf991e3ce';
+    $display->content['new-0051cfdc-85e1-47d1-8566-73bbf991e3ce'] = $pane;
+    $display->panels['quarter1'][1] = 'new-0051cfdc-85e1-47d1-8566-73bbf991e3ce';
     $pane = new stdClass();
     $pane->pid = 'new-928fb91c-4241-4889-b94e-cf08b1eccb63';
     $pane->panel = 'quarter1';
@@ -374,11 +332,53 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '928fb91c-4241-4889-b94e-cf08b1eccb63';
     $display->content['new-928fb91c-4241-4889-b94e-cf08b1eccb63'] = $pane;
-    $display->panels['quarter1'][0] = 'new-928fb91c-4241-4889-b94e-cf08b1eccb63';
+    $display->panels['quarter1'][2] = 'new-928fb91c-4241-4889-b94e-cf08b1eccb63';
+    $pane = new stdClass();
+    $pane->pid = 'new-f723f105-4352-4dea-a0bf-016e82cc02bb';
+    $pane->panel = 'quarter1';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ol_tags';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'inline',
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => array(),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'view_mode' => NULL,
+      'widget_title' => NULL,
+      'items_per_page' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'f723f105-4352-4dea-a0bf-016e82cc02bb';
+    $display->content['new-f723f105-4352-4dea-a0bf-016e82cc02bb'] = $pane;
+    $display->panels['quarter1'][3] = 'new-f723f105-4352-4dea-a0bf-016e82cc02bb';
     $pane = new stdClass();
     $pane->pid = 'new-1ea5f660-72f8-4956-bbe2-a7c132cf212d';
     $pane->panel = 'quarter1';
@@ -423,11 +423,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '1ea5f660-72f8-4956-bbe2-a7c132cf212d';
     $display->content['new-1ea5f660-72f8-4956-bbe2-a7c132cf212d'] = $pane;
-    $display->panels['quarter1'][1] = 'new-1ea5f660-72f8-4956-bbe2-a7c132cf212d';
+    $display->panels['quarter1'][4] = 'new-1ea5f660-72f8-4956-bbe2-a7c132cf212d';
     $pane = new stdClass();
     $pane->pid = 'new-ad351811-ea55-451e-bc58-28e3fca6bce9';
     $pane->panel = 'quarter1';
@@ -471,21 +471,33 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = 'ad351811-ea55-451e-bc58-28e3fca6bce9';
     $display->content['new-ad351811-ea55-451e-bc58-28e3fca6bce9'] = $pane;
-    $display->panels['quarter1'][2] = 'new-ad351811-ea55-451e-bc58-28e3fca6bce9';
+    $display->panels['quarter1'][5] = 'new-ad351811-ea55-451e-bc58-28e3fca6bce9';
     $pane = new stdClass();
-    $pane->pid = 'new-46c06234-7efa-4f43-9888-3bdeb3dc04ec';
+    $pane->pid = 'new-43894070-9668-4760-8386-04209426499d';
     $pane->panel = 'quarter2';
-    $pane->type = 'block';
-    $pane->subtype = 'block-1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'OpenLocal News actions',
+      'title' => '',
+      'body' => '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="/node/add/openlocal-news-article"><span class="ol-action-span"><i class="fa fa-plus"></i> add news article</span></a>
+</div>
+
+<div>
+<a href="/contextual_help/how-create-news-article" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating articles</a>
+</div>
+</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 0,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -495,9 +507,9 @@ function openlocal_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '46c06234-7efa-4f43-9888-3bdeb3dc04ec';
-    $display->content['new-46c06234-7efa-4f43-9888-3bdeb3dc04ec'] = $pane;
-    $display->panels['quarter2'][0] = 'new-46c06234-7efa-4f43-9888-3bdeb3dc04ec';
+    $pane->uuid = '43894070-9668-4760-8386-04209426499d';
+    $display->content['new-43894070-9668-4760-8386-04209426499d'] = $pane;
+    $display->panels['quarter2'][0] = 'new-43894070-9668-4760-8386-04209426499d';
     $pane = new stdClass();
     $pane->pid = 'new-fbcf0251-76e7-4631-b556-acae94cfe255';
     $pane->panel = 'quarter2';
