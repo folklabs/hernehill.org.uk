@@ -243,55 +243,6 @@ function openlocal_group_panelizer_defaults() {
     $display->content['new-295dfb87-c9de-4da6-b6b1-fc0929763043'] = $pane;
     $display->panels['column1'][4] = 'new-295dfb87-c9de-4da6-b6b1-fc0929763043';
     $pane = new stdClass();
-    $pane->pid = 'new-081f4a26-4365-4312-ad43-60a42b02ef5c';
-    $pane->panel = 'column1';
-    $pane->type = 'node_comments';
-    $pane->subtype = 'node_comments';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'mode' => '1',
-      'comments_per_page' => '50',
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $pane->uuid = '081f4a26-4365-4312-ad43-60a42b02ef5c';
-    $display->content['new-081f4a26-4365-4312-ad43-60a42b02ef5c'] = $pane;
-    $display->panels['column1'][5] = 'new-081f4a26-4365-4312-ad43-60a42b02ef5c';
-    $pane = new stdClass();
-    $pane->pid = 'new-880524ad-7430-4cb5-9994-903a29e38818';
-    $pane->panel = 'column1';
-    $pane->type = 'node_comment_form';
-    $pane->subtype = 'node_comment_form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'anon_links' => 0,
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 6;
-    $pane->locks = array();
-    $pane->uuid = '880524ad-7430-4cb5-9994-903a29e38818';
-    $display->content['new-880524ad-7430-4cb5-9994-903a29e38818'] = $pane;
-    $display->panels['column1'][6] = 'new-880524ad-7430-4cb5-9994-903a29e38818';
-    $pane = new stdClass();
     $pane->pid = 'new-0a407742-ccf6-4b8b-90cd-5f838b49ed17';
     $pane->panel = 'column2';
     $pane->type = 'entity_field';
@@ -336,15 +287,33 @@ function openlocal_group_panelizer_defaults() {
     $display->content['new-0a407742-ccf6-4b8b-90cd-5f838b49ed17'] = $pane;
     $display->panels['column2'][0] = 'new-0a407742-ccf6-4b8b-90cd-5f838b49ed17';
     $pane = new stdClass();
-    $pane->pid = 'new-aa277abd-d38b-4084-b7e8-3dec384fa347';
+    $pane->pid = 'new-afbc0a72-d039-4d7f-a472-cdbcba8b9192';
     $pane->panel = 'column2';
-    $pane->type = 'block';
-    $pane->subtype = 'block-11';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'OL Group content actions',
+      'title' => '',
+      'body' => '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="/node/add/ol-event"><span class="ol-action-span"><i class="fa fa-plus"></i> add event</span></a>
+</div>
+<div class="ol-action-button">
+<a href="/node/add/ol-group-post"><span class="ol-action-span"><i class="fa fa-plus"></i> add group post</span></a>
+</div>
+<div class="ol-action-button">
+<a href="/node/add/ol-gallery"><span class="ol-action-span"><i class="fa fa-plus"></i> add gallery</span></a>
+</div>
+
+<div>
+<a href="/contextual_help/about-groups" class="ol-action-help"><i class="fa fa-question-circle"></i> About groups</a>
+</div>
+</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -354,9 +323,9 @@ function openlocal_group_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'aa277abd-d38b-4084-b7e8-3dec384fa347';
-    $display->content['new-aa277abd-d38b-4084-b7e8-3dec384fa347'] = $pane;
-    $display->panels['column2'][1] = 'new-aa277abd-d38b-4084-b7e8-3dec384fa347';
+    $pane->uuid = 'afbc0a72-d039-4d7f-a472-cdbcba8b9192';
+    $display->content['new-afbc0a72-d039-4d7f-a472-cdbcba8b9192'] = $pane;
+    $display->panels['column2'][1] = 'new-afbc0a72-d039-4d7f-a472-cdbcba8b9192';
     $pane = new stdClass();
     $pane->pid = 'new-494419ea-8f35-4678-879a-8e9fb97b5e34';
     $pane->panel = 'column2';

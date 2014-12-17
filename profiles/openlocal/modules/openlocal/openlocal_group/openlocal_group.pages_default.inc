@@ -308,15 +308,27 @@ Events',
     $display->content['new-77c8176e-6109-4ea1-8a55-a90ab8495084'] = $pane;
     $display->panels['column1'][0] = 'new-77c8176e-6109-4ea1-8a55-a90ab8495084';
     $pane = new stdClass();
-    $pane->pid = 'new-407b6d41-c20a-4052-99b0-7910cb3e93ef';
+    $pane->pid = 'new-070b0733-dda8-4354-87a8-4881a31bf130';
     $pane->panel = 'column2';
-    $pane->type = 'block';
-    $pane->subtype = 'block-3';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'OL Group actions',
+      'title' => '',
+      'body' => '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="/node/add/ol-group"><span class="ol-action-span"><i class="fa fa-plus"></i> add group</span></a>
+</div>
+
+<div>
+<a href="/contextual_help/how-create-group" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating groups</a>
+</div>
+</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -326,9 +338,9 @@ Events',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '407b6d41-c20a-4052-99b0-7910cb3e93ef';
-    $display->content['new-407b6d41-c20a-4052-99b0-7910cb3e93ef'] = $pane;
-    $display->panels['column2'][0] = 'new-407b6d41-c20a-4052-99b0-7910cb3e93ef';
+    $pane->uuid = '070b0733-dda8-4354-87a8-4881a31bf130';
+    $display->content['new-070b0733-dda8-4354-87a8-4881a31bf130'] = $pane;
+    $display->panels['column2'][0] = 'new-070b0733-dda8-4354-87a8-4881a31bf130';
     $pane = new stdClass();
     $pane->pid = 'new-42577151-e2a3-4238-8677-0cc9b7ab0aaa';
     $pane->panel = 'column2';

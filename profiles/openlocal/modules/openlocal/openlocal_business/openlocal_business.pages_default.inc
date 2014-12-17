@@ -81,6 +81,31 @@ function openlocal_business_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-b170ea3a-d581-4bf3-97fd-9029cf96074c';
+    $pane->panel = 'column1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'OL Business description',
+      'title' => '',
+      'body' => '<div class="panels-ipe-portlet-content"><div class="panel-pane pane-block pane-block-13"><div class="panels-ipe-portlet-content"><div class="panel-pane pane-fieldable-panels-pane pane-fpid-2 pane-bundle-text"><div class="fieldable-panels-pane"><div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>This is a list of locally based service companies based in or around the Herne Hill, SE24 area. The contents are entirely the responsibility of the traders themselves so read them in that light.</p></div></div></div></div></div></div></div></div>',
+      'format' => 'panopoly_wysiwyg_text',
+      'substitute' => 0,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b170ea3a-d581-4bf3-97fd-9029cf96074c';
+    $display->content['new-b170ea3a-d581-4bf3-97fd-9029cf96074c'] = $pane;
+    $display->panels['column1'][0] = 'new-b170ea3a-d581-4bf3-97fd-9029cf96074c';
+    $pane = new stdClass();
     $pane->pid = 'new-e82f6a5f-0324-4688-aa4b-e8204ecb815c';
     $pane->panel = 'column1';
     $pane->type = 'block';
@@ -97,11 +122,11 @@ function openlocal_business_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'e82f6a5f-0324-4688-aa4b-e8204ecb815c';
     $display->content['new-e82f6a5f-0324-4688-aa4b-e8204ecb815c'] = $pane;
-    $display->panels['column1'][0] = 'new-e82f6a5f-0324-4688-aa4b-e8204ecb815c';
+    $display->panels['column1'][1] = 'new-e82f6a5f-0324-4688-aa4b-e8204ecb815c';
     $pane = new stdClass();
     $pane->pid = 'new-f990ddeb-bedf-45ab-a31b-8dd9f2302610';
     $pane->panel = 'column1';
@@ -120,11 +145,11 @@ function openlocal_business_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'f990ddeb-bedf-45ab-a31b-8dd9f2302610';
     $display->content['new-f990ddeb-bedf-45ab-a31b-8dd9f2302610'] = $pane;
-    $display->panels['column1'][1] = 'new-f990ddeb-bedf-45ab-a31b-8dd9f2302610';
+    $display->panels['column1'][2] = 'new-f990ddeb-bedf-45ab-a31b-8dd9f2302610';
     $pane = new stdClass();
     $pane->pid = 'new-dc58544c-8400-40f4-8381-ef508eff8987';
     $pane->panel = 'column1';
@@ -143,21 +168,33 @@ function openlocal_business_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'dc58544c-8400-40f4-8381-ef508eff8987';
     $display->content['new-dc58544c-8400-40f4-8381-ef508eff8987'] = $pane;
-    $display->panels['column1'][2] = 'new-dc58544c-8400-40f4-8381-ef508eff8987';
+    $display->panels['column1'][3] = 'new-dc58544c-8400-40f4-8381-ef508eff8987';
     $pane = new stdClass();
-    $pane->pid = 'new-19b0efcb-d5a0-4a6e-92b1-3491c40818f7';
+    $pane->pid = 'new-695f1634-d2df-4e0c-9302-ebb1a618ae1c';
     $pane->panel = 'column2';
-    $pane->type = 'block';
-    $pane->subtype = 'block-2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'OL Business actions',
+      'title' => '',
+      'body' => '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="/node/add/ol-business"><span class="ol-action-span"><i class="fa fa-plus"></i> add business listing</span></a>
+</div>
+
+<div>
+<a href="/contextual_help/how-add-business" class="ol-action-help"><i class="fa fa-question-circle"></i> About business listings</a>
+</div>
+</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 0,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -167,9 +204,34 @@ function openlocal_business_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '19b0efcb-d5a0-4a6e-92b1-3491c40818f7';
-    $display->content['new-19b0efcb-d5a0-4a6e-92b1-3491c40818f7'] = $pane;
-    $display->panels['column2'][0] = 'new-19b0efcb-d5a0-4a6e-92b1-3491c40818f7';
+    $pane->uuid = '695f1634-d2df-4e0c-9302-ebb1a618ae1c';
+    $display->content['new-695f1634-d2df-4e0c-9302-ebb1a618ae1c'] = $pane;
+    $display->panels['column2'][0] = 'new-695f1634-d2df-4e0c-9302-ebb1a618ae1c';
+    $pane = new stdClass();
+    $pane->pid = 'new-014740a7-81b6-43e6-9ed5-bc636956cd23';
+    $pane->panel = 'column2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Traders forum link',
+      'title' => '',
+      'body' => '<p>If you wish to post a review of a local trader, or request recommendations then please use the Discuss area on the web site - check out the "Local traders" Forum.</p>',
+      'format' => 'panopoly_wysiwyg_text',
+      'substitute' => 0,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '014740a7-81b6-43e6-9ed5-bc636956cd23';
+    $display->content['new-014740a7-81b6-43e6-9ed5-bc636956cd23'] = $pane;
+    $display->panels['column2'][1] = 'new-014740a7-81b6-43e6-9ed5-bc636956cd23';
     $pane = new stdClass();
     $pane->pid = 'new-d104ae1b-73c1-4b44-945e-488c45ca0cd0';
     $pane->panel = 'column2';
@@ -187,11 +249,11 @@ function openlocal_business_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'd104ae1b-73c1-4b44-945e-488c45ca0cd0';
     $display->content['new-d104ae1b-73c1-4b44-945e-488c45ca0cd0'] = $pane;
-    $display->panels['column2'][1] = 'new-d104ae1b-73c1-4b44-945e-488c45ca0cd0';
+    $display->panels['column2'][2] = 'new-d104ae1b-73c1-4b44-945e-488c45ca0cd0';
     $pane = new stdClass();
     $pane->pid = 'new-de28df7d-8eaf-4443-b499-9c54cc64c272';
     $pane->panel = 'column2';
@@ -231,11 +293,11 @@ function openlocal_business_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'de28df7d-8eaf-4443-b499-9c54cc64c272';
     $display->content['new-de28df7d-8eaf-4443-b499-9c54cc64c272'] = $pane;
-    $display->panels['column2'][2] = 'new-de28df7d-8eaf-4443-b499-9c54cc64c272';
+    $display->panels['column2'][3] = 'new-de28df7d-8eaf-4443-b499-9c54cc64c272';
     $pane = new stdClass();
     $pane->pid = 'new-0dfe9f57-731f-4778-b0fc-e2c8760942c4';
     $pane->panel = 'contentmain';
@@ -271,28 +333,6 @@ function openlocal_business_default_page_manager_pages() {
     $pane->uuid = '0dfe9f57-731f-4778-b0fc-e2c8760942c4';
     $display->content['new-0dfe9f57-731f-4778-b0fc-e2c8760942c4'] = $pane;
     $display->panels['contentmain'][0] = 'new-0dfe9f57-731f-4778-b0fc-e2c8760942c4';
-    $pane = new stdClass();
-    $pane->pid = 'new-ffd9dbcd-25ad-4e8b-a028-b61826855042';
-    $pane->panel = 'header';
-    $pane->type = 'block';
-    $pane->subtype = 'block-13';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'ffd9dbcd-25ad-4e8b-a028-b61826855042';
-    $display->content['new-ffd9dbcd-25ad-4e8b-a028-b61826855042'] = $pane;
-    $display->panels['header'][0] = 'new-ffd9dbcd-25ad-4e8b-a028-b61826855042';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
