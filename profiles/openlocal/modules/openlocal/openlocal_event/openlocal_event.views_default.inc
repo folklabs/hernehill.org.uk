@@ -1080,7 +1080,11 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -1112,28 +1116,6 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'ol_business' => 'ol_business',
     'ol_place' => 'ol_place',
-  );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['id'] = 'field_ol_wheelchair_accessible_value';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['table'] = 'field_data_field_ol_wheelchair_accessible';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['field'] = 'field_ol_wheelchair_accessible_value';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['value'] = array(
-    'all' => 'all',
-    0 => '0',
-    1 => '1',
-  );
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['operator_id'] = 'field_ol_wheelchair_accessible_value_op';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['label'] = 'Wheelchair accessible (field_ol_wheelchair_accessible)';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['operator'] = 'field_ol_wheelchair_accessible_value_op';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['identifier'] = 'field_ol_wheelchair_accessible_value';
-  $handler->display->display_options['filters']['field_ol_wheelchair_accessible_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
   );
   /* Filter criterion: Content: Event venue (field_ol_event_venue) */
   $handler->display->display_options['filters']['field_ol_event_venue_value']['id'] = 'field_ol_event_venue_value';
@@ -1289,6 +1271,51 @@ function openlocal_event_views_default_views() {
   $handler->display->display_options['filters']['field_ol_event_venue_value']['value'] = array(
     1 => '1',
   );
+
+  /* Display: Entity Reference View Widget */
+  $handler = $view->new_display('entityreference_view_widget', 'Entity Reference View Widget', 'entityreference_view_widget_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Event venues';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_ol_description']['id'] = 'field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['table'] = 'field_data_field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['field'] = 'field_ol_description';
+  $handler->display->display_options['fields']['field_ol_description']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_description']['element_label_colon'] = FALSE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['table'] = 'field_data_field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['field'] = 'field_featured_image';
+  $handler->display->display_options['fields']['field_featured_image']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Entity Reference View Widget Checkbox: Content */
+  $handler->display->display_options['fields']['entityreference_view_widget']['id'] = 'entityreference_view_widget';
+  $handler->display->display_options['fields']['entityreference_view_widget']['table'] = 'node';
+  $handler->display->display_options['fields']['entityreference_view_widget']['field'] = 'entityreference_view_widget';
+  $handler->display->display_options['fields']['entityreference_view_widget']['label'] = '';
+  $handler->display->display_options['fields']['entityreference_view_widget']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['entityreference_view_widget']['ervw']['force_single'] = 1;
   $export['openlocal_event_venues'] = $view;
 
   return $export;

@@ -472,7 +472,7 @@ function openlocal_event_field_default_field_instances() {
   // Exported field_instance: 'node-ol_event-field_ol_event_venue_ref'
   $field_instances['node-ol_event-field_ol_event_venue_ref'] = array(
     'bundle' => 'ol_event',
-    'default_value' => NULL,
+    'default_value' => array(),
     'default_value_function' => '',
     'deleted' => 0,
     'description' => 'Please search for the name of a venue for the event. Browse the <b><a href="/venues" target="_blank">list of available venues</a></b> if you do not know the name.',
@@ -513,14 +513,17 @@ function openlocal_event_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'path' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'openlocal_event_venues|entityreference_view_widget_1',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 9,
     ),
   );
