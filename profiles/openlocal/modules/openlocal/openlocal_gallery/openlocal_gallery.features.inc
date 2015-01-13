@@ -39,6 +39,14 @@ function openlocal_gallery_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'ol_photo_album' => array(
+      'name' => t('Photo album'),
+      'base' => 'node_content',
+      'description' => t('One or more photos or pictures by a single creator that can be added to a gallery. '),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;

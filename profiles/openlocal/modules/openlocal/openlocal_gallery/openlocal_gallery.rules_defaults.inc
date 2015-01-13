@@ -12,6 +12,7 @@ function openlocal_gallery_default_rules_configuration() {
   $items['rules_ol_gallery_notify_new'] = entity_import('rules_config', '{ "rules_ol_gallery_notify_new" : {
       "LABEL" : "OL Gallery: notify new",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "TAGS" : [ "openlocal" ],
       "REQUIRES" : [ "rules" ],
