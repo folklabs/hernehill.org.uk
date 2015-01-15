@@ -1813,96 +1813,96 @@ div.workbench-info-block {
   border-radius: 3px;
 }
 
-/* line 167, ../sass/components/_admin.sass */
+/* line 163, ../sass/components/_admin.sass */
 form th {
   padding-right: 1em;
   border-bottom: 3px solid #cccccc;
 }
-/* line 173, ../sass/components/_admin.sass */
+/* line 169, ../sass/components/_admin.sass */
 form tbody {
   border-top: 1px solid #cccccc;
 }
-/* line 175, ../sass/components/_admin.sass */
+/* line 171, ../sass/components/_admin.sass */
 form table ul {
   margin: 0;
 }
-/* line 178, ../sass/components/_admin.sass */
+/* line 174, ../sass/components/_admin.sass */
 form tr.even,
 form tr.odd {
   background-color: #eeeeee;
   border-bottom: 1px solid #cccccc;
   padding: 0.1em 0.6em;
 }
-/* line 184, ../sass/components/_admin.sass */
+/* line 180, ../sass/components/_admin.sass */
 form tr.even {
   background-color: white;
 }
-/* line 196, ../sass/components/_admin.sass */
+/* line 192, ../sass/components/_admin.sass */
 form td.active {
   background-color: #dddddd;
 }
 
-/* line 201, ../sass/components/_admin.sass */
+/* line 197, ../sass/components/_admin.sass */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
-/* line 206, ../sass/components/_admin.sass */
+/* line 202, ../sass/components/_admin.sass */
 td.menu-disabled {
   background: #cccccc;
 }
 
-/* line 215, ../sass/components/_admin.sass */
+/* line 211, ../sass/components/_admin.sass */
 #autocomplete .selected {
   background: #8c4965;
   color: #f4eee0;
 }
 
-/* line 224, ../sass/components/_admin.sass */
+/* line 220, ../sass/components/_admin.sass */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
   background-repeat: no-repeat;
   padding-left: 15px;
 }
-/* line 233, ../sass/components/_admin.sass */
+/* line 229, ../sass/components/_admin.sass */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   background-position: 5px 50%;
 }
-/* line 241, ../sass/components/_admin.sass */
+/* line 237, ../sass/components/_admin.sass */
 .fieldset-legend .summary {
   color: #999999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
-/* line 250, ../sass/components/_admin.sass */
+/* line 246, ../sass/components/_admin.sass */
 tr.drag {
   background-color: ivory;
 }
 
-/* line 253, ../sass/components/_admin.sass */
+/* line 249, ../sass/components/_admin.sass */
 tr.drag-previous {
   background-color: #ffffdd;
 }
 
-/* line 256, ../sass/components/_admin.sass */
+/* line 252, ../sass/components/_admin.sass */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
 
-/* line 263, ../sass/components/_admin.sass */
+/* line 259, ../sass/components/_admin.sass */
 tr.selected td {
   background: #ffffcc;
 }
 
-/* line 270, ../sass/components/_admin.sass */
+/* line 266, ../sass/components/_admin.sass */
 .progress {
   font-weight: bold;
 }
-/* line 272, ../sass/components/_admin.sass */
+/* line 268, ../sass/components/_admin.sass */
 .progress .bar {
   background: #cccccc;
   border-color: #666666;
@@ -1913,15 +1913,16 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 277, ../sass/components/_admin.sass */
+/* line 273, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384446789');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
-/* line 281, ../sass/components/_admin.sass */
+/* line 277, ../sass/components/_admin.sass */
 body#tinymce p, pre {
   font-size: 19.2px;
+  margin-top: 0px;
 }
 
 /* line 6, ../sass/components/_calendar.sass */
