@@ -475,7 +475,7 @@ function openlocal_event_field_default_field_instances() {
     'default_value' => array(),
     'default_value_function' => '',
     'deleted' => 0,
-    'description' => 'Please search for the name of a venue for the event. Browse the <b><a href="/venues" target="_blank">list of available venues</a></b> if you do not know the name.',
+    'description' => 'If your event takes place in a physical space, please select it from our list of Herne Hill venues. Click "Add item" to show a list of all possible venues. Select a suitable venue and click "Submit". You can browse the <b><a href="/venues" target="_blank">list of available venues</a></b> to see what is available.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -652,8 +652,8 @@ function openlocal_event_field_default_field_instances() {
   t('Enter the email address of a contact for this event.');
   t('Feature content');
   t('Groups audience');
+  t('If your event takes place in a physical space, please select it from our list of Herne Hill venues. Click "Add item" to show a list of all possible venues. Select a suitable venue and click "Submit". You can browse the <b><a href="/venues" target="_blank">list of available venues</a></b> to see what is available.');
   t('Image');
-  t('Please search for the name of a venue for the event. Browse the <b><a href="/venues" target="_blank">list of available venues</a></b> if you do not know the name.');
   t('The contact number will be for people to call in relation to the event, it will be visible on the page with the event information. If there is no contact number for people to call regarding this event then please leave blank.');
   t('This will appear on list pages, e.g. Services.');
   t('Tips - the "start date" is the day and time your event commences. The "To date" is when your first event or meeting ends, probably an hour or two after the start. N.B. If you want to create a repeating event (i.e. every week) then please use the "repeat" option under the advanced section. If it is an event on for every week on the same day then choose repeat "every" "week". Please also then enter the date that the series finishes otherwise it will be repeated until the end of the world as we know it... Please check your entry once you have done it. View the What\'s On calendar and see where your event is listed, then check that it is only repeated (if applicable) on all the correct days. ');
