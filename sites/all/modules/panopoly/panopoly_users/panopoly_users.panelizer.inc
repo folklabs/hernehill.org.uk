@@ -75,44 +75,6 @@ function panopoly_users_panelizer_defaults() {
     $display->content['new-b6893ef7-4ed9-4a58-837d-02d308237b21'] = $pane;
     $display->panels['contentmain'][0] = 'new-b6893ef7-4ed9-4a58-837d-02d308237b21';
     $pane = new stdClass();
-    $pane->pid = 'new-31322721-427a-4f5d-b684-ada603eda2c8';
-    $pane->panel = 'contentmain';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'openlocal_user-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'panelizer',
-      ),
-      'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '31322721-427a-4f5d-b684-ada603eda2c8';
-    $display->content['new-31322721-427a-4f5d-b684-ada603eda2c8'] = $pane;
-    $display->panels['contentmain'][1] = 'new-31322721-427a-4f5d-b684-ada603eda2c8';
-    $pane = new stdClass();
     $pane->pid = 'new-af686dc2-f888-490b-960c-7c129d35c75f';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
