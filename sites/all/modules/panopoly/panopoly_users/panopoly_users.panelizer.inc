@@ -57,7 +57,21 @@ function panopoly_users_panelizer_defaults() {
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_user_content-panel_pane_2';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'compare_users',
+          'settings' => array(
+            'equality' => '1',
+          ),
+          'context' => array(
+            0 => 'panelizer',
+            1 => 'logged-in-user',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'view_settings' => 'table',
       'header_type' => 'titles',
