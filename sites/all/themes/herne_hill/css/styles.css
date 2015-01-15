@@ -1815,95 +1815,94 @@ div.workbench-info-block {
 
 /* line 167, ../sass/components/_admin.sass */
 form th {
-  color: red;
   padding-right: 1em;
   border-bottom: 3px solid #cccccc;
 }
-/* line 174, ../sass/components/_admin.sass */
+/* line 173, ../sass/components/_admin.sass */
 form tbody {
   border-top: 1px solid #cccccc;
 }
-/* line 176, ../sass/components/_admin.sass */
+/* line 175, ../sass/components/_admin.sass */
 form table ul {
   margin: 0;
 }
-/* line 179, ../sass/components/_admin.sass */
+/* line 178, ../sass/components/_admin.sass */
 form tr.even,
 form tr.odd {
   background-color: #eeeeee;
   border-bottom: 1px solid #cccccc;
   padding: 0.1em 0.6em;
 }
-/* line 185, ../sass/components/_admin.sass */
+/* line 184, ../sass/components/_admin.sass */
 form tr.even {
   background-color: white;
 }
-/* line 197, ../sass/components/_admin.sass */
+/* line 196, ../sass/components/_admin.sass */
 form td.active {
   background-color: #dddddd;
 }
 
-/* line 202, ../sass/components/_admin.sass */
+/* line 201, ../sass/components/_admin.sass */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
-/* line 207, ../sass/components/_admin.sass */
+/* line 206, ../sass/components/_admin.sass */
 td.menu-disabled {
   background: #cccccc;
 }
 
-/* line 216, ../sass/components/_admin.sass */
+/* line 215, ../sass/components/_admin.sass */
 #autocomplete .selected {
   background: #8c4965;
   color: #f4eee0;
 }
 
-/* line 225, ../sass/components/_admin.sass */
+/* line 224, ../sass/components/_admin.sass */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
   background-repeat: no-repeat;
   padding-left: 15px;
 }
-/* line 234, ../sass/components/_admin.sass */
+/* line 233, ../sass/components/_admin.sass */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   background-position: 5px 50%;
 }
-/* line 242, ../sass/components/_admin.sass */
+/* line 241, ../sass/components/_admin.sass */
 .fieldset-legend .summary {
   color: #999999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
-/* line 251, ../sass/components/_admin.sass */
+/* line 250, ../sass/components/_admin.sass */
 tr.drag {
   background-color: ivory;
 }
 
-/* line 254, ../sass/components/_admin.sass */
+/* line 253, ../sass/components/_admin.sass */
 tr.drag-previous {
   background-color: #ffffdd;
 }
 
-/* line 257, ../sass/components/_admin.sass */
+/* line 256, ../sass/components/_admin.sass */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
 
-/* line 264, ../sass/components/_admin.sass */
+/* line 263, ../sass/components/_admin.sass */
 tr.selected td {
   background: #ffffcc;
 }
 
-/* line 271, ../sass/components/_admin.sass */
+/* line 270, ../sass/components/_admin.sass */
 .progress {
   font-weight: bold;
 }
-/* line 273, ../sass/components/_admin.sass */
+/* line 272, ../sass/components/_admin.sass */
 .progress .bar {
   background: #cccccc;
   border-color: #666666;
@@ -1914,13 +1913,13 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 278, ../sass/components/_admin.sass */
+/* line 277, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1376896851');
+  background-image: url('../images/progress.gif?1384446789');
 }
 
-/* line 282, ../sass/components/_admin.sass */
+/* line 281, ../sass/components/_admin.sass */
 body#tinymce p, pre {
   font-size: 19.2px;
 }
@@ -4696,66 +4695,66 @@ h2.node-title a:active {
   display: block;
 }
 
-/* line 10, ../sass/components/_user.sass */
-.page-user .view-openlocal-user table {
-  color: red;
+/* line 11, ../sass/components/_user.sass */
+.page-user .view-openlocal-user table th {
+  text-align: left;
 }
 
-/* line 15, ../sass/components/_user.sass */
+/* line 16, ../sass/components/_user.sass */
 .node-type-openlocal-news-article .panel-panel-inner .pane-user-profile {
   width: 15%;
   display: inline-block;
   float: left;
   margin: 1em 0 1em 0;
 }
-/* line 20, ../sass/components/_user.sass */
+/* line 21, ../sass/components/_user.sass */
 .node-type-openlocal-news-article .panel-panel-inner .pane-user-profile .pane-user-name {
   margin-top: 5px;
 }
-/* line 33, ../sass/components/_user.sass */
+/* line 34, ../sass/components/_user.sass */
 .node-type-openlocal-news-article .pane-custom .ol-comment-count {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: bold;
   display: block;
 }
-/* line 39, ../sass/components/_user.sass */
+/* line 40, ../sass/components/_user.sass */
 .node-type-openlocal-news-article .pane-custom p {
   height: 20px;
   margin: 0;
 }
 
-/* line 44, ../sass/components/_user.sass */
+/* line 45, ../sass/components/_user.sass */
 .ol-meta-data {
   font-family: "Lato";
   display: inline-block;
   width: 80%;
   margin: 2.5em 0 0 0;
 }
-/* line 50, ../sass/components/_user.sass */
+/* line 51, ../sass/components/_user.sass */
 .ol-meta-data div {
   display: inline-block;
 }
-/* line 53, ../sass/components/_user.sass */
+/* line 54, ../sass/components/_user.sass */
 .ol-meta-data .ol-username {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: bold;
   color: #20806a;
 }
-/* line 58, ../sass/components/_user.sass */
+/* line 59, ../sass/components/_user.sass */
 .ol-meta-data .ol-comments {
   float: right;
 }
-/* line 60, ../sass/components/_user.sass */
+/* line 61, ../sass/components/_user.sass */
 .ol-meta-data .ol-comments .ol-comment-count {
   font-size: 1.6em;
   color: #20806a;
 }
 
-/* line 66, ../sass/components/_user.sass */
+/* line 67, ../sass/components/_user.sass */
 .view-og-extras-members .views-field-picture {
   margin: 0 10px 0px 10px;
 }
-/* line 68, ../sass/components/_user.sass */
+/* line 69, ../sass/components/_user.sass */
 .view-og-extras-members .views-field-name {
   margin: 0 10px 0px 10px;
 }
