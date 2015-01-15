@@ -44,7 +44,7 @@ body
 
 // Basic body text
 
-p, ul, ol
+p, ul, ol, td
   color: $col-content-darkest
   font-family: $lato
   font-weight: 300
@@ -109,9 +109,32 @@ h1, h2, h3, h4, h5, h6
 // ----------------------------------------------------------------------------
 // TABLES
 
-//table
-  //background-color: transparent
+table
+  background-color: transparent
+  width: 100%
+  caption
+    @include grid-list-panel-title
+    text-align: left
 
+  thead
+    background-color: $col-content-lightest
+    text-align: left
+    border-bottom: 1px solid $col-content
+    @include typography-grid-list-body
+  th
+    padding: 1.25em 15px 0.25em 5px
+    vertical-align: bottom
+  th.views-field-timestamp
+    text-align: right
+  tr
+    border-bottom: 1px solid $col-content-lightest
+    td
+      padding: 0.25em 15px 0.25em 5px
+    td.views-field-timestamp
+      text-align: right
+  // col
+
+  // colgroup
 
 
 
