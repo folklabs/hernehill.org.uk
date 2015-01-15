@@ -25,7 +25,6 @@ function openlocal_user_views_default_views() {
   $handler->display->display_options['title'] = 'Draft content';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['access']['perm'] = 'view own unpublished content';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -61,6 +60,11 @@ function openlocal_user_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   /* Field: Content revision: Updated date */
   $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['table'] = 'node_revision';
@@ -86,11 +90,17 @@ function openlocal_user_views_default_views() {
   $handler->display->display_options['filters']['current']['field'] = 'current';
   $handler->display->display_options['filters']['current']['value'] = '1';
 
-  /* Display: Recent content */
-  $handler = $view->new_display('panel_pane', 'Recent content', 'panel_pane_1');
+  /* Display: Published content */
+  $handler = $view->new_display('panel_pane', 'Published content', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Recent content';
+  $handler->display->display_options['title'] = 'Published content';
   $handler->display->display_options['display_description'] = 'Recent content created by current user.';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
@@ -116,6 +126,15 @@ function openlocal_user_views_default_views() {
   $handler->display->display_options['filters']['current']['table'] = 'workbench_moderation_node_history';
   $handler->display->display_options['filters']['current']['field'] = 'current';
   $handler->display->display_options['filters']['current']['value'] = '1';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'uid' => array(
       'type' => 'context',
