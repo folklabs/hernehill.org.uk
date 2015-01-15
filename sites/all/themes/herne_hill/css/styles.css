@@ -375,7 +375,7 @@ body {
 }
 
 /* line 47, ../sass/_base.sass */
-p, ul, ol, td {
+p, ul, ol, td, div {
   color: #2f2127;
   font-family: "Lato";
   font-weight: 300;
@@ -1982,7 +1982,7 @@ tr.selected td {
 /* line 273, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1376896851');
+  background-image: url('../images/progress.gif?1384446789');
 }
 
 /* line 277, ../sass/components/_admin.sass */
