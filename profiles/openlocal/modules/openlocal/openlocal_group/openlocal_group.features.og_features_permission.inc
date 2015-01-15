@@ -112,9 +112,7 @@ function openlocal_group_og_features_default_permissions() {
 
   // Exported og permission: 'node:ol_group:subscribe without approval'
   $permissions['node:ol_group:subscribe without approval'] = array(
-    'roles' => array(
-      'non-member' => 'non-member',
-    ),
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:ol_group:unsubscribe'
