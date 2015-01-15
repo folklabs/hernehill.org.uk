@@ -96,7 +96,7 @@ function openlocal_highlight_views_default_views() {
   $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'openlocal_news_main',
+    'image_style' => 'ol_featured_highlight',
     'image_link' => 'content',
   );
   /* Sort criterion: Content: Post date */

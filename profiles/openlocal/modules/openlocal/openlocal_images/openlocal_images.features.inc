@@ -10,6 +10,29 @@
 function openlocal_images_image_default_styles() {
   $styles = array();
 
+  // Exported image style: ol_featured_highlight.
+  $styles['ol_featured_highlight'] = array(
+    'name' => 'ol_featured_highlight',
+    'label' => 'ol_featured_highlight',
+    'effects' => array(
+      1 => array(
+        'label' => 'Focus Scale And Crop',
+        'help' => 'Scale and crop based on data provided by <em>ImageField Focus</em>.',
+        'effect callback' => 'imagefield_focus_scale_and_crop_effect',
+        'form callback' => 'imagefield_focus_scale_and_crop_form',
+        'summary theme' => 'imagefield_focus_scale_and_crop_summary',
+        'module' => 'imagefield_focus',
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 580,
+          'height' => 336,
+          'strength' => 'low',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: openlocal_avatar_large.
   $styles['openlocal_avatar_large'] = array(
     'name' => 'openlocal_avatar_large',
