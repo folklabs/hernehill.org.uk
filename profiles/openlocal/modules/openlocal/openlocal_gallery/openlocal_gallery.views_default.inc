@@ -212,6 +212,37 @@ function openlocal_gallery_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Images */
+  $handler->display->display_options['fields']['field_ol_gallery_images']['id'] = 'field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['table'] = 'field_data_field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['field'] = 'field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_gallery_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['type'] = 'colorbox';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['settings'] = array(
+    'colorbox_node_style' => 'medium',
+    'colorbox_node_style_first' => '',
+    'colorbox_image_style' => '',
+    'colorbox_gallery' => 'post',
+    'colorbox_gallery_custom' => '',
+    'colorbox_caption' => 'title',
+    'colorbox_caption_custom' => '',
+  );
+  $handler->display->display_options['fields']['field_ol_gallery_images']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ol_gallery_images']['multi_type'] = 'ul';
+  /* Field: Content: Credits */
+  $handler->display->display_options['fields']['field_ol_credits']['id'] = 'field_ol_credits';
+  $handler->display->display_options['fields']['field_ol_credits']['table'] = 'field_data_field_ol_credits';
+  $handler->display->display_options['fields']['field_ol_credits']['field'] = 'field_ol_credits';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Gallery (field_ol_gallery_ref) */
   $handler->display->display_options['arguments']['field_ol_gallery_ref_target_id']['id'] = 'field_ol_gallery_ref_target_id';

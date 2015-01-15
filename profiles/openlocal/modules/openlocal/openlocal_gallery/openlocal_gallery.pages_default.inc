@@ -113,15 +113,24 @@ function openlocal_gallery_default_page_manager_pages() {
     $display->content['new-ba735952-fa79-4d9d-85a9-429e8eccdf4b'] = $pane;
     $display->panels['contentmain'][0] = 'new-ba735952-fa79-4d9d-85a9-429e8eccdf4b';
     $pane = new stdClass();
-    $pane->pid = 'new-1b83dd13-6398-49bb-92d0-c46fc2cbddf5';
+    $pane->pid = 'new-a2f83789-95cf-422c-8ba9-82afae4f5288';
     $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'block-9';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'OL Gallery actions',
+      'title' => '',
+      'body' => '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="/node/add/ol-photo-album"><span class="ol-action-span"><i class="fa fa-plus"></i> add photos</span></a>
+</div>
+
+</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => TRUE,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -131,9 +140,9 @@ function openlocal_gallery_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '1b83dd13-6398-49bb-92d0-c46fc2cbddf5';
-    $display->content['new-1b83dd13-6398-49bb-92d0-c46fc2cbddf5'] = $pane;
-    $display->panels['sidebar'][0] = 'new-1b83dd13-6398-49bb-92d0-c46fc2cbddf5';
+    $pane->uuid = 'a2f83789-95cf-422c-8ba9-82afae4f5288';
+    $display->content['new-a2f83789-95cf-422c-8ba9-82afae4f5288'] = $pane;
+    $display->panels['sidebar'][0] = 'new-a2f83789-95cf-422c-8ba9-82afae4f5288';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-ba735952-fa79-4d9d-85a9-429e8eccdf4b';
   $handler->conf['display'] = $display;
