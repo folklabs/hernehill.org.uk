@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 32px;
   margin-top: 32px;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 /* line 112, ../sass/_base.sass */
@@ -1638,8 +1638,6 @@ ul.menu .menu__item li a:active {
 .page-node-add .page__title,
 .page-node-edit .page__title {
   display: block;
-  float: left;
-  width: 68.085%;
   max-width: 780px;
   margin-right: 20px;
 }
@@ -1982,7 +1980,7 @@ tr.selected td {
 /* line 273, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384446789');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
 /* line 277, ../sass/components/_admin.sass */
@@ -2969,7 +2967,7 @@ tr.odd .form-item, tr.even .form-item {
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
-  border: 1px solid #8c4965;
+  border: 1px solid red;
 }
 /* line 230, ../sass/components/_forms.sass */
 .form-item .description {
@@ -3059,7 +3057,7 @@ a.button {
   border: 1px solid #144c3f;
   border-radius: 0.2em;
 }
-/* line 310, ../sass/components/_forms.sass */
+/* line 309, ../sass/components/_forms.sass */
 #search-form .form-submit:hover {
   -moz-box-shadow: inset 0 0 10px #144c3f;
   -webkit-box-shadow: inset 0 0 10px #144c3f;
