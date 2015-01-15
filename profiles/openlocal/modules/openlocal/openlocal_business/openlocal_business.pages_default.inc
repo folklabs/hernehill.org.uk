@@ -61,6 +61,11 @@ function openlocal_business_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Services
+%term:raw',
+    'panels_breadcrumbs_paths' => 'services',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'radix_harris';
@@ -90,8 +95,10 @@ function openlocal_business_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'OL Business description',
       'title' => '',
-      'body' => '<div class="panels-ipe-portlet-content"><div class="panel-pane pane-block pane-block-13"><div class="panels-ipe-portlet-content"><div class="panel-pane pane-fieldable-panels-pane pane-fpid-2 pane-bundle-text"><div class="fieldable-panels-pane"><div class="field field-name-field-basic-text-text field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>This is a list of locally based service companies based in or around the Herne Hill, SE24 area. The contents are entirely the responsibility of the traders themselves so read them in that light.</p></div></div></div></div></div></div></div></div>',
-      'format' => 'panopoly_wysiwyg_text',
+      'body' => '<p>This is a list of locally based service companies based in or around the Herne Hill, SE24 area. The contents are entirely the responsibility of the traders themselves so read them in that light.</p>
+
+<a href="/services">Reset filters</a>',
+      'format' => 'panopoly_html_text',
       'substitute' => 0,
     );
     $pane->cache = array();
@@ -106,15 +113,19 @@ function openlocal_business_default_page_manager_pages() {
     $display->content['new-b170ea3a-d581-4bf3-97fd-9029cf96074c'] = $pane;
     $display->panels['column1'][0] = 'new-b170ea3a-d581-4bf3-97fd-9029cf96074c';
     $pane = new stdClass();
-    $pane->pid = 'new-e82f6a5f-0324-4688-aa4b-e8204ecb815c';
+    $pane->pid = 'new-4f94595e-45da-49e3-91c4-6bcd214b0c8b';
     $pane->panel = 'column1';
-    $pane->type = 'block';
-    $pane->subtype = 'current_search-openlocal_current_search';
+    $pane->type = 'search_current';
+    $pane->subtype = 'search_current';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'type' => 'node',
+      'form' => 'advanced',
+      'path_type' => 'default',
+      'path' => '',
+      'override_prompt' => FALSE,
+      'prompt' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -124,9 +135,9 @@ function openlocal_business_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'e82f6a5f-0324-4688-aa4b-e8204ecb815c';
-    $display->content['new-e82f6a5f-0324-4688-aa4b-e8204ecb815c'] = $pane;
-    $display->panels['column1'][1] = 'new-e82f6a5f-0324-4688-aa4b-e8204ecb815c';
+    $pane->uuid = '4f94595e-45da-49e3-91c4-6bcd214b0c8b';
+    $display->content['new-4f94595e-45da-49e3-91c4-6bcd214b0c8b'] = $pane;
+    $display->panels['column1'][1] = 'new-4f94595e-45da-49e3-91c4-6bcd214b0c8b';
     $pane = new stdClass();
     $pane->pid = 'new-f990ddeb-bedf-45ab-a31b-8dd9f2302610';
     $pane->panel = 'column1';
@@ -237,7 +248,7 @@ function openlocal_business_default_page_manager_pages() {
     $pane->panel = 'column2';
     $pane->type = 'block';
     $pane->subtype = 'block-7';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
@@ -259,7 +270,7 @@ function openlocal_business_default_page_manager_pages() {
     $pane->panel = 'column2';
     $pane->type = 'views_panes';
     $pane->subtype = 'openlocal_business-panel_pane_4';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'fields_override' => array(
