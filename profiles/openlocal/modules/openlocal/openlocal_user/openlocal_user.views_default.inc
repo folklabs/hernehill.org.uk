@@ -108,9 +108,10 @@ function openlocal_user_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['label'] = 'No content message';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = '%1 has not created any content yet. To make some new content, visit the <a href="/node/add">Add Content page</a> and choose what you\'d like to create.';
+  $handler->display->display_options['empty']['area']['content'] = 'This person has not created any content yet. To make some new content, visit the <a href="/node/add">Add Content page</a> and choose what you\'d like to create.';
   $handler->display->display_options['empty']['area']['format'] = 'panopoly_html_text';
   $handler->display->display_options['empty']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
