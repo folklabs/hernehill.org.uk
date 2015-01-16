@@ -32,12 +32,19 @@
     display: inline-block
 
     // padding: 5px
-    width: 100%
-    max-width: 278px
+    width: 48.5%
+    // max-width: 278px
 
-.view-display-id-panel_pane_3
+.view-id-openlocal_group.view-display-id-panel_pane_3
   .views-row-odd
     margin-right: 0px
+  .views-row
+    @media only screen and (max-width: 990px)
+      width: 48.5%
+      margin-right: 10px
+      display: inline-block
+    @media only screen and (max-width: 768px)
+      width: 100%
 
 
 // Mixin defining generic styling for Grid Lists
