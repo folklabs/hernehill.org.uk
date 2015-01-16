@@ -178,84 +178,6 @@ function openlocal_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ol_gallery-field_ol_gallery_images'
-  $field_instances['node-ol_gallery-field_ol_gallery_images'] = array(
-    'bundle' => 'ol_gallery',
-    'default_value' => array(),
-    'deleted' => 0,
-    'description' => 'Add all the images one by one that go into this gallery.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'colorbox',
-        'settings' => array(
-          'colorbox_caption' => 'title',
-          'colorbox_caption_custom' => '',
-          'colorbox_gallery' => 'page',
-          'colorbox_gallery_custom' => '',
-          'colorbox_image_style' => '',
-          'colorbox_multivalue_index' => NULL,
-          'colorbox_node_style' => 'media_thumbnail',
-          'colorbox_node_style_first' => '',
-        ),
-        'type' => 'colorbox',
-        'weight' => 3,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_gallery_images',
-    'label' => 'Images',
-    'required' => 1,
-    'settings' => array(
-      'alt_field' => 1,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'max_filesize' => '10 MB',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'manualcrop_crop_info' => TRUE,
-        'manualcrop_default_crop_area' => TRUE,
-        'manualcrop_enable' => FALSE,
-        'manualcrop_inline_crop' => FALSE,
-        'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => TRUE,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => FALSE,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => FALSE,
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-ol_gallery-field_ol_tags'
   $field_instances['node-ol_gallery-field_ol_tags'] = array(
     'bundle' => 'ol_gallery',
@@ -504,7 +426,7 @@ function openlocal_gallery_field_default_field_instances() {
   $field_instances['node-ol_photo_album-field_ol_gallery_ref'] = array(
     'bundle' => 'ol_photo_album',
     'default_value' => NULL,
-    'default_value_function' => '',
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -537,7 +459,12 @@ function openlocal_gallery_field_default_field_instances() {
     'settings' => array(
       'behaviors' => array(
         'prepopulate' => array(
-          'status' => 0,
+          'action' => 'disable',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
+          'og_context' => 0,
+          'skip_perm' => 0,
+          'status' => 1,
         ),
       ),
       'user_register_form' => FALSE,
@@ -554,7 +481,6 @@ function openlocal_gallery_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('A longer description shown on the gallery page.');
-  t('Add all the images one by one that go into this gallery.');
   t('Add any tags that define this gallery in more detail. Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.');
   t('Comment');
   t('Credit the author of the images.');

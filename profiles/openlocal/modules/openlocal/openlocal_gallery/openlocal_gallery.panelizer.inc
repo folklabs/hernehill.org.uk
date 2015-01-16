@@ -161,12 +161,13 @@ function openlocal_gallery_panelizer_defaults() {
       'body' => '<div class="ol-action-box">
 
 <div class="ol-action-button">
-<a href="/node/add/ol-photo-album"><span class="ol-action-span"><i class="fa fa-plus"></i> add photos</span></a>
+<a href="/node/add/ol-photo-album?field_ol_gallery_ref=﻿﻿%node:nid"><span class="ol-action-span"><i class="fa fa-plus"></i> add photos</span></a>
 </div>
+Please select this gallery when creating the new photo album.
 
 </div>',
       'format' => 'panopoly_html_text',
-      'substitute' => 0,
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
