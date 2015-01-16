@@ -3847,6 +3847,12 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   display: block;
 }
 
+/* line 83, ../sass/components/_panels.sass */
+.pane-openlocal-twitter-panel-pane-1 {
+  background-color: #e3dcd1;
+  margin: 1em 0;
+}
+
 /* line 7, ../sass/components/_panel-alert.sass */
 .pane-openlocal-alert-panel-pane-1 {
   background-color: #e2e3d7;
@@ -4766,6 +4772,28 @@ h2.node-title a:active {
   line-height: 1em;
   color: #77666d;
   display: block;
+}
+
+/* line 117, ../sass/components/_view-list.sass */
+.view-openlocal-twitter .views-row {
+  border-bottom: solid 1px #f4eee0;
+  padding: 0.5em 5px;
+}
+/* line 120, ../sass/components/_view-list.sass */
+.view-openlocal-twitter .twitter-content {
+  display: inline-block;
+}
+/* line 122, ../sass/components/_view-list.sass */
+.view-openlocal-twitter .twitter-name {
+  text-weight: 900;
+}
+/* line 124, ../sass/components/_view-list.sass */
+.view-openlocal-twitter .twitter-screen-name {
+  color: #b19fa7;
+}
+/* line 126, ../sass/components/_view-list.sass */
+.view-openlocal-twitter .views-field-created-time {
+  color: #b19fa7;
 }
 
 /* line 11, ../sass/components/_user.sass */

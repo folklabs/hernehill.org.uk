@@ -149,6 +149,29 @@ function openlocal_home_default_page_manager_pages() {
     $display->content['new-a246a9c6-5eac-4d90-8d64-fd126415a96b'] = $pane;
     $display->panels['column1'][1] = 'new-a246a9c6-5eac-4d90-8d64-fd126415a96b';
     $pane = new stdClass();
+    $pane->pid = 'new-6dcc8b69-71fe-4542-b9f7-86c7e7a2b233';
+    $pane->panel = 'column1';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'openlocal_twitter-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_settings' => 'fields',
+      'header_type' => 'none',
+      'view_mode' => 'teaser',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '6dcc8b69-71fe-4542-b9f7-86c7e7a2b233';
+    $display->content['new-6dcc8b69-71fe-4542-b9f7-86c7e7a2b233'] = $pane;
+    $display->panels['column1'][2] = 'new-6dcc8b69-71fe-4542-b9f7-86c7e7a2b233';
+    $pane = new stdClass();
     $pane->pid = 'new-9e33fb68-599d-42b6-a481-5ae6620398db';
     $pane->panel = 'column2';
     $pane->type = 'views_panes';
