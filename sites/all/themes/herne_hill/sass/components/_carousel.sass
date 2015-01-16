@@ -6,21 +6,26 @@
 // The Home page main news highlight carousel zone
 .pane-openlocal-highlight-panel-pane-1
   position: relative
-  height: 30em
-  .views-field-field-featured-image
-    height: 21em
+  // height: 30em
+  // .views-field-field-featured-image
+    // height: 21em
   background-color: $col-content-lightest
   max-width: 580px
   margin-bottom: 1em
   .views-field-title
-    padding: 0.25em 5px 0.75em 5px
+    position: absolute
+    bottom: 20px
+    padding: 0.25em 10px 0.25em 10px
+    background-color: transparentize($col-links-darkest, 0.3)
     @include typography-highlight-heading
-    color: $col-links-darker
+    color: $col-page
     a
+      line-height: 1.25em
       &:link
+        color: $col-page
         background: transparent
       &:visited
-        color: $col-links
+        color: $col-page
       &:hover
         color: $col-links-darker
       &:active
@@ -29,9 +34,9 @@
     @include typography-grid-list-body
     display: block
     padding: 0.25em 5px
-    background-color: transparentize($col-content-lighter, 0.5)
+    background-color: transparentize($col-page, 0.3)
     position: absolute
-    bottom: 0
-    right: 0
+    top: 0
+    left: 0
     z-index: 10000
 
