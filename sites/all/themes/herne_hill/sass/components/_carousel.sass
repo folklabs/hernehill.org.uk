@@ -3,6 +3,7 @@
 // HIGHLIGHT CAROUSEL
 
 $highlight-title-background: transparentize($col-links-darkest, 0.3)
+$highlight-title-background-hover: transparentize($col-page, 0.3)
 // The Home page main news highlight carousel zone
 .pane-openlocal-highlight-panel-pane-1
   position: relative
@@ -28,11 +29,12 @@ $highlight-title-background: transparentize($col-links-darkest, 0.3)
       box-decoration-break: clone
       &:link
         color: $col-page
-        // background: transparent
       &:visited
         color: $col-page
       &:hover
         color: $col-links-darker
+        background-color: transparentize($col-page, 0.3)
+        box-shadow: 10px 0 0 $highlight-title-background-hover, -10px 0 0 $highlight-title-background-hover
       // &:active
     clear: both
   .views_slideshow_slide_counter
