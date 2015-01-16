@@ -2,7 +2,7 @@
 // ----------------------------------------------------------------------------
 // HIGHLIGHT CAROUSEL
 
-
+$highlight-title-background: transparentize($col-links-darkest, 0.3)
 // The Home page main news highlight carousel zone
 .pane-openlocal-highlight-panel-pane-1
   position: relative
@@ -15,20 +15,25 @@
   .views-field-title
     position: absolute
     bottom: 20px
-    padding: 0.25em 10px 0.25em 10px
-    background-color: transparentize($col-links-darkest, 0.3)
+    margin-left: 10px
+
+
     @include typography-highlight-heading
     color: $col-page
     a
+      background-color: transparentize($col-links-darkest, 0.3)
       line-height: 1.25em
+      // Add a bit of padding on each line even when link text wraps
+      box-shadow: 10px 0 0 $highlight-title-background, -10px 0 0 $highlight-title-background
+      box-decoration-break: clone
       &:link
         color: $col-page
-        background: transparent
+        // background: transparent
       &:visited
         color: $col-page
       &:hover
         color: $col-links-darker
-      &:active
+      // &:active
     clear: both
   .views_slideshow_slide_counter
     @include typography-grid-list-body
