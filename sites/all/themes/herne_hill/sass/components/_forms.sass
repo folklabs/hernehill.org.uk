@@ -41,8 +41,11 @@
   margin-top: 0
 
 
-
-
+.page-node-add .pane-node-form-publishing,
+.page-node-add .pane-node-form-author,
+.page-node-edit .pane-node-form-publishing,
+.page-node-edit .pane-node-form-author
+  padding: 0 0 0 0
 
 
 // ----------------------------------------------------------------------------
@@ -150,7 +153,8 @@ form
 
   // Style field descriptions
   .fieldset-description,
-  .description
+  .description,
+  .description p
     font-family: $lato
     font-size: 1em
     line-height: 1.25em
@@ -158,6 +162,7 @@ form
     padding: 0.5em 0
     margin: 0
     color: $col-content
+
   .form-type-radio .description,
   .form-type-checkbox .description
     margin-left: 1.5em

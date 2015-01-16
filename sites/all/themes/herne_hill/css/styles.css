@@ -2694,12 +2694,20 @@ div.form-item-notify {
   margin-top: 0;
 }
 
-/* line 53, ../sass/components/_forms.sass */
+/* line 44, ../sass/components/_forms.sass */
+.page-node-add .pane-node-form-publishing,
+.page-node-add .pane-node-form-author,
+.page-node-edit .pane-node-form-publishing,
+.page-node-edit .pane-node-form-author {
+  padding: 0 0 0 0;
+}
+
+/* line 56, ../sass/components/_forms.sass */
 form .pane-node-form-title {
   background-color: #e3dcd1;
   padding: 0.25em 10px 0.5em 10px;
 }
-/* line 56, ../sass/components/_forms.sass */
+/* line 59, ../sass/components/_forms.sass */
 form .pane-node-form-title .counter {
   margin: 0.75em 0 0 0;
   color: #77666d;
@@ -2708,11 +2716,11 @@ form .pane-node-form-title .counter {
   line-height: 1em;
   color: #77666d;
 }
-/* line 64, ../sass/components/_forms.sass */
+/* line 67, ../sass/components/_forms.sass */
 form .pane-node-form-title .counter strong {
   color: #8c4965;
 }
-/* line 69, ../sass/components/_forms.sass */
+/* line 72, ../sass/components/_forms.sass */
 form label {
   color: #77666d;
   font-family: "Lato";
@@ -2720,7 +2728,7 @@ form label {
   line-height: 1em;
   padding: 0.5em 0;
 }
-/* line 77, ../sass/components/_forms.sass */
+/* line 80, ../sass/components/_forms.sass */
 form input[type="text"],
 form input[type="password"],
 form textarea,
@@ -2743,11 +2751,11 @@ form #tinymce {
   -webkit-box-shadow: inset 0 0 5px #b19fa7;
   box-shadow: inset 0 0 5px #b19fa7;
 }
-/* line 92, ../sass/components/_forms.sass */
+/* line 95, ../sass/components/_forms.sass */
 form #edit-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
 }
-/* line 97, ../sass/components/_forms.sass */
+/* line 100, ../sass/components/_forms.sass */
 form input[type="submit"],
 form #node-edit .form-actions input,
 form #node-edit .image-widget .form-submit {
@@ -2795,7 +2803,7 @@ form #node-edit .image-widget .form-submit:active {
   border: solid 1px white;
   color: #2f2127;
 }
-/* line 103, ../sass/components/_forms.sass */
+/* line 106, ../sass/components/_forms.sass */
 form #node-edit .form-actions input[id="edit-submit"] {
   line-height: 1.25em;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #144c3f), color-stop(1, #20806a));
@@ -2838,7 +2846,7 @@ form #node-edit .form-actions input[id="edit-submit"]:active {
   border: solid 1px #98b9b1;
   color: #98b9b1;
 }
-/* line 108, ../sass/components/_forms.sass */
+/* line 111, ../sass/components/_forms.sass */
 form textarea {
   font-family: "Lato";
   font-size: 1em;
@@ -2846,7 +2854,7 @@ form textarea {
   font-weight: 300;
   padding: 0.5em 5px;
 }
-/* line 116, ../sass/components/_forms.sass */
+/* line 119, ../sass/components/_forms.sass */
 form select[multiple="multiple"] {
   background-color: #f4eee0;
   border: solid 1px #77666d;
@@ -2856,13 +2864,13 @@ form select[multiple="multiple"] {
   color: #77666d;
   padding: 0.25em 10px;
 }
-/* line 126, ../sass/components/_forms.sass */
+/* line 129, ../sass/components/_forms.sass */
 form fieldset {
   background-color: #e3dcd1;
   border: none;
   border-radius: 3px;
 }
-/* line 130, ../sass/components/_forms.sass */
+/* line 133, ../sass/components/_forms.sass */
 form fieldset legend {
   display: block;
   background-color: #b19fa7;
@@ -2875,22 +2883,23 @@ form fieldset legend {
   color: #f4eee0;
   font-weight: 400;
 }
-/* line 142, ../sass/components/_forms.sass */
+/* line 145, ../sass/components/_forms.sass */
 form fieldset legend a:link {
   font-family: "Lato";
   color: #f4eee0;
 }
-/* line 145, ../sass/components/_forms.sass */
+/* line 148, ../sass/components/_forms.sass */
 form fieldset legend a:hover {
   background-color: transparent;
 }
-/* line 147, ../sass/components/_forms.sass */
+/* line 150, ../sass/components/_forms.sass */
 form fieldset legend a:active {
   background-color: transparent;
 }
-/* line 152, ../sass/components/_forms.sass */
+/* line 155, ../sass/components/_forms.sass */
 form .fieldset-description,
-form .description {
+form .description,
+form .description p {
   font-family: "Lato";
   font-size: 1em;
   line-height: 1.25em;
@@ -2899,12 +2908,12 @@ form .description {
   margin: 0;
   color: #77666d;
 }
-/* line 161, ../sass/components/_forms.sass */
+/* line 166, ../sass/components/_forms.sass */
 form .form-type-radio .description,
 form .form-type-checkbox .description {
   margin-left: 1.5em;
 }
-/* line 169, ../sass/components/_forms.sass */
+/* line 174, ../sass/components/_forms.sass */
 form #node-edit .form-item-date-time label,
 form #node-edit .form-item-name label,
 form #node-edit .form-item-machine-name label,
@@ -2914,35 +2923,35 @@ form #node-edit .form-item-date label {
   margin: 0.5em 0;
   padding: 0;
 }
-/* line 174, ../sass/components/_forms.sass */
+/* line 179, ../sass/components/_forms.sass */
 form .container-inline-date {
   margin: 0.5em 0;
 }
-/* line 178, ../sass/components/_forms.sass */
+/* line 183, ../sass/components/_forms.sass */
 form table {
   width: 100%;
   font-family: "Lato";
   color: #77666d;
 }
-/* line 182, ../sass/components/_forms.sass */
+/* line 187, ../sass/components/_forms.sass */
 form table th {
   border-bottom: solid 1px #b19fa7;
 }
-/* line 184, ../sass/components/_forms.sass */
+/* line 189, ../sass/components/_forms.sass */
 form table tr {
   background-color: transparent;
 }
-/* line 186, ../sass/components/_forms.sass */
+/* line 191, ../sass/components/_forms.sass */
 form table td {
   border-bottom: solid 1px #f4eee0;
   background-color: #e3dcd1;
   padding: 0.5em 1.5em;
 }
-/* line 194, ../sass/components/_forms.sass */
+/* line 199, ../sass/components/_forms.sass */
 form div a:link {
   font-family: "Lato";
 }
-/* line 199, ../sass/components/_forms.sass */
+/* line 204, ../sass/components/_forms.sass */
 form .imagefield-focus.focus-box {
   width: auto !important;
   width: 100%;
@@ -2951,83 +2960,83 @@ form .imagefield-focus.focus-box {
   min-width: 280px;
 }
 
-/* line 208, ../sass/components/_forms.sass */
+/* line 213, ../sass/components/_forms.sass */
 .form-item {
   margin: 1.5em 0;
 }
-/* line 212, ../sass/components/_forms.sass */
+/* line 217, ../sass/components/_forms.sass */
 .form-checkboxes .form-item, .form-radios .form-item {
   margin: 0;
 }
-/* line 219, ../sass/components/_forms.sass */
+/* line 224, ../sass/components/_forms.sass */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 224, ../sass/components/_forms.sass */
+/* line 229, ../sass/components/_forms.sass */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid red;
 }
-/* line 230, ../sass/components/_forms.sass */
+/* line 235, ../sass/components/_forms.sass */
 .form-item .description {
   font-size: 0.875em;
 }
 
-/* line 235, ../sass/components/_forms.sass */
+/* line 240, ../sass/components/_forms.sass */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 2.5em;
 }
 
-/* line 239, ../sass/components/_forms.sass */
+/* line 244, ../sass/components/_forms.sass */
 .form-required {
   color: #8c4965;
 }
 
-/* line 243, ../sass/components/_forms.sass */
+/* line 248, ../sass/components/_forms.sass */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
-/* line 248, ../sass/components/_forms.sass */
+/* line 253, ../sass/components/_forms.sass */
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
 }
 
-/* line 253, ../sass/components/_forms.sass */
+/* line 258, ../sass/components/_forms.sass */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
-/* line 258, ../sass/components/_forms.sass */
+/* line 263, ../sass/components/_forms.sass */
 #user-login-form {
   text-align: left;
 }
 
-/* line 262, ../sass/components/_forms.sass */
+/* line 267, ../sass/components/_forms.sass */
 #node-edit .form-item-path-alias {
   margin: 1em 0;
 }
-/* line 264, ../sass/components/_forms.sass */
+/* line 269, ../sass/components/_forms.sass */
 #node-edit .form-item-path-alias input {
   width: 50%;
 }
 
-/* line 279, ../sass/components/_forms.sass */
+/* line 284, ../sass/components/_forms.sass */
 #search-form {
   float: right;
 }
-/* line 281, ../sass/components/_forms.sass */
+/* line 286, ../sass/components/_forms.sass */
 #search-form .form-type-textfield {
   vertical-align: top;
   color: #4d3d44;
 }
-/* line 284, ../sass/components/_forms.sass */
+/* line 289, ../sass/components/_forms.sass */
 #search-form .form-type-textfield #edit-keys {
   vertical-align: top;
   height: 35.2px;
@@ -3042,7 +3051,7 @@ a.button {
   box-shadow: inset 0 0 5px #b19fa7;
   font-size: 20px;
 }
-/* line 296, ../sass/components/_forms.sass */
+/* line 301, ../sass/components/_forms.sass */
 #search-form .form-submit {
   vertical-align: top;
   height: 32px;
@@ -3056,7 +3065,7 @@ a.button {
   border: 1px solid #144c3f;
   border-radius: 0.2em;
 }
-/* line 308, ../sass/components/_forms.sass */
+/* line 313, ../sass/components/_forms.sass */
 #search-form .form-submit:hover {
   -moz-box-shadow: inset 0 0 10px #144c3f;
   -webkit-box-shadow: inset 0 0 10px #144c3f;
