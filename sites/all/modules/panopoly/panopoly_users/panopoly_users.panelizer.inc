@@ -52,30 +52,23 @@ function panopoly_users_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-b6893ef7-4ed9-4a58-837d-02d308237b21';
+    $pane->pid = 'new-e67dc06a-7a74-4f6a-802a-b08fc0969b05';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'openlocal_user_content-panel_pane_2';
+    $pane->subtype = 'openlocal_user-panel_pane_1';
     $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'compare_users',
-          'settings' => array(
-            'equality' => '1',
-          ),
-          'context' => array(
-            0 => 'panelizer',
-            1 => 'logged-in-user',
-          ),
-          'not' => FALSE,
-        ),
-      ),
-    );
+    $pane->access = array();
     $pane->configuration = array(
+      'items_per_page' => '20',
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
       'view_settings' => 'table',
       'header_type' => 'titles',
       'view_mode' => 'teaser',
+      'widget_title' => 'Published content',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -85,9 +78,9 @@ function panopoly_users_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'b6893ef7-4ed9-4a58-837d-02d308237b21';
-    $display->content['new-b6893ef7-4ed9-4a58-837d-02d308237b21'] = $pane;
-    $display->panels['contentmain'][0] = 'new-b6893ef7-4ed9-4a58-837d-02d308237b21';
+    $pane->uuid = 'e67dc06a-7a74-4f6a-802a-b08fc0969b05';
+    $display->content['new-e67dc06a-7a74-4f6a-802a-b08fc0969b05'] = $pane;
+    $display->panels['contentmain'][0] = 'new-e67dc06a-7a74-4f6a-802a-b08fc0969b05';
     $pane = new stdClass();
     $pane->pid = 'new-af686dc2-f888-490b-960c-7c129d35c75f';
     $pane->panel = 'sidebar';
@@ -144,28 +137,6 @@ function panopoly_users_panelizer_defaults() {
     $pane->uuid = '7ed4887b-d2c0-46b6-a553-50ac33cf8e47';
     $display->content['new-7ed4887b-d2c0-46b6-a553-50ac33cf8e47'] = $pane;
     $display->panels['sidebar'][1] = 'new-7ed4887b-d2c0-46b6-a553-50ac33cf8e47';
-    $pane = new stdClass();
-    $pane->pid = 'new-8724fb24-d4b8-405d-941c-a186095c7a2b';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'nice_menus-2';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '8724fb24-d4b8-405d-941c-a186095c7a2b';
-    $display->content['new-8724fb24-d4b8-405d-941c-a186095c7a2b'] = $pane;
-    $display->panels['sidebar'][2] = 'new-8724fb24-d4b8-405d-941c-a186095c7a2b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

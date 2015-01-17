@@ -21,7 +21,7 @@ function openlocal_user_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'tab',
-    'title' => 'Published content',
+    'title' => 'Draft content',
     'name' => 'navigation',
     'weight' => '5',
     'parent' => array(
@@ -66,6 +66,22 @@ function openlocal_user_default_page_manager_pages() {
 Published content',
     'panels_breadcrumbs_paths' => '%user:name',
     'panels_breadcrumbs_home' => 1,
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'compare_users',
+          'settings' => array(
+            'equality' => '1',
+          ),
+          'context' => array(
+            0 => 'argument_entity_id:user_1',
+            1 => 'logged-in-user',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'radix_bryant_flipped';
@@ -78,28 +94,21 @@ Published content',
     ),
   );
   $display->cache = array();
-  $display->title = 'Published content';
+  $display->title = 'Draft content';
   $display->uuid = 'eeaa7d45-25e8-4923-86ee-0638d93a9192';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-97a8605a-b7fe-4dbb-90a1-1d1afff15dee';
+    $pane->pid = 'new-05613e1a-703f-4ff5-8f8d-2fa6e101689d';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'openlocal_user-panel_pane_1';
+    $pane->subtype = 'openlocal_user_content-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'context' => array(
-        0 => 'argument_entity_id:user_1',
-      ),
       'view_settings' => 'table',
       'header_type' => 'titles',
       'view_mode' => 'teaser',
-      'items_per_page' => '20',
-      'override_title' => '',
-      'override_title_text' => '',
-      'widget_title' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -109,9 +118,9 @@ Published content',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '97a8605a-b7fe-4dbb-90a1-1d1afff15dee';
-    $display->content['new-97a8605a-b7fe-4dbb-90a1-1d1afff15dee'] = $pane;
-    $display->panels['contentmain'][0] = 'new-97a8605a-b7fe-4dbb-90a1-1d1afff15dee';
+    $pane->uuid = '05613e1a-703f-4ff5-8f8d-2fa6e101689d';
+    $display->content['new-05613e1a-703f-4ff5-8f8d-2fa6e101689d'] = $pane;
+    $display->panels['contentmain'][0] = 'new-05613e1a-703f-4ff5-8f8d-2fa6e101689d';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
