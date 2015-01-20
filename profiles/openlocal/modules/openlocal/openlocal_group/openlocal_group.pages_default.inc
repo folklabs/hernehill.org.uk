@@ -30,6 +30,8 @@ function openlocal_group_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -270,6 +272,31 @@ Events',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-7c89d047-d73f-44f1-bdf0-1af80976d938';
+    $pane->panel = 'column1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Group context help',
+      'title' => '',
+      'body' => '<p>The Community page is a collection of groups and organisations in the local area. Each group area is run by that respective group and content posted by them and their members.</p><p>Use the "+add group" button on the right hand side if you wish to start up your own group on the Herne Hill web site.</p>',
+      'format' => 'panopoly_wysiwyg_text',
+      'substitute' => 0,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7c89d047-d73f-44f1-bdf0-1af80976d938';
+    $display->content['new-7c89d047-d73f-44f1-bdf0-1af80976d938'] = $pane;
+    $display->panels['column1'][0] = 'new-7c89d047-d73f-44f1-bdf0-1af80976d938';
+    $pane = new stdClass();
     $pane->pid = 'new-77c8176e-6109-4ea1-8a55-a90ab8495084';
     $pane->panel = 'column1';
     $pane->type = 'views_panes';
@@ -302,11 +329,11 @@ Events',
       'css_class' => 'ol-2nd-nav-menu',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '77c8176e-6109-4ea1-8a55-a90ab8495084';
     $display->content['new-77c8176e-6109-4ea1-8a55-a90ab8495084'] = $pane;
-    $display->panels['column1'][0] = 'new-77c8176e-6109-4ea1-8a55-a90ab8495084';
+    $display->panels['column1'][1] = 'new-77c8176e-6109-4ea1-8a55-a90ab8495084';
     $pane = new stdClass();
     $pane->pid = 'new-070b0733-dda8-4354-87a8-4881a31bf130';
     $pane->panel = 'column2';
@@ -454,6 +481,8 @@ Events',
         'not' => FALSE,
       ),
     ),
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -598,7 +627,10 @@ Galleries',
   $page->admin_title = 'Groups map';
   $page->admin_description = 'A map of local community groups, if they have a defined location.';
   $page->path = 'groups/map';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'tab',
     'title' => 'Map',
