@@ -121,7 +121,7 @@ function openlocal_business_field_default_field_bases() {
   // Exported field_base: 'field_ol_business_promotions'
   $field_bases['field_ol_business_promotions'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 2,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ol_business_promotions',
@@ -132,6 +132,7 @@ function openlocal_business_field_default_field_bases() {
     'settings' => array(
       'hide_blank_items' => 1,
       'path' => '',
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'field_collection',

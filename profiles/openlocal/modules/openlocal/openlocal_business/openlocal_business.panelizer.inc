@@ -671,15 +671,15 @@ function openlocal_business_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'title',
-      'formatter' => 'field_collection_fields',
+      'formatter' => 'field_collection_view',
       'delta_limit' => '0',
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'edit' => 'Edit',
-        'delete' => 'Delete',
-        'add' => 'Add',
-        'description' => 1,
+        'edit' => '',
+        'delete' => '',
+        'add' => '',
+        'description' => 0,
         'view_mode' => 'full',
       ),
       'context' => array(),

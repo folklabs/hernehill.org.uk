@@ -321,7 +321,7 @@ function openlocal_business_field_default_field_instances() {
     'bundle' => 'ol_business',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter a link to your Facebook page, if you have one.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1196,14 +1196,14 @@ function openlocal_business_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -1242,7 +1242,7 @@ function openlocal_business_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'links' => TRUE,
@@ -1252,7 +1252,7 @@ function openlocal_business_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -1290,6 +1290,7 @@ function openlocal_business_field_default_field_instances() {
   t('Details');
   t('Email');
   t('Enter a detailed description of your business, including details such as when you were established, your specialist skills and the typical sorts of work you do or what you sell.');
+  t('Enter a link to your Facebook page, if you have one.');
   t('Enter any promotions the business is offering, either as part of a local loyalty scheme or independently.');
   t('Enter your business Twitter account, if you have one.');
   t('Enter your business address if you have a fixed location.');

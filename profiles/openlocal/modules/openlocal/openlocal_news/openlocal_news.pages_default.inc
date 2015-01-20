@@ -512,11 +512,8 @@ function openlocal_news_default_page_manager_pages() {
       ),
       'exposed' => array(
         'Is Featured' => 'All',
-        'widget_title' => '',
-        'use_pager' => 0,
-        'pager_id' => '',
-        'sort_by' => 'created',
         'sort_order' => 'DESC',
+        'sort_by' => 'created',
       ),
       'context' => array(
         0 => 'empty',
@@ -527,8 +524,8 @@ function openlocal_news_default_page_manager_pages() {
       'widget_title' => '',
       'items_per_page' => '10',
       'view_settings' => 'fields',
-      'use_pager' => NULL,
-      'pager_id' => NULL,
+      'use_pager' => 1,
+      'pager_id' => '',
       'offset' => NULL,
       'link_to_view' => NULL,
       'more_link' => NULL,
