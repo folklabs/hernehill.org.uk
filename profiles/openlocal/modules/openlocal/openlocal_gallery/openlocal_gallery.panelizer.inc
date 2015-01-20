@@ -232,9 +232,10 @@ Please select this gallery when creating the new photo album.
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array(
     'panels_breadcrumbs_state' => 1,
-    'panels_breadcrumbs_titles' => 'Photo albums
+    'panels_breadcrumbs_titles' => 'Galleries
+Photo albums
 %node:title',
-    'panels_breadcrumbs_paths' => '',
+    'panels_breadcrumbs_paths' => '/galleries',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
@@ -260,15 +261,24 @@ Please select this gallery when creating the new photo album.
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
+      'formatter' => 'colorbox',
+      'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => FALSE,
+      'delta_reversed' => 0,
       'formatter_settings' => array(
         'image_style' => '',
         'image_link' => '',
+        'colorbox_node_style' => 'openlocal_panel_deep',
+        'colorbox_node_style_first' => '',
+        'colorbox_image_style' => '',
+        'colorbox_gallery' => 'post',
+        'colorbox_gallery_custom' => '',
+        'colorbox_caption' => 'auto',
+        'colorbox_caption_custom' => '',
       ),
       'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(

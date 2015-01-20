@@ -355,7 +355,7 @@ function openlocal_gallery_field_default_field_instances() {
     'bundle' => 'ol_photo_album',
     'default_value' => array(),
     'deleted' => 0,
-    'description' => '',
+    'description' => ' It is recommended to <b>only bulk upload 20 images or less</b> at once.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -480,6 +480,7 @@ function openlocal_gallery_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t(' It is recommended to <b>only bulk upload 20 images or less</b> at once.');
   t('A longer description shown on the gallery page.');
   t('Add any tags that define this gallery in more detail. Start typing, if the tag exists, select it. If it does not exist press return to create it. Tags are used to offer more specific searching and filtering for services.');
   t('Comment');

@@ -461,10 +461,8 @@ function openlocal_gallery_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_ol_photo_album';
   $strongarm->value = array(
-    'entity' => 'node',
-    'bundle' => 'ol_image_set',
-    'status' => 0,
-    'priority' => 0.5,
+    'status' => '0',
+    'priority' => '0.5',
   );
   $export['xmlsitemap_settings_node_ol_photo_album'] = $strongarm;
 
