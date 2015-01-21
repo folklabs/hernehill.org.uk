@@ -2118,7 +2118,7 @@ tr.selected td {
 /* line 273, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384446789');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
 /* line 277, ../sass/components/_admin.sass */
@@ -2436,20 +2436,26 @@ div.form-item-notify {
   margin-top: 1.5em;
   margin-bottom: 3em;
 }
+/* line 18, ../sass/components/_controls.sass */
+.pane-node-links a {
+  white-space: nowrap;
+}
 
-/* line 19, ../sass/components/_controls.sass */
+/* line 22, ../sass/components/_controls.sass */
 .service-links-facebook,
 .service-links-twitter,
 .service-links-google-plus,
 .forward_link {
   padding-right: 0;
 }
-/* line 26, ../sass/components/_controls.sass */
+/* line 27, ../sass/components/_controls.sass */
 .service-links-facebook a,
 .service-links-twitter a,
 .service-links-google-plus a,
 .forward_link a {
   display: inline-block;
+  padding: 5px 10px;
+  margin: 0.5em 0;
   line-height: 1.25em;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e3dcd1), color-stop(1, #f4eee0));
   background-image: -o-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
@@ -2464,8 +2470,6 @@ div.form-item-notify {
   font-weight: 400;
   font-size: 1em;
   margin-right: 10px;
-  padding: 5px 10px;
-  margin: 0.5em 0;
 }
 /* line 228, ../sass/_mixins.sass */
 .service-links-facebook a:hover,
