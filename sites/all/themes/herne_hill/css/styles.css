@@ -3982,17 +3982,23 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   padding: 0.25em 0 0 0;
 }
 /* line 14, ../sass/components/_nav-tags.sass */
+.pane-node-field-ol-business-tags .field-items,
+.field-name-field-ol-tags .field-items {
+  display: block;
+}
+/* line 16, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags .field-item,
 .field-name-field-ol-tags .field-item {
+  display: inline-block;
   margin: 0.5em 10px 0.5em 0;
 }
-/* line 17, ../sass/components/_nav-tags.sass */
+/* line 19, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags .field-item a,
 .field-name-field-ol-tags .field-item a {
   font-family: "Lato";
   font-size: 1em;
 }
-/* line 20, ../sass/components/_nav-tags.sass */
+/* line 22, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags .field-item a:link, .pane-node-field-ol-business-tags .field-item a:visited,
 .field-name-field-ol-tags .field-item a:link,
 .field-name-field-ol-tags .field-item a:visited {
@@ -4002,7 +4008,7 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   border-radius: 9999px;
   color: #20806a;
 }
-/* line 27, ../sass/components/_nav-tags.sass */
+/* line 29, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags .field-item a:hover,
 .field-name-field-ol-tags .field-item a:hover {
   -moz-box-shadow: inset 0 0 10px #98b9b1;
@@ -4011,7 +4017,7 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   color: #144c3f;
   border: solid 1px #20806a;
 }
-/* line 31, ../sass/components/_nav-tags.sass */
+/* line 33, ../sass/components/_nav-tags.sass */
 .pane-node-field-ol-business-tags .field-item a:active,
 .field-name-field-ol-tags .field-item a:active {
   -moz-box-shadow: inset 0 0 10px #144c3f;
