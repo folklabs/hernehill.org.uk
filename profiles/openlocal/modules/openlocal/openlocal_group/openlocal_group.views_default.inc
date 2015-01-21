@@ -140,6 +140,9 @@ function openlocal_group_views_default_views() {
 
   /* Display: Map */
   $handler = $view->new_display('panel_pane', 'Map', 'panel_pane_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'leaflet';
   $handler->display->display_options['style_options']['data_source'] = 'field_ol_geolocation';
