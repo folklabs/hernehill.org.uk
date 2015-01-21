@@ -2329,38 +2329,48 @@ body#tinymce p, pre {
 /* line 6, ../sass/components/_comments.sass */
 .pane-node-comment-form {
   background-color: #e3dcd1;
+  margin-top: 4em;
+  margin-bottom: 2em;
 }
-/* line 8, ../sass/components/_comments.sass */
+/* line 10, ../sass/components/_comments.sass */
+.pane-node-comment-form #edit-author--4 {
+  display: none;
+}
+/* line 12, ../sass/components/_comments.sass */
 .pane-node-comment-form .comment-form {
   padding: 0 5px 0.5em 5px;
 }
-/* line 10, ../sass/components/_comments.sass */
+/* line 14, ../sass/components/_comments.sass */
+.pane-node-comment-form .comment-form .form-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 17, ../sass/components/_comments.sass */
 .pane-node-comment-form .comment-form .format-toggle {
-  margin: 0;
-  padding: 0;
+  display: none;
 }
 
-/* line 23, ../sass/components/_comments.sass */
+/* line 29, ../sass/components/_comments.sass */
 .comments {
   margin: 1.5em 0;
 }
 
-/* line 27, ../sass/components/_comments.sass */
+/* line 33, ../sass/components/_comments.sass */
 .comment-preview {
   background-color: #ffffea;
 }
 
-/* line 34, ../sass/components/_comments.sass */
+/* line 40, ../sass/components/_comments.sass */
 .comment .permalink {
   font-size: 1em;
 }
 
-/* line 39, ../sass/components/_comments.sass */
+/* line 45, ../sass/components/_comments.sass */
 .indented {
   margin-left: 1.5em;
 }
 
-/* line 56, ../sass/components/_comments.sass */
+/* line 62, ../sass/components/_comments.sass */
 .comment-form div {
   color: #77666d;
   font-family: "Lato";
@@ -2368,12 +2378,12 @@ body#tinymce p, pre {
   line-height: 2em;
 }
 
-/* line 74, ../sass/components/_comments.sass */
+/* line 80, ../sass/components/_comments.sass */
 div.form-item-notify {
   margin: 0;
 }
 
-/* line 76, ../sass/components/_comments.sass */
+/* line 82, ../sass/components/_comments.sass */
 .form-radios {
   margin: 1em 0 1em 1em;
 }
