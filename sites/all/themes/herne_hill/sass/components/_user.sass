@@ -2,7 +2,7 @@
 //-----------------------------------------------------------------------------
 // STYLES FOR USER PAGE
 
-$user-info-margin: 1em 0 1em 0
+$user-info-margin: 1em 0
 
 
 .page-user
@@ -14,12 +14,10 @@ $user-info-margin: 1em 0 1em 0
 .node-type-openlocal-news-article
   .panel-panel-inner
     .pane-user-profile
-      width: 15%
+      // width: 15%
       display: inline-block
       float: left
-      margin: $user-info-margin
       .pane-user-name
-        // vertical-align: bottom
         margin-top: 5px
 
 
@@ -28,39 +26,41 @@ $user-info-margin: 1em 0 1em 0
   //   display: inline-block
 
   .pane-custom
-    // display: inline-block
-    // height: 20px
-    // margin-bottom: 50px
+
     .ol-comment-count
-      // color: $col-links
-      // font-size: 1.3em
-      font-family: $merriweather
-      font-weight: bold
-      display: block
+      @include typography-field-heading
+      display: inline-block
     p
       height: 20px
       margin: 0
       // display: inline-block
 
+
+
+
+//-----------------------------------------------------------------------------
+// STYLES FOR NEWS PAGE AUTHOR METADATA
+
 .ol-meta-data
-  font-family: $lato
-  display: inline-block
-  width: 80%
-  margin: 2.5em 0 0 0 //$user-info-margin
-  // vertical-align: bottom
-  div
-    display: inline-block
-    // vertical-align: bottom
+  margin: 0 0 1em 74px
+  .ol-name-date
   .ol-username
-    font-family: $merriweather
-    font-weight: bold
-    color: $col-links
+    @include typography-field-heading
 
   .ol-comments
-    float: right
+    clear: both
+    margin-left: 0
     .ol-comment-count
+      display: inline
       font-size: 1.6em
       color: $col-links
+
+.openlocal-avatar-small
+  float: left
+
+
+
+
 
 
 .view-og-extras-members

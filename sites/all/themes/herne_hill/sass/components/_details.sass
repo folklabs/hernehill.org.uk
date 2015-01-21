@@ -16,9 +16,10 @@
     background: $col-content-lightest
     margin: 2.5em 0 1em 0
 
-
-
-
+.field-label-inline .field-label,
+.field-label-inline .field-items
+  float: none
+  display: inline
 
 
 
@@ -44,6 +45,7 @@
   .field-label-inline .field-item,
   .field-label-inline .field-item a
     padding-top: 0.5em
+    float: none
 
   .field-item
     @include typography-field-item
