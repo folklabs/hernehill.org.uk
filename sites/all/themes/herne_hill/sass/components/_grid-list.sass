@@ -102,10 +102,11 @@
 //-----------------------------------------------------------------------------
 // GRID LIST STYLES FOR SERVICES AND COMMUNITY SECTION
 
-.page-galleries
+.view-openlocal-gallery
   @include grid-list()
   .views-row
-    margin-right: 10px
+    margin-right: 7px
+    width: 32%
 
 
 .view-id-openlocal_business_facet_search,
@@ -195,3 +196,30 @@
         float: right
         max-width: 100%
         max-height: 100%
+
+
+//-----------------------------------------------------------------------------
+
+@mixin gallery-image-grid
+  .img-title
+    @include typography-field-item
+
+.view-openlocal-photo-album
+  .views-field-title
+    @include list-item-title
+    margin: 20px 0 10px
+    // margin-bottom: 10px
+  .views-row
+    border-top: $divider-line
+    margin-bottom: 30px
+  .views-field-field-ol-gallery-images a
+    display: inline-block
+    margin-right: 10px
+    width: 32%
+  @include gallery-image-grid
+
+.field-name-field-ol-gallery-images
+  @include gallery-image-grid
+
+
+

@@ -235,7 +235,7 @@ Please select this gallery when creating the new photo album.
     'panels_breadcrumbs_titles' => 'Galleries
 Photo albums
 %node:title',
-    'panels_breadcrumbs_paths' => '/galleries',
+    'panels_breadcrumbs_paths' => 'galleries',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
