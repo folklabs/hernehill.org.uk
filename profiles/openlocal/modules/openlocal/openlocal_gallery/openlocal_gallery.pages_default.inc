@@ -85,12 +85,12 @@ function openlocal_gallery_default_page_manager_pages() {
     $pane->configuration = array(
       'view_mode' => 'teaser',
       'widget_title' => '<none>',
-      'items_per_page' => '',
+      'items_per_page' => '18',
       'exposed' => array(
         'sort_by' => NULL,
         'sort_order' => NULL,
       ),
-      'use_pager' => 0,
+      'use_pager' => 1,
       'pager_id' => '',
       'offset' => NULL,
       'link_to_view' => NULL,
