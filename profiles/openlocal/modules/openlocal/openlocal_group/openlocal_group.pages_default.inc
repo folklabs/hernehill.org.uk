@@ -592,15 +592,24 @@ Galleries',
     $display->content['new-54d83b72-e946-47fa-bbb7-4b618729b9c9'] = $pane;
     $display->panels['contentmain'][0] = 'new-54d83b72-e946-47fa-bbb7-4b618729b9c9';
     $pane = new stdClass();
-    $pane->pid = 'new-9e493388-d61a-4a23-995e-d35219768354';
+    $pane->pid = 'new-e6c48e88-548f-412e-babf-af02ecd0a5b3';
     $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'block-9';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'OL Group Gallery actions',
+      'title' => '',
+      'body' => '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="/node/add/ol-photo-album"><span class="ol-action-span"><i class="fa fa-plus"></i> add photos</span></a>
+</div>
+
+</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 0,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -610,9 +619,9 @@ Galleries',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '9e493388-d61a-4a23-995e-d35219768354';
-    $display->content['new-9e493388-d61a-4a23-995e-d35219768354'] = $pane;
-    $display->panels['sidebar'][0] = 'new-9e493388-d61a-4a23-995e-d35219768354';
+    $pane->uuid = 'e6c48e88-548f-412e-babf-af02ecd0a5b3';
+    $display->content['new-e6c48e88-548f-412e-babf-af02ecd0a5b3'] = $pane;
+    $display->panels['sidebar'][0] = 'new-e6c48e88-548f-412e-babf-af02ecd0a5b3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

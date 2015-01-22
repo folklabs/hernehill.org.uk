@@ -25,6 +25,7 @@ function openlocal_gallery_views_default_views() {
   $handler->display->display_options['title'] = 'Galleries';
   $handler->display->display_options['css_class'] = 'ol-item-grid';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
@@ -36,20 +37,18 @@ function openlocal_gallery_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Images */
-  $handler->display->display_options['fields']['field_ol_gallery_images']['id'] = 'field_ol_gallery_images';
-  $handler->display->display_options['fields']['field_ol_gallery_images']['table'] = 'field_data_field_ol_gallery_images';
-  $handler->display->display_options['fields']['field_ol_gallery_images']['field'] = 'field_ol_gallery_images';
-  $handler->display->display_options['fields']['field_ol_gallery_images']['label'] = '';
-  $handler->display->display_options['fields']['field_ol_gallery_images']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ol_gallery_images']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ol_gallery_images']['settings'] = array(
-    'image_style' => 'openlocal_panel_deep',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_ol_gallery_images']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_ol_gallery_images']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_ol_gallery_images']['separator'] = '';
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_ol_gallery_ref_node']['id'] = 'reverse_field_ol_gallery_ref_node';
+  $handler->display->display_options['relationships']['reverse_field_ol_gallery_ref_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_ol_gallery_ref_node']['field'] = 'reverse_field_ol_gallery_ref_node';
+  $handler->display->display_options['relationships']['reverse_field_ol_gallery_ref_node']['required'] = TRUE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -57,6 +56,25 @@ function openlocal_gallery_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: MIN(Content: Images) */
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['id'] = 'field_ol_gallery_images_1';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['table'] = 'field_data_field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['field'] = 'field_ol_gallery_images';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['relationship'] = 'reverse_field_ol_gallery_ref_node';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['group_type'] = 'min';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['label'] = '';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['settings'] = array(
+    'image_style' => 'openlocal_panel_deep',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['group_column'] = 'entity_id';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ol_gallery_images_1']['separator'] = '';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

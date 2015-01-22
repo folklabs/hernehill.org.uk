@@ -15,7 +15,7 @@ function openlocal_group_field_default_field_instances() {
     'bundle' => 'ol_group',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Choose the categories that best describe what your group would come under. It makes it easier for others to find your group by only showing groups that are in particular categories.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -47,9 +47,7 @@ function openlocal_group_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
+      'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 5,
     ),
@@ -673,6 +671,7 @@ function openlocal_group_field_default_field_instances() {
   t('Body');
   t('Campaign');
   t('Categories');
+  t('Choose the categories that best describe what your group would come under. It makes it easier for others to find your group by only showing groups that are in particular categories.');
   t('Description');
   t('Details');
   t('Determine if this is an OG group.');
