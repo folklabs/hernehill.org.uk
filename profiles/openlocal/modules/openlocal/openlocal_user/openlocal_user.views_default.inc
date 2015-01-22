@@ -241,14 +241,11 @@ function openlocal_user_views_default_views() {
   $handler->display->display_options['relationships']['vid']['id'] = 'vid';
   $handler->display->display_options['relationships']['vid']['table'] = 'node_revision';
   $handler->display->display_options['relationships']['vid']['field'] = 'vid';
-  /* Field: Content revision: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node_revision';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node_revision'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['relationship'] = 'vid';
   /* Field: Workbench Moderation: State */
   $handler->display->display_options['fields']['state']['id'] = 'state';
   $handler->display->display_options['fields']['state']['table'] = 'workbench_moderation_node_history';
