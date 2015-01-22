@@ -28,5 +28,32 @@ function openlocal_user_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_ol_user_verify_address'] = entity_import('rules_config', '{ "rules_ol_user_verify_address" : {
+      "LABEL" : "OL User Verify address",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "openlocal" ],
+      "REQUIRES" : [ "rules" ],
+      "ON" : { "user_login" : [] },
+      "IF" : [
+        { "OR" : [
+            { "data_is_empty" : { "data" : [
+                  "account:profile-ol-personal-info:field-ol-personal-address:postal-code"
+                ]
+              }
+            },
+            { "data_is_empty" : { "data" : [
+                  "account:profile-ol-personal-info:field-ol-personal-address:thoroughfare"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "DO" : [
+        { "drupal_message" : { "message" : "Please go to your \\u003Ca href=\\u0022\\/user\\u0022\\u003Euser profile\\u003C\\/a\\u003E and enter your street in \\u0022Address 1\\u0022 and your postcode, just to help us show you really local, relevant information." } }
+      ]
+    }
+  }');
   return $items;
 }
