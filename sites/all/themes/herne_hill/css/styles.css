@@ -5064,42 +5064,20 @@ h2.node-title a:active {
 .node-type-openlocal-news-article .panel-panel-inner .pane-user-profile .pane-user-name {
   margin-top: 5px;
 }
-/* line 30, ../sass/components/_user.sass */
-.node-type-openlocal-news-article .pane-custom .ol-comment-count {
-  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-  font-weight: 900;
-  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-  font-size: 16px;
-  line-height: 16px;
-  display: inline-block;
+/* line 23, ../sass/components/_user.sass */
+.node-type-openlocal-news-article .pane-custom {
+  margin-bottom: 10px;
 }
-/* line 203, ../sass/_mixins.sass */
-.node-type-openlocal-news-article .pane-custom .ol-comment-count a {
-  background-color: transparent;
-}
-/* line 205, ../sass/_mixins.sass */
-.node-type-openlocal-news-article .pane-custom .ol-comment-count a:link, .node-type-openlocal-news-article .pane-custom .ol-comment-count a:visited {
-  color: #20806a;
-}
-/* line 208, ../sass/_mixins.sass */
-.node-type-openlocal-news-article .pane-custom .ol-comment-count a:hover {
-  color: #144c3f;
-}
-/* line 210, ../sass/_mixins.sass */
-.node-type-openlocal-news-article .pane-custom .ol-comment-count a:active {
-  color: #98b9b1;
-}
-/* line 33, ../sass/components/_user.sass */
+/* line 25, ../sass/components/_user.sass */
 .node-type-openlocal-news-article .pane-custom p {
-  height: 20px;
   margin: 0;
 }
 
-/* line 44, ../sass/components/_user.sass */
+/* line 33, ../sass/components/_user.sass */
 .ol-meta-data {
   margin: 0 0 1em 74px;
 }
-/* line 47, ../sass/components/_user.sass */
+/* line 36, ../sass/components/_user.sass */
 .ol-meta-data .ol-username {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 900;
@@ -5123,28 +5101,52 @@ h2.node-title a:active {
 .ol-meta-data .ol-username a:active {
   color: #98b9b1;
 }
-/* line 50, ../sass/components/_user.sass */
-.ol-meta-data .ol-comments {
+
+/* line 39, ../sass/components/_user.sass */
+.ol-comments {
   clear: both;
+  margin-top: 10px;
   margin-left: 0;
 }
-/* line 53, ../sass/components/_user.sass */
-.ol-meta-data .ol-comments .ol-comment-count {
+
+/* line 44, ../sass/components/_user.sass */
+.ol-comment-count {
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-weight: 900;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 16px;
+  line-height: 16px;
   display: inline;
   font-size: 1.6em;
   color: #20806a;
 }
+/* line 203, ../sass/_mixins.sass */
+.ol-comment-count a {
+  background-color: transparent;
+}
+/* line 205, ../sass/_mixins.sass */
+.ol-comment-count a:link, .ol-comment-count a:visited {
+  color: #20806a;
+}
+/* line 208, ../sass/_mixins.sass */
+.ol-comment-count a:hover {
+  color: #144c3f;
+}
+/* line 210, ../sass/_mixins.sass */
+.ol-comment-count a:active {
+  color: #98b9b1;
+}
 
-/* line 58, ../sass/components/_user.sass */
+/* line 50, ../sass/components/_user.sass */
 .openlocal-avatar-small {
   float: left;
 }
 
-/* line 67, ../sass/components/_user.sass */
+/* line 59, ../sass/components/_user.sass */
 .view-og-extras-members .views-field-picture {
   margin: 0 10px 0px 10px;
 }
-/* line 69, ../sass/components/_user.sass */
+/* line 61, ../sass/components/_user.sass */
 .view-og-extras-members .views-field-name {
   margin: 0 10px 0px 10px;
 }

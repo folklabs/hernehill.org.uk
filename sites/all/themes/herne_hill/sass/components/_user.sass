@@ -20,21 +20,10 @@ $user-info-margin: 1em 0
       .pane-user-name
         margin-top: 5px
 
-
-  // .pane-node-created
-  //   float: right
-  //   display: inline-block
-
   .pane-custom
-
-    .ol-comment-count
-      @include typography-field-heading
-      display: inline-block
+    margin-bottom: 10px
     p
-      height: 20px
       margin: 0
-      // display: inline-block
-
 
 
 
@@ -47,13 +36,16 @@ $user-info-margin: 1em 0
   .ol-username
     @include typography-field-heading
 
-  .ol-comments
-    clear: both
-    margin-left: 0
-    .ol-comment-count
-      display: inline
-      font-size: 1.6em
-      color: $col-links
+.ol-comments
+  clear: both
+  margin-top: 10px
+  margin-left: 0
+
+.ol-comment-count
+  @include typography-field-heading
+  display: inline
+  font-size: 1.6em
+  color: $col-links
 
 .openlocal-avatar-small
   float: left

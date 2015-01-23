@@ -277,7 +277,7 @@ function openlocal_news_panelizer_defaults() {
     $pane->configuration = array(
       'admin_title' => 'Meta data',
       'title' => '',
-      'body' => '<div class="ol-name-date"><p class="ol-username">%user:name</p><p>%node:created</p></div><div class="ol-comments"><span class="ol-comment-count">%node:comment-count</span> Comments</div>',
+      'body' => '<div class="ol-name-date"><p class="ol-username">%user:name</p><p>%node:created</p></div>',
       'format' => 'panopoly_html_text',
       'substitute' => 1,
     );
@@ -295,6 +295,31 @@ function openlocal_news_panelizer_defaults() {
     $pane->uuid = '0051cfdc-85e1-47d1-8566-73bbf991e3ce';
     $display->content['new-0051cfdc-85e1-47d1-8566-73bbf991e3ce'] = $pane;
     $display->panels['quarter1'][1] = 'new-0051cfdc-85e1-47d1-8566-73bbf991e3ce';
+    $pane = new stdClass();
+    $pane->pid = 'new-1558d55a-437b-4619-903e-9616ba66615d';
+    $pane->panel = 'quarter1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'OL News comments',
+      'title' => '',
+      'body' => '<div class="ol-comments"><span class="ol-comment-count">%node:comment-count</span> Comments</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '1558d55a-437b-4619-903e-9616ba66615d';
+    $display->content['new-1558d55a-437b-4619-903e-9616ba66615d'] = $pane;
+    $display->panels['quarter1'][2] = 'new-1558d55a-437b-4619-903e-9616ba66615d';
     $pane = new stdClass();
     $pane->pid = 'new-928fb91c-4241-4889-b94e-cf08b1eccb63';
     $pane->panel = 'quarter1';
@@ -332,11 +357,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '928fb91c-4241-4889-b94e-cf08b1eccb63';
     $display->content['new-928fb91c-4241-4889-b94e-cf08b1eccb63'] = $pane;
-    $display->panels['quarter1'][2] = 'new-928fb91c-4241-4889-b94e-cf08b1eccb63';
+    $display->panels['quarter1'][3] = 'new-928fb91c-4241-4889-b94e-cf08b1eccb63';
     $pane = new stdClass();
     $pane->pid = 'new-f723f105-4352-4dea-a0bf-016e82cc02bb';
     $pane->panel = 'quarter1';
@@ -374,11 +399,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = 'f723f105-4352-4dea-a0bf-016e82cc02bb';
     $display->content['new-f723f105-4352-4dea-a0bf-016e82cc02bb'] = $pane;
-    $display->panels['quarter1'][3] = 'new-f723f105-4352-4dea-a0bf-016e82cc02bb';
+    $display->panels['quarter1'][4] = 'new-f723f105-4352-4dea-a0bf-016e82cc02bb';
     $pane = new stdClass();
     $pane->pid = 'new-1ea5f660-72f8-4956-bbe2-a7c132cf212d';
     $pane->panel = 'quarter1';
@@ -423,11 +448,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = '1ea5f660-72f8-4956-bbe2-a7c132cf212d';
     $display->content['new-1ea5f660-72f8-4956-bbe2-a7c132cf212d'] = $pane;
-    $display->panels['quarter1'][4] = 'new-1ea5f660-72f8-4956-bbe2-a7c132cf212d';
+    $display->panels['quarter1'][5] = 'new-1ea5f660-72f8-4956-bbe2-a7c132cf212d';
     $pane = new stdClass();
     $pane->pid = 'new-ad351811-ea55-451e-bc58-28e3fca6bce9';
     $pane->panel = 'quarter1';
@@ -471,11 +496,11 @@ function openlocal_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $pane->uuid = 'ad351811-ea55-451e-bc58-28e3fca6bce9';
     $display->content['new-ad351811-ea55-451e-bc58-28e3fca6bce9'] = $pane;
-    $display->panels['quarter1'][5] = 'new-ad351811-ea55-451e-bc58-28e3fca6bce9';
+    $display->panels['quarter1'][6] = 'new-ad351811-ea55-451e-bc58-28e3fca6bce9';
     $pane = new stdClass();
     $pane->pid = 'new-43894070-9668-4760-8386-04209426499d';
     $pane->panel = 'quarter2';
