@@ -76,21 +76,7 @@
     // .views-field-field-ol-business-category,
     // .views-field-field-ol-group-category
 
-    .views-field-name
-      display: inline-block
-      position: absolute
-      bottom: 3px
-      right: 30px
-      @include typography-grid-list-body
 
-    .views-field-field-user-picture
-      display: inline
-      position: absolute
-      bottom: 0
-      right: 0
-      // float: left
-      max-width: 24px
-      // margin-right: 5px
 
     // TODO: overrides needed? Check base versions.
     // .views-field-title
@@ -138,34 +124,52 @@
 .view-display-id-list_news_articles
   @include grid-list()
   .views-row
+    //TODO: remove from grid-list
+    background-color: transparent
     position: relative
     height: auto
-    min-height: 100px
+    padding-bottom: 20px
+    border-bottom: $divider-line-row
+    // min-height: 100px
     .views-field-title
-      width: 48%
-      max-width: 290px
-      display: inline-block
+      // width: 48%
+      // max-width: 290px
+      // display: inline-block
       // float: right
       // height: 2em
       padding: 0.5em 0 0.5em 0
       vertical-align: top
     .views-field-body
       height: auto
-      width: 48%
-      max-width: 290px
+      // width: 48%
+      // max-width: 290px
       // float: right
-      display: inline-block
+      // display: inline-block
       @include typography-grid-list-body
       padding: 0.5em 0
     .views-field-created
       display: block
-      position: absolute
-      bottom: 0
-      right: 0
-      width: 50%
-      max-width: 290px
-      border-top: solid 1px $col-page
+      // position: absolute
+      // bottom: 0
+      // right: 0
+      // width: 50%
+      // max-width: 290px
+      // border-top: solid 1px $col-page
+    .views-field-name
+      display: inline-block
+      // position: absolute
+      // bottom: 3px
+      // right: 30px
+      @include typography-field-heading
 
+    .views-field-field-user-picture
+      display: none
+      // position: absolute
+      // bottom: 0
+      // right: 0
+      // // float: left
+      // max-width: 24px
+      // // margin-right: 5px
   .links
     float: right
   .views-field-field-featured-image
@@ -173,9 +177,19 @@
     max-width: 280px
     height: auto
     float: left
-    margin-right: 10px
+    display: inline-block
+    margin-right: 20px
 
-    // .listing-image
+.views-more-link
+  font-weight: 900
+  &:link
+    color: $col-links-lighter
+  &:visited
+    color: $col-links
+  &:hover
+    color: $col-links-darker
+  &:active
+    color: $col-links-lighter
 
 
 //-----------------------------------------------------------------------------
@@ -211,7 +225,7 @@
     margin: 20px 0 10px
     // margin-bottom: 10px
   .views-row
-    border-top: $divider-line
+    border-top: $divider-line-row
     margin-bottom: 30px
   .views-field-field-ol-gallery-images a
     display: inline-block

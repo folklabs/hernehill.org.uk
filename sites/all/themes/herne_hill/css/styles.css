@@ -808,27 +808,7 @@ div#panels-ipe-control-container {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 79, ../sass/components/_grid-list.sass */
-.view-openlocal-gallery .views-row .views-field-name {
-  display: inline-block;
-  position: absolute;
-  bottom: 3px;
-  right: 30px;
-  font-family: "Lato";
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1em;
-  color: #77666d;
-}
-/* line 86, ../sass/components/_grid-list.sass */
-.view-openlocal-gallery .views-row .views-field-field-user-picture {
-  display: inline;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-width: 24px;
-}
-/* line 107, ../sass/components/_grid-list.sass */
+/* line 93, ../sass/components/_grid-list.sass */
 .view-openlocal-gallery .views-row {
   margin-right: 7px;
   width: 32%;
@@ -898,37 +878,13 @@ div#panels-ipe-control-container {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 79, ../sass/components/_grid-list.sass */
-.view-id-openlocal_business_facet_search .views-row .views-field-name,
-.view-id-openlocal_group .views-row .views-field-name,
-.view-id-openlocal_gallery .views-row .views-field-name {
-  display: inline-block;
-  position: absolute;
-  bottom: 3px;
-  right: 30px;
-  font-family: "Lato";
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1em;
-  color: #77666d;
-}
-/* line 86, ../sass/components/_grid-list.sass */
-.view-id-openlocal_business_facet_search .views-row .views-field-field-user-picture,
-.view-id-openlocal_group .views-row .views-field-field-user-picture,
-.view-id-openlocal_gallery .views-row .views-field-field-user-picture {
-  display: inline;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-width: 24px;
-}
-/* line 116, ../sass/components/_grid-list.sass */
+/* line 102, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business_facet_search .views-row,
 .view-id-openlocal_group .views-row,
 .view-id-openlocal_gallery .views-row {
   height: 18em;
 }
-/* line 118, ../sass/components/_grid-list.sass */
+/* line 104, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business_facet_search .views-field-field-featured-categories,
 .view-id-openlocal_group .views-field-field-featured-categories,
 .view-id-openlocal_gallery .views-field-field-featured-categories {
@@ -941,13 +897,13 @@ div#panels-ipe-control-container {
   padding-left: 5px;
   height: 1.5em;
 }
-/* line 123, ../sass/components/_grid-list.sass */
+/* line 109, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business_facet_search .views-field-field-featured-categories a,
 .view-id-openlocal_group .views-field-field-featured-categories a,
 .view-id-openlocal_gallery .views-field-field-featured-categories a {
   background-color: transparent;
 }
-/* line 125, ../sass/components/_grid-list.sass */
+/* line 111, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business_facet_search .views-field-field-featured-categories a:link, .view-id-openlocal_business_facet_search .views-field-field-featured-categories a:visited,
 .view-id-openlocal_group .views-field-field-featured-categories a:link,
 .view-id-openlocal_group .views-field-field-featured-categories a:visited,
@@ -955,13 +911,13 @@ div#panels-ipe-control-container {
 .view-id-openlocal_gallery .views-field-field-featured-categories a:visited {
   color: #20806a;
 }
-/* line 128, ../sass/components/_grid-list.sass */
+/* line 114, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business_facet_search .views-field-field-featured-categories a:hover,
 .view-id-openlocal_group .views-field-field-featured-categories a:hover,
 .view-id-openlocal_gallery .views-field-field-featured-categories a:hover {
   color: #144c3f;
 }
-/* line 130, ../sass/components/_grid-list.sass */
+/* line 116, ../sass/components/_grid-list.sass */
 .view-id-openlocal_business_facet_search .views-field-field-featured-categories a:active,
 .view-id-openlocal_group .views-field-field-featured-categories a:active,
 .view-id-openlocal_gallery .views-field-field-featured-categories a:active {
@@ -1024,51 +980,25 @@ div#panels-ipe-control-container {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 79, ../sass/components/_grid-list.sass */
-.view-display-id-homepage_news_articles .views-row .views-field-name,
-.view-display-id-list_news_articles .views-row .views-field-name {
-  display: inline-block;
-  position: absolute;
-  bottom: 3px;
-  right: 30px;
-  font-family: "Lato";
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1em;
-  color: #77666d;
-}
-/* line 86, ../sass/components/_grid-list.sass */
-.view-display-id-homepage_news_articles .views-row .views-field-field-user-picture,
-.view-display-id-list_news_articles .views-row .views-field-field-user-picture {
-  display: inline;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-width: 24px;
-}
-/* line 140, ../sass/components/_grid-list.sass */
+/* line 126, ../sass/components/_grid-list.sass */
 .view-display-id-homepage_news_articles .views-row,
 .view-display-id-list_news_articles .views-row {
+  background-color: transparent;
   position: relative;
   height: auto;
-  min-height: 100px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #e3dcd1;
 }
-/* line 144, ../sass/components/_grid-list.sass */
+/* line 134, ../sass/components/_grid-list.sass */
 .view-display-id-homepage_news_articles .views-row .views-field-title,
 .view-display-id-list_news_articles .views-row .views-field-title {
-  width: 48%;
-  max-width: 290px;
-  display: inline-block;
   padding: 0.5em 0 0.5em 0;
   vertical-align: top;
 }
-/* line 152, ../sass/components/_grid-list.sass */
+/* line 142, ../sass/components/_grid-list.sass */
 .view-display-id-homepage_news_articles .views-row .views-field-body,
 .view-display-id-list_news_articles .views-row .views-field-body {
   height: auto;
-  width: 48%;
-  max-width: 290px;
-  display: inline-block;
   font-family: "Lato";
   font-size: 1em;
   font-weight: 300;
@@ -1076,34 +1006,86 @@ div#panels-ipe-control-container {
   color: #77666d;
   padding: 0.5em 0;
 }
-/* line 160, ../sass/components/_grid-list.sass */
+/* line 150, ../sass/components/_grid-list.sass */
 .view-display-id-homepage_news_articles .views-row .views-field-created,
 .view-display-id-list_news_articles .views-row .views-field-created {
   display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  max-width: 290px;
-  border-top: solid 1px #f4eee0;
 }
-/* line 169, ../sass/components/_grid-list.sass */
+/* line 158, ../sass/components/_grid-list.sass */
+.view-display-id-homepage_news_articles .views-row .views-field-name,
+.view-display-id-list_news_articles .views-row .views-field-name {
+  display: inline-block;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-weight: 900;
+  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+/* line 203, ../sass/_mixins.sass */
+.view-display-id-homepage_news_articles .views-row .views-field-name a,
+.view-display-id-list_news_articles .views-row .views-field-name a {
+  background-color: transparent;
+}
+/* line 205, ../sass/_mixins.sass */
+.view-display-id-homepage_news_articles .views-row .views-field-name a:link, .view-display-id-homepage_news_articles .views-row .views-field-name a:visited,
+.view-display-id-list_news_articles .views-row .views-field-name a:link,
+.view-display-id-list_news_articles .views-row .views-field-name a:visited {
+  color: #20806a;
+}
+/* line 208, ../sass/_mixins.sass */
+.view-display-id-homepage_news_articles .views-row .views-field-name a:hover,
+.view-display-id-list_news_articles .views-row .views-field-name a:hover {
+  color: #144c3f;
+}
+/* line 210, ../sass/_mixins.sass */
+.view-display-id-homepage_news_articles .views-row .views-field-name a:active,
+.view-display-id-list_news_articles .views-row .views-field-name a:active {
+  color: #98b9b1;
+}
+/* line 165, ../sass/components/_grid-list.sass */
+.view-display-id-homepage_news_articles .views-row .views-field-field-user-picture,
+.view-display-id-list_news_articles .views-row .views-field-field-user-picture {
+  display: none;
+}
+/* line 173, ../sass/components/_grid-list.sass */
 .view-display-id-homepage_news_articles .links,
 .view-display-id-list_news_articles .links {
   float: right;
 }
-/* line 171, ../sass/components/_grid-list.sass */
+/* line 175, ../sass/components/_grid-list.sass */
 .view-display-id-homepage_news_articles .views-field-field-featured-image,
 .view-display-id-list_news_articles .views-field-field-featured-image {
   width: 50%;
   max-width: 280px;
   height: auto;
   float: left;
-  margin-right: 10px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* line 183, ../sass/components/_grid-list.sass */
+.views-more-link {
+  font-weight: 900;
+}
+/* line 185, ../sass/components/_grid-list.sass */
+.views-more-link:link {
+  color: #98b9b1;
+}
+/* line 187, ../sass/components/_grid-list.sass */
+.views-more-link:visited {
+  color: #20806a;
+}
+/* line 189, ../sass/components/_grid-list.sass */
+.views-more-link:hover {
+  color: #144c3f;
+}
+/* line 191, ../sass/components/_grid-list.sass */
+.views-more-link:active {
+  color: #98b9b1;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 190, ../sass/components/_grid-list.sass */
+  /* line 204, ../sass/components/_grid-list.sass */
   .view-id-openlocal_business .views-row,
   .view-id-openlocal_group .views-row,
   .view-display-id-list_news_articles .views-row {
@@ -1111,14 +1093,14 @@ div#panels-ipe-control-container {
     float: none;
   }
 
-  /* line 196, ../sass/components/_grid-list.sass */
+  /* line 210, ../sass/components/_grid-list.sass */
   .views-field-field-featured-image img .panopoly-image-quarter {
     float: right;
     max-width: 100%;
     max-height: 100%;
   }
 }
-/* line 209, ../sass/components/_grid-list.sass */
+/* line 223, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .views-field-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 1em;
@@ -1143,18 +1125,18 @@ div#panels-ipe-control-container {
 .view-openlocal-photo-album .views-field-title a:active {
   color: #98b9b1;
 }
-/* line 213, ../sass/components/_grid-list.sass */
+/* line 227, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .views-row {
-  border-top: solid 1px #b19fa7;
+  border-top: solid 1px #e3dcd1;
   margin-bottom: 30px;
 }
-/* line 216, ../sass/components/_grid-list.sass */
+/* line 230, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .views-field-field-ol-gallery-images a {
   display: inline-block;
   margin-right: 10px;
   width: 32%;
 }
-/* line 205, ../sass/components/_grid-list.sass */
+/* line 219, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .img-title {
   font-family: "Lato";
   font-weight: 400;
@@ -1164,7 +1146,7 @@ div#panels-ipe-control-container {
   padding: 0.25em 0 0 0;
 }
 
-/* line 205, ../sass/components/_grid-list.sass */
+/* line 219, ../sass/components/_grid-list.sass */
 .field-name-field-ol-gallery-images .img-title {
   font-family: "Lato";
   font-weight: 400;
