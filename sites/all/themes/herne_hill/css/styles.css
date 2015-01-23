@@ -1085,22 +1085,39 @@ div#panels-ipe-control-container {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 204, ../sass/components/_grid-list.sass */
+  /* line 205, ../sass/components/_grid-list.sass */
   .view-id-openlocal_business .views-row,
+  .view-id-openlocal_business .views-field-field-featured-image,
   .view-id-openlocal_group .views-row,
-  .view-display-id-list_news_articles .views-row {
+  .view-id-openlocal_group .views-field-field-featured-image,
+  .view-display-id-homepage_news_articles .views-row,
+  .view-display-id-homepage_news_articles .views-field-field-featured-image,
+  .view-display-id-list_news_articles .views-row,
+  .view-display-id-list_news_articles .views-field-field-featured-image {
     width: 100%;
+    max-width: 100%;
     float: none;
   }
+  /* line 212, ../sass/components/_grid-list.sass */
+  .view-id-openlocal_business .views-row img,
+  .view-id-openlocal_business .views-field-field-featured-image img,
+  .view-id-openlocal_group .views-row img,
+  .view-id-openlocal_group .views-field-field-featured-image img,
+  .view-display-id-homepage_news_articles .views-row img,
+  .view-display-id-homepage_news_articles .views-field-field-featured-image img,
+  .view-display-id-list_news_articles .views-row img,
+  .view-display-id-list_news_articles .views-field-field-featured-image img {
+    width: 100%;
+  }
 
-  /* line 210, ../sass/components/_grid-list.sass */
+  /* line 217, ../sass/components/_grid-list.sass */
   .views-field-field-featured-image img .panopoly-image-quarter {
     float: right;
     max-width: 100%;
     max-height: 100%;
   }
 }
-/* line 223, ../sass/components/_grid-list.sass */
+/* line 230, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .views-field-title {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 1em;
@@ -1125,18 +1142,18 @@ div#panels-ipe-control-container {
 .view-openlocal-photo-album .views-field-title a:active {
   color: #98b9b1;
 }
-/* line 227, ../sass/components/_grid-list.sass */
+/* line 234, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .views-row {
   border-top: solid 1px #e3dcd1;
   margin-bottom: 30px;
 }
-/* line 230, ../sass/components/_grid-list.sass */
+/* line 237, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .views-field-field-ol-gallery-images a {
   display: inline-block;
   margin-right: 10px;
   width: 32%;
 }
-/* line 219, ../sass/components/_grid-list.sass */
+/* line 226, ../sass/components/_grid-list.sass */
 .view-openlocal-photo-album .img-title {
   font-family: "Lato";
   font-weight: 400;
@@ -1146,7 +1163,7 @@ div#panels-ipe-control-container {
   padding: 0.25em 0 0 0;
 }
 
-/* line 219, ../sass/components/_grid-list.sass */
+/* line 226, ../sass/components/_grid-list.sass */
 .field-name-field-ol-gallery-images .img-title {
   font-family: "Lato";
   font-weight: 400;
@@ -2100,7 +2117,7 @@ tr.selected td {
 /* line 273, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384446789');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
 /* line 277, ../sass/components/_admin.sass */
