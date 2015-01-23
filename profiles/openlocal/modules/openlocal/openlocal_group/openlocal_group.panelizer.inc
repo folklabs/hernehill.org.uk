@@ -80,7 +80,7 @@ function openlocal_group_panelizer_defaults() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => '',
+        'image_style' => 'openlocal_panel_deep',
         'image_link' => '',
       ),
       'context' => 'panelizer',
