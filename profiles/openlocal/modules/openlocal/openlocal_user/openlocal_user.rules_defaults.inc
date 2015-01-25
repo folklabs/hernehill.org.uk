@@ -51,7 +51,7 @@ function openlocal_user_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "drupal_message" : { "message" : "Please go to your \\u003Ca href=\\u0022\\/user\\u0022\\u003Euser profile\\u003C\\/a\\u003E and enter your street in \\u0022Address 1\\u0022 and your postcode, just to help us show you really local, relevant information." } }
+        { "drupal_message" : { "message" : "Please edit your \\u003Cb\\u003E\\u003Ca href=\\u0022\\/user\\/[account:uid]\\/edit\\/ol_personal_info\\u0022\\u003Euser profile personal info\\u003C\\/a\\u003E\\u003C\\/b\\u003E and enter your street in \\u0022Address 1\\u0022 and your postcode, just to help us show you really local, relevant information." } }
       ]
     }
   }');
