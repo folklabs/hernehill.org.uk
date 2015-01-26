@@ -87,15 +87,6 @@ function openlocal_event_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete terms in ol_groups'.
-  $permissions['delete terms in ol_groups'] = array(
-    'name' => 'delete terms in ol_groups',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'edit any ol_event content'.
   $permissions['edit any ol_event content'] = array(
     'name' => 'edit any ol_event content',
@@ -113,15 +104,6 @@ function openlocal_event_user_default_permissions() {
       'contributor' => 'contributor',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'edit terms in ol_groups'.
-  $permissions['edit terms in ol_groups'] = array(
-    'name' => 'edit terms in ol_groups',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
   );
 
   // Exported permission: 'view date repeats'.
