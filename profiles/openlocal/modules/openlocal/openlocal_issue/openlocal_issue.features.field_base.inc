@@ -54,10 +54,12 @@ function openlocal_issue_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'website' => 'Website problem',
-        'support' => 'Support request',
+        'business' => 'Add new business listing',
+        'group' => 'Add new group',
+        'website' => 'Report a website problem',
       ),
       'allowed_values_function' => '',
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'list_text',
