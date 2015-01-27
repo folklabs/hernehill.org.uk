@@ -25,4 +25,5 @@ features[page_manager_pages][] = home
 features[variable][] = site_frontpage
 features[views_view][] = openlocal_what_s_hot
 features_exclude[dependencies][defaultconfig] = defaultconfig
+mtime = 1421315209
 project path = profiles/openlocal/modules/openlocal
