@@ -246,15 +246,15 @@ h2.node-title
 // RECENT DISCUSSIONS PANEL
 
 .pane-ol-forum-recent-comments-panel-pane-1,
-  background-color: $col-content-lightest
+  background-color: none
   margin-bottom: $panel-bottom-margin
 
   // Wrapper around Comment post title
   .views-field-subject
-    padding: 0.5em 5px 0 5px
+    padding-top: 0.5em
     a
       @include list-item-title
-      background: transparent
+      // background: transparent
       &:link,
       &:visited
         color: $col-links
@@ -265,7 +265,8 @@ h2.node-title
 
   // Wrapper around comment post details
   .views-field-created
-    padding: 0 5px
+    padding-bottom: 1em
+    border-bottom: solid 1px $col-content-lightest
 
     // "Posted on:" label
     .views-label
@@ -278,8 +279,7 @@ h2.node-title
 
   // Wrapper around name of comment post author
   .views-field-name
-    border-bottom: solid 1px $col-page
-    padding: 0 5px 0 5px
+    border-bottom: solid 1px $col-content-lightest
     // Name label
     .views-label
       @include typography-grid-list-body
