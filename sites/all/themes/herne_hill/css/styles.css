@@ -2117,7 +2117,7 @@ tr.selected td {
 /* line 273, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1376896851');
+  background-image: url('../images/progress.gif?1384446789');
 }
 
 /* line 277, ../sass/components/_admin.sass */
@@ -4524,12 +4524,12 @@ h2.node-title a:active {
 
 /* line 248, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 {
-  background-color: #e3dcd1;
+  background-color: none;
   margin-bottom: 1em;
 }
 /* line 253, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject {
-  padding: 0.5em 5px 0 5px;
+  padding-top: 0.5em;
 }
 /* line 255, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a {
@@ -4537,7 +4537,6 @@ h2.node-title a:active {
   font-size: 1em;
   line-height: 1.25em;
   font-weight: 300;
-  background: transparent;
 }
 /* line 97, ../sass/_mixins.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-subject a a:link {
@@ -4570,9 +4569,10 @@ h2.node-title a:active {
 }
 /* line 267, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-created {
-  padding: 0 5px;
+  padding-bottom: 1em;
+  border-bottom: solid 1px #e3dcd1;
 }
-/* line 271, ../sass/components/_panel-list.sass */
+/* line 272, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-created .views-label {
   font-family: "Lato";
   font-size: 1em;
@@ -4580,7 +4580,7 @@ h2.node-title a:active {
   line-height: 1em;
   color: #77666d;
 }
-/* line 274, ../sass/components/_panel-list.sass */
+/* line 275, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-created .field-content {
   font-family: "Lato";
   font-size: 1em;
@@ -4589,10 +4589,9 @@ h2.node-title a:active {
   color: #77666d;
   font-weight: 400;
 }
-/* line 280, ../sass/components/_panel-list.sass */
+/* line 281, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name {
-  border-bottom: solid 1px #f4eee0;
-  padding: 0 5px 0 5px;
+  border-bottom: solid 1px #e3dcd1;
 }
 /* line 284, ../sass/components/_panel-list.sass */
 .pane-ol-forum-recent-comments-panel-pane-1 .views-field-name .views-label {
