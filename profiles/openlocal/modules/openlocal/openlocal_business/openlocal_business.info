@@ -9,7 +9,6 @@ dependencies[] = autocomplete_deluxe
 dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = eck
-dependencies[] = eck
 dependencies[] = email
 dependencies[] = entityreference
 dependencies[] = fe_block
