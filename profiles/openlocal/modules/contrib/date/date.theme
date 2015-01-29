@@ -374,7 +374,7 @@ function theme_date_combo($variables) {
   $fieldset = array(
     '#title' => field_filter_xss(t($element['#title'])) . ' ' . ($element['#delta'] > 0 ? intval($element['#delta'] + 1) : ''),
     '#value' => '',
-    '#description' => !empty($element['#fieldset_description']) ? $element['#fieldset_description'] : '',
+    '#description' => !empty($element['#description']) ? t($element['#description']) : '',
     '#attributes' => array(),
     '#children' => $element['#children'],
   );
