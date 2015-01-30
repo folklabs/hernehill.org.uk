@@ -24,6 +24,7 @@
 abstract class DrupalFileMigration extends DrupalMigration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
+    drush_print('DrupalFileMigration');
     if (!empty($arguments['user_migration'])) {
        $user_migration = $arguments['user_migration'];
        $this->dependencies[] = $user_migration;
@@ -71,7 +72,7 @@ abstract class DrupalFileMigration extends DrupalMigration {
     $this->addFieldmapping('preserve_files')
           ->defaultValue(TRUE);
 
-    if (!empty($arguments['default_uid'])) {
+    if (isset($arguments['default_uid'])) {
       $default_uid = $arguments['default_uid'];
     }
     else {
@@ -86,6 +87,7 @@ abstract class DrupalFileMigration extends DrupalMigration {
       $this->addFieldMapping('uid')
            ->defaultValue($default_uid);
     }
-    $this->addUnmigratedSources(array('filename', 'filemime', 'filesize'));
+    $this->addUnmigratedSources(array('filename', 'filemime', 'filesize', 'urlencode'));
+    drush_print('DrupalFileMigration');
   }
 }
