@@ -120,7 +120,9 @@ function openlocal_gallery_user_default_permissions() {
   // Exported permission: 'create ol_photo_album content'.
   $permissions['create ol_photo_album content'] = array(
     'name' => 'create ol_photo_album content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 
@@ -136,7 +138,9 @@ function openlocal_gallery_user_default_permissions() {
   // Exported permission: 'delete any ol_photo_album content'.
   $permissions['delete any ol_photo_album content'] = array(
     'name' => 'delete any ol_photo_album content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
@@ -152,7 +156,9 @@ function openlocal_gallery_user_default_permissions() {
   // Exported permission: 'delete own ol_photo_album content'.
   $permissions['delete own ol_photo_album content'] = array(
     'name' => 'delete own ol_photo_album content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
@@ -168,7 +174,9 @@ function openlocal_gallery_user_default_permissions() {
   // Exported permission: 'edit any ol_photo_album content'.
   $permissions['edit any ol_photo_album content'] = array(
     'name' => 'edit any ol_photo_album content',
-    'roles' => array(),
+    'roles' => array(
+      'editor' => 'editor',
+    ),
     'module' => 'node',
   );
 
@@ -184,7 +192,9 @@ function openlocal_gallery_user_default_permissions() {
   // Exported permission: 'edit own ol_photo_album content'.
   $permissions['edit own ol_photo_album content'] = array(
     'name' => 'edit own ol_photo_album content',
-    'roles' => array(),
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'node',
   );
 

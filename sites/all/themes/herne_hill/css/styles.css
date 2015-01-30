@@ -2117,7 +2117,7 @@ tr.selected td {
 /* line 273, ../sass/components/_admin.sass */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1384446789');
+  background-image: url('../images/progress.gif?1376896851');
 }
 
 /* line 277, ../sass/components/_admin.sass */
@@ -3380,7 +3380,15 @@ a.button {
 /* line 33, ../sass/components/_gallery.sass */
 .field-name-field-ol-gallery-images .field-item {
   display: inline-block;
-  margin-right: 10px;
+  margin: 0 10px 30px 0;
+  width: 24%;
+  vertical-align: top;
+}
+@media only screen and (max-width: 768px) {
+  /* line 33, ../sass/components/_gallery.sass */
+  .field-name-field-ol-gallery-images .field-item {
+    width: 100%;
+  }
 }
 
 /* line 6, ../sass/components/_header.sass */
