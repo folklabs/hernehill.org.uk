@@ -66,7 +66,8 @@ class RPForumTopicMigration extends Migration {
       MigrateDestinationNode::getKeySchema()
     );
 
-    $this->addFieldMapping('uid', 'uid');
+    $this->addFieldMapping('uid', 'uid')
+      ->sourceMigration('user');
     $this->addFieldMapping('taxonomy_forums', 'tid') //->defaultValue(30)
       ->sourceMigration('RPForumForums')
       ->arguments(array('source_type' => 'tid'));
@@ -125,8 +126,9 @@ class RPForumPostMigration extends Migration {
     );
 
     $this->addFieldMapping('nid', 'field_parent_node_value')
-      ->sourceMigration('RPForumTopic');;
-    $this->addFieldMapping('uid', 'uid');
+      ->sourceMigration('RPForumTopic');
+    $this->addFieldMapping('uid', 'uid')
+      ->sourceMigration('user');
     $this->addFieldMapping('subject', 'title')
       ->callbacks(array($this, 'trimTitle'));
     $this->addFieldMapping('comment_body', 'field_body2_value')

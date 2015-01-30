@@ -5,8 +5,13 @@ class UserMigration extends DrupalUser6Migration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
 
-    $this->addFieldMapping('roles', 'roles')
-      ->sourceMigration('role');
+    // TODO: removed because of warning
+    // $this->addFieldMapping('roles', 'roles')
+    //   ->sourceMigration('role');
+
+    // Set user picture field to null, no user pictures are imported
+    $this->addFieldMapping('field_user_picture')
+      ->defaultValue(0);
   }
 }
 
@@ -35,13 +40,24 @@ class NewsMigration extends DrupalNode6Migration {
 
     parent::__construct($arguments);
 
-    $this->addUnmigratedSources(array('field_audio_description'), t('Do Not Migrate'));
+    // $this->addUnmigratedSources(array('field_audio_description'), t('Do Not Migrate'));
 
+    $this->addFieldMapping('uid', 'uid')
+         ->sourceMigration('user');
+    $this->addFieldMapping('body', 'body')
+      ->callbacks(array($this, 'removeNewlinesFromText'));
     $this->addFieldMapping('body:format')
       ->defaultValue('panopoly_wysiwyg_text');
     $this->addFieldMapping('field_ol_tags', 8)
          ->sourceMigration('News_terms')
          ->arguments(array('source_type' => 'tid'));
+  }
+
+  protected function removeNewlinesFromText($value) {
+    // drush_print($value);
+    $value = preg_replace('/\<p\>\&nbsp;\<\/p\>/', '', $value);
+    // drush_print($value);
+    return $value;
   }
 }
 
@@ -55,6 +71,7 @@ class CampaignsMigration extends DrupalNode6Migration {
       ->defaultValue('panopoly_wysiwyg_text');
     $this->addFieldMapping('field_ol_group_campaign')
       ->defaultValue('1');
+    $this->addFieldMapping('pathauto', FALSE);
     // $this->addFieldMapping('field_ol_tags', 8)
     //      ->sourceMigration('News_terms')
     //      ->arguments(array('source_type' => 'tid'));
@@ -66,7 +83,8 @@ class EventMigration extends DrupalNode6Migration {
     parent::__construct($arguments);
 
     $this->addFieldMapping('field_ol_description', 'field_eventteaser');
-    $this->addFieldMapping('field_ol_details', 'body');
+    $this->addFieldMapping('field_ol_details', 'body')
+      ->callbacks(array($this, 'removeNewlinesFromText'));
     $this->addFieldMapping('field_ol_event_date', 'field_eventdate');
     $this->addFieldMapping('field_ol_wheelchair_accessible', 'field_wheelchair')
       ->callbacks(array($this, 'convertBoolean'));
@@ -77,6 +95,13 @@ class EventMigration extends DrupalNode6Migration {
     // $this->addFieldMapping('field_ol_tags', 8)
     //      ->sourceMigration('News_terms')
     //      ->arguments(array('source_type' => 'tid'));
+  }
+
+  protected function removeNewlinesFromText($value) {
+    // drush_print($value);
+    $value = preg_replace('/\<p\>\&nbsp;\<\/p\>/', '', $value);
+    // drush_print($value);
+    return $value;
   }
 
   protected function convertBoolean($value) {
@@ -113,6 +138,7 @@ class GroupMigration extends DrupalNode6Migration {
     $this->addFieldMapping('field_ol_details', 'body');
     $this->addFieldMapping('field_ol_details:format')
       ->defaultValue('panopoly_wysiwyg_text');
+    $this->addFieldMapping('pathauto', FALSE);
     // $this->addFieldMapping('field_ol_tags', 8)
     //      ->sourceMigration('News_terms')
     //      ->arguments(array('source_type' => 'tid'));

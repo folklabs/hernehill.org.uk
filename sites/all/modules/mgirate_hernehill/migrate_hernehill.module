@@ -50,12 +50,13 @@ function migrate_hernehill_register_migrations() {
                                $user_arguments);
 
   $file_arguments = $common_arguments + array(
-    'machine_name' => 'Files',
+    'machine_name' => 'files',
     'description' => t('Import Drupal 6 files'),
     // 'user_migration' => 'UserMigration',
-    'default_uid' => 1,
-    'source_dir' => '/Users/pmackay/dev/herne-hill/d6.hernehillforum/sites/default/files',
-    'destination_dir' => 'public://legacy_files',
+    // 'default_uid' => 1,
+    'source_dir' => '/Users/pmackay/dev/herne-hill/d6.hernehillforum/sites/default/files/',
+    // 'destination_dir' => 'public://',
+    'file_replace' => '1'
   );
   Migration::registerMigration('DrupalFile6Migration',
               $file_arguments['machine_name'], $file_arguments);
