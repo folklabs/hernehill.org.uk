@@ -220,9 +220,7 @@ class Drupal6GalleryImageMigration extends Migration {
       );
     // $query = db_select('content_type_gallery_image', 't', array('target' => 'd6.hernehill'))
     //          ->fields('t', array('nid', 'field_gallery_image_fid', 'field_gallery_nid', 'field_gallerypicdescription_value'));
-    $query = Database::getConnection('default', 'd6.hernehill')->select('content_type_gallery_image', 't')
-             ->fields('t', array('nid', 'field_gallery_image_fid', 'field_gallery_nid', 'field_gallerypicdescription_value'));
-    $this->source = new MigrateSourceSQL($query, array(), NULL, array('map_joinable' => FALSE));
+    $this->source = new MigrateSourceSQL($this->query(), array(), NULL, array('map_joinable' => FALSE));
     $this->destination = new MigrateDestinationTable($table_name);
     // Mapped fields
     $this->removeFieldMapping('nid');
@@ -238,15 +236,15 @@ class Drupal6GalleryImageMigration extends Migration {
       ->defaultValue('0');
     $this->addFieldMapping('language')
       ->defaultValue('und');
-    // TODO: Needs improving
     $this->addFieldMapping('delta', 'field_gallery_nid')
       ->callbacks(array($this, 'calcDelta'));
     $this->addFieldMapping('field_ol_gallery_images_fid', 'field_gallery_image_fid')
       ->sourceMigration('Files');
     $this->addFieldMapping('field_ol_gallery_images_alt')
       ->defaultValue('');
+
     // TODO: what should description be mapped to if not title?
-    $this->addFieldMapping('field_ol_gallery_images_title', 'field_gallerypicdescription_value')
+    $this->addFieldMapping('field_ol_gallery_images_title', 'new_title')
       ->callbacks(array($this, 'trimTitle'));
     $this->addFieldMapping('field_ol_gallery_images_width')
       ->defaultValue('100');
@@ -256,16 +254,39 @@ class Drupal6GalleryImageMigration extends Migration {
     $this->deltas = array();
   }
 
+  /**
+   * Method to return the query used in the import.
+   * Can be called by sub classes and extended if needed.
+   */
+  protected function query() {
+    $query = Database::getConnection('default', 'd6.hernehill')->select('content_type_gallery_image', 'gi');
+    $query->leftJoin('node', 'n', 'gi.nid = n.nid');
+    $query->fields('n', array('nid', 'title', 'uid', 'created', 'changed'));
+    $query->fields('gi', array('nid', 'field_gallery_image_fid', 'field_gallery_nid', 'field_gallerypicdescription_value'));
+
+    // A hack to test importing just 1 node
+    // $query->condition('rp.nid', 442);
+
+    return $query;
+  }
+
+  public function prepareRow($row) {
+    drush_print_r($row->title);
+    drush_print_r($row->field_gallerypicdescription_value);
+    $row->new_title = "$row->title. $row->field_gallerypicdescription_value";
+    drush_print_r($row->new_title);
+  }
+
   protected function calcDelta($value) {
-    drush_print_r('calcDelta');
-    drush_print_r($value);
+    // drush_print_r('calcDelta');
+    // drush_print_r($value);
     // Start delta at 0 or increment
     if ($this->deltas[$value] == nil) {
-      drush_print_r('init delta');
+      // drush_print_r('init delta');
       $this->deltas[$value] = 0;
     }
     else {
-      drush_print_r('increment delta');
+      // drush_print_r('increment delta');
       $this->deltas[$value] = $this->deltas[$value] + 1;
     }
     drush_print_r($this->deltas[$value]);
