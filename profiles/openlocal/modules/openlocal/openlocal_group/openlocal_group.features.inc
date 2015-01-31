@@ -32,7 +32,7 @@ function openlocal_group_views_api($module = NULL, $api = NULL) {
 function openlocal_group_node_info() {
   $items = array(
     'ol_group' => array(
-      'name' => t('Local group'),
+      'name' => t('Group'),
       'base' => 'node_content',
       'description' => t('A local community group.'),
       'has_title' => '1',

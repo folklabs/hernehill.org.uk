@@ -75,7 +75,7 @@ $items = array(
 function openlocal_business_node_info() {
   $items = array(
     'ol_business' => array(
-      'name' => t('Local business'),
+      'name' => t('Business'),
       'base' => 'node_content',
       'description' => t('A local business, service or trader.'),
       'has_title' => '1',
