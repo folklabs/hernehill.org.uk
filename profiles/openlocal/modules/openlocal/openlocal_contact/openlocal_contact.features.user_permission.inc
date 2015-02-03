@@ -40,9 +40,25 @@ function openlocal_contact_user_default_permissions() {
     'module' => 'contact',
   );
 
+  // Exported permission: 'administer newsletters'.
+  $permissions['administer newsletters'] = array(
+    'name' => 'administer newsletters',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplenews',
+  );
+
   // Exported permission: 'administer panelizer node mass_contact defaults'.
   $permissions['administer panelizer node mass_contact defaults'] = array(
     'name' => 'administer panelizer node mass_contact defaults',
+    'roles' => array(),
+    'module' => 'panelizer',
+  );
+
+  // Exported permission: 'administer panelizer node ol_newsletter defaults'.
+  $permissions['administer panelizer node ol_newsletter defaults'] = array(
+    'name' => 'administer panelizer node ol_newsletter defaults',
     'roles' => array(),
     'module' => 'panelizer',
   );
@@ -74,11 +90,29 @@ function openlocal_contact_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create ol_newsletter content'.
+  $permissions['create ol_newsletter content'] = array(
+    'name' => 'create ol_newsletter content',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any mass_contact content'.
   $permissions['delete any mass_contact content'] = array(
     'name' => 'delete any mass_contact content',
     'roles' => array(
       'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any ol_newsletter content'.
+  $permissions['delete any ol_newsletter content'] = array(
+    'name' => 'delete any ol_newsletter content',
+    'roles' => array(
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -92,6 +126,15 @@ function openlocal_contact_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own ol_newsletter content'.
+  $permissions['delete own ol_newsletter content'] = array(
+    'name' => 'delete own ol_newsletter content',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete privatemsg'.
   $permissions['delete privatemsg'] = array(
     'name' => 'delete privatemsg',
@@ -99,6 +142,13 @@ function openlocal_contact_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'privatemsg',
+  );
+
+  // Exported permission: 'delete terms in newsletter'.
+  $permissions['delete terms in newsletter'] = array(
+    'name' => 'delete terms in newsletter',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit any mass_contact content'.
@@ -110,6 +160,15 @@ function openlocal_contact_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any ol_newsletter content'.
+  $permissions['edit any ol_newsletter content'] = array(
+    'name' => 'edit any ol_newsletter content',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own mass_contact content'.
   $permissions['edit own mass_contact content'] = array(
     'name' => 'edit own mass_contact content',
@@ -117,6 +176,22 @@ function openlocal_contact_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit own ol_newsletter content'.
+  $permissions['edit own ol_newsletter content'] = array(
+    'name' => 'edit own ol_newsletter content',
+    'roles' => array(
+      'editor' => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in newsletter'.
+  $permissions['edit terms in newsletter'] = array(
+    'name' => 'edit terms in newsletter',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'mass contact administer'.
@@ -253,6 +328,26 @@ function openlocal_contact_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'privatemsg',
+  );
+
+  // Exported permission: 'send newsletter'.
+  $permissions['send newsletter'] = array(
+    'name' => 'send newsletter',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'simplenews',
+  );
+
+  // Exported permission: 'subscribe to newsletters'.
+  $permissions['subscribe to newsletters'] = array(
+    'name' => 'subscribe to newsletters',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'simplenews',
   );
 
   // Exported permission: 'use tokens in privatemsg'.

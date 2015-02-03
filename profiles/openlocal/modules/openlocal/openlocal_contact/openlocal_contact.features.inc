@@ -26,6 +26,14 @@ function openlocal_contact_node_info() {
       'title_label' => t('Subject'),
       'help' => '',
     ),
+    'ol_newsletter' => array(
+      'name' => t('Newsletter'),
+      'base' => 'node_content',
+      'description' => t('A simple newsletter to send to a limited group. This is not intended as a replacement for Mailchimp.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;
