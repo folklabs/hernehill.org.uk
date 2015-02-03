@@ -227,7 +227,7 @@
 @mixin input-button-style
   line-height: 1.25em
   @include gradient-vertical($col-content-lightest, $col-page)
-  border-radius: 0.25em
+  @include corner-radius(0.25em)
   border: solid 1px $col-content-lighter
   box-shadow: none
   font-family: $lato
@@ -248,7 +248,7 @@
   line-height: 1.25em
   @include gradient-vertical($col-links-darker, $col-links)
   background-color: $col-links
-  border-radius: 0.25em
+  @include corner-radius(0.25em)
   border: solid 1px $col-links-darker
   box-shadow: none
   font-family: $lato
