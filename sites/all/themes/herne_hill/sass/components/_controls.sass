@@ -22,10 +22,39 @@
 .service-links-facebook,
 .service-links-twitter,
 .service-links-google-plus,
-.forward_link
   padding-right: 0
   a
     display: inline-block
     padding: 5px 10px
     margin: 0.5em 0
-    @include input-button-style
+    color: white
+    @include corner-radius(0.25em)
+    box-shadow: none
+
+a.service-links-facebook
+  @include gradient-vertical(darken($col-service-facebook, 20%), $col-service-facebook)
+  border: 1px solid darken($col-service-facebook, 60%)
+  &:hover
+    color: lighten($col-service-facebook, 25%)
+  &:active
+    @include glow-inner(darken($col-service-facebook, 60%), 10)
+    color: white
+
+a.service-links-twitter
+  @include gradient-vertical(darken($col-service-twitter, 20%), $col-service-twitter)
+  border: 1px solid darken($col-service-twitter, 60%)
+  &:hover
+    color: lighten($col-service-twitter, 25%)
+  &:active
+    @include glow-inner(darken($col-service-twitter, 60%), 10)
+    color: white
+
+a.service-links-google-plus
+  @include gradient-vertical(darken($col-service-google-plus, 20%), $col-service-google-plus)
+  border: 1px solid darken($col-service-google-plus, 60%)
+  &:hover
+    color: lighten($col-service-google-plus, 25%)
+  &:active
+    @include glow-inner(darken($col-service-google-plus, 60%), 10)
+    color: white
+

@@ -1827,6 +1827,7 @@ ul.menu .menu__item li a:active {
   background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
   background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
   background-image: linear-gradient(to top, #e3dcd1 0%, #f4eee0 100%);
+  -moz-border-radius: 0.25em;
   border-radius: 0.25em;
   border: solid 1px #b19fa7;
   box-shadow: none;
@@ -1874,6 +1875,7 @@ ul.menu .menu__item li a:active {
   background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
   background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
   background-image: linear-gradient(to top, #e3dcd1 0%, #f4eee0 100%);
+  -moz-border-radius: 0.25em;
   border-radius: 0.25em;
   border: solid 1px #b19fa7;
   box-shadow: none;
@@ -2427,63 +2429,86 @@ div.form-item-notify {
 /* line 22, ../sass/components/_controls.sass */
 .service-links-facebook,
 .service-links-twitter,
-.service-links-google-plus,
-.forward_link {
+.service-links-google-plus {
   padding-right: 0;
 }
-/* line 27, ../sass/components/_controls.sass */
+/* line 26, ../sass/components/_controls.sass */
 .service-links-facebook a,
 .service-links-twitter a,
-.service-links-google-plus a,
-.forward_link a {
+.service-links-google-plus a {
   display: inline-block;
   padding: 5px 10px;
   margin: 0.5em 0;
-  line-height: 1.25em;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e3dcd1), color-stop(1, #f4eee0));
-  background-image: -o-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: -moz-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
-  background-image: linear-gradient(to top, #e3dcd1 0%, #f4eee0 100%);
+  color: white;
+  -moz-border-radius: 0.25em;
   border-radius: 0.25em;
-  border: solid 1px #b19fa7;
   box-shadow: none;
-  font-family: "Lato";
-  font-weight: 400;
-  font-size: 1em;
-  margin-right: 10px;
 }
-/* line 237, ../sass/_mixins.sass */
-.service-links-facebook a:hover,
-.service-links-twitter a:hover,
-.service-links-google-plus a:hover,
-.forward_link a:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, white));
-  background-image: -o-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: -moz-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: -webkit-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: -ms-linear-gradient(top, #f4eee0 0%, white 100%);
-  background-image: linear-gradient(to top, #f4eee0 0%, #ffffff 100%);
-  border: solid 1px #77666d;
-  color: #77666d;
+
+/* line 34, ../sass/components/_controls.sass */
+a.service-links-facebook {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1e2e4f), color-stop(1, #3b5998));
+  background-image: -o-linear-gradient(top, #1e2e4f 0%, #3b5998 100%);
+  background-image: -moz-linear-gradient(top, #1e2e4f 0%, #3b5998 100%);
+  background-image: -webkit-linear-gradient(top, #1e2e4f 0%, #3b5998 100%);
+  background-image: -ms-linear-gradient(top, #1e2e4f 0%, #3b5998 100%);
+  background-image: linear-gradient(to top, #1e2e4f 0%, #3b5998 100%);
+  border: 1px solid black;
 }
-/* line 241, ../sass/_mixins.sass */
-.service-links-facebook a:active,
-.service-links-twitter a:active,
-.service-links-google-plus a:active,
-.forward_link a:active {
-  -moz-box-shadow: inset 0 0 10px #b19fa7;
-  -webkit-box-shadow: inset 0 0 10px #b19fa7;
-  box-shadow: inset 0 0 10px #b19fa7;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, #e3dcd1));
-  background-image: -o-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: -moz-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: -webkit-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: -ms-linear-gradient(top, #f4eee0 0%, #e3dcd1 100%);
-  background-image: linear-gradient(to top, #f4eee0 0%, #e3dcd1 100%);
-  border: solid 1px white;
-  color: #2f2127;
+/* line 37, ../sass/components/_controls.sass */
+a.service-links-facebook:hover {
+  color: #839ccf;
+}
+/* line 39, ../sass/components/_controls.sass */
+a.service-links-facebook:active {
+  -moz-box-shadow: inset 0 0 10px black;
+  -webkit-box-shadow: inset 0 0 10px black;
+  box-shadow: inset 0 0 10px black;
+  color: white;
+}
+
+/* line 43, ../sass/components/_controls.sass */
+a.service-links-twitter {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #006287), color-stop(1, #00aced));
+  background-image: -o-linear-gradient(top, #006287 0%, #00aced 100%);
+  background-image: -moz-linear-gradient(top, #006287 0%, #00aced 100%);
+  background-image: -webkit-linear-gradient(top, #006287 0%, #00aced 100%);
+  background-image: -ms-linear-gradient(top, #006287 0%, #00aced 100%);
+  background-image: linear-gradient(to top, #006287 0%, #00aced 100%);
+  border: 1px solid black;
+}
+/* line 46, ../sass/components/_controls.sass */
+a.service-links-twitter:hover {
+  color: #6ed7ff;
+}
+/* line 48, ../sass/components/_controls.sass */
+a.service-links-twitter:active {
+  -moz-box-shadow: inset 0 0 10px black;
+  -webkit-box-shadow: inset 0 0 10px black;
+  box-shadow: inset 0 0 10px black;
+  color: white;
+}
+
+/* line 52, ../sass/components/_controls.sass */
+a.service-links-google-plus {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #96271a), color-stop(1, #dd4b39));
+  background-image: -o-linear-gradient(top, #96271a 0%, #dd4b39 100%);
+  background-image: -moz-linear-gradient(top, #96271a 0%, #dd4b39 100%);
+  background-image: -webkit-linear-gradient(top, #96271a 0%, #dd4b39 100%);
+  background-image: -ms-linear-gradient(top, #96271a 0%, #dd4b39 100%);
+  background-image: linear-gradient(to top, #96271a 0%, #dd4b39 100%);
+  border: 1px solid black;
+}
+/* line 55, ../sass/components/_controls.sass */
+a.service-links-google-plus:hover {
+  color: #f0aea6;
+}
+/* line 57, ../sass/components/_controls.sass */
+a.service-links-google-plus:active {
+  -moz-box-shadow: inset 0 0 10px black;
+  -webkit-box-shadow: inset 0 0 10px black;
+  box-shadow: inset 0 0 10px black;
+  color: white;
 }
 
 /* line 7, ../sass/components/_details.sass */
@@ -2957,6 +2982,7 @@ form #node-edit .image-widget .form-submit {
   background-image: -webkit-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
   background-image: -ms-linear-gradient(top, #e3dcd1 0%, #f4eee0 100%);
   background-image: linear-gradient(to top, #e3dcd1 0%, #f4eee0 100%);
+  -moz-border-radius: 0.25em;
   border-radius: 0.25em;
   border: solid 1px #b19fa7;
   box-shadow: none;
@@ -3004,6 +3030,7 @@ form #node-edit .form-actions input[id="edit-submit"] {
   background-image: -ms-linear-gradient(top, #144c3f 0%, #20806a 100%);
   background-image: linear-gradient(to top, #144c3f 0%, #20806a 100%);
   background-color: #20806a;
+  -moz-border-radius: 0.25em;
   border-radius: 0.25em;
   border: solid 1px #144c3f;
   box-shadow: none;
