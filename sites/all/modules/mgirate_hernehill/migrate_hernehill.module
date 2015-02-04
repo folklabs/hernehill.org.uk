@@ -49,6 +49,16 @@ function migrate_hernehill_register_migrations() {
   Migration::registerMigration('UserMigration', $user_arguments['machine_name'],
                                $user_arguments);
 
+  // User profiles
+  $user_profile_arguments = $common_arguments + array(
+    'description' => t('Migration of user profiles from Drupal 6'),
+    'machine_name' => 'user_profile',
+  );
+
+  // We just use the migrate_d2d D6 migration class as-is.
+  Migration::registerMigration('Profile2Migration', $user_profile_arguments['machine_name'],
+                               $user_profile_arguments);
+
   $file_arguments = $common_arguments + array(
     'machine_name' => 'files',
     'description' => t('Import Drupal 6 files'),
