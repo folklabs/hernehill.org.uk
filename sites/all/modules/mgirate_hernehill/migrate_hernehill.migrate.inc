@@ -41,10 +41,10 @@ function migrate_hernehill_migrate_api() {
     // UI. You may also have additional arguments for any other data which is
     // common to all migrations in the group.
     'groups' => array(
-      'hernehill_comments' => array(
+      'hh_comments' => array(
         'title' => t('hernehill Comment nodes'),
       ),
-      'hernehill_images' => array(
+      'hh_images' => array(
         'title' => t('hernehill Gallery Image nodes'),
       ),
     ),
@@ -54,25 +54,28 @@ function migrate_hernehill_migrate_api() {
     // argument is required. The group_name is optional (defaulting to 'default')
     // but specifying it is a best practice.
     'migrations' => array(
+      // Comments
       'HHGroupCommentNode' => array(
         'class_name' => 'HHGroupCommentNodeMigration',
-        'group_name' => 'hernehill_comments',
+        'group_name' => 'hh_comments',
       ),
       'HHCampaignsCommentNode' => array(
         'class_name' => 'HHCampaignsCommentNodeMigration',
-        'group_name' => 'hernehill_comments',
+        'group_name' => 'hh_comments',
       ),
       'HHEventCommentNode' => array(
         'class_name' => 'HHEventCommentNodeMigration',
-        'group_name' => 'hernehill_comments',
+        'group_name' => 'hh_comments',
       ),
       'HHNewsCommentNode' => array(
         'class_name' => 'HHNewsCommentNodeMigration',
-        'group_name' => 'hernehill_comments',
+        'group_name' => 'hh_comments',
       ),
+
+      // Images
       'HHGalleryImageNode' => array(
         'class_name' => 'Drupal6GalleryImageMigration',
-        'group_name' => 'hernehill_images',
+        'group_name' => 'hh_images',
       ),
     ),
   );

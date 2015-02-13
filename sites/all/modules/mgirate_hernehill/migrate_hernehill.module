@@ -35,6 +35,7 @@ function migrate_hernehill_register_migrations() {
       'Unverified User (requires email confirmation)' => 'anonymous user',
     ),
   );
+  $role_arguments['group_name'] = 'user';
   Migration::registerMigration('DrupalRole6Migration',
     $role_arguments['machine_name'], $role_arguments);
 
@@ -44,6 +45,7 @@ function migrate_hernehill_register_migrations() {
     'machine_name' => 'user',
     'role_migration' => 'role',
   );
+  $user_arguments['group_name'] = 'user';
 
   // We just use the migrate_d2d D6 migration class as-is.
   Migration::registerMigration('UserMigration', $user_arguments['machine_name'],
@@ -54,6 +56,7 @@ function migrate_hernehill_register_migrations() {
     'description' => t('Migration of user profiles from Drupal 6'),
     'machine_name' => 'user_profile',
   );
+  $user_profile_arguments['group_name'] = 'user';
 
   // We just use the migrate_d2d D6 migration class as-is.
   Migration::registerMigration('Profile2Migration', $user_profile_arguments['machine_name'],
@@ -64,10 +67,12 @@ function migrate_hernehill_register_migrations() {
     'description' => t('Import Drupal 6 files'),
     // 'user_migration' => 'UserMigration',
     // 'default_uid' => 1,
-    'source_dir' => '/Users/pmackay/dev/herne-hill/d6.hernehillforum/sites/default/files/',
+    // 'source_dir' => '/Users/pmackay/dev/herne-hill/d6.hernehillforum/sites/default/files/',
+    'source_dir' => '/Users/pmackay/dev/herne-hill/ansible-migrate-hernehill/backup/files',
     // 'destination_dir' => 'public://',
     'file_replace' => '1'
   );
+  $file_arguments['group_name'] = 'hh_files';
   Migration::registerMigration('DrupalFile6Migration',
               $file_arguments['machine_name'], $file_arguments);
 

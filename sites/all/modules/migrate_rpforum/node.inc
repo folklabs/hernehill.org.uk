@@ -69,11 +69,13 @@ class RPForumTopicMigration extends Migration {
     $this->addFieldMapping('uid', 'uid')
       ->sourceMigration('user');
     $this->addFieldMapping('taxonomy_forums', 'tid') //->defaultValue(30)
-      ->sourceMigration('RPForumForums')
-      ->arguments(array('source_type' => 'tid'));
+      ->sourceMigration('RPForumForums');
+    $this->addFieldMapping('taxonomy_forums:source_type')
+      ->defaultValue('tid');
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'field_body2_value')
-      ->arguments(array('format' => 'panopoly_html_text'));
+    $this->addFieldMapping('body', 'field_body2_value');
+    $this->addFieldMapping('body:format')
+      ->defaultValue('panopoly_html_text');
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'changed');
 
@@ -131,8 +133,9 @@ class RPForumPostMigration extends Migration {
       ->sourceMigration('user');
     $this->addFieldMapping('subject', 'title')
       ->callbacks(array($this, 'trimTitle'));
-    $this->addFieldMapping('comment_body', 'field_body2_value')
-      ->arguments(array('format' => 'panopoly_html_text'));
+    $this->addFieldMapping('comment_body', 'field_body2_value');
+    $this->addFieldMapping('comment_body:format')
+      ->defaultValue('panopoly_html_text');
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'changed');
 

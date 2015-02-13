@@ -1,7 +1,7 @@
 <?php
 
 
-class HHBaseMigration extends DrupalUser6Migration {
+class HHNode6Migration extends DrupalNode6Migration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
   }
@@ -119,7 +119,7 @@ class NewsTermsMigration extends DrupalTerm6Migration {
   }
 }
 
-class NewsMigration extends HHBaseMigration {
+class NewsMigration extends HHNode6Migration {
   public function __construct(array $arguments) {
     // Add any other data we're pulling into the source row, before the parent
     // constructor.
@@ -130,13 +130,15 @@ class NewsMigration extends HHBaseMigration {
 
     $this->addFieldMapping('uid', 'uid')
          ->sourceMigration('user');
+
     $this->addFieldMapping('body', 'body')
       ->callbacks(array($this, 'removeNewlinesFromText'));
     $this->addFieldMapping('body:format')
       ->defaultValue('panopoly_wysiwyg_text');
     $this->addFieldMapping('field_ol_tags', 8)
-         ->sourceMigration('News_terms')
-         ->arguments(array('source_type' => 'tid'));
+         ->sourceMigration('News_terms');
+    $this->addFieldMapping('field_ol_tags:source_type')
+      ->defaultValue('tid');
   }
 
   // protected function removeNewlinesFromText($value) {
@@ -147,12 +149,13 @@ class NewsMigration extends HHBaseMigration {
   // }
 }
 
-class CampaignsMigration extends HHBaseMigration {
+class CampaignsMigration extends HHNode6Migration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
 
     $this->addFieldMapping('uid', 'uid')
       ->sourceMigration('user');
+
     $this->addFieldMapping('field_ol_description', 'field_overview');
     $this->addFieldMapping('field_ol_details', 'body')
       ->callbacks(array($this, 'removeNewlinesFromText'));
@@ -167,7 +170,7 @@ class CampaignsMigration extends HHBaseMigration {
   }
 }
 
-class EventMigration extends HHBaseMigration {
+class EventMigration extends HHNode6Migration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
 
@@ -179,21 +182,10 @@ class EventMigration extends HHBaseMigration {
     $this->addFieldMapping('field_ol_event_date', 'field_eventdate');
     $this->addFieldMapping('field_ol_wheelchair_accessible', 'field_wheelchair')
       ->callbacks(array($this, 'convertBoolean'));
-    // $this->addFieldMapping('', 'field_location');
 
     $this->addFieldMapping('field_ol_details:format')
       ->defaultValue('panopoly_wysiwyg_text');
-    // $this->addFieldMapping('field_ol_tags', 8)
-    //      ->sourceMigration('News_terms')
-    //      ->arguments(array('source_type' => 'tid'));
   }
-
-  // protected function removeNewlinesFromText($value) {
-  //   // drush_print($value);
-  //   $value = preg_replace('/\<p\>\&nbsp;\<\/p\>/', '', $value);
-  //   // drush_print($value);
-  //   return $value;
-  // }
 
   protected function convertBoolean($value) {
     // drush_print($value);
@@ -202,7 +194,7 @@ class EventMigration extends HHBaseMigration {
   }
 }
 
-class GalleryMigration extends DrupalNode6Migration {
+class GalleryMigration extends HHNode6Migration {
   public function __construct(array $arguments) {
     // $this->sourceFields['News'] = 'Summary string from D6';
     parent::__construct($arguments);
@@ -217,9 +209,8 @@ class GalleryMigration extends DrupalNode6Migration {
   }
 }
 
-class GroupMigration extends HHBaseMigration {
+class GroupMigration extends HHNode6Migration {
   public function __construct(array $arguments) {
-    // $this->sourceFields['News'] = 'Summary string from D6';
     parent::__construct($arguments);
 
     $this->addFieldMapping('uid', 'uid')
@@ -233,9 +224,8 @@ class GroupMigration extends HHBaseMigration {
   }
 }
 
-class ServiceMigration extends HHBaseMigration {
+class ServiceMigration extends HHNode6Migration {
   public function __construct(array $arguments) {
-    // $this->sourceFields['News'] = 'Summary string from D6';
     parent::__construct($arguments);
 
     $this->addFieldMapping('uid', 'uid')
@@ -256,14 +246,14 @@ class ServiceMigration extends HHBaseMigration {
     //      ->sourceMigration('News_terms')
     //      ->arguments(array('source_type' => 'tid'));
     $this->addFieldMapping('field_ol_business_tags', 4)
-         ->sourceMigration('service_tags_terms')
-         ->arguments(array('source_type' => 'tid'));
+         ->sourceMigration('service_tags_terms');
+    $this->addFieldMapping('field_ol_business_tags:source_type')
+      ->defaultValue('tid');
   }
 }
 
-class GroupPostMigration extends HHBaseMigration {
+class GroupPostMigration extends HHNode6Migration {
   public function __construct(array $arguments) {
-    // $this->sourceFields['News'] = 'Summary string from D6';
     parent::__construct($arguments);
 
     $this->addFieldMapping('uid', 'uid')
@@ -271,9 +261,6 @@ class GroupPostMigration extends HHBaseMigration {
     $this->addFieldMapping('field_ol_details', 'body');
     $this->addFieldMapping('body:format')
       ->defaultValue('panopoly_wysiwyg_text');
-    // $this->addFieldMapping('field_ol_tags', 8)
-    //      ->sourceMigration('News_terms')
-    //      ->arguments(array('source_type' => 'tid'));
   }
 }
 
@@ -281,8 +268,8 @@ class GroupPostMigration extends HHBaseMigration {
 class Drupal6GalleryImageMigration extends Migration {
   public function __construct($arguments) {
     parent::__construct($arguments);
+
     $this->description = 'Image table data';
-    // $this->softDependencies = array('WineComment');
     $table_name = 'field_data_field_ol_gallery_images';
     $this->map = new MigrateSQLMap($this->machineName,
       array('nid' => array(
@@ -293,8 +280,6 @@ class Drupal6GalleryImageMigration extends Migration {
            ),
         MigrateDestinationTable::getKeySchema($table_name)
       );
-    // $query = db_select('content_type_gallery_image', 't', array('target' => 'd6.hernehill'))
-    //          ->fields('t', array('nid', 'field_gallery_image_fid', 'field_gallery_nid', 'field_gallerypicdescription_value'));
     $this->source = new MigrateSourceSQL($this->query(), array(), NULL, array('map_joinable' => FALSE));
     $this->destination = new MigrateDestinationTable($table_name);
     // Mapped fields
@@ -346,10 +331,10 @@ class Drupal6GalleryImageMigration extends Migration {
   }
 
   public function prepareRow($row) {
-    drush_print_r($row->title);
-    drush_print_r($row->field_gallerypicdescription_value);
+    // drush_print_r($row->title);
+    // drush_print_r($row->field_gallerypicdescription_value);
     $row->new_title = "$row->title. $row->field_gallerypicdescription_value";
-    drush_print_r($row->new_title);
+    // drush_print_r($row->new_title);
   }
 
   protected function calcDelta($value) {
@@ -364,7 +349,7 @@ class Drupal6GalleryImageMigration extends Migration {
       // drush_print_r('increment delta');
       $this->deltas[$value] = $this->deltas[$value] + 1;
     }
-    drush_print_r($this->deltas[$value]);
+    // drush_print_r($this->deltas[$value]);
     return $this->deltas[$value];
   }
 
@@ -409,8 +394,9 @@ class HHCommentNodeMigrationBase extends Migration {
     $this->addFieldMapping('subject', 'title')
       ->callbacks(array($this, 'trimTitle'));
     $this->addFieldMapping('comment_body', 'body')
-      ->callbacks(array($this, 'stripBlankLines'))
-      ->arguments(array('format' => 'panopoly_html_text'));
+      ->callbacks(array($this, 'stripBlankLines'));
+    $this->addFieldMapping('comment_body:format')
+      ->defaultValue('panopoly_html_text');
     $this->addFieldMapping('comment_body_format')
       ->defaultValue('panopoly_wysiwyg_text');
     $this->addFieldMapping('created', 'created');
