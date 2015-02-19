@@ -15,6 +15,7 @@ function openlocal_core_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
     ),
     'module' => 'admin_menu',
   );
