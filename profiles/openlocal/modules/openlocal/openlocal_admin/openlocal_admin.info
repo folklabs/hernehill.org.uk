@@ -8,7 +8,6 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = backports
 dependencies[] = ctools
 dependencies[] = entity
-dependencies[] = fe_block
 dependencies[] = flag
 dependencies[] = page_manager
 dependencies[] = rules
