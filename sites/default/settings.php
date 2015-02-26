@@ -211,9 +211,9 @@
  * @endcode
  */
 $databases = array (
-  'default' => 
+  'default' =>
   array (
-    'default' => 
+    'default' =>
     array (
       'database' => 'dev-hernehill',
       'username' => 'dev-hernehill',
@@ -569,5 +569,16 @@ ini_set('memory_limit', '500M');
 
 if (file_exists(dirname(__FILE__) . '/settings.local.php')) {
   include dirname(__FILE__) . '/settings.local.php';
+}
+
+// Require WWW.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+  if ($_SERVER['HTTP_HOST'] == 'hernehill.org.uk' ||
+      $_SERVER['HTTP_HOST'] == 'live-hernehill.pantheon.io') {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: http://www.hernehill.org.uk'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
 }
 
