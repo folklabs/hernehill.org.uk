@@ -1559,6 +1559,12 @@ ul.menu .menu__item li a:active {
   margin-top: 0.5em;
 }
 
+/* line 113, ../sass/components/_nav-menu.sass */
+#secondary-menu li.last a {
+  background-color: #20806a;
+  color: #f4eee0;
+}
+
 /* line 42, ../sass/components/_actions.sass */
 .ol-action-box {
   background-color: #e3dcd1;
