@@ -60,6 +60,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['ui_name'] = 'Title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Teaser */
@@ -68,10 +69,14 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['ui_name'] = 'Teaser';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '270';
+  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '300',
+    'trim_length' => '600',
   );
   /* Sort criterion: Search: Relevance */
   $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
@@ -87,7 +92,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['arguments']['search_api_views_fulltext']['default_argument_options']['argument'] = 'vegetables';
   $handler->display->display_options['arguments']['search_api_views_fulltext']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['search_api_views_fulltext']['break_phrase'] = 0;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Content: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_database_node_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -173,6 +178,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['ui_name'] = 'Title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Teaser */
@@ -181,10 +187,14 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['ui_name'] = 'Teaser';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '270';
+  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '350',
+    'trim_length' => '600',
   );
   /* Sort criterion: Search: Relevance */
   $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
@@ -200,7 +210,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['arguments']['search_api_views_fulltext']['default_argument_options']['index'] = '2';
   $handler->display->display_options['arguments']['search_api_views_fulltext']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['search_api_views_fulltext']['break_phrase'] = 0;
-  /* Filter criterion: Indexed Node: Status */
+  /* Filter criterion: Indexed Content: Status */
   $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
   $handler->display->display_options['filters']['status_1']['table'] = 'search_api_index_node_index';
   $handler->display->display_options['filters']['status_1']['field'] = 'status';

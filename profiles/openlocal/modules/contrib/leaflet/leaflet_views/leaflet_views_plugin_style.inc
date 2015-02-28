@@ -34,7 +34,6 @@ class leaflet_views_plugin_style extends views_plugin_style {
     $options['view_mode'] = array('default' => 'full');
     $options['map'] = array('default' => '');
     $options['height'] = array('default' => '400');
-    $options['hide_empty'] = array('default' => '');
     $options['popup']['contains'] = array(
       'show' => array('default' => ''),
       'text' => array('default' => ''),
@@ -45,7 +44,6 @@ class leaflet_views_plugin_style extends views_plugin_style {
       'maxZoom' => array('default' => 18),
     );
     $options['icon']['contains'] = array(
-      'iconType' => array('default' => 'marker'),
       'iconUrl' => array('default' => ''),
       'shadowUrl' => array('default' => ''),
       'iconSize' => array(
@@ -69,7 +67,6 @@ class leaflet_views_plugin_style extends views_plugin_style {
           'y' => array('default' => ''),
         )),
       'html' => array('default' => ''),
-      'iconImageStyle' => array('default' => ''),
       'htmlClass' => array('default' => ''),
     );
     $options['vector_display']['contains'] = array(

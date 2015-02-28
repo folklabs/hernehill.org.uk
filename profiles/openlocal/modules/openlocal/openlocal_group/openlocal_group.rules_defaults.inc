@@ -12,6 +12,7 @@ function openlocal_group_default_rules_configuration() {
   $items['rules_ol_group_assign_role'] = entity_import('rules_config', '{ "rules_ol_group_assign_role" : {
       "LABEL" : "OL Group: Assign role",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "TAGS" : [ "openlocal" ],
       "REQUIRES" : [ "rules", "og" ],

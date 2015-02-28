@@ -25,7 +25,7 @@ function openlocal_business_field_group_info() {
     'children' => array(
       0 => 'field_ol_business_category',
       1 => 'field_ol_business_tags',
-      2 => 'field_ol_business_telephone',
+      2 => 'field_ol_telephone',
       3 => 'field_ol_description',
       4 => 'field_ol_details',
     ),
@@ -54,10 +54,10 @@ function openlocal_business_field_group_info() {
     'label' => 'Internet',
     'weight' => '4',
     'children' => array(
-      0 => 'field_ol_business_email',
-      1 => 'field_ol_business_website',
-      2 => 'field_ol_business_twitter',
-      3 => 'field_ol_business_facebook',
+      0 => 'field_ol_email',
+      1 => 'field_ol_link',
+      2 => 'field_ol_twitter',
+      3 => 'field_ol_facebook_page',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -143,7 +143,7 @@ function openlocal_business_field_group_info() {
     'label' => 'Opening hours',
     'weight' => '6',
     'children' => array(
-      0 => 'field_ol_business_opening_hours',
+      0 => 'field_ol_opening_hours',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

@@ -228,8 +228,7 @@
   width: 180px;
 }
 
-#node-edit #edit-field-featured-image .form-item-field-featured-image-und-0 > label,
-#node-edit .form-item-field-featured-image-und-0-alt .description {
+#node-edit #edit-field-featured-image .form-item-field-featured-image-und-0 > label {
   display: none;
 }
 
@@ -278,6 +277,16 @@
 
 #node-edit .form-item-field-featured-image-und-0 > label {
   display: none;
+}
+
+/* Styles come from the Drupal class element-invisible and allow for the description to remain visible to screen readers */
+#node-edit .form-item-field-featured-image-und-0 .description,
+#node-edit .form-item-field-featured-image-und-0-alt .description {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
 }
 
 /**

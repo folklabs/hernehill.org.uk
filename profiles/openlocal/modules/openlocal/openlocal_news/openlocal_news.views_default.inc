@@ -140,7 +140,7 @@ Please add some news content.';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'openlocal_news_article' => 'openlocal_news_article',
+    'ol_news_article' => 'ol_news_article',
   );
 
   /* Display: List of News Articles */
@@ -297,7 +297,7 @@ Please add some news content.';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'openlocal_news_article' => 'openlocal_news_article',
+    'ol_news_article' => 'ol_news_article',
   );
   /* Filter criterion: Is Featured */
   $handler->display->display_options['filters']['field_featured_status_value']['id'] = 'field_featured_status_value';
@@ -372,7 +372,7 @@ Please add some news content.';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'openlocal_news_article' => 'openlocal_news_article',
+    'ol_news_article' => 'ol_news_article',
   );
   /* Filter criterion: Select Content */
   $handler->display->display_options['filters']['title_1']['id'] = 'title_1';
@@ -1062,7 +1062,7 @@ Please add some news content.';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'openlocal_news_article' => 'openlocal_news_article',
+    'ol_news_article' => 'ol_news_article',
   );
   /* Filter criterion: Is Featured */
   $handler->display->display_options['filters']['field_featured_status_value']['id'] = 'field_featured_status_value';
@@ -1125,13 +1125,14 @@ Please add some news content.';
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'News categories';
+  $handler->display->display_options['title'] = 'Filter by category';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
@@ -1155,7 +1156,7 @@ Please add some news content.';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'news/[tid]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'news/term/[tid]';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;

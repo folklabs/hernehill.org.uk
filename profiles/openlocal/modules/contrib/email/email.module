@@ -316,6 +316,19 @@ function email_mail_page($object_type, $object_id, $field_name) {
     return MENU_NOT_FOUND;
   }
 
+  $entity_info = entity_extract_ids($object_type, $object);
+  $settings = field_info_instance($object_type, $field_name, $entity_info[2]);
+  $found = FALSE;
+  foreach ($settings['display'] as $display_name => $display_data) {
+    if (isset($display_data['type']) && ($display_data['type'] === 'email_contact')) {
+      $found = TRUE;
+      break;
+    }
+  }
+  if (!$found) {
+    return MENU_NOT_FOUND;
+  }
+
   if (!flood_is_allowed('email', variable_get('email_hourly_threshold', 3))) {
     return t("You cannot send more than %number messages per hour. Please try again later.", array('%number' => variable_get('email_hourly_threshold', 3)));
   }

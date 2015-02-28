@@ -1022,7 +1022,7 @@ function openlocal_event_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Categories';
+  $handler->display->display_options['title'] = 'Filter by category';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1068,8 +1068,8 @@ function openlocal_event_views_default_views() {
     'panopoly_categories' => 'panopoly_categories',
   );
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: List */
+  $handler = $view->new_display('panel_pane', 'List', 'panel_pane_1');
   $export['openlocal_event_categories'] = $view;
 
   $view = new view();
@@ -1291,6 +1291,9 @@ function openlocal_event_views_default_views() {
   $handler = $view->new_display('entityreference_view_widget', 'Entity Reference View Widget', 'entityreference_view_widget_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Event venues';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['defaults']['style_options'] = FALSE;

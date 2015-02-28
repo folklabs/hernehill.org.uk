@@ -339,7 +339,7 @@ function openlocal_business_panelizer_defaults() {
     $pane->pid = 'new-b4e467e0-f2dc-4b42-9d9c-2d326d1fd9f5';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_telephone';
+    $pane->subtype = 'node:field_ol_telephone';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -416,7 +416,7 @@ function openlocal_business_panelizer_defaults() {
     $pane->pid = 'new-2736c315-4eba-4685-b560-6a9b2dbfa5b5';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_email';
+    $pane->subtype = 'node:field_ol_email';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -458,7 +458,7 @@ function openlocal_business_panelizer_defaults() {
     $pane->pid = 'new-61619e12-85ee-48bb-9a77-246670ee494f';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_website';
+    $pane->subtype = 'node:field_ol_link';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -485,7 +485,7 @@ function openlocal_business_panelizer_defaults() {
     $pane->pid = 'new-2cd59e12-abc7-4249-a295-eb79fe373ce1';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_twitter';
+    $pane->subtype = 'node:field_ol_twitter';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -527,7 +527,7 @@ function openlocal_business_panelizer_defaults() {
     $pane->pid = 'new-6cf20e51-be2a-4e4e-b91b-93f3a6b0e3ef';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_facebook';
+    $pane->subtype = 'node:field_ol_facebook_page';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -598,7 +598,7 @@ function openlocal_business_panelizer_defaults() {
     $pane->pid = 'new-0958fde4-02eb-43e2-9293-0d3a2bd2f705';
     $pane->panel = 'quarter1';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ol_business_opening_hours';
+    $pane->subtype = 'node:field_ol_opening_hours';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -641,15 +641,27 @@ function openlocal_business_panelizer_defaults() {
     $display->content['new-0958fde4-02eb-43e2-9293-0d3a2bd2f705'] = $pane;
     $display->panels['quarter1'][10] = 'new-0958fde4-02eb-43e2-9293-0d3a2bd2f705';
     $pane = new stdClass();
-    $pane->pid = 'new-dc0fb144-690b-4599-b08f-e302d2d5b3eb';
+    $pane->pid = 'new-b348837e-042a-4b80-a30a-6db4e4f281ae';
     $pane->panel = 'quarter2';
-    $pane->type = 'block';
-    $pane->subtype = 'block-2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
+      'admin_title' => 'OL Business actions',
+      'title' => '',
+      'body' => '<div class="ol-action-box">
+
+<div class="ol-action-button">
+<a href="/node/add/ol-issue"><span class="ol-action-span"><i class="fa fa-plus"></i> request business listing</span></a>
+</div>
+
+<div>
+<a href="/contextual_help/how-add-business" class="ol-action-help"><i class="fa fa-question-circle"></i> About business listings</a>
+</div>
+</div>',
+      'format' => 'panopoly_html_text',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -659,9 +671,9 @@ function openlocal_business_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'dc0fb144-690b-4599-b08f-e302d2d5b3eb';
-    $display->content['new-dc0fb144-690b-4599-b08f-e302d2d5b3eb'] = $pane;
-    $display->panels['quarter2'][0] = 'new-dc0fb144-690b-4599-b08f-e302d2d5b3eb';
+    $pane->uuid = 'b348837e-042a-4b80-a30a-6db4e4f281ae';
+    $display->content['new-b348837e-042a-4b80-a30a-6db4e4f281ae'] = $pane;
+    $display->panels['quarter2'][0] = 'new-b348837e-042a-4b80-a30a-6db4e4f281ae';
     $pane = new stdClass();
     $pane->pid = 'new-293e6719-4f29-441c-a100-f59cc656853c';
     $pane->panel = 'quarter2';

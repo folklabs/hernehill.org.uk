@@ -12,6 +12,7 @@ function openlocal_resource_default_rules_configuration() {
   $items['rules_ol_resource_notify_new'] = entity_import('rules_config', '{ "rules_ol_resource_notify_new" : {
       "LABEL" : "OL Resource: notify new",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "TAGS" : [ "openlocal" ],
       "REQUIRES" : [ "rules" ],

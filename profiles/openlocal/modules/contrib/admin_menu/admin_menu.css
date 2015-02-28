@@ -96,8 +96,7 @@ body.admin-menu {
   padding-bottom: 1px;
 }
 #admin-menu .dropdown li li {
-  background: #202020;
-  background-color: rgba(69,69,74, 0.88);
+  background: #202020; background-color: rgba(69,69,74, 0.88);
   width: 160px; /* Required for Opera */
 }
 

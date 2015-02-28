@@ -53,5 +53,4 @@ features[variable][] = pm_existing_pages_disabled_user_register
 features[variable][] = user_picture_field_source_bundle
 features[variable][] = user_picture_field_source_entity
 features[variable][] = user_picture_field_source_field
-mtime = 1416438544
 project path = sites/all/modules/panopoly

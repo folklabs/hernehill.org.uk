@@ -84,7 +84,7 @@ function openlocal_event_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -156,7 +156,7 @@ function openlocal_event_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -205,7 +205,7 @@ function openlocal_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -307,12 +307,12 @@ function openlocal_event_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-ol_event-field_ol_event_contact'
-  $field_instances['node-ol_event-field_ol_event_contact'] = array(
+  // Exported field_instance: 'node-ol_event-field_ol_email'
+  $field_instances['node-ol_event-field_ol_email'] = array(
     'bundle' => 'ol_event',
     'default_value' => NULL,
     'deleted' => 0,
@@ -339,8 +339,8 @@ function openlocal_event_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ol_event_contact',
-    'label' => 'Contact',
+    'field_name' => 'field_ol_email',
+    'label' => 'Contact email',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -352,69 +352,16 @@ function openlocal_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-ol_event-field_ol_event_contact_telephone'
-  $field_instances['node-ol_event-field_ol_event_contact_telephone'] = array(
-    'bundle' => 'ol_event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The contact number will be for people to call in relation to the event, it will be visible on the page with the event information. If there is no contact number for people to call regarding this event then please leave blank.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 12,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ol_event_contact_telephone',
-    'label' => 'Contact telephone',
-    'required' => 0,
-    'settings' => array(
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 5,
     ),
   );
 
   // Exported field_instance: 'node-ol_event-field_ol_event_date'
   $field_instances['node-ol_event-field_ol_event_date'] = array(
     'bundle' => 'ol_event',
+    'default_value' => array(),
     'deleted' => 0,
-    'description' => '<p><strong>How to set the date and time for one-off or repeating events</strong></p>
-<p>The "Start date" of your event is the day and time your event begins. <br>Please also click "Show End Date" and set the day and time your <strong>first</strong> event ends (i.e. perhaps one hour after it started).<br>To create a repeating event like a weekly meeting, please click the "Repeat" check box at the bottom of this panel.<br>Next, choose when your event repeats from the Repeats dropdown menu (Daily, Weekly, Monthly etc) and choose which day, week or month it repeats on.<br>Don\'t forget to enter the date your series finishes (otherwise it will repeat until the end of time!)<br>Please check your entry before saving it then review the "What\'s On" calendars to check where your event is listed and ensure it only repeats on the correct dates.</p>',
+    'description' => 'Tips - the "start date" is the day and time your event commences. The "To date" is when your first event or meeting ends, probably an hour or two after the start. N.B. If you want to create a repeating event (i.e. every week) then please use the "repeat" option under the advanced section. If it is an event on for every week on the same day then choose repeat "every" "week". Please also then enter the date that the series finishes otherwise it will be repeated until the end of the world as we know it... Please check your entry once you have done it. View the What\'s On calendar and see where your event is listed, then check that it is only repeated (if applicable) on all the correct days. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -446,7 +393,7 @@ function openlocal_event_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_ol_event_date',
     'label' => 'Date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'strtotime',
@@ -467,7 +414,7 @@ function openlocal_event_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -526,7 +473,7 @@ function openlocal_event_field_default_field_instances() {
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -571,7 +518,60 @@ function openlocal_event_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-ol_event-field_ol_telephone'
+  $field_instances['node-ol_event-field_ol_telephone'] = array(
+    'bundle' => 'ol_event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The contact number will be for people to call in relation to the event, it will be visible on the page with the event information. If there is no contact number for people to call regarding this event then please leave blank.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ol_telephone',
+    'label' => 'Contact telephone',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 6,
     ),
   );
 
@@ -636,20 +636,18 @@ function openlocal_event_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<p><strong>How to set the date and time for one-off or repeating events</strong></p>
-<p>The "Start date" of your event is the day and time your event begins. <br>Please also click "Show End Date" and set the day and time your <strong>first</strong> event ends (i.e. perhaps one hour after it started).<br>To create a repeating event like a weekly meeting, please click the "Repeat" check box at the bottom of this panel.<br>Next, choose when your event repeats from the Repeats dropdown menu (Daily, Weekly, Monthly etc) and choose which day, week or month it repeats on.<br>Don\'t forget to enter the date your series finishes (otherwise it will repeat until the end of time!)<br>Please check your entry before saving it then review the "What\'s On" calendars to check where your event is listed and ensure it only repeats on the correct dates.</p>');
   t('<p>Please add an image to this event. It will be shown on the event list and details pages.</p>
 <p>Don\'t forget to add some "alt tag" text to help those understand what your picture shows as this text is what can be read out automatically by screen readers for those with visual impairment.</p>');
   t('Available facilities');
   t('Categories');
   t('Comment');
-  t('Contact');
+  t('Contact email');
   t('Contact telephone');
   t('Date');
   t('Describe all the details that people need to know about the event.');
@@ -662,6 +660,7 @@ function openlocal_event_field_default_field_instances() {
   t('Image');
   t('The contact number will be for people to call in relation to the event, it will be visible on the page with the event information. If there is no contact number for people to call regarding this event then please leave blank.');
   t('This will appear on list pages, e.g. Services.');
+  t('Tips - the "start date" is the day and time your event commences. The "To date" is when your first event or meeting ends, probably an hour or two after the start. N.B. If you want to create a repeating event (i.e. every week) then please use the "repeat" option under the advanced section. If it is an event on for every week on the same day then choose repeat "every" "week". Please also then enter the date that the series finishes otherwise it will be repeated until the end of the world as we know it... Please check your entry once you have done it. View the What\'s On calendar and see where your event is listed, then check that it is only repeated (if applicable) on all the correct days. ');
   t('Venue');
 
   return $field_instances;

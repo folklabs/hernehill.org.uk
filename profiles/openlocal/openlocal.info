@@ -3,9 +3,6 @@ core = 7.x
 description = A distribution for local communities.
 distribution_name = "OpenLocal"
 
-; Core
-dependencies[] = dblog
-
 ; Panopoly Foundation
 dependencies[] = panopoly_core
 dependencies[] = panopoly_images
@@ -21,64 +18,36 @@ dependencies[] = panopoly_search
 dependencies[] = panopoly_wysiwyg
 
 ; Panopoly Recommended - Admin
-;dependencies[] = navbar
 dependencies[] = backports
-;dependencies[] = simplified_menu_admin
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = save_draft
 dependencies[] = module_filter
 dependencies[] = date_popup_authored
 
-; Panopoly Recommended - Other
-dependencies[] = devel
-dependencies[] = uuid
-
-; Development
-dependencies[] = field_ui
-dependencies[] = masquerade
-dependencies[] = views_ui
-
 ; Other modules
 dependencies[] = book
-dependencies[] = contact
-dependencies[] = honeypot
-dependencies[] = mass_contact
-dependencies[] = oauth_common
-dependencies[] = oauth2_common
-dependencies[] = connector
-dependencies[] = oauthconnector
-dependencies[] = http_client
-dependencies[] = http_client_oauth
-dependencies[] = privatemsg
-dependencies[] = site_map
-dependencies[] = workbench
-dependencies[] = workbench_moderation
-; For FAQ
-; TODO: replace with makefile from FAQ feature
-dependencies[] = draggableviews
-dependencies[] = entityreference_prepopulate
 
-; Panopoly apps
-dependencies[] = panopoly_faq_page
-dependencies[] = panopoly_faq_question
-
-; Debut apps
-;dependencies[] = debut_blog
-dependencies[] = debut_forum
-dependencies[] = debut_seo
-dependencies[] = debut_social
-
-; OpenLocal apps
+; OpenLocal
+dependencies[] = openlocal_admin
 dependencies[] = openlocal_alert
 dependencies[] = openlocal_business
 dependencies[] = openlocal_contact
 dependencies[] = openlocal_core
 dependencies[] = openlocal_event
+dependencies[] = openlocal_forum
 dependencies[] = openlocal_gallery
 dependencies[] = openlocal_group
+dependencies[] = openlocal_highlight
 dependencies[] = openlocal_home
+dependencies[] = openlocal_images
+dependencies[] = openlocal_issue
+dependencies[] = openlocal_layout
 dependencies[] = openlocal_news
+dependencies[] = openlocal_search
+dependencies[] = openlocal_seo
+dependencies[] = openlocal_social
+dependencies[] = openlocal_user
 
 ; Optional features
 ;dependencies[] = openlocal_idea

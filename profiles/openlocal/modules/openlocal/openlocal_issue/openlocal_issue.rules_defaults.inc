@@ -12,6 +12,7 @@ function openlocal_issue_default_rules_configuration() {
   $items['rules_ol_issue_update_notify'] = entity_import('rules_config', '{ "rules_ol_issue_update_notify" : {
       "LABEL" : "OL Issue: update notify",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "TAGS" : [ "openlocal" ],
       "REQUIRES" : [ "rules", "comment" ],

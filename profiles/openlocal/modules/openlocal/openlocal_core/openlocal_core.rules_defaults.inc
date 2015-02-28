@@ -12,6 +12,7 @@ function openlocal_core_default_rules_configuration() {
   $items['rules_ol_core_item_needs_moderation'] = entity_import('rules_config', '{ "rules_ol_core_item_needs_moderation" : {
       "LABEL" : "OL Core: Item needs moderation",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "TAGS" : [ "openlocal" ],
       "REQUIRES" : [ "rules", "workbench_moderation" ],

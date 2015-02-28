@@ -2112,6 +2112,14 @@ body#tinymce p, pre {
   margin-top: 0px;
 }
 
+/* line 282, ../sass/components/_admin.sass */
+#node-edit .form-item-field-featured-image-und-0 .description,
+#node-edit .form-item-field-featured-image-und-0-alt .description {
+  position: static !important;
+  overflow: visible;
+  height: 100%;
+}
+
 /* line 6, ../sass/components/_calendar.sass */
 .calendar-calendar table tbody tr {
   background-color: transparent;
@@ -2545,30 +2553,28 @@ a.service-links-google-plus:active {
 
 /* line 30, ../sass/components/_details.sass */
 .pane-node-field-ol-address,
-.pane-node-field-ol-business-telephone,
-.pane-node-field-ol-business-email,
-.pane-node-field-ol-business-website,
-.pane-node-field-ol-business-twitter,
-.pane-node-field-ol-business-opening-hours,
+.pane-node-field-ol-telephone,
+.pane-node-field-ol-email,
+.pane-node-field-ol-link,
+.pane-node-field-ol-twitter,
+.pane-node-field-ol-facebook-page,
+.pane-node-field-ol-opening-hours,
 .pane-node-field-ol-event-category,
 .pane-node-field-ol-event-date,
-.pane-node-field-ol-event-contact,
-.pane-node-field-ol-event-contact-telephone,
 .pane-node-og-group-ref {
   background-color: #e3dcd1;
   border-bottom: solid 1px #f4eee0;
 }
-/* line 43, ../sass/components/_details.sass */
+/* line 42, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-label,
-.pane-node-field-ol-business-telephone .field-label,
-.pane-node-field-ol-business-email .field-label,
-.pane-node-field-ol-business-website .field-label,
-.pane-node-field-ol-business-twitter .field-label,
-.pane-node-field-ol-business-opening-hours .field-label,
+.pane-node-field-ol-telephone .field-label,
+.pane-node-field-ol-email .field-label,
+.pane-node-field-ol-link .field-label,
+.pane-node-field-ol-twitter .field-label,
+.pane-node-field-ol-facebook-page .field-label,
+.pane-node-field-ol-opening-hours .field-label,
 .pane-node-field-ol-event-category .field-label,
 .pane-node-field-ol-event-date .field-label,
-.pane-node-field-ol-event-contact .field-label,
-.pane-node-field-ol-event-contact-telephone .field-label,
 .pane-node-og-group-ref .field-label {
   font-family: "Lato";
   font-weight: 900;
@@ -2578,43 +2584,40 @@ a.service-links-google-plus:active {
   padding: 0.25em 0 0 0;
   padding: 0.75em 5px 0.25em 5px;
 }
-/* line 47, ../sass/components/_details.sass */
+/* line 46, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-label-inline .field-item,
 .pane-node-field-ol-address .field-label-inline .field-item a,
-.pane-node-field-ol-business-telephone .field-label-inline .field-item,
-.pane-node-field-ol-business-telephone .field-label-inline .field-item a,
-.pane-node-field-ol-business-email .field-label-inline .field-item,
-.pane-node-field-ol-business-email .field-label-inline .field-item a,
-.pane-node-field-ol-business-website .field-label-inline .field-item,
-.pane-node-field-ol-business-website .field-label-inline .field-item a,
-.pane-node-field-ol-business-twitter .field-label-inline .field-item,
-.pane-node-field-ol-business-twitter .field-label-inline .field-item a,
-.pane-node-field-ol-business-opening-hours .field-label-inline .field-item,
-.pane-node-field-ol-business-opening-hours .field-label-inline .field-item a,
+.pane-node-field-ol-telephone .field-label-inline .field-item,
+.pane-node-field-ol-telephone .field-label-inline .field-item a,
+.pane-node-field-ol-email .field-label-inline .field-item,
+.pane-node-field-ol-email .field-label-inline .field-item a,
+.pane-node-field-ol-link .field-label-inline .field-item,
+.pane-node-field-ol-link .field-label-inline .field-item a,
+.pane-node-field-ol-twitter .field-label-inline .field-item,
+.pane-node-field-ol-twitter .field-label-inline .field-item a,
+.pane-node-field-ol-facebook-page .field-label-inline .field-item,
+.pane-node-field-ol-facebook-page .field-label-inline .field-item a,
+.pane-node-field-ol-opening-hours .field-label-inline .field-item,
+.pane-node-field-ol-opening-hours .field-label-inline .field-item a,
 .pane-node-field-ol-event-category .field-label-inline .field-item,
 .pane-node-field-ol-event-category .field-label-inline .field-item a,
 .pane-node-field-ol-event-date .field-label-inline .field-item,
 .pane-node-field-ol-event-date .field-label-inline .field-item a,
-.pane-node-field-ol-event-contact .field-label-inline .field-item,
-.pane-node-field-ol-event-contact .field-label-inline .field-item a,
-.pane-node-field-ol-event-contact-telephone .field-label-inline .field-item,
-.pane-node-field-ol-event-contact-telephone .field-label-inline .field-item a,
 .pane-node-og-group-ref .field-label-inline .field-item,
 .pane-node-og-group-ref .field-label-inline .field-item a {
   padding-top: 0.5em;
   float: none;
 }
-/* line 52, ../sass/components/_details.sass */
+/* line 51, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item,
-.pane-node-field-ol-business-telephone .field-item,
-.pane-node-field-ol-business-email .field-item,
-.pane-node-field-ol-business-website .field-item,
-.pane-node-field-ol-business-twitter .field-item,
-.pane-node-field-ol-business-opening-hours .field-item,
+.pane-node-field-ol-telephone .field-item,
+.pane-node-field-ol-email .field-item,
+.pane-node-field-ol-link .field-item,
+.pane-node-field-ol-twitter .field-item,
+.pane-node-field-ol-facebook-page .field-item,
+.pane-node-field-ol-opening-hours .field-item,
 .pane-node-field-ol-event-category .field-item,
 .pane-node-field-ol-event-date .field-item,
-.pane-node-field-ol-event-contact .field-item,
-.pane-node-field-ol-event-contact-telephone .field-item,
 .pane-node-og-group-ref .field-item {
   font-family: "Lato";
   font-weight: 400;
@@ -2626,127 +2629,119 @@ a.service-links-google-plus:active {
   padding: 0em 5px 1em 5px;
   line-height: 24px;
 }
-/* line 57, ../sass/components/_details.sass */
+/* line 56, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a,
-.pane-node-field-ol-business-telephone .field-item a,
-.pane-node-field-ol-business-email .field-item a,
-.pane-node-field-ol-business-website .field-item a,
-.pane-node-field-ol-business-twitter .field-item a,
-.pane-node-field-ol-business-opening-hours .field-item a,
+.pane-node-field-ol-telephone .field-item a,
+.pane-node-field-ol-email .field-item a,
+.pane-node-field-ol-link .field-item a,
+.pane-node-field-ol-twitter .field-item a,
+.pane-node-field-ol-facebook-page .field-item a,
+.pane-node-field-ol-opening-hours .field-item a,
 .pane-node-field-ol-event-category .field-item a,
 .pane-node-field-ol-event-date .field-item a,
-.pane-node-field-ol-event-contact .field-item a,
-.pane-node-field-ol-event-contact-telephone .field-item a,
 .pane-node-og-group-ref .field-item a {
   background-color: transparent;
 }
-/* line 59, ../sass/components/_details.sass */
+/* line 58, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a:link, .pane-node-field-ol-address .field-item a:visited,
-.pane-node-field-ol-business-telephone .field-item a:link,
-.pane-node-field-ol-business-telephone .field-item a:visited,
-.pane-node-field-ol-business-email .field-item a:link,
-.pane-node-field-ol-business-email .field-item a:visited,
-.pane-node-field-ol-business-website .field-item a:link,
-.pane-node-field-ol-business-website .field-item a:visited,
-.pane-node-field-ol-business-twitter .field-item a:link,
-.pane-node-field-ol-business-twitter .field-item a:visited,
-.pane-node-field-ol-business-opening-hours .field-item a:link,
-.pane-node-field-ol-business-opening-hours .field-item a:visited,
+.pane-node-field-ol-telephone .field-item a:link,
+.pane-node-field-ol-telephone .field-item a:visited,
+.pane-node-field-ol-email .field-item a:link,
+.pane-node-field-ol-email .field-item a:visited,
+.pane-node-field-ol-link .field-item a:link,
+.pane-node-field-ol-link .field-item a:visited,
+.pane-node-field-ol-twitter .field-item a:link,
+.pane-node-field-ol-twitter .field-item a:visited,
+.pane-node-field-ol-facebook-page .field-item a:link,
+.pane-node-field-ol-facebook-page .field-item a:visited,
+.pane-node-field-ol-opening-hours .field-item a:link,
+.pane-node-field-ol-opening-hours .field-item a:visited,
 .pane-node-field-ol-event-category .field-item a:link,
 .pane-node-field-ol-event-category .field-item a:visited,
 .pane-node-field-ol-event-date .field-item a:link,
 .pane-node-field-ol-event-date .field-item a:visited,
-.pane-node-field-ol-event-contact .field-item a:link,
-.pane-node-field-ol-event-contact .field-item a:visited,
-.pane-node-field-ol-event-contact-telephone .field-item a:link,
-.pane-node-field-ol-event-contact-telephone .field-item a:visited,
 .pane-node-og-group-ref .field-item a:link,
 .pane-node-og-group-ref .field-item a:visited {
   color: #20806a;
 }
-/* line 62, ../sass/components/_details.sass */
+/* line 61, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a:hover,
-.pane-node-field-ol-business-telephone .field-item a:hover,
-.pane-node-field-ol-business-email .field-item a:hover,
-.pane-node-field-ol-business-website .field-item a:hover,
-.pane-node-field-ol-business-twitter .field-item a:hover,
-.pane-node-field-ol-business-opening-hours .field-item a:hover,
+.pane-node-field-ol-telephone .field-item a:hover,
+.pane-node-field-ol-email .field-item a:hover,
+.pane-node-field-ol-link .field-item a:hover,
+.pane-node-field-ol-twitter .field-item a:hover,
+.pane-node-field-ol-facebook-page .field-item a:hover,
+.pane-node-field-ol-opening-hours .field-item a:hover,
 .pane-node-field-ol-event-category .field-item a:hover,
 .pane-node-field-ol-event-date .field-item a:hover,
-.pane-node-field-ol-event-contact .field-item a:hover,
-.pane-node-field-ol-event-contact-telephone .field-item a:hover,
 .pane-node-og-group-ref .field-item a:hover {
   color: #144c3f;
 }
-/* line 64, ../sass/components/_details.sass */
+/* line 63, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item a:active,
-.pane-node-field-ol-business-telephone .field-item a:active,
-.pane-node-field-ol-business-email .field-item a:active,
-.pane-node-field-ol-business-website .field-item a:active,
-.pane-node-field-ol-business-twitter .field-item a:active,
-.pane-node-field-ol-business-opening-hours .field-item a:active,
+.pane-node-field-ol-telephone .field-item a:active,
+.pane-node-field-ol-email .field-item a:active,
+.pane-node-field-ol-link .field-item a:active,
+.pane-node-field-ol-twitter .field-item a:active,
+.pane-node-field-ol-facebook-page .field-item a:active,
+.pane-node-field-ol-opening-hours .field-item a:active,
 .pane-node-field-ol-event-category .field-item a:active,
 .pane-node-field-ol-event-date .field-item a:active,
-.pane-node-field-ol-event-contact .field-item a:active,
-.pane-node-field-ol-event-contact-telephone .field-item a:active,
 .pane-node-og-group-ref .field-item a:active {
   color: #e2e3d7;
 }
-/* line 66, ../sass/components/_details.sass */
+/* line 65, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item .field-label,
 .pane-node-field-ol-address .field-item .field-item,
-.pane-node-field-ol-business-telephone .field-item .field-label,
-.pane-node-field-ol-business-telephone .field-item .field-item,
-.pane-node-field-ol-business-email .field-item .field-label,
-.pane-node-field-ol-business-email .field-item .field-item,
-.pane-node-field-ol-business-website .field-item .field-label,
-.pane-node-field-ol-business-website .field-item .field-item,
-.pane-node-field-ol-business-twitter .field-item .field-label,
-.pane-node-field-ol-business-twitter .field-item .field-item,
-.pane-node-field-ol-business-opening-hours .field-item .field-label,
-.pane-node-field-ol-business-opening-hours .field-item .field-item,
+.pane-node-field-ol-telephone .field-item .field-label,
+.pane-node-field-ol-telephone .field-item .field-item,
+.pane-node-field-ol-email .field-item .field-label,
+.pane-node-field-ol-email .field-item .field-item,
+.pane-node-field-ol-link .field-item .field-label,
+.pane-node-field-ol-link .field-item .field-item,
+.pane-node-field-ol-twitter .field-item .field-label,
+.pane-node-field-ol-twitter .field-item .field-item,
+.pane-node-field-ol-facebook-page .field-item .field-label,
+.pane-node-field-ol-facebook-page .field-item .field-item,
+.pane-node-field-ol-opening-hours .field-item .field-label,
+.pane-node-field-ol-opening-hours .field-item .field-item,
 .pane-node-field-ol-event-category .field-item .field-label,
 .pane-node-field-ol-event-category .field-item .field-item,
 .pane-node-field-ol-event-date .field-item .field-label,
 .pane-node-field-ol-event-date .field-item .field-item,
-.pane-node-field-ol-event-contact .field-item .field-label,
-.pane-node-field-ol-event-contact .field-item .field-item,
-.pane-node-field-ol-event-contact-telephone .field-item .field-label,
-.pane-node-field-ol-event-contact-telephone .field-item .field-item,
 .pane-node-og-group-ref .field-item .field-label,
 .pane-node-og-group-ref .field-item .field-item {
   padding: 1em 0 0 0;
 }
-/* line 69, ../sass/components/_details.sass */
+/* line 68, ../sass/components/_details.sass */
 .pane-node-field-ol-address .field-item h2,
-.pane-node-field-ol-business-telephone .field-item h2,
-.pane-node-field-ol-business-email .field-item h2,
-.pane-node-field-ol-business-website .field-item h2,
-.pane-node-field-ol-business-twitter .field-item h2,
-.pane-node-field-ol-business-opening-hours .field-item h2,
+.pane-node-field-ol-telephone .field-item h2,
+.pane-node-field-ol-email .field-item h2,
+.pane-node-field-ol-link .field-item h2,
+.pane-node-field-ol-twitter .field-item h2,
+.pane-node-field-ol-facebook-page .field-item h2,
+.pane-node-field-ol-opening-hours .field-item h2,
 .pane-node-field-ol-event-category .field-item h2,
 .pane-node-field-ol-event-date .field-item h2,
-.pane-node-field-ol-event-contact .field-item h2,
-.pane-node-field-ol-event-contact-telephone .field-item h2,
 .pane-node-og-group-ref .field-item h2 {
   border-bottom: none;
 }
 
-/* line 74, ../sass/components/_details.sass */
+/* line 73, ../sass/components/_details.sass */
 .field-name-field-ol-event-category .field-item {
   padding-bottom: 0;
 }
-/* line 76, ../sass/components/_details.sass */
+/* line 75, ../sass/components/_details.sass */
 .field-name-field-ol-event-category a {
   padding-top: 0;
 }
 
-/* line 85, ../sass/components/_details.sass */
+/* line 84, ../sass/components/_details.sass */
 .pane-node-field-featured-categories {
   margin-bottom: 1em;
   border-top: solid 1px #b19fa7;
 }
-/* line 91, ../sass/components/_details.sass */
+/* line 90, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-label {
   display: block;
   width: 100%;
@@ -2775,21 +2770,21 @@ a.service-links-google-plus:active {
   color: #98b9b1;
   background-color: transparent;
 }
-/* line 97, ../sass/components/_details.sass */
+/* line 96, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items {
   width: 100%;
 }
-/* line 100, ../sass/components/_details.sass */
+/* line 99, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item {
   display: block;
   clear: both;
   border-bottom: 1px #e3dcd1 solid;
 }
-/* line 106, ../sass/components/_details.sass */
+/* line 105, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a {
   padding: 3.5% 5px 1.5% 5px;
 }
-/* line 108, ../sass/components/_details.sass */
+/* line 107, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a:link, .pane-node-field-featured-categories div .field-items .field-item a:visited {
   display: block;
   height: 2em;
@@ -2799,58 +2794,57 @@ a.service-links-google-plus:active {
   text-decoration: none;
   color: #20806a;
 }
-/* line 118, ../sass/components/_details.sass */
+/* line 117, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a:hover {
   background-color: #e2e3d7;
   color: #0d332a;
 }
-/* line 121, ../sass/components/_details.sass */
+/* line 120, ../sass/components/_details.sass */
 .pane-node-field-featured-categories div .field-items .field-item a:active {
   color: white;
   background-color: #20806a;
 }
 
-/* line 7, ../sass/components/_footer.sass */
+/* line 5, ../sass/components/_footer.sass */
 #footer {
   width: 100%;
-  height: 20em;
   margin: 20px 0 0 0;
   background-color: #4d3d44;
 }
-/* line 13, ../sass/components/_footer.sass */
+/* line 9, ../sass/components/_footer.sass */
 #footer p {
   color: #b19fa7;
 }
-/* line 15, ../sass/components/_footer.sass */
+/* line 11, ../sass/components/_footer.sass */
 #footer a {
   color: #e3dcd1;
 }
-/* line 17, ../sass/components/_footer.sass */
+/* line 13, ../sass/components/_footer.sass */
 #footer a:hover {
   background-color: transparent;
 }
 
-/* line 26, ../sass/components/_footer.sass */
+/* line 22, ../sass/components/_footer.sass */
 #block-menu-menu-ol-footer-menu .block-title {
   display: none;
 }
-/* line 28, ../sass/components/_footer.sass */
+/* line 24, ../sass/components/_footer.sass */
 #block-menu-menu-ol-footer-menu li.menu__item {
   list-style: none;
   display: inline-block;
   padding: 0 20px 0 0;
   font-size: 1.2em;
 }
-/* line 33, ../sass/components/_footer.sass */
+/* line 29, ../sass/components/_footer.sass */
 #block-menu-menu-ol-footer-menu li.menu__item a {
   color: #e3dcd1;
 }
-/* line 35, ../sass/components/_footer.sass */
+/* line 31, ../sass/components/_footer.sass */
 #block-menu-menu-ol-footer-menu li.menu__item a:hover {
   background-color: transparent;
 }
 
-/* line 42, ../sass/components/_footer.sass */
+/* line 38, ../sass/components/_footer.sass */
 #block-block-10 {
   padding: 0 0 0 20px;
 }

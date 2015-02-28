@@ -1,0 +1,14 @@
+diff --git a/commentaccess.module b/commentaccess.module
+index 48ed58c..99d6e6c 100644
+--- a/commentaccess.module
++++ b/commentaccess.module
+@@ -245,6 +245,9 @@ function commentaccess_query_comment_filter_alter(QueryAlterableInterface $query
+     && (user_access("approve comments on own $node->type") || user_access("administer comments on own $node->type"))) {
+     $conditions =& $query->conditions();
+     foreach ($conditions as $key => &$condition) {
++      if ($key == '#conjunction') {
++        continue;
++      }
+       if ($condition['field'] == 'c.status' && $condition['value'] == COMMENT_PUBLISHED) {
+         unset($conditions[$key]);
+       }

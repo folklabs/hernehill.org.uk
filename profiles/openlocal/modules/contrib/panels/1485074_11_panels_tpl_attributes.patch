@@ -1,0 +1,118 @@
+diff --git a/plugins/layouts/flexible/flexible.inc b/plugins/layouts/flexible/flexible.inc
+index f49886b..9a96c92 100644
+--- a/plugins/layouts/flexible/flexible.inc
++++ b/plugins/layouts/flexible/flexible.inc
+@@ -389,7 +389,8 @@ function theme_panels_flexible($vars) {
+   // needs it
+   $display->add_css = $css;
+ 
+-  $output = "<div class=\"panel-flexible " . $renderer->base['canvas'] . " clearfix\" $renderer->id_str>\n";
++  $attributes = !empty($vars['attributes']) ? $vars['attributes'] : '';
++  $output = "<div class=\"panel-flexible " . $renderer->base['canvas'] . " clearfix\"" . $renderer->id_str . $attributes . ">\n";
+   $output .= "<div class=\"panel-flexible-inside " . $renderer->base['canvas'] . "-inside\">\n";
+ 
+   $output .= panels_flexible_render_items($renderer, $settings['items']['canvas']['children'], $renderer->base['canvas']);
+diff --git a/plugins/layouts/onecol/panels-onecol.tpl.php b/plugins/layouts/onecol/panels-onecol.tpl.php
+index 73ad5b8..d568415 100644
+--- a/plugins/layouts/onecol/panels-onecol.tpl.php
++++ b/plugins/layouts/onecol/panels-onecol.tpl.php
+@@ -12,7 +12,7 @@
+  *   $content['middle']: The only panel in the layout.
+  */
+ ?>
+-<div class="panel-display panel-1col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-display panel-1col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <div class="panel-panel panel-col">
+     <div><?php print $content['middle']; ?></div>
+   </div>
+diff --git a/plugins/layouts/threecol_25_50_25/panels-threecol-25-50-25.tpl.php b/plugins/layouts/threecol_25_50_25/panels-threecol-25-50-25.tpl.php
+index 588e593..1c92724 100644
+--- a/plugins/layouts/threecol_25_50_25/panels-threecol-25-50-25.tpl.php
++++ b/plugins/layouts/threecol_25_50_25/panels-threecol-25-50-25.tpl.php
+@@ -14,7 +14,7 @@
+  *   - $content['right']: Content in the right column.
+  */
+ ?>
+-<div class="panel-display panel-3col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-display panel-3col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <div class="panel-panel panel-col-first">
+     <div class="inside"><?php print $content['left']; ?></div>
+   </div>
+diff --git a/plugins/layouts/threecol_25_50_25_stacked/panels-threecol-25-50-25-stacked.tpl.php b/plugins/layouts/threecol_25_50_25_stacked/panels-threecol-25-50-25-stacked.tpl.php
+index 48aa523..7bdbcdc 100644
+--- a/plugins/layouts/threecol_25_50_25_stacked/panels-threecol-25-50-25-stacked.tpl.php
++++ b/plugins/layouts/threecol_25_50_25_stacked/panels-threecol-25-50-25-stacked.tpl.php
+@@ -17,7 +17,7 @@
+  *   - $content['bottom']: Content in the bottom row.
+  */
+ ?>
+-<div class="panel-display panel-3col-stacked clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-display panel-3col-stacked clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <?php if ($content['top']): ?>
+     <div class="panel-panel panel-col-top">
+       <div class="inside"><?php print $content['top']; ?></div>
+diff --git a/plugins/layouts/threecol_33_34_33/panels-threecol-33-34-33.tpl.php b/plugins/layouts/threecol_33_34_33/panels-threecol-33-34-33.tpl.php
+index 73a7437..8a34182 100644
+--- a/plugins/layouts/threecol_33_34_33/panels-threecol-33-34-33.tpl.php
++++ b/plugins/layouts/threecol_33_34_33/panels-threecol-33-34-33.tpl.php
+@@ -16,7 +16,7 @@
+  */
+ ?>
+ 
+-<div class="panel-display panel-3col-33 clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-display panel-3col-33 clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <div class="panel-panel panel-col-first">
+     <div class="inside"><?php print $content['left']; ?></div>
+   </div>
+diff --git a/plugins/layouts/threecol_33_34_33_stacked/panels-threecol-33-34-33-stacked.tpl.php b/plugins/layouts/threecol_33_34_33_stacked/panels-threecol-33-34-33-stacked.tpl.php
+index 276e2bf..0235126 100644
+--- a/plugins/layouts/threecol_33_34_33_stacked/panels-threecol-33-34-33-stacked.tpl.php
++++ b/plugins/layouts/threecol_33_34_33_stacked/panels-threecol-33-34-33-stacked.tpl.php
+@@ -17,7 +17,7 @@
+  *   - $content['bottom']: Content in the bottom row.
+  */
+ ?>
+-<div class="panel-display panel-3col-33-stacked  clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-display panel-3col-33-stacked  clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <?php if ($content['top']): ?>
+     <div class="panel-panel panel-col-top">
+       <div class="inside"><?php print $content['top']; ?></div>
+diff --git a/plugins/layouts/twocol/panels-twocol.tpl.php b/plugins/layouts/twocol/panels-twocol.tpl.php
+index 2cda08e..ab77cd4 100644
+--- a/plugins/layouts/twocol/panels-twocol.tpl.php
++++ b/plugins/layouts/twocol/panels-twocol.tpl.php
+@@ -14,7 +14,7 @@
+  *   - $content['right']: Content in the right column.
+  */
+ ?>
+-<div class="panel-display panel-2col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-display panel-2col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <div class="panel-panel panel-col-first">
+     <div class="inside"><?php print $content['left']; ?></div>
+   </div>
+diff --git a/plugins/layouts/twocol_bricks/panels-twocol-bricks.tpl.php b/plugins/layouts/twocol_bricks/panels-twocol-bricks.tpl.php
+index e626844..e3a866a 100644
+--- a/plugins/layouts/twocol_bricks/panels-twocol-bricks.tpl.php
++++ b/plugins/layouts/twocol_bricks/panels-twocol-bricks.tpl.php
+@@ -22,7 +22,7 @@
+  *   - $content['bottom']: Content in the bottom row.
+  */
+ ?>
+-<div class="panel-display panel-2col-bricks clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-display panel-2col-bricks clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <div class="panel-panel panel-col-top">
+     <div class="inside"><?php print $content['top']; ?></div>
+   </div>
+diff --git a/plugins/layouts/twocol_stacked/panels-twocol-stacked.tpl.php b/plugins/layouts/twocol_stacked/panels-twocol-stacked.tpl.php
+index 901d27c..5fa8e00 100644
+--- a/plugins/layouts/twocol_stacked/panels-twocol-stacked.tpl.php
++++ b/plugins/layouts/twocol_stacked/panels-twocol-stacked.tpl.php
+@@ -16,7 +16,7 @@
+  *   - $content['bottom']: Content in the bottom row.
+  */
+ ?>
+-<div class="panel-2col-stacked clearfix panel-display" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
++<div class="panel-2col-stacked clearfix panel-display" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?><?php print $attributes; ?>>
+   <?php if ($content['top']): ?>
+     <div class="panel-col-top panel-panel">
+       <div class="inside"><?php print $content['top']; ?></div>

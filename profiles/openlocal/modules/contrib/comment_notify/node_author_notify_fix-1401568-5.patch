@@ -1,0 +1,16 @@
+diff --git a/comment_notify.module b/comment_notify.module
+index bbd7843..faf5b24 100644
+--- a/comment_notify.module
++++ b/comment_notify.module
+@@ -467,8 +467,9 @@ function _comment_notify_mailalert($comment) {
+ 
+   // Send to a subscribed author if they are not the current commenter
+   $author = user_load($node->uid);
+-
+-  if (!empty($author->comment_notify_settings->node_notify) && $author->comment_notify_settings->node_notify == 1 && $user->uid != $author->uid && node_access('view', $node, $author)) {
++	if (empty($author->comment_notify_settings->node_notify)) $author->comment_notify_settings->node_notify = comment_notify_variable_registry_get('node_notify_default_mailalert');
++  
++  if ($author->comment_notify_settings->node_notify == 1 && $user->uid != $author->uid && node_access('view', $node, $author)) {
+     // Get the author's language.
+     $language = user_preferred_language($author);
+     $raw_values = array(

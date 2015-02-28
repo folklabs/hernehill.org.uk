@@ -1,0 +1,20 @@
+diff --git a/admin_menu.css b/admin_menu.css
+index fd86dd7..25cd2c1 100644
+--- a/admin_menu.css
++++ b/admin_menu.css
+@@ -96,14 +96,8 @@
+   padding-bottom: 1px;
+ }
+ #admin-menu .dropdown li li {
+-  background: #202020;
+-  filter: Alpha(opacity=88);
+-  opacity: 0.88;
++  background: #202020; background-color: rgba(69,69,74, 0.88);
+   width: 160px; /* Required for Opera */
+-}
+-#admin-menu .dropdown li li li {
+-  filter: Alpha(opacity=100);
+-  opacity: 1;
+ }
+ 
+ /* Second-level lists */

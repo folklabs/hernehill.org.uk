@@ -943,7 +943,7 @@ function leaflet_initial_zoom_validate($element, &$form_state, $form) {
         form_error($element, t('The initial zoom level should be greater than the minimum zoom settings'));
       }
     }
-    if (isset($max_zoom) && $max_zoom != -1) {
+    elseif (isset($max_zoom) && $max_zoom != -1) {
       if ($max_zoom < $initial_zoom) {
         form_error($element, t('The initial zoom level should be less than the maximum zoom settings'));
       }

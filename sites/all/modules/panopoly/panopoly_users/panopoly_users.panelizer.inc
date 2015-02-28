@@ -52,6 +52,36 @@ function panopoly_users_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-6eab9a5a-c517-4128-afa2-3f9de71aa5d8';
+    $pane->panel = 'contentmain';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'openlocal_issue-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '0',
+      'override_title' => '',
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+      'view_settings' => 'table',
+      'header_type' => 'titles',
+      'view_mode' => 'teaser',
+      'widget_title' => 'Open issues',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6eab9a5a-c517-4128-afa2-3f9de71aa5d8';
+    $display->content['new-6eab9a5a-c517-4128-afa2-3f9de71aa5d8'] = $pane;
+    $display->panels['contentmain'][0] = 'new-6eab9a5a-c517-4128-afa2-3f9de71aa5d8';
+    $pane = new stdClass();
     $pane->pid = 'new-e67dc06a-7a74-4f6a-802a-b08fc0969b05';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
@@ -76,11 +106,11 @@ function panopoly_users_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'e67dc06a-7a74-4f6a-802a-b08fc0969b05';
     $display->content['new-e67dc06a-7a74-4f6a-802a-b08fc0969b05'] = $pane;
-    $display->panels['contentmain'][0] = 'new-e67dc06a-7a74-4f6a-802a-b08fc0969b05';
+    $display->panels['contentmain'][1] = 'new-e67dc06a-7a74-4f6a-802a-b08fc0969b05';
     $pane = new stdClass();
     $pane->pid = 'new-af686dc2-f888-490b-960c-7c129d35c75f';
     $pane->panel = 'sidebar';
