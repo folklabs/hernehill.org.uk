@@ -9,6 +9,7 @@ class HHNode6Migration extends DrupalNode6Migration {
   protected function removeNewlinesFromText($value) {
     // drush_print($value);
     $value = preg_replace('/\<p\>\&nbsp;\<\/p\>/', '', $value);
+    $value = preg_replace('/\<p\>\<\/p\>/', '', $value);
     // drush_print($value);
     return $value;
   }
@@ -400,6 +401,8 @@ class HHCommentNodeMigrationBase extends Migration {
       ->defaultValue('panopoly_wysiwyg_text');
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'changed');
+    $this->addFieldMapping('status')
+      ->defaultValue(1);
 
     // Unmapped destination fields
     $this->addUnmigratedDestinations(array('is_new', 'promote',
@@ -459,25 +462,25 @@ class HHCommentNodeMigrationBase extends Migration {
 
 class HHGroupCommentNodeMigration extends HHCommentNodeMigrationBase {
   public function __construct($settings_machine_name) {
-    parent::__construct($settings_machine_name, 'comment_node_group', 'group');
+    parent::__construct($settings_machine_name, 'comment_node_ol_group', 'group');
   }
 }
 
 class HHCampaignsCommentNodeMigration extends HHCommentNodeMigrationBase {
   public function __construct($settings_machine_name) {
-    parent::__construct($settings_machine_name, 'comment_node_campaigns', 'campaigns');
+    parent::__construct($settings_machine_name, 'comment_node_ol_campaigns', 'campaigns');
   }
 }
 
 class HHEventCommentNodeMigration extends HHCommentNodeMigrationBase {
   public function __construct($settings_machine_name) {
-    parent::__construct($settings_machine_name, 'comment_node_event', 'event');
+    parent::__construct($settings_machine_name, 'comment_node_ol_event', 'event');
   }
 }
 
 class HHNewsCommentNodeMigration extends HHCommentNodeMigrationBase {
   public function __construct($settings_machine_name) {
-    parent::__construct($settings_machine_name, 'comment_node_openlocal_news_article', 'news');
+    parent::__construct($settings_machine_name, 'comment_node_ol_news_article', 'news');
   }
 }
 

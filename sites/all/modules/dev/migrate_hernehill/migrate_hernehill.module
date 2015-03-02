@@ -116,7 +116,7 @@ function migrate_hernehill_register_migrations() {
       'description' => t('Migration of news nodes from Drupal 6'),
       'machine_name' => 'news',
       'source_type' => 'news',
-      'destination_type' => 'openlocal_news_article',
+      'destination_type' => 'ol_news_article',
     ),
     array(
       'class_name' => 'CampaignsMigration',
