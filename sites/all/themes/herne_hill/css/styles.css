@@ -1017,27 +1017,26 @@ div#panels-ipe-control-container {
   display: inline-block;
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 900;
-  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 16px;
   line-height: 16px;
 }
-/* line 203, ../sass/_mixins.sass */
+/* line 202, ../sass/_mixins.sass */
 .view-display-id-homepage_news_articles .views-row .views-field-name a,
 .view-display-id-list_news_articles .views-row .views-field-name a {
   background-color: transparent;
 }
-/* line 205, ../sass/_mixins.sass */
+/* line 204, ../sass/_mixins.sass */
 .view-display-id-homepage_news_articles .views-row .views-field-name a:link, .view-display-id-homepage_news_articles .views-row .views-field-name a:visited,
 .view-display-id-list_news_articles .views-row .views-field-name a:link,
 .view-display-id-list_news_articles .views-row .views-field-name a:visited {
   color: #20806a;
 }
-/* line 208, ../sass/_mixins.sass */
+/* line 207, ../sass/_mixins.sass */
 .view-display-id-homepage_news_articles .views-row .views-field-name a:hover,
 .view-display-id-list_news_articles .views-row .views-field-name a:hover {
   color: #144c3f;
 }
-/* line 210, ../sass/_mixins.sass */
+/* line 209, ../sass/_mixins.sass */
 .view-display-id-homepage_news_articles .views-row .views-field-name a:active,
 .view-display-id-list_news_articles .views-row .views-field-name a:active {
   color: #98b9b1;
@@ -1843,7 +1842,7 @@ ul.menu .menu__item li a:active {
   margin-right: 10px;
   padding: 0.25em 10px;
 }
-/* line 237, ../sass/_mixins.sass */
+/* line 236, ../sass/_mixins.sass */
 .page-node-add #block-views-70482c69a64d1e0693c0f9809d0fce34 .view-content .views-row a:hover,
 .page-node-edit #block-views-70482c69a64d1e0693c0f9809d0fce34 .view-content .views-row a:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, white));
@@ -1855,7 +1854,7 @@ ul.menu .menu__item li a:active {
   border: solid 1px #77666d;
   color: #77666d;
 }
-/* line 241, ../sass/_mixins.sass */
+/* line 240, ../sass/_mixins.sass */
 .page-node-add #block-views-70482c69a64d1e0693c0f9809d0fce34 .view-content .views-row a:active,
 .page-node-edit #block-views-70482c69a64d1e0693c0f9809d0fce34 .view-content .views-row a:active {
   -moz-box-shadow: inset 0 0 10px #b19fa7;
@@ -1891,7 +1890,7 @@ ul.menu .menu__item li a:active {
   margin-right: 10px;
   padding: 0.25em 10px;
 }
-/* line 237, ../sass/_mixins.sass */
+/* line 236, ../sass/_mixins.sass */
 .page-node-add #block-views-70482c69a64d1e0693c0f9809d0fce34 .add-contextual-help-link a:hover,
 .page-node-edit #block-views-70482c69a64d1e0693c0f9809d0fce34 .add-contextual-help-link a:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f4eee0), color-stop(1, white));
@@ -1903,7 +1902,7 @@ ul.menu .menu__item li a:active {
   border: solid 1px #77666d;
   color: #77666d;
 }
-/* line 241, ../sass/_mixins.sass */
+/* line 240, ../sass/_mixins.sass */
 .page-node-add #block-views-70482c69a64d1e0693c0f9809d0fce34 .add-contextual-help-link a:active,
 .page-node-edit #block-views-70482c69a64d1e0693c0f9809d0fce34 .add-contextual-help-link a:active {
   -moz-box-shadow: inset 0 0 10px #b19fa7;
@@ -2991,7 +2990,7 @@ form #node-edit .image-widget .form-submit {
   font-size: 1em;
   margin-right: 10px;
 }
-/* line 237, ../sass/_mixins.sass */
+/* line 236, ../sass/_mixins.sass */
 form input[type="submit"]:hover,
 form #node-edit .form-actions input:hover,
 form #node-edit .image-widget .form-submit:hover {
@@ -3004,7 +3003,7 @@ form #node-edit .image-widget .form-submit:hover {
   border: solid 1px #77666d;
   color: #77666d;
 }
-/* line 241, ../sass/_mixins.sass */
+/* line 240, ../sass/_mixins.sass */
 form input[type="submit"]:active,
 form #node-edit .form-actions input:active,
 form #node-edit .image-widget .form-submit:active {
@@ -3039,7 +3038,7 @@ form #node-edit .form-actions input[id="edit-submit"] {
   font-size: 1em;
   color: #f4eee0;
 }
-/* line 258, ../sass/_mixins.sass */
+/* line 257, ../sass/_mixins.sass */
 form #node-edit .form-actions input[id="edit-submit"]:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #20806a), color-stop(1, #8ab7a5));
   background-image: -o-linear-gradient(top, #20806a 0%, #8ab7a5 100%);
@@ -3050,7 +3049,7 @@ form #node-edit .form-actions input[id="edit-submit"]:hover {
   border: solid 1px #144c3f;
   color: white;
 }
-/* line 262, ../sass/_mixins.sass */
+/* line 261, ../sass/_mixins.sass */
 form #node-edit .form-actions input[id="edit-submit"]:active {
   -moz-box-shadow: inset 0 0 10px #144c3f;
   -webkit-box-shadow: inset 0 0 10px #144c3f;
@@ -3451,6 +3450,38 @@ a.button {
 /* line 47, ../sass/components/_header.sass */
 .header__region {
   clear: both;
+}
+
+/* line 2, ../sass/components/_highlight.sass */
+.views_slideshow_cycle_main {
+  width: 100%;
+}
+
+/* line 5, ../sass/components/_highlight.sass */
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+  width: 100% !important;
+  height: auto;
+}
+
+/* line 9, ../sass/components/_highlight.sass */
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  height: auto;
+}
+
+/* line 13, ../sass/components/_highlight.sass */
+.views_slideshow_cycle_main .field-content {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* line 17, ../sass/components/_highlight.sass */
+.views_slideshow_cycle_main .field-content img {
+  max-width: 100%;
+  width: 100%;
+  height: 333px;
+  margin: 0;
+  padding: 0;
 }
 
 /* line 11, ../sass/components/_misc.sass */
@@ -5125,23 +5156,22 @@ h2.node-title a:active {
 .ol-meta-data .ol-username {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 900;
-  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 16px;
   line-height: 16px;
 }
-/* line 203, ../sass/_mixins.sass */
+/* line 202, ../sass/_mixins.sass */
 .ol-meta-data .ol-username a {
   background-color: transparent;
 }
-/* line 205, ../sass/_mixins.sass */
+/* line 204, ../sass/_mixins.sass */
 .ol-meta-data .ol-username a:link, .ol-meta-data .ol-username a:visited {
   color: #20806a;
 }
-/* line 208, ../sass/_mixins.sass */
+/* line 207, ../sass/_mixins.sass */
 .ol-meta-data .ol-username a:hover {
   color: #144c3f;
 }
-/* line 210, ../sass/_mixins.sass */
+/* line 209, ../sass/_mixins.sass */
 .ol-meta-data .ol-username a:active {
   color: #98b9b1;
 }
@@ -5157,26 +5187,25 @@ h2.node-title a:active {
 .ol-comment-count {
   font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-weight: 900;
-  font-family: "Merriweather", "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
   font-size: 16px;
   line-height: 16px;
   display: inline;
   font-size: 1.6em;
   color: #20806a;
 }
-/* line 203, ../sass/_mixins.sass */
+/* line 202, ../sass/_mixins.sass */
 .ol-comment-count a {
   background-color: transparent;
 }
-/* line 205, ../sass/_mixins.sass */
+/* line 204, ../sass/_mixins.sass */
 .ol-comment-count a:link, .ol-comment-count a:visited {
   color: #20806a;
 }
-/* line 208, ../sass/_mixins.sass */
+/* line 207, ../sass/_mixins.sass */
 .ol-comment-count a:hover {
   color: #144c3f;
 }
-/* line 210, ../sass/_mixins.sass */
+/* line 209, ../sass/_mixins.sass */
 .ol-comment-count a:active {
   color: #98b9b1;
 }
@@ -5195,28 +5224,28 @@ h2.node-title a:active {
   margin: 0 10px 0px 10px;
 }
 
-/* line 60, ../sass/styles.sass */
+/* line 61, ../sass/styles.sass */
 .socialmedia {
   display: inline-block;
   vertical-align: top;
 }
-/* line 64, ../sass/styles.sass */
+/* line 65, ../sass/styles.sass */
 .socialmedia .fa {
   margin-left: 5px;
 }
 
-/* line 67, ../sass/styles.sass */
+/* line 68, ../sass/styles.sass */
 .top-right {
   float: right;
   margin-top: 10px;
 }
 
-/* line 71, ../sass/styles.sass */
+/* line 72, ../sass/styles.sass */
 #secondary-menu {
   display: inline-block;
   margin-top: 5px;
 }
-/* line 76, ../sass/styles.sass */
+/* line 77, ../sass/styles.sass */
 #secondary-menu a {
   text-decoration: none;
 }
