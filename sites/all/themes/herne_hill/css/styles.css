@@ -3455,27 +3455,28 @@ a.button {
 /* line 4, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main {
   width: 100%;
-}
-
-/* line 7, ../sass/components/_highlight.sass */
-.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
-  width: 100% !important;
   height: 333px;
 }
 
-/* line 11, ../sass/components/_highlight.sass */
+/* line 8, ../sass/components/_highlight.sass */
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+  width: 100% !important;
+  height: auto;
+}
+
+/* line 12, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
   width: 100% !important;
   height: auto;
 }
 
-/* line 15, ../sass/components/_highlight.sass */
+/* line 16, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main .field-content {
   max-width: 100%;
   width: 100%;
 }
 
-/* line 19, ../sass/components/_highlight.sass */
+/* line 20, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main .field-content img {
   max-width: 100%;
   width: 100%;
