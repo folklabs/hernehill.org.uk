@@ -3452,30 +3452,30 @@ a.button {
   clear: both;
 }
 
-/* line 2, ../sass/components/_highlight.sass */
+/* line 4, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main {
   width: 100%;
 }
 
-/* line 5, ../sass/components/_highlight.sass */
+/* line 7, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
   width: 100% !important;
-  height: auto;
+  height: 333px;
 }
 
-/* line 9, ../sass/components/_highlight.sass */
+/* line 11, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
   width: 100% !important;
   height: auto;
 }
 
-/* line 13, ../sass/components/_highlight.sass */
+/* line 15, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main .field-content {
   max-width: 100%;
   width: 100%;
 }
 
-/* line 17, ../sass/components/_highlight.sass */
+/* line 19, ../sass/components/_highlight.sass */
 .views_slideshow_cycle_main .field-content img {
   max-width: 100%;
   width: 100%;
