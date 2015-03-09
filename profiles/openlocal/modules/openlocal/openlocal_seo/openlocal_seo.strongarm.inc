@@ -92,10 +92,10 @@ function openlocal_seo_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'site_map_show_menus';
   $strongarm->value = array(
-    'menu-ol-footer-menu' => 'menu-ol-footer-menu',
     'main-menu' => 'main-menu',
     'user-menu' => 'user-menu',
     'devel' => 0,
+    'menu-ol-footer-menu' => 0,
     'management' => 0,
     'navigation' => 0,
   );
