@@ -223,13 +223,6 @@ function openlocal_home_default_page_manager_pages() {
 <a href="/contextual_help/how-create-news-article" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating articles</a>
 </div>
 
-<div class="ol-action-button">
-<a href="/node/add/ol-alert"><span class="ol-action-span"><i class="fa fa-plus"></i> create alert</span></a>
-</div>
-
-<div>
-<a href="/contextual_help/how-create-alert" class="ol-action-help"><i class="fa fa-question-circle"></i> About creating alerts</a>
-</div>
 </div>',
       'format' => 'panopoly_html_text',
       'substitute' => TRUE,

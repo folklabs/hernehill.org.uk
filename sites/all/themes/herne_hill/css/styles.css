@@ -1775,6 +1775,11 @@ ul.menu .menu__item li a:active {
   float: right;
 }
 
+/* line 130, ../sass/components/_actions.sass */
+.view-id-openlocal_alert .ol-action-button {
+  width: 90%;
+}
+
 /* line 10, ../sass/components/_admin.sass */
 .page-node-add .page__title,
 .page-node-edit .page__title {
